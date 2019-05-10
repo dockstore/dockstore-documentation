@@ -11,7 +11,7 @@ languages, we cover the following guide for what features are available
 on the Dockstore site and in the Dockstore command-line utility.
 
 .. raw:: html
-    :file: _static/language-support.html
+    :file: ../_static/language-support.html
 
 [0] Available in both classic and CWL Viewer modes
 

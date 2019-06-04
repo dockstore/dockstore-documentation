@@ -13,8 +13,8 @@ but for now the following requirements must be met in order to share a workflow:
 
 * You must be either logged in with Google, or have associated a Google account with
 your Dockstore account
-* Your Google account must be registered with [FireCloud](https://portal.firecloud.org/).
-* The accounts that you share with must also be Google accounts registered with FireCloud
+* Your Google account must be registered with [Terra](https://app.terra.bio/).
+* The accounts that you share with must also be Google accounts registered with Terra
 * The sharing feature is only enabled for Dockstore-hosted workflows. It is not enabled
 for tools, nor is it enabled for workflows whose source code lives on external version
 control system such as GitHub, Bitbucket, etc.
@@ -34,7 +34,7 @@ you share with:
 ## Sharing Workflows
 
 If you are viewing a hosted workflow on the My Workflows page, there is a Permissions tab.
-If you are also logged in with Google account that is registered with FireCloud, the
+If you are also logged in with Google account that is registered with Terra, the
 UI will show you who the workflow is currently shared with. Type in the email
 that you wish to share the workflow at the permission you want and press return.
 
@@ -46,7 +46,7 @@ in the process of adding joe@example.com, giving him writer permissions to the w
 ## Viewing Workflows Shared With You
 
 On the My Workflows page, on the left-hand side, there is a `Shared with me` section
-that shows all workflows that have been shared with you. You can select any of these 
+that shows all workflows that have been shared with you. You can select any of these
 workflows and, depending on the permission you have been granted, share, modify, and/or
 read those workflows.
 
@@ -54,7 +54,3 @@ In the following screenshot, jsmith is sharing the workflow `test_cwl` with the
 current user.
 
 ![Build Trigger](/assets/images/docs/shared-with.png)
-
-
-
- 

@@ -481,9 +481,9 @@ example we can link to version 1.25-11:
 
 https://www.dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-bamstats:1.25-11
 
-**For FireCloud Users** : You have the ability to share hosted workflows
+**For Terra Users** : You have the ability to share hosted workflows
 through Dockstore. This allows for you to share workflows wth other
-users who have used their Google account to register on FireCloud. Learn
+users who have used their Google account to register on Terra. Learn
 more at :doc:`Workflow Sharing <../advanced-topics/sharing-workflows/>`.
 
 Find Other Tools

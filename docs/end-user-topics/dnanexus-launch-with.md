@@ -10,7 +10,7 @@ version of the workflow will be exported.
 
 ![WDL workflow](/assets/images/docs/dnanexus/dnanexus_from_dockstore1.png)
 
-If not logged into DNAnexus, you will be prompted to login. Otherwise, or after login, you will be presented with the following screen. 
+If not logged into DNAnexus, you will be prompted to login. Otherwise, or after login, you will be presented with the following screen.
 
 ![WDL workflow import](/assets/images/docs/dnanexus/dnanexus_from_dockstore2.png)
 
@@ -27,5 +27,4 @@ Then hit the "Submit" button and continue from within the DNAnexus interface to 
 * [AWS Batch](/advanced-topics/aws-batch/)
 * [Azure Batch](/advanced-topics/azure-batch/)
 * [DNAstack Launch With](dnastack-launch-with/)
-* [FireCloud Launch With](firecloud-launch-with/)
 * [Terra Launch With](terra-launch-with/)

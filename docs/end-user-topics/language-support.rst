@@ -17,8 +17,11 @@ on the Dockstore site and in the Dockstore command-line utility.
 
 [1] Available in both classic and WDL EPAM Pipeline Builder
 
-[2] Does not support file-path based imports. See `FireCloud
-Limitations </firecloud-launch-with/#limitations>`__ for limitations.
+[2] Does not support file-path based imports. See `Terra
+Limitations`_ for limitations.
+
+.. _`Terra Limitations`: ./terra-launch-with.html#limitations
+
 
 [3] Does not support file-path or http(s) based imports. See `DNAstack
 Limitations </dnastack-launch-with/#limitations>`__ for limitations.
@@ -39,7 +42,7 @@ endpoint, etc.
 
 There are times when you may want to convert file-path based imports to
 public http(s) imports. One such reason is to ensure compatibility with
-FireCloud since it currently does not support file-path based imports.
+Terra since it currently does not support file-path based imports.
 There are many different ways to convert to a public http(s) based
 import, the following are two examples.
 

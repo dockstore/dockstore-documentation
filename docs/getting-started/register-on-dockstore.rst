@@ -1,4 +1,4 @@
-.. note:: 
+.. note::
     This tutorial is a continuation of :doc:`Getting Started With CWL <getting-started-with-cwl>`,
     :doc:`Getting Started With WDL <getting-started-with-wdl>`, and :doc:`Getting Started With Nextflow <getting-started-with-nextflow>`. Please complete one
     or more of those tutorials that is relevant to you prior to doing this
@@ -22,7 +22,7 @@ GitHub using OAuth2. You can register at the `login/register
 page <https://www.dockstore.org/login>`__.
 
 You can also login with your Google Account. This is required to use the
-workflow sharing feature for users coming from Firecloud.
+workflow sharing feature for users coming from Terra.
 
 Dockstore usernames
 -------------------

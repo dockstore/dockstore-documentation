@@ -86,7 +86,7 @@ Additionally:
 ## How do I use the Dockstore CLI on a Mac?
 See [Docker for Mac](https://docs.docker.com/engine/installation/mac/)
 
-.. note:: 
+.. note::
     Docker behaves a bit differently on a [Mac](https://docs.docker.com/docker-for-mac/osxfs/#/namespaces) than on a typical Ubuntu machine. By default the only shared volumes are /Users, /Volumes, /tmp, and /private. Note that /var is not a shared directory (and can't be set as one). `cwltool` uses your TMPDIR (the env variable) to setup volumes with docker, which on a Mac can default to a subdirectory of /var. In order to get `cwltool` working on your Mac, you need to set your TMPDIR to be under one of the shared volumes in Docker for Mac. You can do this by doing something similar to the following:
 
 ```
@@ -122,7 +122,7 @@ For tools, the default version is uniquely identified by the tag from the Docker
 Setting the default version affects a number of elements including (but not limited to):
 
 1. It determines what is displayed in the 'Description' section of the 'Info' Tab
-1. It is the first version other end users see when no version is specified. For example https://dockstore.org/containers/quay.io/pancancer/pcawg-bwa-mem-workflow is redirected to https://dockstore.org/containers/quay.io/pancancer/pcawg-bwa-mem-workflow:develop?tab=info 
+1. It is the first version other end users see when no version is specified. For example https://dockstore.org/containers/quay.io/pancancer/pcawg-bwa-mem-workflow is redirected to https://dockstore.org/containers/quay.io/pancancer/pcawg-bwa-mem-workflow:develop?tab=info
 1. It is the version of the tool/workflow that is launched by default when users launch a tool/workflow from the Dockstore CLI.  
    For example, if version 1.0 is set as the default version of the quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig tool,
 
@@ -130,7 +130,7 @@ Setting the default version affects a number of elements including (but not limi
 
    would be equivalent to
 
-   `$ dockstore tool launch --entry quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig --json Dockstore.json` 
+   `$ dockstore tool launch --entry quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig --json Dockstore.json`
 1. The docker pull command in the tools search reflects the default version
 
 
@@ -141,12 +141,12 @@ There are currently issues with avro, cwltool, and Python 3.  See [cwltool](http
 Note that installing the "avro" pip package afterwards will overwrite the "avro-cwl" pip package and will result in cwltool not working again.
 
 ## How do I add other users as maintainers of a tool?
-For tools registered on Quay.io and workflows registered with GitHub, Dockstore automatically allows users from the same Quay.io organization or GitHub organization to manage tools/workflows together (users will need to "Refresh Organization" or "Refresh All"). 
+For tools registered on Quay.io and workflows registered with GitHub, Dockstore automatically allows users from the same Quay.io organization or GitHub organization to manage tools/workflows together (users will need to "Refresh Organization" or "Refresh All").
 
 For tools registered on Docker Hub, GitLab or private registries, this feature currently does not exist because these registries do not allow the retrieval of organization information.
 Likewise, workflows registered with other source code repositories lack this feature.
 
-Finally, for participants of the [limited sharing beta](../advanced-topics/sharing-workflows/), you can enter the email addresses of the users you wish to share with to give them permissions to your workflow. This is only available for hosted workflows and users with Google accounts linked to FireCloud.
+Finally, for participants of the [limited sharing beta](../advanced-topics/sharing-workflows/), you can enter the email addresses of the users you wish to share with to give them permissions to your workflow. This is only available for hosted workflows and users with Google accounts linked to Terra.
 
 ## Why are my workflows from an organization I belong to not visible?
 Organizations have the ability to restrict access to the API for third party applications. GitHub provides a [tutorial](https://help.github.com/articles/enabling-oauth-app-access-restrictions-for-your-organization/) on how to add these restrictions to your organizations.
@@ -154,9 +154,9 @@ Organizations have the ability to restrict access to the API for third party app
 In order for Dockstore to gain access to organizations of this type, you will need to grant access to the Dockstore application. Dockstore will only be reading information on workflows in your organization and who has access to them in order to mirror these restrictions on Dockstore itself. GitHub provides a [tutorial](https://help.github.com/articles/approving-oauth-apps-for-your-organization/) for approving third party apps access to your organization.
 
 ## What is the difference between logging in with GitHub or logging in with Google?
-The intent here is that you should be able to login with either login method and still conveniently get into the same Dockstore account. With login via Google, if you are a FireCloud user you will also have access to [sharing functionality](../advanced-topics/sharing-workflows/).
+The intent here is that you should be able to login with either login method and still conveniently get into the same Dockstore account. With login via Google, if you are a Terra user you will also have access to [sharing functionality](../advanced-topics/sharing-workflows/).
 
-Note that for simplicity, each of your GitHub or Google accounts can only be associated with one account at a time. You will need to link with a different account for each login method or delete your account if you want to assign them to a new Dockstore account. 
+Note that for simplicity, each of your GitHub or Google accounts can only be associated with one account at a time. You will need to link with a different account for each login method or delete your account if you want to assign them to a new Dockstore account.
 
 ## How do I launch tools/workflows without internet access on compute nodes
 > For Dockstore 1.6.0+

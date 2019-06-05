@@ -116,7 +116,6 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>`
    end-user-topics/language-support
    end-user-topics/launch
    end-user-topics/dnastack-launch-with
-   end-user-topics/firecloud-launch-with
    end-user-topics/dnanexus-launch-with
    end-user-topics/terra-launch-with
 

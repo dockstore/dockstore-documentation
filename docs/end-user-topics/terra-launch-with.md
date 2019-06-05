@@ -10,7 +10,7 @@ version of the workflow will be exported.
 
 ![WDL workflow](/assets/images/docs/terra/terra_from_dockstore1.png)
 
-If not logged into Terra, you will be prompted to login. Otherwise, or after login, you will be presented with the following screen. 
+If not logged into Terra, you will be prompted to login. Otherwise, or after login, you will be presented with the following screen.
 
 ![WDL workflow import](/assets/images/docs/terra/terra_from_dockstore2.png)
 
@@ -32,4 +32,3 @@ See more [here](https://cromwell.readthedocs.io/en/stable/wf_options/Overview).
 * [Azure Batch](../advanced-topics/azure-batch/)
 * [DNAnexus Launch With](../end-user-topics/dnanexus-launch-with/)
 * [DNAstack Launch With](../end-user-topics/dnastack-launch-with/)
-* [FireCloud Launch With](../end-user-topics/firecloud-launch-with/)

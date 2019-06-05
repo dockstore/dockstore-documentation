@@ -4,7 +4,7 @@ Dockstore integrates with the DNAstack Workflows platform, allowing you to launc
 
 ## While browsing DNAstack
 
-While working within a project within the DNAstack interface, you can see an icon to manage the workflows associated with your project. 
+While working within a project within the DNAstack interface, you can see an icon to manage the workflows associated with your project.
 
 ![dnastack project0](/assets/images/docs/dnastack/dnastack_projects_0.png)
 
@@ -33,13 +33,13 @@ When browsing WDL workflows from within Dockstore, you will see a "Launch-With" 
 
 ![WDL workflow](/assets/images/docs/dnastack/dnastack_from_dockstore1.png)
 
-If not logged into DNAstack, you will be prompted to login. Otherwise or after login, you will be presented with the following screen. 
+If not logged into DNAstack, you will be prompted to login. Otherwise or after login, you will be presented with the following screen.
 
 ![WDL workflow import](/assets/images/docs/dnastack/dnastack_from_dockstore2.png)
 
 You will need to pick a version of your workflow to import and a project to import it into.
-Then hit the button to "Import" and continue from within the DNAstack interface to run your workflow. 
-Note that as with the above approach, you will want to double-check that the workflow specifies a runtime environment (docker, cpu, memory, and disks) if you have trouble importing the workflow and that the workflow has not been imported before. 
+Then hit the button to "Import" and continue from within the DNAstack interface to run your workflow.
+Note that as with the above approach, you will want to double-check that the workflow specifies a runtime environment (docker, cpu, memory, and disks) if you have trouble importing the workflow and that the workflow has not been imported before.
 
 
 ## Limitations
@@ -51,6 +51,4 @@ Note that as with the above approach, you will want to double-check that the wor
 * [AWS Batch](/advanced-topics/aws-batch/)
 * [Azure Batch](/advanced-topics/azure-batch/)
 * [DNAnexus Launch With](dnanexus-launch-with/)
-* [FireCloud Launch With](firecloud-launch-with/)
 * [Terra Launch With](terra-launch-with/)
-

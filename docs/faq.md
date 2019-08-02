@@ -11,6 +11,18 @@ We can also provision input and output files using HTTP, FTP, and S3. We also ha
 
 Typically, we test running tools in Ubuntu Linux 16.04 LTS on VMs in [OpenStack](https://www.openstack.org/) with 8 vCPUs and 96 GB of RAM and above. We've also begun testing on Ubuntu 18.04 LTS and so far it's been successful. If you are only listing and editing tools, we have achieved success with much lower system requirements. However, launching tools will have higher system requirements dependent on the specific tool. Consult a tool's README or CWL/WDL description when in doubt.
 
+## The CLI is failing with Java 8 
+
+If you see the following error when running the Dockstore CLI, you need to upgrade your Java version:
+```
+$ dockstore
+Error: A JNI error has occurred, please check your installation and try again
+Exception in thread "main" java.lang.UnsupportedClassVersionError: io/dockstore/client/cli/Client has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+```
+
+The Dockstore CLI as of 1.7.0 is compiled and tested using Java 11 due to the Java 8 EOL. 
+You will need to upgrade from Java 8 to use the CLI. 
+
 ## There are too many versions of my tool, how do I delete some?
 
 Versions of your tool for most tools are harvested from the list of Tags for an image on Quay.io, [as an example](https://quay.io/repository/pancancer/pcawg-bwa-mem-workflow?tab=tags). If you have the right permissions, you can delete some and then refresh a tool on Dockstore to clean-up.

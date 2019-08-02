@@ -13,7 +13,7 @@ Typically, we test running tools in Ubuntu Linux 16.04 LTS on VMs in [OpenStack]
 
 ## The CLI is failing with Java 8 
 
-If you run into:
+If you see the following error when running the Dockstore CLI, you need to upgrade your Java version:
 ```
 $ dockstore
 Error: A JNI error has occurred, please check your installation and try again

@@ -6,19 +6,16 @@ Below are some tips for setting up the documentation locally and updating the co
 
 ## Setting up locally
 
-Install Sphinx (Requires Python)
-`pip install sphinx`
+Install pip dependencies (Requires Python)
+`pip install -r requirements.txt`
 
-Install Recommonmark
-`pip install recommonmark`
+Go to the docs directory
+`cd docs`
 
-Install Sphinx RTD Theme
-`pip install sphinx_rtd_theme`
-
-Clone this repo
-`git clone ...`
-
-Go to cloned directory and make HTML
+Generate the HTML
 `make html`
+
+Check for broken links
+`make linkcheck`
 
 Open the _build/html/index.html in your browser!

@@ -40,6 +40,7 @@ release = u'1.6.0'
 # ones.
 extensions = ['recommonmark']
 
+linkcheck_anchors = False
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -153,7 +154,6 @@ texinfo_documents = [
      author, 'Dockstore', 'One line description of project.',
      'Miscellaneous'),
 ]
-
 
 # -- Options for Epub output -------------------------------------------------
 

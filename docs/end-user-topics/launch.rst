@@ -92,7 +92,7 @@ https://ci.commonwl.org/ and for WDL,
 `Cromwell <https://github.com/broadinstitute/cromwell>`__.
 
 For developers, you may also wish to look at our brief summary at `batch
-services </batch-services>`__ and commercial solutions such as `Google
+services <../advanced-topics/batch-services.html>`__ and commercial solutions such as `Google
 dsub <https://github.com/googlegenomics/task-submission-tools>`__ and
 `AWS Batch <https://aws.amazon.com/batch/>`__.
 

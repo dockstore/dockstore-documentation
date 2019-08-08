@@ -51,7 +51,7 @@ You can register your tools and workflows on Dockstore in three broad
 ways as depicted above.
 
 A) Following our
-   `tutorials <https://docs.dockstore.org//getting-started-with-docker/>`__,
+   `tutorials <getting-started/getting-started.html>`__,
    you can save your descriptors on GitHub, build your Docker image
    automatically on Quay.io, and have Dockstore reach out and index your
    tools
@@ -78,7 +78,7 @@ Over time, we find "skinny" Docker images, those with single tools
 installed in them, are more helpful for extending and building new
 workflows with. That being said, "fat" Docker containers, which include
 multiple tools and even full workflows with frameworks like
-`SeqWare <http://seqware.io>`__ or
+`SeqWare <https://seqware.github.io/>`__ or
 `Galaxy <https://galaxyproject.org/>`__, can have their place as well.
 Projects like the ICGC `PanCancer Analysis of Whole
 Genomes <https://dcc.icgc.org/pcawg>`__ (PCAWG) made use of "fat" Docker
@@ -127,5 +127,5 @@ Future Plans
 
 We plan on expanding the Dockstore in several ways over the coming
 months. Please see our `issues
-page <https://github.com/ga4gh/dockstore/issues>`__ for details and
+page <https://github.com/dockstore/dockstore/issues>`__ for details and
 discussions.

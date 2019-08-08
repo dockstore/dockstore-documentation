@@ -24,7 +24,7 @@ Limitations`_ for limitations.
 
 
 [3] Does not support file-path or http(s) based imports. See `DNAstack
-Limitations </dnastack-launch-with/#limitations>`__ for limitations.
+Limitations <./dnastack-launch-with.html#limitations>`__ for limitations.
 
 [4] All verified Dockstore WDL tools/workflows were tested successfully. However, we anticipate that more testing is needed for WDL workflows that use language features not contained within that dataset.
 

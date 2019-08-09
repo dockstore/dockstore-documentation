@@ -1,7 +1,7 @@
 Welcome to Dockstore Documentation!
 ===================================
 
-.. note:: Our code lives on GitHub at `ga4gh/dockstore <https://github.com/ga4gh/dockstore>`_ and `dockstore/dockstore-ui2 <https://github.com/dockstore/dockstore-ui2>`_.
+.. note:: Our code lives on GitHub at `dockstore/dockstore <https://github.com/dockstore/dockstore>`_ and `dockstore/dockstore-ui2 <https://github.com/dockstore/dockstore-ui2>`_.
 
 Dockstore is an open platform used by the GA4GH for sharing Docker-based tools
 described with either the Common Workflow Language (CWL), the Workflow Description Language (WDL),

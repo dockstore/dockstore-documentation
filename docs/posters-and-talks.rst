@@ -1,6 +1,8 @@
 Posters and Talks
 =================
 
+This page includes various talks and posters that the Dockstore team has given.
+
 BOSC 2019
 ---------------------
 

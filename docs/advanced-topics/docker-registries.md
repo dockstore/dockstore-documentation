@@ -57,4 +57,4 @@ If you are trying to launch a private docker tool and are getting errors like `i
 
 ## Docker Registry Request
 
-If you would like to request support for a registry that is not currently supported, then please create an issue on our [Github](https://github.com/ga4gh/dockstore/issues) page.
+If you would like to request support for a registry that is not currently supported, then please create an issue on our [Github](https://github.com/dockstore/dockstore/issues) page.

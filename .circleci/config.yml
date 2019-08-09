@@ -14,9 +14,6 @@ jobs:
       - run:
           name: Link check
           command: cd docs && make linkcheck
-      - run:
-          name: Check internal links
-          command: "[! -s docs/_build/linkcheck/output.txt]"
 workflows:
   version: 2
   build:

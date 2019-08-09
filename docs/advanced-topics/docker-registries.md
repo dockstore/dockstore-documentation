@@ -40,7 +40,7 @@ The following images demonstrate registering a tool with a registry-id and an em
 
 ![Add ECR tool](/assets/images/docs/ecr.png)
 
-Amazon ECR images have an associated file containing the `Repository Policies`. When a tool user requests access to an Amazon ECR image, the tool maintainer should add them to the list of users with pull access. More information can be found on this [Amazon ECR](http://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html#IAM_allow_other_accounts) page.
+Amazon ECR images have an associated file containing the `Repository Policies`. When a tool user requests access to an Amazon ECR image, the tool maintainer should add them to the list of users with pull access. More information can be found on this [Amazon ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html#IAM_allow_other_accounts) page.
 
 The user would then need to ensure that they have the AWS client installed on their machine. They then need to retrieve the Docker login command using the following command:
 `aws ecr get-login --region <region> --registry-ids <registry-id>`

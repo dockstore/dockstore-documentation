@@ -41,7 +41,7 @@ Of course, keep in mind that if you have a knowledge of CWL and/or do not need t
     Calling on plugin io.dockstore.provision.S3Plugin$S3Provision to provision to s3://dockstore.temp/md5sum.txt
     [##################################################] 100%
     ```
-1. You can repeat the process with `config.dockstore.bwa` which is a more realistic bioinformatics workflow from the [PCAWG project](http://icgc.org/working-pancancer-data-aws) and takes roughly seven hours.
+1. You can repeat the process with `config.dockstore.bwa` which is a more realistic bioinformatics workflow from the [PCAWG project](https://icgc.org/working-pancancer-data-aws) and takes roughly seven hours.
 
 ## See Also
 

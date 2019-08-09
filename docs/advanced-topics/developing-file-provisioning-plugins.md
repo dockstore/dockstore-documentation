@@ -55,4 +55,4 @@ dockstore-file-s3-plugin
 dockstore-file-synapse-plugin
 ```
 
-See this github [page](https://github.com/decebals/pf4j#enabledisable-plugins) for more details.
+See this github [page](https://github.com/pf4j/pf4j) for more details.

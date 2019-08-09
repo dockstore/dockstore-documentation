@@ -17,12 +17,12 @@ Institute, this project makes it easier for users that are familiar with
 `Packer <https://www.packer.io/>`__ to work with tools and images
 registered on Dockstore on OpenStack.
 
-`PCAWG-Docker-Test <https://github.com/mikisvaz/PCAWG-Docker-Test>`__
----------------------------------------------------------------------
+`PCAWG-Docker-Test <https://github.com/ICGC-TCGA-PanCancer/PCAWG-Docker-Test>`__
+--------------------------------------------------------------------------------
 
 Miguel Vazquez has been leading the docktesters group. This is a group
 that is in charge of testing the
-`PCAWG <http://icgc.org/working-pancancer-data-aws>`__\ (PanCancer
+`PCAWG <https://icgc.org/working-pancancer-data-aws>`__\ (PanCancer
 Analysis of Whole Genomes) tools and workflows. As a part of this work
 he created a series of scripts (linked above) that demonstrate how to
 get data and run through all of the PCAWG analysis in sequence.

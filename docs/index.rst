@@ -125,6 +125,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>`
    :hidden:
 
    user-created
+   posters-and-talks
 
 .. toctree::
    :caption: FAQ

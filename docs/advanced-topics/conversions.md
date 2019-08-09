@@ -86,7 +86,7 @@ The basic workflow is that GitHub repos are created when posting a new tool. Whe
 
 By now, then web service should be up and running with valid GitHub and Quay.io tokens. If not, please return to the web service usage section to get that running first. It is advised to ensure that the Write API web service is functioning correctly before using the client.
 
-* [Dockstore token](https://docs.dockstore.org//register-on-dockstore/)
+* [Dockstore token](../getting-started/register-on-dockstore/)
 
 Follow the "Getting Started with Dockstore" tutorial to get a Dockstore token. Note this down, it will later be used in the Write API client properties file.
 
@@ -96,7 +96,7 @@ The Dockstore tutorial earlier would've specified the server-url alongside the t
 
 * Quay.io integration
 
-In order to publish to Dockstore, Quay.io must be linked to Dockstore. See [Dockstore](https://docs.dockstore.org//register-on-dockstore/#linking-with-external-services) on how to link your Quay.io account to Dockstore.
+In order to publish to Dockstore, Quay.io must be linked to Dockstore. See [Dockstore](../getting-started/register-on-dockstore.html#linking-with-external-services) on how to link your Quay.io account to Dockstore.
 
 * Write API web service URL
 

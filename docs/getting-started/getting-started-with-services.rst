@@ -1,6 +1,6 @@
 Getting Started with Dockstore Services
 =======================================
-
+.. note:: Dockstore Services is currently in beta mode.
 Tutorial Goals
 --------------
 
@@ -18,7 +18,7 @@ Create Your Service
 -------------------
 
 The first step is to create a file named ``.dockstore.yml``. The ``.dockstore.yml``  is a configuration file used to describe your service. Technically, having a valid YAML and the right version is
-all that is required for your service to appear on Dockstore. But, we will briefly cover an example dockstore.yml written for the Xena Hub to show what will generally be needed to create a working service.
+all that is required for your service to appear on Dockstore. But, we will briefly cover an example ``.dockstore.yml`` written for the Xena Hub to show what will generally be needed to create a working service.
 You can also view a template ``.dockstore.yml`` file `here
 <https://github.com/dockstore/dockstore-documentation/tree/develop/docs/assets/templates/.dockstore.yml>`_.
 
@@ -41,13 +41,13 @@ Following that is a scripts section. Here you denote the script files or command
 
 Next is a section where you can list any environment variables a service needs to be passed into its scripts by the launcher. In this example, we provide a default HTTP port.
 
-Finally, if your service needs to have data provisioned locally, you should include a data section in your ``dockstore.yml``.
+Finally, if your service needs to have data provisioned locally, you should include a data section in your ``.dockstore.yml``.
 
 
 Registering Your Service
 ------------------------
-Registering your service works differently than tools and workflows on Dockstore. For services, you need to install our Dockstore Github application into at least one of your organizations.
-By doing so, Dockstore will automatically register the services you create by keeping track of the releases and pre-releases you make on Github. This makes getting your service registered to Dockstore easy!
+Registering your service works differently than tools and workflows on Dockstore. For services, you need to install our Dockstore GitHub application into at least one of your organizations.
+By doing so, Dockstore will automatically register the services you create by keeping track of the releases and pre-releases you make on GitHub. This makes getting your service registered to Dockstore easy!
 You do not need the service to be fully working, and you can start experimenting on Dockstore while you write it. The following steps walk you through the installation process.
 
 First, create a repo on GitHub which contains a valid ``.dockstore.yml`` file in its root. Then, login to Dockstore and go to the my-services tab.
@@ -62,9 +62,9 @@ After choosing an organization to install Dockstore on, you will be taken to the
 
 .. figure:: /assets/images/docs/github-app-settings-page.png
 
-Here you can select whether to give access to all repositories or only select ones. If the organization you choose is intended to be just for services, we recommend choosing all repositories. Otherwise, it is probably more intuitive to select only certain repositories. Click save and you will be taken back to the my services page on Dockstore.
+Here you can select whether to give access to all repositories or only select ones. If the organization you choose is intended to be just for services, we recommend choosing all repositories. Otherwise, it is probably more intuitive to select only certain repositories. Click save and you will be taken back to the "My Services" page on Dockstore.
 
-Under My services, you should now see the organization and the repositories you chose to keep track of in the unpublished page.
+Under "My Services", you should now see the organization and the repositories you chose to keep track of in the unpublished page.
 
 .. figure:: /assets/images/docs/my-services-filled.png
 

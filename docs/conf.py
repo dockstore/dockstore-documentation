@@ -38,7 +38,7 @@ release = u'1.6.0'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark']
+extensions = ['recommonmark', 'sphinxcontrib.discourse']
 
 linkcheck_anchors = False
 
@@ -171,6 +171,8 @@ epub_title = project
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
+
+discourse_url = 'https://discuss.dockstore.org/'
 
 def setup(app):
     app.add_stylesheet('css/extra.css')

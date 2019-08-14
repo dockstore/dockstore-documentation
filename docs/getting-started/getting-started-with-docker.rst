@@ -95,7 +95,7 @@ webpage. I'll highlight some sections below:
 This uses the ubuntu 14.04 base distribution. How do I know to use
 ``ubuntu:14.04``? This comes from either a search on Ubuntu's home page
 for their "official" Docker images or you can simply go to
-`DockerHub <http://hub.docker.com>`__ or `Quay <http://quay.io>`__ and
+`DockerHub <https://hub.docker.com>`__ or `Quay <https://quay.io>`__ and
 search for whatever base image you like. You can extend anything you
 find there. So if you come across an image that contains most of what
 you want, you can use it as the base here. Just be aware of its source:
@@ -254,7 +254,7 @@ You can see it just executes the BAMStats jar - passing in the GB of
 memory and the BAM file while collecting the output HTML report as a zip
 file followed by cleanup.
 
-.. note:: 
+.. note::
     Notice how the output is written to whatever the current
     directory is. This is the correct directory to put your output in since
     the CWL tool described later assumes that outputs are all located in the
@@ -298,7 +298,7 @@ number of tools and workflows designed to work with various descriptor
 languages so there are benefits to not just stopping here.
 
 There are three descriptor languages available on Dockstore. Follow the
-links to get an introduction. 
+links to get an introduction.
 
 - :doc:`CWL <getting-started-with-cwl>`
 - :doc:`WDL <getting-started-with-wdl>`

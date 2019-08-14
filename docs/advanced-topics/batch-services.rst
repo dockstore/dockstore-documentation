@@ -22,18 +22,18 @@ Azure Batch
 
 `Azure Batch <https://azure.microsoft.com/en-us/services/batch/>`__ and
 the associated
-`batch-shipyard <https://github.com/Azure/batch-shipyard>`__ is built by
+`batch-shipyard <https://github.com/Azure/batch-shipyard.md>`__ is built by
 Microsoft. Look `here <azure-batch>`__ for a tutorial on how to run a
 few sample tools via Azure.
 
 Google Pipelines
 ----------------
 
-Google Pipeline and `Google
-dsub <https://github.com/googlegenomics/dsub>`__ are also worth a look.
+Google Pipeline and `DataBiosphere
+dsub <https://github.com/DataBiosphere/dsub>`__ are also worth a look.
 In particular, both `Google Genomics
-Pipelines <https://cloud.google.com/genomics/v1alpha2/pipelines>`__ and
-`dsub <https://cloud.google.com/genomics/v1alpha2/dsub>`__ provide
+Pipelines <https://cloud.google.com/genomics/docs/quickstart>`__ and
+`dsub <https://cloud.google.com/genomics/docs/tutorials/dsub>`__ provide
 tutorials on how to run (Dockstore!) tools if you have some knowledge on
 how to construct the command-line for a tool yourself.
 
@@ -45,8 +45,8 @@ the data analysis for the
 `PCAWG <https://dcc.icgc.org/pcawg#!%2Fmutations>`__ project by running
 `Seqware <https://seqware.github.io/>`__ workflows. Documentation for
 this incarnation of Dockstore can be found at `Working with PanCancer
-Data on AWS <http://icgc.org/working-pancancer-data-aws>`__ and `ICGC on
-AWS <https://aws.amazon.com/public-datasets/icgc/>`__.
+Data on AWS <https://icgc.org/working-pancancer-data-aws>`__ and `ICGC on
+AWS <https://registry.opendata.aws/icgc/>`__.
 
 Consonance has subsequently been updated to run Dockstore tools and has
 also been adopted at the `UCSC Genomics

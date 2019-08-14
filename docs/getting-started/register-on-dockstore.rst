@@ -19,7 +19,7 @@ Register on Dockstore
 Before you can publish your new tool, you need to create a Dockstore
 account and link the relevant services. Dockstore supports login through
 GitHub using OAuth2. You can register at the `login/register
-page <https://www.dockstore.org/login>`__.
+page <https://dockstore.org/login>`__.
 
 You can also login with your Google Account. This is required to use the
 workflow sharing feature for users coming from Terra.

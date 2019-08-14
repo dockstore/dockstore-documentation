@@ -470,7 +470,7 @@ This is the simple part. Now that we've successfully registered the tool
 on Dockstore you can just send around a link, for example to the BAMStat
 tool I just registered:
 
-https://www.dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-bamstats
+https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-bamstats
 
 This will link to the default version if set, and if not then the most
 recent version.
@@ -479,7 +479,7 @@ You can also share a specific version of a tool by appending
 ``:version`` to the end of the tool path. Again, using the previous
 example we can link to version 1.25-11:
 
-https://www.dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-bamstats:1.25-11
+https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-bamstats:1.25-11
 
 **For Terra Users** : You have the ability to share hosted workflows
 through Dockstore. This allows for you to share workflows wth other

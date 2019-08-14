@@ -102,7 +102,7 @@ The CWL is actually recognized and parsed by Dockstore (when we register
 this later). By default it recognizes ``Dockstore.cwl`` but you can
 customize this if you need to. One of the most important items below is
 the `CWL
-version <http://www.commonwl.org/v1.0/CommandLineTool.html#CWLVersion>`__.
+version <https://www.commonwl.org/v1.0/CommandLineTool.html#CWLVersion>`__.
 You should label your CWL with the version you are using so that CWL
 tools that cannot run this version will error out appropriately. Our
 tools have been tested with v1.0.
@@ -134,7 +134,7 @@ original tool. I'm biased towards the person that registers the tool
 since they are likely to be the primary contact when asking questions
 about how the tool was setup.
 
-You can register for an `ORCID <http://orcid.org/>`__ (a digital
+You can register for an `ORCID <https://orcid.org/>`__ (a digital
 identifer for researchers) or use an email address for your id.
 
 ::
@@ -204,7 +204,7 @@ executed. In this case, it's the wrapper script I wrote for bamstats.
 
     baseCommand: ["bash", "/usr/local/bin/bamstats"]
 
-The `CWL standard <http://www.commonwl.org/>`__ is continuing to evolve
+The `CWL standard <https://www.commonwl.org/>`__ is continuing to evolve
 and hopefully we will see new features, like support for `EDAM
 ontology <http://edamontology.org/page>`__ terms, in future releases. In
 the mean time, the `Gitter

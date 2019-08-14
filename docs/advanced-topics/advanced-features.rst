@@ -38,7 +38,7 @@ be writeable).
 The Dockstore command-line allows you to specify that the input file can
 be at an HTTP(S) location, an FTP location, an AWS S3 location, a Google
 Storage gs location, a `synapse
-id <http://python-docs.synapse.org/#accessing-data>`__, an `ICGC storage
+id <https://python-docs.synapse.org/build/html/index.html#accessing-data>`__, an `ICGC storage
 id <https://docs.icgc.org/download/guide/>`__, or a `DRS
 URI <https://github.com/ga4gh/data-repository-service-schemas/issues/49>`__
 in place of that path. For example, the following indicates that the
@@ -99,7 +99,7 @@ AWS S3
 
 For AWS S3, create a ``~/.aws/credentials`` file and a ``~/.aws/config``
 file as documented at the following
-`location <https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-config-files>`__.
+`location <https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html>`__.
 
 Get more information on the implementing plugin at
 `s3-plugin <https://github.com/dockstore/s3-plugin>`__.
@@ -190,12 +190,12 @@ Control this with the ``file-provision-retries`` parameter inside
 Running CWL with extra flags
 ----------------------------------
 
-When running a CWL tool or workflow, you may want to add additional 
-parameters or flags to the executor. You can do this by updating your 
+When running a CWL tool or workflow, you may want to add additional
+parameters or flags to the executor. You can do this by updating your
 dockstore config file  (``~/.dockstore/config``).
 
-As an example, adding the following line to your config file will stop 
-``cwltool`` from removing the Docker container and temp directory as 
+As an example, adding the following line to your config file will stop
+``cwltool`` from removing the Docker container and temp directory as
 mounted on the host, and make it run in debug mode.
 
 ::
@@ -217,7 +217,7 @@ By default, the dockstore CLI launches CWL tools/workflows using
 `cwltool <https://github.com/common-workflow-language/cwltool>`__.
 However, we have an experimental integration with other launchers such
 as: -
-`cwl-runner <http://www.commonwl.org/v1.0/CommandLineTool.html#Executing_CWL_documents_as_scripts>`__
+`cwl-runner <https://www.commonwl.org/v1.0/CommandLineTool.html#Executing_CWL_documents_as_scripts>`__
 - `Cromwell <https://cromwell.readthedocs.io/en/stable/>`__ (For
 Dockstore 1.6.0+)
 

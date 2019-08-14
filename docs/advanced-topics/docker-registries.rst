@@ -77,7 +77,7 @@ Amazon ECR images have an associated file containing the
 ``Repository Policies``. When a tool user requests access to an Amazon
 ECR image, the tool maintainer should add them to the list of users with
 pull access. More information can be found on this `Amazon
-ECR <http://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html#IAM_allow_other_accounts>`__
+ECR <https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html#IAM_allow_other_accounts>`__
 page.
 
 The user would then need to ensure that they have the AWS client

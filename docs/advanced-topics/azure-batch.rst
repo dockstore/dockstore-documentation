@@ -27,7 +27,7 @@ the box.
 1. Run through Azure Shipyard's `Linux Installation
    Guide <https://github.com/Azure/batch-shipyard/blob/master/docs/01-batch-shipyard-installation.md#step-2a-linux-run-the-installsh-script>`__
    and then the
-   `Quickstart <https://github.com/Azure/batch-shipyard/blob/master/docs/02-batch-shipyard-quickstart.md>`__
+   `Quickstart <https://github.com/Azure/batch-shipyard/blob/master/docs/02-batch-shipyard-quickstart.md#batch-shipyard-quickstart>`__
    guide with one of the sample tools such as Torch-CPU.
 2. With the shipyyard CLI setup, get the md5sum sample recipes from
    GitHub
@@ -81,7 +81,7 @@ the box.
 
 6. You can repeat the process with ``config.dockstore.bwa`` which is a
    more realistic bioinformatics workflow from the `PCAWG
-   project <http://icgc.org/working-pancancer-data-aws>`__ and takes
+   project <https://icgc.org/working-pancancer-data-aws>`__ and takes
    roughly seven hours.
 
 See Also

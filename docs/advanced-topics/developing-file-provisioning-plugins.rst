@@ -89,7 +89,7 @@ enabled.txt or disabled.txt file:
     dockstore-file-synapse-plugin
 
 See this github
-`page <https://github.com/decebals/pf4j#enabledisable-plugins>`__ for
+`page <https://github.com/pf4j/pf4j>`__ for
 more details.
 
 .. discourse::

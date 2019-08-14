@@ -18,7 +18,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>`.
 .. |CollabLink| image:: /assets/images/affiliations/collaboratory.png
     :alt: collaboratory
     :height: 65px
-.. _CollabLink: https://www.cancercollaboratory.org/
+.. _CollabLink: https://cancercollaboratory.org
 
 .. |OicrLink| image:: /assets/images/affiliations/oicr.png
     :alt: oicr
@@ -28,7 +28,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>`.
 .. |Ga4ghLink| image:: /assets/images/affiliations/ga4gh.png
     :alt: ga4gh
     :height: 65px
-.. _Ga4ghLink: https://genomicsandhealth.org/
+.. _Ga4ghLink: https://www.ga4gh.org
 
 .. |UcscLink| image:: /assets/images/affiliations/ucsc.png
     :alt: ucsc
@@ -42,7 +42,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>`.
 .. |CwlLink| image:: /assets/images/affiliations/cwl.png
     :alt: wdl
     :height: 65px
-.. _CwlLink: http://www.commonwl.org/
+.. _CwlLink: https://www.commonwl.org/
 
 .. |WdlLink| image:: /assets/images/affiliations/wdl.png
     :alt: wdl

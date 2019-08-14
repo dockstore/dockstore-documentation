@@ -71,7 +71,7 @@ the box.
       version
       `here <https://quay.io/repository/dockstore/batch_wrapper>`__.
       This wrapper provides cwltool and the Dockstore CLI, as well as
-      some trivial glue and demo code. |Job definition|
+      some trivial glue and demo code. |aws batch 3|
    2. Specify a number of CPUs and an amount of memory that is
       appropriate for your job. Our understanding is that this will not
       actually kill jobs that float above the threshold, but it will
@@ -91,9 +91,9 @@ the box.
       than dockstore.temp and uploading it somewhere accessible. This
       will run a quick md5sum tool that copies the result to a S3 bucket
       (credentials are provided via that IAM role) in just a few
-      minutes. |Job definition|
+      minutes. |aws batch 6|
    2. For more realistic jobs, you can try the `PCAWG
-      project <http://icgc.org/working-pancancer-data-aws>`__ BWA and
+      project <https://icgc.org/working-pancancer-data-aws>`__ BWA and
       Delly workflows which would use the commands
       ``/test.sh quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8_1.2 https://raw.githubusercontent.com/dockstore/batch_wrapper/master/aws/bwa.s3.json``
       (approximately seven hours) and
@@ -104,7 +104,7 @@ the box.
       after the VM is terminated.
 
 7. Submit your job, wait for the results to show up in your S3 bucket,
-   and celebrate. You've run jobs on AWS Batch! |Job definition|
+   and celebrate. You've run jobs on AWS Batch! |aws batch hurray|
 
 See Also
 --------
@@ -118,7 +118,7 @@ See Also
 
 .. |Configure compute environment| image:: /assets/images/docs/aws-batch-2.png
 .. |Configure IAM role for ecsInstanceRole| image:: /assets/images/docs/aws-batch-1.png
-.. |Job definition| image:: /assets/images/docs/aws-batch-3.png
+.. |aws batch 3| image:: /assets/images/docs/aws-batch-3.png
 .. |Docker mounts| image:: /assets/images/docs/aws-batch-4.png
-.. |Job definition| image:: /assets/images/docs/aws-batch-6.png
-.. |Job definition| image:: /assets/images/docs/aws-batch-hurray.png
+.. |aws batch 6| image:: /assets/images/docs/aws-batch-6.png
+.. |aws batch hurray| image:: /assets/images/docs/aws-batch-hurray.png

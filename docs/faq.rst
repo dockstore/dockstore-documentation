@@ -289,7 +289,7 @@ Why are my workflows from an organization I belong to not visible?
 
 Organizations have the ability to restrict access to the API for third
 party applications. GitHub provides a
-`tutorial <https://help.github.com/articles/enabling-oauth-app-access-restrictions-for-your-organization/>`__
+`tutorial <https://help.github.com/en/articles/enabling-oauth-app-access-restrictions-for-your-organization/>`__
 on how to add these restrictions to your organizations.
 
 In order for Dockstore to gain access to organizations of this type, you
@@ -297,7 +297,7 @@ will need to grant access to the Dockstore application. Dockstore will
 only be reading information on workflows in your organization and who
 has access to them in order to mirror these restrictions on Dockstore
 itself. GitHub provides a
-`tutorial <https://help.github.com/articles/approving-oauth-apps-for-your-organization/>`__
+`tutorial <https://help.github.com/en/articles/approving-oauth-apps-for-your-organization/>`__
 for approving third party apps access to your organization.
 
 What is the difference between logging in with GitHub or logging in with Google?
@@ -341,7 +341,7 @@ Any last tips on using Dockstore?
    customize your registrations in the Version tab of Dockstore
 
 .. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.321679.svg
-   :target: https://doi.org/10.5281/zenodo.321679
+   :target: https://zenodo.org/record/321679
 
 .. discourse::
     :topic_identifier: 1968

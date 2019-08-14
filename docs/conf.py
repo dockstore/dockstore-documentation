@@ -41,7 +41,7 @@ release = u'1.6.0'
 extensions = ['recommonmark']
 
 linkcheck_anchors = False
-linkcheck_ignore = ['https://ci.commonwl.org', 'http://localhost:8080/ga4gh/wes/v1']
+linkcheck_ignore = ['https://ci.commonwl.org', 'http://localhost:8080/ga4gh/wes/v1', 'http://dx.doi.org/10.12688/f1000research.10137.1']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

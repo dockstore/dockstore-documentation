@@ -29,7 +29,7 @@ Versions of your tool for most tools are harvested from the list of Tags for an 
 
 ## How do I cite Dockstore?
 
-For citing Dockstore as a paper, take a look at our [F1000 paper](https://f1000research.com/articles/6-52/v1).
+For citing Dockstore as a paper, take a look at our [F1000 paper](http://dx.doi.org/10.12688/f1000research.10137.1).
 
 For citing the actual code, we recommend looking at our Zenodo entry. You will find a variety of citation styles and ways to export it at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.321679.svg)](https://zenodo.org/record/321679).
 

@@ -48,3 +48,6 @@ Of course, keep in mind that if you have a knowledge of CWL and/or do not need t
 * [AWS Batch](aws-batch/)
 * [DNAstack Launch With](/end-user-topics/dnastack-launch-with/)
 * [Terra Launch With](/end-user-topics/terra-launch-with/)
+
+.. discourse::
+    :topic_identifier: 1282

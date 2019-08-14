@@ -97,3 +97,6 @@ Next Steps
 
 Follow the :doc:`next tutorial <dockstore-tools/>` to
 register your tool on Dockstore.
+
+.. discourse::
+    :topic_identifier: 1536

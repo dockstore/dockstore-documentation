@@ -28,3 +28,6 @@ You can also search by file format. This is helpful if you have a file of some t
 ## Tag Cloud
 The tag cloud shows a cloud of commonly used tags from all tools and workflows, depending on which tab you are on. It can be helpful for narrowing down your search.
 ![Tag Cloud](/assets/images/docs/tag-cloud.png)
+
+.. discourse::
+    :topic_identifier: 1290

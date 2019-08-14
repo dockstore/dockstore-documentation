@@ -177,3 +177,5 @@ and then:
 client publish --tool test.json
 ```
 
+.. discourse::
+    :topic_identifier: 1840

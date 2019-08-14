@@ -156,3 +156,6 @@ This will download the descriptor and any secondary descriptors, while maintaini
 ## For Advanced Users
 You can interact with checker workflows using TRS. See
 [Checker Workflows and the TRS](checker-workflow-trs/) for more information.
+
+.. discourse::
+    :topic_identifier: 1277

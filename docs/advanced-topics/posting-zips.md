@@ -181,3 +181,6 @@ subdirectories. You won't want to post a version right away; you'll want to run 
 
 But once you have a workflow assembled and passing tests, all you need to do is assemble it
 into a zip file and make an API call to get the contents on Dockstore.
+
+.. discourse::
+    :topic_identifier: 1693

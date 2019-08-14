@@ -7,3 +7,6 @@ To star an entry, go to the public page of a tool or workflow and click on the s
 
 ## Other Reasons To Star an Entry
 Starring also gives an indication for how popular a tool or workflow is. When searching for tools and workflows you can sort by the number of stars. This means that starring is a good way to tell developers that you like their tool or workflow. This also tells the community that the entry is likely of better quality.
+
+.. discourse::
+    :topic_identifier: 1291

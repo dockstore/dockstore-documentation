@@ -54,3 +54,6 @@ In the following screenshot, jsmith is sharing the workflow `test_cwl` with the
 current user.
 
 ![Build Trigger](/assets/images/docs/shared-with.png)
+
+.. discourse::
+    :topic_identifier: 1543

@@ -307,3 +307,6 @@ See Also
 -  :doc:`CWL <getting-started-with-cwl/>`
 -  :doc:`Nextflow <getting-started-with-nextflow/>`
 -  :doc:`Language Support <../end-user-topics/language-support/>`
+
+.. discourse::
+    :topic_identifier: 1544

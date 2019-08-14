@@ -65,3 +65,6 @@ BOSC
 -  `Screw: tools for building reproducible single-cell epigenomics
    workflows <https://github.com/Epigenomics-Screw/Bosc_2017_poster/raw/f83a07e4ab9acd982b4a27b41cfcd4d7a136e49e/bosc_poster.pdf>`__
 -  BC Cancer Agency, Kieran O'Neill
+
+.. discourse::
+    :topic_identifier: 1279

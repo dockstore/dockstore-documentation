@@ -32,3 +32,6 @@ See more [here](https://cromwell.readthedocs.io/en/stable/wf_options/Overview).
 * [Azure Batch](../advanced-topics/azure-batch/)
 * [DNAnexus Launch With](../end-user-topics/dnanexus-launch-with/)
 * [DNAstack Launch With](../end-user-topics/dnastack-launch-with/)
+
+.. discourse::
+    :topic_identifier: 1841

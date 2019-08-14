@@ -143,3 +143,6 @@ See Also
 -  :doc:`Azure Batch <../advanced-topics/azure-batch/>`
 -  :doc:`DNAstack Launch With <../end-user-topics/dnastack-launch-with/>`
 -  :doc:`Terra Launch With <../end-user-topics/terra-launch-with/>`
+
+.. discourse::
+    :topic_identifier: 1275

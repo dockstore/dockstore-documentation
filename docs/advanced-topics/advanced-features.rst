@@ -438,3 +438,5 @@ example:
 
 .. note::  WES SUPPORT IS IN BETA AT THIS TIME. RESULTS MAY BE UNPREDICTABLE.
 
+.. discourse::
+    :topic_identifier: 1274

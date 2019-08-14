@@ -18,3 +18,6 @@ The tool we will be using throughout this tutorial is
 `BAMStats <http://bamstats.sourceforge.net/>`__. It is a tool for
 summarising Next Generation Sequencing alignments. It accepts a BAM file
 as input and produces a ZIP file containing an HTML report on the alignment.
+
+.. discourse::
+    :topic_identifier: 1281

@@ -27,3 +27,6 @@ If you would like to setup aliases for your organization or collection, you must
 Use the `/organizations/{id}/aliases` endpoint to add an alias for an organization.
 
 Use the `/organizations/collections/{id}/aliases` endpoint to add an alias for a collection.
+
+.. discourse::
+    :topic_identifier: 1567

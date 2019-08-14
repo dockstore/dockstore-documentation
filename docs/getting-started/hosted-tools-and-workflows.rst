@@ -151,3 +151,6 @@ Advanced Topics
 
 Are you interested in learning advanced topics? See our :doc:`advanced
 topics <../advanced-topics/advanced-topics>` page to get the most out of Dockstore.
+
+.. discourse::
+    :topic_identifier: 1547

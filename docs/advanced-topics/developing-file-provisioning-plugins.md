@@ -56,3 +56,6 @@ dockstore-file-synapse-plugin
 ```
 
 See this github [page](https://github.com/decebals/pf4j#enabledisable-plugins) for more details.
+
+.. discourse::
+    :topic_identifier: 1839

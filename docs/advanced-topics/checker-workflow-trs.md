@@ -70,3 +70,6 @@ This will return an array of objects representing the test parameter files. Each
 
 ### Other Usage
 This does not cover all of the uses of TRS for checker workflows. You can see the full list of commands  [here](https://dockstore.org/api/static/swagger-ui/index.html#/GA4GH). Note that any call that works for a normal tool or workflow will also work with a checker workflow.
+
+.. discourse::
+    :topic_identifier: 1284

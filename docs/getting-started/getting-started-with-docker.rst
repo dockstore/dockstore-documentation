@@ -303,3 +303,6 @@ links to get an introduction.
 - :doc:`CWL <getting-started-with-cwl>`
 - :doc:`WDL <getting-started-with-wdl>`
 - :doc:`Nextflow <getting-started-with-nextflow>`
+
+.. discourse::
+    :topic_identifier: 1280

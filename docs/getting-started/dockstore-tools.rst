@@ -500,3 +500,6 @@ Once registered, you can send links to your tools on Dockstore to
 colleagues and use it as a public platform for sharing your tools.
 
 Learn about :doc:`Workflows <dockstore-workflows/>` and how they differ from tools.
+
+.. discourse::
+    :topic_identifier: 1272

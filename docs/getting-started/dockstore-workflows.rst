@@ -254,3 +254,6 @@ You may not want to store your files directly with a service like
 GitHub. Perhaps you want your descriptor files to not be public. The
 solution is to use :doc:`Hosted Tools and
 Workflows </getting-started/hosted-tools-and-workflows/>`.
+
+.. discourse::
+    :topic_identifier: 1292

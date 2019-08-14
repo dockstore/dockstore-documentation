@@ -28,3 +28,6 @@ Then hit the "Submit" button and continue from within the DNAnexus interface to 
 * [Azure Batch](/advanced-topics/azure-batch/)
 * [DNAstack Launch With](dnastack-launch-with/)
 * [Terra Launch With](terra-launch-with/)
+
+.. discourse::
+    :topic_identifier: 1535

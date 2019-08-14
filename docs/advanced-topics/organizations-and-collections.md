@@ -109,3 +109,6 @@ We keep track of events occurring related to the activity on the organization pa
 Details are displayed when hovering over the individual events.
 
 ![Events](/assets/images/docs/Events.png)
+
+.. discourse::
+    :topic_identifier: 1785

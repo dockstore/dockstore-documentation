@@ -52,3 +52,6 @@ Note that as with the above approach, you will want to double-check that the wor
 * [Azure Batch](/advanced-topics/azure-batch/)
 * [DNAnexus Launch With](dnanexus-launch-with/)
 * [Terra Launch With](terra-launch-with/)
+
+.. discourse::
+    :topic_identifier: 1309

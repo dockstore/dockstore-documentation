@@ -41,9 +41,10 @@ You can change your username in the onboarding wizard during setup or
 from the accounts page at the Dockstore Account Controls tab.
 
 Currently you can only change your username when the following
-conditions are true: \* You do not have any published tools or workflows
-\* You do not have anything shared by you to other users through the
-permissions tab for workflows
+conditions are true:
+
+* You do not have any published tools or workflows
+* You do not have anything shared by you to other users through the permissions tab for workflows
 
 For Google users, your initial username will include an @ symbol. We
 recommend you change your username to something that is not an email to
@@ -56,7 +57,12 @@ Once you register you can start linking your external accounts. There is
 also a command line tool we will use for most of the tasks in this
 tutorial. For this tutorial you only need to have your GitHub and
 Quay.io accounts established. However, Dockstore supports the following
-external services: \* GitHub \* Bitbucket \* GitLab \* Quay.io
+external services:
+
+* GitHub
+* Bitbucket
+* GitLab
+* Quay.io
 
 Your link to GitHub is established on login and you will then be
 prompted to link your other accounts.

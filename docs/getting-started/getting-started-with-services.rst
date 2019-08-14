@@ -1,6 +1,6 @@
 Getting Started with Dockstore Services
 =======================================
-.. note:: Dockstore Services is currently in beta mode.
+.. note:: Dockstore Services is currently in beta mode. Also note that the screenshots below were taken on our staging site.
 Tutorial Goals
 --------------
 
@@ -27,7 +27,7 @@ You can also view a template ``.dockstore.yml`` file `here
 
 Line 1 specifies the ``.dockstore.yml`` version, which must be 1.1 for services.
 
-Next, is a required key named ``service`` where your service description will lie.
+Next is a required key named ``service`` where your service description will lie.
 
 Within this, you should specify the type which can be docker-compose, swarm, kubernetes, or helm.
 
@@ -77,7 +77,7 @@ To add a version, get the information to populate, and gain the ability to publi
 
 .. figure:: /assets/images/docs/services-versions-tab.png
 
-Now the Files tab will have your ``.dockstore.yml`` under the Primary Descriptor. Additionally, the files you choose to list in the in the file section of the ``.dockstore.yml`` will also be visible in the Files tab.
+Now the Files tab will have your ``.dockstore.yml`` under the Primary Descriptor. Additionally, the files you choose to list in the in the files section of the ``.dockstore.yml`` will also be visible in the Files tab.
 
 Once you have a version, you can now publish your service! Publishing will create a public page that is very similar to the ones we have for tools and workflows.
 

@@ -22,7 +22,7 @@ Azure Batch
 
 `Azure Batch <https://azure.microsoft.com/en-us/services/batch/>`__ and
 the associated
-`batch-shipyard <https://github.com/Azure/batch-shipyard.md>`__ is built by
+`batch-shipyard <https://github.com/Azure/batch-shipyard>`__ is built by
 Microsoft. Look `here <azure-batch>`__ for a tutorial on how to run a
 few sample tools via Azure.
 

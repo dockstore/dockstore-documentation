@@ -115,7 +115,7 @@ properties file.
 
 After running the webservice, you can check out the web service
 endpoints through swagger. By default, it is available at
-http://localhost:8082/static/swagger-ui/index.html.
+``http://localhost:8082/static/swagger-ui/index.html``.
 
 The basic workflow is that GitHub repos are created when posting a new
 tool. When files are posted or put to a version of a tool, we will
@@ -149,7 +149,7 @@ properties file.
 The Dockstore tutorial earlier would've specified the server-url
 alongside the token. Unless you're running your own dockstore
 webservice, the Dockstore production server-url is
-"https://www.dockstore.org/api". Note this down as it will be used later
+``https://www.dockstore.org/api``. Note this down as it will be used later
 in the Write API client properties file.
 
 -  Quay.io integration
@@ -163,7 +163,7 @@ on how to link your Quay.io account to Dockstore.
 
 You will need to know the URL of the Write API web service you ran
 previously. If you've been using the example.yml, it should be
-"http://localhost:8082/api/ga4gh/v1"
+``http://localhost:8082/api/ga4gh/v1``
 
 Client Configuration
 ~~~~~~~~~~~~~~~~~~~~

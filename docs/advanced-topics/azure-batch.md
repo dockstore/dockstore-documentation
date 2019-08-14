@@ -6,7 +6,7 @@ Azure Batch also provides a client-side tool called [Batch Shipyard](https://git
 
 Of course, keep in mind that if you have a knowledge of CWL and/or do not need the Dockstore command-line to do file provisioning, you can decompose the underlying command-line invocation for the tool and use that as the command for your jobs, gaining a bit of performance. This tutorial focuses on using cwltool and using the Dockstore command-line to provide an experience that is more akin to running Dockstore or cwltool [on the command-line](../end-user-topics/launch.html#dockstore-cli) out of the box.
 
-1. Run through Azure Shipyard's [Linux Installation Guide](https://github.com/Azure/batch-shipyard/blob/master/docs/01-batch-shipyard-installation.md#step-2a-linux-run-the-installsh-script) and then the [Quickstart](https://github.com/Azure/batch-shipyard/blob/master/docs/02-batch-shipyard-quickstart.md) guide with one of the sample tools such as Torch-CPU.
+1. Run through Azure Shipyard's [Linux Installation Guide](https://github.com/Azure/batch-shipyard/blob/master/docs/01-batch-shipyard-installation.md#step-2a-linux-run-the-installsh-script) and then the [Quickstart](https://github.com/Azure/batch-shipyard/blob/master/docs/02-batch-shipyard-quickstart.md#batch-shipyard-quickstart) guide with one of the sample tools such as Torch-CPU.
 1. With the shipyyard CLI setup, get the md5sum sample recipes from GitHub
     ```
     $ git clone https://github.com/dockstore/batch_wrapper.git
@@ -41,7 +41,7 @@ Of course, keep in mind that if you have a knowledge of CWL and/or do not need t
     Calling on plugin io.dockstore.provision.S3Plugin$S3Provision to provision to s3://dockstore.temp/md5sum.txt
     [##################################################] 100%
     ```
-1. You can repeat the process with `config.dockstore.bwa` which is a more realistic bioinformatics workflow from the [PCAWG project](http://icgc.org/working-pancancer-data-aws) and takes roughly seven hours.
+1. You can repeat the process with `config.dockstore.bwa` which is a more realistic bioinformatics workflow from the [PCAWG project](https://icgc.org/working-pancancer-data-aws) and takes roughly seven hours.
 
 ## See Also
 

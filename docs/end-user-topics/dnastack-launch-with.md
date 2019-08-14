@@ -21,7 +21,7 @@ After selecting the workflow and selecting a version, you will see the contents 
 
 ![dnastack project4](/assets/images/docs/dnastack/dnastack_projects_4.png)
 
-If the import was successful after hitting the "Import" button you will see the regular DNAstack interface which will let you specify inputs and other parameters in order to run the workflow just like any other workflow in DNAstack.  
+If the import was successful after hitting the "Import" button you will see the regular DNAstack interface which will let you specify inputs and other parameters in order to run the workflow just like any other workflow in DNAstack.
 
 ![dnastack project5](/assets/images/docs/dnastack/dnastack_projects_5.png)
 

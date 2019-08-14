@@ -61,7 +61,7 @@ The steps to accomplish this task, at a high level, are:
 
 1. Create a new repository on GitHub, Bitbucket or GitLab
 2. Describe your workflow as either a
-   `CWL <http://www.commonwl.org/user_guide/>`__,
+   `CWL <https://www.commonwl.org/user_guide/>`__,
    `WDL <https://github.com/openwdl/wdl/blob/develop/SPEC.md#workflow-definition>`__
    or a `Nextflow <https://www.nextflow.io/>`__ workflow
 3. Test your workflow using an environment that supports full CWL, WDL
@@ -81,7 +81,7 @@ We recommend the filename ``Dockstore.cwl`` at the root of your
 repository for simplicity, but anything else with a consistent extension
 should work just as well. The details as to how to write a workflow are
 somewhat beyond the scope of this tutorial, but we can recommend the
-`Introduction to the CWL <http://www.commonwl.org/user_guide/>`__ and
+`Introduction to the CWL <https://www.commonwl.org/user_guide/>`__ and
 `Getting Started with
 WDL <https://github.com/openwdl/wdl/tree/master#getting-started-with-wdl>`__.
 

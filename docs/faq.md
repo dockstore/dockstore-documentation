@@ -11,7 +11,7 @@ We can also provision input and output files using HTTP, FTP, and S3. We also ha
 
 Typically, we test running tools in Ubuntu Linux 16.04 LTS on VMs in [OpenStack](https://www.openstack.org/) with 8 vCPUs and 96 GB of RAM and above. We've also begun testing on Ubuntu 18.04 LTS and so far it's been successful. If you are only listing and editing tools, we have achieved success with much lower system requirements. However, launching tools will have higher system requirements dependent on the specific tool. Consult a tool's README or CWL/WDL description when in doubt.
 
-## The CLI is failing with Java 8 
+## The CLI is failing with Java 8
 
 If you see the following error when running the Dockstore CLI, you need to upgrade your Java version:
 ```
@@ -20,8 +20,8 @@ Error: A JNI error has occurred, please check your installation and try again
 Exception in thread "main" java.lang.UnsupportedClassVersionError: io/dockstore/client/cli/Client has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
 ```
 
-The Dockstore CLI as of 1.7.0 is compiled and tested using Java 11 due to the Java 8 EOL. 
-You will need to upgrade from Java 8 to use the CLI. 
+The Dockstore CLI as of 1.7.0 is compiled and tested using Java 11 due to the Java 8 EOL.
+You will need to upgrade from Java 8 to use the CLI.
 
 ## There are too many versions of my tool, how do I delete some?
 
@@ -31,7 +31,7 @@ Versions of your tool for most tools are harvested from the list of Tags for an 
 
 For citing Dockstore as a paper, take a look at our [F1000 paper](http://dx.doi.org/10.12688/f1000research.10137.1).
 
-For citing the actual code, we recommend looking at our Zenodo entry. You will find a variety of citation styles and ways to export it at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.321679.svg)](https://doi.org/10.5281/zenodo.321679).
+For citing the actual code, we recommend looking at our Zenodo entry. You will find a variety of citation styles and ways to export it at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.321679.svg)](https://zenodo.org/record/321679).
 
 ## How do I get more space inside my CWL tool running in a container?
 
@@ -135,7 +135,7 @@ Setting the default version affects a number of elements including (but not limi
 
 1. It determines what is displayed in the 'Description' section of the 'Info' Tab
 1. It is the first version other end users see when no version is specified. For example https://dockstore.org/containers/quay.io/pancancer/pcawg-bwa-mem-workflow is redirected to https://dockstore.org/containers/quay.io/pancancer/pcawg-bwa-mem-workflow:develop?tab=info
-1. It is the version of the tool/workflow that is launched by default when users launch a tool/workflow from the Dockstore CLI.  
+1. It is the version of the tool/workflow that is launched by default when users launch a tool/workflow from the Dockstore CLI.
    For example, if version 1.0 is set as the default version of the quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig tool,
 
    `$ dockstore tool launch --entry quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig:1.0 --json Dockstore.json`
@@ -161,9 +161,9 @@ Likewise, workflows registered with other source code repositories lack this fea
 Finally, for participants of the [limited sharing beta](../advanced-topics/sharing-workflows/), you can enter the email addresses of the users you wish to share with to give them permissions to your workflow. This is only available for hosted workflows and users with Google accounts linked to Terra.
 
 ## Why are my workflows from an organization I belong to not visible?
-Organizations have the ability to restrict access to the API for third party applications. GitHub provides a [tutorial](https://help.github.com/articles/enabling-oauth-app-access-restrictions-for-your-organization/) on how to add these restrictions to your organizations.
+Organizations have the ability to restrict access to the API for third party applications. GitHub provides a [tutorial](https://help.github.com/en/articles/enabling-oauth-app-access-restrictions-for-your-organization) on how to add these restrictions to your organizations.
 
-In order for Dockstore to gain access to organizations of this type, you will need to grant access to the Dockstore application. Dockstore will only be reading information on workflows in your organization and who has access to them in order to mirror these restrictions on Dockstore itself. GitHub provides a [tutorial](https://help.github.com/articles/approving-oauth-apps-for-your-organization/) for approving third party apps access to your organization.
+In order for Dockstore to gain access to organizations of this type, you will need to grant access to the Dockstore application. Dockstore will only be reading information on workflows in your organization and who has access to them in order to mirror these restrictions on Dockstore itself. GitHub provides a [tutorial](https://help.github.com/en/articles/approving-oauth-apps-for-your-organization) for approving third party apps access to your organization.
 
 ## What is the difference between logging in with GitHub or logging in with Google?
 The intent here is that you should be able to login with either login method and still conveniently get into the same Dockstore account. With login via Google, if you are a Terra user you will also have access to [sharing functionality](../advanced-topics/sharing-workflows/).

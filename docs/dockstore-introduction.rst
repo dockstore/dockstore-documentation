@@ -3,10 +3,10 @@ About Dockstore
 
 The Dockstore concept is simple, provide a place where users can share
 tools encapsulated in Docker and described with the `Common Workflow
-Language <http://common-workflow-language.github.io/>`__ (CWL) or
+Language <https://www.commonwl.org/>`__ (CWL) or
 `Workflow Description Language <http://www.openwdl.org/>`__ (WDL),
 workflow languages used by members of and APIS created by the
-`GA4GH <https://genomicsandhealth.org/>`__ `Cloud Work
+`GA4GH <https://www.ga4gh.org>`__ `Cloud Work
 Stream <http://ga4gh.cloud/>`__. This enables scientists, for example,
 to share analytical tools in a way that makes them machine readable and
 runnable in a variety of environments. While the Dockstore is focused on
@@ -17,7 +17,7 @@ their Docker images in a standardized, machine-readable way.
 Dockstore also attempts to work with new and alternative
 languages/standards such as `Nextflow <https://www.nextflow.io/>`__ as
 popular challengers to CWL and WDL. We also work on the `GA4GH Tool
-Registry <https://github.com/ga4gh/tool-registry-schemas>`__ standard as
+Registry <https://github.com/ga4gh/tool-registry-service-schemas>`__ standard as
 a way of sharing data with workflow platforms and partners. We are also
 working with the task execution, workflow execution, and data transfer
 standards developing at the GA4GH.
@@ -26,10 +26,10 @@ Built with Docker and Git
 -------------------------
 
 Docker repositories, like `Docker Hub <https://hub.docker.com/>`__,
-`Quay.io <https://quay.io/>`__ and `GitLab <https://gitlab.com>`__, and
-source control repositories like `GitHub <http://github.com>`__,
+`Quay.io <https://quay.io/>`__ and `GitLab <https://about.gitlab.com>`__, and
+source control repositories like `GitHub <https://github.com>`__,
 `Bitbucket <https://bitbucket.org/>`__, and
-`GitLab <https://gitlab.com>`__, provide much of the infrastructure we
+`GitLab <https://about.gitlab.com>`__, provide much of the infrastructure we
 need. Docker repositories allow users to build, publish, and share both
 public and private Docker images. However, the services lack
 standardized ways of describing how to invoke tools contained within

@@ -2,7 +2,7 @@ Now that you've perfected the ``Dockerfile``, built the image on your
 local host, tested running the Docker container and tool packaged
 inside, and have released this version on GitHub, it's time to push the
 image to a place where others can use it. For this you can use Docker
-Hub or GitLab but we prefer `Quay.io <http://quay.io>`__ since it
+Hub or GitLab but we prefer `Quay.io <https://quay.io>`__ since it
 integrates really nicely with Dockstore.
 
 You can manually ``docker push`` the image you have already built but

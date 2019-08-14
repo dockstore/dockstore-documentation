@@ -31,3 +31,6 @@ BOSC 2017
 Yuen D, O'Connor B, Duncan A et al. The GA4GH Tool Registry Service (TRS) Dockstore – year one [version 1; not peer reviewed]. F1000Research 2019, 8(ISCB Comm J):450 (poster) (https://doi.org/10.7490/f1000research.1116584.1)
 
 - `Talk <https://www.youtube.com/watch?v=SuwONuO8LoA>`_
+
+.. discourse::
+    :topic_identifier: 1969

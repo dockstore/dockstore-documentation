@@ -186,3 +186,6 @@ The Dockstore CLI will automatically load all Docker images in the directory spe
 * you can use a single Docker image with multiple tools, each of them registered via a different CWL
 * you can use a Git repository with multiple CWL files
 * related to the two above, you can use non-standard file paths if you customize your registrations in the Version tab of Dockstore
+
+.. discourse::
+    :topic_identifier: 1968

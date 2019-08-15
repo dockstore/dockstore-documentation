@@ -1,6 +1,8 @@
 Getting Started with Dockstore Services
 =======================================
+
 .. note:: Dockstore Services is currently in beta mode. Also note that the screenshots below were taken on our staging site.
+
 Tutorial Goals
 --------------
 
@@ -84,3 +86,7 @@ Once you have a version, you can now publish your service! Publishing will creat
 .. figure:: /assets/images/docs/services-public-page.png
 
 Now other users can view and :doc:`star <../end-user-topics/starring>` your service. You will also have the option to add published services to a :doc:`collection <../advanced-topics/organizations-and-collections>`.
+
+
+.. discourse::
+    :topic_identifier: 1970

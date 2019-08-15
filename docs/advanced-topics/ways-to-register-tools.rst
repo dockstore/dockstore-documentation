@@ -42,3 +42,6 @@ Generally, Write API webservice and client has the highest setup time
 compared to the other methods of registering. But, as you register more
 tools, the Write API tends to become the better choice (since it
 performs many intermediary steps for you).
+
+.. discourse::
+    :topic_identifier: 1835

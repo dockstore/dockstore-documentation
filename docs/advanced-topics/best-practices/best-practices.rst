@@ -274,3 +274,6 @@ Next Steps
 ----------
 
 .. include:: authorship-metadata-outro.rst
+
+.. discourse::
+    :topic_identifier: 1289

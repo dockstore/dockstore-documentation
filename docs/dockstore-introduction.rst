@@ -129,3 +129,7 @@ We plan on expanding the Dockstore in several ways over the coming
 months. Please see our `issues
 page <https://github.com/dockstore/dockstore/issues>`__ for details and
 discussions.
+
+
+.. discourse::
+    :topic_identifier: 1269

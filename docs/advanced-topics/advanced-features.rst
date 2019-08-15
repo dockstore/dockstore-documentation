@@ -416,7 +416,7 @@ credentials specified in the Dockstore config file.
 
 You can override the WES config file settings on the command line by
 using global optional parameters - --wes-url <WES URL> URL where the WES
-request should be sent, e.g. 'http://localhost:8080/ga4gh/wes/v1' -
+request should be sent, e.g. ``http://localhost:8080/ga4gh/wes/v1`` -
 --wes-auth <auth> Authorization credentials for the WES endpoint, e.g.
 'Bearer 12345'
 
@@ -438,3 +438,5 @@ example:
 
 .. note::  WES SUPPORT IS IN BETA AT THIS TIME. RESULTS MAY BE UNPREDICTABLE.
 
+.. discourse::
+    :topic_identifier: 1274

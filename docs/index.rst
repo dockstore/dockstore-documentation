@@ -9,7 +9,7 @@ or Nextflow (NFL).
 
 If this is your first time learning about Dockstore, we recommend starting with the :doc:`Getting Started Guide <getting-started/getting-started>`. This will introduce
 you to the core concepts of Dockstore, leaving you with a good understanding of the platform. However, if you are simply looking to launch tools and workflows, we recommend
-going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>`.
+going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` or our `quickstart guide <https://dockstore.org/quick-start>`_.
 
 .. centered:: In Affiliation with
 

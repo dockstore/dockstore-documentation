@@ -461,12 +461,12 @@ Converting Between Build Modes (Quay.io Only)
 Manual -> Fully-Automated:
 
 1. Add a git build trigger to the Quay.io repository
-2. "Refresh" the tool on Dockstore
+2. Refresh the manual tool
 
 Fully-Automated -> Manual:
 
 1. Delete tool
-2. Create a new Manual tool (will have to recreate the Quay.io
+2. Create a new manual tool (will have to recreate the Quay.io
    repository)
 
 .. note::

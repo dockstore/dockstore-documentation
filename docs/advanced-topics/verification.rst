@@ -43,7 +43,9 @@ tool.
 
 The curl command results in something like:
 
-``curl -X POST "https://dockstore.org/api/api/ga4gh/v2/extended/quay.io%2Fbriandoconnor%2Fdockstore-tool-md5sum/versions/master/CWL/tests/test.json?platform=Dockstore%20CLI&verified=true&metadata=Phase%201%20GA4GH%20Tool%20Execution%20Challenge" -H  "accept: application/json" -H  "Authorization: Bearer iamafakebearertoken"``
+::
+
+   curl -X POST "https://dockstore.org/api/api/ga4gh/v2/extended/quay.io%2Fbriandoconnor%2Fdockstore-tool-md5sum/versions/master/CWL/tests/test.json?platform=Dockstore%20CLI&verified=true&metadata=Phase%201%20GA4GH%20Tool%20Execution%20Challenge" -H  "accept: application/json" -H  "Authorization: Bearer iamafakebearertoken"
 
 A successful response will result in something like:
 
@@ -121,3 +123,6 @@ Additionally, if Dockstore has managed to successfully launch the tool/workflow,
 
 .. _dockstore-tool-md5sum: https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:master?tab=info
 .. _files endpoint: https://dockstore.org/static/swagger-ui/index.html#/GA4GH/toolsIdVersionsVersionIdTypeFilesGet
+
+.. role:: bash(code)
+   :language: bash

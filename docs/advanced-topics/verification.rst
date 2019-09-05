@@ -9,7 +9,7 @@ Verifying a test parameter file
 4.  Provide the TRS ID for the tool/workflow being verified.
     For example, the `dockstore-tool-md5sum`_ tool has the TRS ID:
     “quay.io/briandoconnor/dockstore-tool-md5sum” as shown in the “Info”
-    tab with the label: “TRS CWL Path” or “TRS WDL Path”
+    tab with the label: “TRS CWL” or “TRS WDL”
 5.  Provide the version_id of the tool/workflow to verify. It can be any
     version listed in the Version tab of the tool/workflow.
     `dockstore-tool-md5sum <https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:master?tab=versions>`__

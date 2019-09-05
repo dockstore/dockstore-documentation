@@ -1,6 +1,15 @@
 Verifying a test parameter file
 ===============================
 
+Introduction
+------------
+
+This is for admins and curators who already have a solid understanding of what a verified tool/workflow is and 
+want to verify one. See the `FAQ <../faq.html#what-is-a-verified-tool-or-workflow>`__ for basic information.
+
+Verification Process
+--------------------
+
 1.  Go to
     https://dockstore.org/static/swagger-ui/index.html#/extendedGA4GH/toolsIdVersionsVersionIdTypeTestsPost
 2.  Click “Try it out”
@@ -14,7 +23,8 @@ Verifying a test parameter file
     version listed in the Version tab of the tool/workflow.
     `dockstore-tool-md5sum <https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:master?tab=versions>`__
     has the following versions currently: 1.0.4, master, develop, 1.0.3,
-    latest, 1.0.2, 1.0.1, and 1.0.0.
+    latest, 1.0.2, 1.0.1, and 1.0.0. It is recommended to only verify versions
+    that are unlikely to change (tags).
 6.  Provide the “relative_path” of the test parameter file being
     verified. The path of the test parameter file is relative to the
     primary descriptor. This path can be found using the `files
@@ -91,7 +101,7 @@ seen:
    verifier. This example shows that “Dockstore CLI” is the platform and
    “Phase 1 GA4GH Tool Execution Challenge” is the verifier.
 
-Addition information for all verified versions can be viewed at a glance
+Additional information for all verified versions can be viewed at a glance
 in the versions tab:
 
 .. figure:: /assets/images/docs/verification/versions-tab.png

@@ -4,7 +4,7 @@ Verifying a test parameter file
 1.  Go to
     https://dockstore.org/static/swagger-ui/index.html#/extendedGA4GH/toolsIdVersionsVersionIdTypeTestsPost
 2.  Click “Try it out”
-3.  Provide a “type”, this should be self-explanatory. See the
+3.  Provide a “type”. See the
     description for allowable values.
 4.  Provide the TRS ID for the tool/workflow being verified.
     For example, the `dockstore-tool-md5sum`_ tool has the TRS ID:
@@ -24,7 +24,7 @@ Verifying a test parameter file
     right-most “File” dropdown. This relative path must be a test
     parameter file, providing a descriptor will not work.
 7.  Provide the “platform”. Some examples are: HCA, Cromwell, Arvados,
-    etc
+    etc.
 8.  Select the “verified” status either as “true” or “false”. Use “true”
     to verify, “false” to “unverify”.
 9.  Provide “metadata”, this is typically the verifier’s identity which
@@ -64,7 +64,7 @@ Viewing on Dockstore.org
 There are 3 new indicators in Dockstore.org that indicates whether or
 not the tool/workflow is correctly verified.
 
-To see if the verified tool/workflow is correctly displaying to others
+To see if the tool/workflow appears as verified to others
 on Dockstore.org, first go to the page of the tool/workflow such as
 https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:1.0.4?tab=info.
 Since this tool/workflow is correctly verified, the 3 indicators can be
@@ -100,7 +100,7 @@ in the versions tab:
    Versions Tab
 
 Once again, the checkmarks indicate the version is verified. Platforms
-which the version was verified on is displayed to the right of it. In
+which the version was verified on are displayed to the right of it. In
 this case, it’s “Dockstore CLI”.
 
 To see more verification information about a specific version, first 

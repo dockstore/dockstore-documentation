@@ -34,7 +34,8 @@ builds <https://docs.quay.io/guides/building.html>`__. Using those to
 track back to your GitHub, Bitbucket, or GitLab accounts, we list all
 pairs of Docker images with git repositories that you have access to on
 those services. When we discover both of these, we create an unpublished
-entry in the interface below.
+entry in the interface below. We consider these tools as automated since
+new versions of the tool will be automatically added.
 
 .. figure:: /assets/images/docs/register_ui.png
    :alt: My Tools
@@ -395,8 +396,8 @@ images).
 Additional Information on Build Modes
 -------------------------------------
 
-Fully-Automated
-~~~~~~~~~~~~~~~
+Fully-Automated (Quay.io Only)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **How to create it**:
 
@@ -426,6 +427,11 @@ Recommended when you are using a Quay.io registry, want a quick and easy
 way to register the tool, and want to avoid manually adding new versions
 to the tool. Generally recommended for most tools.
 
+.. note::
+  If the Quay.io repository has at least one build that was not triggered by a git repository,
+  then the tool will have the build mode Partially-Automated. The tool will still have the
+  same benefits as a Fully-Automated tool.
+
 Manual
 ~~~~~~
 
@@ -449,19 +455,24 @@ Recommended when you're not using Quay.io, someone else has the same
 tool name already and you want your own tool instead, or if you are not
 using build triggers.
 
-Converting Between Build Modes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Converting Between Build Modes (Quay.io Only)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Manual -> Fully-Automated:
 
-1. Deregister the manual tool
-2. Create a new Fully-Automated one (simply click "Refresh All")
+1. Add a git build trigger to the Quay.io repository
+2. Refresh the manual tool
 
 Fully-Automated -> Manual:
 
 1. Delete tool
-2. Create a new Manual tool (will have to recreate the Quay.io
+2. Create a new manual tool (will have to recreate the Quay.io
    repository)
+
+.. note::
+  When manually adding a Quay.io tool, if there exists a Fully-Automated tool
+  on Dockstore with the same Docker image and Git repository as the manual tool,
+  then the manual tool will be converted to Fully-Automated.
 
 Sharing the Tool
 ----------------

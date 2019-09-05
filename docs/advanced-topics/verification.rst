@@ -119,10 +119,8 @@ A popup will appear:
 
 It lists the platform it was verified on, the platform version, test parameter file that was used, and metadata (verifier).
 
-Additionally, if Dockstore has managed to successfully launch the tool/workflow, logs will also be available for viewing.
+Additionally, Dockstore may launch certain tools/workflows in specific cases. If has managed to successfully do so, 
+logs will also be available for viewing.
 
 .. _dockstore-tool-md5sum: https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:master?tab=info
 .. _files endpoint: https://dockstore.org/static/swagger-ui/index.html#/GA4GH/toolsIdVersionsVersionIdTypeFilesGet
-
-.. role:: bash(code)
-   :language: bash

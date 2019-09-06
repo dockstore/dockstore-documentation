@@ -254,18 +254,11 @@ not limited to):
     ``$ dockstore tool launch --entry quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig --json Dockstore.json``
 4. The docker pull command in the tools search reflects the defaultversion
 
-How can I use the Dockstore CLI with Python 3?
+How can I use the Dockstore CLI with Python 2?
 ----------------------------------------------
 
-There are currently issues with avro, cwltool, and Python 3. See
-`cwltool <https://github.com/common-workflow-language/cwltool/issues/524>`__
-for more info. To work around this issue, instead of installing avro,
-install avro-cwl. Therefore, the pip3 requirements.txt file should end
-up looking like
-`this <https://dockstore.org/api/metadata/runner_dependencies?client_version=1.5.0&python_version=3&runner=cwltool&output=text>`__
-
-Note that installing the "avro" pip package afterwards will overwrite
-the "avro-cwl" pip package and will result in cwltool not working again.
+Python 2 support ends in 2020. You can get the Python 2 requirements.txt with ``curl -o requirements.txt "https://dockstore.org/api/metadata/runner_dependencies?python_version=2"``
+but it is currently untested.
 
 How do I add other users as maintainers of a tool?
 --------------------------------------------------

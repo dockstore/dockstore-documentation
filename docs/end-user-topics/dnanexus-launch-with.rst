@@ -43,6 +43,7 @@ See Also
 
 -  `AWS Batch </advanced-topics/aws-batch/>`__
 -  `Azure Batch </advanced-topics/azure-batch/>`__
+-  `CGC Launch With<cgc-launch-with/>`__
 -  `DNAstack Launch With <dnastack-launch-with/>`__
 -  `Terra Launch With <terra-launch-with/>`__
 

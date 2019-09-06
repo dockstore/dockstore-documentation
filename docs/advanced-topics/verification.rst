@@ -9,8 +9,7 @@ A verified tool/workflow indicates that it was successfully run and verified by 
 -  our team
 -  an outside party
 
-Currently, the majority of tool validation has been done by the
-`docktesters <https://lists.icgc.org/mailman/listinfo/docktesters>`__
+Historically, the majority of tool validation has been done by the docktesters
 team currently headed by Miguel Vazquez and formerly headed by Francis
 Ouellette.
 

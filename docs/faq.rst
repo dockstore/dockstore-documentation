@@ -189,37 +189,9 @@ can change what it allocates using the Docker for Mac GUI under
 
 What is a verified tool or workflow?
 ------------------------------------
+A verified tool/workflow means that at least one version has been verified to be successfully ran on a platform.
 
-For certain tools or workflows on Dockstore, you will see a verified
-checkmark like . This checkmark is used to indicate tools that were
-either:
-
--  created by our users and verified by our team to run successfully.
--  created by our team and verified by an outside party to run
-   successfully
-
-Currently, the majority of tool validation has been done by the
-`docktesters <https://lists.icgc.org/mailman/listinfo/docktesters>`__
-team currently headed by Miguel Vazquez and formerly headed by Francis
-Ouellette.
-
-We also strive to use this to highlight tools that share a common set of
-recommended characteristics:
-
--  tools should include a description and an author
--  tools should include a README.md or similar in their source repo
-   describing any other relevant information about the tool
--  tools should include at least one test parameter file indicating how
-   to run the tool on some sample data
--  the Dockerfile should be helpful in reconstructing how a tool was
-   built from source
--  tools and/or their reference data should be publically available
-
-This is going to be a moving quality target as tools improve, but if you
-have a tool that you wish to be verified, please send us a heads-up via
-our GitHub issues or Gitter!
-
-.. note:: If you are already a Dockstore admin or curator, you can visit :doc:`/advanced-topics/verification` to learn how to verify a tool/workflow.
+See :doc:`/advanced-topics/verification` for full details on this feature.
 
 What is a default version of a tool or workflow?
 ------------------------------------------------

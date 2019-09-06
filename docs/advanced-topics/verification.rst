@@ -1,14 +1,95 @@
-Verifying a test parameter file
-===============================
+Verification
+============
 
-Introduction
-------------
+What is a verified tool/workflow?
+---------------------------------
+A verified tool/workflow indicates that it was successfully run and verified by either:
 
-This is for admins and curators who already have a solid understanding of what a verified tool/workflow is and 
-want to verify one. See the `FAQ <../faq.html#what-is-a-verified-tool-or-workflow>`__ for basic information.
+-  the :ref:`Dockstore ToolTester`
+-  our team
+-  an outside party
+
+Currently, the majority of tool validation has been done by the
+`docktesters <https://lists.icgc.org/mailman/listinfo/docktesters>`__
+team currently headed by Miguel Vazquez and formerly headed by Francis
+Ouellette.
+
+We also strive to use this to highlight tools that share a common set of
+recommended characteristics:
+
+-  tools should include a description and an author
+-  tools should include a README.md or similar in their source repo
+   describing any other relevant information about the tool
+-  tools should include at least one test parameter file indicating how
+   to run the tool on some sample data
+-  the Dockerfile should be helpful in reconstructing how a tool was
+   built from source
+-  tools and/or their reference data should be publically available
+
+
+Why would I want to verify?
+-------------------------------------------
+There are several reasons why you would want a tool/workflow to be verified.
+If you're a platform owner, verifying would indicate to others that your platform is compatible with many tools/workflows on Dockstore so others will be more likely to use your platform.
+If you're tool/workflow developer, verifying would assure others that your tool/workflow is of high quality and is very likely to work for others.
+
+
+How do I verify?
+---------------------------------------
+If you are an admin/curator, follow the :ref:`Verification Process` section in this document.
+If you are not an admin/curator, please send us a heads-up via our GitHub issues or Gitter!
+
+
+How do I tell if a tool/workflow is verified?
+---------------------------------------------
+
+There are 3 new indicators on Dockstore.org that indicates whether or
+not the tool/workflow is verified.
+
+First go to the page of the tool/workflow such as
+https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:1.0.4?tab=info.
+Since this tool/workflow is verified, 3 indicators can be
+seen:
+
+.. figure:: /assets/images/docs/verification/tool.png
+   :alt: Tool Page
+
+   Tool Page
+
+1. At the top left, the checkmark indicates that at least one of the
+   tool/workflow’s version has been verified. As a whole, this
+   tool/workflow is considered verified.
+
+2. At the top right, the recent versions of the tool/workflow are
+   listed. There is a checkmark if a specific version of the
+   tool/workflow is verified.
+
+3. The bottom right shows whether the currently selected/viewed version
+   is verified. The selected version is indicated in the URL as well as
+   the title (e.g. quay.io/briandoconnor/dockstore-tool-md5sum:1.0.4).
+   In this example, the version 1.0.4 is selected/viewed. This bottom
+   right verification box contains more details such as the platform and
+   verifier. This example shows that “Dockstore CLI” is the platform and
+   “Phase 1 GA4GH Tool Execution Challenge” is the verifier.
+
+Additional information for all verified versions can be viewed at a glance
+in the versions tab:
+
+.. figure:: /assets/images/docs/verification/versions-tab.png
+   :alt: Versions Tab
+
+   Versions Tab
+
+Once again, the checkmarks indicate the version is verified. Platforms
+which the version was verified on are displayed to the right of it. In
+this case, it’s “Dockstore CLI”.
+
+.. _Verification Process:
 
 Verification Process
 --------------------
+
+.. note:: Verifying is only available for admins and curators. Please contact one if you want your tool/workflow to be verified.
 
 1.  Go to
     https://dockstore.org/static/swagger-ui/index.html#/extendedGA4GH/toolsIdVersionsVersionIdTypeTestsPost
@@ -68,54 +149,12 @@ A successful response will result in something like:
      }
    }
 
-Viewing on Dockstore.org
-========================
 
-There are 3 new indicators in Dockstore.org that indicates whether or
-not the tool/workflow is correctly verified.
-
-To see if the tool/workflow appears as verified to others
-on Dockstore.org, first go to the page of the tool/workflow such as
-https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:1.0.4?tab=info.
-Since this tool/workflow is correctly verified, the 3 indicators can be
-seen:
-
-.. figure:: /assets/images/docs/verification/tool.png
-   :alt: Tool Page
-
-   Tool Page
-
-1. At the top left, the checkmark indicates that at least one of the
-   tool/workflow’s version has been verified. In general, this
-   tool/workflow is considered verified.
-
-2. At the top right, the recent versions of the tool/workflow are
-   listed. There is a checkmark if a specific version of the
-   tool/workflow is verified.
-
-3. The bottom right shows whether the currently selected/viewed version
-   is verified. The selected version is indicated in the URL as well as
-   the title (e.g. quay.io/briandoconnor/dockstore-tool-md5sum:1.0.4).
-   In this example, the version 1.0.4 is selected/viewed. This bottom
-   right verification box contains more details such as the platform and
-   verifier. This example shows that “Dockstore CLI” is the platform and
-   “Phase 1 GA4GH Tool Execution Challenge” is the verifier.
-
-Additional information for all verified versions can be viewed at a glance
-in the versions tab:
-
-.. figure:: /assets/images/docs/verification/versions-tab.png
-   :alt: Versions Tab
-
-   Versions Tab
-
-Once again, the checkmarks indicate the version is verified. Platforms
-which the version was verified on are displayed to the right of it. In
-this case, it’s “Dockstore CLI”.
+Additional Verification Information
+-----------------------------------
 
 To see more verification information about a specific version, first 
-select the version (the previous figure shows version 1.0.4 already 
-selected).
+select the version.
 
 Then click "More Info" in the "Verification and Logs" panel in the 
 bottom right.
@@ -128,9 +167,25 @@ A popup will appear:
    Verification Information
 
 It lists the platform it was verified on, the platform version, test parameter file that was used, and metadata (verifier).
+Below it, there may be an additional Logs section which contains information from Dockstore ToolTester.
 
-Additionally, Dockstore may launch certain tools/workflows in specific cases. If has managed to successfully do so, 
-logs will also be available for viewing.
+
+.. _Dockstore ToolTester:
+
+Dockstore ToolTester
+--------------------
+
+
+Dockstore ToolTester is a semi-automated process where Dockstore will attempt to launch certain verified tools/workflows through the latest Dockstore CLI.
+Typically this launching process occurs before a Dockstore CLI release and is done so in order to ensure compatibility. The logs contain much useful information:
+
+-  Dockstore CLI version used
+-  pip packages installed
+-  version of the tool/workflow that was launched
+-  time when launched
+-  runner that was used (cromwell, cwltool, etc)
+-  files used (which descriptor file, which test parameter file)
 
 .. _dockstore-tool-md5sum: https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:master?tab=info
 .. _files endpoint: https://dockstore.org/static/swagger-ui/index.html#/GA4GH/toolsIdVersionsVersionIdTypeFilesGet
+

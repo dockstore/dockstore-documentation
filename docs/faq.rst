@@ -219,7 +219,7 @@ This is going to be a moving quality target as tools improve, but if you
 have a tool that you wish to be verified, please send us a heads-up via
 our GitHub issues or Gitter!
 
-If you are already a Dockstore admin or curator, you can visit :doc:`/advanced-topics/verification` to learn how to verify a tool/workflow.
+.. note:: If you are already a Dockstore admin or curator, you can visit :doc:`/advanced-topics/verification` to learn how to verify a tool/workflow.
 
 What is a default version of a tool or workflow?
 ------------------------------------------------

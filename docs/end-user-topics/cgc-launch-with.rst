@@ -1,9 +1,9 @@
 Cancer Genomics Cloud Launch-With
 =================================
 
-Dockstore integrates with the Cancer Genomics Cloud (CGC) platform, allowing you to launch
-CWL-based workflows from Dockstore in the CGC. Here is some information on
-what that looks like from a user point of view in a mini tutorial.
+Dockstore integrates with the `Cancer Genomics Cloud <https://cgc.sbgenomics.com>` (CGC)
+platform, allowing you to launch CWL-based workflows from Dockstore in the CGC. Here is
+some information on what that looks like from a user point of view in a mini tutorial.
 
 Exporting into CGC
 ------------------

@@ -20,7 +20,7 @@ of the workflow will be exported.
 If not logged into the CGC, you will be prompted to login. Otherwise, or
 after login, you will be presented with the following screen.
 
-.. figure:: /assets/images/docs/cgc/cgc_from_dockstore2.png
+.. figure:: /assets/images/docs/cgc/cgc_from_dockstore_import.png
    :alt: CWL workflow import
 
    CWL workflow import

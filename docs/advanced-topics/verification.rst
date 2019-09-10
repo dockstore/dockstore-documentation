@@ -36,7 +36,7 @@ If you're tool/workflow developer, verifying would assure others that your tool/
 How do I verify?
 ---------------------------------------
 If you are an admin/curator, follow the :ref:`Verification Process` section in this document.
-If you are not an admin/curator, please send us a heads-up via our GitHub issues or Gitter!
+If you are not an admin/curator, please send us a heads-up via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or `Gitter <https://gitter.im/ga4gh/dockstore>`_!
 
 
 How do I tell if a tool/workflow is verified?
@@ -45,7 +45,7 @@ How do I tell if a tool/workflow is verified?
 There are 3 new indicators on Dockstore.org that indicates whether or
 not the tool/workflow is verified.
 
-First go to the page of the tool/workflow such as
+First, go to the page of the tool/workflow such as
 https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:1.0.4?tab=info.
 Since this tool/workflow is verified, 3 indicators can be
 seen:
@@ -187,4 +187,3 @@ Typically this launching process occurs before a Dockstore CLI release and is do
 
 .. _dockstore-tool-md5sum: https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:master?tab=info
 .. _files endpoint: https://dockstore.org/static/swagger-ui/index.html#/GA4GH/toolsIdVersionsVersionIdTypeFilesGet
-

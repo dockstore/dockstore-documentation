@@ -120,6 +120,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    end-user-topics/dnastack-launch-with
    end-user-topics/dnanexus-launch-with
    end-user-topics/terra-launch-with
+   end-user-topics/cgc-launch-with
 
 .. toctree::
    :caption: Extras

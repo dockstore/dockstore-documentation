@@ -101,6 +101,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    advanced-topics/aws-batch
    advanced-topics/azure-batch
    advanced-topics/posting-zips
+   advanced-topics/verification
    advanced-topics/organizations-and-collections
    advanced-topics/best-practices/best-practices
    advanced-topics/best-practices/wdl-best-practices

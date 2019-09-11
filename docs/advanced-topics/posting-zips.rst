@@ -8,7 +8,7 @@ This API makes it easier to programatically post workflow versions that
 have been tested and produced by a build process.
 
 This API works in conjunction with the `Hosted Tools and
-Workflows <../getting-started/hosted-tools-and-workflows/>`__ Dockstore
+Workflows <../getting-started/hosted-tools-and-workflows.html>`__ Dockstore
 feature. The contents of the zip are stored directly on Dockstore.
 
 Use Cases

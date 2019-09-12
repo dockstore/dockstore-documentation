@@ -1,5 +1,8 @@
+Dockstore 1.6.0
+===============
+
 Highlighted new features include
-================================
+--------------------------------
 
 -  initial support for `organizations and
    collections <https://docs.dockstore.org/docs/publisher-tutorials/organizations-and-collections/>`__

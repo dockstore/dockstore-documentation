@@ -99,6 +99,6 @@ Minor
 ~~~~~
 
 -  the recommended default root of our API is now
-   https://dockstore.org/api/ rather than https://dockstore.org:8443/
--  for examnple, https://dockstore.org:8443/swagger.json is deprecated
+   https://dockstore.org/api/
+-  for example, https://dockstore.org:8443/swagger.json is deprecated
    in favour of https://dockstore.org/api/swagger.json

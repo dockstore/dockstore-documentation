@@ -30,8 +30,12 @@ We provide a hello world example as follows:
 
 ::
 
+    version 1.0
+
     task hello {
-      String name
+      input {
+        String name
+      }
 
       command {
         echo 'hello ${name}!'
@@ -41,7 +45,7 @@ We provide a hello world example as follows:
       }
       runtime {
        docker: 'ubuntu:latest'
-     }
+      }
     }
 
     workflow test {
@@ -61,8 +65,10 @@ repository:
 ::
 
     task bamstats {
-        File bam_input
-        Int mem_gb
+        input {
+          File bam_input
+          Int mem_gb
+        }
 
         command {
             bash /usr/local/bin/bamstats ${mem_gb} ${bam_input}
@@ -73,7 +79,7 @@ repository:
         }
 
         runtime {
-            docker: "quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0" 
+            docker: "quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0"
             memory: mem_gb + "GB"
         }
 
@@ -83,8 +89,11 @@ repository:
     }
 
     workflow bamstatsWorkflow {
-        File bam_input
-        Int mem_gb  
+        input {
+            File bam_input
+            Int mem_gb
+        }
+
         call bamstats { input: bam_input=bam_input, mem_gb=mem_gb }
     }
 
@@ -102,8 +111,10 @@ similar to variable declaration in most programming languages.
 
 ::
 
-    File bam_input
-    Int mem_gb
+    input {
+      File bam_input
+      Int mem_gb
+    }
 
 Next is the command section. This specifies what command we want to run
 on the command line. We can also pass the command parameters based on
@@ -133,7 +144,7 @@ much memory the Docker container should use.
 ::
 
     runtime {
-        docker: "quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0" 
+        docker: "quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0"
         memory: mem_gb + "GB"
     }
 
@@ -225,7 +236,7 @@ the JSON config file:
 
 ::
 
-    $> dockstore tool launch --local-entry Dockstore.wdl --json test.wdl.json 
+    $> dockstore tool launch --local-entry Dockstore.wdl --json test.wdl.json
     Creating directories for run of Dockstore launcher in current working directory: /home/aduncan/Documents/dockstore-tool-bamstats
     Provisioning your input files to your local machine
     Downloading: bamstatsWorkflow.bam_input from NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam to: /home/aduncan/Documents/dockstore-tool-bamstats/cromwell-input/aca839a6-92c4-4234-bc6d-460bcfe6f4d6/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam

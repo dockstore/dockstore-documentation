@@ -2,7 +2,7 @@ Dockstore 1.0
 =============
 
 This date marks the launch of `Dockstore
-1.0 <https://github.com/ga4gh/dockstore/releases/tag/1.0>`__. This
+1.0 <https://github.com/dockstore/dockstore/releases/tag/1.0>`__. This
 release combines the release of several Pan-cancer workflows, tested as
 standardized `CWL 1.0 <http://www.commonwl.org/>`__ CommandLineTools
 along with several new features including support for CWL 1.0 in

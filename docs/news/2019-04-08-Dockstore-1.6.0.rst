@@ -38,7 +38,7 @@ Highlighted new features include
 -  a plugin for provisioning files to and from Google Cloud Storage
 
 See a full list of our changes on
-`GitHub <https://github.com/ga4gh/dockstore/milestone/20>`__
+`GitHub <https://github.com/dockstore/dockstore/milestone/20>`__
 
 Breaking changes
 ----------------

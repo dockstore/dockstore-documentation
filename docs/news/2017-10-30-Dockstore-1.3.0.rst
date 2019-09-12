@@ -19,4 +19,4 @@ baseball, we migrated from Angular 1 to Angular 4 as a foundation for
 future improvements
 
 See a full list of our changes on
-`GitHub <https://github.com/ga4gh/dockstore/milestone/9>`__.
+`GitHub <https://github.com/dockstore/dockstore/milestone/9>`__.

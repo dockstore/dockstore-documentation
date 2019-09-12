@@ -13,7 +13,7 @@ Highlighted new features include:
 -  see a
    `presentation <https://docs.google.com/presentation/d/1VXdReGYXayzO7Jr-9XaLHNv6Wt46CwfvkfFDR8OEgJM/edit?usp=sharing>`__
    and our tutorial in progress at
-   https://github.com/ga4gh/dockstore/wiki/WIP-Checker-Workflow-Support-Tutorial
+   https://github.com/dockstore/dockstore/wiki/WIP-Checker-Workflow-Support-Tutorial
 -  launch-with
    `Firecloud <https://software.broadinstitute.org/firecloud/>`__
    support, see a summary
@@ -27,7 +27,7 @@ Highlighted new features include:
    language <https://dockstore.org/search?_type=tool&descriptorType=cwl&searchMode=files>`__,
    and sorting by number of stars
 -  user requests such as the ability to link to `unencoded
-   workflows <https://github.com/ga4gh/dockstore/issues/1097>`__
+   workflows <https://github.com/dockstore/dockstore/issues/1097>`__
 -  documentation has been moved out to
    `docs.dockstore.org/ <https://docs.dockstore.org/>`__ allowing us to
    update it more often
@@ -42,11 +42,11 @@ Highlighted new features include:
    during workflow execution to a custom endpoint
 -  ability to run unpublished tools and workflows (if you are the owner
    or in the organization for a tool or workflow)
--  `WIP <https://github.com/ga4gh/dockstore/issues/1058>`__ for
+-  `WIP <https://github.com/dockstore/dockstore/issues/1058>`__ for
    displaying CWL visualizations using view.commonwl.org
 
 See a full list of our changes on
-`GitHub <https://github.com/ga4gh/dockstore/milestone/15>`__.
+`GitHub <https://github.com/dockstore/dockstore/milestone/15>`__.
 
 Breaking changes
 ----------------

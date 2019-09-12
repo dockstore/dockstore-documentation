@@ -29,7 +29,7 @@ of Dockstore, we're looking at features in the following main areas:
 
 As usual, we're open to suggestions. If you have one or if you spot a
 bug, drop us a line on
-`GitHub <https://github.com/ga4gh/dockstore/issues>`__
+`GitHub <https://github.com/dockstore/dockstore/issues>`__
 
 April 19, 2017 - Dockstore 1.2 Release
 --------------------------------------
@@ -50,7 +50,7 @@ Highlighted New Features
 -  Stargazers page to show all users who have starred a particular tool
    or workflow
 -  Support for `file provisioning
-   plugins <https://github.com/ga4gh/dockstore/tree/develop/dockstore-file-plugin-parent>`__
+   plugins <https://github.com/dockstore/dockstore/tree/develop/dockstore-file-plugin-parent>`__
 -  Better error messaging passed along from a newer cwltool version
 -  Compatibility with a Write API service for programmatically adding
    tools

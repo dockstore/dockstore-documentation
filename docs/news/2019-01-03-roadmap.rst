@@ -5,7 +5,7 @@ In addition to the regular bugfixes and user-driven requests, we also
 had a joint brainstorming session between OICR and UCSC to think about
 our overall goals for larger features going forward. These are our
 initial thoughts, copied from `Dockstore
-Roadmap <https://github.com/ga4gh/dockstore/wiki/Dockstore-Roadmap>`__
+Roadmap <https://github.com/dockstore/dockstore/wiki/Dockstore-Roadmap>`__
 
 Organizations
 ^^^^^^^^^^^^^

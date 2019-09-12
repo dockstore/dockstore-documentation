@@ -26,4 +26,4 @@ Breaking Changes
    working directory after a warning
 
 See more details on
-`GitHub <https://github.com/ga4gh/dockstore/milestone/12>`__.
+`GitHub <https://github.com/dockstore/dockstore/milestone/12>`__.

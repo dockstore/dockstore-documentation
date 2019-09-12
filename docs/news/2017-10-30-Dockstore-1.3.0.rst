@@ -20,3 +20,8 @@ future improvements
 
 See a full list of our changes on
 `GitHub <https://github.com/dockstore/dockstore/milestone/9>`__.
+
+
+.. discourse::
+    :topic_identifier: 2025
+    

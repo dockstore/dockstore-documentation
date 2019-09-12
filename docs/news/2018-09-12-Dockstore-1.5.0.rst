@@ -102,3 +102,7 @@ Minor
    https://dockstore.org/api/ rather than https://dockstore.org:8443/
 -  for example, https://dockstore.org:8443/swagger.json is deprecated
    in favour of https://dockstore.org/api/swagger.json
+
+.. discourse::
+    :topic_identifier: 2027
+    

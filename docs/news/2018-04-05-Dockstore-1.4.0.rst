@@ -62,3 +62,7 @@ https://dockstore.org/workflows/h3abionet/h3agatk ### Minor \* can no
 longer change tool or workflow name for entries that have already been
 created \* can no longer change descriptor type of workflows (unless in
 stub mode)
+
+.. discourse::
+    :topic_identifier: 2026
+    

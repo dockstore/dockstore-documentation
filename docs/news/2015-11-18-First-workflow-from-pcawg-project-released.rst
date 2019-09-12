@@ -10,3 +10,6 @@ Cloud <https://dcc.icgc.org/icgc-in-the-cloud/aws>`__
 The first workflow used to generate this dataset, BWA, is posted on
 Dockstore as a `CWL
 tool <https://dockstore.org/containers/quay.io/pancancer/pcawg-bwa-mem-workflow>`__.
+
+.. discourse::
+    :topic_identifier: 2014

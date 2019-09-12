@@ -27,3 +27,7 @@ Breaking Changes
 
 See more details on
 `GitHub <https://github.com/dockstore/dockstore/milestone/12>`__.
+
+.. discourse::
+    :topic_identifier: 2022
+    

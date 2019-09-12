@@ -15,3 +15,7 @@ defaults to popularity order (starring), allowing popular tools and
 workflows to rise to the top \* new documentation sections highlighting
 posters that mention Dockstore and software projects that use or
 integrate with Dockstore
+
+.. discourse::
+    :topic_identifier: 2024
+    

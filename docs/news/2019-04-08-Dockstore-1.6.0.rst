@@ -59,3 +59,7 @@ Minor
    know (drop us a line on https://gitter.im/ga4gh/dockstore on github
    or on discourse) if you run into an issue where a workflow seems to
    have indexed a source file incorrectly in the wrong location, thanks!
+
+.. discourse::
+    :topic_identifier: 2029
+    

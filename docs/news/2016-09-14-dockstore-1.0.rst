@@ -44,3 +44,7 @@ Highlighted New Features
    for an example
 -  Default branch/tag support allows tool developers to pin a particular
    version of their tool to display to their users
+
+.. discourse::
+    :topic_identifier: 2017
+    

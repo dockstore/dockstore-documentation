@@ -38,3 +38,7 @@ release <https://news.oicr.on.ca/2016/09/canadian-government-makes-big-investmen
     activities will drive increased usage of the Dockstore, thereby
     increasing tool sharing among scientists in fields as diverse as
     agriculture, energy and human health.
+
+.. discourse::
+    :topic_identifier: 2016
+    

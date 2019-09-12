@@ -12,3 +12,7 @@ Highlighted New Features and Fixes
 -  Support for administrators to verify versions of tools and workflows
 -  CWL generation of parameter files now supports YAML as well as JSON
 -  Documentation updates and tooltips!
+
+.. discourse::
+    :topic_identifier: 2019
+    

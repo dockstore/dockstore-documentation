@@ -17,3 +17,7 @@ As described at
 View the
 `slides <https://docs.google.com/presentation/d/1UzpqElUmF-LDs8gVzPJAi0tAtHLJJC8kQGkQzH7aEYc/edit?usp=sharing>`__
 and `youtube tutorial <https://www.youtube.com/watch?v=-JuKsSQja3g>`__.
+
+.. discourse::
+    :topic_identifier: 2015
+    

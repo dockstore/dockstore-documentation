@@ -51,3 +51,7 @@ CLI should continue being a useful toolbox. One useful feature would be
 to simply launch workflows not just locally but in a variety of cloud
 platforms by taking advantage of the GA4GH WES standard to launch
 workflows in compatible environments.
+
+.. discourse::
+    :topic_identifier: 2028
+    

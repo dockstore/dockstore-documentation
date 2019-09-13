@@ -1,5 +1,5 @@
-DNAstack Launch-With
-====================
+DNAstack
+========
 
 Dockstore integrates with the DNAstack Workflows platform, allowing you
 to launch WDL-based workflows from Dockstore in DNAstack. This works

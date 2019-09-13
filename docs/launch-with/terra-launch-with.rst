@@ -1,5 +1,5 @@
-Terra Launch-With
-=================
+Terra
+=====
 
 Dockstore integrates with the Terra platform, allowing you to launch
 WDL-based workflows from Dockstore in Terra. Here is some information on

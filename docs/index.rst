@@ -86,10 +86,10 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    :hidden:
 
    launch-with/launch
-   launch-with/dnastack-launch-with
-   launch-with/dnanexus-launch-with
-   launch-with/terra-launch-with
    launch-with/cgc-launch-with
+   launch-with/dnanexus-launch-with
+   launch-with/dnastack-launch-with
+   launch-with/terra-launch-with
 
 .. toctree::
    :caption: Advanced Developer Topics

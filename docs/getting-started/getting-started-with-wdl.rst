@@ -190,7 +190,12 @@ the Dockstore command line and descriptor rather than just directly
 calling it via Docker. This will test that the WDL correctly describes
 how to run your tool.
 
-First thing I’ll do is create a completely local dataset and JSON
+The first thing I'll do is
+`setup the Dockstore CLI locally <https://dockstore.org/quick-start>`__.
+This will have me install all of the dependencies needed to run the
+Dockstore CLI on my local machine.
+
+Next thing I’ll do is create a completely local dataset and JSON
 parameterization file:
 
 ::
@@ -210,7 +215,7 @@ it really doesn't matter. I'm using a sample I checked in already:
       "bamstatsWorkflow.mem_gb": "4"
     }
 
-.. tip::  the Dockstore CLI can handle inputs with HTTPS, FTP, GS, and S3
+.. tip::  The Dockstore CLI can handle inputs with HTTPS, FTP, GS, and S3
     URLs but that's beyond the scope of this tutorial.
 
 You can see in the above I give the relative path to the input under

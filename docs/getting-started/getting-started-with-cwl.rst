@@ -13,6 +13,17 @@ Tutorial Goals
 -  Describe a sample parameterization of the Tool
 -  Push the Tool onto GitHub
 
+Pre-requisites
+-------------------------
+This tutorial assumes that you can run CWL workflows by having
+`cwltool <https://github.com/common-workflow-language/cwltool>`__
+and its dependencies installed on your machine. Verify that cwltool
+has been installed by running ``cwltool --version``. We recommend having at least
+``cwltool 1.0.20190621234233`` to run CWL versions 1.1 and earlier. See our
+`quickstart instructions <https://dockstore.org/quick-start>`__
+to install the version of cwltool that we've tested for use on Dockstore.
+
+
 Describe Your Tool in CWL
 -------------------------
 
@@ -105,7 +116,7 @@ the `CWL
 version <https://www.commonwl.org/v1.0/CommandLineTool.html#CWLVersion>`__.
 You should label your CWL with the version you are using so that CWL
 tools that cannot run this version will error out appropriately. Our
-tools have been tested with v1.0.
+tools have been tested with v1.0 and v1.1.
 
 ::
 

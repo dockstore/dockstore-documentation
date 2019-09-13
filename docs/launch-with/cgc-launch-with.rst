@@ -1,5 +1,5 @@
-Cancer Genomics Cloud Launch-With
-=================================
+Cancer Genomics Cloud
+=====================
 
 Dockstore integrates with the `Cancer Genomics Cloud <https://cgc.sbgenomics.com>`__ (CGC)
 platform, allowing you to launch CWL-based workflows from Dockstore in the CGC. Here is
@@ -46,9 +46,9 @@ See Also
 
 -  `AWS Batch <../advanced-topics/aws-batch/>`__
 -  `Azure Batch <../advanced-topics/azure-batch/>`__
--  `DNAnexus Launch With <../end-user-topics/dnanexus-launch-with/>`__
--  `DNAstack Launch With <../end-user-topics/dnastack-launch-with/>`__
--  `Terra Launch With <../end-user-topics/terra-launch-with/>`__
+-  `DNAnexus Launch With <../launch-with/dnanexus-launch-with/>`__
+-  `DNAstack Launch With <../launch-with/dnastack-launch-with/>`__
+-  `Terra Launch With <../launch-with/terra-launch-with/>`__
 
 .. discourse::
     :topic_identifier: 2006

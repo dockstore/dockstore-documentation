@@ -1,5 +1,5 @@
-Getting Started with Dockstore Services
-=======================================
+Services
+========
 
 .. note:: Dockstore Services is currently in beta mode. Also note that the screenshots below were taken on our staging site.
 

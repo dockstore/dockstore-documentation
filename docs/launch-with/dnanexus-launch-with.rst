@@ -1,5 +1,5 @@
-DNAnexus Launch-With
-====================
+DNAnexus
+========
 
 Dockstore integrates with the DNAnexus platform, allowing you to launch
 WDL-based workflows from Dockstore in DNAnexus. Here is some information

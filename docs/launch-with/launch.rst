@@ -141,8 +141,9 @@ See Also
 
 -  :doc:`AWS Batch <../advanced-topics/aws-batch/>`
 -  :doc:`Azure Batch <../advanced-topics/azure-batch/>`
--  :doc:`DNAstack Launch With <../end-user-topics/dnastack-launch-with/>`
--  :doc:`Terra Launch With <../end-user-topics/terra-launch-with/>`
+-  :doc:`CGC Launch With <../launch-with/cgc-launch-with/>`
+-  :doc:`DNAstack Launch With <../launch-with/dnastack-launch-with/>`
+-  :doc:`Terra Launch With <../launch-with/terra-launch-with/>`
 
 .. discourse::
     :topic_identifier: 1275

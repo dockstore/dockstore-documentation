@@ -81,6 +81,17 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    getting-started/getting-started-with-services
 
 .. toctree::
+   :caption: Launch
+   :maxdepth: 2
+   :hidden:
+
+   launch-with/launch
+   launch-with/dnastack-launch-with
+   launch-with/dnanexus-launch-with
+   launch-with/terra-launch-with
+   launch-with/cgc-launch-with
+
+.. toctree::
    :caption: Advanced Developer Topics
    :maxdepth: 2
    :hidden:
@@ -116,11 +127,6 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    end-user-topics/faceted-search
    end-user-topics/starring
    end-user-topics/language-support
-   end-user-topics/launch
-   end-user-topics/dnastack-launch-with
-   end-user-topics/dnanexus-launch-with
-   end-user-topics/terra-launch-with
-   end-user-topics/cgc-launch-with
 
 .. toctree::
    :caption: Extras

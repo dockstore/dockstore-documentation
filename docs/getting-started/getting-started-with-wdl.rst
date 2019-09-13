@@ -215,8 +215,7 @@ it really doesn't matter. I'm using a sample I checked in already:
       "bamstatsWorkflow.mem_gb": "4"
     }
 
-.. tip::  The Dockstore CLI can handle inputs with HTTPS, FTP, GS, and S3
-    URLs but that's beyond the scope of this tutorial.
+.. tip::  The Dockstore CLI can handle inputs with HTTPS, FTP, GS, and S3 URLs but that's beyond the scope of this tutorial.
 
 You can see in the above I give the relative path to the input under
 ``bam_input`` and the memory in GB that I want to use for the task.

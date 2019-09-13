@@ -255,9 +255,7 @@ I checked in already: ``sample_configs.local.json``.
         }
     }
 
-.. tip::  The Dockstore CLI can handle inputs with HTTPS, FTP, and S3
-
-URLs but that's beyond the scope of this tutorial.
+.. tip::  The Dockstore CLI can handle inputs with HTTPS, FTP, and S3 URLs but that's beyond the scope of this tutorial.
 
 You can see in the above I give the full path to the input under
 ``bam_input`` and full path to the output ``bamstats_report``.

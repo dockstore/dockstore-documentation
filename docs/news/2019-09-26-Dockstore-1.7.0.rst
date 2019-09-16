@@ -8,7 +8,7 @@ Highlighted new features include
 
 
 See a full list of our changes on
-`GitHub <https://github.com/dockstore/dockstore/milestone/X>`__
+`GitHub <https://github.com/dockstore/dockstore/milestone/25>`__
 
 Breaking changes
 ----------------

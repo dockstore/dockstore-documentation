@@ -1,5 +1,5 @@
-DNAstack Launch-With
-====================
+DNAstack
+========
 
 Dockstore integrates with the DNAstack Workflows platform, allowing you
 to launch WDL-based workflows from Dockstore in DNAstack. This works
@@ -99,6 +99,7 @@ See Also
 
 -  `AWS Batch </advanced-topics/aws-batch/>`__
 -  `Azure Batch </advanced-topics/azure-batch/>`__
+-  `CGC Launch With <cgc-launch-with/>`__
 -  `DNAnexus Launch With <dnanexus-launch-with/>`__
 -  `Terra Launch With <terra-launch-with/>`__
 

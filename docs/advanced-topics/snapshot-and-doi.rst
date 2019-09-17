@@ -31,7 +31,10 @@ and metadata associated with a workflow version. Snapshotting a version will als
 make the version immutable. Users will be prompted to confirm before generating a snapshot.
 **Taking a snapshot cannot be undone**.
 
-.. figure:: ../assets/images/docs/snapshot_doi/snapshot.png
+.. image:: ../assets/images/docs/snapshot_doi/snapshot.png
+   :scale: 50 %
+
+.. _snapshot-requirements:
 
 What are the requirements to snapshot?
 ---------------------------------------
@@ -43,9 +46,7 @@ What are the requirements to snapshot?
 
     - Each version of a workflow *hosted on Dockstore.org* can be snapshotted (must have non-emtpy files).
 
-    - Before taking a snapshot, we recommend adding a description and metadata to improve searchability and usability of your workflow
-
-        - test
+    - We highly recommend following :ref:`best practices<snapshot-doi-bp>` before creating a snapshot.
 
 What is included in a snapshot?
 -------------------------------
@@ -59,14 +60,42 @@ will be included in the snapshot. Imports specified using `http(s)` paths are no
 Digital Object Identifier (DOI)
 --------------------------------
 A DOI is a permanent identifier that can be used in publications to identify the exact
-version of a workflow or tool. The workflow version must be snapshot before a
+version of a workflow or tool. The workflow version must be :ref:`snapshot <snapshot-requirements>` before a
 DOI can be requested. This snapshot, including associated descriptor, test parameter files,
 and metadata, will be included in the entry upload to Zenodo.
 
 .. image:: ../assets/images/docs/snapshot_doi/request_doi_1.png
+   :scale: 50 %
 
-The user will be prompted to confirm before creating a DOI, we strongly recommend following the  before generating a DOI.
-The version snapshot and DOI on Dockstore can’t be changed, however metadata editing
+The user will be prompted to confirm before creating a DOI, we strongly recommend following the best practices for workflow descriptor language
+before generating a DOI. The version snapshot and DOI on Dockstore can’t be changed, however metadata editing
 may be allowed directly through Zendo, but this is limited. **A DOI request cannot be undone.**
 
 .. image:: ../assets/images/docs/snapshot_doi/request_doi_2.png
+   :scale: 50 %
+
+What are the requirements to request a DOI?
+-------------------------------------------
+    - You must link your Zenodo account to your Dockstore account
+    - A snapshot of a workflow version is required before a DOI can be issued
+    - The workflow must be published and the version must not be hidden
+
+.. _snapshot-doi-bp:
+
+Snapshot and DOI Best Practices
+--------------------------------
+Before taking a snapshot, we recommend adding a description and metadata to improve searchability
+and usability of your workflow.
+
+- :ref:`Adding metadata to CWL <bp-cwl-metadata>`
+- :ref:`Adding metadata to WDL <bp-wdl-metadata>`
+- :ref:`Adding metadata to Nextflow <bp-nfl-metadata>`
+
+We also recommend including at least one test parameter file to your workflow. These
+test parameter files are example input JSON (or YAML) files for running the given
+workflow. It should be easy for a user to run your workflow with the
+test parameter file(s) in order to see an example of your workflow. For this reason,
+we encourage using publicly available inputs whenever possible.
+
+.. discourse::
+    :topic_identifier: <2128>

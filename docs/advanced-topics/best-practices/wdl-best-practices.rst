@@ -3,6 +3,8 @@ WDL Best Practices
 
 .. include:: best-practices-intro.rst
 
+.. _bp-wdl-metadata:
+
 Authorship Metadata
 -------------------
 

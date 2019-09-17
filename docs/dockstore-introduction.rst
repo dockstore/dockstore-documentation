@@ -5,7 +5,7 @@ The Dockstore concept is simple, provide a place where users can share
 tools encapsulated in Docker and described with the `Common Workflow
 Language <https://www.commonwl.org/>`__ (CWL) or
 `Workflow Description Language <http://www.openwdl.org/>`__ (WDL),
-workflow languages used by members of and APIs created by the
+workflow languages used by members of and APIS created by the
 `GA4GH <https://www.ga4gh.org>`__ `Cloud Work
 Stream <http://ga4gh.cloud/>`__. This enables scientists, for example,
 to share analytical tools in a way that makes them machine readable and

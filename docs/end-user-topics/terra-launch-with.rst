@@ -1,5 +1,5 @@
-Terra
-=====
+Terra Launch-With
+=================
 
 Dockstore integrates with the Terra platform, allowing you to launch
 WDL-based workflows from Dockstore in Terra. Here is some information on
@@ -53,8 +53,8 @@ See Also
 
 -  `AWS Batch <../advanced-topics/aws-batch/>`__
 -  `Azure Batch <../advanced-topics/azure-batch/>`__
--  `DNAnexus Launch With <../launch-with/dnanexus-launch-with/>`__
--  `DNAstack Launch With <../launch-with/dnastack-launch-with/>`__
+-  `DNAnexus Launch With <../end-user-topics/dnanexus-launch-with/>`__
+-  `DNAstack Launch With <../end-user-topics/dnastack-launch-with/>`__
 
 .. discourse::
     :topic_identifier: 1841

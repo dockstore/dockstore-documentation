@@ -220,18 +220,20 @@ directions and we recommend tool authors make their voices heard.
 Testing Locally
 ---------------
 
-So at this point, you've created a Docker-based tool and have described
+To run CWL workflows locally `cwltool <https://github.com/common-workflow-language/cwltool>`__
+and its dependencies need to be installed on your machine. Verify that cwltool
+has been installed by running ``cwltool --version``. We recommend having at least
+``cwltool 1.0.20190621234233`` to run CWL versions 1.1 and earlier. See our
+`quickstart instructions <https://dockstore.org/quick-start>`__
+to install the version of cwltool that we've tested for use on Dockstore.
+
+At this point, you've created a Docker-based tool and have described
 how to call that tool using CWL. Let's test running the BAMStats using
 the Dockstore command line and descriptor, rather than just directly
 calling it via Docker. This will test that the CWL correctly describes
 how to run your tool.
 
-The first thing I'll do is
-`setup the Dockstore CLI locally <https://dockstore.org/quick-start>`__.
-This will have me install all of the dependencies needed to run the
-Dockstore CLI on my local machine.
-
-Next thing I'll do is create a completely local dataset and JSON
+Before running my workflow, I'll first create a completely local dataset and JSON
 parameterization file:
 
 ::

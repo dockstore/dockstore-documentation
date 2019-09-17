@@ -2,8 +2,8 @@
   This tutorial is a continuation of :doc:`Creating a Dockstore Account </getting-started/register-on-dockstore>`. Please complete
   the tutorial prior to doing this one.
 
-Tools
-=====
+Dockstore Tools
+===============
 
 Tutorial Goals
 --------------

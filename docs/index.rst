@@ -81,6 +81,17 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    getting-started/getting-started-with-services
 
 .. toctree::
+   :caption: Launch
+   :maxdepth: 2
+   :hidden:
+
+   launch-with/launch
+   launch-with/cgc-launch-with
+   launch-with/dnanexus-launch-with
+   launch-with/dnastack-launch-with
+   launch-with/terra-launch-with
+
+.. toctree::
    :caption: Advanced Developer Topics
    :maxdepth: 2
    :hidden:
@@ -101,6 +112,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    advanced-topics/aws-batch
    advanced-topics/azure-batch
    advanced-topics/posting-zips
+   advanced-topics/verification
    advanced-topics/organizations-and-collections
    advanced-topics/best-practices/best-practices
    advanced-topics/best-practices/wdl-best-practices
@@ -115,10 +127,6 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    end-user-topics/faceted-search
    end-user-topics/starring
    end-user-topics/language-support
-   end-user-topics/launch
-   end-user-topics/dnastack-launch-with
-   end-user-topics/dnanexus-launch-with
-   end-user-topics/terra-launch-with
 
 .. toctree::
    :caption: Extras
@@ -134,3 +142,21 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    :hidden:
 
    faq
+
+.. toctree::
+   :caption: Changelog
+   :maxdepth: 2
+   :hidden:
+
+   changelog
+
+.. toctree::
+   :caption: News and Events
+   :maxdepth: 2
+   :hidden:
+   :glob:
+   :titlesonly:
+   :reversed:
+
+   news
+   news/*

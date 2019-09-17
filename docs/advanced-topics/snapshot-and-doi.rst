@@ -35,13 +35,17 @@ make the version immutable. Users will be prompted to confirm before generating 
 
 What are the requirements to snapshot?
 ---------------------------------------
-    - The workflow version must have non-empty files.
+    - The workflow version must have *non-empty files*.
+
     - For workflows hosted on an external source control repository,
-      only versions associated with releases or ‘tags’ can be snapshotted. For example,
+      *only versions associated with releases or ‘tags’ can be snapshotted*. For example,
       users cannot snapshot a version associated with a Github branch, but can do so for a Github tag.
-    - Each version of a workflow hosted on Dockstore.org can be snapshotted (must have non-emtpy files).
-    - We recommend following the :doc:`best-practices <./best-practices/best-practices-intro>`
-      before creating a snapshot
+
+    - Each version of a workflow *hosted on Dockstore.org* can be snapshotted (must have non-emtpy files).
+
+    - Before taking a snapshot, we recommend adding a description and metadata to improve searchability and usability of your workflow
+
+        - test
 
 What is included in a snapshot?
 -------------------------------
@@ -61,8 +65,7 @@ and metadata, will be included in the entry upload to Zenodo.
 
 .. image:: ../assets/images/docs/snapshot_doi/request_doi_1.png
 
-The user will be prompted to confirm before creating a DOI, we strongly recommend following the
-:doc:`best-practices <./best-practices/best-practices-intro>` before generating a DOI.
+The user will be prompted to confirm before creating a DOI, we strongly recommend following the  before generating a DOI.
 The version snapshot and DOI on Dockstore can’t be changed, however metadata editing
 may be allowed directly through Zendo, but this is limited. **A DOI request cannot be undone.**
 

@@ -13,7 +13,6 @@ Tutorial Goals
 -  Describe a sample parameterization of the Tool
 -  Push the Tool onto GitHub
 
-
 Describe Your Tool in CWL
 -------------------------
 
@@ -221,18 +220,18 @@ directions and we recommend tool authors make their voices heard.
 Testing Locally
 ---------------
 
-So at this point, you've created a Docker-based tool and have described
-how to call that tool using CWL. Let's test running the BAMStats using
-the Dockstore command line and descriptor, rather than just directly
-calling it via Docker. This will test that the CWL correctly describes
-how to run your tool.
-
 To run CWL workflows locally `cwltool <https://github.com/common-workflow-language/cwltool>`__
 and its dependencies need to be installed on your machine. Verify that cwltool
 has been installed by running ``cwltool --version``. We recommend having at least
 ``cwltool 1.0.20190621234233`` to run CWL versions 1.1 and earlier. See our
 `quickstart instructions <https://dockstore.org/quick-start>`__
 to install the version of cwltool that we've tested for use on Dockstore.
+
+At this point, you've created a Docker-based tool and have described
+how to call that tool using CWL. Let's test running the BAMStats using
+the Dockstore command line and descriptor, rather than just directly
+calling it via Docker. This will test that the CWL correctly describes
+how to run your tool.
 
 Before running my workflow, I'll first create a completely local dataset and JSON
 parameterization file:
@@ -261,9 +260,7 @@ I checked in already: ``sample_configs.local.json``.
         }
     }
 
-.. tip::  The Dockstore CLI can handle inputs with HTTPS, FTP, and S3
-
-URLs but that's beyond the scope of this tutorial.
+.. tip::  The Dockstore CLI can handle inputs with HTTPS, FTP, and S3 URLs but that's beyond the scope of this tutorial.
 
 You can see in the above I give the full path to the input under
 ``bam_input`` and full path to the output ``bamstats_report``.

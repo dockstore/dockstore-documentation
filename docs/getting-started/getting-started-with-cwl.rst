@@ -31,13 +31,13 @@ It is recommended that you have the following minimum fields:
     id: <id>
     label: <label>
 
-    cwlVersion: v1.0
+    cwlVersion: v1.1
 
     dct:creator:
       foaf:name: <name>
 
 Again, we provide an example from the
-`dockstore-tool-bamstats <https://github.com/CancerCollaboratory/dockstore-tool-bamstats>`__
+`dockstore-tool-bamstats <https://github.com/CancerCollaboratory/dockstore-tool-bamstats/blob/develop/Dockstore.cwl>`__
 repository:
 
 ::
@@ -47,7 +47,7 @@ repository:
     class: CommandLineTool
     id: "BAMStats"
     label: "BAMStats tool"
-    cwlVersion: v1.0
+    cwlVersion: v1.1
     doc: |
         ![build_status](https://quay.io/repository/collaboratory/dockstore-tool-bamstats/status)
         A Docker container for the BAMStats command. See the [BAMStats](http://bamstats.sourceforge.net/) website for more information.
@@ -93,6 +93,11 @@ repository:
 
     baseCommand: ["bash", "/usr/local/bin/bamstats"]
 
+
+    $namespaces:
+    dct: http://purl.org/dc/terms/
+    foaf: http://xmlns.com/foaf/0.1/
+
 You can see this tool takes two inputs, a parameter to control memory
 usage and a BAM file (binary sequence alignment file). It produces one
 output, a zip file, that contains various HTML reports that BAMStats
@@ -105,14 +110,14 @@ the `CWL
 version <https://www.commonwl.org/v1.0/CommandLineTool.html#CWLVersion>`__.
 You should label your CWL with the version you are using so that CWL
 tools that cannot run this version will error out appropriately. Our
-tools have been tested with v1.0.
+tools have been tested with v1.0 and v1.1.
 
 ::
 
     class: CommandLineTool
     id: "BAMStats"
     label: "BAMStats tool"
-    cwlVersion: v1.0
+    cwlVersion: v1.1
     doc: |
             ![build_status](https://quay.io/repository/collaboratory/dockstore-tool-bamstats/status)
             A Docker container for the BAMStats command. See the [BAMStats](http://bamstats.sourceforge.net/) website for more information.
@@ -232,8 +237,6 @@ parameterization file:
 ::
 
     $> wget ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/NA12878/alignment/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
-    # alternative location if the above URL doesn't work
-    $> wget https://s3.amazonaws.com/oconnor-test-bucket/sample-data/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
     $> mv NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam /tmp/
 
 This downloads to my current directory and then moves to ``/tmp``. I

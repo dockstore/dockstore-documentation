@@ -157,6 +157,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    :hidden:
    :glob:
    :titlesonly:
+   :reversed:
 
    news
    news/*

@@ -63,7 +63,7 @@ This is the file that runs a particular example with the original tool.
     {
       "input_file": {
             "class": "File",
-            "path": "md5sum.input"
+            "path": "../md5sum.input"
         }
     }
 

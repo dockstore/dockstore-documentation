@@ -19,7 +19,7 @@ A Zenodo account is required to issue a DOI to a workflow version.
 You can link your account with your Zenodo credentials on the
 `accounts page <https://dockstore.org/accounts?tab=accounts>`__.
 
-.. image:: ../assets/images/docs/snapshot_doi/link_zenodo.png
+.. figure:: ../assets/images/docs/snapshot_doi/link_zenodo.png
 
 
 Create Snapshot

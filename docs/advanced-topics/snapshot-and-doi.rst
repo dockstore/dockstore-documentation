@@ -9,7 +9,7 @@ Object Identifiers (DOIs) for their workflows. The ‘Snapshot’ and
 workflow on the ‘My Workflows’ page. These features are specific to
 individual versions of a workflow entry.
 
-.. image:: /assets/images/docs/snapshot_doi/snapshot_doi_versiontab.png
+.. image:: ../assets/images/docs/snapshot_doi/snapshot_doi_versiontab.png
 
 
 
@@ -19,7 +19,7 @@ A Zenodo account is required to issue a DOI to a workflow version.
 You can link your account with your Zenodo credentials on the
 `accounts page <https://dockstore.org/accounts?tab=accounts>`__.
 
-.. image:: /assets/images/docs/snapshot_doi/link_zenodo.png
+.. image:: ../assets/images/docs/snapshot_doi/link_zenodo.png
 
 
 Create Snapshot

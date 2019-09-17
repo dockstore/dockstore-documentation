@@ -144,7 +144,7 @@ Next Steps
 ----------
 
 Find out how to launch your tools and workflows at :doc:`Launching Tools and
-Workflows <../end-user-topics/launch/>`.
+Workflows <../launch-with/launch/>`.
 
 Advanced Topics
 ---------------

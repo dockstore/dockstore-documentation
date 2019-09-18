@@ -37,7 +37,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
 .. centered:: Works with
 
-.. centered:: |CwlLink|_ |WdlLink|_ |NflLink|_ |DnaStackLink|_
+.. centered:: |CwlLink|_ |WdlLink|_ |NflLink|_ |DnaStackLink|_ |SevenBridgesLink|_
 
 .. |CwlLink| image:: /assets/images/affiliations/cwl.png
     :alt: wdl
@@ -58,6 +58,11 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
     :alt: dnastack
     :height: 65px
 .. _DnaStackLink: https://dnastack.com/
+
+.. |SevenBridgesLink| image:: /assets/images/affiliations/sevenbridges.png
+    :alt: sevenbridges
+    :height: 45px
+.. _SevenBridgesLink: https://www.sevenbridges.com/
 
 .. toctree::
    :hidden:

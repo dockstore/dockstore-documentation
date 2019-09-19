@@ -3,9 +3,9 @@ Creating Snapshots and Requesting DOIs
 
 Introduction
 ------------------
-Starting in Dockstore 1.7.0, users can create snapshots and Digital
+Dockstore users can create snapshots and Digital
 Object Identifiers (DOIs) for their workflows. The ‘Snapshot’ and
-‘Request DOI’ actions can be found on the versions tab of any published
+‘Request DOI’ actions can be found on the versions tab of a
 workflow on the ‘My Workflows’ page. These features are specific to
 individual versions of a workflow entry.
 
@@ -16,7 +16,8 @@ individual versions of a workflow entry.
 Connect Zenodo Account
 ----------------------
 Dockstore uses `Zenodo <http://about.zenodo.org/>`__ as its DOI provider. A Zenodo account is
-required to request a DOI for a workflow version. Link your Zenodo credentials to your Dockstore account on the
+required to request a DOI for a workflow version. By using Zenodo credentials, a user is also able to fine tune
+their entries directly on Zenodo. Link your Zenodo credentials to your Dockstore account on the
 `accounts page <https://dockstore.org/accounts?tab=accounts>`__. Requesting a DOI on Dockstore will
 create a public entry on Zenodo and upload associated files.
 
@@ -28,7 +29,9 @@ Create Snapshot
 ----------------
 A snapshot is a point-in-time capture of the descriptor(s), test parameter file(s),
 and metadata associated with a workflow version. Snapshotting a version will also
-make the version immutable. Users will be prompted to confirm before generating a snapshot.
+make the version mostly immutable, with exceptions for some Dockstore metadata
+like verification status, DOIs, and whether a workflow version is hidden.
+Users will be prompted to confirm before generating a snapshot.
 **Taking a snapshot cannot be undone**.
 
 .. image:: ../assets/images/docs/snapshot_doi/snapshot.png
@@ -44,7 +47,7 @@ What are the requirements to snapshot?
       *only versions associated with releases or ‘tags’ can be snapshotted*. For example,
       users cannot snapshot a version associated with a Github branch, but can do so for a Github tag.
 
-    - Each version of a workflow *hosted on Dockstore.org* can be snapshotted (must have non-emtpy files).
+    - Each version of a workflow *hosted on Dockstore.org* can be snapshotted (must have non-empty files).
 
     - We highly recommend following :ref:`best practices<snapshot-doi-bp>` before creating a snapshot.
 
@@ -69,7 +72,7 @@ and metadata, will be included in the entry upload to Zenodo.
 
 The user will be prompted to confirm before creating a DOI, we strongly recommend following the best practices for workflow descriptor language
 before generating a DOI. The version snapshot and DOI on Dockstore can’t be changed, however metadata editing
-may be allowed directly through Zendo, but this is limited. **A DOI request cannot be undone.**
+may be allowed directly through Zendo, but this is limited. **A Dockstore DOI request cannot be undone.**
 
 .. image:: ../assets/images/docs/snapshot_doi/request_doi_2.png
    :scale: 50 %

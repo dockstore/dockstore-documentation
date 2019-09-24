@@ -3,6 +3,8 @@ CWL Best Practices
 
 .. include:: best-practices-intro.rst
 
+.. _bp-cwl-metadata:
+
 Authorship Metadata
 -------------------
 

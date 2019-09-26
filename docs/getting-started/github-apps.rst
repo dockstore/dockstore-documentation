@@ -60,3 +60,6 @@ See Also
 --------
 
 - :doc:`Getting Started with Services <./getting-started-with-services>`
+
+.. discourse::
+       :topic_identifier: 2240

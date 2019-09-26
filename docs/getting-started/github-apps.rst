@@ -14,7 +14,7 @@ Overview
 This document gives a high level overview of the GitHub Apps and the Dockstore
 GitHub App in particular. For details on configuring and using the Dockstore
 GitHub App with services, please walk through the
-`Getting Started with Services <./getting-started-with-services>`_ tutorial.
+`Getting Started with Services <getting-started/getting-started-with-services>`_ tutorial.
 
 With the Dockstore GitHub App, authors do not need to manually refresh their
 services on Dockstore to get the latest changes from GitHub. Dockstore will
@@ -59,4 +59,4 @@ Dockstore shortly afterwards.
 See Also
 --------
 
-- `Getting Started with Services <./getting-started-with-services>`_
+- `Getting Started with Services <getting-started/getting-started-with-services>`_

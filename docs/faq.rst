@@ -13,7 +13,7 @@ FTP, and S3. We also have preliminary support for
 `Synapse <https://www.synapse.org/>`__ and the `ICGC Storage
 client <https://docs.icgc.org/download/guide/#score-client-usage>`__.
 Please see `file provisioning
-plugins <https://github.com/dockstore/dockstore/tree/develop/dockstore-file-plugin-parent>`__
+plugins <https://github.com/dockstore/dockstore/tree/master/dockstore-file-plugin-parent>`__
 for more information on these two file transfer sources.
 
 What environment do you test tools in?

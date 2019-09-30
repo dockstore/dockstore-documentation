@@ -15,7 +15,8 @@ Highlighted new features include
 - Migrated documentation to readthedocs (same URL)
 - When not logged-in, the home page will better introduce new users to Dockstore
 - CLI now tested with (and recommending) Java 11 and Python 3
-- Closed Beta feature: :doc:`Services as a new type of entry </getting-started/getting-started-with-services>`
+- Closed Beta feature: 
+  - :doc:`Services as a new type of entry </getting-started/getting-started-with-services>`
   - :doc:`Also beta testing GitHub Apps and dockstore.yml </getting-started/github-apps>`
 
 See a full list of our changes on

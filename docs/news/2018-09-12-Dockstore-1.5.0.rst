@@ -12,7 +12,7 @@ Highlighted new features include
    with a rough and ready DAG, and display of Docker images used by a
    Nextflow workflow
 -  full details on support
-   :doc:`language-by-language </user-tutorials/language-support/>`
+   :doc:`language-by-language </end-user-topics/language-support>`
 -  initial support for :doc:`hosted
    workflows </getting-started/hosted-tools-and-workflows>`
    with CWL and WDL
@@ -52,7 +52,7 @@ Highlighted new features include
 -  updates for cwltool support from 1.0.20170828135420 to
    1.0.20180403145700
 -  to elaborate,
-   :doc:`verified <faq.html#what-is-a-verified-tool-or-workflow>`
+   :doc:`verified </faq.html#what-is-a-verified-tool-or-workflow>`
    workflows have been run in-house succesfully with these versions
 -  updates to use the Bitbucket 2.0 API and the GitLab V4 API
 -  a large number of UI improvements and usability improvements

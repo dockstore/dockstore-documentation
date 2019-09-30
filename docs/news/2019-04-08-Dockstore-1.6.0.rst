@@ -28,11 +28,11 @@ Highlighted new features include
 
 -  beta support for launching workflows directly onto GA4GH WES
    endpoints
--  see our first steps at :doc:`WES CLI </publisher-tutorials/advanced-features/>`
+-  see our first steps at :doc:`WES CLI </launch-with/terra-launch-with>`
 -  launch-with support for `Terra <https://terra.bio/>`__
 -  improved display of validation errors
 -  support for
-   :doc:`aliases </publisher-tutorials/guid-alias>`
+   :doc:`aliases </advanced-topics/guid-alias>`
    for advanced developers
 -  a huge host of bugfixes for everything from Nextflow DAGs, our
    support for GA4GH TRS endpoints, the usability of search, description

@@ -4,8 +4,19 @@ Dockstore 1.7.0
 Highlighted new features include
 --------------------------------
 
--  placeholder
-
+- :doc:`Snapshotted versions and DOIs <../advanced-topics/snapshot-and-doi.html>`
+  - Versions can be snapshotted to freeze them at a particular point in time
+  - Zenodo integration allowing publishers to create DOIs for snapshotted versions
+- :doc:`CWL launch with CGC (Seven Bridges) <../launch-with/cgc-launch-with.html>`
+  - Language support updates
+  - Support for WDL 1.0 tools and workflows
+  - Support for CWL 1.1 tools and workflows
+  - Cromwell update from 36 to 44
+- Migrated documentation to readthedocs (same URL)
+- When not logged-in, the home page will better introduce new users to Dockstore
+- CLI now tested with (and recommending) Java 11 and Python 3
+- Closed Beta feature: :doc:`Services as a new type of entry <../getting-started/getting-started-with-services.html>`
+  - :doc:`Also beta testing GitHub Apps and dockstore.yml <../getting-started/github-apps.html>`
 
 See a full list of our changes on
 `GitHub <https://github.com/dockstore/dockstore/milestone/25>`__
@@ -21,5 +32,7 @@ Major
 Minor
 ~~~~~
 
-- while workflow launching should be unaffected, metadata editing through the 1.6.0 CLI will no longer function till an upgrade
-
+- while workflow launching should be unaffected, metadata editing through the 1.6.0 CLI will no longer function till an upgrade to the 1.7.0 CLI
+- Improved parsing code and support for WDL 1.0 means that some previously invalid tools and workflows should now be valid (or vice versa)
+  - A refresh of the tools and workflows is required to redo validation
+- My Tools and My Workflows links are now in account dropdown

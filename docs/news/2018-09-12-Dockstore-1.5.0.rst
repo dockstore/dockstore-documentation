@@ -14,7 +14,7 @@ Highlighted new features include
 -  full details on support
    :doc:`language-by-language </user-tutorials/language-support/>`
 -  initial support for :doc:`hosted
-   workflows <publisher-tutorials/hosted-tools-and-workflows/>`
+   workflows </getting-started/hosted-tools-and-workflows>`
    with CWL and WDL
 -  allows users to create and edit a limited number of workflows (and
    versions of workflows) directly on the dockstore.org site for quick
@@ -24,7 +24,7 @@ Highlighted new features include
 -  download zip bundles of your hosted (actually, all) workflows to
    ensure that you can always get back your workflows
 -  limited beta of
-   :doc:`permissions </publisher-tutorials/sharing-workflows/>`
+   :doc:`permissions </advanced-topics/sharing-workflows>`
    based sharing
 -  this will eventually allow all users to share workflows with a
    limited number of other Dockstore users
@@ -52,7 +52,7 @@ Highlighted new features include
 -  updates for cwltool support from 1.0.20170828135420 to
    1.0.20180403145700
 -  to elaborate,
-   :doc:`verified </faq.html#what-is-a-verified-tool-or-workflow>`
+   :doc:`verified <faq.html#what-is-a-verified-tool-or-workflow>`
    workflows have been run in-house succesfully with these versions
 -  updates to use the Bitbucket 2.0 API and the GitLab V4 API
 -  a large number of UI improvements and usability improvements

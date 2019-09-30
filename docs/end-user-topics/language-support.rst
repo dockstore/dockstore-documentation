@@ -17,16 +17,21 @@ on the Dockstore site and in the Dockstore command-line utility.
 
 [1] Available in both classic and WDL EPAM Pipeline Builder
 
-[2] Does not support file-path based imports. See `Terra
+[2] Does not support http(s) based imports. See `CGC
+Limitations`_ for limitations.
+
+.. _`CGC Limitations`: ./cgc-launch-with.html#limitations
+
+[3] Does not support file-path based imports. See `Terra
 Limitations`_ for limitations.
 
 .. _`Terra Limitations`: ./terra-launch-with.html#limitations
 
 
-[3] Does not support file-path or http(s) based imports. See `DNAstack
+[4] Does not support file-path or http(s) based imports. See `DNAstack
 Limitations <./dnastack-launch-with.html#limitations>`__ for limitations.
 
-[4] All verified Dockstore WDL tools/workflows were tested successfully. However, we anticipate that more testing is needed for WDL workflows that use language features not contained within that dataset.
+[5] All verified Dockstore WDL tools/workflows were tested successfully. However, we anticipate that more testing is needed for WDL workflows that use language features not contained within that dataset.
 
 Converting File-path Based Imports to Public http(s) Based Imports for WDL
 --------------------------------------------------------------------------

@@ -3,6 +3,8 @@ Nextflow Best Practices
 
 .. include:: best-practices-intro.rst
 
+.. _bp-nfl-metadata:
+
 Authorship Metadata
 -------------------
 

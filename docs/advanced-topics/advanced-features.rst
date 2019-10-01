@@ -9,7 +9,7 @@ provisioning for inputs and outputs.
 
 File provisioning for some protocols, like HTTP and FTP, is built-in
 while other protocols are handled by plugins as documented
-`here <https://github.com/dockstore/dockstore/tree/develop/dockstore-file-plugin-parent>`__.
+`here <https://github.com/dockstore/dockstore/tree/master/dockstore-file-plugin-parent>`__.
 
 To illustrate, for this
 `tool <https://dockstore.org/containers/quay.io/collaboratory/dockstore-tool-bamstats>`__

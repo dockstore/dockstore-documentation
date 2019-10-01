@@ -4,15 +4,14 @@ Dockstore 1.6.0
 Highlighted new features include
 --------------------------------
 
--  initial support for :doc:`organizations and
-   collections </advanced-topics/organizations-and-collections>`
+-  initial support for `organizations and
+   collections <../advanced-topics/organizations-and-collections.html>`_
 -  institutions, grant agencies, consortiums, and more can now organize,
    describe, and highlight worthy workflows and tools found on Dockstore
 -  language support updates
 -  cwltool updates from 1.0.20180403145700 to 1.0.20181217162649
 -  cromwell updates from 30.2 to 36 (also a mode for CWL with Cromwell
-   via the
-    :doc:`CLI </advanced-topics/advanced-features.html#cromwell-beta>`)
+   via the `CLI <../advanced-topics/advanced-features.html#cromwell-beta>`_)
 -  to elaborate,
    `verified <../faq.html#what-is-a-verified-tool-or-workflow>`_
    workflows have been run in-house succesfully with these versions but
@@ -28,7 +27,7 @@ Highlighted new features include
 
 -  beta support for launching workflows directly onto GA4GH WES
    endpoints
--  see our first steps at :doc:`WES CLI </launch-with/terra-launch-with>`
+-  see our first steps at `WES CLI <../advanced-topics/advanced-features.html#workflow-execution-service-wes-command-line-interface-cli>`_
 -  launch-with support for `Terra <https://terra.bio/>`__
 -  improved display of validation errors
 -  support for

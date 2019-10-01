@@ -33,11 +33,11 @@ Highlighted new features include:
    update it more often
 -  CLI
 -  ability to
-   :doc:`configure <../advanced-topics/advanced-features.html#alternative-cwl-launchers>`
+   `configure <../advanced-topics/advanced-features.html#alternative-cwl-launchers>`__
    Cromwell and Bunny (rabix) version or use the `generic cwl-runner
    interface <https://github.com/common-workflow-language/cwltool/blob/master/cwltool/schemas/v1.1.0-dev1/cwl-runner.cwl>`__
    to run cwl
--  ability to :doc:`POST notifications <../advanced-topics/advanced-features.html#notifications>`
+-  ability to `POST notifications <../advanced-topics/advanced-features.html#notifications>`__
    during workflow execution to a custom endpoint
 -  ability to run unpublished tools and workflows (if you are the owner
    or in the organization for a tool or workflow)

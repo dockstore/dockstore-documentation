@@ -14,7 +14,7 @@ Highlighted new features include
    via the
    :doc:`CLI </advanced-topics/advanced-features.html#cromwell-beta>`)
 -  to elaborate,
-   :doc:`verified <../faq.html#what-is-a-verified-tool-or-workflow>`
+   `verified <../faq.html#what-is-a-verified-tool-or-workflow>`__
    workflows have been run in-house succesfully with these versions but
    feel free to try newer versions as well and let us know if things are
    broken

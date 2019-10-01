@@ -21,7 +21,7 @@ that as the command for your jobs, gaining a bit of performance. This
 tutorial focuses on using cwltool and using the Dockstore command-line
 to provide an experience that is more akin to running Dockstore or
 cwltool :doc:`on the
-command-line <../launch-with/launch.html#dockstore-cli>` out of
+command-line </launch-with/launch.html#dockstore-cli>` out of
 the box.
 
 1. Run through Azure Shipyard's `Linux Installation

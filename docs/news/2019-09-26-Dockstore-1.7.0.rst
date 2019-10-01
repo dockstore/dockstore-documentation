@@ -4,10 +4,10 @@ Dockstore 1.7.0
 Highlighted new features include
 --------------------------------
 
-- `Snapshotted versions and DOIs </advanced-topics/snapshot-and-doi>`_
+- `Snapshotted versions and DOIs <../advanced-topics/snapshot-and-doi>`_
   - Versions can be snapshotted to freeze them at a particular point in time
   - Zenodo integration allowing publishers to create DOIs for snapshotted versions
-- `CWL launch with CGC (Seven Bridges) </launch-with/cgc-launch-with>`_
+- `CWL launch with CGC (Seven Bridges) <../launch-with/cgc-launch-with>`_
 - Language support updates
    - Support for WDL 1.0 tools and workflows
    - Support for CWL 1.1 tools and workflows
@@ -15,9 +15,9 @@ Highlighted new features include
 - Migrated documentation to readthedocs (same URL)
 - When not logged-in, the home page will better introduce new users to Dockstore
 - CLI now tested with (and recommending) Java 11 and Python 3
-- Closed Beta feature:
-   - Services as `as a new type of entry </getting-started/getting-started-with-services>`_
-   - Also `beta testing GitHub Apps and dockstore.yml </getting-started/github-apps>`_
+- Closed beta feature
+   - Services as `as a new type of entry <../getting-started/getting-started-with-services>`_
+   - Also `beta testing GitHub Apps and dockstore.yml <../getting-started/github-apps>`_
 
 See a full list of our changes on
 `GitHub <https://github.com/dockstore/dockstore/milestone/25>`_

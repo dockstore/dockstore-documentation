@@ -4,15 +4,15 @@ Dockstore 1.6.0
 Highlighted new features include
 --------------------------------
 
--  initial support for `organizations and
-   collections </advanced-topics/organizations-and-collections/>`_
+-  initial support for :doc:`organizations and
+   collections </advanced-topics/organizations-and-collections>`
 -  institutions, grant agencies, consortiums, and more can now organize,
    describe, and highlight worthy workflows and tools found on Dockstore
 -  language support updates
 -  cwltool updates from 1.0.20180403145700 to 1.0.20181217162649
 -  cromwell updates from 30.2 to 36 (also a mode for CWL with Cromwell
    via the
-   `CLI </advanced-topics/advanced-features.html#cromwell-beta>`_)
+    :doc:`CLI </advanced-topics/advanced-features.html#cromwell-beta>`)
 -  to elaborate,
    `verified <../faq.html#what-is-a-verified-tool-or-workflow>`_
    workflows have been run in-house succesfully with these versions but

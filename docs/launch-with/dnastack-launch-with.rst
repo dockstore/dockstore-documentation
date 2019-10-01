@@ -97,11 +97,11 @@ Limitations
 See Also
 --------
 
--  `AWS Batch </advanced-topics/aws-batch/>`__
--  `Azure Batch </advanced-topics/azure-batch/>`__
--  `CGC Launch With <cgc-launch-with/>`__
--  `DNAnexus Launch With <dnanexus-launch-with/>`__
--  `Terra Launch With <terra-launch-with/>`__
+-  :doc:`AWS Batch </advanced-topics/aws-batch>`
+-  :doc:`Azure Batch </advanced-topics/azure-batch>`
+-  :doc:`CGC Launch With</launch-with/cgc-launch-with>`
+-  :doc:`DNAnexus Launch With </launch-with/dnanexus-launch-with>`
+-  :doc:`Terra Launch With </launch-with/terra-launch-with>`
 
 .. discourse::
     :topic_identifier: 1309

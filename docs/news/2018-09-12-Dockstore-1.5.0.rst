@@ -52,7 +52,7 @@ Highlighted new features include
 -  updates for cwltool support from 1.0.20170828135420 to
    1.0.20180403145700
 -  to elaborate,
-   :doc:`verified </faq.html#what-is-a-verified-tool-or-workflow>`
+   :doc:`verified <../faq.html#what-is-a-verified-tool-or-workflow>`
    workflows have been run in-house succesfully with these versions
 -  updates to use the Bitbucket 2.0 API and the GitLab V4 API
 -  a large number of UI improvements and usability improvements

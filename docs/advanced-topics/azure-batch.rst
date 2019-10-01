@@ -20,8 +20,8 @@ decompose the underlying command-line invocation for the tool and use
 that as the command for your jobs, gaining a bit of performance. This
 tutorial focuses on using cwltool and using the Dockstore command-line
 to provide an experience that is more akin to running Dockstore or
-cwltool `on the
-command-line <../end-user-topics/launch.html#dockstore-cli>`__ out of
+cwltool :doc:`on the
+command-line <../launch-with/launch.html#dockstore-cli>` out of
 the box.
 
 1. Run through Azure Shipyard's `Linux Installation
@@ -87,9 +87,9 @@ the box.
 See Also
 --------
 
--  `AWS Batch <aws-batch/>`__
--  `DNAstack Launch With </end-user-topics/dnastack-launch-with/>`__
--  `Terra Launch With </end-user-topics/terra-launch-with/>`__
+-  :doc:`AWS Batch <aws-batch>`
+-  :doc:`DNAstack Launch With </launch-with/dnastack-launch-with>`
+-  :doc:`Terra Launch With </launch-with/terra-launch-with>`
 
 .. discourse::
        :topic_identifier: 1282

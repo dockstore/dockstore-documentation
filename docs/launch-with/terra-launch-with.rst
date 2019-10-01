@@ -51,10 +51,10 @@ Limitations
 See Also
 --------
 
--  `AWS Batch <../advanced-topics/aws-batch/>`__
--  `Azure Batch <../advanced-topics/azure-batch/>`__
--  `DNAnexus Launch With <../launch-with/dnanexus-launch-with/>`__
--  `DNAstack Launch With <../launch-with/dnastack-launch-with/>`__
+-  :doc:`AWS Batch <../advanced-topics/aws-batch/>`
+-  :doc:`Azure Batch <../advanced-topics/azure-batch/>`
+-  :doc:`DNAnexus Launch With <../launch-with/dnanexus-launch-with/>`
+-  :doc:`DNAstack Launch With <../launch-with/dnastack-launch-with/>`
 
 .. discourse::
     :topic_identifier: 1841

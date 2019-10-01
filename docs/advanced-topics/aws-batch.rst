@@ -109,9 +109,9 @@ the box.
 See Also
 --------
 
--  `Azure Batch <azure-batch/>`__
--  `DNAstack Launch With </end-user-topics/dnastack-launch-with/>`__
--  `Terra Launch With </end-user-topics/terra-launch-with/>`__
+-  :doc:`Azure Batch <azure-batch>`
+-  :doc:`DNAstack Launch With </launch-with/dnastack-launch-with>`
+-  :doc:`Terra Launch With </launch-with/terra-launch-with>`
 
 .. discourse::
    :topic_identifier: 1270

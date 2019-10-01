@@ -132,9 +132,9 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
     :height: 65px
 .. _UcscLink: https://ucscgenomics.soe.ucsc.edu/
 
-.. centered:: Works with
+.. centered:: Workflow Languages
 
-.. centered:: |CwlLink|_ |WdlLink|_ |NflLink|_ |DnaStackLink|_
+.. centered:: |CwlLink|_ |WdlLink|_ |NflLink|_
 
 .. |CwlLink| image:: /assets/images/affiliations/cwl.png
     :alt: wdl
@@ -151,7 +151,18 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
     :height: 65px
 .. _NflLink: https://www.nextflow.io/
 
+.. centered:: Works With
+
+.. centered:: |DnaStackLink|_ |SevenBridgesLink|_
+
+
 .. |DnaStackLink| image:: /assets/images/affiliations/dnastack.png
     :alt: dnastack
     :height: 65px
 .. _DnaStackLink: https://dnastack.com/
+
+.. |SevenBridgesLink| image:: /assets/images/affiliations/sevenbridges.png
+    :alt: sevenbridges
+    :height: 45px
+.. _SevenBridgesLink: https://www.sevenbridges.com/
+

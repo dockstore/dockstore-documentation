@@ -7,7 +7,7 @@ Several alternatives have been developed to make it possible to run rootless con
 `rootless Docker <https://engineering.docker.com/2019/02/experimenting-with-rootless-docker/>`_,
 and `udocker <https://indigo-dc.gitbook.io/udocker/>`_.
 While Dockstore uses Docker by default, if necessary it may be possible to run your workflows with one
-of these alternatives. Because the call to Docker or an alternative is made by the workflow runner, usually cwltoool
+of these alternatives. Because the call to Docker or an alternative is made by the workflow runner, usually cwltool
 or Cromwell, and not Dockstore directly, the difficulty of configuring a Docker alternative depends on the workflow
 type. Some Dockstore entries will run seamlessly without Docker, and some may be entirely incompatible in a rootless
 environment.
@@ -23,7 +23,8 @@ A common problem observed when running Dockstore entries with Singularity is tha
 the use of root may be unnecessary. Whenever possible, dockerfiles on Dockstore should avoid using root.
 
 Singularity provides a `fake root <https://sylabs.io/guides/3.4/user-guide/fakeroot.html>`_ option that might circumvent
-the problems using root in certain situations. There does not seem to be a way to use this option through cwltool
+the problems using root in certain situations. There does not seem to be a way to use this option through cwltool. It
+can be used with Cromwell by editing the Singularity command format set in your Cromwell config file.
 
 More information about compatibility of dockerfiles with Singularity
 can be found `here <https://sylabs.io/guides/3.4/user-guide/singularity_and_docker.html#best-practices>`_.
@@ -54,7 +55,7 @@ at this point. This is a feature that we hope to add soon.
 Cromwell can be configured to use Singularity instead of Docker as described
 `here <https://cromwell.readthedocs.io/en/stable/tutorials/Containers/#singularity>`_.
 This requires creating a Cromwell config file with a section describing the backend provider settings.
-Examples of this are available in the Cromwell Github
+Examples of this are available in the Cromwell GitHub
 `here <https://github.com/broadinstitute/cromwell/tree/develop/cromwell.example.backends>`_.
 
 Rootless Docker

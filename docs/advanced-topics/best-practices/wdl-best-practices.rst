@@ -10,6 +10,8 @@ free to provide suggestions and/or improvements.
 
 In this tutorial, we will be using the same example from our getting started with WDL tutorial, `dockstore-tool-bamstats <https://github.com/CancerCollaboratory/dockstore-tool-bamstats/blob/develop/Dockstore.wdl>`__.
 
+.. _bp-wdl-metadata:
+
 Authorship Metadata
 -------------------
 

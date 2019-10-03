@@ -57,7 +57,7 @@ This example includes author, email, and description metadata:
         call bamstats { input: bam_input=bam_input, mem_gb=mem_gb }
     }
 
-This results in the workflow's Info Tab being populated like:
+This results in the tools's Info Tab being populated like:
 
 .. figure:: /assets/images/docs/best_practices/wdl-info-tab-metadata.png
    :alt: wdl-info-tab-metadata
@@ -80,7 +80,7 @@ on the command line and ensure that it succeeds:
 
 ::
 
-    $ dockstore workflow launch --local-entry wdl/bamqc.wdl --json test.wdl.json
+    $ dockstore tool launch --local-entry wdl/bamqc.wdl --json test.wdl.json
 
     ...
     Calling out to Cromwell to run your workflow

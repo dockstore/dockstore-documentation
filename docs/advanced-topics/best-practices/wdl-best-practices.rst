@@ -1,9 +1,14 @@
 WDL Best Practices
 ==================
 
-.. include:: best-practices-intro.rst
+Best Practices
+--------------
 
-.. _bp-wdl-metadata:
+Following are some best practices for creating tools. Our intention is
+that this document will evolve as descriptor languages evolve so feel
+free to provide suggestions and/or improvements.
+
+In this tutorial, we will be using the same example from our getting started with WDL tutorial, `dockstore-tool-bamstats <https://github.com/CancerCollaboratory/dockstore-tool-bamstats/blob/develop/Dockstore.wdl>`__.
 
 Authorship Metadata
 -------------------
@@ -12,58 +17,44 @@ Authorship Metadata
 
 This example includes author, email, and description metadata:
 
-*wdl/bamqc.wdl*
+*/Dockstore.wdl*
 
 ::
 
-    workflow BamQC {
-        String SAMTOOLS
-        File BAMFILE
+    version 1.0
+    task bamstats {
+        input {
+            File bam_input
+            Int mem_gb
+        }
 
-        call flagstat {
-            input : samtools=SAMTOOLS, bamfile=BAMFILE
+
+        command {
+            bash /usr/local/bin/bamstats ${mem_gb} ${bam_input}
         }
-        call bamqc { 
-            input : samtools=SAMTOOLS, bamfile=BAMFILE, xtra_json=flagstat.flagstat_json
+
+        output {
+            File bamstats_report = "bamstats_report.zip"
         }
+
+        runtime {
+            docker: "quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0"
+            memory: mem_gb + "GB"
+        }
+
         meta {
-            author: "Muhammad Lee"
-            email: "Muhammad.Lee@oicr.on.ca"
-            description: "Implementing bamqc over and over again to get an idea of how easy or hard it is for a beginner to implement a basic workflow in different workflow systems."
+            author: "Andrew Duncan"
+            email: "Andrew.Duncan@oicr.on.ca"
+            description: "![build_status](https://quay.io/repository/collaboratory/dockstore-tool-bamstats/status) A Docker container for the BAMStats command. See the [BAMStats](http://bamstats.sourceforge.net/) website for more information."
         }
     }
 
-    task flagstat {
-        String samtools
-        File flagstat_to_json
-        File bamfile
-        String dollar="$"
-        String outfile="flagstat.json"
-
-        command {
-            ${samtools} flagstat ${bamfile} | ${flagstat_to_json} > ${outfile}
+    workflow bamstatsWorkflow {
+        input {
+            File bam_input
+            Int mem_gb
         }
-
-        output {
-            File flagstat_json = "${outfile}"
-        }
-
-    }
-
-    task bamqc {
-        String samtools
-        File bamqc_pl
-        File bamfile
-        File bedfile
-        String outjson
-        String xtra_json
-
-        command {
-            eval '${samtools} view ${bamfile} | perl ${bamqc_pl} -r ${bedfile} -j "${xtra_json}" > ${outjson}'
-        }
-        output {
-            File out = "${outjson}"
-        }
+        call bamstats { input: bam_input=bam_input, mem_gb=mem_gb }
     }
 
 This results in the workflow's Info Tab being populated like:
@@ -75,17 +66,13 @@ This results in the workflow's Info Tab being populated like:
 
 .. include:: sample-parameter-files-intro.rst
 
-*local\_bamqc\_inputs.json*
+*test.wdl.json*
 
 ::
 
     {
-      "BamQC.flagstat.flagstat_to_json":"flagstat2json.sh",
-      "BamQC.bamqc.bamqc_pl": "bamqc/bamqc.pl",
-      "BamQC.BAMFILE": "bamqc/t/test/neat_5x_EX_hg19_chr21.bam",
-      "BamQC.bamqc.bedfile": "bamqc/t/test/SureSelect_All_Exon_V4_Covered_Sorted_chr21.bed",
-      "BamQC.bamqc.outjson": "bamqc/t/test/neat_5x_EX_hg19_chr21.json",
-      "BamQC.SAMTOOLS": "samtools"
+      "bamstatsWorkflow.bam_input": "NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam",
+      "bamstatsWorkflow.mem_gb": "4"
     }
 
 Now invoke ``dockstore`` with the workflow wrapper and the input object
@@ -93,11 +80,12 @@ on the command line and ensure that it succeeds:
 
 ::
 
-    $ dockstore workflow launch --local-entry wdl/bamqc.wdl --json wdl/local_bamqc_inputs.json
+    $ dockstore workflow launch --local-entry wdl/bamqc.wdl --json test.wdl.json
 
     ...
     Calling out to Cromwell to run your workflow
-    java -jar /home/gluu/.dockstore/libraries/cromwell-29.jar run /home/gluu/one-workflow-many-ways/wdl/bamqc.wdl --inputs /tmp/foo7808763695019000464json
+    Executing: java -jar /Users/natalieperez/.dockstore/libraries/cromwell-44.jar run /Users/natalieperez/Projects/dockstore-tool-bamstats/Dockstore.wdl --inputs /var/folders/xq/7_kn047j4sb41bfb2_3nng4m0000gq/T/foo15775077532364354801json
+    ...
     Cromwell exit code: 0
     Cromwell stdout:
     ...

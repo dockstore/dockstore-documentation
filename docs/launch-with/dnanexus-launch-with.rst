@@ -41,11 +41,12 @@ Limitations
 See Also
 --------
 
--  `AWS Batch </advanced-topics/aws-batch/>`__
--  `Azure Batch </advanced-topics/azure-batch/>`__
--  `CGC Launch With<cgc-launch-with/>`__
--  `DNAstack Launch With <dnastack-launch-with/>`__
--  `Terra Launch With <terra-launch-with/>`__
+-  :doc:`AWS Batch </advanced-topics/aws-batch>`
+-  :doc:`Azure Batch </advanced-topics/azure-batch>`
+-  :doc:`CGC Launch With</launch-with/cgc-launch-with>`
+-  :doc:`DNAstack Launch With </launch-with/dnastack-launch-with>`
+-  :doc:`Terra Launch With </launch-with/terra-launch-with>`
+-  :doc:`Azure Batch </advanced-topics/azure-batch>`
 
 .. discourse::
     :topic_identifier: 1535

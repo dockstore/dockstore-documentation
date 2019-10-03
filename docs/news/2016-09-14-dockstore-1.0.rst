@@ -16,13 +16,11 @@ Three new workflows used to generate the `ICGC PanCancer Analysis of
 Whole Genomes (PCAWG) <https://dcc.icgc.org/icgc-in-the-cloud/aws>`__
 dataset have been released and validated with CWL 1.0.
 
-These are: \*
-`DELLY <https://dockstore.org/containers/quay.io/pancancer/pcawg_delly_workflow>`__
-structural variation \*
-`Sanger <https://dockstore.org/containers/quay.io/pancancer/pcawg-sanger-cgp-workflow>`__
-somatic calling \*
-`DKFZ <https://dockstore.org/containers/quay.io/pancancer/pcawg-dkfz-workflow>`__
-SNVs, indels, copy number
+These are:
+
+* `DELLY <https://dockstore.org/containers/quay.io/pancancer/pcawg_delly_workflow>`_ structural variation
+* `Sanger <https://dockstore.org/containers/quay.io/pancancer/pcawg-sanger-cgp-workflow>`_ somatic calling
+* `DKFZ <https://dockstore.org/containers/quay.io/pancancer/pcawg-dkfz-workflow>`_ SNVs, indels, copy number
 
 These workflows join the first workflow used to generate this dataset,
 `BWA-mem <https://dockstore.org/containers/quay.io/pancancer/pcawg-bwa-mem-workflow>`__.

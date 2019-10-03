@@ -95,8 +95,8 @@ repository:
 
 
     $namespaces:
-    dct: http://purl.org/dc/terms/
-    foaf: http://xmlns.com/foaf/0.1/
+        dct: http://purl.org/dc/terms/
+        foaf: http://xmlns.com/foaf/0.1/
 
 You can see this tool takes two inputs, a parameter to control memory
 usage and a BAM file (binary sequence alignment file). It produces one

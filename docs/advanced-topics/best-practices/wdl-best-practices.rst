@@ -4,9 +4,7 @@ WDL Best Practices
 Best Practices
 --------------
 
-Following are some best practices for creating tools. Our intention is
-that this document will evolve as descriptor languages evolve so feel
-free to provide suggestions and/or improvements.
+The following are some best practices for creating tools. As descriptor languages change, so should this document; feel free to provide suggestions and/or improvements.
 
 In this tutorial, we will be using the same example from our getting started with WDL tutorial, `dockstore-tool-bamstats <https://github.com/CancerCollaboratory/dockstore-tool-bamstats/blob/develop/Dockstore.wdl>`__.
 

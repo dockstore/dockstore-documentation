@@ -22,6 +22,9 @@ A common problem observed when running Dockstore entries with Singularity is tha
 ``singularity pull`` because the entry's dockerfile or its base image contains a ``USER root`` command. In many cases
 the use of root may be unnecessary. Whenever possible, dockerfiles on Dockstore should avoid using root.
 
+Singularity provides a `fake root <https://sylabs.io/guides/3.4/user-guide/fakeroot.html>`_ option that might circumvent
+the problems using root in certain situations. There does not seem to be a way to use this option through cwltool
+
 More information about compatibility of dockerfiles with Singularity
 can be found `here <https://sylabs.io/guides/3.4/user-guide/singularity_and_docker.html#best-practices>`_.
 
@@ -33,10 +36,14 @@ and requires ``sudo``.
 cwltool
 ~~~~~~~
 
-Singularity is available as a command line option for cwltool.
-To set this option through Dockstore, add the following line to your ``~/.dockstore/config``:
+Singularity is available as a command line option for cwltool like this:
+::
+    cwltool --singularity <workflow> <input json>
 
-``cwltool-extra-parameters: --singularity``
+To set this option through Dockstore, add the following line to your ``~/.dockstore/config``:
+::
+
+    cwltool-extra-parameters: --singularity
 
 Cromwell
 ~~~~~~~~
@@ -59,8 +66,9 @@ Therefore, the normal Docker commands invoked by cwltool and Cromwell will be ex
 
 Rootless Docker installation is simple and does not require root. Regular Docker must not be accessible in order
 to install. Just execute the installation script:
+::
 
-``curl -sSL https://get.docker.com/rootless | sh``
+    curl -sSL https://get.docker.com/rootless | sh
 
 It may display a message that you need to add it to the PATH or do some other configuration.
 You can confirm that rootless Docker is working with ``docker info``;
@@ -85,8 +93,9 @@ worked smoothly with rootless Docker.
 
 Cromwell supports most CWL features as well as WDL. You can use Cromwell instead of cwltool when running CWL files
 with Dockstore by adding the following line to your ``~/.dockstore/config``:
+::
 
-``cwlrunner: cromwell``
+    cwlrunner: cromwell
 
 This may not work with all CWL entries, but it is a good workaround for the cwltool incompatibility described above.
 
@@ -95,14 +104,18 @@ udocker
 
 The udocker `documentation <https://indigo-dc.gitbook.io/udocker/>`_ emphasizes that it is intended for simple
 containers only and does not support all Docker functionality.
+There are several ways to install udocker documented
+`here <https://indigo-dc.gitbook.io/udocker/installation_manual>`_.
+Installation does not require root.
 
 cwltool
 ~~~~~~~
 
 udocker is available as a cwltool command line option. To set this option through Dockstore, add the following line
 to your ``~/.dockstore/config``:
+::
 
-``cwltool-extra-parameters: --user-space-docker-cmd=udocker``
+    cwltool-extra-parameters: --user-space-docker-cmd=udocker
 
 Of the entries we tested, very simple ones worked smoothly with udocker.
 More complex ones failed when they required root.

@@ -64,6 +64,8 @@ repository:
 
 ::
 
+    version 1.0
+
     task bamstats {
         input {
           File bam_input
@@ -212,8 +214,6 @@ parameterization file:
 ::
 
     $> wget ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/NA12878/alignment/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
-    # alternative location if the above URL doesn't work
-    $> wget https://s3.amazonaws.com/oconnor-test-bucket/sample-data/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
 
 This downloads to my current directory. I could choose another location,
 it really doesn't matter. I'm using a sample I checked in already:

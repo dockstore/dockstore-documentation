@@ -1,3 +1,7 @@
+.. note::
+   The topics in this tutorial are experimental. We are working on improving support for rootless containers,
+   but for now, some things may not be compatible.
+
 Docker Alternatives
 ===================
 
@@ -21,6 +25,9 @@ commands are not compatible with Singularity.
 A common problem observed when running Dockstore entries with Singularity is that the process fails on
 ``singularity pull`` because the entry's dockerfile or its base image contains a ``USER root`` command. In many cases
 the use of root may be unnecessary. Whenever possible, dockerfiles on Dockstore should avoid using root.
+
+.. note:: A best practice when using Docker for workflows is not to rely on a specific user.
+   This is doubly true for Singularity where it is not just best practice but necessary.
 
 Singularity provides a `fake root <https://sylabs.io/guides/3.4/user-guide/fakeroot.html>`_ option that might circumvent
 the problems using root in certain situations. There does not seem to be a way to use this option through cwltool. It
@@ -65,8 +72,9 @@ Rootless Docker, a product of Docker, is very convenient because no configuratio
 When it is installed, all ``docker`` commands are run in rootless mode without needing to set this as an option.
 Therefore, the normal Docker commands invoked by cwltool and Cromwell will be executed rootlessly.
 
-Rootless Docker installation is simple and does not require root. Regular Docker must not be accessible in order
-to install. Just execute the installation script:
+Rootless Docker installation is simple and does not require root. Regular Docker must not already be installed.
+Just execute the installation script:
+
 ::
 
     curl -sSL https://get.docker.com/rootless | sh

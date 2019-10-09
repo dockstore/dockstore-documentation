@@ -7,9 +7,8 @@ Docker Alternatives
 
 In some situations using Docker may be impractical because it requires all users to have root access.
 Several alternatives have been developed to make it possible to run rootless containers, including
-`Singularity <https://sylabs.io/docs/>`_,
-`rootless Docker <https://engineering.docker.com/2019/02/experimenting-with-rootless-docker/>`_,
-and `udocker <https://indigo-dc.gitbook.io/udocker/>`_.
+`Singularity <https://sylabs.io/docs/>`_ and 
+`rootless Docker <https://engineering.docker.com/2019/02/experimenting-with-rootless-docker/>`_.
 While Dockstore uses Docker by default, if necessary it may be possible to run your workflows with one
 of these alternatives. Because the call to Docker or an alternative is made by the workflow runner, usually cwltool
 or Cromwell, and not Dockstore directly, the difficulty of configuring a Docker alternative depends on the workflow
@@ -107,33 +106,3 @@ with Dockstore by adding the following line to your ``~/.dockstore/config``:
     cwlrunner: cromwell
 
 This may not work with all CWL entries, but it is a good workaround for the cwltool incompatibility described above.
-
-udocker
--------
-
-The udocker `documentation <https://indigo-dc.gitbook.io/udocker/>`_ emphasizes that it is intended for simple
-containers only and does not support all Docker functionality.
-There are several ways to install udocker documented
-`here <https://indigo-dc.gitbook.io/udocker/installation_manual>`_.
-Installation does not require root.
-
-cwltool
-~~~~~~~
-
-udocker is available as a cwltool command line option. To set this option through Dockstore, add the following line
-to your ``~/.dockstore/config``:
-::
-
-    cwltool-extra-parameters: --user-space-docker-cmd=udocker
-
-Of the entries we tested, very simple ones worked smoothly with udocker.
-More complex ones failed when they required root.
-
-Cromwell
-~~~~~~~~
-
-Dockstore currently does not support custom configuration of Cromwell, so udocker cannot be used for WDL entries
-at this point. This is a feature that we hope to add soon.
-
-Cromwell documents support for udocker, but we could not get this to work with any workflows tested.
-

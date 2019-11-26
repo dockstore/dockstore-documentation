@@ -187,10 +187,10 @@ By default, Dockstore will attempt to download files up to three times.
 Control this with the ``file-provision-retries`` parameter inside
 ``~/.dockstore/config``.
 
-Running CWL with extra flags
+Running Launchers with Extra flags
 ----------------------------------
 
-When running a CWL tool or workflow, you may want to add additional
+When running a tool or workflow, you may want to add additional
 parameters or flags to the executor. You can do this by updating your
 dockstore config file  (``~/.dockstore/config``).
 
@@ -209,6 +209,27 @@ problems`_ in the Dockstore CLI. To avoid this, you can run in quiet
 mode by adding the ``--quiet`` flag.
 
 .. _can lead to memory problems: https://github.com/dockstore/dockstore/issues/1420
+
+
+You can add additional Java VM options to the command line for the Cromwell
+launcher. For example, by adding the following line to your config file you can
+provide the location of a Cromwell config file and memory pool requirements to the Java VM.
+
+::
+
+    cromwell-vm-options: -Dconfig.file=/Users/mydir/cromwell.conf, -Xms256m, -Xmx2048m
+
+
+
+You can add additional Cromwell options to the command line for the Cromwell
+launcher. For example, by adding the following line to your config file you can
+provide the ``-t`` and ``--options`` options to the Cromwell command line.
+
+::
+
+    cromwell-extra-parameters: -t WDL, --options workflow_options.json
+
+
 
 Alternative CWL Launchers
 -------------------------
@@ -296,6 +317,7 @@ then test using
 .. note:: The cromwell-version mentioned in ``~/.dockstore/config`` will
     also be used to specify the version of Cromwell used to launch CWL tools
     and workflows if you set ``cwlrunner: cromwell``.
+
 
 Notifications
 -------------

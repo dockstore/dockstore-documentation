@@ -111,7 +111,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
 .. centered:: In Affiliation with
 
-.. centered:: |CollabLink|_ |OicrLink|_ |Ga4ghLink|_ |UcscLink|_
+.. centered:: |CollabLink|_ |imagespace| |OicrLink|_ |imagespace| |Ga4ghLink|_ |imagespace| |UcscLink|_
 
 .. |CollabLink| image:: /assets/images/affiliations/collaboratory.png
     :alt: collaboratory
@@ -135,7 +135,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
 .. centered:: Workflow Languages
 
-.. centered:: |CwlLink|_ |WdlLink|_ |NflLink|_
+.. centered:: |CwlLink|_ |imagespace| |WdlLink|_ |imagespace| |NflLink|_
 
 .. |CwlLink| image:: /assets/images/affiliations/cwl.png
     :alt: wdl
@@ -154,7 +154,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
 .. centered:: Works With
 
-.. centered:: |DnaStackLink|_ |SevenBridgesLink|_
+.. centered:: |DnaStackLink|_ |imagespace| |SevenBridgesLink|_ |imagespace| |TerraLink|_
 
 
 .. |DnaStackLink| image:: /assets/images/affiliations/dnastack.png
@@ -167,3 +167,9 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
     :height: 45px
 .. _SevenBridgesLink: https://www.sevenbridges.com/
 
+.. |TerraLink| image:: /assets/images/affiliations/terra.png
+    :alt: terra
+    :height: 75px
+.. _TerraLink: https://terra.bio/
+
+.. |imagespace| unicode:: U+00A0 U+00A0 U+00A0 U+00A0 U+00A0 .. non-breaking spaces between logo images

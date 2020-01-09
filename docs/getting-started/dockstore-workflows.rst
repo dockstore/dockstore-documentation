@@ -56,7 +56,8 @@ have a repository which contains a workflow and are now trying to register
 it in Dockstore. There are some ways to make the registration process more
 seamless.
 
-- For your primary workflow descriptor, use the filename ``Dockstore.<ext>``
+- For your primary workflow descriptor, use the filename ``Dockstore.cwl``,
+  ``Dockstore.wdl`` or ``nextflow.config`` depending on the descriptor language
   at the root of your repository
 - For your test parameter files, use the filename ``test.json`` at the root
   of your repository
@@ -100,7 +101,7 @@ Refresh all will look at all of your third-party accounts and do the following:
 
 - Create stub workflows for all Git repositories which do not exist on
   Dockstore
-- Refersh all workflows that have been converted from stub to full workflows
+- Refresh all workflows that have been converted from stub to full workflows
 - Add user to any workflows that exist on Dockstore that they should have
   access to
 

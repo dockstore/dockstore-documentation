@@ -8,9 +8,10 @@ Workflows
 Tutorial Goals
 --------------
 
--  Register a workflow on Dockstore
+
 -  Learn the differences between tools and workflows across Descriptor
    Languages
+-  Register a workflow on Dockstore
 -  Publish your workflow
 
 This tutorial walks through the process of registering and sharing more
@@ -47,149 +48,125 @@ below:
 +------------------------+------------------------------------------+-----------------------------------------------+
 
 
-Create Your Workflow
---------------------
+Prepare Your Workflow for Dockstore
+-----------------------------------
+This tutorial does not go through the creation of a workflow and its
+registration to GitHub, Bitbucket or GitLab. It assumes that you already
+have a repository which contains a workflow and are now trying to register
+it in Dockstore. There are some ways to make the registration process more
+seamless.
 
-The combination of light-weight Docker containers to run your tools and
-programmatic descriptors takes us part of the way there. However, the
-next step is to chain together these containers in order to call tools
-in a particular sequence or pattern in order to create larger workflows.
-Dockstore provides a few simple tools to share workflows, similar to how
-Dockstore shares command-line tools.
+- For your primary workflow descriptor, use the filename ``Dockstore.<ext>``
+  at the root of your repository
+- For your test parameter files, use the filename ``test.json`` at the root
+  of your repository
+- There should be one workflow per repository
 
-The steps to accomplish this task, at a high level, are:
-
-1. Create a new repository on GitHub, Bitbucket or GitLab
-2. Describe your workflow as either a
-   `CWL <https://www.commonwl.org/user_guide/>`__,
-   `WDL <https://github.com/openwdl/wdl/blob/develop/SPEC.md#workflow-definition>`__
-   or a `Nextflow <https://www.nextflow.io/>`__ workflow
-3. Test your workflow using an environment that supports full CWL, WDL
-   or Nextflow workflows
-4. Use the release process on GitHub, Bitbucket or GitLab to make
-   distinct release tags. We like the
-   `HubFlow <https://datasift.github.io/gitflow/>`__ process in our
-   group for managing releases in git
-5. Create an entry on Dockstore and then publish it
-
-Create Workflow Stubs from GitHub, Bitbucket, and GitLab
---------------------------------------------------------
-
-The first step is to create a CWL or WDL workflow descriptor for your
-workflow and then check it into GitHub, Bitbucket or GitLab in a repo.
-We recommend the filename ``Dockstore.cwl`` at the root of your
-repository for simplicity, but anything else with a consistent extension
-should work just as well. The details as to how to write a workflow are
-somewhat beyond the scope of this tutorial, but we can recommend the
-`Introduction to the CWL <https://www.commonwl.org/user_guide/>`__ and
-`Getting Started with
-WDL <https://github.com/openwdl/wdl/tree/master#getting-started-with-wdl>`__.
-
-You can also check in test parameter files into the same Git repo. These
-files are example input JSON (or YAML) files for running the given
-workflow. It should be easy for a user to run your workflow with the
-test parameter files in order to see an example of your workflow. So try
-to store any required files in the same Git repository or somewhere else
-where the files are likely to be present.
-
-You can set a default test parameter file for a workflow, which defaults
-to ``/test.json``. Whenever a new version is added, Dockstore will look
-for a file matching the default test parameter in the corresponding Git
-repository, and add it if it exists. Updating the default test parameter
-file path for an existing workflow will be propagated to any versions
-that have not been edited.
-
-.. raw:: html
-
-   <!-- this following markdown link/anchor does not seem to work properly -->
-
-The second step is to log in to the Dockstore. Make sure that you
-properly link Bitbucket and/or GitLab to your account if you are using
-workflows hosted on Bitbucket/Gitlab. After successfully linking your
-GitHub, Bitbucket and GitLab credentials (if applicable), you will be
-able to refresh your account on Dockstore and list your available repos
-on GitHub, Bitbucket and GitLab.
-
-.. figure:: /assets/images/docs/workflow_ui.png
-   :alt: My Workflows
-
-   My Workflows
-
-The above image shows the general structure of the UI that you should
-see after visiting "My Workflows." You can hit "Refresh All Workflows"
-in order to update information on published workflows or create new
-stubs for repos that you are about to publish. Workflows are a bit
-different from tools in that we create a stub entry for all your GitHub
-repos (and Bitbucket/GitLab repos). You can then promote these to full
-entries by refreshing, publishing and editing them. It is only at this
-point that the Dockstore will reach out and populate information such as
-available tags and source files. Workflows are handled differently from
-Tools in this regard since users may often have many more tags and repos
-on GitHub than Docker images on Quay.io.
+By default, Dockstore will search the root of your repository for workflow
+related files. Following the above tips will help streamline the registration
+process, though you can still register workflows with non-standard format.
 
 Register Your Workflow in Dockstore
 -----------------------------------
+There are a variety of ways to get your workflows into Dockstore. There are two
+types of quick registration and one type of manual registration. These quick
+methods create workflow stubs, which are simply workflows that have not yet
+been confirmed to be real workflows. You can individually refresh a workflow
+stub that you identify as a real workflow in order to start pulling in workflow
+files and other data.
 
-Now that you have linked your credentials and refreshed, there should be
-one stub per repo that you are the owner of or have rights to see in
-GitHub.
+To register content on Dockstore, you must have an account on Dockstore and
+link the necessary third-party accounts. Once this is done you can register
+workflows from the My Workflows page.
 
 Quick Registration via the Web UI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Quick registration is best used for workflows that follow the simple format
+that Dockstore suggests. It can still be used if your workflows are
+non-standard format, however there can be some drawbacks.
 
-In the authenticated Web UI, navigate to 'My Workflows' to begin
-managing workflows imported through your linked account(s). These pages
-will allow you to quickly register workflows that follow a particularly
-simple format (look below to manual registration for more complex
-formats). For quick registration, we look through your GitHub, Bitbucket
-and GitLab accounts and create a stub for each one. You can refresh and
-publish each repo that you identify as a real workflow in order to get,
-edit, and display additional information such as available versions.
+Some users have multiple workflows within one Git repository, however each
+workflow entry on Dockstore only contains a single workflow. This is
+a problem as the Git path is used to uniquely identify a Dockstore workflow.
+The solution to this is to allow users to specify a workflow name that is
+appended to the Dockstore path. This would allow them to have multiple
+Dockstore workflows with the same Git repository. Quick registration does
+not allow you to create workflows with workflow names.
+To do that you must do manual registration, which is described later.
 
-In the above image, the left side menu is a list of all workflow
-repositories associated with the user, grouped lexicographically by
-namespace. Words encapsulated in parentheses denotes a custom toolname
-if provided. Detailed information and links for each Workflow are
-located on the 'Info' tab. Settings, such as the path to the CWL/WDL
-descriptor, can be modified on a per-tag basis in the 'Versions' tab.
-The Descriptors and test parameter files may be viewed in the 'Files'
-tab, by the Version tag (corresponding to a Git tag/branch). Finally,
-'Manage labels' (located above the tabs) allows you to add/edit keywords
-that you want to be associated with a workflow for efficient searching
-and grouping.
+Refresh All
+^^^^^^^^^^^
+Refresh all will look at all of your third-party accounts and do the following:
 
-Just like with Tools, a workflow is not visible on the public
-'Workflows' listing unless it is published. To publish a container,
-click the blue 'Publish' button in the top-right corner.
+- Create stub workflows for all git repositories which do not exist on
+  Dockstore
+- Refersh all workflows that have been converted from stub to full workflows
+- Add user to any workflows that exist on Dockstore that they should have
+  access to
+
+To refresh all, select the refresh all icon button on the left side of the
+page.
+
+.. note:: For existing organizations, you can select `Refresh Organization`
+          to perform a refresh all on a specific organization.
+
+One drawback of refresh all is that it creates a stub for every single
+repository that you have access to, whether or not it contains a workflow.
+The following approach is a bit less automated but allows for more control.
+
+Quick Register
+^^^^^^^^^^^^^^
+Quick register provides a flow that lets you browse the repositories you
+have access to an quickly create standard stub workflows. The benefit of
+this approach is that you get some automation without having lots of
+stubs created.
+
+You can access quick register by clicking the plus button on the My
+Workflows page. The flow of this process is shown in the screenshots
+below.
+
+.. figure:: /assets/images/docs/quick-register-step-1.png
+   :alt: Quick Register step 1
+
+   Choose the quick register option in the Register workflow wizard
+
+.. figure:: /assets/images/docs/quick-register-step-2.png
+   :alt: Quick Register step 2
+
+   Use dropdowns to browse for repositories and use sliders to add as workflows
+
+Once you've selected a git registry and organization, you can see a list of all
+available repositories that you can add to Dockstore. There are three states
+the sliders can be in.
+
+- Off - There is no matching workflow on Dockstore.
+- On - This repository already exists on Dockstore and can be deleted.
+- Disabled - This repository exists on Dockstore and cannot be deleted.
+
+If sliders are in the off state then you can turn them on to quickly register
+a stub workflow for the repository.
 
 Manual Registration of Workflows
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 In certain cases, you may wish to register workflows in a different
 source code structure, especially when working with complex project
 structures. For example, if you want to register two workflows from the
 same repository.
 
-Workflows can be registered manually from the 'My Workflows' page by
-pressing the 'Register Workflow' button at the bottom of the right side
-bar. A modal will appear as below:
+You can access manual register by clicking the plus button on the My
+Workflows page. The flow of this process is shown in the screenshots
+below.
 
-.. figure:: /assets/images/docs/register_workflow_manual.png
-   :alt: Register Workflow Manual
+.. figure:: /assets/images/docs/quick-register-step-1.png
+   :alt: Manual register step 1
 
-   Register Workflow Manual
+   Choose the manual register option in the Register workflow wizard
 
-The first option allows you to register a workflow from an existing
-third party repository. The second option allows you to write your
-workflow files and store them directly on Dockstore.org. You can read
-more about hosted workflows :doc:`here </getting-started/hosted-tools-and-workflows/>`, but
-for now, let's select the first option. Clicking 'Next' will bring up
-the following modal:
 
 .. figure:: /assets/images/docs/register_workflow_manual2.png
-   :alt: Register Workflow Manual2
+   :alt: Manual register step 2
 
-   Register Workflow Manual2
+   Fill out form to register a workflow
 
 Source Code Provider allows you to choose between GitHub, BitBucket, and
 GitLab (your respective accounts for these third party repositories need

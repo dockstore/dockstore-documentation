@@ -98,14 +98,14 @@ Refresh All
 ^^^^^^^^^^^
 Refresh all will look at all of your third-party accounts and do the following:
 
-- Create stub workflows for all git repositories which do not exist on
+- Create stub workflows for all Git repositories which do not exist on
   Dockstore
 - Refersh all workflows that have been converted from stub to full workflows
 - Add user to any workflows that exist on Dockstore that they should have
   access to
 
 To refresh all, select the refresh all icon button on the left side of the
-page.
+My Workflows page.
 
 .. note:: For existing organizations, you can select `Refresh Organization`
           to perform a refresh all on a specific organization.
@@ -117,7 +117,7 @@ The following approach is a bit less automated but allows for more control.
 Quick Register
 ^^^^^^^^^^^^^^
 Quick register provides a flow that lets you browse the repositories you
-have access to an quickly create standard stub workflows. The benefit of
+have access to and quickly create standard stub workflows. The benefit of
 this approach is that you get some automation without having lots of
 stubs created.
 
@@ -135,7 +135,7 @@ below.
 
    Use dropdowns to browse for repositories and use sliders to add as workflows
 
-Once you've selected a git registry and organization, you can see a list of all
+Once you've selected a Git registry and organization, you can see a list of all
 available repositories that you can add to Dockstore. There are three states
 the sliders can be in.
 

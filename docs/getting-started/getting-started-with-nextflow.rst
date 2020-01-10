@@ -57,6 +57,9 @@ this case we have a description of the tool and the author name. Note
 that we use the author and description fields to populate metadata on
 Dockstore.
 
+.. note:: If no description is defined in the descriptor file, the
+          README from the corresponding Git repository is used.
+
 ::
 
     manifest {

@@ -24,9 +24,9 @@ copyright = u'2019, OICR'
 author = u'Andrew Duncan'
 
 # The short X.Y version
-version = u'1.6.0'
+version = u'1.8.0'
 # The full version, including alpha/beta/rc tags
-release = u'1.6.0'
+release = u'1.8.0'
 
 
 # -- General configuration ---------------------------------------------------

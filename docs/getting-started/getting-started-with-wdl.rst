@@ -161,6 +161,9 @@ description in markdown that requires newlines, specify the newlines
 with :raw-latex:`\n `or specify a blank line with
 :raw-latex:`\n`:raw-latex:`\n`.
 
+.. note:: If no description is defined in the descriptor file, the
+          README from the corresponding Git repository is used.
+
 Below we show an example metadata section and how it will display on
 your workflow's landing page:
 

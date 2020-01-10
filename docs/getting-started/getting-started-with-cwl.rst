@@ -139,6 +139,12 @@ original tool. I'm biased towards the person that registers the tool
 since they are likely to be the primary contact when asking questions
 about how the tool was setup.
 
+Dockstore uses the authorship information and description from the
+descriptor file to populate metadata for tools.
+
+.. note:: If no description is defined in the descriptor file, the
+          README from the corresponding Git repository is used.
+
 You can register for an `ORCID <https://orcid.org/>`__ (a digital
 identifer for researchers) or use an email address for your id.
 

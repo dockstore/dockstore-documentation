@@ -10,7 +10,7 @@ the
 as a model for plugins where a Java library is not available and the
 plugin needs to call out to an external binary.
 
-This was developed in an environment with Java 8 and Maven 3.3.9.
+This was developed and built in an environment with Java 8 and Maven 3.3.9. Newer versions of Java will not work because of the 1.x.x pf4j plugin used. 
 
 The steps for implementing a new plugin are as follows:
 

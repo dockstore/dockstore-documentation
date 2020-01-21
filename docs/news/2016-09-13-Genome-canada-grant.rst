@@ -2,7 +2,7 @@ Genome Canada Grant
 ===================
 
 The Government of Canada via Genome Canada `announces a grant for
-Dockstore <http://www.genomecanada.ca/en/news-and-events/news-releases/government-canada-invests-new-genomics-big-data-research-projects>`__!
+Dockstore <https://www.genomecanada.ca/en/news/government-canada-invests-new-genomics-big-data-research-projects-aimed-real-world-challenges>`__!
 
     Parliamentary Secretary to the Minister of International
     Development, Karina Gould, on behalf of the Minister of Science,

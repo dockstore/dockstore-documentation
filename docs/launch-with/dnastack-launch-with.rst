@@ -62,7 +62,7 @@ While browsing Dockstore
 When browsing WDL workflows from within Dockstore, you will see a
 "Launch-With" icon on the right.
 
-.. figure:: /assets/images/docs/dnastack/dnastack_from_dockstore1.png
+.. figure:: /assets/images/docs/wdl_launch_with.png
    :alt: WDL workflow
 
    WDL workflow
@@ -97,8 +97,7 @@ Limitations
 See Also
 --------
 
--  :doc:`AWS Batch </advanced-topics/aws-batch>`
--  :doc:`Azure Batch </advanced-topics/azure-batch>`
+-  :doc:`AnVIL Launch With</launch-with/anvil-launch-with>`
 -  :doc:`CGC Launch With</launch-with/cgc-launch-with>`
 -  :doc:`DNAnexus Launch With </launch-with/dnanexus-launch-with>`
 -  :doc:`Terra Launch With </launch-with/terra-launch-with>`

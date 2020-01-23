@@ -44,11 +44,10 @@ Limitations
 See Also
 --------
 
--  :doc:`AWS Batch </advanced-topics/aws-batch>`
+-  :doc:`AnVIL Launch With</launch-with/anvil-launch-with>`
+-  :doc:`DNAnexus Launch With </launch-with/dnanexus-launch-with>`
 -  :doc:`DNAstack Launch With </launch-with/dnastack-launch-with>`
 -  :doc:`Terra Launch With </launch-with/terra-launch-with>`
--  :doc:`Azure Batch </advanced-topics/azure-batch>`
--  :doc:`DNAnexus Launch With </launch-with/dnanexus-launch-with>`
 
 .. discourse::
     :topic_identifier: 2006

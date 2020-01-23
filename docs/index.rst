@@ -38,6 +38,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    :maxdepth: 1
 
    launch-with/launch
+   launch-with/anvil-launch-with
    launch-with/cgc-launch-with
    launch-with/dnanexus-launch-with
    launch-with/dnastack-launch-with

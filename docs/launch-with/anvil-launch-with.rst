@@ -1,7 +1,7 @@
 AnVIL
 =====
 
-Dockstore integrates with the AnVIL, the Analysis, Visualization, and Informatics Lab-space platform,
+Dockstore integrates with the the Analysis, Visualization, and Informatics Lab-space (AnVIL) platform,
 allowing you to launch WDL-based workflows from Dockstore in AnVIL. Here is some information on
 what that looks like from a user point of view in a mini-tutorial.
 
@@ -20,7 +20,7 @@ of the workflow will be exported.
 If not logged into AnVIL, you will be prompted to login. Otherwise, or
 after login, you will be presented with the following screen.
 
-.. figure:: /assets/images/docs/terra/terra_from_dockstore2.png
+.. figure:: /assets/images/docs/anvil/anvil_from_dockstore.jpg
    :alt: WDL workflow import
 
    WDL workflow import
@@ -57,5 +57,5 @@ See Also
 -  :doc:`Terra Launch With <../launch-with/terra-launch-with/>`
 
 .. discourse::
-    :topic_identifier: 1841
+    :topic_identifier: 3323
 

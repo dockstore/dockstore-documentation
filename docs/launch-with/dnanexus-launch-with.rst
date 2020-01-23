@@ -12,7 +12,7 @@ When browsing WDL workflows from within Dockstore, you will see a
 "Launch with DNAnexus" button on the right. The currently selected
 version of the workflow will be exported.
 
-.. figure:: /assets/images/docs/dnanexus/dnanexus_from_dockstore1.png
+.. figure:: /assets/images/docs/wdl_launch_with.png
    :alt: WDL workflow
 
    WDL workflow
@@ -41,12 +41,10 @@ Limitations
 See Also
 --------
 
--  :doc:`AWS Batch </advanced-topics/aws-batch>`
--  :doc:`Azure Batch </advanced-topics/azure-batch>`
+-  :doc:`AnVIL Launch With</launch-with/anvil-launch-with>`
 -  :doc:`CGC Launch With</launch-with/cgc-launch-with>`
 -  :doc:`DNAstack Launch With </launch-with/dnastack-launch-with>`
 -  :doc:`Terra Launch With </launch-with/terra-launch-with>`
--  :doc:`Azure Batch </advanced-topics/azure-batch>`
 
 .. discourse::
     :topic_identifier: 1535

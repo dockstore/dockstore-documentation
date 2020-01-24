@@ -33,6 +33,13 @@ Limitations <../launch-with/dnastack-launch-with.html#limitations>`__ for limita
 
 [5] All verified Dockstore WDL tools/workflows were tested successfully. However, we anticipate that more testing is needed for WDL workflows that use language features not contained within that dataset.
 
+[6] Does not support file-path based imports. See `AnVIL
+Limitations`_ for limitations.
+
+.. _`AnVIL Limitations`: ../launch-with/anvil-launch-with.html#limitations
+
+
+
 Converting File-path Based Imports to Public http(s) Based Imports for WDL
 --------------------------------------------------------------------------
 

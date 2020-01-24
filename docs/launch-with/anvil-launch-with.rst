@@ -1,6 +1,8 @@
 AnVIL
 =====
 
+    For Dockstore 1.8.0+
+
 Dockstore integrates with the `Analysis, Visualization, and Informatics Lab-space (AnVIL) <https://www.genome.gov/Funded-Programs-Projects/Computational-Genomics-and-Data-Science-Program/Genomic-Analysis-Visualization-Informatics-Lab-space-AnVIL>`__ platform,
 allowing you to launch WDL-based workflows from Dockstore in AnVIL. Here is some information on
 what that looks like from a user point of view in a mini-tutorial.

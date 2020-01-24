@@ -107,6 +107,8 @@ Get more information on the implementing plugin at
 Google Cloud Storage
 ~~~~~~~~~~~~~~~~~~~~
 
+    Automatically installed in Dockstore 1.6.0+
+
 For Google Cloud Storage, you can download, upload, and set metadata on
 uploaded objects with the gs-plugin. The plugin handles urls with the
 ``gs://`` prefix such as
@@ -237,7 +239,8 @@ By default, the dockstore CLI launches CWL tools/workflows using
 However, we have an experimental integration with other launchers such
 as: -
 `cwl-runner <https://www.commonwl.org/v1.0/CommandLineTool.html#Executing_CWL_documents_as_scripts>`__
-- `Cromwell <https://cromwell.readthedocs.io/en/stable/>`__ 
+- `Cromwell <https://cromwell.readthedocs.io/en/stable/>`__ (For
+Dockstore 1.6.0+)
 
 Keep in mind that there are a few differences in how locked-down the
 Docker execution environments are between the launchers. So a workflow
@@ -267,6 +270,8 @@ following to your ``~/.dockstore/config``:
 
 Cromwell (Beta)
 ~~~~~~~~~~~~~~~
+
+    For Dockstore 1.6.0+
 
 You can launch CWL tools/workflows using Cromwell by adding the
 following to your ``~/.dockstore/config``:

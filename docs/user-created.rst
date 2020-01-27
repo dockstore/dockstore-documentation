@@ -42,7 +42,7 @@ A utility that exports precisionFDA apps to Dockstore, creating
 Dockstore tools complete with Dockerfiles and CWL descriptors.
 
 `Run Dockstore apps on the (Seven Bridges) platform <https://docs.cancergenomicscloud.org/docs/run-dockstore-apps-on-the-cgc>`__
-------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
 
 A tutorial on how to export CWL tools from Dockstore and run them in the
 SevenBridges platform.

@@ -20,8 +20,8 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Dockstore'
-copyright = u'2019, OICR'
-author = u'Andrew Duncan'
+copyright = u'2020, OICR'
+author = u'OICR, UCSC'
 
 # The short X.Y version
 version = u''
@@ -135,7 +135,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'Dockstore.tex', u'Dockstore Documentation',
-     u'Andrew Duncan', 'manual'),
+     u'OICR, UCSC', 'manual'),
 ]
 
 

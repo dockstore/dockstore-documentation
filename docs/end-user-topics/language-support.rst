@@ -38,6 +38,7 @@ Limitations`_ for limitations.
 
 .. _`AnVIL Limitations`: ../launch-with/anvil-launch-with.html#limitations
 
+[7] Use the Dockstore CLI optional parameter --wdl-output-target which allows you to specify a remote path to provision output files to ex: s3://oicr.temp/testing-launcher/
 
 
 Converting File-path Based Imports to Public http(s) Based Imports for WDL

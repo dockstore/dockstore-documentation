@@ -50,7 +50,7 @@ Highlighted New Features
 -  Stargazers page to show all users who have starred a particular tool
    or workflow
 -  Support for `file provisioning
-   plugins <https://github.com/dockstore/dockstore/tree/master/dockstore-file-plugin-parent>`__
+   plugins <https://github.com/dockstore/dockstore-cli/tree/master/dockstore-file-plugin-parent>`__
 -  Better error messaging passed along from a newer cwltool version
 -  Compatibility with a Write API service for programmatically adding
    tools
@@ -70,4 +70,3 @@ Breaking Changes
 
 .. discourse::
     :topic_identifier: 2021
-    

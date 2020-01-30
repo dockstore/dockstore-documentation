@@ -27,12 +27,12 @@ The steps for implementing a new plugin are as follows:
 4. Rename the Java class to match the plugin class entered earlier in
    the pom.xml.
 5. Implement the downloadFrom and uploadTo methods from
-   `ProvisionInterface <https://github.com/dockstore/dockstore/blob/master/dockstore-file-plugin-parent/src/main/java/io/dockstore/provision/ProvisionInterface.java>`__
+   `ProvisionInterface <https://github.com/dockstore/dockstore-cli/blob/master/dockstore-file-plugin-parent/src/main/java/io/dockstore/provision/ProvisionInterface.java>`__
    Note that if your file provisioning system is input-only or
    output-only, you can throw an OperationNotSupportedException or
    similar.
 6. We recommend using
-   `ProgressPrinter <https://github.com/dockstore/dockstore/blob/master/dockstore-file-plugin-parent/src/main/java/io/dockstore/provision/ProgressPrinter.java>`__
+   `ProgressPrinter <https://github.com/dockstore/dockstore-cli/blob/master/dockstore-file-plugin-parent/src/main/java/io/dockstore/provision/ProgressPrinter.java>`__
    to give your users an indication of file upload/download progress.
 7. If applicable, for file transfer systems that include metadata or
    require preparation or finalize steps, you can override the default

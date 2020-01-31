@@ -146,7 +146,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 .. |WdlLink| image:: /assets/images/affiliations/wdl.png
     :alt: wdl
     :height: 65px
-.. _WdlLink: http://www.openwdl.org/
+.. _WdlLink: https://www.openwdl.org/
 
 .. |NflLink| image:: /assets/images/affiliations/nfl.png
     :alt: nextflow

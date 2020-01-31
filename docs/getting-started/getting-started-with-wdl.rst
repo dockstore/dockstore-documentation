@@ -11,7 +11,7 @@ Tutorial Goals
 --------------
 
 -  Learn about the `Workflow Description Language
-   (WDL) <http://www.openwdl.org/>`__
+   (WDL) <https://www.openwdl.org/>`__
 -  Create a basic WDL Tool which uses a Docker image
 -  Run the Tool locally
 -  Describe a sample parameterization of the Tool

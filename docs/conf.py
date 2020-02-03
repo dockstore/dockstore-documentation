@@ -103,6 +103,16 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 
+html_css_files = [
+  'algolia.css',
+  'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css'
+]
+
+html_js_files = [
+ ('https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js', {'defer': 'defer'}),
+ ('algolia.js', {'defer': 'defer'})
+]
+
 
 # -- Options for HTMLHelp output ---------------------------------------------
 

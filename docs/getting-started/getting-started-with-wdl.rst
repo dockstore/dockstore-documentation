@@ -270,7 +270,7 @@ The final output can be found at
 So what's going on here? What's the Dockstore CLI doing? It can best be
 summed up with this image:
 
-.. figure:: /assets/images/docs/dockstore_lifecycle.png
+.. figure:: /assets/images/docs/dockstore_lifecycle_wdl.png
    :alt: Lifecycle
 
    Lifecycle

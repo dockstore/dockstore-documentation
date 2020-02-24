@@ -130,6 +130,8 @@ months. Please see our `issues
 page <https://github.com/dockstore/dockstore/issues>`__ for details and
 discussions.
 
+For longer term plans, please see our `roadmap page <https://github.com/dockstore/dockstore/wiki/Dockstore-Roadmap>`__.
+
 
 .. discourse::
     :topic_identifier: 1269

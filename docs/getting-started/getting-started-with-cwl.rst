@@ -190,7 +190,7 @@ This is one of the items from the inputs section. Notice a few things:
 - The ``bam_input:`` matches with ``bam_input`` in the sample parameterization JSON (shown in the next section as ``sample_configs.local.json``).
 - You can control the position of the variable.
 - It can have a type (int or File here), and, for tools that require a prefix (``--prefix``) before a parameter you can use the ``prefix: key`` in the inputBindings section.
-- I'm using the ``format`` field to specify a file format via the `EDAM <http://bioportal.bioontology.org/ontologies/EDAM>`__ ontology.
+- I'm using the ``format`` field to specify a file format via the `EDAM <https://bioportal.bioontology.org/ontologies/EDAM>`__ ontology.
 
 ::
 

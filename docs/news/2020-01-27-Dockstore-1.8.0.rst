@@ -1,0 +1,50 @@
+Dockstore 1.8.0
+===============
+
+Highlighted new features include:
+---------------------------------
+
+-  New launch-with partners
+
+   -  AnVIL
+
+-  Redesigned logged-in homepage displays more information for returning
+   users including
+
+   -  News and updates
+   -  Featured content such as new organizations and workflows
+   -  Recently modified tools, workflows and orgs
+
+-  Notification system for news such as TOS updates, pending system
+   updates
+-  Security updates
+-  Performance improvements
+-  Usability improvements
+-  Can source workflow descriptions from README.md if not present in
+   workflow itself
+-  DOI landing pages hosted at Zenodo will now link to exact versions of
+   workflows
+-  Preview feature
+-  Services are now reachable from many parts of the UI
+-  Behind the scenes work on CI/CD, infrastructure improvements, more
+   frequent releases
+-  Also some behind the scenes work leading up to the implementation of
+   the final v2 GA4GH TRS standard
+
+As always, see our full list of changes on `GitHub`_
+
+Breaking changes
+----------------
+
+Major
+~~~~~
+
+None intended
+
+Minor
+~~~~~
+
+-  If upgrading the Dockstore CLI, our Dockstore script has changed and
+   should be downloaded anew from the onboarding wizard
+
+.. _GitHub: https://github.com/dockstore/dockstore/milestone/28

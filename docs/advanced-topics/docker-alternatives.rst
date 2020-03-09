@@ -37,7 +37,8 @@ can be found `here <https://sylabs.io/guides/3.4/user-guide/singularity_and_dock
 
 Singularity can be installed following the instructions
 `here <https://sylabs.io/guides/3.4/user-guide/quick_start.html>`_. Note that the installation is relatively complicated
-and requires ``sudo``.
+and requires ``sudo``. Neither the macOS version (Singularity Desktop) nor the Debian/Ubuntu package version currently
+available (2.6.1) is compatible. You will need to download a version >3.0.0 and build it from source.
 
 
 cwltool
@@ -55,14 +56,17 @@ To set this option through Dockstore, add the following line to your ``~/.dockst
 Cromwell
 ~~~~~~~~
 
-Dockstore currently does not support custom configuration of Cromwell, so Singularity cannot be used for WDL entries
-at this point. This is a feature that we hope to add soon.
-
 Cromwell can be configured to use Singularity instead of Docker as described
 `here <https://cromwell.readthedocs.io/en/stable/tutorials/Containers/#singularity>`_.
 This requires creating a Cromwell config file with a section describing the backend provider settings.
 Examples of this are available in the Cromwell GitHub
 `here <https://github.com/broadinstitute/cromwell/tree/develop/cromwell.example.backends>`_.
+
+To tell Dockstore to run Cromwell with a custom configuration, such as the example config file linked above,
+add a line to your ``~/.dockstore/config``:
+::
+
+    cromwell-vm-options: -Dconfig.file=<absolute path to your Cromwell conf>
 
 Rootless Docker
 ---------------

@@ -295,6 +295,27 @@ follow these steps:
 The Dockstore CLI will automatically load all Docker images in the
 directory specified prior to a ``launch --local-entry`` command
 
+Why should I migrate my existing workflow to use GitHub Apps and a .dockstore.yml?
+----------------------------------------------------------------------------------
+With version 1.9.0 Dockstore has added support for fetching workflows using GitHub apps. Installing our GitHub app
+onto your repository or organization will let Dockstore listen for when any new code is pushed onto GitHub, allowing
+the content on Dockstore to be up to date with the content on GitHub, without the need to manually refresh on Dockstore!
+This does require the addition of a ``/.dockstore.yml`` file to your repository. This file contains version specific
+information such as workflow path, test parameter paths, etc that Dockstore will use to setup the version on Dockstore.
+If Dockstore sees this file in a repository with GitHub App installed, it can automatically update version and add new
+versions on Dockstore.
+
+How does this change your development flow? Once you have a ``/.dockstore.yml`` file in your master/develop branches, it should be
+there anytime you create a new branch. This means that Dockstore will pull in any new branch. If you want to edit version
+information you will have to update the ``/.dockstore.yml`` file directly on GitHub.
+
+To convert your existing workflows to the new method, install our GitHub App onto the repository and add a branch with a valid ``/.dockstore.yml``.
+The workflow will now be updated using the new method! All existing versions will persist. You can still individually refresh these version, or
+you can convert a version to the new method simply by adding a valid ``/.dockstore.yml`` onto the branch on GitHub.
+
+.. note:: Ensure that the workflow name in the ``/.dockstore.yml`` matches the workflow name of the workflow you want to migrate.
+
+
 Any last tips on using Dockstore?
 ---------------------------------
 

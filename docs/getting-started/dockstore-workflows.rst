@@ -69,19 +69,60 @@ process, though you can still register workflows with non-standard format.
 
 Register Your Workflow in Dockstore
 -----------------------------------
-There are a variety of ways to get your workflows into Dockstore. There are two
-types of quick registration and one type of manual registration. These quick
-methods create workflow stubs, which are simply workflows that have not yet
-been confirmed to be real workflows. You can individually refresh a workflow
-stub that you identify as a real workflow in order to start pulling in workflow
-files and other data.
+There are a variety of ways to get your workflows into Dockstore. Users can either
+use GitHub App registration or traditional registration. GitHub App registration is the
+recommended way to register for all new workflows on Dockstore using GitHub. The traditional registration
+is the legacy registration process which is less automated.
 
-To register content on Dockstore, you must have an account on Dockstore and
-link the necessary third-party accounts. Once this is done you can register
-workflows from the My Workflows page.
+.. note:: To register content on Dockstore, you must have an account on Dockstore and
+   link the necessary third-party accounts. Once this is done you can register
+   workflows from the My Workflows page.
+
+Registration With GitHub Apps
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This is the newest way of getting content onto Dockstore and is by far the most automated. Using
+GitHub Apps Dockstore can react to changes on GitHub as they are made, keeping Dockstore synced
+with GitHub automatically. To install our GitHub App on either a repository or organization,
+navigate to the ``/my-workflows`` page and click add workflow. Follow the steps for GitHub Apps and
+you will be redirected to GitHub where you can select which repositories to install the app on.
+
+Once you've done this you should be redirected back to the ``/my-workflows`` page on Dockstore.
+In order for Dockstore to start pulling in content from GitHub, a ``/.dockstore.yml`` file must be
+added to a branch of the repository that contains your workflow. This file contains information like
+workflow path, test parameter file, workflow name, etc. When a push is made on GitHub to a branch
+with a ``.dockstore.yml``, Dockstore will add that branch onto Dockstore to the correct workflow. If the
+workflow doesn't already exist on Dockstore, one will be created. Below is an example of a .dockstore.yml file
+for bamstats.
+
+
+.. code:: yaml
+
+   version: 1.2
+   workflows:
+      - subclass: cwl
+        primaryDescriptorPath: /Dockstore.cwl
+        testParameterFiles:
+        - /test/dockstore.cwl.json
+        name: bamstats
+
+If you had our GitHub App installed on a repository ``myorg/dockstore-tool-bamstats`` and then add the above ``.dockstore.yml`` to the ``develop`` branch,
+the following would occur.
+
+* A workflow with path ``github.com/myorg/dockstore-tool-bamstats/bamstats`` will be created
+* The version ``develop`` is added to ``github.com/myorg/dockstore-tool-bamstats/bamstats``
+
+.. tip:: Since the workflows field is an array, this file supports multiple workflows on Dockstore stemming from
+   the same repository on GitHub. This is useful if you store a lot of your workflows in the same GitHub
+   repository.
+
+.. note:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
+
+Traditional Registration
+~~~~~~~~~~~~~~~~~~~~~~~~
+When using non-GitHub based registries for you workflows, use the traditional registration.
 
 Quick Registration via the Web UI
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Quick registration is best used for workflows that follow the simple format
 that Dockstore suggests. It can still be used if your workflows are
 non-standard format, however there can be some drawbacks.
@@ -95,28 +136,8 @@ Dockstore workflows with the same Git repository. Quick registration does
 not allow you to create workflows with workflow names.
 To do that you must do manual registration, which is described later.
 
-Refresh All
-^^^^^^^^^^^
-Refresh all will look at all of your third-party accounts and do the following:
-
-- Create stub workflows for all Git repositories which do not exist on
-  Dockstore
-- Refresh all workflows that have been converted from stub to full workflows
-- Add user to any workflows that exist on Dockstore that they should have
-  access to
-
-To refresh all, select the refresh all icon button on the left side of the
-My Workflows page.
-
-.. note:: For existing organizations, you can select `Refresh Organization`
-          to perform a refresh all on a specific organization.
-
-One drawback of refresh all is that it creates a stub for every single
-repository that you have access to, whether or not it contains a workflow.
-The following approach is a bit less automated but allows for more control.
-
 Quick Register
-^^^^^^^^^^^^^^
+++++++++++++++
 Quick register provides a flow that lets you browse the repositories you
 have access to and quickly create standard stub workflows. The benefit of
 this approach is that you get some automation without having lots of
@@ -147,8 +168,25 @@ the sliders can be in.
 If sliders are in the off state then you can turn them on to quickly register
 a stub workflow for the repository.
 
+Refresh Organization
+++++++++++++++++++++
+Refresh Organization will look at an existing Git organization on Dockstore and do the following:
+
+- Create stub workflows for all Git repositories which do not exist on
+  Dockstore
+- Refresh all workflows that have been converted from stub to full workflows
+- Add user to any workflows that exist on Dockstore that they should have
+  access to
+
+To refresh an organization, select the refresh org icon button on the left side of the
+My Workflows page.
+
+
+One drawback of refresh organization is that it creates a stub for every single
+repository that you have access to, whether or not it contains a workflow.
+
 Manual Registration of Workflows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 In certain cases, you may wish to register workflows in a different
 source code structure, especially when working with complex project
 structures. For example, if you want to register two workflows from the

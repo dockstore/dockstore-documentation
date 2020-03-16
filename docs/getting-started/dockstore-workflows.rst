@@ -72,7 +72,7 @@ Register Your Workflow in Dockstore
 There are a variety of ways to get your workflows into Dockstore. Users can either
 use GitHub App registration or traditional registration. GitHub App registration is the
 recommended way to register for all new workflows on Dockstore using GitHub. The traditional registration
-is the legacy registration process which is less automated.
+is the legacy registration process which is less automated, and used for BitBucket and Gitlab.
 
 .. note:: To register content on Dockstore, you must have an account on Dockstore and
    link the necessary third-party accounts. Once this is done you can register
@@ -92,7 +92,7 @@ added to a branch of the repository that contains your workflow. This file conta
 workflow path, test parameter file, workflow name, etc. When a push is made on GitHub to a branch
 with a ``.dockstore.yml``, Dockstore will add that branch onto Dockstore to the correct workflow. If the
 workflow doesn't already exist on Dockstore, one will be created. Below is an example of a .dockstore.yml file
-for bamstats.
+for an alignment workflow.
 
 
 .. code:: yaml
@@ -103,13 +103,13 @@ for bamstats.
         primaryDescriptorPath: /Dockstore.cwl
         testParameterFiles:
         - /test/dockstore.cwl.json
-        name: bamstats
+        name: aligner
 
-If you had our GitHub App installed on a repository ``myorg/dockstore-tool-bamstats`` and then add the above ``.dockstore.yml`` to the ``develop`` branch,
+If you had our GitHub App installed on a repository ``myorg/alignments`` and then add the above ``.dockstore.yml`` to the ``develop`` branch,
 the following would occur.
 
-* A workflow with path ``github.com/myorg/dockstore-tool-bamstats/bamstats`` will be created
-* The version ``develop`` is added to ``github.com/myorg/dockstore-tool-bamstats/bamstats``
+* A workflow with path ``github.com/myorg/alignments/aligner`` will be created
+* The version ``develop`` is added to ``github.com/myorg/alignments/aligner``
 
 .. tip:: Since the workflows field is an array, this file supports multiple workflows on Dockstore stemming from
    the same repository on GitHub. This is useful if you store a lot of your workflows in the same GitHub
@@ -139,9 +139,7 @@ To do that you must do manual registration, which is described later.
 Quick Register
 ++++++++++++++
 Quick register provides a flow that lets you browse the repositories you
-have access to and quickly create standard stub workflows. The benefit of
-this approach is that you get some automation without having lots of
-stubs created.
+have access to and quickly create standard stub workflows.
 
 You can access quick register by clicking the plus button on the My
 Workflows page. The flow of this process is shown in the screenshots
@@ -161,29 +159,12 @@ Once you've selected a Git registry and organization, you can see a list of all
 available repositories that you can add to Dockstore. There are three states
 the sliders can be in.
 
-- Off - There is no matching workflow on Dockstore.
+- Off - There is no matching workflow on Dockstore. One can be created.
 - On - This repository already exists on Dockstore and can be deleted.
 - Disabled - This repository exists on Dockstore and cannot be deleted.
 
 If sliders are in the off state then you can turn them on to quickly register
 a stub workflow for the repository.
-
-Refresh Organization
-++++++++++++++++++++
-Refresh Organization will look at an existing Git organization on Dockstore and do the following:
-
-- Create stub workflows for all Git repositories which do not exist on
-  Dockstore
-- Refresh all workflows that have been converted from stub to full workflows
-- Add user to any workflows that exist on Dockstore that they should have
-  access to
-
-To refresh an organization, select the refresh org icon button on the left side of the
-My Workflows page.
-
-
-One drawback of refresh organization is that it creates a stub for every single
-repository that you have access to, whether or not it contains a workflow.
 
 Manual Registration of Workflows
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

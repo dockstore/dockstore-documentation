@@ -1,24 +1,19 @@
 Dockstore GitHub App
 ====================
 
-.. note::
-    The Dockstore GitHub App is currently only used for Dockstore
-    Services, which are in beta mode. Usage of Dockstore GitHub App will be
-    expanded in future releases to encompass workflows and tools, so the concepts
-    here will eventually apply to all Dockstore entities.
-
-
 Overview
 --------
 
 This document gives a high level overview of the GitHub Apps and the Dockstore
 GitHub App in particular. For details on configuring and using the Dockstore
-GitHub App with services, please walk through the
-:doc:`Getting Started with Services <./getting-started-with-services>` tutorial.
+GitHub App with workflows or services, please walk through the
+:doc:`Getting Started with Workflow <./dockstore-workflows>` or
+:doc:`Getting Started with Services <./getting-started-with-services>` tutorials,
+respectively.
 
 With the Dockstore GitHub App, authors do not need to manually refresh their
-services on Dockstore to get the latest changes from GitHub. Dockstore will
-automatically update whenever the service is updated on GitHub.
+workflows/services on Dockstore to get the latest changes from GitHub. Dockstore will
+automatically update whenever the corresponding repository is updated on GitHub.
 
 GitHub Apps
 -----------
@@ -51,15 +46,51 @@ How the Dockstore GitHub App works
 ----------------------------------
 
 With the Dockstore GitHub App, the synchronization is done automatically. When
-you publish a new release of a service on GitHub, Dockstore is notified,
-and Dockstore updates its copy of the service. After you publish a new release
-of a service on GitHub, a new version of the service will be present in
+you publish a new release of a workflow on GitHub, Dockstore is notified,
+and Dockstore updates its copy of the workflow. After you publish a new release
+of a workflow on GitHub, a new version of the workflow will be present in
 Dockstore shortly afterwards.
+
+For this to work, a ``/.dockstore.yml`` file is required in each GitHub repository you want
+to associate with a workflow on Dockstore. A template for both workflows and services are shown below,
+along with explanations for each field. For every branch on GitHub that has one of these files, a corresponding entry
+will be made on Dockstore.
+
+Workflow YML File
+++++++++++++++++++
+
+.. code:: yaml
+
+   version: 1.2
+   workflows:
+      - name: aligner
+        subclass: cwl
+        primaryDescriptorPath: /Dockstore.cwl
+        testParameterFiles:
+        - /test/dockstore.cwl.json
+
+version
+    The version of the .dockstore.yml file. Currently at 1.2.
+workflows
+    An array of workflows. Each element corresponds to a workflow on Dockstore.
+name
+    The optional workflow name that is used to uniquely identify workflows in repositories with multiple workflows.
+subclass
+    The descriptor language used for the workflow. Supported values include cwl, wdl, and nextflow.
+primaryDescriptorPath
+    The path to the primary descriptor file in the Git repository
+testParameterFiles
+    An array of paths to test parameter files in the Git repository.
+
+Service YML File
++++++++++++++++++
+TODO
 
 See Also
 --------
 
 - :doc:`Getting Started with Services <./getting-started-with-services>`
+- :doc:`Getting Started with Workflows <./dockstore-workflows>`
 
 .. discourse::
        :topic_identifier: 2240

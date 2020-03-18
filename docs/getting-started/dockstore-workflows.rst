@@ -72,7 +72,7 @@ navigate to the ``/my-workflows`` page and click add workflow. Follow the steps 
 you will be redirected to GitHub where you can select which repositories to install the app on.
 
 Once you've done this you should be redirected back to the ``/my-workflows`` page on Dockstore.
-In order for Dockstore to start pulling in content from GitHub, a ``/.dockstore.yml`` file must be
+In order for Dockstore to start pulling in content from GitHub, a ``.dockstore.yml`` file must be
 added to a branch of the repository that contains your workflow. This file contains information like
 workflow path, test parameter file, workflow name, etc. When a push is made on GitHub to a branch
 with a ``.dockstore.yml``, Dockstore will add that branch to the corresponding workflow on Dockstore. If the
@@ -93,11 +93,14 @@ for an alignment workflow.
 If you had our GitHub App installed on a repository ``myorg/alignments`` and then add the above ``.dockstore.yml`` to the ``develop`` branch,
 the following would occur.
 
-* A workflow with path ``github.com/myorg/alignments/aligner`` will be created
-* The version ``develop`` is added to ``github.com/myorg/alignments/aligner``
+* A workflow with path ``github.com/myorg/alignments/aligner`` will be created on Dockstore
+* The version ``develop`` is added to the workflow ``github.com/myorg/alignments/aligner``
 
 Now that your workflow has been added, any time there is a push to a branch on GitHub for this repository that has a ``.dockstore.yml``,
-it is automatically updated on Dockstore!
+it is automatically updated on Dockstore! Anytime there is a deletion of a branch on GitHub that has a ``.dockstore.yml``, the version is
+removed from Dockstore.
+
+See :doc:`Dockstore GitHub Apps <./github-apps>` for more information regarding the ``/.dockstore.yml`` file.
 
 .. tip:: Since the workflows field is an array, this file supports multiple workflows on Dockstore stemming from
    the same repository on GitHub. This is useful if you store a lot of your workflows in the same GitHub

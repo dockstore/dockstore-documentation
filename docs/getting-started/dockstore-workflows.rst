@@ -15,11 +15,9 @@ Tutorial Goals
 -  Publish your workflow
 
 This tutorial walks through the process of registering and sharing more
-complex workflows which are comprised of multiple tools (whether they
-are registered on Dockstore or not). Workflows as defined via the
-Dockstore are a composition of multiple tools, strung together in some
-sort of order (often a directed acyclic graph (DAG)). Workflows also are
-different from tools since they are not required to define their own
+complex workflows which are comprised of multiple tools, strung together in some
+sort of order (often a directed acyclic graph (DAG)). Workflows also
+differ from tools since they are not required to define their own
 environment, instead a workflow engine like
 `Arvados <https://arvados.org/>`__ or
 `Cromwell <https://github.com/broadinstitute/cromwell>`__ will provide
@@ -66,12 +64,12 @@ is the legacy registration process which is less automated, and used for BitBuck
 Registration With GitHub Apps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This is the newest way of getting content onto Dockstore and is by far the most automated. Using
-GitHub Apps Dockstore can react to changes on GitHub as they are made, keeping Dockstore synced
+GitHub Apps, Dockstore can react to changes on GitHub as they are made, keeping Dockstore synced
 with GitHub automatically. To install our GitHub App on either a repository or organization,
 navigate to the ``/my-workflows`` page and click add workflow. Follow the steps for GitHub Apps and
-you will be redirected to GitHub where you can select which repositories to install the app on.
+you will be redirected to GitHub where you can select which repositories to install the Dockstore
+GitHub app on.
 
-Once you've done this you should be redirected back to the ``/my-workflows`` page on Dockstore.
 In order for Dockstore to start pulling in content from GitHub, a ``.dockstore.yml`` file must be
 added to a branch of the repository that contains your workflow. This file contains information like
 workflow path, test parameter file, workflow name, etc. When a push is made on GitHub to a branch

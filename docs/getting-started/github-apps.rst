@@ -46,8 +46,8 @@ How the Dockstore GitHub App works
 ----------------------------------
 
 With the Dockstore GitHub App, the synchronization is done automatically. When
-you publish a new release of a workflow on GitHub, Dockstore is notified,
-and Dockstore updates its copy of the workflow. After you publish a new release
+you add a new branch or release of a workflow on GitHub, Dockstore is notified,
+and Dockstore updates its copy of the workflow. For example, After publishing a new release
 of a workflow on GitHub, a new version of the workflow will be present in
 Dockstore shortly afterwards.
 
@@ -67,10 +67,10 @@ Workflow YML File
         subclass: cwl
         primaryDescriptorPath: /Dockstore.cwl
         testParameterFiles:
-        - /test/dockstore.cwl.json
+            - /test/dockstore.cwl.json
 
 version
-    The version of the .dockstore.yml file. Currently at 1.2.
+    The version of the .dockstore.yml schema. Currently at 1.2.
 workflows
     An array of workflows. Each element corresponds to a workflow on Dockstore.
 name

@@ -55,7 +55,7 @@ Register Your Workflow in Dockstore
 There are a variety of ways to get your workflows into Dockstore. Users can either
 use GitHub App registration or traditional registration. GitHub App registration is the
 recommended way to register for all new workflows on Dockstore using GitHub. The traditional registration
-is the legacy registration process which is less automated, and used for BitBucket and Gitlab.
+is the legacy registration process which is less automated, and used for Bitbucket and GitLab.
 
 .. note:: To register content on Dockstore, you must have an account on Dockstore and
    link the necessary third-party accounts. Once this is done you can register
@@ -108,7 +108,7 @@ See :doc:`Dockstore GitHub Apps <./github-apps>` for more information regarding 
 
 Traditional Registration
 ~~~~~~~~~~~~~~~~~~~~~~~~
-When using BitBucket and GitLab for you workflows, use the traditional registration.
+When using Bitbucket and GitLab for you workflows, use the traditional registration.
 There are two types of traditional registration: quick registration and manual registration.
 
 There are some ways to make the traditional registration process more seamless.
@@ -128,7 +128,7 @@ using manual registration.
 Quick Register
 ^^^^^^^^^^^^^^^
 Quick register provides a flow that lets you browse the repositories you
-have access to and quickly create standard stub workflows. You can access 
+have access to and quickly create workflows. You can access 
 quick register by clicking the plus button on the My Workflows page. You'll
 see a modal that looks like the following.
 
@@ -146,9 +146,9 @@ the sliders can be in.
 - Disabled - This repository exists on Dockstore and cannot be deleted.
 
 If sliders are in the off state then you can turn them on to quickly register
-a stub workflow for the repository. Once registered you can customize the workflow
+a workflow for the repository. Once registered you can customize the workflow
 path, test parameter path, descriptor language, etc. The workflow will then need to
-be refreshed to get it synced up with BitBucket/GitLab.
+be refreshed to get it synced up with Bitbucket/GitLab.
 
 .. note:: Some users have multiple workflows within one Git repository, however each
    workflow entry on Dockstore only contains a single workflow. This is
@@ -179,7 +179,7 @@ tab to see what content has been found.
 Sharing Your Workflow
 ----------------------
 After you have successfully added your workflow onto Dockstore and have it
-synced with GitHub, BitBucket, or GitLab, you are now ready to share your
+synced with GitHub, Bitbucket, or GitLab, you are now ready to share your
 workflow with the public! Assuming that your workflow has at least one valid
 version, you can publish your workflow for everyone to use. Simply select the
 workflow on the ``/my-workflows`` page and click publish.

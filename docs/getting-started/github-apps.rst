@@ -64,7 +64,7 @@ Workflow YML File
    version: 1.2
    workflows:
       - name: aligner
-        subclass: cwl
+        subclass: CWL
         primaryDescriptorPath: /Dockstore.cwl
         testParameterFiles:
             - /test/dockstore.cwl.json
@@ -76,7 +76,7 @@ workflows
 name
     The optional workflow name that is used to uniquely identify workflows in repositories with multiple workflows.
 subclass
-    The descriptor language used for the workflow. Supported values include cwl, wdl, and nextflow.
+    The descriptor language used for the workflow. Supported values include CWL, WDL, and NFL.
 primaryDescriptorPath
     The path to the primary descriptor file in the Git repository
 testParameterFiles

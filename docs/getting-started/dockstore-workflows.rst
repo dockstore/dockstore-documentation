@@ -82,7 +82,7 @@ for an alignment workflow.
 
    version: 1.2
    workflows:
-      - subclass: cwl
+      - subclass: CWL
         primaryDescriptorPath: /Dockstore.cwl
         testParameterFiles:
         - /test/dockstore.cwl.json

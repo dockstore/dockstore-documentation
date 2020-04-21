@@ -55,7 +55,7 @@ referenced must be from Quay.io or Docker Hub and they must include a version. T
 Common Workflow Language
 ^^^^^^^^^^^^^^^^^^^^^^^^
 - Various fields can be used to reference a Docker image, but we only support "dockerPull" for now.
-- "$import" or "$include" can be used to reference a local or https CWL descriptor, but we do not check for Docker image references made within files using https.
+- "$import" or "$include" can be used to reference a local or http(s) CWL descriptor, but we do not check for Docker image references made within files using http(s).
 
 Workflow Descriptor Language
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^

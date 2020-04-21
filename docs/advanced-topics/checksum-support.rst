@@ -9,7 +9,7 @@ endpoints. Keep reading to learn what is supported and how to retrieve the check
 File Descriptor Checksum Support
 ================================
 As of 1.9, Dockstore will calculate a SHA-1 checksum during a refresh for every container, descriptor, and test parameter file included in a
-tool or workflow. Once the refresh is done, you must publish your entry in order to access the information via our `TRS V2 endpoints <https:/dockstore.org/api/static/swagger-ui/index.html#/GA4GHV20>`_.
+tool or workflow. Once the refresh is done, you must publish your entry in order to access the information via our `TRS V2 endpoints <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GHV20>`_.
 More specifically, the endpoints that contain checksums for files are as follows:
 
 - `Descriptor (primary) <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GHV20/toolsIdVersionsVersionIdTypeDescriptorGet>`_

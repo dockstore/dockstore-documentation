@@ -25,7 +25,7 @@ standards developing at the GA4GH.
 Built with Docker and Git
 -------------------------
 
-See `Docker Overview <https://docs.docker.com/get-started/overview/>`__ for an excellent overview about Docker
+.. note:: See `Docker Overview <https://docs.docker.com/get-started/overview/>`__ for an excellent overview about Docker.
 
 Docker repositories, like `Docker Hub <https://hub.docker.com/>`__,
 `Quay.io <https://quay.io/>`__ and `GitLab <https://about.gitlab.com>`__, and

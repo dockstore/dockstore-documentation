@@ -15,7 +15,7 @@ Tutorial Goals
 Introduction to Docker
 ----------------------
 
-See `Docker Overview <https://docs.docker.com/get-started/overview/>`__ for an excellent overview about Docker
+.. note:: See `Docker Overview <https://docs.docker.com/get-started/overview/>`__ for an excellent overview about Docker.
 
 Docker is a fantastic tool for creating light-weight containers to run
 your tools. It gives you a fast, VM-like environment for Linux where you

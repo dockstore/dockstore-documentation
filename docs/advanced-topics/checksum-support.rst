@@ -45,21 +45,34 @@ the one included within the descriptor file itself.
 
 Workflows
 ---------
-For workflows, Docker image checksums are grabbed on snapshot, but this feature is not as reliable as the other checksum support covered so far. Although we can generally
-provide checksum info for referenced Docker images for CWL, WDL, and NFL, there are some caveats. Most conditions are language
-specific, but for all workflow langagues, the images referenced must be from Quay.io or Docker Hub and they must include a version. The following
-are the known constraints for each language.
+For workflows, Docker image checksums are grabbed on snapshot. However, the Docker images we can retrieve from descriptor files
+are more limited compared to the other checksum support covered so far. Although we can generally provide checksum info for referenced Docker
+images for CWL, WDL, and NFL, there are some caveats. Most conditions are language specific, but for all workflow langagues, the images
+referenced must be from Quay.io or Docker Hub and they must include a version. The following are the known constraints for each language.
 
 .. There is a ticket to expand on when we are not able to parse the docker images. This is only what I'm fairly sure about...
 
 Common Workflow Language
 ^^^^^^^^^^^^^^^^^^^^^^^^
 - Various fields can be used to reference a Docker image, but we only support "dockerPull" for now.
-- "$import" or "$include" can be used to reference a local or https file (which may make reference to an image), but we only recognize local imports in this situation.
+- "$import" or "$include" can be used to reference a local or https CWL descriptor, but we do not check for Docker image references made within files using https.
 
 Workflow Descriptor Language
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - The WDL docker attribute can be evaluated as an expression, but we only support it when the attribute is set using a string.
+
+::
+
+    runtime {
+      # Unsupported
+      # docker: "ubuntu:" + "18.04"
+
+      # Unsupported
+      # docker: "ubuntu:" + version
+
+      # Supported
+      docker: "ubuntu:18.04"
+    }
 
 Nextflow
 ^^^^^^^^

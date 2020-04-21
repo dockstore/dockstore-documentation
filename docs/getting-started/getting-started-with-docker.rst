@@ -15,6 +15,8 @@ Tutorial Goals
 Introduction to Docker
 ----------------------
 
+See `Docker Overview <https://docs.docker.com/get-started/overview/>`__ for an excellent overview about Docker
+
 Docker is a fantastic tool for creating light-weight containers to run
 your tools. It gives you a fast, VM-like environment for Linux where you
 can automatically install dependencies, make configurations, and setup
@@ -165,11 +167,11 @@ Building Docker Images
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Now that you've created the ``Dockerfile``, the next step is to build
-the image. The docker command line is used for this:
+the image. Install the Docker Engine `here <https://docs.docker.com/engine/install/ubuntu/>`__. The docker command line is used for this:
 
 ::
 
-    $> docker build -t quay.io/collaboratory/dockstore-tool-bamstats:1.25-3 .
+    $> docker build -t quay.io/collaboratory/dockstore-tool-bamstats:1.25-6 .
 
 The ``.`` is the path to the location of the Dockerfile, which is in the
 same directory here. The ``-t`` parameter is the "tag" that this Docker
@@ -181,7 +183,7 @@ This allows me to build and test locally then, eventually, switch over
 to the quay.io-built version. The next part of the tag,
 ``collaboratory/dockstore-tool-bamstats``, denotes the name of the tool
 which is derived from the organization and repository name on Quay.io.
-Finally ``1.25-3`` denotes a version string, typically you want to sync
+Finally ``1.25-6`` denotes a version string, typically you want to sync
 that with releases on GitHub.
 
 The tool should build normally and should exit without errors. You
@@ -196,7 +198,7 @@ Check that the tool is now in your local Docker image cache:
 ::
 
     $> docker images | grep bamstats
-    quay.io/collaboratory/dockstore-tool-bamstats   1.25-3  01a7ccf55063   2 minutes ago   538.3 MB
+    quay.io/collaboratory/dockstore-tool-bamstats   1.25-6  01a7ccf55063   2 minutes ago   538.3 MB
 
 Great! This looks fine!
 
@@ -215,7 +217,7 @@ and dozens of GB of disk space!):
 
 ::
 
-    $> docker run -it -v `pwd`:/home/ubuntu --user `echo $UID`:1000 quay.io/collaboratory/dockstore-tool-bamstats:1.25-3 /bin/bash
+    $> docker run -it -v `pwd`:/home/ubuntu --user `echo $UID`:1000 quay.io/collaboratory/dockstore-tool-bamstats:1.25-6 /bin/bash
 
 .. note:: This command expects your UID to be 1000. If it is not, you
     need to add ``--user <your-id>:1000``.
@@ -283,7 +285,7 @@ your Docker image from the command-line.
 ::
 
     $> wget ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/NA12878/alignment/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
-    $> docker run -w="/home/ubuntu" -it -v `pwd`:/home/ubuntu --user `echo $UID`:1000 quay.io/collaboratory/dockstore-tool-bamstats:1.25-3 bamstats 4 NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
+    $> docker run -w="/home/ubuntu" -it -v `pwd`:/home/ubuntu --user `echo $UID`:1000 quay.io/collaboratory/dockstore-tool-bamstats:1.25-6 bamstats 4 NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
 
 In the next section, we will demonstrate how the command-line and input
 file can be parameterized and constructed via CWL.

@@ -1,7 +1,7 @@
 About Dockstore
 ===============
 
-The Dockstore concept is simple, provide a place where users can share
+The Dockstore concept is simple; provide a place where users can share
 tools encapsulated in Docker and described with the `Common Workflow
 Language <https://www.commonwl.org/>`__ (CWL) or
 `Workflow Description Language <https://openwdl.org/>`__ (WDL),
@@ -10,9 +10,9 @@ workflow languages used by members of and APIs created by the
 Stream <http://ga4gh.cloud/>`__. This enables scientists, for example,
 to share analytical tools in a way that makes them machine readable and
 runnable in a variety of environments. While the Dockstore is focused on
-serving researchers in the biosciences the combination of Docker +
+serving researchers in the biosciences, the combination of Docker +
 CWL/WDL can be used by anyone to describe the tools and services in
-their Docker images in a standardized, machine-readable way.
+their `Docker images <https://docs.docker.com/get-started/overview/#docker-objects>`__ in a standardized, machine-readable way.
 
 Dockstore also attempts to work with new and alternative
 languages/standards such as `Nextflow <https://www.nextflow.io/>`__ as
@@ -24,6 +24,8 @@ standards developing at the GA4GH.
 
 Built with Docker and Git
 -------------------------
+
+.. note:: See `Docker Overview <https://docs.docker.com/get-started/overview/>`__ for an excellent overview about Docker.
 
 Docker repositories, like `Docker Hub <https://hub.docker.com/>`__,
 `Quay.io <https://quay.io/>`__ and `GitLab <https://about.gitlab.com>`__, and

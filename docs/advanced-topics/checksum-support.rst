@@ -97,7 +97,7 @@ Nextflow
       container = params.container
     }
 
-- A Nextflow workflow can contain a "profiles" scope. Here, you can create different sets of configuration attributes. The workflow can then be run with whichever profiles is specified as a command line argument. If a docker image is referenced within a profile, Dockstore will not recognize it.
+- A Nextflow workflow can contain a "profiles" scope. Here, you can create different sets of configuration attributes. The workflow can then be run with whichever profiles are specified as a command line argument. If a Docker image is referenced within a profile, Dockstore will not recognize it.
 
 ::
 

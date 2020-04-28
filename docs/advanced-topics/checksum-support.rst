@@ -76,5 +76,45 @@ Workflow Descriptor Language
 
 Nextflow
 ^^^^^^^^
+- Similar to WDL, a container can be set equal to an expression in Nextflow. Dockstore again supports simple strings, but also the container being set to a variable defined in the params scope. However, we do not support other types of expressions.
 
+::
 
+    // nextflow.config
+    params {
+      container = 'ubuntu:18.04'
+      versionName = '18.04'
+    }
+
+    // conf/base.config
+    process {
+      // Unsupported
+      container = "ubuntu:${params.versionName}"
+
+      // Supported
+      container = 'ubuntu:18.04'
+      // Supported
+      container = params.container
+    }
+
+- A Nextflow workflow can contain a "profiles" scope. Here, you can create different sets of configuration attributes. The workflow can then be run with whichever profiles are specified as a command line argument. If a Docker image is referenced within a profile, Dockstore will not recognize it.
+
+::
+
+    // nextflow.config
+    params {
+      container = 'ubuntu:18.04'
+    }
+
+    profiles {
+      exampleProfile {
+        // Unsupported
+        container = 'ubuntu:18.04'
+      }
+    }
+
+    // conf/base.config
+    process {
+      // Supported
+      container = params.container
+    }

@@ -76,7 +76,7 @@ Workflow Descriptor Language
 
 Nextflow
 ^^^^^^^^
-- Similar to WDL, a container can be set equal to an expression in Nextflow. Dockstore again supports simple strings, but also the container being set to a variable defined in the params scope. However, we cannot support other types of expressions.
+- Similar to WDL, a container can be set equal to an expression in Nextflow. Dockstore again supports simple strings, but also the container being set to a variable defined in the params scope. However, we do not support other types of expressions.
 
 ::
 

@@ -65,34 +65,34 @@ required.
 
 The below summarizes some of the plugins available:
 
-+-------------------------------+-----+-------------------------------+--------------+
-| Plugin                        | Pre | Example                       | Supported    |
-|                               | fix |                               | Operations   |
-+===============================+=====+===============================+==============+
-| `s3-plugin <https://github    | s3: | s3://oicr.temp/bamstats\_repo | download,    |
-| .com/dockstore/s3-plugin>`    | //  | rt.zip                        | upload, set  |
-| __                            |     |                               | metadata on  |
-|                               |     |                               | upload       |
-+-------------------------------+-----+-------------------------------+--------------+
-| `icgc-storage-client-plugi    | icg | icgc://eeca3ccd-fa4e-57bf-9fd | download     |
-| n <https://github.com/dock    | c:/ | e-c9d0ddf69935                | directories  |
-| store/icgc-storage-client-    | /   |                               |              |
-| plugin>`__                    |     |                               |              |
-+-------------------------------+-----+-------------------------------+--------------+
-| `synapse-plugin <https://g    | syn | syn://syn8299856              | download     |
-| ithub.com/dockstore/synaps    | :// |                               |              |
-| e-plugin>`__                  |     |                               |              |
-+-------------------------------+-----+-------------------------------+--------------+
-| `data-object-service-plugi    | dos | dos://ec2-52-26-45-130.us-wes | download     |
-| n <https://github.com/dock    | :// | t-2.compute.amazonaws.com:808 |              |
-| store/data-object-service-    |     | 0/911bda59-b6f9-4330-9543-c2b |              |
-| plugin>`__                    |     | f96df1eca                     |              |
-+-------------------------------+-----+-------------------------------+--------------+
-| `gcs-plugin <https://githu    | gs: | gs://genomics-public-data/ref | download,    |
-| b.com/dockstore/gs-plugin>`__ | //  | erences/GRCh38/chr1.fa.gz     | upload, set  |
-|                               |     |                               | metadata on  |
-|                               |     |                               | upload       |
-+-------------------------------+-----+-------------------------------+--------------+
++-------------------------------+---------+---------------------------------+--------------+
+| Plugin                        | Prefix  | Example                         | Supported    |
+|                               |         |                                 | Operations   |
++===============================+=========+=================================+==============+
+| `s3-plugin <https://github    | s3://   | s3://oicr.temp/bamstats\_repo   | download,    |
+| .com/dockstore/s3-plugin>`__  |         | rt.zip                          | upload, set  |
+|                               |         |                                 | metadata on  |
+|                               |         |                                 | upload       |
++-------------------------------+---------+---------------------------------+--------------+
+| `icgc-storage-client-plugi    | icgc:// | icgc://eeca3ccd-fa4e-57bf-9fd   | download     |
+| n <https://github.com/dock    |         | e-c9d0ddf69935                  | directories  |
+| store/icgc-storage-client-    |         |                                 |              |
+| plugin>`__                    |         |                                 |              |
++-------------------------------+---------+---------------------------------+--------------+
+| `synapse-plugin <https://g    | syn://  | syn://syn8299856                | download     |
+| ithub.com/dockstore/synaps    |         |                                 |              |
+| e-plugin>`__                  |         |                                 |              |
++-------------------------------+---------+---------------------------------+--------------+
+| `data-object-service-plugi    | dos://  | dos://ec2-52-26-45-130.us-wes   | download     |
+| n <https://github.com/dock    |         | t-2.compute.amazonaws.com:808   |              |
+| store/data-object-service-    |         | 0/911bda59-b6f9-4330-9543-c2b   |              |
+| plugin>`__                    |         | f96df1eca                       |              |
++-------------------------------+---------+---------------------------------+--------------+
+| `gcs-plugin <https://githu    | gs://   | gs://genomics-public-data/ref   | download,    |
+| b.com/dockstore/gs-plugin>`__ |         | erences/GRCh38/chr1.fa.gz       | upload, set  |
+|                               |         |                                 | metadata on  |
+|                               |         |                                 | upload       |
++-------------------------------+---------+---------------------------------+--------------+
 
 AWS S3
 ~~~~~~
@@ -386,6 +386,14 @@ The Dockstore CLI implements a WES client that allows users to submit a
 request to launch a workflow run, get the status of a run, or cancel a
 run at a WES endpoint.
 
+The Dockstore CLI will not transmit local files referenced in an input JSON
+to the WES endpoint. Therefore, we recommend that an input JSON that has a
+file input use a URL (not a local path) that
+points to the file that the WES endpoint can resolve. For instance, in the
+examples below if the input file test.json references a file then
+the URL should be an https, gcs, s3, etc. URL like ``https://raw.githubusercontent.com/my_repository/my_file``.
+
+
 Usage
 ~~~~~
 
@@ -401,18 +409,18 @@ Usage
 
        dockstore workflow wes launch --help
 
--  Launch a workflow run, e.g.:
+-  Launch a workflow run (--local-entry is not supported), e.g.:
 
    .. code:: bash
 
-       dockstore workflow wes launch --local-entry Dockstore.cwl --json test.json
+       dockstore workflow wes launch --entry github.com/briandoconnor/dockstore-workflow-md5sum:1.4.0 --json test.json
 
 -  Launch a workflow run and override the WES URL and credentials
    specified in the config file:
 
    .. code:: bash
 
-       dockstore workflow wes launch --local-entry Dockstore.cwl --json test.json --wes-url https://wes.qr1hi.arvadosapi.com/ga4gh/wes/v1
+       dockstore workflow wes launch --entry github.com/briandoconnor/dockstore-workflow-md5sum:1.4.0 --json test.json --wes-url https://wes.qr1hi.arvadosapi.com/ga4gh/wes/v1
        --wes-auth 'Bearer <my token>'
 
 -  Get status on a run (a run id is returned in the response from
@@ -453,10 +461,23 @@ example:
 
     token: <my token>
     server-url: https://dockstore.org/api
-    cromwell-version: 36
+    cromwell-version: 50
     [WES]
     url: https://wes.qr1hi.arvadosapi.com/ga4gh/wes/v1
     authorization: Bearer <my token>
+
+
+
+The table below summarizes some of the WES endpoints available:
+
++-----------+------------------------------------------------------+-----------+
+| Sponsor   | Endpoint URL                                         | Language  |
++===========+======================================================+===========+
+| Arvados   | ``https://wes.qr1hi.arvadosapi.com/ga4gh/wes/v1``    | CWL       |
++-----------+------------------------------------------------------+-----------+
+| Illumina  | ``https://use1.platform.illumina.com/ga4gh/wes/v1``  | CWL       |
++-----------+------------------------------------------------------+-----------+
+
 
 .. note::  WES SUPPORT IS IN BETA AT THIS TIME. RESULTS MAY BE UNPREDICTABLE.
 

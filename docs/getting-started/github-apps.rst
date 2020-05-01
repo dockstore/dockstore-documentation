@@ -124,6 +124,17 @@ Service YML File
 +++++++++++++++++
 TODO
 
+Migrating Existing Workflows to use GitHub Apps
+-------------------------------------------------
+If you have already registered GitHub workflows on Dockstore using our old method which required you to refresh, you are still able to use GitHub Apps!
+The migration process is fairly straightforward. First, make sure to install our GitHub App onto the repository for the workflow that you want to migrate.
+Next, create a ``/.dockstore.yml`` file and push it to a branch on your GitHub repo, making sure that the name field matches the existing workflowname.
+If your workflow did not have a workflowname set, simply exclude the field. It is very important that these names match, or else Dockstore won't know which
+workflow to associate the ``/.dockstore.yml`` with.
+
+The pushing of a branch with a valid ``/.dockstore.yml`` should trigger Dockstore to convert your workflow into a GitHub App workflow! New versions will be added/updated/deleted
+as if the workflow was originally added using GitHub Apps.  Existing branches will persist, and you can even individually refresh them on the versions tab of the workflow.
+You can convert these existing workflows to use GitHub Apps by adding a valid ``/.dockstore.yml`` to the corresponding branches on GitHub.
 
 Error Handling
 ----------------------------------

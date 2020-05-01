@@ -92,7 +92,8 @@ with a ``/.dockstore.yml``, Dockstore will add that branch to the corresponding 
 workflow doesn't already exist on Dockstore, one will be created.
 
 Below is a simple example of a ``/.dockstore.yml`` file
-for an alignment workflow. For the complete documentation see the :doc:`Dockstore GitHub Apps <./github-apps>` page.
+for an alignment workflow to show you how easy it is to use. If you are interested in using this method, please see the 
+complete documentation at the :doc:`Dockstore GitHub Apps <./github-apps>` page.
 
 .. code:: yaml
 
@@ -103,7 +104,7 @@ for an alignment workflow. For the complete documentation see the :doc:`Dockstor
         testParameterFiles:
         - /test/aligner.cwl.json
 
-If you had our GitHub App installed on a repository ``myorg/alignments`` and then add the above ``/.dockstore.yml`` to the **develop** branch,
+If you had our GitHub App installed on the repository ``myorg/alignments`` and then add the above ``/.dockstore.yml`` to the **develop** branch,
 the following would occur.
 
 * A **CWL** workflow with ID ``github.com/myorg/alignments`` will be created on Dockstore

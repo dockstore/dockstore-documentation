@@ -315,7 +315,6 @@ you can convert a version to the new method by adding a ``/.dockstore.yml`` onto
 
 .. note:: Ensure that the workflow name in the ``/.dockstore.yml`` matches the workflow name of the workflow you want to migrate. Leave it blank if you don't currently use a workflow name.
 
-
 Any last tips on using Dockstore?
 ---------------------------------
 

@@ -1,15 +1,14 @@
-Dockstore GitHub App
-====================
+Automatic Syncing with GitHub Apps and /.dockstore.yml
+======================================================
 
 Overview
 --------
 
-This document gives a high level overview of the GitHub Apps and the Dockstore
-GitHub App in particular. For details on configuring and using the Dockstore
+This document gives a high level overview of how Dockstore uses GitHub apps.
+For extra details on configuring and using the Dockstore
 GitHub App with workflows or services, please see either
 :doc:`Getting Started with Workflow <./dockstore-workflows>` or
-:doc:`Getting Started with Services <./getting-started-with-services>`,
-respectively.
+:doc:`Getting Started with Services <./getting-started-with-services>`.
 
 With the Dockstore GitHub App, authors do not need to manually refresh their
 workflows/services on Dockstore to get the latest changes from GitHub. Dockstore will
@@ -58,17 +57,16 @@ will be made on Dockstore.
 
 Workflow YML File
 ++++++++++++++++++
-Ex. .dockstore.yml with a single workflow
+For a workflow, the ``/.dockstore.yml`` has the following general structure
 
 .. code:: yaml
 
    version: 1.2
    workflows:
-      - name: aligner
-        subclass: CWL
-        primaryDescriptorPath: /Dockstore.cwl
-        testParameterFiles:
-            - /test/dockstore.cwl.json
+      - name: <String>
+        subclass: <CWL | WDL | NFL | GALAXY>
+        primaryDescriptorPath: <String>
+        testParameterFiles: <String Array>
 
 version
     The version of the .dockstore.yml schema. Currently at 1.2.
@@ -78,16 +76,29 @@ name (optional)
     The optional workflow name that is used to uniquely identify workflows in repositories with multiple workflows.
     **Each element must have a unique name.**
 subclass
-    The descriptor language used for the workflow. Supported values include CWL, WDL, and NFL.
+    The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GALAXY.
 primaryDescriptorPath
-    The path to the primary descriptor file in the Git repository
+    The absolute path to the primary descriptor file in the Git repository
 testParameterFiles (optional)
-    An array of paths to test parameter files in the Git repository.
+    An array of absolute paths to test parameter files in the Git repository.
+
+Ex. .dockstore.yml with a single workflow
+
+.. code:: yaml
+
+   version: 1.2
+   workflows:
+      - subclass: CWL
+        primaryDescriptorPath: /Dockstore.cwl
+        testParameterFiles:
+            - /test/dockstore.cwl.json
+
+The above ``.dockstore.yml`` is for a single workflow. Note that the name is not present since it is optional.
 
 Ex. .dockstore.yml with multiple workflows
 
 .. important:: The **name** field is an optional field used when a repository has multiple workflows in it that a user wants to register
-    as separate entries on Dockstore. Each entry within a .dockstore.yml file corresponds to a unique entry on Dockstore.
+    as separate entries on Dockstore. Each entry within a ``.dockstore.yml`` file corresponds to a unique entry on Dockstore.
 
 .. code:: yaml
 
@@ -104,7 +115,7 @@ Ex. .dockstore.yml with multiple workflows
         testParameterFiles:
             - /test/localAligner.cwl.json
 
-A common pattern seen on Dockstore are GitHub repositories that store many workflows. The above .dockstore.yml
+A common pattern seen on Dockstore is GitHub repositories that store many workflows. The above ``.dockstore.yml``
 has two entries for workflows. Notice that each entry uses a different name. Names are required if you want 
 multiple workflows registered on Dockstore from a single GitHub repository. The names must be unique between
 entries of the `workflows` array. For each unique name present, an entry will be created on Dockstore.
@@ -112,6 +123,26 @@ entries of the `workflows` array. For each unique name present, an entry will be
 Service YML File
 +++++++++++++++++
 TODO
+
+
+Error Handling
+----------------------------------
+Since Dockstore relies on GitHub to tell us when changes have been made on GitHub, there are chances that the message gets lost or delayed.
+Typically, Dockstore reacts within seconds of a change being made on GitHub, however service disruptions can delay this to a few minutes.
+If a message were to get lost, unfortunately you will need to push to GitHub again. Currently, there are no ways to tell on Dockstore whether
+a GitHub message was delayed or lost. We recommend waiting a few minutes and then trying to push again. This will hopefully be changed in the near future.
+
+Another error that could occur is that we received the message from GitHub, however the ``/.dockstore.yml`` is invalid. If we cannot read the 
+file, then we do not know which workflow or service to associate the error with. For now, please ensure that your file is a valid YAML file and
+compare it with our examples/documentation to confirm that you filled it in correctly. In the future we plan to have a system in place where
+users can keep track of these GitHub events and resulting action taken by Dockstore, even if the message was succesfully handled.
+
+Another possible issue is that we received the message from GitHub, but the user who triggered the message event is not registered on Dockstore with
+the corresponding GitHub account. This is only an issue if the workflow or service does not already exist on Dockstore. When creating new workflows and
+services, we need to be able to associate them with a user. If the workflow or service already exists on Dockstore, then this error will not occur and the 
+version will be properly added/updated/deleted on Dockstore.
+
+As always, you can reach out to our team on our `discussion forum <https://discuss.dockstore.org/>`_ to discuss any issues you are facing.
 
 See Also
 --------

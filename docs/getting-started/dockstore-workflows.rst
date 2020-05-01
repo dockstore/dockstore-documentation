@@ -83,15 +83,16 @@ GitHub app on. The process is shown in the following images.
 .. figure:: /assets/images/docs/gh-app-reg-3.png
    :alt: GitHub App Organization Install Page
 
-   Install the our GitHub App on either all repositories in an organization or a select few
+   Install our GitHub App on either all repositories in an organization or a select few
 
-In order for Dockstore to start pulling in content from GitHub, a ``/.dockstore.yml`` file must be
-added to the root directory of a branch of the repository that contains your workflow. This file contains information like
+Once you've installed our GitHub app on a repository or organization, you'll need to add a ``/.dockstore.yml`` file to
+the root directory of a branch of the repository that contains your workflow. This file contains information like
 workflow path, test parameter file, workflow name, etc. When a push is made on GitHub to a branch
 with a ``/.dockstore.yml``, Dockstore will add that branch to the corresponding workflow on Dockstore. If the
-workflow doesn't already exist on Dockstore, one will be created. Below is an example of a ``/.dockstore.yml`` file
-for an alignment workflow.
+workflow doesn't already exist on Dockstore, one will be created.
 
+Below is a simple example of a ``/.dockstore.yml`` file
+for an alignment workflow. For the complete documentation see the :doc:`Dockstore GitHub Apps <./github-apps>` page.
 
 .. code:: yaml
 
@@ -113,8 +114,6 @@ the following would occur.
 Now that your workflow has been added, any time there is a push to a branch on GitHub for this repository that has a ``/.dockstore.yml``,
 it is automatically updated on Dockstore! Anytime there is a deletion of a branch on GitHub that has a ``/.dockstore.yml``, the version is
 removed from Dockstore.
-
-See :doc:`Dockstore GitHub Apps <./github-apps>` for more information about structure of the ``/.dockstore.yml`` file.
 
 .. tip:: Since the workflows field is an array, this file supports multiple workflows on Dockstore stemming from
    the same repository on GitHub. This is useful if you store a lot of your workflows in the same GitHub

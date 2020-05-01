@@ -308,12 +308,7 @@ How does this change your development flow? Once you have a ``/.dockstore.yml`` 
 there anytime you create a new branch. This means that Dockstore will pull in any new branch. If you want to edit version
 information, such as workflow path, you will have to update the ``/.dockstore.yml`` file directly on GitHub. You can no longer do this directly on Dockstore.
 
-To convert your existing workflows to the new method, install our GitHub App onto the repository and add a ``/.dockstore.yml`` to a branch.
-The workflow will now be updated using the new method! Make sure to specifiy the name field in the file if your corresponding workflow on Dockstore
-already has a workflowname, or else a new workflow may be created. All existing versions will persist. You can still individually refresh these versions, or
-you can convert a version to the new method by adding a ``/.dockstore.yml`` onto the branch on GitHub.
-
-.. note:: Ensure that the workflow name in the ``/.dockstore.yml`` matches the workflow name of the workflow you want to migrate. Leave it blank if you don't currently use a workflow name.
+See our documentation :doc:`Dockstore GitHub Apps <./getting-started/github-apps>` to learn how to perform a migration.
 
 Any last tips on using Dockstore?
 ---------------------------------

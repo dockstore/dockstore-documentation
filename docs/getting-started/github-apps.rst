@@ -64,7 +64,7 @@ For a workflow, the ``/.dockstore.yml`` has the following general structure
    version: 1.2
    workflows:
       - name: <String>
-        subclass: <CWL | WDL | NFL | GALAXY>
+        subclass: <CWL | WDL | NFL | GXFORMAT2>
         primaryDescriptorPath: <String>
         testParameterFiles: <String Array>
 
@@ -74,7 +74,7 @@ workflows
     An array of workflows. Each element corresponds to a workflow on Dockstore.
 name (optional)
     The optional workflow name that is used to uniquely identify workflows in repositories with multiple workflows.
-    **Each workflow listed must have a unique name.**
+    **Each workflow listed must have a unique (or no) name.**
 subclass
     The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GXFORMAT2 (Galaxy).
 primaryDescriptorPath

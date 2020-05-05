@@ -1,4 +1,4 @@
-Automatic Syncing with GitHub Apps and /.dockstore.yml
+Automatic Syncing with GitHub Apps and .dockstore.yml
 ======================================================
 
 Overview
@@ -10,12 +10,12 @@ GitHub App with workflows or services, please see either
 :doc:`Getting Started with Workflow <./dockstore-workflows>` or
 :doc:`Getting Started with Services <./getting-started-with-services>`.
 
-With the Dockstore GitHub App, authors do not need to manually refresh their
+With the Dockstore GitHub App installed, authors do not need to manually refresh their
 workflows/services on Dockstore to get the latest changes from GitHub. Dockstore will
 automatically update whenever the corresponding repository is updated on GitHub.
 
-GitHub Apps
------------
+What are GitHub Apps?
+---------------------
 
 `GitHub apps <https://developer.github.com/apps>`_ are a GitHub feature used to
 improve the interaction between external applications and GitHub. Users can
@@ -29,7 +29,7 @@ Why have a Dockstore GitHub App?
 Without a GitHub App, Dockstore does not know when you have modified a GitHub
 repository.
 
-For example, take the case when you first add a tool or workflow to Dockstore
+For example, take the case when you first add a workflow to Dockstore
 from GitHub.  Dockstore indexes the repository -- it reads the the relevant
 repository content, branches, and releases from GitHub. When you subsequently
 make changes to your GitHub repo, such as push new commits, create new branches
@@ -44,7 +44,7 @@ sync with the linked GitHub repository.
 How the Dockstore GitHub App works
 ----------------------------------
 
-With the Dockstore GitHub App, the synchronization is done automatically. When
+With the Dockstore GitHub App installed, the synchronization is done automatically. When
 you add a new branch or release of a workflow on GitHub, Dockstore is notified,
 and Dockstore updates its copy of the workflow. For example, After publishing a new release
 of a workflow on GitHub, a new version of the workflow will be present in
@@ -52,7 +52,7 @@ Dockstore shortly afterwards.
 
 For this to work, a ``/.dockstore.yml`` file is required in the root directory of each GitHub repository you want
 to associate with a workflow on Dockstore. A template for both workflows and services are shown below,
-along with explanations for each field. For every branch on GitHub that has one of these files, a corresponding entry
+along with explanations for each field. For every branch/release on GitHub that has one of these files, a corresponding entry
 will be made on Dockstore.
 
 Workflow YML File
@@ -74,7 +74,7 @@ workflows
     An array of workflows. Each element corresponds to a workflow on Dockstore.
 name (optional)
     The optional workflow name that is used to uniquely identify workflows in repositories with multiple workflows.
-    **Each element must have a unique name.**
+    **Each workflow listed must have a unique name.**
 subclass
     The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GALAXY.
 primaryDescriptorPath
@@ -140,7 +140,7 @@ Error Handling
 ----------------------------------
 Since Dockstore relies on GitHub to tell us when changes have been made on GitHub, there are chances that the message gets lost or delayed.
 Typically, Dockstore reacts within seconds of a change being made on GitHub, however service disruptions can delay this to a few minutes.
-If a message were to get lost, unfortunately you will need to push to GitHub again. Currently, there are no ways to tell on Dockstore whether
+If a message were to get lost, unfortunately you will need to push to GitHub again. Currently, there is no way to tell on Dockstore whether
 a GitHub message was delayed or lost. We recommend waiting a few minutes and then trying to push again. This will hopefully be changed in the near future.
 
 Another error that could occur is that we received the message from GitHub, however the ``/.dockstore.yml`` is invalid. If we cannot read the 

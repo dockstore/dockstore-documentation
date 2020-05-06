@@ -78,12 +78,12 @@ GitHub app on. The process is shown in the following images.
 .. figure:: /assets/images/docs/gh-app-reg-2.png
    :alt: GitHub App Organizations Page
 
-   Select which organization to install our GitHub App on
+   Select an organization
 
 .. figure:: /assets/images/docs/gh-app-reg-3.png
    :alt: GitHub App Organization Install Page
 
-   Install our GitHub App on either all repositories in an organization or a select few
+   Install our GitHub App on either all repositories in an organization or on specific repositories
 
 Once you've installed our GitHub app on a repository or organization, you'll need to add a ``/.dockstore.yml`` file to
 the root directory of a branch of the repository that contains your workflow. This file contains information like
@@ -107,7 +107,7 @@ complete documentation at the :doc:`Dockstore GitHub Apps <./github-apps>` page.
 If you had our GitHub App installed on the repository ``myorg/alignments`` and then add the above ``/.dockstore.yml`` to the **develop** branch,
 the following would occur.
 
-* A **CWL** workflow with ID ``github.com/myorg/alignments`` will be created on Dockstore
+* A **CWL** workflow with the ID ``github.com/myorg/alignments`` will be created on Dockstore
 * The version **develop** is added to the workflow ``github.com/myorg/alignments``
 * The version has the primary descriptor file set to ``/aligner.cwl``
 * The version has one test parameter file: ``/test/aligner.cwl.json``

@@ -73,7 +73,8 @@ version
 workflows
     An array of workflows. Each element corresponds to a workflow on Dockstore.
 name (optional)
-    The optional workflow name that is used to uniquely identify workflows in repositories with multiple workflows.
+    The optional workflow name for a workflow. If using a ``/.dockstore.yml`` with multiple workflows,
+    this field is required to uniquely identify workflows in the repository.
     **Each workflow listed must have a unique (or no) name.**
 subclass
     The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GXFORMAT2 (Galaxy).
@@ -97,8 +98,9 @@ The above ``.dockstore.yml`` is for a single workflow. Note that the name is not
 
 Ex. .dockstore.yml with multiple workflows
 
-.. important:: The **name** field is an optional field used when a repository has multiple workflows in it that a user wants to register
-    as separate entries on Dockstore. Each entry within a ``.dockstore.yml`` file corresponds to a unique entry on Dockstore.
+.. important:: Though the **name** field is optional when a ``.dockstore.yml`` has one workflow in it,
+    it must be used when a ``.dockstore.yml`` has multiple workflows in it. Each entry within a ``.dockstore.yml``
+    file corresponds to a unique entry on Dockstore.
 
 .. code:: yaml
 
@@ -141,7 +143,7 @@ Error Handling
 Since Dockstore relies on GitHub to tell us when changes have been made on GitHub, there are chances that the message gets lost or delayed.
 Typically, Dockstore reacts within seconds of a change being made on GitHub, however service disruptions can delay this to a few minutes.
 If a message were to get lost, unfortunately you will need to push to GitHub again. Currently, there is no way to tell on Dockstore whether
-a GitHub message was delayed or lost. We recommend waiting a few minutes and then trying to push again. This will hopefully be changed in the near future.
+a GitHub message was delayed or lost. We recommend waiting a few minutes and then trying to push again. This will be changed in the future.
 
 Another error that could occur is that we received the message from GitHub, however the ``/.dockstore.yml`` is invalid. If we cannot read the 
 file, then we do not know which workflow or service to associate the error with. For now, please ensure that your file is a valid YAML file and

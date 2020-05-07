@@ -68,41 +68,57 @@ GitHub Apps, Dockstore can react to changes on GitHub as they are made, keeping 
 with GitHub automatically. To install our GitHub App on either a repository or organization,
 navigate to the ``/my-workflows`` page and click add workflow. Follow the steps for GitHub Apps and
 you will be redirected to GitHub where you can select which repositories to install the Dockstore
-GitHub app on.
+GitHub app on. The process is shown in the following images.
 
-In order for Dockstore to start pulling in content from GitHub, a ``.dockstore.yml`` file must be
-added to a branch of the repository that contains your workflow. This file contains information like
+.. figure:: /assets/images/docs/gh-app-reg-1.png
+   :alt: GitHub App Registration on Dockstore
+
+   Select Register Using GitHub Apps to get a link to our installation page
+
+.. figure:: /assets/images/docs/gh-app-reg-2.png
+   :alt: GitHub App Organizations Page
+
+   Select an organization
+
+.. figure:: /assets/images/docs/gh-app-reg-3.png
+   :alt: GitHub App Organization Install Page
+
+   Install our GitHub App on either all repositories in an organization or on specific repositories
+
+Once you've installed our GitHub app on a repository or organization, you'll need to add a ``/.dockstore.yml`` file to
+the root directory of a branch of the repository that contains your workflow. This file contains information like
 workflow path, test parameter file, workflow name, etc. When a push is made on GitHub to a branch
-with a ``.dockstore.yml``, Dockstore will add that branch to the corresponding workflow on Dockstore. If the
-workflow doesn't already exist on Dockstore, one will be created. Below is an example of a ``.dockstore.yml`` file
-for an alignment workflow.
+with a ``/.dockstore.yml``, Dockstore will add that branch to the corresponding workflow on Dockstore. If the
+workflow doesn't already exist on Dockstore, one will be created.
 
+Below is a simple example of a ``/.dockstore.yml`` file
+for an alignment workflow to show you how easy it is to use. If you are interested in using this method, please see the 
+complete documentation at the :doc:`Dockstore GitHub Apps <./github-apps>` page. All paths in the file must be absolute.
 
 .. code:: yaml
 
    version: 1.2
    workflows:
       - subclass: CWL
-        primaryDescriptorPath: /Dockstore.cwl
+        primaryDescriptorPath: /aligner.cwl
         testParameterFiles:
-        - /test/dockstore.cwl.json
-        name: aligner
+        - /test/aligner.cwl.json
 
-If you had our GitHub App installed on a repository ``myorg/alignments`` and then add the above ``.dockstore.yml`` to the ``develop`` branch,
+If you had our GitHub App installed on the repository ``myorg/alignments`` and then add the above ``/.dockstore.yml`` to the **develop** branch,
 the following would occur.
 
-* A workflow with path ``github.com/myorg/alignments/aligner`` will be created on Dockstore
-* The version ``develop`` is added to the workflow ``github.com/myorg/alignments/aligner``
+* A **CWL** workflow with the ID ``github.com/myorg/alignments`` will be created on Dockstore
+* The version **develop** is added to the workflow ``github.com/myorg/alignments``
+* The version has the primary descriptor file set to ``/aligner.cwl``
+* The version has one test parameter file: ``/test/aligner.cwl.json``
 
-Now that your workflow has been added, any time there is a push to a branch on GitHub for this repository that has a ``.dockstore.yml``,
-it is automatically updated on Dockstore! Anytime there is a deletion of a branch on GitHub that has a ``.dockstore.yml``, the version is
+Now that your workflow has been added, any time there is a push to a branch on GitHub for this repository that has a ``/.dockstore.yml``,
+it is automatically updated on Dockstore! Anytime there is a deletion of a branch on GitHub that has a ``/.dockstore.yml``, the version is
 removed from Dockstore.
-
-See :doc:`Dockstore GitHub Apps <./github-apps>` for more information regarding the ``/.dockstore.yml`` file.
 
 .. tip:: Since the workflows field is an array, this file supports multiple workflows on Dockstore stemming from
    the same repository on GitHub. This is useful if you store a lot of your workflows in the same GitHub
-   repository.
+   repository. This is achieved setting a different value for the name field for each entry.
 
 .. note:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
 

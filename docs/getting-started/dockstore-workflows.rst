@@ -93,7 +93,7 @@ workflow doesn't already exist on Dockstore, one will be created.
 
 Below is a simple example of a ``/.dockstore.yml`` file
 for an alignment workflow to show you how easy it is to use. If you are interested in using this method, please see the 
-complete documentation at the :doc:`Dockstore GitHub Apps <./github-apps>` page.
+complete documentation at the :doc:`Dockstore GitHub Apps <./github-apps>` page. All paths in the file must be absolute.
 
 .. code:: yaml
 

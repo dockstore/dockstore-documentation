@@ -50,7 +50,7 @@ and Dockstore updates its copy of the workflow. For example, After publishing a 
 of a workflow on GitHub, a new version of the workflow will be present in
 Dockstore shortly afterwards.
 
-For this to work, a ``/.dockstore.yml`` file is required in the root directory of each GitHub repository you want
+For this to work, a ``/.dockstore.yml`` file is **required in the root directory of each GitHub repository** you want
 to associate with a workflow on Dockstore. A template for both workflows and services are shown below,
 along with explanations for each field. For every branch/release on GitHub that has one of these files, a corresponding entry
 will be made on Dockstore.
@@ -79,11 +79,11 @@ name (optional)
 subclass
     The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GXFORMAT2 (Galaxy).
 primaryDescriptorPath
-    The absolute path to the primary descriptor file in the Git repository
+    The absolute path to the primary descriptor file in the Git repository.
 testParameterFiles (optional)
     An array of absolute paths to test parameter files in the Git repository.
 
-Ex. .dockstore.yml with a single workflow
+Ex. /.dockstore.yml with a single workflow
 
 .. code:: yaml
 
@@ -94,9 +94,9 @@ Ex. .dockstore.yml with a single workflow
         testParameterFiles:
             - /test/dockstore.cwl.json
 
-The above ``.dockstore.yml`` is for a single workflow. Note that the name is not present since it is optional.
+The above ``/.dockstore.yml`` is for a single workflow. Note that the name is not present since it is optional.
 
-Ex. .dockstore.yml with multiple workflows
+Ex. /.dockstore.yml with multiple workflows
 
 .. important:: Though the **name** field is optional when a ``.dockstore.yml`` has one workflow in it,
     it must be used when a ``.dockstore.yml`` has multiple workflows in it. Each entry within a ``.dockstore.yml``
@@ -134,9 +134,10 @@ Next, create a ``/.dockstore.yml`` file and push it to a branch on your GitHub r
 If your workflow did not have a workflowname set, simply exclude the field. It is very important that these names match, or else Dockstore won't know which
 workflow to associate the ``/.dockstore.yml`` with.
 
-The pushing of a branch with a valid ``/.dockstore.yml`` should trigger Dockstore to convert your workflow into a GitHub App workflow! New versions will be added/updated/deleted
-as if the workflow was originally added using GitHub Apps.  Existing branches will persist, and you can even individually refresh them on the versions tab of the workflow.
-You can convert these existing workflows to use GitHub Apps by adding a valid ``/.dockstore.yml`` to the corresponding branches on GitHub.
+The pushing of a branch with a valid ``/.dockstore.yml`` in the root directory of the repository should trigger Dockstore to convert your workflow into a
+GitHub App workflow! New versions will be added/updated/deleted as if the workflow was originally added using GitHub Apps.  Existing branches will persist,
+and you can even individually refresh them on the versions tab of the workflow. You can convert these existing workflows to use GitHub Apps by adding a
+valid ``/.dockstore.yml`` to the corresponding branches on GitHub.
 
 Error Handling
 ----------------------------------

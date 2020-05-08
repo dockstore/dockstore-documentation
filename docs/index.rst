@@ -26,6 +26,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    getting-started/getting-started-with-cwl
    getting-started/getting-started-with-wdl
    getting-started/getting-started-with-nextflow
+   getting-started/getting-started-with-galaxy
    getting-started/register-on-dockstore
    getting-started/dockstore-tools
    getting-started/dockstore-workflows

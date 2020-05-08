@@ -1,5 +1,4 @@
-.. note::
-   The topics in this tutorial are experimental. We are working on improving support for rootless containers,
+.. note:: The topics in this tutorial are experimental. We are working on improving support for rootless containers,
    but for now, some things may not be compatible.
 
 Docker Alternatives
@@ -33,10 +32,10 @@ the problems using root in certain situations. There does not seem to be a way t
 can be used with Cromwell by editing the Singularity command format set in your Cromwell config file.
 
 More information about compatibility of dockerfiles with Singularity
-can be found `here <https://sylabs.io/guides/3.4/user-guide/singularity_and_docker.html#best-practices>`_.
+can be found `here <https://sylabs.io/guides/3.4/user-guide/singularity_and_docker.html#best-practices>`__.
 
 Singularity can be installed following the instructions
-`here <https://sylabs.io/guides/3.4/user-guide/quick_start.html>`_. Note that the installation is relatively complicated
+`here <https://sylabs.io/guides/3.4/user-guide/quick_start.html>`__. Note that the installation is relatively complicated
 and requires ``sudo``. Neither the macOS version (Singularity Desktop) nor the Debian/Ubuntu package version currently
 available (2.6.1) is compatible. You will need to download a version >3.0.0 and build it from source.
 
@@ -46,6 +45,7 @@ cwltool
 
 Singularity is available as a command line option for cwltool like this:
 ::
+
     cwltool --singularity <workflow> <input json>
 
 To set this option through Dockstore, add the following line to your ``~/.dockstore/config``:
@@ -57,10 +57,10 @@ Cromwell
 ~~~~~~~~
 
 Cromwell can be configured to use Singularity instead of Docker as described
-`here <https://cromwell.readthedocs.io/en/stable/tutorials/Containers/#singularity>`_.
+`here <https://cromwell.readthedocs.io/en/stable/tutorials/Containers/#singularity>`__.
 This requires creating a Cromwell config file with a section describing the backend provider settings.
 Examples of this are available in the Cromwell GitHub
-`here <https://github.com/broadinstitute/cromwell/tree/develop/cromwell.example.backends>`_.
+`here <https://github.com/broadinstitute/cromwell/tree/develop/cromwell.example.backends>`__.
 
 To tell Dockstore to run Cromwell with a custom configuration, such as the example config file linked above,
 add a line to your ``~/.dockstore/config``:

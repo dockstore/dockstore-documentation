@@ -65,31 +65,42 @@ required.
 
 The below summarizes some of the plugins available:
 
+.. |s3_plugin| replace:: `s3-plugin <https://github.com/dockstore/s3-plugin>`__
+.. |icgc_plugin| replace:: `icgc-storage-client-plugin <https://github.com/dockstore/icgc-storage-client-plugin>`__
+.. |synapse_plugin| replace:: `synapse-plugin <https://github.com/dockstore/synapse-plugin>`__
+.. |dos_plugin| replace:: `data-object-service-plugin <https://github.com/dockstore/data-object-service-plugin>`__
+.. |gcs_plugin| replace:: `gcs-plugin <https://github.com/dockstore/gs-plugin>`__
+
+.. |s3_example| replace:: s3://oicr.temp/bamstats\_report.zip
+.. |icgc_example| replace:: icgc://eeca3ccd-fa4e-57bf-9fde-c9d0ddf69935
+.. |dos_example| replace:: dos://ec2-52-26-45-130.us-west-2.compute.amazonaws.com:8080/911bda59-b6f9-4330-9543-c2bf96df1eca
+.. |gs_example| replace:: gs://genomics-public-data/references/GRCh38/chr1.fa.gz
+
 +-------------------------------+---------+---------------------------------+--------------+
 | Plugin                        | Prefix  | Example                         | Supported    |
 |                               |         |                                 | Operations   |
 +===============================+=========+=================================+==============+
-| `s3-plugin <https://github    | s3://   | s3://oicr.temp/bamstats\_repo   | download,    |
-| .com/dockstore/s3-plugin>`__  |         | rt.zip                          | upload, set  |
+| |s3_plugin|                   | s3://   | |s3_example|                    | download,    |
+|                               |         |                                 | upload, set  |
 |                               |         |                                 | metadata on  |
 |                               |         |                                 | upload       |
 +-------------------------------+---------+---------------------------------+--------------+
-| `icgc-storage-client-plugi    | icgc:// | icgc://eeca3ccd-fa4e-57bf-9fd   | download     |
-| n <https://github.com/dock    |         | e-c9d0ddf69935                  | directories  |
-| store/icgc-storage-client-    |         |                                 |              |
-| plugin>`__                    |         |                                 |              |
+| |icgc_plugin|                 | icgc:// | |icgc_example|                  | download     |
+|                               |         |                                 | directories  |
+|                               |         |                                 |              |
+|                               |         |                                 |              |
 +-------------------------------+---------+---------------------------------+--------------+
-| `synapse-plugin <https://g    | syn://  | syn://syn8299856                | download     |
-| ithub.com/dockstore/synaps    |         |                                 |              |
-| e-plugin>`__                  |         |                                 |              |
+| |synapse_plugin|              | syn://  | syn://syn8299856                | download     |
+|                               |         |                                 |              |
+|                               |         |                                 |              |
 +-------------------------------+---------+---------------------------------+--------------+
-| `data-object-service-plugi    | dos://  | dos://ec2-52-26-45-130.us-wes   | download     |
-| n <https://github.com/dock    |         | t-2.compute.amazonaws.com:808   |              |
-| store/data-object-service-    |         | 0/911bda59-b6f9-4330-9543-c2b   |              |
-| plugin>`__                    |         | f96df1eca                       |              |
+| |dos_plugin|                  | dos://  | |dos_example|                   | download     |
+|                               |         |                                 |              |
+|                               |         |                                 |              |
+|                               |         |                                 |              |
 +-------------------------------+---------+---------------------------------+--------------+
-| `gcs-plugin <https://githu    | gs://   | gs://genomics-public-data/ref   | download,    |
-| b.com/dockstore/gs-plugin>`__ |         | erences/GRCh38/chr1.fa.gz       | upload, set  |
+| |gcs_plugin|                  | gs://   | |gs_example|                    | download,    |
+|                               |         |                                 | upload, set  |
 |                               |         |                                 | metadata on  |
 |                               |         |                                 | upload       |
 +-------------------------------+---------+---------------------------------+--------------+
@@ -461,7 +472,6 @@ example:
 
     token: <my token>
     server-url: https://dockstore.org/api
-    cromwell-version: 50
     [WES]
     url: https://wes.qr1hi.arvadosapi.com/ga4gh/wes/v1
     authorization: Bearer <my token>

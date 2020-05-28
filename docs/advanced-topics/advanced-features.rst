@@ -472,7 +472,6 @@ example:
 
     token: <my token>
     server-url: https://dockstore.org/api
-    cromwell-version: 39
     [WES]
     url: https://wes.qr1hi.arvadosapi.com/ga4gh/wes/v1
     authorization: Bearer <my token>

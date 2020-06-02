@@ -120,7 +120,13 @@ removed from Dockstore.
    the same repository on GitHub. This is useful if you store a lot of your workflows in the same GitHub
    repository. This is achieved setting a different value for the name field for each entry.
 
+.. tip:: If you'd like to migrate an existing workflow to use GitHub apps, check out this :doc:`tutorial<./migrating-workflows-to-github-apps>`.
+
 .. note:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
+
+Troubleshooting tips
+^^^^^^^^^^^^^^^^^^^^
+.. include:: github-apps-troubleshooting-tips.rst
 
 Traditional Registration
 ~~~~~~~~~~~~~~~~~~~~~~~~

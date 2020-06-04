@@ -1,4 +1,4 @@
-.. Need to update with info about checking lambda errors in UI
+.. Need to update with info about checking lambda errors in UI https://github.com/dockstore/dockstore/issues/3530
 
 - If you don't see changes, try waiting a couple of minutes and refreshing the browser on the My Workflows page again.
 - Verify the GitHub app was given access to the right repository. If access was given to the wrong repo, you'll need to make another push after correcting it. Check by:

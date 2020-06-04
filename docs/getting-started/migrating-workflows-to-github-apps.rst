@@ -2,9 +2,8 @@ Migrating Your Existing Workflows to Use GitHub Apps
 ======================================================
 
 Dockstore 1.9.0 provides users with a way to keep their workflows automatically updated (instead of needing to manually refresh) by using GitHub apps.
-Here, we will go over how to migrate your existing Dockstore workflows to use GitHub apps. Also keep in mind that the migration process is done one branch/version at a time.
-This tutorial assumes that you are are familiar with the  ``/.dockstore.yml`` file by having read our overview of :doc:`GitHub apps </getting-started/github-apps>`. and the :ref:`Registration With GitHub Apps` section
-in our workflow registration document.
+Here, we will go over how to migrate your existing Dockstore workflows to use GitHub apps.
+This tutorial assumes that you are are familiar with the  ``/.dockstore.yml`` file by having read our overview of :doc:`GitHub apps </getting-started/github-apps>`. and the :ref:`Registration With GitHub Apps` section in our workflow registration document.
 
 GitHub App Installation
 -----------------------
@@ -34,7 +33,7 @@ Let's say we have the following CWL workflow registered on Dockstore that came f
 .. figure:: /assets/images/docs/single-workflow-to-migrate.png
    :alt: Workflow to Migrate
 
-As noted in our other documentation, create a ``/.dockstore.yml`` file in the root directory of the master branch in your repository. The file should look like the following
+As noted in our other documentation, create a ``/.dockstore.yml`` file in the root directory of the branch you want to migrate (in this example, it's the master branch) in your repository. The file should look like the following
 
 .. code:: yaml
 
@@ -75,9 +74,9 @@ If you see a workflow name inserted, you must include the name field in your ``/
             - /test/dockstore.cwl.json
         name: optional-name
 
-If you have multiple workflows stemming from the same repo, a single ``/.dockstore.yml`` can be used to convert them. Again, you need to check for the Workflow Name field being set
-because in this case, all but one workflow must have this field set (e.g. if you have three workflows from the same repo registered on Dockstore, at least two of them will have the Workflow Name set).
-If the name field in the ``dockstore.yml`` doesn't match the Workflow Name field in Dockstore, the migration will fail.
+If you have multiple workflows registered on Dockstore that stem from the same GitHub repo, a single ``/.dockstore.yml`` can be used to convert them.
+Again, you need to check for the Workflow Name field being set because it's need for multi workflow repositories.
+If the name field in the ``dockstore.yml`` doesn't match the Workflow Name field in Dockstore, the migration of your workflow on Dockstore will not go through and it will instead create a new Dockstore entry.
 Let's say we want to convert these two workflows that come from this `repository <https://github.com/NatalieEO/ghapps-single-workflow>`__.
 
 .. image:: /assets/images/docs/github-apps-multiple-workflows.png
@@ -111,8 +110,8 @@ You should see that the ``Workflow Information`` section looks a bit different.
 .. image:: /assets/images/docs/workflow-information-after-migration.png
 
 It now lists the mode as ``DOCKSTORE_YML`` instead of ``FULL`` and information about paths is no longer included.
-You are also no longer able to refresh or restub the workflow any more. However, you can still refresh versions/branches you haven't converted by going to the Versions tab, clicking Actions,
-and selecting Refresh Version.
+You are also no longer able to refresh or restub the workflow any more. Since you can't refresh the entire workflow anymore, **new** versions from GitHub (releases/branches) that you want to add to Dockstore must have a ``DOCKSTORE_YML``.
+However, you can still refresh already existing versions/branches on Dockstore that you haven't converted by going to the Versions tab, clicking Actions, and selecting Refresh Version.
 
 
 Troubleshooting Tips

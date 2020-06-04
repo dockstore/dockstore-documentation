@@ -73,7 +73,6 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    advanced-topics/best-practices/best-practices
    advanced-topics/best-practices/wdl-best-practices
    advanced-topics/best-practices/nfl-best-practices
-   advanced-topics/best-practices/dockstore-best-practices
 
 .. toctree::
    :caption: End User Topics

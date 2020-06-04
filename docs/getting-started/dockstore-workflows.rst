@@ -61,6 +61,8 @@ is the legacy registration process which is less automated, and used for Bitbuck
    link the necessary third-party accounts. Once this is done you can register
    workflows from the My Workflows page.
 
+.. _Registration With GitHub Apps:
+
 Registration With GitHub Apps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This is the newest way of getting content onto Dockstore and is by far the most automated. Using

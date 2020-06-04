@@ -1,10 +1,12 @@
 .. Need to update with info about checking lambda errors in UI
 
-- If you don't see changes, try waiting a couple of minutes and refreshing the page again.
+- If you don't see changes, try waiting a couple of minutes and refreshing the browser on the My Workflows page again.
 - Verify the GitHub app was given access to the right repository. If access was given to the wrong repo, you'll need to make another push after correcting it. Check by:
 
     - Navigating to the ``+ Manage Dockstore Installation on GitHub`` button mentioned above
     - Go to your repo on GitHub, click the Settings tab, click Integrations on the left and verify our app is installed and configured correctly
+
+.. image:: /assets/images/docs/github-repo-settings.png
 
 - Double check the ``/.dockstore.yml`` file.
 

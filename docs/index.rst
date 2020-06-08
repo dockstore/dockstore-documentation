@@ -32,6 +32,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    getting-started/hosted-tools-and-workflows
    getting-started/getting-started-with-services
    getting-started/github-apps
+   getting-started/migrating-workflows-to-github-apps
 
 .. toctree::
    :caption: Launch

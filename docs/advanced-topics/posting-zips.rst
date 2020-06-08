@@ -1,6 +1,8 @@
 Posting Zip Files
 =================
 
+.. note:: The endpoint used in this document is now deprecated.  Use at your own discretion.
+
 Dockstore has an
 `API <https://dockstore.org/api/static/swagger-ui/index.html#/hosted/addZip>`__
 to post the contents of a ZIP file as a new hosted workflow version.

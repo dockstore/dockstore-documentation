@@ -311,14 +311,22 @@ primary descriptor is in the root directory of its git repository.
 WDL Launcher Configuration
 --------------------------
 
-By default, WDL tools/workflows will automatically be run with
-`cromwell <https://github.com/broadinstitute/cromwell>`__ 36.
+By default, WDL tools/workflows will automatically be run by the Dockstore CLI
+with the `Cromwell <https://github.com/broadinstitute/cromwell>`__ version listed below.
+
++-------------+-----------------------+
+| CLI version | Cromwell Version used |
++=============+=======================+
+|     1.8.0   |          44           |
++-------------+-----------------------+
+
+
 Additionally, you can override the cromwell version in your
 ``~/.dockstore/config`` using:
 
 ::
 
-    cromwell-version = 39
+    cromwell-version = 51
 
 You can test cromwell by cloning the dockstore-tool-md5sum repository:
 ``git clone git@github.com:briandoconnor/dockstore-tool-md5sum.git`` and

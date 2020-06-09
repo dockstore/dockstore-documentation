@@ -20,6 +20,7 @@
             <th style="padding: 5px;">CWL</th>
             <th style="padding: 5px;">WDL</th>
             <th style="padding: 5px;">Nextflow</th>
+            <th style="padding: 5px;">Galaxy</th>
         </tr>
     </thead>
 
@@ -29,11 +30,13 @@
             <th style="padding: 5px;"></th>
             <th style="padding: 5px;"></th>
             <th style="padding: 5px;"></th>
+            <th style="padding: 5px;"></th>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;"><a href="../getting-started/dockstore-tools.html">Tool registration</a></td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
+            <td style="background-color:#fcf8e3; padding: 5px;">No</td>
             <td style="background-color:#fcf8e3; padding: 5px;">No</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
@@ -41,9 +44,11 @@
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
+            <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;"><a href="../getting-started/hosted-tools-and-workflows.html">Hosted Workflows</a></td>
+            <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
@@ -57,11 +62,13 @@
                 <sup>[1]</sup>
             </td>
             <td style="background-color:#dff0d8; padding: 5px;">Limited support</td>
+            <td style="background-color:#dff0d8; padding: 5px;">Limited support</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;">Tool Tab Display</td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes (cwl version=>1.1)</td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes (wdl version&lt;=1.0)</td>
+            <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
@@ -79,28 +86,30 @@
                 <br>
             </td>
             <td style="background-color:#fcf8e3; padding: 5px;">Not yet!</td>
+            <td style="background-color:#fcf8e3; padding: 5px;">Not yet!</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;">Metadata Display</td>
             <td style="background-color:#dff0d8; padding: 5px;"><a href="../advanced-topics/best-practices/best-practices.html#best-practices">Yes</a></td>
             <td style="background-color:#dff0d8; padding: 5px;"><a href="../advanced-topics/best-practices/wdl-best-practices.html#best-practices">Yes (wdl version&lt;=1.0)</a></td>
             <td style="background-color:#dff0d8; padding: 5px;"><a href="../advanced-topics/best-practices/nfl-best-practices.html#best-practices">Yes</a></td>
+            <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <th style="padding: 5px;">Dockstore CLI</th>
             <th style="padding: 5px;"></th>
             <th style="padding: 5px;"></th>
             <th style="padding: 5px;"></th>
+            <th style="padding: 5px;"></th>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;"><a href="../end-user-topics/launch.html#dockstore-cli">Local workflow engines</a></td>
-            <td style="background-color:#dff0d8; padding: 5px;">cwltool, Cromwell
-            </td>
+            <td style="background-color:#dff0d8; padding: 5px;">cwltool, Cromwell</td>
             <td style="background-color:#dff0d8; padding: 5px;">Cromwell
                 <sup>[6]</sup>
             </td>
-            <td style="background-color:#dff0d8; padding: 5px;">Nextflow
-            </td>
+            <td style="background-color:#dff0d8; padding: 5px;">Nextflow</td>
+            <td style="background-color:#fcf8e3; padding: 5px;">None</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;"><a href="../advanced-topics/advanced-features.html#file-provisioning">File Provisioning</a> In</td>
@@ -123,6 +132,7 @@
                 <br><a href="https://www.nextflow.io/docs/latest/script.html#http-ftp-files">FTP</a>
                 <br><a href="https://www.nextflow.io/docs/latest/amazons3.html#">S3</a>
             </td>
+            <td style="background-color:#fcf8e3; padding: 5px;">No</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;">Plugins Support</td>
@@ -149,6 +159,7 @@
                 <a href="https://github.com/dockstore/data-object-service-plugin">Data Object Service</a>
             </td>
             <td style="background-color:#fcf8e3; padding: 5px;">No</td>
+            <td style="background-color:#fcf8e3; padding: 5px;">No</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;">File Provisioning Out</td>
@@ -169,11 +180,13 @@
             <td style="background-color:#dff0d8; padding: 5px;">Local File System
                 <br><a href="https://www.nextflow.io/docs/latest/process.html#storedir">S3</a>
             </td>
+            <td style="background-color:#fcf8e3; padding: 5px;">No</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;"><a href="../advanced-topics/advanced-features.html#notifications">Notifications</a></td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
+            <td style="background-color:#fcf8e3; padding: 5px;">No</td>
             <td style="background-color:#fcf8e3; padding: 5px;">No</td>
         </tr>
     </body>

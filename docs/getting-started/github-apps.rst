@@ -124,7 +124,75 @@ entries of the `workflows` array. For each unique name present, an entry will be
 
 Service YML File
 +++++++++++++++++
-TODO
+For a service, the ``/.dockstore.yml`` has this general structure for version 1.2:
+
+.. code:: yaml
+
+    version: 1.2
+    service:
+      subclass: <DOCKER_COMPOSE | KUBERNETES | HELM | SWARM | NOT_APPLICABLE>
+      name: <String>
+      author: <String>
+      description: <String>
+
+      files: <String Array>
+
+      scripts:
+        start: <String>
+        postprovision: <String>
+        port: <String>
+        stop: <String>
+
+      environment:
+        <environmentVariableName>:
+            default: <String | Integer>
+            description: <String>
+
+      data:
+        <datasetName>:
+            targetDirectory: <String>
+            files:
+                <name>:
+                    description: <String>
+
+version
+    The version of the .dockstore.yml schema which is currently at 1.2.
+service
+    Used to describe a single service.
+subclass
+    Indicates which container system will be used for your service.
+name
+    Optional name for your service.
+author
+    Optional author for your service.
+description
+    Optional description for your service
+files
+    An array of files Dockstore will index from your GitHub repo. Wildcards are not supported.
+scripts
+    This section description the scripts that the service launcher will execute. Can only be used with the following keys: preprovision, prestart, start, postprovision, port, healthcheck, and stop. They can filled with either the name of the script file or the commands that need to be ran for each portion.
+preprovision
+    (Optional) Invoked before any data has been downloaded and some initialization is required.
+prestart
+    (Optional) Executed after data has been downloaded locally, but before service has started (see the data section)
+start
+    Starts up the service.
+postprovision
+    (Optional) After the service has been started. This might be invoked multiple times, e.g., if the user decides to load multiple sets of data.
+port
+    (Optional) Which port the service is exposing. This provides a generic way for the tool to know which port is being exposed, e.g., to reverse proxy it.
+healthcheck
+    (Optional) exit code of 0 if service is running normally, non-0 otherwise.
+stop
+    (Optional) stops the service
+environment
+    This section describes environment variables that the launcher is responsible for passing to any scripts that it invokes. The names must be valid environment variable names. Users can specify the values of the parameters in the input parameter JSON (see below). These variables are service-specific, i.e., the service creator decides what values, if any, to expose as environment variables. For every environment variable, you must give it a name and you can optionally give them a default value and description.
+data
+    This section describes data that should be provisioned locally for use by the service. The service launcher is responsible for provisioning the data. You can create as many keys as you need where each key is the name of a dataset. For every key you create, you must give a target directory (path will be relative) to indicate where the files should be downloaded to. You must also give an array of files as a key and provide the name of each file. You can optionally provide a description of each file.
+
+It's important to note that we originally released our services tutorial using version 1.1 of the ``/.dockstore.yml`` file. For more info on
+services and registering them, check out our :doc:`Getting Started with Services <./getting-started-with-services>` which has been updated to use 1.2.
+
 
 Error Handling
 ----------------------------------

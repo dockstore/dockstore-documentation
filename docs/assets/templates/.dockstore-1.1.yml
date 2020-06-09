@@ -1,4 +1,4 @@
-# The .dockstore.yml for version 1.2
+# The .dockstore-1.1.yml version; 1.1 is required for services
 version: 1.1
 
 # A required key named service
@@ -29,7 +29,7 @@ service:
     postprovision:
     port:
     stop:
-
+      
   # These are environment variables that the launcher is responsible for passing to any scripts that it invokes.
   # The names must be valid environment variable names.
   # Users can specify the values of the parameters in the input parameter JSON (see below).
@@ -41,8 +41,8 @@ service:
   #    - An optional description, which can be used by the service launcher as a prompt
   environment:
     httpPort:
-      default:
-      description:
+        default:
+        description:
 
   # This section describes data that should be provisioned locally for use by
   # the service. The service launcher is responsible for provisioning the data.
@@ -57,9 +57,9 @@ service:
   #           - targetDirectory -- optionally override the dataset's targetDirectory if this file needs to go in a different location.
   data:
     dataset_1:
-      targetDirectory:
-      files:
-        tsv:
-          description:
-        metadata:
-          description:
+        targetDirectory:
+        files:
+            tsv:
+                description:
+            metadata:
+                description:

@@ -24,18 +24,15 @@ all that is required for your service to appear on Dockstore. But, we will brief
 You can also view a template ``.dockstore.yml`` file `here
 <https://github.com/dockstore/dockstore-documentation/blob/1e487775aa8ca22e38ec2193dc671d31b3d1eecf/docs/assets/templates/.dockstore.yml>`_.
 
-.. figure:: /assets/images/docs/service-example.png
+.. figure:: /assets/images/docs/service-example-1.2.png
 
-
-Line 1 specifies the ``.dockstore.yml`` version, which must be 1.1 for services.
+Line 1 specifies the ``.dockstore.yml`` version. The latest version you should use is 1.2.
 
 Next is a required key named ``service`` where your service description will lie.
 
-Within this, you should specify the type which can be docker-compose, swarm, kubernetes, or helm.
+Within this, you should specify the type which can be DOCKER_COMPOSE, KUBERNETES, HELM, SWARM, NOT_APPLICABLE.
 
-.. Not actually working right now
-
-Following lines 4-9, it is good practice to include the name, author, and a description of your service. This information will be parsed and displayed on your service's page on Dockstore.
+Following lines 4-9, it is good practice to include the name, author, and a description of your service.
 
 Next, is the files key. Here you can specify a list of other files (like scripts, READmes, and test parameter files) for Dockstore to index that are contained in your repository and are needed for your service.
 

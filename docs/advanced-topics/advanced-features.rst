@@ -315,7 +315,7 @@ By default, WDL tools/workflows will automatically be run by the Dockstore CLI
 with the `Cromwell <https://github.com/broadinstitute/cromwell>`__ version listed below.
 
 +-------------+-----------------------+
-| CLI version | Cromwell Version used |
+| CLI version | Cromwell version used |
 +=============+=======================+
 |     1.8.0   |          44           |
 +-------------+-----------------------+

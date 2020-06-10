@@ -138,9 +138,12 @@ For a service, the ``/.dockstore.yml`` has this general structure for version 1.
       files: <String Array>
 
       scripts:
+        preprovision: <String>
+        prestart: <String>
         start: <String>
         postprovision: <String>
         port: <String>
+        healthcheck: <String>
         stop: <String>
 
       environment:

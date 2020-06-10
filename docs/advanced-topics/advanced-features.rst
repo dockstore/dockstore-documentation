@@ -317,7 +317,7 @@ with the `Cromwell <https://github.com/broadinstitute/cromwell>`__ version liste
 +-------------+-----------------------+
 | CLI version | Cromwell version used |
 +=============+=======================+
-|     1.8.0   |          44           |
+|     1.8     |          44           |
 +-------------+-----------------------+
 
 

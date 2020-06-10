@@ -319,6 +319,8 @@ with the `Cromwell <https://github.com/broadinstitute/cromwell>`__ version liste
 +=============+=======================+
 |     1.8     |          44           |
 +-------------+-----------------------+
+|     1.9     |          44           |
++-------------+-----------------------+
 
 
 Additionally, you can override the cromwell version in your

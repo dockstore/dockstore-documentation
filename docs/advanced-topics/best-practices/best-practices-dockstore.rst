@@ -44,10 +44,13 @@ For more detailed information on these metadata fields, check out the following 
 - :doc:`CWL Best Practices <./best-practices>`
 - :doc:`Nextflow Best Practices <./nfl-best-practices>` and `Nextflow manifest documentation <https://www.nextflow.io/docs/latest/config.html#scope-manifest>`_
 
+.. note:: In CWL descriptors, you can include information about your input and output files and our search will understand it. This information will be visible on the facets ``Input File Formats`` and ``Output File Formats``. Read CWL's guide on `file formats <https://www.commonwl.org/user_guide/16-file-formats/index.html>`_ to learn how.
+
 You can also provide a description by writing a README.md file instead. If you do not provide description metadata in your descriptor, then we will try to pull the README.md file as a fallback.
 
 Another tip was already mentioned above; host your repositories on a non-personal organization. Similarly, try to use a non-personal namespace to register your Docker images.
-Doing this will group your tools/workflows together under our ``Tool: Namespace`` and ``Workflow: Organization`` facets.
+Doing this will group your tools/workflows together under our ``Tool: Namespace`` and ``Workflow: Organization`` facets. This also helps by letting you add other developers
+that can manage your content on and off Dockstore if you ever become unavailable.
 
 You should also consider adding labels to your entry since ``Labels`` is another facet on the search page. You can do this by going to `My Tools <https://www.dockstore.org/my-tools>`_ or `My Workflows <https://www.dockstore.org/my-workflows>`_ page.
 On the right hand side, above the tabs, you will see the text ``Manage labels``.
@@ -79,7 +82,7 @@ Because it will be one the of first things a user will see when looking at your 
 * How to Use Section.
 
    * What are the system requirements? Minimum and recommended
-   * Describe the input and output files
+   * Describe the input and output files (Can also be included in CWL descriptor files. See blue ``! Note`` box above.)
 
       * What are their names?
       * What data do they contain?
@@ -94,7 +97,7 @@ Because it will be one the of first things a user will see when looking at your 
    * Does your tool/workflow work together with other entries? If so, describe how they can be used together and provide links.
    * Link out to other similar entries you think could be useful to others.
 
-* Contact Section
+* Contact Section (Can be included in other metadata fields as mentioned in the Making it Easier to Find section.)
 * Citations
 
    * Does your workflow employ packages that should be cited?

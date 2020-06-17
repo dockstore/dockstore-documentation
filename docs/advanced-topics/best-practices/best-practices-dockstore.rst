@@ -11,17 +11,12 @@ Unless you're writing your tool/workflow directly on Dockstore, your entry will 
 Whichever repository service you use, we recommend that your tool and workflow repositories are put under a non-personal organization, if possible.
 This allows for better organization and collaboration, and also provides a fallback for others if you become inactive on the git repository site.
 
-We also highly recommend that you do NOT host different tools and workflows on a single repo by putting them on different branches.
-Our reasoning is that branches are supposed to be used when working on a new feature or bug fix. That means they should eventually be merged with the repository's main branch.
-Another reason why we are against this practice is because it can lead to a lot of clutter on the Dockstore entries themselves.
-Let's say you have three workflows in a single repo on separate branches and there are many tags/releases related to each one.
+We generally advise against git repositories that contain multiple tools or workflows. But we recognize that it's a common way to share code, so we do support it.
+However, there are two benefits for having only one tool or workflow per repository. First, your Dockstore entries can have shorter names because an extra name is required
+to distinguish between the entries during registration. The other plus is that there will be less clutter on the Versions tab of each entry.
+Let's say you have a repo that contains three different workflows on separate branches and there are many tags/releases related to each one.
 Depending on how you register the workflows on Dockstore, each entry could have the other two branches and every single tag/release
 on its Versions tab. All of this clutter can be overwhelming or confusing for users to see.
-
-Likewise, we don't recommend using even a single branch to contain multiple entries. A repository should essentially represent one project, but that practice can be a grey area.
-If a lot of different workflows or tools work together or are closely related, it can be argued that they're all part of a single project.
-If that is the case, and you want to keep them tied together this way, make sure to give the descriptor files helpful file names.
-It can also help to keep them organized using different, well-named folders for each entry.
 
 One exception to this rule is when you describe the same tool or workflow with multiple descriptor languages. For example, we describe the same bamstats tool
 in our :doc:`Getting Started with CWL <../../getting-started/getting-started-with-cwl>` and :doc:`Getting Started with WDL <../../getting-started/getting-started-with-wdl>` tutorials.
@@ -70,7 +65,7 @@ and highlight your tools and workflows by adding them to a Collection.
 Making It Easier to Understand
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Once a user has found your entry, they need to understand what it does and how to use it! The most important thing you can do so others understand your work is to provide a thorough description.
-You can do this by filling out the metadata field as explained in the best practices tutorials linked above, or you can write one in the README.md file.
+You can do this by filling out the metadata field as explained in the best practices tutorials linked above. If no description is found in the descriptor file, we will use the README.md file.
 Your description, using either method, can be formatted using markdown. Once registered, it will be parsed by Dockstore and made available on the Info tab of an entry.
 Because it will be one the of first things a user will see when looking at your entry, you should make it as detailed as possible. Here is a list of items to write about:
 

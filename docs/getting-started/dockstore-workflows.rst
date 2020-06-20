@@ -126,11 +126,9 @@ removed from Dockstore.
 
 .. note:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
 
-
 .. seealso::
     - :doc:`Migrating Your Existing Workflows <github-apps/migrating-workflows-to-github-apps>` - a tutorial on converting already registered workflows
     - :doc:`Troubleshooting and FAQ <github-apps/github-apps-troubleshooting-tips>` - tips on resolving Dockstore Github App issues.
-
 
 Traditional Registration
 ~~~~~~~~~~~~~~~~~~~~~~~~

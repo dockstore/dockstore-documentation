@@ -1,7 +1,6 @@
-#########################################################
+======================================================
 Automatic Syncing with GitHub Apps and .dockstore.yml
-#########################################################
-
+======================================================
 ..
     TODO: update error handling section with info about checking lambda errors in UI https://github.com/dockstore/dockstore/issues/3530
 

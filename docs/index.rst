@@ -30,6 +30,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    getting-started/dockstore-tools
    getting-started/dockstore-workflows
    getting-started/hosted-tools-and-workflows
+   getting-started/getting-started-with-services
 
 .. toctree::
 

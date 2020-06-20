@@ -1,5 +1,9 @@
+#########################################################
 Automatic Syncing with GitHub Apps and .dockstore.yml
-======================================================
+#########################################################
+
+..
+    TODO: update error handling section with info about checking lambda errors in UI https://github.com/dockstore/dockstore/issues/3530
 
 Overview
 --------
@@ -7,8 +11,8 @@ Overview
 This document gives a high level overview of how Dockstore uses GitHub apps.
 For extra details on configuring and using the Dockstore
 GitHub App with workflows or services, please see either
-:doc:`Getting Started with Workflow <./dockstore-workflows>` or
-:doc:`Getting Started with Services <./getting-started-with-services>`.
+:ref:`Registration With GitHub Apps <Registration With GitHub Apps>` or
+:doc:`Getting Started with Services </getting-started/getting-started-with-services>`.
 
 With the Dockstore GitHub App installed, authors do not need to manually refresh their
 workflows/services on Dockstore to get the latest changes from GitHub. Dockstore will
@@ -194,7 +198,7 @@ data
     This section describes data that should be provisioned locally for use by the service. The service launcher is responsible for provisioning the data. You can create as many keys as you need where each key is the name of a dataset. For every key you create, you must give a target directory (path will be relative) to indicate where the files should be downloaded to. You must also give an array of files as a key and provide the name of each file. You can optionally provide a description of each file.
 
 It's important to note that we originally released our services tutorial using version 1.1 of the ``/.dockstore.yml`` file. For more info on
-services and registering them, check out our :doc:`Getting Started with Services <./getting-started-with-services>` which has been updated to use 1.2.
+services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>` which has been updated to use 1.2.
 
 
 Error Handling
@@ -219,8 +223,8 @@ As always, you can reach out to our team on our `discussion forum <https://discu
 See Also
 --------
 
-- :doc:`Getting Started with Services <./getting-started-with-services>`
-- :doc:`Getting Started with Workflows <./dockstore-workflows>`
+- :doc:`Getting Started with Services </getting-started/getting-started-with-services>`
+- :doc:`Getting Started with Workflows </getting-started/dockstore-workflows>`
 
 .. discourse::
        :topic_identifier: 2240

@@ -19,3 +19,5 @@ Check for broken links
 `make linkcheck`
 
 Open the _build/html/index.html in your browser!
+
+Developer Docs: https://wiki.oicr.on.ca/display/DOC/Read+The+Docs

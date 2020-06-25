@@ -67,7 +67,9 @@ Registration With GitHub Apps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This is the newest way of getting content onto Dockstore and is by far the most automated. Using
 GitHub Apps, Dockstore can react to changes on GitHub as they are made, keeping Dockstore synced
-with GitHub automatically. To install our GitHub App on either a repository or organization,
+with GitHub automatically.
+
+To install our GitHub App on either a repository or organization,
 navigate to the ``/my-workflows`` page and click add workflow. Follow the steps for GitHub Apps and
 you will be redirected to GitHub where you can select which repositories to install the Dockstore
 GitHub app on. The process is shown in the following images.
@@ -95,7 +97,7 @@ workflow doesn't already exist on Dockstore, one will be created.
 
 Below is a simple example of a ``/.dockstore.yml`` file
 for an alignment workflow to show you how easy it is to use. If you are interested in using this method, please see the 
-complete documentation at the :doc:`Dockstore GitHub Apps <./github-apps>` page. All paths in the file must be absolute.
+complete documentation at the :doc:`Dockstore GitHub Apps <github-apps/github-apps>` page. All paths in the file must be absolute.
 
 .. code:: yaml
 
@@ -122,13 +124,11 @@ removed from Dockstore.
    the same repository on GitHub. This is useful if you store a lot of your workflows in the same GitHub
    repository. This is achieved setting a different value for the name field for each entry.
 
-.. tip:: If you'd like to migrate an existing workflow to use GitHub apps, check out this :doc:`tutorial<./migrating-workflows-to-github-apps>`.
-
 .. note:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
 
-Troubleshooting tips
-^^^^^^^^^^^^^^^^^^^^
-.. include:: github-apps-troubleshooting-tips.rst
+.. seealso::
+    - :doc:`Migrating Your Existing Workflows <github-apps/migrating-workflows-to-github-apps>` - a tutorial on converting already registered workflows
+    - :doc:`Troubleshooting and FAQ <github-apps/github-apps-troubleshooting-tips>` - tips on resolving Dockstore Github App issues.
 
 Traditional Registration
 ~~~~~~~~~~~~~~~~~~~~~~~~

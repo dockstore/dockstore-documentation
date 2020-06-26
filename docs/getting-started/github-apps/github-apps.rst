@@ -144,6 +144,7 @@ For a service, the ``/.dockstore.yml`` has this general structure for version 1.
         preprovision: <String>
         prestart: <String>
         start: <String>
+        poststart: <String>
         postprovision: <String>
         port: <String>
         healthcheck: <String>
@@ -183,6 +184,8 @@ prestart
     (Optional) Executed after data has been downloaded locally, but before service has started (see the data section)
 start
     Starts up the service.
+poststart
+    (Optional) Associated script will run after the service has started
 postprovision
     (Optional) After the service has been started. This might be invoked multiple times, e.g., if the user decides to load multiple sets of data.
 port

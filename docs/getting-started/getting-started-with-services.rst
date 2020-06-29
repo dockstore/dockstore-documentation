@@ -21,8 +21,7 @@ Create Your Service
 
 The first step is to create a file named ``.dockstore.yml``. The ``.dockstore.yml``  is a configuration file used to describe your service. Technically, having a valid YAML and the right version is
 all that is required for your service to appear on Dockstore. But, we will briefly cover an example ``.dockstore.yml`` written for the Xena Hub to show what will generally be needed to create a working service.
-You can also view a template ``.dockstore.yml`` file `here
-<https://github.com/dockstore/dockstore-documentation/blob/1e487775aa8ca22e38ec2193dc671d31b3d1eecf/docs/assets/templates/.dockstore.yml>`_.
+You can also view a template ``.dockstore.yml`` file :doc:`here </assets/templates/template>`.
 
 .. figure:: /assets/images/docs/service-example-1.2.png
 

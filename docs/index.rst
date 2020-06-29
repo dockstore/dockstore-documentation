@@ -92,6 +92,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
    user-created
    posters-and-talks
+   /assets/templates/template.rst
 
 .. toctree::
    :caption: FAQ

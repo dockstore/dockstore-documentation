@@ -8,7 +8,7 @@ bug free and ready to share with others. It's time to release
 
 Releasing will tag your GitHub repository with a version tag so you can
 always get back to this particular release. I'm going to use the tag
-``1.25-6_1.1`` which I'll need to update in my Docker image tag and also
+``1.25-6_1.1`` which I'll need to update the Docker image tag in
 my CWL/WDL/Nextflow file. Note that if you're following the tutorial
 using a forked version of the bamstats repo, your organization name
 should be different. GitHub makes it very easy to release:

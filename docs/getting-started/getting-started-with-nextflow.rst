@@ -173,6 +173,8 @@ input section of the process.
     bash /usr/local/bin/bamstats $mem_gb $bam_input
     """
 
+.. _Testing Nextflow Locally:
+
 Testing Locally
 ---------------
 

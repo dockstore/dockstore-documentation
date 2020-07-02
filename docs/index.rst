@@ -31,7 +31,10 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    getting-started/dockstore-workflows
    getting-started/hosted-tools-and-workflows
    getting-started/getting-started-with-services
-   getting-started/github-apps
+
+.. toctree::
+
+   getting-started/github-apps/github-apps-landing-page
 
 .. toctree::
    :caption: Launch
@@ -43,6 +46,15 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    launch-with/dnanexus-launch-with
    launch-with/dnastack-launch-with
    launch-with/terra-launch-with
+
+.. toctree::
+   :caption: End User Topics
+   :maxdepth: 1
+
+   end-user-topics/end-user-topics
+   end-user-topics/faceted-search
+   end-user-topics/starring
+   end-user-topics/language-support
 
 .. toctree::
    :caption: Advanced Developer Topics
@@ -61,6 +73,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    advanced-topics/advanced-features
    advanced-topics/docker-alternatives
    advanced-topics/snapshot-and-doi
+   advanced-topics/checksum-support
    advanced-topics/conversions
    advanced-topics/batch-services
    advanced-topics/aws-batch
@@ -71,15 +84,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    advanced-topics/best-practices/best-practices
    advanced-topics/best-practices/wdl-best-practices
    advanced-topics/best-practices/nfl-best-practices
-
-.. toctree::
-   :caption: End User Topics
-   :maxdepth: 1
-
-   end-user-topics/end-user-topics
-   end-user-topics/faceted-search
-   end-user-topics/starring
-   end-user-topics/language-support
+   advanced-topics/best-practices/best-practices-dockstore
 
 .. toctree::
    :caption: Extras
@@ -87,6 +92,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
    user-created
    posters-and-talks
+   /assets/templates/template.rst
 
 .. toctree::
    :caption: FAQ

@@ -11,12 +11,12 @@ Highlighted new features include:
 
    -  TRS v2 beta standard support is deprecated, but still present
 
--  Capture of file and docker image checksums from GitHub, quay.io, Gitlab, and Docker Hub on workflow snapshot to support immutable workflows (see breakdown for details here_)
--  Support for linking ORCID profiles user profiles
+-  Capture of file and docker image checksums from GitHub, Quay.io, GitLab, and Docker Hub on workflow snapshot to support immutable workflows (see breakdown for details here_)
+-  Support for linking ORCID profiles to Dockstore user profiles
 
    -  Currently displayed in organization and stargazer views
 
--  A large number of usability improvements and fixes to the user interface website
+-  A large number of usability improvements and fixes to the user interface
 -  Partial API migration from swagger 2.0 to openapi 3.0 for the Dockstore API
 -  Improved language plugin support so it's easier for Dockstore to support additional languages (like Galaxy)
 -  A large variety of security updates and bug fixes

@@ -1,0 +1,41 @@
+Dockstore 1.9.0
+===============
+
+Highlighted new features include:
+---------------------------------
+
+-  Preview feature for Galaxy workflow support
+-  Performance improvements for a large variety of endpoints
+-  GitHub app support in preview to allow for automated update of workflow content
+-  Implementation of the `TRS v2 final standard <https://github.com/ga4gh/tool-registry-service-schemas/releases/tag/2.0.0>`_
+
+   -  TRS v2 beta standard support is deprecated, but still present
+
+-  Capture of file and docker image checksums from GitHub, Quay.io, GitLab, and Docker Hub on workflow snapshot to support immutable workflows (see breakdown for details here_)
+-  Support for linking ORCID profiles to Dockstore user profiles
+
+   -  Currently displayed in organization and stargazer views
+
+-  A large number of usability improvements and fixes to the user interface
+-  Partial API migration from swagger 2.0 to openapi 3.0 for the Dockstore API
+-  Improved language plugin support so it's easier for Dockstore to support additional languages (like Galaxy)
+-  A large variety of security updates and bug fixes
+
+As always, see our full list of changes on `GitHub`_
+
+Breaking changes
+----------------
+
+Major
+~~~~~
+
+None intended
+
+Minor
+~~~~~
+
+- If upgrading the Dockstore CLI, our Dockstore script has changed and should be downloaded anew from the onboarding wizard
+- The CLI refresh command will be broken until you update to CLI version 1.9.
+
+.. _GitHub: https://github.com/dockstore/dockstore/milestone/31
+.. _here: https://docs.dockstore.org/en/develop/advanced-topics/checksum-support.html

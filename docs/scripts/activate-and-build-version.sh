@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # First command line argument is your readthedocs token. https://readthedocs.org/accounts/tokens/
-# Second command line argument is the name of your branch. If you name your branch to include a '/' you will need change to "-" and uppercase becomes lowercase.
+# Second command line argument is the name of your branch. If you name your branch to include a '/' you will need change it to "-" and uppercase becomes lowercase.
 # "feature/testBranch" -> "feature-testbranch"
 
 set -o errexit

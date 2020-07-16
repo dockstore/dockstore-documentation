@@ -94,6 +94,14 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    posters-and-talks
    /assets/templates/template.rst
 
+
+.. toctree::
+   :caption: BCC 2020
+   :maxdepth: 1
+
+   docker_instructions
+   wdl_instructions
+
 .. toctree::
    :caption: FAQ
    :maxdepth: 1

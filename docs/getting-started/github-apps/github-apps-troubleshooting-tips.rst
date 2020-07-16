@@ -54,6 +54,25 @@ you'll need to push another commit after correcting it to activate the sync to D
     - Are all indentation levels correct?
     - Does the name field match, if applicable?
 
+The changes made to my GitHub repo aren't appearing on Dockstore, but I've already installed the GitHub app and made the ``.dockstore.yml`` file. How can I figure out what's going wrong?
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If you've already tried waiting a couple of minutes and refreshing the browser on the My Workflows page, you can view GitHub App logs through Dockstore to see if there have been any errors.
+Navigate to the ``/my-workflows`` page and expand the GitHub Organization that the repository belongs to on the left hand side. Then click on the bottom where it says ``See GitHub App Logs``.
+
+.. image:: /assets/images/docs/github-app-logs-button.png
+   :width: 40 %
+
+Once loaded, the following window will be displayed.
+
+.. image:: /assets/images/docs/github-app-logs-window.png
+
+Here you can view all the GitHub app events Dockstore is aware of and whether they failed or were successful. If there was a failure, you can expand that row and view the error message as shown below.
+
+.. image:: /assets/images/docs/github-app-logs-error-message.png
+
+If you're having trouble finding the relevant logs, try searching for the name of your repository by using the filter on the upper left. You can also sort the rows by clicking on a column heading.
+For example, if you click the ``Success`` column heading once, it will list all the events that failed first.
+
 Can I use GitHub Apps to register tools?
 ------------------------------------------
 The Dockstore GitHub App currently only supports Workflows and Services.

@@ -112,21 +112,21 @@ docker run tabix:latest tabix
 
 You should see the help message from tabix. Congratulations! You have successfully created and ran your first Dockerfile.
 
-# Readings
+## Readings
 There are readings to help with the exercises. Refer here for any questions you may have before asking for help.
 
-## Exercise 1
-### Part A Readings
+### Exercise 1
+#### Part A Readings
 Whalesay is a program that given some text, will print out an ASCII whale that is saying the text. It is based on a program called cowsay.
 
 The docker run command is used to create a running container based on a Docker image. You can read more about the run command from their [official documentation](https://docs.docker.com/engine/reference/run/).
 
-### Part B Readings
+#### Part B Readings
 There are two useful concepts needed for this section.
 * Running containers interactively
 * Sharing data between host and container
 
-#### Running containers interactively
+##### Running containers interactively
 To run the container interactively, use the flags -i -t.
 
 _-i_ : keeps STDIN open for interactive use
@@ -146,7 +146,7 @@ samtools --help
 
 You should see the samtools help printed to the screen. Now exit the container by typing exit.
 
-#### Sharing data between host and container
+##### Sharing data between host and container
 With the run command, we can pass along the -v flag to map a folder on the host machine to a folder on the container.
 
 In this example, `/root/bcc2020-training/data` is on the host machine and `/data` is on the container:

@@ -41,14 +41,14 @@ Now try getting the whale to say "Hello [your name]!".
 We will now try running a container with [Samtools](http://www.htslib.org/) installed to convert a SAM file to a BAM file. Refer to the [part B readings](#part-b-readings) if you need a refresher on the content taught in the training.
 
 #### Sharing data between host and container
-Here we will map the **/root/data** on the host machine to **/data** on the container. Then we will confirm that the files in **/root/data** are available on the container.
+Here we will map the `/root/bcc2020-training/data` on the host machine to `/data` on the container. Then we will confirm that the files in `/root/bcc2020-training/data` are available on the container.
 
 Run the container in interactive mode with the folder mounted:
 ```shell
-docker run -v /root/data:/data -it quay.io/ldcabansay/samtools
+docker run -v /root/bcc2020-training/data:/data -it quay.io/ldcabansay/samtools
 ```
 
-Now that we are inside the samtools container, list the contents of the **/data** directory:
+Now that we are inside the samtools container, list the contents of the `/data` directory:
 ```shell
 ls /data
 ```
@@ -57,14 +57,14 @@ You should see many files, including mini.bam. We will be using this file in the
 Now exit the container by typing exit.
 
 #### Convert a SAM file to a BAM file with the samtools container
-Run the following command will convert our SAM file (**/root/data/mini.sam**) into a BAM file and store it to **/root/data/mini.bam**:
+Run the following command will convert our SAM file (`/root/bcc2020-training/data/mini.sam`) into a BAM file and store it to `/root/bcc2020-training/data/mini.bam`:
 ```shell
-docker run -v /root/data:/data quay.io/ldcabansay/samtools samtools view -S -b /data/mini.sam -o /data/mini.bam
+docker run -v /root/bcc2020-training/data:/data quay.io/ldcabansay/samtools samtools view -S -b /data/mini.sam -o /data/mini.bam
 ```
 
-Run the following command to confirm that the file is now on the host machine at **/root/data**:
+Run the following command to confirm that the file is now on the host machine at `/root/bcc2020-training/data`:
 ```shell
-ls /root/data
+ls /root/bcc2020-training/data
 ```
 
 Note that the file will look like gibberish if you attempt to open it, since it is a binary file.
@@ -85,12 +85,12 @@ Hints:
 
 See the solutions folder for the answer to this exercise.
 
-Once you've created the Dockerfile, it is time to build it. Change into the /docker-training/exercise2 directory and then run the following command.
+Once you've created the Dockerfile, it is time to build it. Change into the `/docker-training/exercise2` directory and then run the following command.
 ```shell
 docker image build -t tabix .
 ```
 
-The period means to build the Dockerfile in the current directory.
+The period means to use the current directory as the build context. The command will look at the build context location for the Dockerfile by default.
 
 Your Docker image has now been built! The next step is to try running the Docker image.
 
@@ -149,7 +149,7 @@ You should see the samtools help printed to the screen. Now exit the container b
 #### Sharing data between host and container
 With the run command, we can pass along the -v flag to map a folder on the host machine to a folder on the container.
 
-In this example, **/root/data** is on the host machine and **/data** is on the container:
+In this example, `/root/bcc2020-training/data` is on the host machine and `/data` is on the container:
 ```shell
-docker run -v /root/data:/data quay.io/ldcabansay/samtools samtools
+docker run -v /root/bcc2020-training/data:/data quay.io/ldcabansay/samtools samtools
 ```

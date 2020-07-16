@@ -4,28 +4,70 @@ This tutorial will provide you with an introduction to [WDL](https://openwdl.org
 ## Exercise 1
 The Dockstore CLI can be used to run WDL workflows, among other things. Here we will use it to run a Hello World workflow.
 
-### Part A - Run your first WDL
-Our first WDL will be a simple hello world workflow. It will print a welcome message based on an input file and store it to a file. The file exists as HelloWorld.wdl.
-
-Parameter files can be passed along when running a workflow to provide additional information. This allows the same workflow to be run on different inputs. See hello.json to see the format of the parameter file.
-
 Now lets launch the workflow using the Dockstore CLI.
+
+First we will change to the correct directory:
 ```shell
-$ dockstore workflow launch --local-entry HelloWorld.wdl --json hello.json
+cd /root/bcc2020-training/wdl-training/exercise1/
 ```
 
-### Part B - Explore the Dockstore CLI (Take home exercise)
-The Dockstore CLI can do a lot more than just run workflows. One neat feature is that it can be used to generate a template parameter file for a workflow. This template can be filled in and used during a run of a workflow, like we saw with hello.json in the previous part.
+Now run the hello world workflow:
 ```shell
-$ dockstore workflow convert wdl2json --wdl HelloWorkflow.wdl > parameter.json
+dockstore workflow launch --local-entry HelloWorld.wdl --json hello.json
 ```
 
-Take a look at the parameter.json file. It is a JSON file that contains parameters that must be filled in to run the workflow. In this example there is just the one parameter, which is a file parameter called myName.
+This will create a file in the current directory called Hello.txt. The contents will be based on the hello.json file.
 
-A typical scenario is running the above command to create the parameter JSON, filling it in, and then calling the workflow run command.
+## Exercise 2
+Now we are going to parameterize a simple workflow. The workflow calls the flagstat command of the samtools software. It takes a sam file as input and produces alignment statistics.
 
-## Exercise 2 - Set runtime and parameterize variables
-This exercise will have you setting the Docker image for a task using a parameter file.
+The file we will be editing is `/root/bcc2020-training/wdl-training/exercise2/metrics.wdl`.
 
-## Exercise 3 - Use imports in a multi-task workflow
-This exercise will have you creating a workflow that imports tasks from other files.
+There are three things to do to complete this exercise (final is optional).
+1. Set the runtime to use the samtools Docker container: quay.io/ldcabansay/samtools:latest
+2. Parameterize the samtools command in the flagstat task
+3. (Optional) If you make any new inputs, be sure to update the metrics.json file in the same directory
+
+To run metrics.wdl:
+
+First navigate to exercise2 director:
+```
+cd /root/bcc2020-training/wdl-training/exercise2
+```
+Then run your metrics.wdl:
+```
+dockstore workflow launch --local-entry metrics.wdl --json metrics.json
+```
+
+There are multiple solutions for this exercise. One can be found at `/root/bcc2020-training/wdl-training/exercise2/solution/`
+
+## Exercise 3
+For the final exercise we are going to make a workflow that calls two tasks:
+- The first task uses bwa to align FASTQ sequence files to a reference. It produces a SAM alignment file.
+- The second task uses the samtools flagstat (metrics) command to evaulauate an alignment file (sam or bam) and generates statistics about the alignment.
+
+We walked through the two individual workflows for these tasks in `aligner.wdl` and `metrics.wdl` respectively.
+You can find these individual workflows and their JSON files in `/root/bcc2020-training/wdl-training/exercise3/parts`
+ 
+Now you will combine the individual tasks in the workflows into one single multi-task workflow. 
+There are two ways we can approach this exercise and a skeleton file is provided for each approach:
+
+- without using imports: align_and_metrics.wdl
+- using imports: align_and_metrics_imports.wdl
+
+To navigate to the exercise3 directory and find the resources:
+```
+cd /root/bcc2020-training/wdl-training/exercise3
+```
+If *not using* imports run align_and_metrics.wdl from the exercise3 directory by:
+```
+dockstore workflow launch --local-entry align_and_metrics.wdl --json align_and_metrics.json
+```
+If *using* imports run align_and_metrics_imports.wdl from the exercise3 directory by: 
+```
+dockstore workflow launch --local-entry align_and_metrics_imports.wdl --json align_and_metrics.json
+```
+To help you in this exercise, you can find the files for the HelloGoodbye examples in: `/root/bcc2020-training/wdl-training/exercise3/hello_examples/`
+
+
+Both the import and non-import solutions to exercise3 can be found in: `/root/bcc2020-training/wdl-training/exercise3/solution/`

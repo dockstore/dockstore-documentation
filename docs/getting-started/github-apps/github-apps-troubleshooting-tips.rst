@@ -70,6 +70,19 @@ Here you can view all the GitHub app events Dockstore is aware of and whether th
 
 .. image:: /assets/images/docs/github-app-logs-error-message.png
 
+In the case shown above, the error message is from parsing the following ``/.dockstore.yml`` file.
+
+.. code:: yaml
+
+   version: 1.2
+   test:
+   workflows:
+      - subclass: CWL
+        primaryDescriptorPath: /Dockstore.cwl
+        testParameterFiles:
+
+It is saying that a key named ``test`` was found, but that key does not exist in our .dockstore.yml schema. It should be removed.
+
 If you're having trouble finding the relevant logs, try searching for the name of your repository by using the filter on the upper left. You can also sort the rows by clicking on a column heading.
 For example, if you click the ``Success`` column heading once, it will list all the events that failed first.
 

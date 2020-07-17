@@ -75,9 +75,9 @@ This exercise will have you writing, building, and running your own Dockerfile.
 ### Part A - Writing your first Dockerfile
 A [Dockerfile](https://docs.docker.com/engine/reference/builder/) is used to describe how to create images. Using the Dockerfile for BWA as a guideline, create a Dockerfile for tabix by updating the existing Dockerfile.
 
-**BWA Dockerfile (Example)** - /docker-training/exercise2/bwa-example/Dockerfile
+**BWA Dockerfile (Example)** - /root/bcc2020-training/docker-training/exercise2/bwa-example/Dockerfile
 
-**Tabix Dockerfile (Edit this)** - /docker-training/exercise2/Dockerfile
+**Tabix Dockerfile (Edit this)** - /root/bcc2020-training/docker-training/exercise2/Dockerfile
 
 Hints:
 * Both Dockerfiles use the same base image.
@@ -85,7 +85,7 @@ Hints:
 
 See the solutions folder for the answer to this exercise.
 
-Once you've created the Dockerfile, it is time to build it. Change into the `/docker-training/exercise2` directory and then run the following command.
+Once you've created the Dockerfile, it is time to build it. Change into the `/root/bcc2020-training/docker-training/exercise2` directory and then run the following command.
 ```shell
 docker image build -t tabix .
 ```

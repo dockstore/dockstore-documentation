@@ -7,20 +7,14 @@ Tutorial Goals
 --------------
 
 -  Learn about `Galaxy <https://training.galaxyproject.org/>`__
--  Create a basic Galaxy workflow
--  Run the workflow on Galaxy
+-  Create and run a basic Galaxy workflow
 -  Export the workflow to a file
 -  Push the workflow to GitHub
 
 Create a basic Galaxy workflow
 ------------------------------
 
-Create your workflow in Galaxy.
-
-Run the workflow on Galaxy
---------------------------
-
-Run your workflow on Galaxy to verify it works.
+Create and run your workflow in Galaxy. Here  is a tutorial for `creating, editing, running and importing Galaxy workflows <https://training.galaxyproject.org/training-material/topics/galaxy-interface/tutorials/workflow-editor/tutorial.html>`__
 
 Export the workflow to a file
 -----------------------------
@@ -49,7 +43,6 @@ account on Dockstore and link third party services.
 
 See Also
 --------
-
 - :doc:`CWL <getting-started-with-cwl>`
 - :doc:`WDL <getting-started-with-wdl>`
 - :doc:`Nextflow <getting-started-with-nextflow>`

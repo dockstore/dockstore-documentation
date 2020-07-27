@@ -1,4 +1,3 @@
-.. note:: This tutorial is a continuation of :doc:`Getting Started With Docker </getting-started/getting-started-with-docker>`. Please complete that tutorial prior to doing this one.
 
 Getting Started with Galaxy
 ===========================
@@ -29,7 +28,8 @@ dependencies for your workflow.
 Releasing on GitHub
 -------------------
 
-.. include:: github-apps.rst
+.. include:: releasing-on-github.rst
+
 
 Next Steps
 ----------

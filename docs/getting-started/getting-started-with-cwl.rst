@@ -223,6 +223,8 @@ chat <https://gitter.im/common-workflow-language/common-workflow-language>`__
 is an active community to help drive the development of CWL in positive
 directions and we recommend tool authors make their voices heard.
 
+.. _Testing CWL Locally:
+
 Testing Locally
 ---------------
 

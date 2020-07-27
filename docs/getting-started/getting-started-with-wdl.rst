@@ -197,6 +197,8 @@ call the bamstats tool, and pass it the two required parameters.
 
     call bamstats { input: bam_input=bam_input, mem_gb=mem_gb }
 
+.. _Testing WDL Locally:
+
 Testing Locally
 ---------------
 

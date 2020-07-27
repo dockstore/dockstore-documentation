@@ -1,10 +1,10 @@
-# The .dockstore.yml for version 1.2
-version: 1.2
+# The .dockstore-1.1.yml version; 1.1 is required for services
+version: 1.1
 
 # A required key named service
 service:
-  # The subclass is required, and can be DOCKER_COMPOSE, KUBERNETES, HELM, SWARM, or NOT_APPLICABLE.
-  subclass:
+  # The type is required, and can be docker-compose, kubernetes, or helm.
+  type:
   name:
   author:
   description:
@@ -18,8 +18,7 @@ service:
   # 1. preprovision -- Invoked before any data has been downloaded and some initialization is required. Not sure if we need this one.
   # 2. prestart -- Executed after data has been downloaded locally, but before service has started (see the data section).
   # 3. start -- Starts up the service.
-  # 4. poststart -- Associated script will run after the service has started
-  # 5. postprovision -- After the service has been started. This might be invoked multiple times, e.g., if the user decides to load multiple sets of data.
+  # 4. postprovision -- After the service has been started. This might be invoked multiple times, e.g., if the user decides to load multiple sets of data.
 
   # In addition, the following scripts, if present and with a value, are for use by the launcher:
   # 1. port - Which port the service is exposing. This provides a generic way for the tool to know which port is being exposed, e.g., to reverse proxy it.
@@ -30,7 +29,7 @@ service:
     postprovision:
     port:
     stop:
-
+      
   # These are environment variables that the launcher is responsible for passing to any scripts that it invokes.
   # The names must be valid environment variable names.
   # Users can specify the values of the parameters in the input parameter JSON (see below).
@@ -42,8 +41,8 @@ service:
   #    - An optional description, which can be used by the service launcher as a prompt
   environment:
     httpPort:
-      default:
-      description:
+        default:
+        description:
 
   # This section describes data that should be provisioned locally for use by
   # the service. The service launcher is responsible for provisioning the data.
@@ -58,9 +57,9 @@ service:
   #           - targetDirectory -- optionally override the dataset's targetDirectory if this file needs to go in a different location.
   data:
     dataset_1:
-      targetDirectory:
-      files:
-        tsv:
-          description:
-        metadata:
-          description:
+        targetDirectory:
+        files:
+            tsv:
+                description:
+            metadata:
+                description:

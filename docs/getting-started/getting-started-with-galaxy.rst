@@ -8,7 +8,9 @@ Tutorial Goals
 -  Learn about `Galaxy <https://training.galaxyproject.org/>`__
 -  Create and run a basic Galaxy workflow
 -  Export the workflow to a file
+-  Setup a GitHub account and repository
 -  Push the workflow to GitHub
+-  Make a GitHub release
 
 Create a basic Galaxy workflow
 ------------------------------
@@ -19,11 +21,30 @@ Export the workflow to a file
 -----------------------------
 
 - Click on the Galaxy UI Workflow link at the top of the page.
-- Click on the History Options gear at the top right of the page.
-- Under Downloads select Export History to File
+- Click on the workflow name to expose the drop down menu.
+- Click Download
 
-The exported YAML (Or JSON) file describes the inputs, outputs, and Galaxy Tool Shed
-dependencies for your workflow.
+The exported YAML (Or JSON) file with a '.ga' suffix describes the inputs,
+outputs, and Galaxy Tool Shed dependencies for your workflow.
+
+Setting up GitHub
+-----------------
+
+You will need to add the Galaxy workflow file you downloaded to a source code
+repository that Dockstore knows about. GitHub is a good choice, and if you
+are not familiar with GitHub you can use this
+`tutorial <https://guides.github.com/activities/hello-world/>`__ to set up
+an account and repository.
+
+Upload the workflow to GitHub
+-----------------------------
+
+- Go to your repository and click on the Upload Files menu item under Add Files
+- Click on the 'choose your files' link
+- Select your '.ga' Galaxy workflow file
+- Click on 'Commit changes'
+
+These steps are outlined `here <https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository>`__
 
 Releasing on GitHub
 -------------------

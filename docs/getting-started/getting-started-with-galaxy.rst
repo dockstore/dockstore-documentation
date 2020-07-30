@@ -27,6 +27,12 @@ Export the workflow to a file
 The exported YAML (Or JSON) file with a '.ga' suffix describes the inputs,
 outputs, and Galaxy Tool Shed dependencies for your workflow.
 
+
+.. figure:: /assets/images/docs/galaxy_download.png
+   :alt: Download
+
+   Download
+
 Setting up GitHub
 -----------------
 
@@ -49,8 +55,11 @@ These steps are outlined `here <https://docs.github.com/en/github/managing-files
 Releasing on GitHub
 -------------------
 
-.. include:: releasing-on-github.rst
-
+Now that we've successfully created our workflow in Galaxy and tested it the
+workflow is ready to share with others. Making a release on GitHub will tag
+your GitHub repository with a version tag so you can always get back to
+this particular release. Follow the steps outlined `here <https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository>`__
+to create a release.
 
 Next Steps
 ----------

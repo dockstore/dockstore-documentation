@@ -68,7 +68,7 @@ Now that you have a git repository that includes a Galaxy workflow, and you
 have tested it and are satisfied that it works the next step is to
 register it on Dockstore.
 
-Follow the :doc:`next tutorial </getting-started/register-on-dockstore/>` to create an
+Follow the :doc:`next tutorial <register-on-dockstore/>` to create an
 account on Dockstore and link third party services.
 
 See Also

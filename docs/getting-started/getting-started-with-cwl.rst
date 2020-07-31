@@ -384,7 +384,7 @@ See Also
 
 - :doc:`WDL <getting-started-with-wdl>`
 - :doc:`Nextflow <getting-started-with-nextflow>`
--  :doc:`Galaxy <getting-started-with-galaxy/>`
+- :doc:`Galaxy <getting-started-with-galaxy/>`
 - :doc:`Language Support <../end-user-topics/language-support>`
 
 .. discourse::

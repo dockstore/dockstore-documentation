@@ -15,7 +15,7 @@ Tutorial Goals
 Create a basic Galaxy workflow
 ------------------------------
 
-Create and run your workflow in Galaxy. Here  is a tutorial for `creating, editing, running and importing Galaxy workflows <https://training.galaxyproject.org/training-material/topics/galaxy-interface/tutorials/workflow-editor/tutorial.html>`__
+Create and run your workflow in Galaxy. Here  is a tutorial for `Creating, Editing, Importing Galaxy Workflows <https://training.galaxyproject.org/training-material/topics/galaxy-interface/tutorials/workflow-editor/tutorial.html>`__
 
 Export the workflow to a file
 -----------------------------
@@ -24,7 +24,7 @@ Export the workflow to a file
 - Click on the workflow name to expose the drop down menu.
 - Click Download
 
-The exported YAML (Or JSON) file with a '.ga' suffix describes the inputs,
+The exported JSON file with a '.ga' suffix describes the inputs,
 outputs, and Galaxy Tool Shed dependencies for your workflow.
 
 
@@ -68,8 +68,9 @@ Now that you have a git repository that includes a Galaxy workflow, and you
 have tested it and are satisfied that it works the next step is to
 register it on Dockstore.
 
-Follow the :doc:`next tutorial <register-on-dockstore/>` to create an
-account on Dockstore and link third party services.
+If you haven't set up a Dockstore account follow the :doc:`next tutorial <register-on-dockstore/>` to create an
+account on Dockstore and link third party services, which includes GitHub.
+Otherwise follow the instructions for :doc:`workflow registration. <dockstore-workflows>`
 
 See Also
 --------

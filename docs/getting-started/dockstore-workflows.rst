@@ -49,10 +49,11 @@ below:
 +------------------------+------------------------------------------+-----------------------------------------------+
 | Nextflow               | - N/A                                    | - Any valid Nextflow workflow                 |
 +------------------------+------------------------------------------+-----------------------------------------------+
-| Galaxy                 | - N/A from a Dockstore perspective       | - Any valid Galaxy workflow                   |
-|                        |   (A tool from the Galaxy toolbox        |                                               |
-|                        |   or ToolShed)                           |                                               |
+| Galaxy                 | - N/A*                                   | - Any valid Galaxy workflow                   |
 +------------------------+------------------------------------------+-----------------------------------------------+
+
+\* There are tools that make up Galaxy workflows from the Galaxy toolbox or ToolShed.
+Dockstore does not support registration of these yet.
 
 Register Your Workflow in Dockstore
 -----------------------------------
@@ -142,10 +143,10 @@ There are two types of traditional registration: quick registration and manual r
 
 There are some ways to make the traditional registration process more seamless.
 
-- For your primary workflow descriptor, use the filename ``Dockstore.cwl``,
-  ``Dockstore.wdl``, ``nextflow.config``, or ``Dockstore.ga`` depending on the descriptor language
+- For your primary workflow descriptor, use the file suffixes ``cwl``,
+  ``wdl``, ``config`` (for Nextflow), or ``ga`` (for Galaxy) depending on the descriptor language
   at the root of your repository
-- For your test parameter files, use the filename ``test.json`` at the root
+- For your test parameter files, use the file suffix ``json`` at the root
   of your repository
 - There should be one workflow per repository
 

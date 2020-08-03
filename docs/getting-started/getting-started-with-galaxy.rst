@@ -20,6 +20,8 @@ Create and run your workflow in Galaxy. Here  is a tutorial for `Creating, Editi
 Export the workflow to a file
 -----------------------------
 
+In Galaxy:
+
 - Click on the Galaxy UI Workflow link at the top of the page.
 - Click on the workflow name to expose the drop down menu.
 - Click Download
@@ -50,7 +52,7 @@ Upload the workflow to GitHub
 - Select your '.ga' Galaxy workflow file
 - Click on 'Commit changes'
 
-These steps are outlined `here <https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository>`__
+These steps are outlined `here. <https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository>`__
 
 Releasing on GitHub
 -------------------

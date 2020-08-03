@@ -53,7 +53,7 @@ below:
 +------------------------+------------------------------------------+-----------------------------------------------+
 
 \* There are tools that make up Galaxy workflows from the Galaxy toolbox or ToolShed.
-Dockstore does not support registration of these yet.
+Dockstore does not support registration of these tools.
 
 Register Your Workflow in Dockstore
 -----------------------------------

@@ -20,8 +20,9 @@ sort of order (often a directed acyclic graph (DAG)). Workflows also
 differ from tools since they are not required to define their own
 environment, instead a workflow engine like
 `Arvados <https://arvados.org/>`__ or
-`Cromwell <https://github.com/broadinstitute/cromwell>`__ will provide
-the ability to execute a CWL or WDL workflow respectively.
+`Cromwell <https://github.com/broadinstitute/cromwell>`__, or
+an infrastructure like `Galaxy <https://usegalaxy.org/>`__ will provide
+the ability to execute a CWL, WDL, or Galaxy workflow respectively.
 
 This tutorial does not go through the creation of a workflow and its
 registration to GitHub, Bitbucket or GitLab. It assumes that you already
@@ -46,9 +47,13 @@ below:
 |                        | - A workflow section that runs the task  | - A workflow section that connects the tasks  |
 |                        | - An associated Docker image             |                                               |
 +------------------------+------------------------------------------+-----------------------------------------------+
-| Nextflow               | - N/A                                    | - Any valid nextflow workflow                 |
-|                        |                                          |                                               |
+| Nextflow               | - N/A                                    | - Any valid Nextflow workflow                 |
 +------------------------+------------------------------------------+-----------------------------------------------+
+| Galaxy                 | - N/A*                                   | - Any valid Galaxy workflow                   |
++------------------------+------------------------------------------+-----------------------------------------------+
+
+\* There are tools that make up Galaxy workflows from the Galaxy toolbox or ToolShed.
+Dockstore does not support registration of these tools.
 
 Register Your Workflow in Dockstore
 -----------------------------------
@@ -127,6 +132,7 @@ removed from Dockstore.
 .. note:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
 
 .. seealso::
+    - :doc:`Automatic Syncing with GitHub Apps and .dockstore.yml <github-apps/github-apps/>` - details on writing a .dockstore.yml file
     - :doc:`Migrating Your Existing Workflows <github-apps/migrating-workflows-to-github-apps>` - a tutorial on converting already registered workflows
     - :doc:`Troubleshooting and FAQ <github-apps/github-apps-troubleshooting-tips>` - tips on resolving Dockstore Github App issues.
 
@@ -137,10 +143,10 @@ There are two types of traditional registration: quick registration and manual r
 
 There are some ways to make the traditional registration process more seamless.
 
-- For your primary workflow descriptor, use the filename ``Dockstore.cwl``,
-  ``Dockstore.wdl`` or ``nextflow.config`` depending on the descriptor language
+- For your primary workflow descriptor, use the file suffixes ``cwl``,
+  ``wdl``, ``config`` (for Nextflow), or ``ga`` (for Galaxy) depending on the descriptor language
   at the root of your repository
-- For your test parameter files, use the filename ``test.json`` at the root
+- For your test parameter files, use the file suffix ``json`` at the root
   of your repository
 - There should be one workflow per repository
 

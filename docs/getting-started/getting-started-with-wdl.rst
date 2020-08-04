@@ -326,6 +326,7 @@ See Also
 
 -  :doc:`CWL <getting-started-with-cwl/>`
 -  :doc:`Nextflow <getting-started-with-nextflow/>`
+-  :doc:`Galaxy <getting-started-with-galaxy/>`
 -  :doc:`Language Support <../end-user-topics/language-support/>`
 
 .. discourse::

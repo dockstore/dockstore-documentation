@@ -96,7 +96,7 @@ Why was a new workflow registered instead of migrating my existing one?
     Todo: Add information of how to delete
 
 During the original registration for your workflow, you may have filled out the ``Workflow Name`` field shown in the picture below.
-A new separate workflow can be registered if the original ``Workflow Name`` isn't included or doesn't match the ``name`` field in your ``/.dockstore.yml``.
+A new separate workflow will be registered if the original ``Workflow Name`` isn't included or doesn't match the ``name`` field in your ``/.dockstore.yml``.
 
 .. figure:: /assets/images/docs/workflow-name-field.png
    :alt: Workflow to Migrate

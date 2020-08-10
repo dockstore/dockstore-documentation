@@ -66,6 +66,46 @@ is the legacy registration process which is less automated, and used for Bitbuck
    link the necessary third-party accounts. Once this is done you can register
    workflows from the My Workflows page.
 
+
+Naming Workflows on Dockstore
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: Workflow paths are unique, descriptive identifiers for a workflow.
+
+Each workflow on Dockstore has a unique identifier in the form of a path. This path is based on
+the Git repository that the workflow comes from. There are four components to a path, but only
+three are required. In most cases these three required components are all you need.
+
+First we will look at the required components. This is the Git registry, the organization, and
+the repository. They are joined together by forward slashes, which can be seen below:
+
+``Git Registry/Organization/Repository``
+
+Ex. If I had a GitHub repository called BAMstats that existed in the OICR organization, the path of
+the workflow created from that repository would be the following:
+
+``github.com/OICR/BAMstats``
+
+Why not simply use a number to identify the workflow? With a path like that shown above, users
+can quickly understand the purpose of a workflow along with where it came from.
+
+The final optional component for the workflow path is the workflow name. This is a user defined
+string that will be appended to the end of the required workflow path. It is useful in two situations
+
+1) The name of the repository doesn't represent the workflow, or
+2) The repository contains multiple workflows
+
+Using the previous example, we could set the workflow name to ``coverage``. Our path would now be:
+
+``github.com/OICR/BAMstats/coverage``
+
+If we set the workflow name, we must include it in our path when referencing the workflow.
+
+.. tip:: Quick register does not support workflow names. Please use an alternative registration
+   process if you would like to register a workflow with a workflow name.
+
+
+
 .. _Registration With GitHub Apps:
 
 Registration With GitHub Apps

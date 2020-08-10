@@ -90,7 +90,7 @@ Why not simply use a number to identify the workflow? With a path like that show
 can quickly understand the purpose of a workflow along with where it came from.
 
 The final optional component for the workflow path is the workflow name. This is a user defined
-string that will be appended to the end of the required workflow path. It is useful in two situations
+string that will be appended to the end of the required workflow path. It is useful in two situations:
 
 1) The name of the repository doesn't represent the workflow, or
 2) The repository contains multiple workflows
@@ -167,7 +167,7 @@ removed from Dockstore.
 
 .. tip:: Since the workflows field is an array, this file supports multiple workflows on Dockstore stemming from
    the same repository on GitHub. This is useful if you store a lot of your workflows in the same GitHub
-   repository. This is achieved setting a different value for the name field for (Corresponds to the workflow name).
+   repository. This is achieved by setting a different value for the name field for each entry (corresponding to the workflow name).
 
 .. important:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
 

@@ -167,7 +167,7 @@ removed from Dockstore.
 
 .. tip:: Since the workflows field is an array, this file supports multiple workflows on Dockstore stemming from
    the same repository on GitHub. This is useful if you store a lot of your workflows in the same GitHub
-   repository. This is achieved by setting a different value for the name field for each entry (corresponding to the workflow name).
+   repository. This is achieved by setting a different value for the name field for each entry (corresponding to the workflow name of the entry).
 
 .. important:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
 

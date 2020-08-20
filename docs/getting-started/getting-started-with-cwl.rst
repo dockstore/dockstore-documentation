@@ -237,7 +237,7 @@ how to run your tool.
 The first thing I'll do is
 `setup the Dockstore CLI locally <https://dockstore.org/quick-start>`__.
 This will have me install all of the dependencies needed to run the
-Dockstore CLI on my local machine.
+Dockstore CLI on my local machine. Make sure to install cwltool as well.
 
 Next thing I'll do is create a completely local dataset and JSON
 parameterization file:

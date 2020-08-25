@@ -289,6 +289,9 @@ command. Finally, the Dockstore CLI provisions files back.
     this run, including the actual call to Cromwell (which can be super
     helpful in debugging):
 
+
+The following command is an example of how the Dockstore CLI calls out to Cromwell:
+
 ::
 
     java -jar /home/aduncan/.dockstore/libraries/cromwell-30.2.jar run /home/aduncan/Documents/dockstore-tool-bamstats/Dockstore.wdl --inputs /tmp/foo7282099563694004806json

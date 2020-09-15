@@ -80,7 +80,7 @@ name (optional)
     this field is required to uniquely identify workflows in the repository.
     **Each workflow listed must have a unique (or no) name.**
 subclass
-    The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GXFORMAT2 (Galaxy).
+    The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GXFORMAT2 (Galaxy). This cannot be changed once the workflow is registered.
 primaryDescriptorPath
     The absolute path to the primary descriptor file in the Git repository.
 testParameterFiles (optional)

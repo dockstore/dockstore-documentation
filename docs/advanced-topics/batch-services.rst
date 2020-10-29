@@ -14,7 +14,7 @@ AWS Batch
 ---------
 
 `AWS Batch <https://aws.amazon.com/batch/>`__ is built by Amazon Web
-Services. Look `here <aws-batch>`__ for a tutorial on how to run a few
+Services. Look :doc:`here <aws-batch>` for a tutorial on how to run a few
 sample tools via AWS.
 
 Azure Batch
@@ -23,7 +23,7 @@ Azure Batch
 `Azure Batch <https://azure.microsoft.com/en-us/services/batch/>`__ and
 the associated
 `batch-shipyard <https://github.com/Azure/batch-shipyard>`__ is built by
-Microsoft. Look `here <azure-batch>`__ for a tutorial on how to run a
+Microsoft. Look :doc:`here <azure-batch>` for a tutorial on how to run a
 few sample tools via Azure.
 
 Google Pipelines

@@ -53,7 +53,7 @@ You can register your tools and workflows on Dockstore in three broad
 ways as depicted above.
 
 A) Following our
-   `tutorials <getting-started/getting-started.html>`__,
+   :doc:`tutorials <getting-started/getting-started>`,
    you can save your descriptors on GitHub, build your Docker image
    automatically on Quay.io, and have Dockstore reach out and index your
    tools

@@ -52,6 +52,8 @@ For Google users, your initial username will include an @ symbol. We
 recommend you change your username to something that is not an email to
 avoid unwanted email.
 
+.. _linking-with-external-services:
+
 Linking With External Services
 ------------------------------
 

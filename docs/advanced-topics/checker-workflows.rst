@@ -281,8 +281,8 @@ maintaining the correct directory structure.
 For Advanced Users
 ------------------
 
-You can interact with checker workflows using TRS. See `Checker
-Workflows and the TRS <checker-workflow-trs/>`__ for more information.
+You can interact with checker workflows using TRS. See :doc:`Checker
+Workflows and the TRS <checker-workflow-trs>` for more information.
 
 .. discourse::
     :topic_identifier: 1277

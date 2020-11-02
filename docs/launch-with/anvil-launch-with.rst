@@ -38,6 +38,8 @@ runtime environment (docker, cpu, memory, and disks) to avoid using
 limiting defaults on AnVIL. See more
 `here <https://cromwell.readthedocs.io/en/stable/wf_options/Overview>`__.
 
+.. _anvil-limitations:
+
 Limitations
 -----------
 
@@ -45,8 +47,8 @@ Limitations
    Dockstore are currently not supported.
 2. AnVIL does not currently support file-path based imports. Importing a
    workflow with file-based imports will result in error. See the
-   `converting file-based imports
-   doc <../end-user-topics/language-support.html#converting-file-path-based-imports-to-public-http-s-based-imports-for-wdl>`__
+   :ref:`converting file-based imports
+   doc <converting-file-path-based-imports-to-public-http-s-based-imports-for-wdl>`
    for more info.
 3. Only the WDL language is supported.
 

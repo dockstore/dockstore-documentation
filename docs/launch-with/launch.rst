@@ -6,6 +6,8 @@ Tutorial Goals
 
 -  Launch a tool and a workflow using the Dockstore CLI
 
+.. _launch-dockstore-cli:
+
 Dockstore CLI
 -------------
 
@@ -91,8 +93,8 @@ that currently support and are validated with CWL at
 https://ci.commonwl.org and for WDL,
 `Cromwell <https://github.com/broadinstitute/cromwell>`__.
 
-For developers, you may also wish to look at our brief summary at `batch
-services <../advanced-topics/batch-services.html>`__ and commercial solutions such as `DataBiosphere
+For developers, you may also wish to look at our brief summary at :doc:`batch
+services </advanced-topics/batch-services>` and commercial solutions such as `DataBiosphere
 dsub <https://github.com/DataBiosphere/dsub>`__ and
 `AWS Batch <https://aws.amazon.com/batch/>`__.
 

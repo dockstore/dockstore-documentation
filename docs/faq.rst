@@ -160,6 +160,8 @@ Additionally:
       your container. Make sure your host running Docker has sufficient
       scratch space for processing your genomics data.
 
+.. _how-do-i-use-the-dockstore-cli-on-a-mac:
+
 How do I use the Dockstore CLI on a Mac?
 ----------------------------------------
 
@@ -187,8 +189,11 @@ can change what it allocates using the Docker for Mac GUI under
 
 * The default allocation can cause workflows or tools to fail without informing the user with a memory or resource related error message. If you find that your workflow or tool is behaving differently on a Mac compared to a similarly resourced Ubuntu environment, you can try increasing the resources allocated to Docker on the Mac to resolve the discrepancy.
 
+.. _what-is-a-verified-tool-or-workflow:
+
 What is a verified tool or workflow?
 ------------------------------------
+
 A verified tool/workflow means that at least one version has been verified to be successfully ran on a platform.
 
 See :doc:`/advanced-topics/verification` for full details on this feature.
@@ -245,8 +250,8 @@ feature currently does not exist because these registries do not allow
 the retrieval of organization information. Likewise, workflows
 registered with other source code repositories lack this feature.
 
-Finally, for participants of the `limited sharing
-beta <../advanced-topics/sharing-workflows/>`__, you can enter the email
+Finally, for participants of the :doc:`limited sharing
+beta </advanced-topics/sharing-workflows/>`, you can enter the email
 addresses of the users you wish to share with to give them permissions
 to your workflow. This is only available for hosted workflows and users
 with Google accounts linked to Terra.
@@ -273,7 +278,7 @@ What is the difference between logging in with GitHub or logging in with Google?
 The intent here is that you should be able to login with either login
 method and still conveniently get into the same Dockstore account. With
 login via Google, if you are a Terra user you will also have access to
-`sharing functionality <../advanced-topics/sharing-workflows/>`__.
+:doc:`sharing functionality </advanced-topics/sharing-workflows>`.
 
 Note that for simplicity, each of your GitHub or Google accounts can
 only be associated with one account at a time. You will need to link

@@ -31,6 +31,7 @@ must already exist.
 Then hit the "Import" button and continue from within the CGC
 interface to configure and run your workflow.
 
+.. _cgc-limitations:
 
 Limitations
 -----------

@@ -54,10 +54,10 @@ Configuration for plugins can be added to your
     client = /media/large_volume/icgc-storage-client-1.0.23/bin/icgc-storage-client
 
 To try an example and learn more about file provisioning, check out this
-`tutorial <advanced-features.html#file-provisioning>`__.
+:ref:`tutorial <file-provisioning>`.
 
 If you would like to create your own plugins, follow along
-`here <developing-file-provisioning-plugins.html>`__.
+:doc:`here <developing-file-provisioning-plugins>`.
 
 .. discourse::
     :topic_identifier: 1838

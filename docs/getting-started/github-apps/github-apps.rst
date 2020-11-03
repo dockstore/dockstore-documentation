@@ -82,7 +82,7 @@ name (optional)
 subclass
     The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GXFORMAT2 (Galaxy). This cannot be changed once the workflow is registered.
 primaryDescriptorPath
-    The absolute path to the primary descriptor file in the Git repository.
+    The absolute path to the primary descriptor file in the Git repository. For Nextflow, the primary descriptor is the .config file.
 testParameterFiles (optional)
     An array of absolute paths to test parameter files in the Git repository.
 

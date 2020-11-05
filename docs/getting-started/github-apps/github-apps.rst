@@ -128,12 +128,15 @@ Ex. /.dockstore.yml with multiple workflows
         primaryDescriptorPath: /runGlobalAligner.cwl
         testParameterFiles:
             - /test/globalAligner.cwl.json
+        filters:  # All tags, no branches
+            tags:
+                - /.*/
       - name: localAligner
         subclass: CWL
         primaryDescriptorPath: /runLocalAligner.cwl
         testParameterFiles:
             - /test/localAligner.cwl.json
-        filters:
+        filters:  # Only develop or master branches and localAligner/** tags
             branches:
                 - develop
                 - master

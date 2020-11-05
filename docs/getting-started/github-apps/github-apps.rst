@@ -67,7 +67,7 @@ For a workflow, the ``/.dockstore.yml`` has the following general structure
    version: 1.2
    workflows:
       - name: <String>
-        subclass: <CWL | WDL | NFL | GXFORMAT2>
+        subclass: <CWL | WDL | NFL | GALAXY>
         primaryDescriptorPath: <String>
         testParameterFiles: <String Array>
         filters:
@@ -83,7 +83,7 @@ name (optional)
     this field is required to uniquely identify workflows in the repository.
     **Each workflow listed must have a unique (or no) name.**
 subclass
-    The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GALAXY (Galaxy). This cannot be changed once the workflow is registered.
+    The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GALAXY. This cannot be changed once the workflow is registered.
 primaryDescriptorPath
     The absolute path to the primary descriptor file in the Git repository. 
     
@@ -133,6 +133,12 @@ Ex. /.dockstore.yml with multiple workflows
         primaryDescriptorPath: /runLocalAligner.cwl
         testParameterFiles:
             - /test/localAligner.cwl.json
+        filters:
+            branches:
+                - develop
+                - master
+            tags:
+                - /localaligner\/.*/
 
 A common pattern seen on Dockstore is GitHub repositories that store many workflows. The above ``.dockstore.yml``
 has two entries for workflows. Notice that each entry uses a different name. Names are required if you want 

@@ -70,6 +70,9 @@ For a workflow, the ``/.dockstore.yml`` has the following general structure
         subclass: <CWL | WDL | NFL | GXFORMAT2>
         primaryDescriptorPath: <String>
         testParameterFiles: <String Array>
+        filters:
+          branches: <String Array>
+          tags: <String Array>
 
 version
     The version of the .dockstore.yml schema. Currently at 1.2.
@@ -85,6 +88,12 @@ primaryDescriptorPath
     The absolute path to the primary descriptor file in the Git repository.
 testParameterFiles (optional)
     An array of absolute paths to test parameter files in the Git repository.
+filters (optional)
+    branches, tags (optional)
+        Arrays of pattern-strings to specify which Git branches or tags to include for the workflow.
+        If no filters are given, all branches and tags are included.
+        Pattern-strings use `Unix-style Glob syntax <https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)>`_ by default (Ex: ``develop``, ``myworkflow/**``),
+        or RegEx when the string is surrounded by ``/`` (Ex: ``/develop/``, ``/myworkflow\/.*/``).
 
 Ex. /.dockstore.yml with a single workflow
 
@@ -162,6 +171,10 @@ For a service, the ``/.dockstore.yml`` has this general structure for version 1.
                 <name>:
                     description: <String>
 
+      filters:
+        branches: <String Array>
+        tags: <String Array>
+
 version
     The version of the .dockstore.yml schema which is currently at 1.2.
 service
@@ -198,6 +211,12 @@ environment
     This section describes environment variables that the launcher is responsible for passing to any scripts that it invokes. The names must be valid environment variable names. Users can specify the values of the parameters in the input parameter JSON (see below). These variables are service-specific, i.e., the service creator decides what values, if any, to expose as environment variables. For every environment variable, you must give it a name and you can optionally give them a default value and description.
 data
     This section describes data that should be provisioned locally for use by the service. The service launcher is responsible for provisioning the data. You can create as many keys as you need where each key is the name of a dataset. For every key you create, you must give a target directory (path will be relative) to indicate where the files should be downloaded to. You must also give an array of files as a key and provide the name of each file. You can optionally provide a description of each file.
+filters
+    branches, tags
+        (Optional) Arrays of pattern-strings to specify which Git branches or tags to include for the service.
+        If no filters are given, all branches and tags are included.
+        Pattern-strings use `Unix-style Glob syntax <https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)>`_ by default (Ex: ``develop``, ``myworkflow/**``),
+        or RegEx when the string is surrounded by ``/`` (Ex: ``/develop/``, ``/myworkflow\/.*/``).
 
 It's important to note that we originally released our services tutorial using version 1.1 of the ``/.dockstore.yml`` file. For more info on
 services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>` which has been updated to use 1.2.

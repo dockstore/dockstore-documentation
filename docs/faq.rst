@@ -257,7 +257,7 @@ to your workflow. This is only available for hosted workflows and users
 with Google accounts linked to Terra.
 
 Why would I want to add a specific version of a workflow to a collection?
-------------------------------------------------
+-------------------------------------------------------------------------
 
 When creating a collection in an organization, you can pin either a specific version of a workflow or add the workflow in general. This is a flexible system and can mean different things to different organizations. You can elaborate on what this means to you as an organization maintainer in the markdown description associated with a collection. 
 

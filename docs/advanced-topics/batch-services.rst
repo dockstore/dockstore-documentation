@@ -45,7 +45,7 @@ the data analysis for the
 `PCAWG <https://dcc.icgc.org/pcawg#!%2Fmutations>`__ project by running
 `Seqware <https://seqware.github.io/>`__ workflows. Documentation for
 this incarnation of Dockstore can be found at `Working with PanCancer
-Data on AWS <https://icgc.org/working-pancancer-data-aws>`__ and `ICGC on
+Data on AWS <https://registry.opendata.aws/icgc/>`__ and `ICGC on
 AWS <https://registry.opendata.aws/icgc/>`__.
 
 Consonance has subsequently been updated to run Dockstore tools and has

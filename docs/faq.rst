@@ -256,6 +256,8 @@ addresses of the users you wish to share with to give them permissions
 to your workflow. This is only available for hosted workflows and users
 with Google accounts linked to Terra.
 
+.. _why-would-i-want-to-add-a-specific-version-of-a-workflow-to-a-collection:
+
 Why would I want to add a specific version of a workflow to a collection?
 -------------------------------------------------------------------------
 

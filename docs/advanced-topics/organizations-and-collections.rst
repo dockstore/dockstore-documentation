@@ -185,7 +185,7 @@ user wants to remove a tool/workflow from a collection, they can do so
 from the collections page.
 
 Note that you have the option of adding a specific version of a workflow rather than the workflow as a whole. 
-For information on why you might want to do this, please refer to the :ref:`FAQ <how-do-i-use-the-dockstore-cli-on-a-mac>` .
+For information on why you might want to do this, please refer to the :ref:`FAQ <why-would-i-want-to-add-a-specific-version-of-a-workflow-to-a-collection>` .
 
 Events
 ------

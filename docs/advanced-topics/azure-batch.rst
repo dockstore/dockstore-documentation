@@ -81,7 +81,7 @@ the box.
 
 6. You can repeat the process with ``config.dockstore.bwa`` which is a
    more realistic bioinformatics workflow from the `PCAWG
-   project <https://icgc.org/working-pancancer-data-aws>`__ and takes
+   project <https://registry.opendata.aws/icgc/>`__ and takes
    roughly seven hours.
 
 See Also

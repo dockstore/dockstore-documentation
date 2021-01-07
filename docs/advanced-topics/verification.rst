@@ -91,7 +91,7 @@ Verification Process
 .. note:: Verifying is only available for admins and curators. Please contact one if you want your tool/workflow to be verified.
 
 1.  Go to
-    https://dockstore.org/static/swagger-ui/index.html#/extendedGA4GH/toolsIdVersionsVersionIdTypeTestsPost
+    https://dockstore.org/api/static/swagger-ui/index.html#/extendedGA4GH/verifyTestParameterFilePost
 2.  Click “Try it out”
 3.  Provide a “type”. See the
     description for allowable values.
@@ -186,4 +186,4 @@ Typically this launching process occurs before a Dockstore CLI release and is do
 -  files used (which descriptor file, which test parameter file)
 
 .. _dockstore-tool-md5sum: https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:master?tab=info
-.. _files endpoint: https://dockstore.org/static/swagger-ui/index.html#/GA4GH/toolsIdVersionsVersionIdTypeFilesGet
+.. _files endpoint: https://dockstore.org/api/static/swagger-ui/index.html#/GA4GH/toolsIdVersionsVersionIdTypeFilesGet_1

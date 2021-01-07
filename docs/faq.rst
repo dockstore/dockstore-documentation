@@ -256,6 +256,20 @@ addresses of the users you wish to share with to give them permissions
 to your workflow. This is only available for hosted workflows and users
 with Google accounts linked to Terra.
 
+.. _why-would-i-want-to-add-a-specific-version-of-a-workflow-to-a-collection:
+
+Why would I want to add a specific version of a workflow to a collection?
+-------------------------------------------------------------------------
+
+When creating a collection in an organization, you can pin either a specific version of a workflow or add the workflow in general. This is a flexible system and can mean different things to different organizations. You can elaborate on what this means to you as an organization maintainer in the markdown description associated with a collection. 
+
+As an example, if your organization is responsible for a workflow and its maintenance going forward, you may want to add the workflow to a collection without specifying a specific version. On the other hand, if you are creating an organization for a specific study and you are using a specific version of a workflow that has been screened for security issues and other measures of quality, you may want to pin the specific version of the workflow. You also have the option of adding a workflow to a collection multiple times by bringing up the add dialog if multiple versions of the workflow have been vetted. 
+
+Note that the version of a workflow can be especially important when working with launch-with partners. Some partners will take into account the version of the workflow that you are on wheras other partners will give the option of or require selecting the workflow version when performing a workflow launch. For example, Terra will automatically bring up the version you are currently browsing when performing a launch although you will have an option to override later in the process. 
+
+In summary: you can pin either a specific version of a workflow or a workflow in general depending on what relationship you wish to express. We recommend explaining further for others in the accompanying Markdown description. 
+
+
 Why are my workflows from an organization I belong to not visible?
 ------------------------------------------------------------------
 

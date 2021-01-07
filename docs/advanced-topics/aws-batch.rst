@@ -93,7 +93,7 @@ the box.
       (credentials are provided via that IAM role) in just a few
       minutes. |aws batch 6|
    2. For more realistic jobs, you can try the `PCAWG
-      project <https://icgc.org/working-pancancer-data-aws>`__ BWA and
+      project <https://registry.opendata.aws/icgc/>`__ BWA and
       Delly workflows which would use the commands
       ``/test.sh quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8_1.2 https://raw.githubusercontent.com/dockstore/batch_wrapper/master/aws/bwa.s3.json``
       (approximately seven hours) and

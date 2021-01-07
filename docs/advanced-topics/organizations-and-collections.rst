@@ -184,6 +184,9 @@ Once added, the tool/workflow will appear on the collection page. If a
 user wants to remove a tool/workflow from a collection, they can do so
 from the collections page.
 
+Note that you have the option of adding a specific version of a workflow rather than the workflow as a whole. 
+For information on why you might want to do this, please refer to the :ref:`FAQ <why-would-i-want-to-add-a-specific-version-of-a-workflow-to-a-collection>` .
+
 Events
 ------
 

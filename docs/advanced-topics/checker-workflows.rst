@@ -41,8 +41,24 @@ original tool/workflow/entry.
 For this tutorial we will be registering a checker workflow to test an
 original tool that calculates the MD5sum of a file.
 
-The relevant tools and workflows can be found in the following Git
+The relevant tools and workflows for both CWL and WDL can be found in the following Git
 repository: https://github.com/dockstore-testing/md5sum-checker
+
+The following sections will use CWL in its examples. The same instructions applies equally to WDL. This table contains the WDL equivalents:
+
++-----------------------------+-------------------------------------+-----------------------------------------+
+| File Type                   | CWL                                 | WDL                                     |
++=============================+=====================================+=========================================+
+| Tool input parameter        | /md5sum/md5sum-input-cwl.json       | /md5sum/md5sum-wdl.json                 |
++-----------------------------+-------------------------------------+-----------------------------------------+
+| Checker input parameter     | /checker-input-cwl.json             | /md5sum-wdl.json                        |
++-----------------------------+-------------------------------------+-----------------------------------------+
+| Tool descriptor             | /md5sum/md5sum-tool.cwl             | /md5sum/md5sum-workflow.wdl             |
++-----------------------------+-------------------------------------+-----------------------------------------+
+| Checker-wrapping descriptor | /checker-workflow-wrapping-tool.cwl | /checker-workflow-wrapping-workflow.wdl |
++-----------------------------+-------------------------------------+-----------------------------------------+
+| Checker descriptor          | /checker/md5sum-checker.cwl         | /checker/md5sum-checker.wdl             |
++-----------------------------+-------------------------------------+-----------------------------------------+
 
 Quick overview of structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

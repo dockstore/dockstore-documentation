@@ -329,7 +329,8 @@ The following steps can be taken to create a helpdesk ticket (also shown `here <
 4. Send a message to the ``admins`` group.
 
 .. Note:: If you are unable to see a ``New Message`` button on the mail page, you may be considered a new user and have insufficient privileges. \
-   Viewing 30 topics over 10 minutes will raise your privileges. You will be notified of any privilege changes to your account via the mailbox.
+   Entering 5 topics and viewing 30 posts over a minimum of 10 minutes will raise your privileges. \
+   You will be notified of any privilege changes to your account via the mailbox.
 
 
 Any last tips on using Dockstore?

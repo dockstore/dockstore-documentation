@@ -317,7 +317,7 @@ directory specified prior to a ``launch --local-entry`` command
 How do I send private messages to administrators or report security vulnerabilities?
 ------------------------------------------------------------------------------------
 
-Users are able to open helpdesk tickets on `Discourse <https://discuss.dockstore.org/>`_ . Users can create helpdesk tickets in
+Users are able to open helpdesk tickets on `Discourse <https://discuss.dockstore.org/>`_. Users can create helpdesk tickets in
 case of privacy complaints, security vulnerabilities, or any other urgent matter related to Dockstore. Helpdesk tickets will be addressed
 by Dockstore administrators.
 

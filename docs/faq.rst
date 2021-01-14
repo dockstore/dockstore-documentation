@@ -299,8 +299,8 @@ only be associated with one account at a time. You will need to link
 with a different account for each login method or delete your account if
 you want to assign them to a new Dockstore account.
 
-How do I launch tools/workflows without internet access on compute nodes
-------------------------------------------------------------------------
+How do I launch tools/workflows without internet access on compute nodes?
+-------------------------------------------------------------------------
 
 Some tools/workflows require Docker images to launch even if they are
 local entries. If the compute nodes do not have internet access, you can
@@ -313,6 +313,25 @@ follow these steps:
 
 The Dockstore CLI will automatically load all Docker images in the
 directory specified prior to a ``launch --local-entry`` command
+
+How do I send private messages to administrators or report security vulnerabilities?
+------------------------------------------------------------------------------------
+
+Users are able to open helpdesk tickets on `Discourse <https://discuss.dockstore.org/>`_. Users can create helpdesk tickets in
+case of privacy complaints, security vulnerabilities, or any other urgent matter related to Dockstore. Helpdesk tickets will be addressed
+by Dockstore administrators.
+
+The following steps can be taken to create a helpdesk ticket (also shown `here <https://discuss.dockstore.org/t/opening-helpdesk-tickets/1506>`_).
+
+1. Navigate to `Discourse <https://discuss.dockstore.org/>`_ and login.
+2. Select your profile icon, located in the top right corner of the screen.
+3. Select the ``mail`` icon, located in the dropdown.
+4. Send a message to the ``admins`` group.
+
+.. Note:: If you are unable to see a ``New Message`` button on the mail page, you may be considered a new user and have insufficient privileges. \
+   Entering 5 topics and viewing 30 posts over a minimum of 10 minutes will raise your privileges. \
+   You will be notified of any privilege changes to your account via the mailbox.
+
 
 Any last tips on using Dockstore?
 ---------------------------------

@@ -22,7 +22,7 @@ registered on Dockstore on OpenStack.
 
 Miguel Vazquez has been leading the docktesters group. This is a group
 that is in charge of testing the
-`PCAWG <https://icgc.org/working-pancancer-data-aws>`__\ (PanCancer
+`PCAWG <https://registry.opendata.aws/icgc/>`__\ (PanCancer
 Analysis of Whole Genomes) tools and workflows. As a part of this work
 he created a series of scripts (linked above) that demonstrate how to
 get data and run through all of the PCAWG analysis in sequence.

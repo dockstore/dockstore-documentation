@@ -8,7 +8,7 @@ The Swagger UI for the TRS endpoints can be found
 `here <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GH>`__.
 
 For this section we will reference the tool and checker workflow
-mentioned in the `Checker workflows <checker-workflows/>`__ tutorial.
+mentioned in the :doc:`Checker workflows <checker-workflows>` tutorial.
 
 Distinguishing Between an Entry and a Checker Workflow
 ------------------------------------------------------

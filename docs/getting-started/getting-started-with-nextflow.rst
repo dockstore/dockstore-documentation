@@ -275,8 +275,8 @@ See Also
 
 -  :doc:`CWL <getting-started-with-cwl/>`
 -  :doc:`WDL <getting-started-with-wdl/>`
+-  :doc:`Galaxy <getting-started-with-galaxy/>`
 -  :doc:`Language Support <../end-user-topics/language-support/>`
 
 .. discourse::
     :topic_identifier: 1539
-    

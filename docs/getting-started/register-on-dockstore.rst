@@ -1,6 +1,8 @@
 .. note::
     This tutorial is a continuation of :doc:`Getting Started With CWL <getting-started-with-cwl>`,
-    :doc:`Getting Started With WDL <getting-started-with-wdl>`, and :doc:`Getting Started With Nextflow <getting-started-with-nextflow>`. Please complete one
+    :doc:`Getting Started With WDL <getting-started-with-wdl>`,
+    :doc:`Getting Started With Galaxy <getting-started-with-galaxy>`,
+    and :doc:`Getting Started With Nextflow <getting-started-with-nextflow>`. Please complete one
     or more of those tutorials that is relevant to you prior to doing this
     one.
 
@@ -50,6 +52,8 @@ For Google users, your initial username will include an @ symbol. We
 recommend you change your username to something that is not an email to
 avoid unwanted email.
 
+.. _linking-with-external-services:
+
 Linking With External Services
 ------------------------------
 
@@ -94,15 +98,16 @@ linked in order to perform regular account activities.
 
    Link accounts completed
 
-Next, the wizard will instruct you to setup the ``dockstore`` command
-line tool after linking your accounts, and upon completion you will be
-ready to use Dockstore.
 
 Next Steps
 ----------
 
-Follow the :doc:`next tutorial <dockstore-tools/>` to
-register your tool on Dockstore.
+* Jump to the :doc:`workflow registration <dockstore-workflows/>` section if you are writing workflows,
+  e.g. Nextflow or Galaxy
+* Follow the :doc:`next tutorial <dockstore-tools/>` to register a tool on Dockstore. This wizard also
+  also describes how to setup the ``dockstore`` command line tool after linking your accounts.
+
+Upon completion you will be ready to use Dockstore.
 
 .. discourse::
     :topic_identifier: 1536

@@ -138,7 +138,7 @@ Quay.io tokens. If not, please return to the web service usage section
 to get that running first. It is advised to ensure that the Write API
 web service is functioning correctly before using the client.
 
--  `Dockstore token <../getting-started/register-on-dockstore/>`__
+-  :doc:`Dockstore token </getting-started/register-on-dockstore>`
 
 Follow the "Getting Started with Dockstore" tutorial to get a Dockstore
 token. Note this down, it will later be used in the Write API client
@@ -156,7 +156,7 @@ in the Write API client properties file.
 
 In order to publish to Dockstore, Quay.io must be linked to Dockstore.
 See
-`Dockstore <../getting-started/register-on-dockstore.html#linking-with-external-services>`__
+:ref:`Dockstore <linking-with-external-services>`
 on how to link your Quay.io account to Dockstore.
 
 -  Write API web service URL

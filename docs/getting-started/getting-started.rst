@@ -1,5 +1,5 @@
 .. hint::
-    Mac users, make note of this `FAQ <../faq.html#how-do-i-use-the-dockstore-cli-on-a-mac>`_ entry if you run into errors while going through the developer tutorials.
+    Mac users, make note of this :ref:`FAQ <how-do-i-use-the-dockstore-cli-on-a-mac>` entry if you run into errors while going through the developer tutorials.
 
 Introduction
 ==================

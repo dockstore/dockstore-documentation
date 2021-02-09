@@ -17,29 +17,24 @@ on the Dockstore site and in the Dockstore command-line utility.
 
 [1] Available in both classic and WDL EPAM Pipeline Builder
 
-[2] Does not support http(s) based imports. See `CGC
-Limitations`_ for limitations.
+[2] Does not support http(s) based imports. See :ref:`CGC
+Limitations <cgc-limitations>` for limitations.
 
-.. _`CGC Limitations`: ../launch-with/cgc-launch-with.html#limitations
+[3] Does not support file-path based imports. See :ref:`Terra
+Limitations <terra-limitations>` for limitations.
 
-[3] Does not support file-path based imports. See `Terra
-Limitations`_ for limitations.
-
-.. _`Terra Limitations`: ../launch-with/terra-launch-with.html#limitations
-
-
-[4] Does not support file-path or http(s) based imports. See `DNAstack
-Limitations <../launch-with/dnastack-launch-with.html#limitations>`__ for limitations.
+[4] Does not support file-path or http(s) based imports. See :ref:`DNAstack
+Limitations <dnastack-limitations>` for limitations.
 
 [5] All verified Dockstore WDL tools/workflows were tested successfully. However, we anticipate that more testing is needed for WDL workflows that use language features not contained within that dataset.
 
-[6] Does not support file-path based imports. See `AnVIL
-Limitations`_ for limitations.
-
-.. _`AnVIL Limitations`: ../launch-with/anvil-launch-with.html#limitations
+[6] Does not support file-path based imports. See :ref:`AnVIL
+Limitations <anvil-limitations>` for limitations.
 
 [7] Use the Dockstore CLI optional parameter --wdl-output-target which allows you to specify a remote path to provision output files to ex: s3://oicr.temp/testing-launcher/
 
+
+.. _converting-file-path-based-imports-to-public-http-s-based-imports-for-wdl:
 
 Converting File-path Based Imports to Public http(s) Based Imports for WDL
 --------------------------------------------------------------------------

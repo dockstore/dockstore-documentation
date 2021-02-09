@@ -116,8 +116,8 @@ To register this, follow the procedure below:
 First, make note of the GitHub repository that stores the descriptors
 for the tool.
 
-Second, hit the plus button on the bottom right and select 'Use CWL, WDL
-or Nextflow from GitHub, BitBucket, etc'. Ensure that the GitHub
+Second, hit the plus button on the top left and select 'Create tool with
+descriptor(s) on remote sites'. Ensure that the GitHub
 repository and image registry match your previous tool. Note that we
 changed the default CWL Descriptor Path to ``Dockstore2.cwl`` to
 simulate an alternate descriptor for the same Docker image. Last but not
@@ -152,7 +152,7 @@ multiple images. For those cases, it is necessary to manually register
 their details to Dockstore.
 
 Tools can be registered manually from the 'My Tools' page by pressing
-the plus button at the bottom of the right of the page. A modal dialog
+the plus button at the top left of the page. A modal dialog
 will appear as below:
 
 .. figure:: /assets/images/docs/register_container_manual.png
@@ -437,7 +437,7 @@ Manual
 
 **How to create it**:
 
--  Click Plus button on the bottom right of the screen
+-  Click Plus button on the top left of the screen
 
 **Requirements**:
 

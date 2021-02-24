@@ -125,7 +125,7 @@ Reusable
 	}
 
  
-- The examples below show **how not to reference a container** in workflow task. These exmaple formats can change and cause the workflow to no longer be reproducible. 
+- The examples below show **how not to reference a container** in a workflow task. These exmaple formats can change and cause the workflow to no longer be reproducible. 
 
 Do not reference parameterized images:
 

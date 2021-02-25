@@ -1,4 +1,4 @@
-Best Practices for Secure and FAIR workflows
+Best Practices for Secure and FAIR Workflows
 ========================
 
 This comprehensive document contains best practices for developing secure tools or workflows that also exemplify the `FAIR (Findable, Accessible, Interoperable, Reusable) guiding principles <https://www.go-fair.org/fair-principles/>`_. 
@@ -18,9 +18,11 @@ Version Control Best Practices
 	- Submitting to an organization rather than hosting on an individual account provides a fallback for others if you become inactive on the git repository site.
 	
 - Plan your repository structure
+
 	- The repository should include the workflow language descriptor file(s), the Dockerfile used to create a custom container (if applicable), a license, and a thorough README.md.
 	
 	- Here are examples of nicely organized repositories for workflow development: 
+	
 		- `Viral Pipelines <https://github.com/broadinstitute/viral-pipelines>`_ from the Broad Institute
 		- `nf-core <https://github.com/broadinstitute/viral-pipelines>`_ guidelines for workflows
 		

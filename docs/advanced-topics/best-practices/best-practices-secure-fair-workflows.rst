@@ -95,14 +95,14 @@ Interoperable
 - Wrap your pipeline in one or more workflow languages supported by Dockstore:
 	- :doc:`Common Workflow Language (CWL) <../getting-started/getting-started-with-cwl>`
     		- Used by SevenBridges (BioData Catalyst, Cancer Genomics Cloud)
-	- :doc: `Workflow Description Language (WDL) <../getting-started/getting-started-with-wdl>`
+	- :doc:`Workflow Description Language (WDL) <../getting-started/getting-started-with-wdl>`
 		- Used by Terra (BioData Catalyst, AnVIL), DNAnexus
-	- :doc: `Galaxy <../getting-started/getting-started-with-galaxy>`
+	- :doc:`Galaxy <../getting-started/getting-started-with-galaxy>`
 		- Used by Terra (AnVIL)
-	- :doc: `NextFlow <../getting-started/getting-started-with-nextflow>'
+	- :doc:`NextFlow <../getting-started/getting-started-with-nextflow>'
 - Provide a parameter file (JSON or YAML) containing example parameters used for launching your workflow. 
 	- The parameter file is where you should link to open access test data for your tool or workflow (learn more in :ref:`Reusable`).
-	- You can submit multiple parameter files so consider sharing one for a local run (you can use the `Dockstore Command Line Interface (CLI) <../launch-with>` to launch tools and workflows locally) as well as examples for a launch-with partner (such as `BioData Catalyst <https://bdcatalyst.gitbook.io/biodata-catalyst-documentation/analyze-data/dockstore/launch-workflows-with-biodata-catalyst>`_ or `AnVIL <../launch-with/anvil-launch-with>`).
+	- You can submit multiple parameter files so consider sharing one for a local run (you can use the :doc:`Dockstore Command Line Interface (CLI) <../launch-with>` to launch tools and workflows locally) as well as examples for a launch-with partner (such as `BioData Catalyst <https://bdcatalyst.gitbook.io/biodata-catalyst-documentation/analyze-data/dockstore/launch-workflows-with-biodata-catalyst>`_ or :doc:`AnVIL <../launch-with/anvil-launch-with>`).
 - Provide a :doc:`checker workflow <checker-workflows>`. 
 	- Checker workflows are additional workflows you can associate with a tool or workflow. The purpose of them is to ensure that a tool or workflow, given some inputs, produces the expected outputs on a platform different from the one where you are developing.
 	- Providing a checker workflow gives other researchers confidence that they can run the work on their system correctly. 

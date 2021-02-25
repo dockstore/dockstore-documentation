@@ -16,9 +16,10 @@ Version Control Best Practices
 
 	- Organizations can centralize your work and help to foster a culture of peer review through Pull Requests.
 	- Submitting to an organization rather than hosting on an individual account provides a fallback for others if you become inactive on the git repository site.
+	
 - Plan your repository structure
-
 	- The repository should include the workflow language descriptor file(s), the Dockerfile used to create a custom container (if applicable), a license, and a thorough README.md.
+	
 	- Here are examples of nicely organized repositories for workflow development: 
 		- `Viral Pipelines <https://github.com/broadinstitute/viral-pipelines>`_ from the Broad Institute
 		- `nf-core <https://github.com/broadinstitute/viral-pipelines>`_ guidelines for workflows
@@ -26,7 +27,9 @@ Version Control Best Practices
 - Use `branches <https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-branches#working-with-branches>`_ to separate the development of distinct features for your workflow.
 
 	- There should always be at least one ‘main’ branch that points to the most stable copy of your workflow.
+	
 	- Any new development of features, optimizations, etc. should be created on a new branch/version that diverges from the main branch.
+	
 		- If developing multiple new features simultaneously or if multiple people are creating content, work should be split into separate branches. 
 		- It’s best to split into branches by independent feature units, ex: “add-QC-before-alignment”.
 		- Once your feature is stable, create a pull request to merge the branch into your main branch. Once merged, you can delete the development branch if no longer needed. 
@@ -41,6 +44,7 @@ Image / Container Best Practices
 - When creating custom images, we recommend starting with `official images <https://docs.docker.com/docker-hub/official_images/>`_. This way you know that you are starting with a secure base since these images are maintained to remove vulnerabilities. 
 - You may find helpful images from sources such as  BioContainer that maintains `images for 1K+ bioinformatics tools <https://biocontainers.pro/#/registry>`_.  We cannot guarantee that BioContainer images are secure, so we recommend you scan all non-official images for vulnerabilities. Tools such as `Snyk <https://support.snyk.io/hc/en-us/articles/360014875297-Getting-started-with-Snyk-Open-Source>`_ and `Trivy <https://github.com/aquasecurity/trivy>`_ scan containers for security concerns. 
 - If you detect a vulnerability in a container you are interested in, we suggest you 1) contact the maintainer to update the image, or 2) if there is a Dockerfile, use it as a template to update the image yourself. Try inspecting the Dockerfile and only include those parts you feel are trustworthy. Consider upgrading versions of packages as they may be a source of vulnerabilities. 
+
 - Use Dockerfiles to describe and configure images:
 
 		- See `Best Practices from Docker <https://www.docker.com/blog/intro-guide-to-dockerfile-best-practices/>`_ and `10 Simple Rules for Writing Dockerfiles for Reproducible Analysis <https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316>`_ .
@@ -50,12 +54,15 @@ Image / Container Best Practices
 
 	- More packages increases risks; try to avoid installing unnecessary packages in your images. That being said, starting with a very bare image (such as Alpine) may lead to a long setup, or difficulties in debugging. 
 	- Images tagged with "-slim" contain the minimum components needed to run, without being as strict as Alpine-based images. They can often provide a happy medium between a reduced size, enhanced security, and usability.
+	
 	- Some helpful starting images are suggested below:
+	
 		- `Ubuntu <https://hub.docker.com/_/ubuntu>`_ -- 18.04 (Bionic) is a good place to start.
 		- `Python <https://hub.docker.com/_/python>`_
 		- `R-base <https://hub.docker.com/_/r-base>`_
 		- `Perl <https://hub.docker.com/_/perl>`_
 		- `Golang <https://hub.docker.com/_/golang>`_
+		
 	- A good rule of thumb is that each image should have a specific purpose. Avoid installing all of the software you need for an entire analysis in one container, instead use multiple containers. 
 	- Don’t include test data inside the image. Recommendations for hosting test data alongside your workflow can be found in the section below titled :ref:`Accessible`.  
 
@@ -65,6 +72,7 @@ Image / Container Best Practices
 	- Similar to our suggestion to publish your workflow under a GitHub organization, publish your images in an organization on a container registry. Additionally, this may make it easier for your institute to pay for a group plan to ensure your images never expire.
 
 - Limitation on and expiration of images: At the time of writing this, DockerHub has announced some new policies around pull limits as well as their intention to expire DockerHub images from free accounts that haven't been pulled for some defined period of time (update: `this policy is delayed <https://www.docker.com/blog/docker-hub-image-retention-policy-delayed-and-subscription-updates/>`_). For example, this could mean that a workflow that hasn't been run in one year may no longer be reproducible if the image has been removed. 
+
 - Alternative options include:
 
 	- Using images from paid organizations on DockerHub
@@ -80,11 +88,13 @@ Tool / Workflow Best Practices
 Findable
 *********
 - Once your workflow is ready to share with the community, :doc:`publish it in Dockstore <../getting-started/dockstore-workflows>`.
+
 - When publishing on Dockstore, include robust metadata. Dockstore parses metadata that enables search capabilities for finding your tool/workflow more easily. Metadata also helps your workflow be more reusable. Essential metadata fields include: 
 	
 	- Naming: 
 	
 		- Keep the workflow name short
+		
 		- Use all lowercase letters for compatibility with other platforms such as DockerHub
 		
 	- Authorship, contact information, and description:
@@ -101,17 +111,21 @@ Accessible
 - Publishing your tool or workflow in Dockstore promotes accessibility: 
 
 	- Dockstore does not require a user to sign in to search published content, which increases transparency and usability to a greater audience.
+	
 	- Dockstore implements its own REST API and also a standardized :doc:`GA4GH API <../advanced-topics/conversions>` that can be used for sharing tools and workflows. 
 
 - Use :doc:`Dockstore’s snapshot feature <../advanced-topics/snapshot-and-doi>` to provide an immutable release of your workflow that can be verified. 
 
 	- Dockstore archives important metadata associated with a published and snapshotted version of tool or workflow to ensure provenance
+	
 	- See :doc:`Dockstore's best practices for snapshots <snapshot-and-doi>`, including adding a description and metadata to improve searchability and usability of your workflow.
 
 - Mint a snapshot of your workflow with a Digital Object Identifier (DOI).
 
 	- Users can :doc:`request a DOI <snapshot-and-doi>` (generated via Zenodo) for their workflow through Dockstore. 
+	
 		- Refer to this useful guide called `Making Your Code Citable <https://guides.github.com/activities/citable-code/>`_.
+	
 	- DOIs enhance reproducibility and make it easier to cite a specific version of your workflow in a publication. 
 
 Interoperable
@@ -120,11 +134,17 @@ Interoperable
 - Wrap your pipeline in one or more workflow languages supported by Dockstore:
 
 	- :doc:`Common Workflow Language (CWL) <../getting-started/getting-started-with-cwl>`
+	
     		- Used by SevenBridges (BioData Catalyst, Cancer Genomics Cloud)
+		
 	- :doc:`Workflow Description Language (WDL) <../getting-started/getting-started-with-wdl>`
+	
 		- Used by Terra (BioData Catalyst, AnVIL), DNAnexus
+		
 	- :doc:`Galaxy <../getting-started/getting-started-with-galaxy>`
+	
 		- Used by Terra (AnVIL)
+		
 	- :doc:`NextFlow  <../getting-started/getting-started-with-nextflow>`
 	
 - Provide a parameter file (JSON or YAML) containing example parameters used for launching your workflow. 
@@ -206,12 +226,17 @@ Do not use untagged or “latest”.
 	- As mentioned in :ref:`Image / Container Best Practices`, test data should be hosted outside of the container. 
 	
 		- GitHub can host small files such as csv or tsv (for example: trait data)
+		
 		- Broad’s Terra platform hosts multiple genomic files in this `open access Google bucket <https://console.cloud.google.com/storage/browser/terra-featured-workspaces>`_ 
+	
 	- Consider providing both a full sample run and a small down-sampled development test.
+	
 		- A small development dataset is necessary for checker workflows. It also helps others explore your workflow without incurring heavy resource/computational costs.
+		
 		- A full-sized sample is helpful for benchmarking your workflow and providing end-users with realistic compute and cost requirements. 
 
 - Provide a permissive license such as the `MIT License <https://choosealicense.com/licenses/mit/>`_, or `choose a license <https://choosealicense.com/>`_ that best fits your needs. It can be a text file in the git repository where the workflow is published (see `this example <https://github.com/nf-core/rnaseq/blob/master/LICENSE>`_). 
+
 - Provide a thorough README in the git repository. Here is an example of thorough documentation. 	
 
 		- We suggest including the following sections:

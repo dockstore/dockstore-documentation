@@ -1,4 +1,4 @@
-Best Practices for Secure and FAIR tools and workflows using Dockstore
+Best Practices for Secure and FAIR workflows
 ========================
 
 This comprehensive document contains best practices for developing secure tools or workflows that also exemplify the `FAIR (Findable, Accessible, Interoperable, Reusable) guiding principles <https://www.go-fair.org/fair-principles/>`_. 
@@ -6,7 +6,7 @@ This comprehensive document contains best practices for developing secure tools 
 Version Control Best Practices
 -----------------------------------
 
-- Host your source code, workflow descriptor file, and Dockerfile in a git repository. Dockstore currently supports GitHub, BitBucket, and GitLab. We recommend GitHub because the `GitHub App integrates easily with Dockstore <docs/getting-started/github-apps/github-apps-landing-page>`. If you are new to using version control, you can start with these introductory documents:
+- Host your source code, workflow descriptor file, and Dockerfile in a git repository. Dockstore currently supports GitHub, BitBucket, and GitLab. We recommend GitHub because the :doc:`GitHub App integrates easily with Dockstore <../getting-started/github-apps/github-apps-landing-page>`. If you are new to using version control, you can start with these introductory documents:
 	- `Version Control with Git <https://swcarpentry.github.io/git-novice/>`_
 	- `Git Skills for New and Prospective Maintainers <https://www.youtube.com/watch?v=uvWhSYBkZJ0>`_
 	- Git repositories offer great tools for peer review, including `issues <https://blog.zenhub.com/best-practices-for-github-issues/>`_, `labels <https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/>`_, and `pull requests <https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests>`_. 
@@ -56,7 +56,7 @@ Image / Container Best Practices
 	- Using images from paid organizations on DockerHub
 	- Paying for a DockerHub account (this may be more cost effective if you’re able to create an organization with multiple accounts)
 	- DockerHub offers exceptions to some open source projects that you may be able to get depending on your use case
-	- Hosting the image on a different repository such as Google Container Repository, Quay.io, 		- GitHub Packages, AWS ECR, etc. 
+	- Hosting the image on a different repository such as Google Container Repository, Quay.io, GitHub Packages, AWS ECR, etc. 
 	- Migrating images to another repository to mitigate the impact of DockerHub pull request limits (`see example <https://www.openshift.com/blog/mitigate-impact-of-docker-hub-pull-request-limits>`_).
 
 
@@ -65,27 +65,27 @@ Tool / Workflow Best Practices
 
 Findable
 *********
-- Once your workflow is ready to share with the community, `publish it in Dockstore <docs/getting-started/dockstore-workflows>`.
+- Once your workflow is ready to share with the community, :doc:`publish it in Dockstore <../getting-started/dockstore-workflows>`.
 - When publishing on Dockstore, include robust metadata. Dockstore parses metadata that enables search capabilities for finding your tool/workflow more easily. Metadata also helps your workflow be more reusable. Essential metadata fields include: 
 	- Naming: 
 		- Keep the workflow name short
 		- Use all lowercase letters for compatibility with other platforms such as DockerHub
 	- Authorship, contact information, and description:
 		- You can add author and description metadata to your descriptor file. Adding an author will make it selectable on the Author facet in Dockstore’s search and a description helps because the text search uses it as one of the fields to sift through. 
-	- Include `Dockstore labels <docs/advanced-topics/best-practices/best-practices-dockstore>` to enhance searchability.
-- Above, we discussed the value of organization features in version control and container registries. You can also share your workflow in a `Dockstore Organization and Collection <docs/advanced-topics/organizations-and-collections>`. This feature can, for example, showcase workflows that group together to make a complete analysis.
+	- Include :doc:`Dockstore labels <best-practices/best-practices-dockstore>` to enhance searchability.
+- Above, we discussed the value of organization features in version control and container registries. You can also share your workflow in a :doc:`Dockstore Organization and Collection <organizations-and-collections>`. This feature can, for example, showcase workflows that group together to make a complete analysis.
 
 Accessible
 **********
 
 - Publishing your tool or workflow in Dockstore promotes accessibility: 
 	- Dockstore does not require a user to sign in to search published content, which increases transparency and usability to a greater audience.
-	- Dockstore implements its own REST API and also a standardized `GA4GH API <docs/advanced-topics/conversions>` that can be used for sharing tools and workflows. 
-- Use `Dockstore’s snapshot feature <docs/advanced-topics/snapshot-and-doi>` to provide an immutable release of your workflow that can be verified. 
+	- Dockstore implements its own REST API and also a standardized :doc:`GA4GH API <../advanced-topics/conversions>` that can be used for sharing tools and workflows. 
+- Use :doc:`Dockstore’s snapshot feature <../advanced-topics/snapshot-and-doi>` to provide an immutable release of your workflow that can be verified. 
 	- Dockstore archives important metadata associated with a published and snapshotted version of tool or workflow to ensure provenance
-	- See `Dockstore's best practices for snapshots <docs/advanced-topics/snapshot-and-doi>`, including adding a description and metadata to improve searchability and usability of your workflow.
+	- See :doc:`Dockstore's best practices for snapshots <snapshot-and-doi>`, including adding a description and metadata to improve searchability and usability of your workflow.
 - Mint a snapshot of your workflow with a Digital Object Identifier (DOI).
-	- Users can `request a DOI <docs/advanced-topics/snapshot-and-doi>` (generated via Zenodo) for their workflow through Dockstore. 
+	- Users can :doc:`request a DOI <snapshot-and-doi>` (generated via Zenodo) for their workflow through Dockstore. 
 		- Refer to this useful guide called `Making Your Code Citable <https://guides.github.com/activities/citable-code/>`_.
 	- DOIs enhance reproducibility and make it easier to cite a specific version of your workflow in a publication. 
 
@@ -93,17 +93,17 @@ Interoperable
 *************
 
 - Wrap your pipeline in one or more workflow languages supported by Dockstore:
-	- `Common Workflow Language (CWL) <docs/getting-started/getting-started-with-cwl>`
-    	- Used by SevenBridges (BioData Catalyst, Cancer Genomics Cloud)
-	- `Workflow Description Language (WDL) <docs/getting-started/getting-started-with-wdl>`
+	- :doc:`Common Workflow Language (CWL) <../getting-started/getting-started-with-cwl>`
+    		- Used by SevenBridges (BioData Catalyst, Cancer Genomics Cloud)
+	- :doc: `Workflow Description Language (WDL) <../getting-started/getting-started-with-wdl>`
 		- Used by Terra (BioData Catalyst, AnVIL), DNAnexus
-	- `Galaxy <docs/getting-started/getting-started-with-galaxy>`
+	- :doc: `Galaxy <../getting-started/getting-started-with-galaxy>`
 		- Used by Terra (AnVIL)
-	- `NextFlow <docs/getting-started/getting-started-with-nextflow>'
+	- :doc: `NextFlow <../getting-started/getting-started-with-nextflow>'
 - Provide a parameter file (JSON or YAML) containing example parameters used for launching your workflow. 
 	- The parameter file is where you should link to open access test data for your tool or workflow (learn more in :ref:`Reusable`).
-	- You can submit multiple parameter files so consider sharing one for a local run (you can use the `Dockstore Command Line Interface (CLI) <docs/launch-with>` to launch tools and workflows locally) as well as examples for a launch-with partner (such as `BioData Catalyst <https://bdcatalyst.gitbook.io/biodata-catalyst-documentation/analyze-data/dockstore/launch-workflows-with-biodata-catalyst>`_ or `AnVIL <docs/launch-with/anvil-launch-with>`).
-- Provide a checker tool/workflow by following this `guide <docs/advanced-topics/checker-workflows>`. 
+	- You can submit multiple parameter files so consider sharing one for a local run (you can use the `Dockstore Command Line Interface (CLI) <../launch-with>` to launch tools and workflows locally) as well as examples for a launch-with partner (such as `BioData Catalyst <https://bdcatalyst.gitbook.io/biodata-catalyst-documentation/analyze-data/dockstore/launch-workflows-with-biodata-catalyst>`_ or `AnVIL <../launch-with/anvil-launch-with>`).
+- Provide a :doc:`checker workflow <checker-workflows>`. 
 	- Checker workflows are additional workflows you can associate with a tool or workflow. The purpose of them is to ensure that a tool or workflow, given some inputs, produces the expected outputs on a platform different from the one where you are developing.
 	- Providing a checker workflow gives other researchers confidence that they can run the work on their system correctly. 
 
@@ -125,7 +125,7 @@ Reusable
 	}
 
  
-- The examples below are show **how you should not reference your container**. These exmaple formats can change and cause the workflow to no longer be reproducible. 
+- The examples below show **how not to reference a container** in a workflow task. These exmaple formats can change and cause the workflow to no longer be reproducible. 
 
 Do not reference parameterized images:
 
@@ -139,7 +139,7 @@ Do not reference parameterized images:
    			echo "hello world"
    		}
     		runtime {
-    		doker: docker_image
+    		docker: docker_image
        	 	}	
 	}
  
@@ -167,7 +167,7 @@ Do not use untagged or “latest”.
    			echo "hello world"
    		}
     	runtime {
-    		doker: "pkrusche/hap.py:latest"
+    		docker: "pkrusche/hap.py:latest"
     		}	
 	}
 

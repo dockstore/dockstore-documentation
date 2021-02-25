@@ -6,7 +6,7 @@ This comprehensive document contains best practices for developing secure tools 
 Version Control Best Practices
 -----------------------------------
 
-- Host your source code, workflow descriptor file, and Dockerfile in a git repository. Dockstore currently supports GitHub, BitBucket, and GitLab. We recommend GitHub because the :doc:`GitHub App integrates easily with Dockstore <../getting-started/github-apps/github-apps-landing-page>`. If you are new to using version control, you can start with these introductory documents:
+- Host your source code, workflow descriptor file, and Dockerfile in a git repository. Dockstore currently supports GitHub, BitBucket, and GitLab. We recommend GitHub because the :doc:`GitHub App integrates easily with Dockstore <../../getting-started/github-apps/github-apps-landing-page>`. If you are new to using version control, you can start with these introductory documents:
 
 	- `Version Control with Git <https://swcarpentry.github.io/git-novice/>`_	
 	- `Git Skills for New and Prospective Maintainers <https://www.youtube.com/watch?v=uvWhSYBkZJ0>`_
@@ -89,7 +89,7 @@ Tool / Workflow Best Practices
 
 Findable
 *********
-- Once your workflow is ready to share with the community, :doc:`publish it in Dockstore <../getting-started/dockstore-workflows>`.
+- Once your workflow is ready to share with the community, :doc:`publish it in Dockstore <../../getting-started/dockstore-workflows>`.
 
 - When publishing on Dockstore, include robust metadata. Dockstore parses metadata that enables search capabilities for finding your tool/workflow more easily. Metadata also helps your workflow be more reusable. Essential metadata fields include: 
 	
@@ -103,7 +103,7 @@ Findable
 	
 		- You can add author and description metadata to your descriptor file. Adding an author will make it selectable on the Author facet in Dockstore’s search and a description helps because the text search uses it as one of the fields to sift through. 
 		
-	- Include :doc:`Dockstore labels <best-practices/best-practices-dockstore>` to enhance searchability.
+	- Include :doc:`Dockstore labels <./best-practices-dockstore>` to enhance searchability.
 
 - Above, we discussed the value of organization features in version control and container registries. You can also share your workflow in a :doc:`Dockstore Organization and Collection <organizations-and-collections>`. This feature can, for example, showcase workflows that group together to make a complete analysis.
 
@@ -114,9 +114,9 @@ Accessible
 
 	- Dockstore does not require a user to sign in to search published content, which increases transparency and usability to a greater audience.
 	
-	- Dockstore implements its own REST API and also a standardized :doc:`GA4GH API <../advanced-topics/conversions>` that can be used for sharing tools and workflows. 
+	- Dockstore implements its own REST API and also a standardized :doc:`GA4GH API <../../advanced-topics/conversions>` that can be used for sharing tools and workflows. 
 
-- Use :doc:`Dockstore’s snapshot feature <../advanced-topics/snapshot-and-doi>` to provide an immutable release of your workflow that can be verified. 
+- Use :doc:`Dockstore’s snapshot feature <../../advanced-topics/snapshot-and-doi>` to provide an immutable release of your workflow that can be verified. 
 
 	- Dockstore archives important metadata associated with a published and snapshotted version of tool or workflow to ensure provenance
 	
@@ -124,7 +124,7 @@ Accessible
 
 - Mint a snapshot of your workflow with a Digital Object Identifier (DOI).
 
-	- Users can :doc:`request a DOI <snapshot-and-doi>` (generated via Zenodo) for their workflow through Dockstore. 
+	- Users can :doc:`request a DOI <../snapshot-and-doi>` (generated via Zenodo) for their workflow through Dockstore. 
 	
 		- Refer to this useful guide called `Making Your Code Citable <https://guides.github.com/activities/citable-code/>`_.
 	
@@ -135,15 +135,15 @@ Interoperable
 
 - Wrap your pipeline in one or more workflow languages supported by Dockstore:
 
-	- :doc:`Common Workflow Language (CWL): <../getting-started/getting-started-with-cwl>` used by SevenBridges (BioData Catalyst, Cancer Genomics Cloud)	
-	- :doc:`Workflow Description Language (WDL): <../getting-started/getting-started-with-wdl>` used by Terra (BioData Catalyst, AnVIL), DNAnexus	
-	- :doc:`Galaxy: <../getting-started/getting-started-with-galaxy>` used by Terra (AnVIL)	
-	- :doc:`NextFlow  <../getting-started/getting-started-with-nextflow>`
+	- :doc:`Common Workflow Language (CWL): <../../getting-started/getting-started-with-cwl>` used by SevenBridges (BioData Catalyst, Cancer Genomics Cloud)	
+	- :doc:`Workflow Description Language (WDL): <../../getting-started/getting-started-with-wdl>` used by Terra (BioData Catalyst, AnVIL), DNAnexus	
+	- :doc:`Galaxy: <../../getting-started/getting-started-with-galaxy>` used by Terra (AnVIL)	
+	- :doc:`NextFlow  <../../getting-started/getting-started-with-nextflow>`
 	
 - Provide a parameter file (JSON or YAML) containing example parameters used for launching your workflow. 
 
 	- The parameter file is where you should link to open access test data for your tool or workflow (learn more in :ref:`Reusable`).
-	- You can submit multiple parameter files so consider sharing one for a local run (you can use the :doc:`Dockstore Command Line Interface (CLI) <../launch-with>` to launch tools and workflows locally) as well as examples for a launch-with partner (such as `BioData Catalyst <https://bdcatalyst.gitbook.io/biodata-catalyst-documentation/analyze-data/dockstore/launch-workflows-with-biodata-catalyst>`_ or :doc:`AnVIL <../launch-with/anvil-launch-with>`).
+	- You can submit multiple parameter files so consider sharing one for a local run (you can use the :doc:`Dockstore Command Line Interface (CLI) <../../launch-with>` to launch tools and workflows locally) as well as examples for a launch-with partner (such as `BioData Catalyst <https://bdcatalyst.gitbook.io/biodata-catalyst-documentation/analyze-data/dockstore/launch-workflows-with-biodata-catalyst>`_ or :doc:`AnVIL <../../launch-with/anvil-launch-with>`).
 
 - Provide a :doc:`checker workflow <checker-workflows>`. 
 

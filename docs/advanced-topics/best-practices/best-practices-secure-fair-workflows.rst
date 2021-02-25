@@ -8,9 +8,10 @@ Version Control Best Practices
 
 - Host your source code, workflow descriptor file, and Dockerfile in a git repository. Dockstore currently supports GitHub, BitBucket, and GitLab. We recommend GitHub because the :doc:`GitHub App integrates easily with Dockstore <../getting-started/github-apps/github-apps-landing-page>`. If you are new to using version control, you can start with these introductory documents:
 
- - `Version Control with Git <https://swcarpentry.github.io/git-novice/>`_
- - `Git Skills for New and Prospective Maintainers <https://www.youtube.com/watch?v=uvWhSYBkZJ0>`_
- - Git repositories offer great tools for peer review, including `issues <https://blog.zenhub.com/best-practices-for-github-issues/>`_, `labels <https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/>`_, and `pull requests <https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests>`_. 
+	- `Version Control with Git <https://swcarpentry.github.io/git-novice/>`_	
+	- `Git Skills for New and Prospective Maintainers <https://www.youtube.com/watch?v=uvWhSYBkZJ0>`_
+ 	- Git repositories offer great tools for peer review, including `issues <https://blog.zenhub.com/best-practices-for-github-issues/>`_, `labels <https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/>`_, and `pull requests <https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests>`_. 
+	
 - Create an organization on a git repository and have your collaborators publish their peer reviewed tools or workflows within the organization. (`Here <https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/creating-a-new-organization-from-scratch>`_ are instructions for GitHub).
 
 	- Organizations can centralize your work and help to foster a culture of peer review through Pull Requests.
@@ -103,7 +104,7 @@ Interoperable
 		- Used by Terra (BioData Catalyst, AnVIL), DNAnexus
 	- :doc:`Galaxy <../getting-started/getting-started-with-galaxy>`
 		- Used by Terra (AnVIL)
-	- :doc:`NextFlow <../getting-started/getting-started-with-nextflow>'
+	- :doc:`NextFlow  <../getting-started/getting-started-with-nextflow>'
 - Provide a parameter file (JSON or YAML) containing example parameters used for launching your workflow. 
 	- The parameter file is where you should link to open access test data for your tool or workflow (learn more in :ref:`Reusable`).
 	- You can submit multiple parameter files so consider sharing one for a local run (you can use the :doc:`Dockstore Command Line Interface (CLI) <../launch-with>` to launch tools and workflows locally) as well as examples for a launch-with partner (such as `BioData Catalyst <https://bdcatalyst.gitbook.io/biodata-catalyst-documentation/analyze-data/dockstore/launch-workflows-with-biodata-catalyst>`_ or :doc:`AnVIL <../launch-with/anvil-launch-with>`).

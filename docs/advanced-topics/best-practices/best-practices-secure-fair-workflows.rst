@@ -7,18 +7,22 @@ Version Control Best Practices
 -----------------------------------
 
 - Host your source code, workflow descriptor file, and Dockerfile in a git repository. Dockstore currently supports GitHub, BitBucket, and GitLab. We recommend GitHub because the :doc:`GitHub App integrates easily with Dockstore <../getting-started/github-apps/github-apps-landing-page>`. If you are new to using version control, you can start with these introductory documents:
-	- `Version Control with Git <https://swcarpentry.github.io/git-novice/>`_
-	- `Git Skills for New and Prospective Maintainers <https://www.youtube.com/watch?v=uvWhSYBkZJ0>`_
-	- Git repositories offer great tools for peer review, including `issues <https://blog.zenhub.com/best-practices-for-github-issues/>`_, `labels <https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/>`_, and `pull requests <https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests>`_. 
+
+ - `Version Control with Git <https://swcarpentry.github.io/git-novice/>`_
+ - `Git Skills for New and Prospective Maintainers <https://www.youtube.com/watch?v=uvWhSYBkZJ0>`_
+ - Git repositories offer great tools for peer review, including `issues <https://blog.zenhub.com/best-practices-for-github-issues/>`_, `labels <https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/>`_, and `pull requests <https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests>`_. 
 - Create an organization on a git repository and have your collaborators publish their peer reviewed tools or workflows within the organization. (`Here <https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/creating-a-new-organization-from-scratch>`_ are instructions for GitHub).
+
 	- Organizations can centralize your work and help to foster a culture of peer review through Pull Requests.
 	- Submitting to an organization rather than hosting on an individual account provides a fallback for others if you become inactive on the git repository site.
 - Plan your repository structure
+
 	- The repository should include the workflow language descriptor file(s), the Dockerfile used to create a custom container (if applicable), a license, and a thorough README.md.
 	- Here are examples of nicely organized repositories for workflow development: 
 		- `Viral Pipelines <https://github.com/broadinstitute/viral-pipelines>`_ from the Broad Institute
 		- `nf-core <https://github.com/broadinstitute/viral-pipelines>`_ guidelines for workflows
-- Use `branches <https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-branches#working-with-branches>`_ to separate the development of distinct features for your workflow
+- Use `branches <https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-branches#working-with-branches>`_ to separate the development of distinct features for your workflow.
+
 	- There should always be at least one ‘main’ branch that points to the most stable copy of your workflow.
 	- Any new development of features, optimizations, etc. should be created on a new branch/version that diverges from the main branch.
 		- If developing multiple new features simultaneously or if multiple people are creating content, work should be split into separate branches. 

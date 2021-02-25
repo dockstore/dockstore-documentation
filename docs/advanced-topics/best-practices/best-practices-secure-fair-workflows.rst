@@ -242,12 +242,13 @@ Do not use untagged or “latest”.
 - Provide a thorough README in the git repository. Here is an example of thorough documentation. 	
 
 		- We suggest including the following sections:
-		- An introductory description of the goal of the analysis.
-		- A pipeline summary that includes the software packages used by the pipeline.
-		- A quick start guide that includes inputs and outputs and specifies which inputs are required versus optional.
-		- Relevant links to external resources, such as expanded documentation. 
-		- Contact information for the organization or individual pipeline maintainer.
-		- Any available cost or benchmarking information. 
-		- How to cite the use of your workflow (including references for the original software authors). 
+		
+			- An introductory description of the goal of the analysis.
+			- A pipeline summary that includes the software packages used by the pipeline.
+			- A quick start guide that includes inputs and outputs and specifies which inputs are required versus optional.
+			- Relevant links to external resources, such as expanded documentation. 
+			- Contact information for the organization or individual pipeline maintainer.
+			- Any available cost or benchmarking information. 
+			- How to cite the use of your workflow (including references for the original software authors). 
 
         

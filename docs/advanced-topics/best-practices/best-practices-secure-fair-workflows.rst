@@ -135,18 +135,9 @@ Interoperable
 
 - Wrap your pipeline in one or more workflow languages supported by Dockstore:
 
-	- :doc:`Common Workflow Language (CWL) <../getting-started/getting-started-with-cwl>`
-	
-    		- Used by SevenBridges (BioData Catalyst, Cancer Genomics Cloud)
-		
-	- :doc:`Workflow Description Language (WDL) <../getting-started/getting-started-with-wdl>`
-	
-		- Used by Terra (BioData Catalyst, AnVIL), DNAnexus
-		
-	- :doc:`Galaxy <../getting-started/getting-started-with-galaxy>`
-	
-		- Used by Terra (AnVIL)
-		
+	- :doc:`Common Workflow Language (CWL): <../getting-started/getting-started-with-cwl>` used by SevenBridges (BioData Catalyst, Cancer Genomics Cloud)	
+	- :doc:`Workflow Description Language (WDL): <../getting-started/getting-started-with-wdl>` used by Terra (BioData Catalyst, AnVIL), DNAnexus	
+	- :doc:`Galaxy: <../getting-started/getting-started-with-galaxy>` used by Terra (AnVIL)	
 	- :doc:`NextFlow  <../getting-started/getting-started-with-nextflow>`
 	
 - Provide a parameter file (JSON or YAML) containing example parameters used for launching your workflow. 

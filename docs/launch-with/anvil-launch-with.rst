@@ -45,12 +45,7 @@ Limitations
 
 1. While we support launching of WDL workflows, tools as listed in
    Dockstore are currently not supported.
-2. AnVIL does not currently support file-path based imports. Importing a
-   workflow with file-based imports will result in error. See the
-   :ref:`converting file-based imports
-   doc <converting-file-path-based-imports-to-public-http-s-based-imports-for-wdl>`
-   for more info.
-3. Only the WDL language is supported.
+2. Only the WDL language is supported.
 
 See Also
 --------

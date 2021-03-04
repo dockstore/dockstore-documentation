@@ -43,9 +43,12 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
    launch-with/launch
    launch-with/anvil-launch-with
+   launch-with/bdcat-launch-with
+   launch-with/cavatica-launch-with
    launch-with/cgc-launch-with
    launch-with/dnanexus-launch-with
    launch-with/dnastack-launch-with
+   launch-with/galaxy-launch-with
    launch-with/terra-launch-with
 
 .. toctree::
@@ -56,6 +59,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    end-user-topics/faceted-search
    end-user-topics/starring
    end-user-topics/language-support
+   end-user-topics/ORCID
 
 .. toctree::
    :caption: Advanced Developer Topics

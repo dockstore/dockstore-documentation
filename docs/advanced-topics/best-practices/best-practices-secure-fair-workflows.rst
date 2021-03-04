@@ -1,5 +1,5 @@
 Best Practices for Secure and FAIR Workflows
-========================
+============================================
 
 This comprehensive document contains best practices for developing secure tools or workflows that also exemplify the `FAIR (Findable, Accessible, Interoperable, Reusable) guiding principles <https://www.go-fair.org/fair-principles/>`_. 
 

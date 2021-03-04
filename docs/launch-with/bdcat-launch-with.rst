@@ -37,3 +37,7 @@ Limitations
    support http(s) based imports. Dockstore disables the Launch
    with NHLBI BioData Catalyst button if the selected version has
    any http(s) imports.
+
+.. discourse::
+    :topic_identifier: 4190
+

@@ -51,3 +51,7 @@ will be prompted to select which version of the workflow to import.
     you can paste if you select *import from a TRS id*
 
 .. figure:: /assets/images/docs/galaxy/copy_trs.png
+
+.. discourse::
+    :topic_identifier: 4189
+

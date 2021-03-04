@@ -23,7 +23,7 @@ If not logged into the Cavatica, you will be prompted to login.
 You will then be prompted to import the workflow into Cavatica. Please follow the Cavatica UI
 prompts to import the workflow into Cavatica.
 
-.. _cgc-limitations:
+.. _cavatica-limitations:
 
 Limitations
 -----------
@@ -33,4 +33,7 @@ Limitations
 2. The CGC does not currently support http(s) based imports in CWL. Dockstore
    disables the Launch with CGC button if the selected version has any http(s) imports.
 3. Only the CWL language is supported.
+
+.. discourse::
+    :topic_identifier: 4188
 

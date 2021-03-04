@@ -3,6 +3,8 @@ Best Practices for Secure and FAIR Workflows
 
 This comprehensive document contains best practices for developing secure tools or workflows that also exemplify the `FAIR (Findable, Accessible, Interoperable, Reusable) guiding principles <https://www.go-fair.org/fair-principles/>`_. 
 
+.. _version-control-best-practices:
+
 Version Control Best Practices
 -----------------------------------
 
@@ -39,6 +41,8 @@ Version Control Best Practices
 - Publish releases of workflow to save your work at a stable version for publication and citation. On GitHub these are ‘tags’ (`learn how to manage tags <https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/managing-tags>`_).  Below, we discuss how such releases can become immutable when synced with the snapshots feature on Dockstore. 
 
 
+.. _image-container-best-practices:
+
 Image / Container Best Practices
 ---------------------------------
 
@@ -50,7 +54,7 @@ Image / Container Best Practices
 - Use Dockerfiles to describe and configure images:
 
 		- See `Best Practices from Docker <https://www.docker.com/blog/intro-guide-to-dockerfile-best-practices/>`_ and `10 Simple Rules for Writing Dockerfiles for Reproducible Analysis <https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316>`_ .
-		- Use a source control site (as mentioned above in :ref:`Version Control Best Practices`) for versioning Dockerfiles (see a `simple example for versioning your Docker Image <https://medium.com/better-programming/how-to-version-your-docker-images-1d5c577ebf54>`_). 
+		- Use a source control site (as mentioned above in :ref:`version-control-best-practices`) for versioning Dockerfiles (see a `simple example for versioning your Docker Image <https://medium.com/better-programming/how-to-version-your-docker-images-1d5c577ebf54>`_). 
 
 - Keep images light:
 
@@ -66,7 +70,7 @@ Image / Container Best Practices
 		- `Golang <https://hub.docker.com/_/golang>`_
 		
 	- A good rule of thumb is that each image should have a specific purpose. Avoid installing all of the software you need for an entire analysis in one container, instead use multiple containers. 
-	- Don’t include test data inside the image. Recommendations for hosting test data alongside your workflow can be found in the section below titled :ref:`Accessible`.  
+	- Don’t include test data inside the image. Recommendations for hosting test data alongside your workflow can be found in the section below titled :ref:`accessible`.  
 
 - Publish your pre-built image in an open source container registry (such as DockerHub or Quay.io):
 
@@ -105,7 +109,9 @@ Findable
 		
 	- Include :doc:`Dockstore labels <./best-practices-dockstore>` to enhance searchability.
 
-- Above, we discussed the value of organization features in version control and container registries. You can also share your workflow in a :doc:`Dockstore Organization and Collection <organizations-and-collections>`. This feature can, for example, showcase workflows that group together to make a complete analysis.
+- Above, we discussed the value of organization features in version control and container registries. You can also share your workflow in a :doc:`Dockstore Organization and Collection </advanced-topics/organizations-and-collections>`. This feature can, for example, showcase workflows that group together to make a complete analysis.
+
+.. _accessible:
 
 Accessible
 **********
@@ -120,11 +126,11 @@ Accessible
 
 	- Dockstore archives important metadata associated with a published and snapshotted version of tool or workflow to ensure provenance
 	
-	- See :doc:`Dockstore's best practices for snapshots <snapshot-and-doi>`, including adding a description and metadata to improve searchability and usability of your workflow.
+	- See :doc:`Dockstore's best practices for snapshots </advanced-topics/snapshot-and-doi>`, including adding a description and metadata to improve searchability and usability of your workflow.
 
 - Mint a snapshot of your workflow with a Digital Object Identifier (DOI).
 
-	- Users can :doc:`request a DOI <../snapshot-and-doi>` (generated via Zenodo) for their workflow through Dockstore. 
+	- Users can :doc:`request a DOI </advanced-topics/snapshot-and-doi>` (generated via Zenodo) for their workflow through Dockstore. 
 	
 		- Refer to this useful guide called `Making Your Code Citable <https://guides.github.com/activities/citable-code/>`_.
 	
@@ -142,13 +148,15 @@ Interoperable
 	
 - Provide a parameter file (JSON or YAML) containing example parameters used for launching your workflow. 
 
-	- The parameter file is where you should link to open access test data for your tool or workflow (learn more in :ref:`Reusable`).
-	- You can submit multiple parameter files so consider sharing one for a local run (you can use the :doc:`Dockstore Command Line Interface (CLI) <../../launch-with>` to launch tools and workflows locally) as well as examples for a launch-with partner (such as `BioData Catalyst <https://bdcatalyst.gitbook.io/biodata-catalyst-documentation/analyze-data/dockstore/launch-workflows-with-biodata-catalyst>`_ or :doc:`AnVIL <../../launch-with/anvil-launch-with>`).
+	- The parameter file is where you should link to open access test data for your tool or workflow (learn more in :ref:`reusable`).
+	- You can submit multiple parameter files so consider sharing one for a local run (you can use the :ref:`launch-dockstore-cli` to launch tools and workflows locally) as well as examples for a launch-with partner (such as `BioData Catalyst <https://bdcatalyst.gitbook.io/biodata-catalyst-documentation/analyze-data/dockstore/launch-workflows-with-biodata-catalyst>`_ or :doc:`AnVIL <../../launch-with/anvil-launch-with>`).
 
-- Provide a :doc:`checker workflow <checker-workflows>`. 
+- Provide a :doc:`checker workflow </advanced-topics/checker-workflows>`. 
 
 	- Checker workflows are additional workflows you can associate with a tool or workflow. The purpose of them is to ensure that a tool or workflow, given some inputs, produces the expected outputs on a platform different from the one where you are developing.
 	- Providing a checker workflow gives other researchers confidence that they can run the work on their system correctly. 
+
+.. _reusable:
 
 Reusable
 ********
@@ -216,7 +224,7 @@ Do not use untagged or “latest”.
 
 - Provide open access test data with your published workflow. Test data can be shared as inputs in a JSON. 
 
-	- As mentioned in :ref:`Image / Container Best Practices`, test data should be hosted outside of the container. 
+	- As mentioned in :ref:`image-container-best-practices`, test data should be hosted outside of the container. 
 	
 		- GitHub can host small files such as csv or tsv (for example: trait data)
 		

@@ -32,9 +32,6 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    getting-started/dockstore-workflows
    getting-started/hosted-tools-and-workflows
    getting-started/getting-started-with-services
-
-.. toctree::
-
    getting-started/github-apps/github-apps-landing-page
 
 .. toctree::

@@ -15,27 +15,33 @@ on the Dockstore site and in the Dockstore command-line utility.
 
 [1] Available in both classic and CWL Viewer modes
 
-[2] Does not support http(s) based imports. See :ref:`CGC
+[2] Does not support http(s) based imports. See :ref:`BioData Catalyst
+Limitations <bdcat-limitations>` for limitations.
+
+[3] Does not support http(s) based imports. See :ref:`Cavatica
+Limitations <cavatica-limitations>` for limitations.
+
+[4] Does not support http(s) based imports. See :ref:`CGC
 Limitations <cgc-limitations>` for limitations.
 
-[3] Does not support file-path based imports. See :ref:`BioData Catalyst
+[5] Does not support some file-path based imports. See :ref:`AnVIL
 Limitations <anvil-limitations>` for limitations.
 
-[4] Does not support file-path based imports. See :ref:`AnVIL
+[6] Does not support some file-path based imports. See :ref:`BioData Catalyst
 Limitations <anvil-limitations>` for limitations.
 
-[5] Does not support file-path or http(s) based imports. See :ref:`DNAstack
+[7] Does not support file-path or http(s) based imports. See :ref:`DNAstack
 Limitations <dnastack-limitations>` for limitations.
 
-[6] Does not support file-path based imports. See :ref:`Terra
+[8] Does not support some file-path based imports. See :ref:`Terra
 Limitations <terra-limitations>` for limitations.
 
-[7] There is no launch with Galaxy button in Dockstore, but Dockstore workflows can be searched and imported from within Galaxy.
+[9] There is no launch with Galaxy button in Dockstore, but Dockstore workflows can be searched and imported from within Galaxy.
 
-[8] All verified Dockstore WDL tools/workflows were tested successfully. However, we anticipate that more testing is needed for WDL workflows that use language features not contained within that dataset.
+[10] All verified Dockstore WDL tools/workflows were tested successfully. However, we anticipate that more testing is needed for WDL workflows that use language features not contained within that dataset.
 
 
-[9] Use the Dockstore CLI optional parameter --wdl-output-target which allows you to specify a remote path to provision output files to ex: s3://oicr.temp/testing-launcher/
+[11] Use the Dockstore CLI optional parameter --wdl-output-target which allows you to specify a remote path to provision output files to ex: s3://oicr.temp/testing-launcher/
 
 
 .. _converting-file-path-based-imports-to-public-http-s-based-imports-for-wdl:

@@ -29,6 +29,19 @@ CWL Workflow with BioData Catalyst button
 
    CWL workflow
 
+.. tip:: Upload your test parameter files
+    Test parameter files are not included in the launch-with service.
+    For WDL workflows, after a workflow launch is complete, users can download parameter files from
+    Dockstore and upload them into their BioData Catalyst workspace that contains the workflow.
+    To download a test parameter file from Dockstore, select the Files tab of the
+    workflow version, then select Test Parameter Files, select the file you want,
+    then click the download button. Use the BioData Catalyst UI to upload the file to BioData Catalyst.
+
+ .. figure:: /assets/images/docs/download-test-parameter.png
+    :alt: Download test parameter file
+
+.. _bdcat-limitations:
+
 Limitations
 -----------
 
@@ -37,6 +50,9 @@ Limitations
    support http(s) based imports. Dockstore disables the Launch
    with NHLBI BioData Catalyst button if the selected version has
    any http(s) imports.
+3. For WDL workflows, NHLBI BioData Catalyst only supports file-path based imports for GitHub-based workflows. The
+   Launch-with NHLBI BioData Catalyst button is disabled if the selected WDL workflow version
+   has more than one descriptor file and is not GitHub-based.
 
 .. discourse::
     :topic_identifier: 4190

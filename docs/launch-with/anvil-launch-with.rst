@@ -38,6 +38,17 @@ runtime environment (docker, cpu, memory, and disks) to avoid using
 limiting defaults on AnVIL. See more
 `here <https://cromwell.readthedocs.io/en/stable/wf_options/Overview>`__.
 
+.. tip:: Upload your test parameter files
+    Test parameter files are not included in the launch-with service.
+    After a workflow launch is complete, users can download parameter files from
+    Dockstore and upload them into their AnVIL workspace that contains the workflow.
+    To download a test parameter file from Dockstore, select the Files tab of the
+    workflow version, then select Test Parameter Files, select the file you want,
+    then click the download button. Use the AnVIL UI to upload the file to AnVIL.
+
+ .. figure:: /assets/images/docs/download-test-parameter.png
+    :alt: Download test parameter file
+
 .. _anvil-limitations:
 
 Limitations
@@ -45,11 +56,9 @@ Limitations
 
 1. While we support launching of WDL workflows, tools as listed in
    Dockstore are currently not supported.
-2. AnVIL does not currently support file-path based imports. Importing a
-   workflow with file-based imports will result in error. See the
-   :ref:`converting file-based imports
-   doc <converting-file-path-based-imports-to-public-http-s-based-imports-for-wdl>`
-   for more info.
+2. AnVIL only supports file-path based imports for GitHub-based workflows. The
+   Launch-with AnVIL button is disabled if the selected workflow version
+   has more than one descriptor file and is not GitHub-based.
 3. Only the WDL language is supported.
 
 See Also

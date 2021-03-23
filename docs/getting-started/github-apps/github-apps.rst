@@ -68,6 +68,7 @@ For a workflow, the ``/.dockstore.yml`` has the following general structure
    workflows:
       - name: <String>
         subclass: <CWL | WDL | NFL | GALAXY>
+        publish: <Boolean>
         primaryDescriptorPath: <String>
         testParameterFiles: <String Array>
         filters:
@@ -84,6 +85,10 @@ name (optional)
     **Each workflow listed must have a unique (or no) name.**
 subclass
     The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GALAXY. This cannot be changed once the workflow is registered.
+publish (optional)
+    Workflow-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
+    Set to true to publish an unpublished workflow, or false to unpublish a published workflow.
+    Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
 primaryDescriptorPath
     The absolute path to the primary descriptor file in the Git repository. 
     
@@ -125,6 +130,7 @@ Ex. /.dockstore.yml with multiple workflows
    workflows:
       - name: globalAligner
         subclass: CWL
+        publish: True
         primaryDescriptorPath: /runGlobalAligner.cwl
         testParameterFiles:
             - /test/globalAligner.cwl.json
@@ -160,6 +166,8 @@ For a service, the ``/.dockstore.yml`` has this general structure for version 1.
       name: <String>
       author: <String>
       description: <String>
+
+      publish: <Boolean>
 
       files: <String Array>
 
@@ -201,6 +209,10 @@ author
     Optional author for your service.
 description
     Optional description for your service
+publish
+    Optional service-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
+    Set to true to publish an unpublished workflow, or false to unpublish a published workflow.
+    Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
 files
     An array of files Dockstore will index from your GitHub repo. Wildcards are not supported.
 scripts

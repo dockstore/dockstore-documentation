@@ -33,13 +33,15 @@ See a full list of our changes on `GitHub <https://github.com/dockstore/dockstor
 Breaking changes 
 ----------------
 
+-  None known
+
 Major
 ~~~~~
 -  None intended
 
 Minor
 ~~~~~
--  none
+-  None
 
 .. _GitHub: https://github.com/dockstore/dockstore/milestone/37
 .. _here: https://docs.dockstore.org/en/develop/advanced-topics/checksum-support.html

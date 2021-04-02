@@ -6,8 +6,8 @@ Highlighted new features include:
 
 -  GitHub app support for filters to allow for more control over which tags and branches are automatically reported to Dockstore.
 
-   -  More details `here <https://docs.dockstore.org/en/develop/getting-started/github-apps/github-apps.html?highlight=filters>`_.
-   
+   -  More details `here <../getting-started/github-apps/github-apps.html?highlight=filters>`_.
+
 -  Ability to select a specific version of a workflow or tool when adding them to a collection ("I vouch for specifically version X of workflow Y").
 
 -  Update support for cwltool from 1.0.20190621234233 to 3.0.20200807132242.
@@ -23,14 +23,14 @@ Highlighted new features include:
 -  Behind the scenes:
 
    -  A large number of deployment and architectural changes to facilitate better security and regulatory compliance.
-   
-   -  Updates to elastic search and angular.
-   
--  A significant number of bugfixes for everything from WDL parsing, UI display issues, editing of hosted workflows, and command-line interface fixes.
- 
-See a full list of our changes on `GitHub <https://github.com/dockstore/dockstore/milestone/37>`_.
 
-Breaking changes 
+   -  Updates to elastic search and angular.
+
+-  A significant number of bugfixes for everything from WDL parsing, UI display issues, editing of hosted workflows, and command-line interface fixes.
+
+See a full list of our changes on |GitHub|.
+
+Breaking changes
 ----------------
 
 -  None known
@@ -43,5 +43,6 @@ Minor
 ~~~~~
 -  None
 
-.. _GitHub: https://github.com/dockstore/dockstore/milestone/37
-.. _here: https://docs.dockstore.org/en/develop/advanced-topics/checksum-support.html
+.. |GitHub|  raw:: html
+
+        <a href="https://github.com/dockstore/dockstore/milestone/37?closed=1" target="_blank"</a>

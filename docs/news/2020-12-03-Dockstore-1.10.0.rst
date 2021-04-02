@@ -28,7 +28,7 @@ Highlighted new features include:
 
 -  A significant number of bugfixes for everything from WDL parsing, UI display issues, editing of hosted workflows, and command-line interface fixes.
 
-See a full list of our changes on | GitHub |.
+See a full list of our changes on |GitHub|.
 
 Breaking changes
 ----------------

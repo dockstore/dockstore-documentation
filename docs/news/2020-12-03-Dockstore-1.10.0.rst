@@ -43,4 +43,5 @@ Minor
 ~~~~~
 -  None
 
-.. |GitHub|  <a href="https://github.com/dockstore/dockstore/milestone/37?closed=1" target="_blank"</a>
+.. |GitHub|  raw:: html
+   <a href="https://github.com/dockstore/dockstore/milestone/37?closed=1" target="_blank">GitHub</a>

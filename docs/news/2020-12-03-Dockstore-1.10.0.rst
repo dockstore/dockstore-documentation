@@ -6,7 +6,7 @@ Highlighted new features include:
 
 -  GitHub app support for filters to allow for more control over which tags and branches are automatically reported to Dockstore.
 
-   -  More details :doc:`here ../getting-started/github-apps/github-apps.html?highlight=filters` .
+   -  More details :doc:`here`_.
 
 -  Ability to select a specific version of a workflow or tool when adding them to a collection ("I vouch for specifically version X of workflow Y").
 
@@ -42,3 +42,5 @@ Major
 Minor
 ~~~~~
 -  None
+
+.. _here:  <../getting-started/github-apps/github-apps.html?highlight=filters>

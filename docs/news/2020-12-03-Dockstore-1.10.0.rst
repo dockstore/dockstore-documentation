@@ -43,4 +43,4 @@ Minor
 ~~~~~
 -  None
 
-.. _here: /getting-started/github-apps/github-apps.html
+.. _here: ../getting-started/github-apps/github-apps.html

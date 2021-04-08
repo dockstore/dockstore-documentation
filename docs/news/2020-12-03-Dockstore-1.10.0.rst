@@ -1,17 +1,12 @@
 Dockstore 1.10.0
 ================
 
-\ |version|
-\ |release|
-\ |language|
-\ |locale_dirs|
-
 Highlighted new features include:
 ---------------------------------
 
 -  GitHub app support for filters to allow for more control over which tags and branches are automatically reported to Dockstore.
 
-   -  More details :doc:`here ../getting-started/github-apps/github-apps`_.
+   -  More details :doc:`here <../getting-started/github-apps/github-apps>`_.
 
 -  Ability to select a specific version of a workflow or tool when adding them to a collection ("I vouch for specifically version X of workflow Y").
 

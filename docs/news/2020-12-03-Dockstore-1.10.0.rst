@@ -1,6 +1,11 @@
 Dockstore 1.10.0
 ================
 
+\ |version|
+\ |release|
+\ |language|
+\ |locale_dirs|
+
 Highlighted new features include:
 ---------------------------------
 

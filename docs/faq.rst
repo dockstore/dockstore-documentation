@@ -4,10 +4,10 @@ FAQ
 What happens if I rename my GitHub repository?
 ----------------------------------------------
 
-If you have registered a tool or workflow from GitHub in Dockstore the
+When you have registered a tool or workflow from GitHub in Dockstore the
 link to the repository for your tool or workflow is displayed on the
 Info tab next to 'Source Code'. If you then `rename <https://docs.github.com/en/github/administering-a-repository/renaming-a-repository>`__
-the GitHub repository, the Source Code link will be incorrect, but
+the GitHub repository, the Source Code link will display the original name, but
 will resolve to the correct GitHub location when you click on it.
 
 Another side effect is that you will be able to register the workflow

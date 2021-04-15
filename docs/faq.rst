@@ -14,6 +14,10 @@ Another side effect is that you will be able to register the workflow
 again in Dockstore under the new GitHub name, so you effectively
 will have registered the same workflow twice.
 
+Please note the GitHub warning: If you create a new repository under
+your account in the future, do not reuse the original name of the renamed
+repository. If you do, redirects to the renamed repository will break.
+
 
 How does launching with Dockstore CLI compare with cwltool?
 -----------------------------------------------------------

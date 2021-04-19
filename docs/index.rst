@@ -35,6 +35,12 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    getting-started/github-apps/github-apps-landing-page
 
 .. toctree::
+   :caption: Videos
+   :maxdepth: 1
+
+   videos
+
+.. toctree::
    :caption: Launch
    :maxdepth: 1
 
@@ -104,6 +110,12 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    faq
 
 .. toctree::
+   :caption: Roadmap
+   :maxdepth: 1
+
+   roadmap
+
+.. toctree::
    :caption: Changelog
    :maxdepth: 1
 
@@ -118,6 +130,12 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
    news
    news/*
+
+.. toctree::
+   :caption: System Status
+   :maxdepth: 1
+
+   systemstatus
 
 .. centered:: In Affiliation with
 

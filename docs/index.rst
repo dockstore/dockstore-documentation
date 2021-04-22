@@ -12,12 +12,15 @@ you to the core concepts of Dockstore, leaving you with a good understanding of 
 going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` or our `quickstart guide <https://dockstore.org/quick-start>`_.
 
 .. toctree::
+   :maxdepth: 1
+
+   Return to Dockstore Home <https://dockstore.org>
+
+.. toctree::
    :caption: About
    :maxdepth: 1
 
    dockstore-introduction
-
-   Return to Dockstore Home <https://dockstore.org>
 
 .. toctree::
    :caption: Getting Started Guide
@@ -37,7 +40,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    getting-started/github-apps/github-apps-landing-page
 
 .. toctree::
-   :caption: Videos
+   :caption: Videos (Tutorials & Presentations)
    :maxdepth: 1
 
    videos
@@ -203,3 +206,5 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 .. _TerraLink: https://terra.bio/
 
 .. |imagespace| unicode:: U+00A0 U+00A0 U+00A0 U+00A0 U+00A0 .. non-breaking spaces between logo images
+
+ 

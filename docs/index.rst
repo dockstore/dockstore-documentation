@@ -14,7 +14,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 .. toctree::
    :maxdepth: 1
 
-   Return to Dockstore Home <https://dockstore.org>
+   Go to Dockstore <https://dockstore.org>
 
 .. toctree::
    :caption: About

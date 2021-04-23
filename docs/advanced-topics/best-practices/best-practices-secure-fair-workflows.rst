@@ -14,7 +14,7 @@ Version Control Best Practices
 	- `Git Skills for New and Prospective Maintainers <https://www.youtube.com/watch?v=uvWhSYBkZJ0>`_
  	- Git repositories offer great tools for peer review, including `issues <https://blog.zenhub.com/best-practices-for-github-issues/>`_, `labels <https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/>`_, and `pull requests <https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests>`_. 
 	
-- Create an organization on a git repository and have your collaborators publish their peer reviewed tools or workflows within the organization. (`Here <https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/creating-a-new-organization-from-scratch>`_ are instructions for GitHub).
+- Create an organization on a git repository and have your collaborators publish their peer-reviewed tools or workflows within the organization. (`Here <https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/creating-a-new-organization-from-scratch>`_ are instructions for GitHub).
 
 	- Organizations can centralize your work and help to foster a culture of peer review through Pull Requests.
 	- Submitting to an organization rather than hosting on an individual account provides a fallback for others if you become inactive on the git repository site.
@@ -32,14 +32,14 @@ Version Control Best Practices
 
 	- There should always be at least one ‘main’ branch that points to the most stable copy of your workflow.
 	
-	- Any new development of features, optimizations, etc. should be created on a new branch/version that diverges from the main branch.
+	- Any new development of features, optimizations, etc., should be created on a new branch/version that diverges from the main branch.
 	
 		- If developing multiple new features simultaneously or if multiple people are creating content, work should be split into separate branches. 
-		- It’s best to split into branches by independent feature units, ex: “add-QC-before-alignment”.
+		- It’s best to split into branches by independent feature units, ex: “add-QC-before-alignment.”
 		- Once your feature is stable, create a pull request to merge the branch into your main branch. Once merged, you can delete the development branch if no longer needed. 
-		- Note on GitHub repository and Docker image versioning: Many workflow repositories will contain both a Dockerfile, with instructions for building the Docker image, in addition to the workflow descriptor file(s) (e.g., .cwl, .wdl, .nexflow, etc.). This adds complexity when tags for Docker images mirror tags for the GitHub repository (as is possible using quay.io, for example). On a development branch, you may want the task to refer to a development version of the Docker image (e.g., quay.io/my_account/my_image:develop). This means that a perfectly-functioning development branch commit could become "incorrect" after being merged into the master branch (because the descriptor file task(s) will be referring to development Docker image version rather than an immutable version. The best current solution is to update the descriptor file just prior to (or during) the pull request so that the tasks reference the digest format of the Docker image (e.g., quay.io/my_account/my_image:f63e020c4062e0be80831a50de8640).
+		- Note on GitHub repository and Docker image versioning: Many workflow repositories will contain both a Dockerfile, with instructions for building the Docker image, in addition to the workflow descriptor file(s) (e.g., .cwl, .wdl, .nexflow, etc.). This adds complexity when tags for Docker images mirror tags for the GitHub repository (as is possible using quay.io, for example). On a development branch, you may want the task to refer to a development version of the Docker image (e.g., quay.io/my_account/my_image:develop). This means that a perfectly-functioning development branch commit could become "incorrect" after being merged into the master branch (because the descriptor file task(s) will be referring to the development Docker image version rather than an immutable version. The best current solution is to update the descriptor file just prior to (or during) the pull request so that the tasks reference the digest format of the Docker image (e.g., quay.io/my_account/my_image:f63e020c4062e0be80831a50de8640).
 		
-- Publish releases of workflow to save your work at a stable version for publication and citation. On GitHub these are ‘tags’ (`learn how to manage tags <https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/managing-tags>`_).  Below, we discuss how such releases can become immutable when synced with the snapshots feature on Dockstore. 
+- Publish releases of workflow to save your work at a stable version for publication and citation. On GitHub, these are ‘tags’ (`learn how to manage tags <https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/managing-tags>`_).  Below, we discuss how such releases can become immutable when synced with the snapshots feature on Dockstore. 
 
 
 .. _image-container-best-practices:
@@ -47,20 +47,20 @@ Version Control Best Practices
 Image / Container Best Practices
 ---------------------------------
 
-- Because anyone can publish an image in a public repository (Docker Hub, Quay, etc.), you should be cautious of third-party containers because they may contain malware or insecure software, or may have insecure settings. These may result in `cryptojacking <https://sysdig.com/blog/detecting-cryptojacking/>`_. See an example of a malicious image in `this GitHub repo  <https://github.com/docker/hub-feedback/issues/1570>`_.
+- Because anyone can publish an image in a public repository (Docker Hub, Quay, etc.), you should be cautious of third-party containers because they may contain malware or insecure software or may have insecure settings. These may result in `cryptojacking <https://sysdig.com/blog/detecting-cryptojacking/>`_. See an example of a malicious image in `this GitHub repo  <https://github.com/docker/hub-feedback/issues/1570>`_.
 - When creating custom images, we recommend starting with `official images <https://docs.docker.com/docker-hub/official_images/>`_. This way you know that you are starting with a secure base since these images are maintained to remove vulnerabilities. 
 - You may find helpful images from sources such as  BioContainer that maintains `images for 1K+ bioinformatics tools <https://biocontainers.pro/#/registry>`_.  We cannot guarantee that BioContainer images are secure, so we recommend you scan all non-official images for vulnerabilities. Tools such as `Snyk <https://support.snyk.io/hc/en-us/articles/360014875297-Getting-started-with-Snyk-Open-Source>`_ and `Trivy <https://github.com/aquasecurity/trivy>`_ scan containers for security concerns. 
 - If you detect a vulnerability in a container you are interested in, we suggest you 1) contact the maintainer to update the image, or 2) if there is a Dockerfile, use it as a template to update the image yourself. Try inspecting the Dockerfile and only include those parts you feel are trustworthy. Consider upgrading versions of packages as they may be a source of vulnerabilities. 
 
 - Use Dockerfiles to describe and configure images:
 
-		- See `Best Practices from Docker <https://www.docker.com/blog/intro-guide-to-dockerfile-best-practices/>`_ and `10 Simple Rules for Writing Dockerfiles for Reproducible Analysis <https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316>`_ .
+		- See `Best Practices from Docker <https://www.docker.com/blog/intro-guide-to-dockerfile-best-practices/>`_ and `10 Simple Rules for Writing Dockerfiles for Reproducible Analysis <https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316>`_.
 		- Use a source control site (as mentioned above in :ref:`version-control-best-practices`) for versioning Dockerfiles (see a `simple example for versioning your Docker Image <https://medium.com/better-programming/how-to-version-your-docker-images-1d5c577ebf54>`_). 
 
 - Keep images light:
 
-	- More packages increases risks; try to avoid installing unnecessary packages in your images. That being said, starting with a very bare image (such as Alpine) may lead to a long setup, or difficulties in debugging. 
-	- Images tagged with "-slim" contain the minimum components needed to run, without being as strict as Alpine-based images. They can often provide a happy medium between a reduced size, enhanced security, and usability.
+	- More packages increase risks; try to avoid installing unnecessary packages in your images. That being said, starting with a very bare image (such as Alpine) may lead to a long setup or difficulties in debugging. 
+	- Images tagged with "-slim" contain the minimum components needed to run without being as strict as Alpine-based images. They can often provide a happy medium between a reduced size, enhanced security, and usability.
 	
 	- Some helpful starting images are suggested below:
 	
@@ -73,7 +73,7 @@ Image / Container Best Practices
 	- A good rule of thumb is that each image should have a specific purpose. Avoid installing all of the software you need for an entire analysis in one container, instead use multiple containers. 
 	- Don’t include test data inside the image. Recommendations for hosting test data alongside your workflow can be found in the section below titled :ref:`accessible`.  
 
-- Publish your pre-built image in an open source container registry (such as DockerHub or Quay.io):
+- Publish your pre-built image in an open-source container registry (such as DockerHub or Quay.io):
 
 	- Automate builds using an image registry that is configured to trigger a build whenever a change is pushed to the Dockerfile source control repository.
 	- Similar to our suggestion to publish your workflow under a GitHub organization, publish your images in an organization on a container registry. Additionally, this may make it easier for your institute to pay for a group plan to ensure your images never expire.
@@ -83,7 +83,7 @@ Image / Container Best Practices
 - Alternative options include:
 
 	- Using images from paid organizations on DockerHub
-	- Paying for a DockerHub account (this may be more cost effective if you’re able to create an organization with multiple accounts)
+	- Paying for a DockerHub account (this may be more cost-effective if you’re able to create an organization with multiple accounts)
 	- DockerHub offers exceptions to some open source projects that you may be able to get depending on your use case
 	- Hosting the image on a different repository such as Google Container Repository, Quay.io, GitHub Packages, AWS ECR, etc. 
 	- Migrating images to another repository to mitigate the impact of DockerHub pull request limits (`see example <https://www.openshift.com/blog/mitigate-impact-of-docker-hub-pull-request-limits>`_).
@@ -100,9 +100,9 @@ Findable
 	
 	- Naming: 
 	
-		- Keep the workflow name short
+		- Keep the workflow name short.
 		
-		- Use all lowercase letters for compatibility with other platforms such as DockerHub
+		- Use all lowercase letters for compatibility with other platforms such as DockerHub.
 		
 	- Authorship, contact information, and description:
 	
@@ -177,7 +177,7 @@ Reusable
 	}
 
  
-- The examples below show **how not to reference a container** in a workflow task. These exmaple formats can change and cause the workflow to no longer be reproducible. 
+- The examples below show **how not to reference a container** in a workflow task. These formats can change and cause the workflow to no longer be reproducible. 
 
 Do not reference parameterized images:
 
@@ -227,9 +227,9 @@ Do not use untagged or “latest”.
 
 	- As mentioned in :ref:`image-container-best-practices`, test data should be hosted outside of the container. 
 	
-		- GitHub can host small files such as csv or tsv (for example: trait data)
+		- GitHub can host small files such as csv or tsv (for example: trait data).
 		
-		- Broad’s Terra platform hosts multiple genomic files in this `open access Google bucket <https://console.cloud.google.com/storage/browser/terra-featured-workspaces>`_ 
+		- Broad’s Terra platform hosts multiple genomic files in this `open access Google bucket <https://console.cloud.google.com/storage/browser/terra-featured-workspaces>`_.
 	
 	- Consider providing both a full sample run and a small down-sampled development test.
 	

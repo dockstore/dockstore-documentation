@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Dockstore'
-copyright = u'2020, OICR'
+copyright = u'2021, OICR, and UCSC'
 author = u'OICR, UCSC'
 
 # The short X.Y version

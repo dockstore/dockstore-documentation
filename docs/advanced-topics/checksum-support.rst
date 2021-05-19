@@ -19,14 +19,14 @@ More specifically, the endpoints that contain checksums for files are as follows
 
 The id parameter used in the endpoints above can be found on an entry's public page; underneath the Info tab, look for the bolded words **TRS**.
 
-After gathering the checksum using the above method you can verify a descriptor's checksum using the sha1sum terminal application.
-This is done by requesting the PLAIN_WDL descriptor and piping the output to sha1sum.
+After gathering the checksum using the above method you can verify a descriptor's checksum using the shasum terminal application.
+This is done by requesting the PLAIN_WDL descriptor and piping the output to shasum.
 
 ::
 
     trsid=%23workflow%2Fgithub.com%2Fdockstore-testing%2Fdockstore-workflow-md5sum-unified%2Fwdl
     version=1.2.0
-    curl -s https://dockstore.org/api/ga4gh/trs/v2/tools/$trsid/versions/$version/PLAIN-WDL/descriptor | sha1sum
+    curl -s https://dockstore.org/api/ga4gh/trs/v2/tools/$trsid/versions/$version/PLAIN-WDL/descriptor | shasum
 
 The resulting checksum should match what was provided by the API above.
 

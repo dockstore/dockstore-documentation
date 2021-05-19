@@ -19,6 +19,16 @@ More specifically, the endpoints that contain checksums for files are as follows
 
 The id parameter used in the endpoints above can be found on an entry's public page; underneath the Info tab, look for the bolded words **TRS**.
 
+After gathering the checksum using the above method you can verify a descriptor's using the sha1sum terminal application.
+This is done by requesting the PLAIN_WDL descriptor and piping the output to sha1sum.
+
+::
+    trsid=%23workflow%2Fgithub.com%2Fdockstore-testing%2Fdockstore-workflow-md5sum-unified%2Fwdl
+    version=1.2.0
+    curl -s https://dockstore.org/api/ga4gh/trs/v2/tools/$trsid/versions/$version/PLAIN-WDL/descriptor | sha1sum
+
+The resulting checksum should match what was provided by the API above.
+
 Docker Image Checksum Support
 =============================
 Checksum support for Docker images is more nuanced than it is for files. For quick reference, the table below displays the languages and
@@ -36,6 +46,17 @@ Descriptions for the two endpoints of note are as follows:
 - To see a single version of an entry, go `here <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GHV20/toolsIdVersionsVersionIdGet>`_ and fill out id and version_id
 
 Just like the file endpoints, the id parameter used in the endpoints above can be found on an entry's public page; underneath the Info tab, look for the bolded words **TRS**.
+
+To verify a checksum as reported by the Dockstore API matches what you download from the Docker repository first find the checksum
+and image path and registry using one of the above methods for the image you would like to verify. Then download the image using the
+Docker CLI client.
+
+::
+
+    docker pull quay.io/briandoconnor/dockstore-tool-md5sum:1.0.4
+
+When the download has completed a Digest is provided in the terminal output. This should match the checksum provided
+by the Dockstore API.
 
 Tools
 -----

@@ -23,6 +23,7 @@ After gathering the checksum using the above method you can verify a descriptor'
 This is done by requesting the PLAIN_WDL descriptor and piping the output to sha1sum.
 
 ::
+
     trsid=%23workflow%2Fgithub.com%2Fdockstore-testing%2Fdockstore-workflow-md5sum-unified%2Fwdl
     version=1.2.0
     curl -s https://dockstore.org/api/ga4gh/trs/v2/tools/$trsid/versions/$version/PLAIN-WDL/descriptor | sha1sum

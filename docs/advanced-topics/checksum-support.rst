@@ -29,6 +29,8 @@ This is done by requesting the PLAIN_WDL descriptor and piping the output to sha
 
 The resulting checksum should match what was provided by the API above.
 
+If you use the Dockstore CLI client descriptor checksums are verified before being sent to the execution engine.
+
 Docker Image Checksum Support
 =============================
 Checksum support for Docker images is more nuanced than it is for files. For quick reference, the table below displays the languages and
@@ -57,6 +59,9 @@ Docker CLI client.
 
 When the download has completed a Digest is provided in the terminal output. This should match the checksum provided
 by the Dockstore API.
+
+Depending on your execution engine, the image may be downloaded using another technique and may not have its checksum
+verified.
 
 Tools
 -----

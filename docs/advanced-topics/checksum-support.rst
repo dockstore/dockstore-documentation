@@ -19,7 +19,7 @@ More specifically, the endpoints that contain checksums for files are as follows
 
 The id parameter used in the endpoints above can be found on an entry's public page; underneath the Info tab, look for the bolded words **TRS**.
 
-After gathering the checksum using the above method you can verify a descriptor's using the sha1sum terminal application.
+After gathering the checksum using the above method you can verify a descriptor's checksum using the sha1sum terminal application.
 This is done by requesting the PLAIN_WDL descriptor and piping the output to sha1sum.
 
 ::
@@ -50,8 +50,8 @@ Descriptions for the two endpoints of note are as follows:
 
 Just like the file endpoints, the id parameter used in the endpoints above can be found on an entry's public page; underneath the Info tab, look for the bolded words **TRS**.
 
-To verify a checksum as reported by the Dockstore API matches what you download from the Docker repository first find the checksum
-and image path and registry using one of the above methods for the image you would like to verify. Then download the image using the
+To verify a checksum as reported by the Dockstore API matches what you download from the Docker registry first find the checksum
+and image path using one of the above methods for the image you would like to verify. Then download the image using the
 Docker CLI client.
 
 ::

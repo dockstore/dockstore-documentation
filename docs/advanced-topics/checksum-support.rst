@@ -61,8 +61,10 @@ Docker CLI client.
 When the download has completed a Digest is provided in the terminal output. This should match the checksum provided
 by the Dockstore API.
 
-Depending on your execution engine, the image may be downloaded using another technique and may not have its checksum
-verified.
+Verifying the image checksum can give you better guarantees the image has not changed since it was published to Dockstore.
+However, in some cases the image checksum may diverge, for example, if the image was defined in a git branch that has since
+been updated. For best results use Docker images referred to by a tagged version or digest. The verification features
+available may vary between execution engines.
 
 Tools
 -----

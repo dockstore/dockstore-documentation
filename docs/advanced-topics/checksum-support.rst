@@ -61,10 +61,14 @@ Docker CLI client.
 When the download has completed a Digest is provided in the terminal output. This should match the checksum provided
 by the Dockstore API.
 
-Verifying the image checksum can give you better guarantees the image has not changed since it was published to Dockstore.
+Verifying the image checksum can give you better guarantees the image has not changed since the workflow was published to Dockstore.
 However, in some cases the image checksum may diverge, for example, if the image was defined in a git branch that has since
-been updated. For best results use Docker images referred to by a tagged version or digest. The verification features
-available may vary between execution engines.
+been updated. For best results, and to avoid your Docker image being deleted because of a registry's retention policy,
+use Docker images referred to by a tagged version or digest. The verification features available may vary between execution engines.
+
+For more information on Docker registry retention policies see posts from `Docker <https://www.docker.com/blog/scaling-dockers-business-to-serve-millions-more-developers-storage/`_,
+`AWS <https://aws.amazon.com/blogs/compute/clean-up-your-container-images-with-amazon-ecr-lifecycle-policies/>`_,
+or `Azure <https://docs.microsoft.com/en-us/azure/container-registry/container-registry-retention-policy>`_ documentation.
 
 Tools
 -----

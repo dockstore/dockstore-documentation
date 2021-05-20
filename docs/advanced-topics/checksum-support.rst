@@ -68,7 +68,7 @@ use Docker images referred to by a tagged version or digest. The verification fe
 
 For more information on Docker registry retention policies see posts from `Docker <https://www.docker.com/blog/scaling-dockers-business-to-serve-millions-more-developers-storage/`_,
 `AWS <https://aws.amazon.com/blogs/compute/clean-up-your-container-images-with-amazon-ecr-lifecycle-policies/>`_,
-or `Azure <https://docs.microsoft.com/en-us/azure/container-registry/container-registry-retention-policy>`_ documentation.
+or `Azure <https://docs.microsoft.com/en-us/azure/container-registry/container-registry-retention-policy>`_.
 
 Tools
 -----

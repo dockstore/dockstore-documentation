@@ -78,14 +78,13 @@ Image / Container Best Practices
 	- Automate builds using an image registry that is configured to trigger a build whenever a change is pushed to the Dockerfile source control repository.
 	- Similar to our suggestion to publish your workflow under a GitHub organization, publish your images in an organization on a container registry. Additionally, this may make it easier for your institute to pay for a group plan to ensure your images never expire.
 
-- Limitation on and expiration of images: At the time of writing this, DockerHub has announced some new policies around pull limits as well as their intention to expire DockerHub images from free accounts that haven't been pulled for some defined period of time (update: `this policy is delayed <https://www.docker.com/blog/docker-hub-image-retention-policy-delayed-and-subscription-updates/>`_). For example, this could mean that a workflow that hasn't been run in one year may no longer be reproducible if the image has been removed. 
+- Limitation on and expiration of images: DockerHub has announced policies around pull limits as well as their intention to expire DockerHub images that haven't been pulled for some defined period of time (update: `this policy is delayed <https://www.docker.com/blog/docker-hub-image-retention-policy-delayed-and-subscription-updates/>`_). For example, this could mean that a workflow that hasn't been run in one month may no longer be reproducible if the image has been removed. 
 
 - Alternative options include:
-
-	- Using images from paid organizations on DockerHub
-	- Paying for a DockerHub account (this may be more cost-effective if you’re able to create an organization with multiple accounts)
-	- DockerHub offers exceptions to some open source projects that you may be able to get depending on your use case
-	- Hosting the image on a different repository such as Google Container Repository, Quay.io, GitHub Packages, AWS ECR, etc. 
+	- Hosting the image on a different repository such as Google Container Repository, Quay.io, GitHub Packages, AWS ECR, etc.
+	- Using images from paid organizations on DockerHub.
+	- Paying for a DockerHub account (this may be more cost-effective if you’re able to create an organization with multiple accounts).
+	- DockerHub offers exceptions to some open source projects that you may be able to get depending on your use case. 
 	- Migrating images to another repository to mitigate the impact of DockerHub pull request limits (`see example <https://www.openshift.com/blog/mitigate-impact-of-docker-hub-pull-request-limits>`_).
 
 
@@ -237,6 +236,7 @@ Do not use untagged or “latest”.
 		
 		- A full-sized sample is helpful for benchmarking your workflow and providing end-users with realistic compute and cost requirements. 
 
+- When writing your descriptor files, do not use remote imports (referencing software outside of the referenced container) or include scripts as input files. These practices decrease reusability and increases security risks. 
 - Provide a permissive license such as the `MIT License <https://choosealicense.com/licenses/mit/>`_, or `choose a license <https://choosealicense.com/>`_ that best fits your needs. It can be a text file in the git repository where the workflow is published (see `this example <https://github.com/nf-core/rnaseq/blob/master/LICENSE>`_). 
 
 - Provide a thorough README in the git repository. Here is an example of thorough documentation. 	

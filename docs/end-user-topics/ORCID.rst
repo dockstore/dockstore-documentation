@@ -31,7 +31,7 @@ You can also see the ORCID of members who have starred a workflow or tool. If yo
   :alt: ORCID showing up for a stargazer
 
 Export your Dockstore workflow to your ORCID account
---------------------------------------------
+----------------------------------------------------
 
 Once your ORCID account is linked to Dockstore, workflow versions with a DOI URL associated with it can be exported to your ORCID account as an ORCID work.
 You simply:

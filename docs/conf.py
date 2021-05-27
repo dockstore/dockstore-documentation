@@ -180,4 +180,4 @@ epub_exclude_files = ['search.html']
 discourse_url = 'https://discuss.dockstore.org/'
 
 def setup(app):
-    app.add_stylesheet('css/extra.css')
+    app.add_css_file('css/extra.css')

@@ -30,5 +30,17 @@ You can also see the ORCID of members who have starred a workflow or tool. If yo
 .. image::  /assets/images/docs/orchid_stargazer.png
   :alt: ORCID showing up for a stargazer
 
+Export your Dockstore workflow to your ORCID account
+--------------------------------------------
+
+Once your ORCID account is linked to Dockstore, workflow versions with a DOI URL associated with it can be exported to your ORCID account as an ORCID work.
+You simply:
+- go to the "Versions" tab
+- click the "Actions" button on the associated version
+- click the "Export to ORCID" button in the dropdown menu and follow the instructions
+
+This will result in an ORCID work in your ORCID account. If needed, you can modify any of the ORCID work information through the ORCID website.
+
+
 .. discourse::
     :topic_identifier: 3845

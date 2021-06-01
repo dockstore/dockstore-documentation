@@ -39,8 +39,7 @@ You simply:
 - click the "Actions" button on the associated version
 - click the "Export to ORCID" button in the dropdown menu and follow the instructions
 
-This will result in an ORCID work in your ORCID account. If needed, you can modify any of the ORCID work information through the ORCID website.
-
+This will result in an ORCID work in your ORCID account. If needed, you can edit any of the ORCID work information through the ORCID `website https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works`_
 
 .. discourse::
     :topic_identifier: 3845

@@ -6,7 +6,15 @@ service:
   # The subclass is required, and can be DOCKER_COMPOSE, KUBERNETES, HELM, SWARM, or NOT_APPLICABLE.
   subclass:
   name:
-  author:
+
+  # Optional array of authorship information, requires at least the name of each author.
+  authors:
+    - name:
+      orcid:
+      email:
+      role:
+      affiliation:
+
   description:
 
   # `publish` is a service-wide setting and will affect ALL branches/tags; only set this as needed in a main branch.

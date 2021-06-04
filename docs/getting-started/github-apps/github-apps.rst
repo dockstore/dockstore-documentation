@@ -71,6 +71,12 @@ For a workflow, the ``/.dockstore.yml`` has the following general structure
         publish: <Boolean>
         primaryDescriptorPath: <String>
         testParameterFiles: <String Array>
+        authors:
+          - name: <String>
+            orcid: <String>
+            email: <String>
+            role: <String>
+            affiliation: <String>
         filters:
           branches: <String Array>
           tags: <String Array>
@@ -98,6 +104,8 @@ primaryDescriptorPath
     - Nextflow differs from these as the primary descriptor is a nextflow.config file.
 testParameterFiles (optional)
     An array of absolute paths to test parameter files in the Git repository.
+authors (optional)
+    An array of authorship information, requiring at least the ``name`` of each author.
 filters (optional)
     branches, tags (optional)
         Arrays of pattern-strings to specify which Git branches or tags to include for the workflow.
@@ -164,7 +172,15 @@ For a service, the ``/.dockstore.yml`` has this general structure for version 1.
     service:
       subclass: <DOCKER_COMPOSE | KUBERNETES | HELM | SWARM | NOT_APPLICABLE>
       name: <String>
-      author: <String>
+
+      author: <String> [Deprecated]
+      authors:
+        - name: <String>
+          orcid: <String>
+          email: <String>
+          role: <String>
+          affiliation: <String>
+
       description: <String>
 
       publish: <Boolean>
@@ -205,8 +221,8 @@ subclass
     Indicates which container system will be used for your service.
 name
     Optional name for your service.
-author
-    Optional author for your service.
+authors
+    Optional array of authorship information, requiring at least the ``name`` of each author.
 description
     Optional description for your service
 publish

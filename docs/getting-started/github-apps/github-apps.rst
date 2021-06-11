@@ -106,6 +106,8 @@ testParameterFiles (optional)
     An array of absolute paths to test parameter files in the Git repository.
 authors (optional)
     An array of authorship information, requiring at least the ``name`` of each author.
+latestTagAsDefault (optional)
+    A boolean (true or false) that will change the default version to be displayed on Dockstore. A value of true will automatically display the latest tag updated as default, while false will retain the default version that has been specified via the Dockstore UI.
 filters (optional)
     branches, tags (optional)
         Arrays of pattern-strings to specify which Git branches or tags to include for the workflow.

@@ -67,9 +67,19 @@ For a workflow, the ``/.dockstore.yml`` has the following general structure
    version: 1.2
    workflows:
       - name: <String>
-        subclass: <CWL | WDL | NFL | GXFORMAT2>
+        subclass: <CWL | WDL | NFL | GALAXY>
+        publish: <Boolean>
         primaryDescriptorPath: <String>
         testParameterFiles: <String Array>
+        authors:
+          - name: <String>
+            orcid: <String>
+            email: <String>
+            role: <String>
+            affiliation: <String>
+        filters:
+          branches: <String Array>
+          tags: <String Array>
 
 version
     The version of the .dockstore.yml schema. Currently at 1.2.
@@ -80,11 +90,28 @@ name (optional)
     this field is required to uniquely identify workflows in the repository.
     **Each workflow listed must have a unique (or no) name.**
 subclass
-    The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GXFORMAT2 (Galaxy). This cannot be changed once the workflow is registered.
+    The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GALAXY. This cannot be changed once the workflow is registered.
+publish (optional)
+    Workflow-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
+    Set to true to publish an unpublished workflow, or false to unpublish a published workflow.
+    Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
 primaryDescriptorPath
-    The absolute path to the primary descriptor file in the Git repository.
+    The absolute path to the primary descriptor file in the Git repository. 
+    
+    - For CWL, the primary descriptor is a .cwl file.
+    - For WDL, the primary descriptor is a .wdl file.
+    - For Galaxy, the primary descriptor is a .ga file.
+    - Nextflow differs from these as the primary descriptor is a nextflow.config file.
 testParameterFiles (optional)
     An array of absolute paths to test parameter files in the Git repository.
+authors (optional)
+    An array of authorship information, requiring at least the ``name`` of each author.
+filters (optional)
+    branches, tags (optional)
+        Arrays of pattern-strings to specify which Git branches or tags to include for the workflow.
+        If no filters are given, all branches and tags are included.
+        Pattern-strings use `Unix-style Glob syntax <https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)>`_ by default (Ex: ``develop``, ``myworkflow/**``),
+        or RegEx when the string is surrounded by ``/`` (Ex: ``/develop/``, ``/myworkflow\/.*/``).
 
 Ex. /.dockstore.yml with a single workflow
 
@@ -111,14 +138,24 @@ Ex. /.dockstore.yml with multiple workflows
    workflows:
       - name: globalAligner
         subclass: CWL
+        publish: True
         primaryDescriptorPath: /runGlobalAligner.cwl
         testParameterFiles:
             - /test/globalAligner.cwl.json
+        filters:  # All tags, no branches
+            tags:
+                - /.*/
       - name: localAligner
         subclass: CWL
         primaryDescriptorPath: /runLocalAligner.cwl
         testParameterFiles:
             - /test/localAligner.cwl.json
+        filters:  # Only develop or master branches and localAligner/** tags
+            branches:
+                - develop
+                - master
+            tags:
+                - /localaligner\/.*/
 
 A common pattern seen on Dockstore is GitHub repositories that store many workflows. The above ``.dockstore.yml``
 has two entries for workflows. Notice that each entry uses a different name. Names are required if you want 
@@ -135,8 +172,18 @@ For a service, the ``/.dockstore.yml`` has this general structure for version 1.
     service:
       subclass: <DOCKER_COMPOSE | KUBERNETES | HELM | SWARM | NOT_APPLICABLE>
       name: <String>
-      author: <String>
+
+      author: <String> [Deprecated]
+      authors:
+        - name: <String>
+          orcid: <String>
+          email: <String>
+          role: <String>
+          affiliation: <String>
+
       description: <String>
+
+      publish: <Boolean>
 
       files: <String Array>
 
@@ -162,6 +209,10 @@ For a service, the ``/.dockstore.yml`` has this general structure for version 1.
                 <name>:
                     description: <String>
 
+      filters:
+        branches: <String Array>
+        tags: <String Array>
+
 version
     The version of the .dockstore.yml schema which is currently at 1.2.
 service
@@ -170,10 +221,14 @@ subclass
     Indicates which container system will be used for your service.
 name
     Optional name for your service.
-author
-    Optional author for your service.
+authors
+    Optional array of authorship information, requiring at least the ``name`` of each author.
 description
     Optional description for your service
+publish
+    Optional service-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
+    Set to true to publish an unpublished workflow, or false to unpublish a published workflow.
+    Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
 files
     An array of files Dockstore will index from your GitHub repo. Wildcards are not supported.
 scripts
@@ -198,6 +253,12 @@ environment
     This section describes environment variables that the launcher is responsible for passing to any scripts that it invokes. The names must be valid environment variable names. Users can specify the values of the parameters in the input parameter JSON (see below). These variables are service-specific, i.e., the service creator decides what values, if any, to expose as environment variables. For every environment variable, you must give it a name and you can optionally give them a default value and description.
 data
     This section describes data that should be provisioned locally for use by the service. The service launcher is responsible for provisioning the data. You can create as many keys as you need where each key is the name of a dataset. For every key you create, you must give a target directory (path will be relative) to indicate where the files should be downloaded to. You must also give an array of files as a key and provide the name of each file. You can optionally provide a description of each file.
+filters
+    branches, tags
+        (Optional) Arrays of pattern-strings to specify which Git branches or tags to include for the service.
+        If no filters are given, all branches and tags are included.
+        Pattern-strings use `Unix-style Glob syntax <https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)>`_ by default (Ex: ``develop``, ``myworkflow/**``),
+        or RegEx when the string is surrounded by ``/`` (Ex: ``/develop/``, ``/myworkflow\/.*/``).
 
 It's important to note that we originally released our services tutorial using version 1.1 of the ``/.dockstore.yml`` file. For more info on
 services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>` which has been updated to use 1.2.

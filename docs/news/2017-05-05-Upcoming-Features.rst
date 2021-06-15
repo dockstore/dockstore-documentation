@@ -22,8 +22,8 @@ of Dockstore, we're looking at features in the following main areas:
    register and publish the tool on Dockstore in just 2 commands.
    Publishing tools on Dockstore has gotten a lot easier. See
    `GitHub <https://github.com/dockstore/write_api_service/>`__ for more
-   info on how to use the Write API. See `this
-   doc </docs/publisher-tutorials/ways-to-register-tools-on-dockstore/>`__
+   info on how to use the Write API. See :doc:`this
+   doc </getting-started/dockstore-tools>`
    for information on different ways to register tools on Dockstore and
    when to use this Write API.
 

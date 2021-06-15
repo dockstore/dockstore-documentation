@@ -1,6 +1,8 @@
 Advanced CLI Features
 =====================
 
+.. _file-provisioning:
+
 File Provisioning
 -----------------
 
@@ -241,6 +243,7 @@ provide the ``-t`` and ``--options`` options to the Cromwell command line.
     cromwell-extra-parameters: -t WDL, --options workflow_options.json
 
 
+.. _alternative-cwl-launchers:
 
 Alternative CWL Launchers
 -------------------------
@@ -278,6 +281,8 @@ following to your ``~/.dockstore/config``:
 ::
 
     cwlrunner: cwl-runner
+
+.. _cromwell-beta:
 
 Cromwell (Beta)
 ~~~~~~~~~~~~~~~
@@ -321,14 +326,18 @@ with the `Cromwell <https://github.com/broadinstitute/cromwell>`__ version liste
 +-------------+-----------------------+
 |     1.9     |          44           |
 +-------------+-----------------------+
+|     1.10    |          44           |
++-------------+-----------------------+
+|     1.11    |          57           |
++-------------+-----------------------+
 
 
 Additionally, you can override the cromwell version in your
-``~/.dockstore/config`` using:
+``~/.dockstore/config`` using for example:
 
 ::
 
-    cromwell-version = 51
+    cromwell-version = 58
 
 You can test cromwell by cloning the dockstore-tool-md5sum repository:
 ``git clone git@github.com:briandoconnor/dockstore-tool-md5sum.git`` and
@@ -339,6 +348,7 @@ then test using
     also be used to specify the version of Cromwell used to launch CWL tools
     and workflows if you set ``cwlrunner: cromwell``.
 
+.. _notifications:
 
 Notifications
 -------------
@@ -395,6 +405,8 @@ Notes
    <!--stackedit_data:
    eyJoaXN0b3J5IjpbMjA4MjI5MzQ4NV19
    -->
+
+.. _workflow-execution-service-wes-command-line-interface-cli:
 
 Workflow Execution Service (WES) Command Line Interface (CLI)
 -------------------------------------------------------------

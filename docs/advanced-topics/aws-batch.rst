@@ -23,8 +23,8 @@ decompose the underlying command-line invocation for the tool and use
 that as the command for your jobs, gaining a bit of performance. This
 tutorial focuses on using cwltool and using the Dockstore command-line
 to provide an experience that is more akin to running Dockstore or
-cwltool `on the
-command-line <../end-user-topics/launch.html#dockstore-cli>`__ out of
+cwltool :ref:`on the
+command-line <launch-dockstore-cli>` out of
 the box.
 
 1. Unfortunately, you will need to do the most difficult step first. You
@@ -93,7 +93,7 @@ the box.
       (credentials are provided via that IAM role) in just a few
       minutes. |aws batch 6|
    2. For more realistic jobs, you can try the `PCAWG
-      project <https://icgc.org/working-pancancer-data-aws>`__ BWA and
+      project <https://registry.opendata.aws/icgc/>`__ BWA and
       Delly workflows which would use the commands
       ``/test.sh quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8_1.2 https://raw.githubusercontent.com/dockstore/batch_wrapper/master/aws/bwa.s3.json``
       (approximately seven hours) and

@@ -20,8 +20,8 @@ decompose the underlying command-line invocation for the tool and use
 that as the command for your jobs, gaining a bit of performance. This
 tutorial focuses on using cwltool and using the Dockstore command-line
 to provide an experience that is more akin to running Dockstore or
-cwltool `on the
-command-line <launch.html#dockstore-cli>`__ out of
+cwltool :ref:`on the
+command-line <launch-dockstore-cli>` out of
 the box.
 
 1. Run through Azure Shipyard's `Linux Installation
@@ -81,7 +81,7 @@ the box.
 
 6. You can repeat the process with ``config.dockstore.bwa`` which is a
    more realistic bioinformatics workflow from the `PCAWG
-   project <https://icgc.org/working-pancancer-data-aws>`__ and takes
+   project <https://registry.opendata.aws/icgc/>`__ and takes
    roughly seven hours.
 
 See Also

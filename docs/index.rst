@@ -12,6 +12,11 @@ you to the core concepts of Dockstore, leaving you with a good understanding of 
 going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` or our `quickstart guide <https://dockstore.org/quick-start>`_.
 
 .. toctree::
+   :maxdepth: 1
+
+   Go to Dockstore <https://dockstore.org>
+
+.. toctree::
    :caption: About
    :maxdepth: 1
 
@@ -33,6 +38,12 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    getting-started/hosted-tools-and-workflows
    getting-started/getting-started-with-services
    getting-started/github-apps/github-apps-landing-page
+
+.. toctree::
+   :caption: Videos (Tutorials & Presentations)
+   :maxdepth: 1
+
+   videos
 
 .. toctree::
    :caption: Launch
@@ -104,6 +115,12 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    faq
 
 .. toctree::
+   :caption: Roadmap
+   :maxdepth: 1
+
+   roadmap
+
+.. toctree::
    :caption: Changelog
    :maxdepth: 1
 
@@ -118,6 +135,12 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
    news
    news/*
+
+.. toctree::
+   :caption: System Status
+   :maxdepth: 1
+
+   systemstatus
 
 .. centered:: In Affiliation with
 
@@ -183,3 +206,5 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 .. _TerraLink: https://terra.bio/
 
 .. |imagespace| unicode:: U+00A0 U+00A0 U+00A0 U+00A0 U+00A0 .. non-breaking spaces between logo images
+
+ 

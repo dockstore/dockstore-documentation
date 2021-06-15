@@ -32,6 +32,22 @@ The resulting checksum should match what was provided by the API above.
 
 If you use the Dockstore CLI client descriptor checksums are verified before being sent to the execution engine.
 
+CLI Descriptor Validation Support
+------------------------------------------
+By default, when launching tools or workflows from the CLI, primary and secondary descriptors will be validated using their SHA-1 checksums. Checksums are
+not validated when launching local entries.
+
+You can prevent checksum validation with the ``--ignore-checksums`` flag. For example, the following command will not validate descriptor
+checksums:
+
+::
+
+    dockstore [tool/workflow] launch --ignore-checksums --entry <entryPath> --json <parameterFile>
+
+Note that if there are no remote checksums stored for a descriptor (i.e. the entry has not been refreshed since the addition of checksum support in Dockstore 1.9),
+this will not be considered a fatal checksum mismatch, and the launch command will continue to execute.
+
+
 Docker Image Checksum Support
 =============================
 Checksum support for Docker images is more nuanced than it is for files. For quick reference, the table below displays the languages and

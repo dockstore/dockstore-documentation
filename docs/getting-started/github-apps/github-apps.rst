@@ -68,8 +68,15 @@ For a workflow, the ``/.dockstore.yml`` has the following general structure
    workflows:
       - name: <String>
         subclass: <CWL | WDL | NFL | GALAXY>
+        publish: <Boolean>
         primaryDescriptorPath: <String>
         testParameterFiles: <String Array>
+        authors:
+          - name: <String>
+            orcid: <String>
+            email: <String>
+            role: <String>
+            affiliation: <String>
         filters:
           branches: <String Array>
           tags: <String Array>
@@ -84,6 +91,10 @@ name (optional)
     **Each workflow listed must have a unique (or no) name.**
 subclass
     The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GALAXY. This cannot be changed once the workflow is registered.
+publish (optional)
+    Workflow-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
+    Set to true to publish an unpublished workflow, or false to unpublish a published workflow.
+    Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
 primaryDescriptorPath
     The absolute path to the primary descriptor file in the Git repository. 
     
@@ -93,6 +104,10 @@ primaryDescriptorPath
     - Nextflow differs from these as the primary descriptor is a nextflow.config file.
 testParameterFiles (optional)
     An array of absolute paths to test parameter files in the Git repository.
+authors (optional)
+    An array of authorship information, requiring at least the ``name`` of each author.
+latestTagAsDefault (optional)
+    A boolean (true or false) that will change the default version to be displayed on Dockstore. A value of true will automatically display the latest tag updated as default, while false will retain the default version that has been specified via the Dockstore UI.
 filters (optional)
     branches, tags (optional)
         Arrays of pattern-strings to specify which Git branches or tags to include for the workflow.
@@ -125,6 +140,7 @@ Ex. /.dockstore.yml with multiple workflows
    workflows:
       - name: globalAligner
         subclass: CWL
+        publish: True
         primaryDescriptorPath: /runGlobalAligner.cwl
         testParameterFiles:
             - /test/globalAligner.cwl.json
@@ -158,8 +174,18 @@ For a service, the ``/.dockstore.yml`` has this general structure for version 1.
     service:
       subclass: <DOCKER_COMPOSE | KUBERNETES | HELM | SWARM | NOT_APPLICABLE>
       name: <String>
-      author: <String>
+
+      author: <String> [Deprecated]
+      authors:
+        - name: <String>
+          orcid: <String>
+          email: <String>
+          role: <String>
+          affiliation: <String>
+
       description: <String>
+
+      publish: <Boolean>
 
       files: <String Array>
 
@@ -197,10 +223,14 @@ subclass
     Indicates which container system will be used for your service.
 name
     Optional name for your service.
-author
-    Optional author for your service.
+authors
+    Optional array of authorship information, requiring at least the ``name`` of each author.
 description
     Optional description for your service
+publish
+    Optional service-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
+    Set to true to publish an unpublished workflow, or false to unpublish a published workflow.
+    Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
 files
     An array of files Dockstore will index from your GitHub repo. Wildcards are not supported.
 scripts

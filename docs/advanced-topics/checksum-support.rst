@@ -19,6 +19,20 @@ More specifically, the endpoints that contain checksums for files are as follows
 
 The id parameter used in the endpoints above can be found on an entry's public page; underneath the Info tab, look for the bolded words **TRS**.
 
+After gathering the checksum using the above method you can verify a descriptor's checksum using the shasum terminal application.
+This is done by requesting the PLAIN_WDL descriptor and piping the output to shasum.
+
+::
+
+    trsid=%23workflow%2Fgithub.com%2Fdockstore-testing%2Fdockstore-workflow-md5sum-unified%2Fwdl
+    version=1.2.0
+    curl -s https://dockstore.org/api/ga4gh/trs/v2/tools/$trsid/versions/$version/PLAIN-WDL/descriptor | shasum
+
+The resulting checksum should match what was provided by the API above.
+
+If you use the Dockstore CLI client descriptor checksums are verified before being sent to the execution engine.
+
+
 CLI Descriptor Validation Support
 ------------------------------------------
 By default, when launching tools or workflows from the CLI, primary and secondary descriptors will be validated using their SHA-1 checksums. Checksums are
@@ -51,6 +65,26 @@ Descriptions for the two endpoints of note are as follows:
 - To see a single version of an entry, go `here <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GHV20/toolsIdVersionsVersionIdGet>`_ and fill out id and version_id
 
 Just like the file endpoints, the id parameter used in the endpoints above can be found on an entry's public page; underneath the Info tab, look for the bolded words **TRS**.
+
+To verify a checksum as reported by the Dockstore API matches what you download from the Docker registry first find the checksum
+and image path using one of the above methods for the image you would like to verify. Then download the image using the
+Docker CLI client.
+
+::
+
+    docker pull quay.io/briandoconnor/dockstore-tool-md5sum:1.0.4
+
+When the download has completed a Digest is provided in the terminal output. This should match the checksum provided
+by the Dockstore API.
+
+Verifying the image checksum can give you better guarantees the image has not changed since the workflow was published to Dockstore.
+However, in some cases the image checksum may diverge, for example, if the image was defined in a git branch that has since
+been updated. For best results, and to avoid your Docker image being deleted because of a registry's retention policy,
+use Docker images referred to by a tagged version or digest. The verification features available may vary between execution engines.
+
+For more information on Docker registry retention policies see posts from `Docker <https://www.docker.com/blog/scaling-dockers-business-to-serve-millions-more-developers-storage/`_,
+`AWS <https://aws.amazon.com/blogs/compute/clean-up-your-container-images-with-amazon-ecr-lifecycle-policies/>`_,
+or `Azure <https://docs.microsoft.com/en-us/azure/container-registry/container-registry-retention-policy>`_.
 
 Tools
 -----

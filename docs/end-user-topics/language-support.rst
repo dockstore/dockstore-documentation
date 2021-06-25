@@ -36,12 +36,9 @@ Limitations <dnastack-limitations>` for limitations.
 [8] Does not support some file-path based imports. See :ref:`Terra
 Limitations <terra-limitations>` for limitations.
 
-[9] There is no launch with Galaxy button in Dockstore, but Dockstore workflows can be searched and imported from within Galaxy.
+[9] All verified Dockstore WDL tools/workflows were tested successfully. However, we anticipate that more testing is needed for WDL workflows that use language features not contained within that dataset.
 
-[10] All verified Dockstore WDL tools/workflows were tested successfully. However, we anticipate that more testing is needed for WDL workflows that use language features not contained within that dataset.
-
-
-[11] Use the Dockstore CLI optional parameter --wdl-output-target which allows you to specify a remote path to provision output files to ex: s3://oicr.temp/testing-launcher/
+[10] Use the Dockstore CLI optional parameter --wdl-output-target which allows you to specify a remote path to provision output files to ex: s3://oicr.temp/testing-launcher/
 
 
 .. _converting-file-path-based-imports-to-public-http-s-based-imports-for-wdl:

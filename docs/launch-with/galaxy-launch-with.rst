@@ -1,12 +1,29 @@
+######
 Galaxy
-======
+######
 
-Dockstore integrates with `Galaxy <https://usegalaxy.org>`__. The Dockstore integration with Galaxy
-is invoked from within Galaxy. There is currently no Launch with button in Dockstore for Galaxy. One
-will be added in the future.
+Dockstore integrates with the `Galaxy Application <https://usegalaxy.org>`__, allowing you to launch Galaxy-based workflows from Dockstore into
+any Galaxy instance. This works both from within the Dockstore interface and from within the Galaxy interface.
+Here is some information on what that looks like from a user point of view in a mini tutorial.
 
-Importing into Galaxy
----------------------
+While browsing Dockstore
+========================
+When browsing Galaxy workflows from within Dockstore, you will see a
+Launch with Galaxy button on the right.
+
+.. figure:: /assets/images/docs/galaxy/galaxy_workflow.png
+   :alt: Galaxy workflow on Dockstore
+
+The button will bring up a dropdown window where you may select which Galaxy instance to launch the workflow into. A few default options will
+be provided by Dockstore, but if you need to launch into another instance, you may provide a custom URL. For your custom URL to work properly,
+it must start with ``https://`` and there should not be an ending forward slash ``/``.
+
+.. figure:: /assets/images/docs/galaxy/launch_with_options.png
+   :alt: Launch options for Galaxy
+
+
+While browsing Galaxy
+=====================
 
 To import a workflow into Galaxy, navigate to a Galaxy instance in your browser.
 There are many Galaxy instances. In the steps here we are going to use
@@ -39,18 +56,6 @@ example below, we are searching for the word *Plink*.
 Click on the workflow you want to import. This will show all of the workflow's versions. Click
 on the version you want to import.
 
-Import a Known Workflow
------------------------
-
-If you know the Dockstore workflow you want to import, click *import from a TRS id*. This takes to
-a form where you can enter the TRS ID of the Dockstore workflow. After you enter the TRS id, you 
-will be prompted to select which version of the workflow to import.
-
-.. tip:: If you are viewing a Galaxy workflow in Dockstore and want to copy its TRS ID, click
-    the *Copy TRS ID* icon in Dockstore. This will put the TRS ID in your clipboard, which
-    you can paste if you select *import from a TRS id*
-
-.. figure:: /assets/images/docs/galaxy/copy_trs.png
 
 .. discourse::
     :topic_identifier: 4189

@@ -6,8 +6,21 @@ service:
   # The subclass is required, and can be DOCKER_COMPOSE, KUBERNETES, HELM, SWARM, or NOT_APPLICABLE.
   subclass:
   name:
-  author:
+
+  # Optional array of authorship information, requires at least the name of each author.
+  authors:
+    - name:
+      orcid:
+      email:
+      role:
+      affiliation:
+
   description:
+
+  # `publish` is a service-wide setting and will affect ALL branches/tags; only set this as needed in a main branch.
+  # `publish` may be set to true to publish an unpublished service, or false to unpublish a published service.
+  # Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
+  publish:
 
   # These are files the Dockstore will index. They will be directly downloadable from Dockstore. Wildcards are not supported.
   files:

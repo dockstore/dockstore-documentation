@@ -27,5 +27,15 @@ your pipeline.
 .. figure:: /assets/images/docs/nextflow_tower_from_dockstore.png
    :alt: Nextflow Tower
 
+.. _nextflow-limitations:
+
+Limitations
+-----------
+
+Nextflow Tower runs a workflow by cloning its git repository and checking out the specified branch. Unlike other launch-with partners, it does not
+fetch the workflow content directly from Dockstore. The Nextflow version on Dockstore can be out of sync with the version on GitHub, Bitbucket, or GitLab.
+When determining the exact workflow contents being run on Nextflow Tower, refer to the git repository.
+
+
 .. discourse::
     :topic_identifier: 4406

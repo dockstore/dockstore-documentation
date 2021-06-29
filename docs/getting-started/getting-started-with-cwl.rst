@@ -99,8 +99,8 @@ repository:
         foaf: http://xmlns.com/foaf/0.1/
 
 .. note:: Dockstore supports registering tools and workflows written in the `sbg:draft-2 <https://docs.sevenbridges.com/docs/about-the-common-workflow-language#sbgdraft-2>`__ implementation of CWL (yaml version only)
-that is optimized for the Seven Bridges cloud-based platform. However, this implementation is less portable. CWL v1.0 natively supports the custom extensions in sbg:draft-2 and
-Seven Bridges provides instructions for how to transition tools and workflows developed in the Seven Bridges Software Development Kit to GitHub for publishing in Dockstore."
+    that is optimized for the Seven Bridges cloud-based platform. However, this implementation is less portable. CWL v1.0 natively supports the custom extensions in sbg:draft-2 and
+    Seven Bridges provides instructions for how to transition tools and workflows developed in the Seven Bridges Software Development Kit to GitHub for publishing in Dockstore."
 
 You can see this tool takes two inputs, a parameter to control memory
 usage and a BAM file (binary sequence alignment file). It produces one

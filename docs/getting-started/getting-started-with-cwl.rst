@@ -98,6 +98,8 @@ repository:
         dct: http://purl.org/dc/terms/
         foaf: http://xmlns.com/foaf/0.1/
 
+.. note:: Dockstore supports registering tools and workflows written in the `sbg:draft-2 <https://docs.sevenbridges.com/docs/about-the-common-workflow-language#sbgdraft-2>`__ implementation of CWL (yaml version only) for the Seven Bridges Platform.
+
 You can see this tool takes two inputs, a parameter to control memory
 usage and a BAM file (binary sequence alignment file). It produces one
 output, a zip file, that contains various HTML reports that BAMStats

@@ -81,6 +81,11 @@ pygments_style = None
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+html_theme_options = {
+	'logo_only' : True,
+	'display_version' : True,
+#	'style_external_links' : True,
+}
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -102,6 +107,7 @@ html_static_path = ['_static']
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
+html_logo = 'assets/images/Dockstore-Documentation-horizontal-white.png'
 
 
 # -- Options for HTMLHelp output ---------------------------------------------

@@ -105,9 +105,12 @@ Findable
 		
 	- Authorship, contact information, and description:
 	
-		- You can add author and description metadata to your descriptor file. Adding an author will make it selectable on the Author facet in Dockstore’s search and a description helps because the text search uses it as one of the fields to sift through. 
+		- You can add author and description metadata to your descriptor file. Adding an author will make it selectable on the Author facet in Dockstore’s search and a description helps because the text search uses it as one of the fields to sift through.
+		
+		- Additionally, you can include a link to your original GitHub repo in order to connect the Dockstore entry with the source code. If your workflow is moved out of Dockstore, this can help to keep it connected with the original source code. You may consider doing so especially when you have additional comprehensive readme files available on GitHub.
 		
 	- Include :doc:`Dockstore labels <./best-practices-dockstore>` to enhance searchability.
+	 
 
 - Above, we discussed the value of organization features in version control and container registries. You can also share your workflow in a :doc:`Dockstore Organization and Collection </advanced-topics/organizations-and-collections>`. This feature can, for example, showcase workflows that group together to make a complete analysis.
 
@@ -250,5 +253,7 @@ Do not use untagged or “latest”.
 			- Contact information for the organization or individual pipeline maintainer.
 			- Any available cost or benchmarking information. 
 			- How to cite the use of your workflow (including references for the original software authors). 
+
+- Note: Documentation can be housed at either or both, the metadata section of the workflow file and/or the GitHub README document. On Dockstore, if a description is provided in the metadata section, it will be displayed by default in the INFO section. If a metadata section is missing, Dockstore will pull information from the README file on the original GitHub repo.
 
         

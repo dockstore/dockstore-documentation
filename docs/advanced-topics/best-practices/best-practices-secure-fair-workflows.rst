@@ -107,7 +107,9 @@ Findable
 	
 		- You can add author and description metadata to your descriptor file. Adding an author will make it selectable on the Author facet in Dockstore’s search and a description helps because the text search uses it as one of the fields to sift through.
 		
-		- Additionally, you can include a link to your original GitHub repo in order to connect the Dockstore entry with the source code. If your workflow is moved out of Dockstore, this can help to keep it connected with the original source code. You may consider doing so especially when you have additional comprehensive readme files available on GitHub.
+	- Link GitHub repository:
+	
+		- Additionally, you can include a link to your original GitHub repo in order to connect the Dockstore entry with the source code. If your workflow is moved out of Dockstore, this can help to keep it connected with the original source code. You may consider doing so especially when you have additional comprehensive README files available on GitHub.
 		
 	- Include :doc:`Dockstore labels <./best-practices-dockstore>` to enhance searchability.
 	 

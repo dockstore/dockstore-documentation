@@ -109,7 +109,7 @@ Findable
 		
 	- Link GitHub repository:
 	
-		- Additionally, you can include a link to your original GitHub repo in order to connect the Dockstore entry with the source code. If your workflow is moved out of Dockstore, this can help to keep it connected with the original source code. You may consider doing so especially when you have additional comprehensive README files available on GitHub.
+		- Additionally, you can include a URL to your original GitHub repo README in order to connect the Dockstore entry with the source code. If your workflow is moved out of Dockstore, this will help connect it with the original source code. You may consider doing so especially when you have additional comprehensive README files available on GitHub.
 		
 	- Include :doc:`Dockstore labels <./best-practices-dockstore>` to enhance searchability.
 	 

@@ -257,5 +257,5 @@ Do not use untagged or “latest”.
 			- How to cite the use of your workflow (including references for the original software authors). 
 
 - Note: Documentation can be housed at either or both, the metadata section of the workflow file and/or the GitHub README document. On Dockstore, if a description is provided in the metadata section, it will be displayed on the INFO tab. If the metadata section is missing, Dockstore will display the README on the INFO tab.
-- More information about authorship metdata can be found here: :doc: `Authorship-metadata </advanced-topics/best-practices/authorship-metadata>`
+- More information about authorship metadata can be found here: :doc:`Authorship Metadata </advanced-topics/best-practices/authorship-metadata>`
         

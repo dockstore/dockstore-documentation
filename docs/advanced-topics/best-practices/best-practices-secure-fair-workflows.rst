@@ -109,7 +109,7 @@ Findable
 		
 	- Link GitHub repository:
 	
-		- Additionally, for workflow languages that include meta sections, you can include a URL to your original GitHub repo README in the meta section of your descriptor file(s). In case of multiple descriptor files, use the primary descriptor file to host this information. If your workflow is moved out of Dockstore, this will help connect it with the original source code. You may consider doing so especially when you have additional comprehensive README files available on GitHub.
+		- Additionally, for workflow languages that include meta sections, you can include a URL to your original GitHub repo README in the meta section of your descriptor file(s). In case of multiple descriptor files, use the primary descriptor file to host this information. You may consider doing so especially when you have additional comprehensive README files available on GitHub. If your workflow is downloaded or copied from Dockstore to be run on a different computing environment such as, a local machine or HPC, the URL will help connect it with the original source code.
 		
 	- Include :doc:`Dockstore labels <./best-practices-dockstore>` to enhance searchability.
 	 

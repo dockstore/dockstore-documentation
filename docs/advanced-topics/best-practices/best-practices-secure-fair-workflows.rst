@@ -109,7 +109,7 @@ Findable
 		
 	- Link GitHub repository:
 	
-		- Additionally, for workflow languages that include meta sections, you can include a URL to your original GitHub repo README in the meta section of your descriptor file(s). If your workflow is moved out of Dockstore, this will help connect it with the original source code. You may consider doing so especially when you have additional comprehensive README files available on GitHub.
+		- Additionally, for workflow languages that include meta sections, you can include a URL to your original GitHub repo README in the meta section of your descriptor file(s). In case of multiple descriptor files, use the primary descriptor file to host this information. If your workflow is moved out of Dockstore, this will help connect it with the original source code. You may consider doing so especially when you have additional comprehensive README files available on GitHub.
 		
 	- Include :doc:`Dockstore labels <./best-practices-dockstore>` to enhance searchability.
 	 
@@ -256,6 +256,8 @@ Do not use untagged or “latest”.
 			- Any available cost or benchmarking information. 
 			- How to cite the use of your workflow (including references for the original software authors). 
 
-- Note: Documentation can be housed at either or both, the metadata section of the workflow file and/or the GitHub README document. On Dockstore, if a description is provided in the metadata section, it will be displayed on the INFO tab. If a metadata section is missing, Dockstore will pull information from the README file on the original GitHub repo.
+- Note: Documentation can be housed at either or both, the metadata section of the workflow file and/or the GitHub README document. On Dockstore, if a description is provided in the metadata section, it will be displayed on the INFO tab. If the metadata section is missing, Dockstore will display the README on the INFO tab.
 
+- More information about authorship metdata can be found here:
+	- :doc: `Authorship-metadata </advanced-topics/best-practices/authorship-metadata>`
         

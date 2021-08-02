@@ -36,7 +36,7 @@ Adding an author will make it selectable on the Author facet and a description h
 For more detailed information on these metadata fields, check out the following info for each language:
 
 - :doc:`WDL Best Practices <./wdl-best-practices>`
-- :doc:`CWL Best Practices <./best-practices>`
+- :doc:`CWL Best Practices <./cwl-best-practices>`
 - :doc:`Nextflow Best Practices <./nfl-best-practices>` and `Nextflow manifest documentation <https://www.nextflow.io/docs/latest/config.html#scope-manifest>`_
 
 .. note:: In CWL descriptors, you can include information about your input and output files and our search will understand it. This information will be visible on the facets ``Input File Formats`` and ``Output File Formats``. Read CWL's guide on `file formats <https://www.commonwl.org/user_guide/16-file-formats/index.html>`_ to learn how.

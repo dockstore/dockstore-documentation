@@ -105,9 +105,14 @@ Findable
 		
 	- Authorship, contact information, and description:
 	
-		- You can add author and description metadata to your descriptor file. Adding an author will make it selectable on the Author facet in Dockstore’s search and a description helps because the text search uses it as one of the fields to sift through. 
+		- You can add author and description metadata to your descriptor file. Adding an author will make it selectable on the Author facet in Dockstore’s search and a description helps because the text search uses it as one of the fields to sift through.
+		
+	- Link GitHub repository:
+	
+		- Additionally, for workflow languages that include meta sections, you can include a URL to your original GitHub repo README in the meta section of your descriptor file(s). In case of multiple descriptor files, use the primary descriptor file to host this information. You may consider doing so especially when you have additional comprehensive README files available on GitHub. If your workflow is downloaded or copied from Dockstore to be run on a different computing environment such as, a local machine or HPC, the URL will help connect it with the original source code.
 		
 	- Include :doc:`Dockstore labels <./best-practices-dockstore>` to enhance searchability.
+	 
 
 - Above, we discussed the value of organization features in version control and container registries. You can also share your workflow in a :doc:`Dockstore Organization and Collection </advanced-topics/organizations-and-collections>`. This feature can, for example, showcase workflows that group together to make a complete analysis.
 
@@ -251,4 +256,6 @@ Do not use untagged or “latest”.
 			- Any available cost or benchmarking information. 
 			- How to cite the use of your workflow (including references for the original software authors). 
 
+- Note: Documentation can be housed at either or both, the metadata section of the workflow file and/or the GitHub README document. On Dockstore, if a description is provided in the metadata section, it will be displayed on the INFO tab. If the metadata section is missing, Dockstore will display the README on the INFO tab.
+- More information about authorship metadata can be found here: :doc:`Authorship Metadata </advanced-topics/best-practices/authorship-metadata>`
         

@@ -57,6 +57,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    launch-with/dnanexus-launch-with
    launch-with/dnastack-launch-with
    launch-with/galaxy-launch-with
+   launch-with/nextflow-tower-launch-with
    launch-with/terra-launch-with
 
 .. toctree::

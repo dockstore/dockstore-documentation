@@ -47,7 +47,6 @@ checksums:
 Note that if there are no remote checksums stored for a descriptor (i.e. the entry has not been refreshed since the addition of checksum support in Dockstore 1.9),
 this will not be considered a fatal checksum mismatch, and the launch command will continue to execute.
 
-
 Docker Image Checksum Support
 =============================
 Checksum support for Docker images is more nuanced than it is for files. For quick reference, the table below displays the languages and
@@ -82,7 +81,7 @@ However, in some cases the image checksum may diverge, for example, if the image
 been updated. For best results, and to avoid your Docker image being deleted because of a registry's retention policy,
 use Docker images referred to by a tagged version or digest. The verification features available may vary between execution engines.
 
-For more information on Docker registry retention policies see posts from `Docker <https://www.docker.com/blog/scaling-dockers-business-to-serve-millions-more-developers-storage/`_,
+For more information on Docker registry retention policies see posts from `Docker <https://www.docker.com/blog/scaling-dockers-business-to-serve-millions-more-developers-storage/>`_,
 `AWS <https://aws.amazon.com/blogs/compute/clean-up-your-container-images-with-amazon-ecr-lifecycle-policies/>`_,
 or `Azure <https://docs.microsoft.com/en-us/azure/container-registry/container-registry-retention-policy>`_.
 

@@ -209,16 +209,16 @@ calling it via Docker. This will test that the WDL correctly describes
 how to run your tool.
 
 Setting Up the Dockstore CLI
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The first thing I'll do is
 `setup the Dockstore CLI locally <https://dockstore.org/quick-start>`__.
 This will have me install all of the dependencies needed to run the
 Dockstore CLI on my local machine.
 
-Although not strictly required, it's a good idea to set a concurrent-job-limit when running locally. This is because Cromwell, when running locally, loses the ability to set compute resources within what is specified in a task's runtime attributes. As such, the local version of Cromwell sometimes uses too many resources when running on scattered tasks, causing the task to get sigkilled or for Docker to lock up. Of course, there is a tradeoff: If you set concurrent-job-limit, tests involving scattered tasks may execute slower as less instances of a scattered task will run in parallel.
+Although not strictly required, it's a good idea to set a concurrent-job-limit when running locally. This is because Cromwell, when running locally, loses the ability to set compute resources within what is specified in a task's runtime attributes. As such, the local version of Cromwell sometimes uses too many resources when running scattered tasks, causing the task to get sigkilled or for Docker to lock up. Of course, there is a tradeoff: If you set concurrent-job-limit, tests involving scattered tasks may execute slower as less instances of a scattered task will run in parallel.
 
-.. tip::  If a Docker lockup happens, you will notice tasks do not progress beyond WaitingForReturnCode and you will be temporarily unable to use Docker on your OS. Thankfully, this can be solved easily by restarting Docker on your machine.
+.. tip::  If a Docker lockup happens, you will notice tasks do not progress beyond WaitingForReturnCode and you will be temporarily unable to use Docker on your OS. This can be resolved by restarting Docker on your machine.
 
 The easiest way to avoid these issues is to set up a Cromwell configuration file that sets concurrent-job-limit.
 
@@ -251,12 +251,12 @@ You may optionally edit ``root = "cromwell-executions"`` to something else if yo
 
 ::
 
-    cromwell-vm-options: -Dconfig.file=<path-to-your-cromwell-config>
+    cromwell-vm-options: -Dconfig.file=<absolute-path-to-your-cromwell-config>
 
 You're now all set up -- the Dockstore CLI will use this configuration file, and will only allow one instance of a scattered task to run at once.
 
 Set Up Local Data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 Next thing I’ll do is create a completely local dataset and JSON
 parameterization file:
@@ -282,7 +282,7 @@ You can see in the above I give the relative path to the input under
 ``bam_input`` and the memory in GB that I want to use for the task.
 
 Run Your Tool
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 At this point, let's run the tool with our local inputs and outputs via
 the JSON config file:
 

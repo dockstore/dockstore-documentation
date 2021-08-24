@@ -33,15 +33,12 @@ Below is a visual overview of how a checker workflow looks.
    Checker workflow layout - note that the checker workflow "contains" the original workflow
 
 The term "entry" will be used as a generic term to refer to both tools
-and workflows.
-
-The entry that a checker workflow is testing will be referred to as an
+and workflows. The entry that a checker workflow is testing will be referred to as an
 original tool/workflow/entry.
 
-For this tutorial we will be registering a checker workflow to test an
-original tool that calculates the MD5sum of a file.
-
-The relevant tools and workflows for both CWL and WDL can be found in the following Git
+For this example, we will be registering a checker workflow to test an
+original tool that calculates the MD5sum of a file. The relevant tools and 
+workflows for both CWL and WDL can be found in the following Git
 repository: https://github.com/dockstore-testing/md5sum-checker
 
 Although the next sections of this document will focus on just the CWL for the sake of simplicity,
@@ -68,7 +65,8 @@ Like regular workflows, a checker workflow can describe an example input
 from an input parameter file. The checker workflow can either use the
 input parameter file for the original entry, or it can define its own.
 The second case is useful when the validation tool/workflow has some
-extra parameters not required by the original entry.
+extra parameters not required by the original entry, such as an expected
+md5sum or an output file to compare against.
 
 For our example the second case is used. The original tool has the input
 parameter file
@@ -124,7 +122,7 @@ is important that the checker workflow produce consistent exit codes. We
 require using an exit code of 0 for success and an exit code of not 0
 for failures.
 
-We also recommend producing the the stderr and stdout logs. The exact filenames
+We also recommend producing the stderr and stdout logs. The exact filenames
 of these logs will vary depending on the platform and the workflow language. In
 CWL, they are typically referred to as log.stderr and log.stdout. WDL executors on
 the other hand tend to name these files stderr and stdout with no extension.
@@ -132,7 +130,8 @@ the other hand tend to name these files stderr and stdout with no extension.
 Note on CLI usage
 ~~~~~~~~~~~~~~~~~
 
-For existing dockstore commands (tools and workflows), entry refers to
+As mentioned before, the term "entry" will be used as a generic term to refer to both tools
+and workflows. For existing dockstore commands (tools and workflows), entry refers to
 the path of a specific tool or workflow. For checker workflows, entry
 refers to the path of the original entry. It does not refer to the
 checker workflow's path.
@@ -157,12 +156,13 @@ through the UI and CLI.
 
 From the UI
 ~~~~~~~~~~~
-
-Lets add a checker workflow for the tool described by
-`/md5sum/md5sum-tool.cwl <https://github.com/dockstore-testing/md5sum-checker/blob/master/md5sum/md5sum-tool.cwl>`__
-in the git repository. I already have the tool properly setup on
-Dockstore. For this tutorial it is assumed that you are familiar with
+For this example, it is assumed that you are familiar with
 the process for setting up tools and workflows on Dockstore.
+
+Let's add a checker workflow for the tool described by
+`/md5sum/md5sum-tool.cwl <https://github.com/dockstore-testing/md5sum-checker/blob/master/md5sum/md5sum-tool.cwl>`__
+in the git repository. I already have the tool properly set up on
+Dockstore.
 
 The first step is to find the tool under the my tools page. In the info
 tab there is an option to add a checker workflow. Click on the add
@@ -186,7 +186,7 @@ When registering a checker workflow, you need the following fields:
 
 Once a checker workflow has been added, you can view it by going to the
 info tab of the original entry. Where there used to be an add button,
-there is now the view button. View will take you back to your checker
+there is now the view button. This view button will take you to your checker
 workflow page.
 
 From the CLI
@@ -232,7 +232,7 @@ You can update the default test parameter path and the default
 descriptor path. Run ``dockstore checker update --help`` for more
 information.
 
-Lets update the default descriptor path in our example to a new value.
+Let's update the default descriptor path in our example to a new value.
 ::
 
 	dockstore checker update --entry quay.io/natalieeo/md5sum-checker --default-descriptor-path /checker-workflow-wrapping-tool.cwl

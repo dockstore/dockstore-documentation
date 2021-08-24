@@ -72,7 +72,7 @@ extra parameters not required by the original entry.
 
 For our example the second case is used. The original tool has the input
 parameter file
-`/md5sum-input-cwl.json <https://github.com/dockstore-testing/md5sum-checker/blob/master/md5sum/md5sum-input-cwl.json>`__.
+`md5sum-input-cwl.json <https://github.com/dockstore-testing/md5sum-checker/blob/master/md5sum/md5sum-input-cwl.json>`__.
 This is the file that runs a particular example with the original tool.
 
 ::
@@ -85,7 +85,7 @@ This is the file that runs a particular example with the original tool.
     }
 
 The checker workflow has the input parameter file
-`/checker-input-cwl.json <https://github.com/dockstore-testing/md5sum-checker/blob/master/checker-input-cwl.json>`__.
+`checker-input-cwl.json <https://github.com/dockstore-testing/md5sum-checker/blob/master/checker-input-cwl.json>`__.
 This is the file that we would pass to the checker workflow to ensure
 that our original tool is working properly when we run it with the input
 file mentioned above. Again, in some cases this file could be the same
@@ -106,12 +106,15 @@ Notice that the checker parameter file has the same content as the
 original parameter file, in addition to having a checker specific
 parameter.
 
-One point of confusion is that a checker workflow contains a validation
-tool/workflow. The validation tool/workflow is what does the bulk of the
-validation. It is responsible for ensuring that the results of the
-original entry match expected results. The checker workflow refers to
-the workflow that connects the original entry with the validation
-tool/workflow, so that it can be run as one workflow.
+Recall that the checker workflow refers to the workflow that connects
+the original entry with the validation tool/workflow, so that it can be
+run as one workflow. The validation tool/workflow is what does the bulk
+of the validation. It is responsible for ensuring that the results of the
+original entry match expected results. 
+
+To restate: First, the original workflow is run on a known input. Then, a
+validation workflow runs on the outputs of the original workflow, and makes
+sure that they are valid. Typically this means comparing a known md5sum.
 
 Output of checker workflow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

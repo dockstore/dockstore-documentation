@@ -137,11 +137,23 @@ the path of a specific tool or workflow. For checker workflows, entry
 refers to the path of the original entry. It does not refer to the
 checker workflow's path.
 
-Adding a checker workflow
--------------------------
+Creating a checker workflow
+---------------------------
+Checker workflows are generally easy to create. First of all, if you wish
+to create a workflow that is based on comparison to truth files and/or truth
+file md5sums, you will need to generate truth files for your original tool or
+workflow. You will then need to create the validation tool or workflow. Finally,
+combine the two into one checker workflow.
+
+For examples and templates for writing both validation workflows and checker
+workflows, see `this repository https://github.com/dockstore/checker-WDL-templates`__. It is focused
+on WDL, but the same concepts apply to other workflow languages.
+
+Adding a checker workflow to Dockstore
+--------------------------------------
 
 Currently, you can add checker workflows to existing tools and workflows
-through the UI and CLI
+through the UI and CLI.
 
 From the UI
 ~~~~~~~~~~~

@@ -124,11 +124,10 @@ is important that the checker workflow produce consistent exit codes. We
 require using an exit code of 0 for success and an exit code of not 0
 for failures.
 
-We also recommend producing the following two output files containing
-the stdout and stderr respectively:
-
-* log.stdout
-* log.stderr
+We also recommend producing the the stderr and stdout logs. The exact filenames
+of these logs will vary depending on the platform and the workflow language. In
+CWL, they are typically referred to as log.stderr and log.stdout. WDL executors on
+the other hand tend to name these files stderr and stdout with no extension.
 
 Note on CLI usage
 ~~~~~~~~~~~~~~~~~

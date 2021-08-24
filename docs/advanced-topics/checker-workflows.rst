@@ -44,7 +44,8 @@ original tool that calculates the MD5sum of a file.
 The relevant tools and workflows for both CWL and WDL can be found in the following Git
 repository: https://github.com/dockstore-testing/md5sum-checker
 
-The following sections will use CWL in its examples. The same instructions apply equally to WDL. This table contains the WDL equivalents:
+Although the next sections of this document will focus on just the CWL for the sake of simplicity,
+the same logic applies to the WDL. A table of the WDL and CWL counterparts follows.
 
 +-----------------------------+-------------------------------------+-----------------------------------------+
 | File Type                   | CWL                                 | WDL                                     |

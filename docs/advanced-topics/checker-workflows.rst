@@ -146,7 +146,7 @@ workflow. You will then need to create the validation tool or workflow. Finally,
 combine the two into one checker workflow.
 
 For examples and templates for writing both validation workflows and checker
-workflows, see `this repository https://github.com/dockstore/checker-WDL-templates`__. It is focused
+workflows, see `this repository <https://github.com/dockstore/checker-WDL-templates>`__. It is focused
 on WDL, but the same concepts apply to other workflow languages.
 
 Adding a checker workflow to Dockstore
@@ -197,13 +197,17 @@ checker workflow commands. For now we are interested in the add command.
 
 Using our example checker workflow, we would run the following:
 
-``dockstore checker add --entry quay.io/natalieeo/md5sum-checker --descriptor-type cwl --descriptor-path /checker-workflow-wrapping-tool.cwl --input-parameter-path /checker-input-cwl.json``
+::
+
+	dockstore checker add --entry quay.io/natalieeo/md5sum-checker \
+		--descriptor-type cwl --descriptor-path /checker-workflow-wrapping-tool.cwl \
+		--input-parameter-path /checker-input-cwl.json
 
 This will add the checker workflow defined by
 `/checker-workflow-wrapping-tool.cwl <https://github.com/dockstore-testing/md5sum-checker/blob/master/checker-workflow-wrapping-tool.cwl>`__
 to the entry ``quay.io/natalieeo/md5sum-checker``.
 
-The descriptor type will default to 'CWL' if none is provided. The
+The descriptor type will default to CWL if none is provided. The
 default input parameter path will default to the default input parameter
 path of the original entry.
 
@@ -229,7 +233,9 @@ descriptor path. Run ``dockstore checker update --help`` for more
 information.
 
 Lets update the default descriptor path in our example to a new value.
-``dockstore checker update --entry quay.io/natalieeo/md5sum-checker --default-descriptor-path /checker-workflow-wrapping-tool.cwl``
+::
+
+	dockstore checker update --entry quay.io/natalieeo/md5sum-checker --default-descriptor-path /checker-workflow-wrapping-tool.cwl
 
 This will update the default descriptor path for the checker workflow.
 Although in this example, the path is already properly set.

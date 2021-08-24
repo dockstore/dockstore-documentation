@@ -5,7 +5,7 @@ Tutorial Goals
 --------------
 
 -  Learn about checker workflows
--  Add a checker workflow to an existing tool
+-  Add a checker workflow to an existing tool or workflow
 -  Update a checker workflow
 -  Launch a checker workflow
 
@@ -28,9 +28,9 @@ information on contributing to the workflow testbed or related APIs.
 Below is a visual overview of how a checker workflow looks.
 
 .. figure:: /assets/images/docs/checker-workflow.png
-   :alt: Checker Workflow Layout
+   :alt: Flowchart describing how checker workflows work. The input is the checker workflow parameters, which go into the original tool or workflow. Next comes the validation tool or workflow. If that step exits 0, that represents concordant results, while other exit codes indicates non-concordant results. The checker workflow itself consists of both the original tool or workflow, and the validation tool or workflow.
 
-   Checker Workflow Layout
+   Checker workflow layout - note that the checker workflow "contains" the original workflow
 
 The term "entry" will be used as a generic term to refer to both tools
 and workflows.
@@ -154,9 +154,9 @@ tab there is an option to add a checker workflow. Click on the add
 button.
 
 .. figure:: /assets/images/docs/checker-workflow-add.png
-   :alt: Checker Workflow Add
+   :alt: Screenshot of the workflow page in Dockstore. The add button is on the top right hand corner.
 
-   Checker Workflow Add
+   Adding a checker workflow
 
 When registering a checker workflow, you need the following fields:
 
@@ -165,9 +165,9 @@ When registering a checker workflow, you need the following fields:
 * Descriptor type (CWL or WDL) when original entry is a tool
 
 .. figure:: /assets/images/docs/checker-workflow-register.png
-   :alt: Checker Workflow Register
+   :alt: Screenshot of a window displaying the aforementioned three fields.
 
-   Checker Workflow Register
+   Filling in checker workflow fields.
 
 Once a checker workflow has been added, you can view it by going to the
 info tab of the original entry. Where there used to be an add button,

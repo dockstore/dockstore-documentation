@@ -268,7 +268,9 @@ checker workflow version can be done in a similar fashion to normal
 workflows. No functionality is lost for this command. Run
 ``dockstore checker test_parameter --help`` for more information.
 
-``dockstore checker test_parameter --entry quay.io/natalieeo/md5sum-checker --version master --add /checker-input-cwl.json``
+::
+
+	dockstore checker test_parameter --entry quay.io/natalieeo/md5sum-checker --version master --add /checker-input-cwl.json
 
 This will add the test parameter file
 `/checker-input-cwl.json <https://github.com/dockstore-testing/md5sum-checker/blob/master/checker-input-cwl.json>`__

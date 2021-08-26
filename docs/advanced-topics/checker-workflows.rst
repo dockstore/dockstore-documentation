@@ -104,7 +104,9 @@ original entry match expected results.
 
 To restate: First, the original workflow is run on a known input. Then, a
 validation workflow runs on the outputs of the original workflow, and makes
-sure that they are valid. Typically this means comparing a known md5sum.
+sure that they are valid. Typically this means comparing a known md5sum, but
+more complicated methods such as comparing files line-by-line or using R to
+
 
 Output of checker workflow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -128,13 +130,58 @@ the path of a specific tool or workflow. For checker workflows, entry
 refers to the path of the original entry. It does not refer to the
 checker workflow's path.
 
-Creating a checker workflow
+Creating a checker workflow 
 ---------------------------
 Checker workflows are generally easy to create. First of all, if you wish
 to create a workflow that is based on comparison to truth files and/or truth
 file md5sums, you will need to generate truth files for your original tool or
 workflow. You will then need to create the validation tool or workflow. Finally,
-combine the two into one checker workflow.
+combine the original workflow or tool and the validation workflow or tool into one
+entity -- this will be your checker workflow.
+
+Truth files
+~~~~~~~~~~~
+A truth file represents the output of a workflow for a given input. For example,
+if your workflow should always output file named NWD2042242.txt containing the string
+"NWD2042242" when passed NWD2042242.crai, then your truth file is a file named
+NWD2042242.txt containing the string "NWD2042242". Now, if you run that same workflow
+with the same input, but end up with a different output (such as the string being
+"NWD2042242NWD2042242"), you know something has gone wrong because that output does
+not match the truth file.
+
+You will likely one at least one truth file for each important workflow-level output
+file. You can even create multiple truth files for each output so you can test more
+than one configuration. Reusing the same example as before, if setting a workflow input
+boolean ``reverseoutput`` to ``true`` results in your output file being named 2422402DWN.txt
+instead of NWD2042242.txt, you may wish to create a truth file for that case too. Then,
+you can run your original workflow twice -- once with ``reverseoutput`` set to true, and once
+where it's set to false -- then validate both outputs during your verification step. In
+this way, checker workflows can act not just as a way to check basic reproducibility across
+different platforms, but become more robust and may fit into a larger picture regarding CICD.
+Of course, what is appropriate for your tool or workflow will depend entirely upon its outputs,
+use case, and your own preferences for testing.
+
+Validation tasks
+~~~~~~~~~~~~~~~~
+You may wish to have your checker validation task check an array of files against
+another array of truth files. Alternatively, you may wish to check just a single file
+against an md5 sum string, or another file. Perhaps a more complicated workflow
+may use both of these approaches. Two examples of validation tasks are presented
+`in this template repository <https://github.com/dockstore/checker-WDL-templates>`__.
+
+Exactly what is considered a "match" or how to do the validation can vary, especially
+if your workflow or tool involves random sampling or includes timestamps. In such situations
+an md5sum comparison is usually not the best choice. You may wish to go through files
+line-by-line, compare RData outputs within some amount of tolerance with an Rscript, count
+the number of output files... it is important to adjust your validation steps to the needs
+of your original tool or workflow.
+
+Putting it all together
+~~~~~~~~~~~~~~~~~~~~~~~
+In order to run your original workflow or tool as closely to a "real" run as possible, it is usually
+recommended to use imports in your checker workflow. Not all backends support imports though, so you
+can also simply copy-paste the original workflow or tool into your checker workflow. As for your
+validation tasks, you can likewise import them, or put them in the workflow/tool file directly.
 
 For examples and templates for writing both validation workflows and checker
 workflows, see `this repository <https://github.com/dockstore/checker-WDL-templates>`__. It is focused
@@ -169,7 +216,7 @@ When registering a checker workflow, you need the following fields:
 
 * Default checker workflow path (path to main descriptor of the checker workflow)
 * Default test parameter file (if not given will copy over from original entry)
-* Descriptor type (CWL or WDL) when original entry is a tool
+* Descriptor type (CWL or WDL), if original entry is a tool
 
 .. figure:: /assets/images/docs/checker-workflow-register.png
    :alt: Screenshot of a window displaying the aforementioned three fields.
@@ -185,7 +232,7 @@ From the CLI
 ~~~~~~~~~~~~
 
 Run the command ``dockstore checker --help`` to see all available
-checker workflow commands. For now we are interested in the add command.
+checker workflow commands. For now we are interested in the ``add`` command.
 
 Using our example checker workflow, we would run the following:
 
@@ -210,9 +257,8 @@ From the UI
 ~~~~~~~~~~~
 
 Updating a checker workflow and associated versions can be done the same
-way as with normal workflows. The only difference is that to get to the
-correct page in My Workflows you must go through the original tool or
-workflow, in My Tools and My Workflows respectively.
+way as with normal workflows. The only difference is that the checker workflow
+will be nested under the original tool or workflow under My Workflows or My Tools.
 
 From the CLI
 ~~~~~~~~~~~~

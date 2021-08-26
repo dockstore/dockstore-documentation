@@ -17,14 +17,6 @@ or workflow. The purpose of them is to ensure that a tool or workflow,
 given some inputs, produces the expected outputs on a platform different
 from the one where you are developing.
 
-Checker workflows were used for iterations of the
-GA4GH-DREAM challenge. In the long-term, they can picked up and run by
-the automated GA4GH workflow "testbed" to test your workflows across a
-variety of workflow platforms. See this
-`presentation <https://docs.google.com/presentation/d/1VXdReGYXayzO7Jr-9XaLHNv6Wt46CwfvkfFDR8OEgJM/edit?usp=sharing>`__
-for more details and contact the GA4GH Cloud Work Stream for more
-information on contributing to the workflow testbed or related APIs.
-
 Below is a visual overview of how a checker workflow looks.
 
 .. figure:: /assets/images/docs/checker-workflow.png

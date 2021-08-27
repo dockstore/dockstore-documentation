@@ -104,9 +104,9 @@ original entry match expected results.
 
 To restate: First, the original workflow is run on a known input. Then, a
 validation workflow runs on the outputs of the original workflow, and makes
-sure that they are valid. Typically this means comparing a known md5sum, but
-more complicated methods such as comparing files line-by-line or using R to
-
+sure that they are valid. Sometimes this means comparing a known md5sum, but
+other methods may be more appropriate, especially if some level of randomness
+comes into play in your workflow or tool's outputs.
 
 Output of checker workflow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -116,7 +116,7 @@ is important that the checker workflow produce consistent exit codes. We
 require using an exit code of 0 for success and an exit code of not 0
 for failures.
 
-We also recommend producing the stderr and stdout logs. The exact filenames
+We also recommend checking the stderr and stdout logs. The exact filenames
 of these logs will vary depending on the platform and the workflow language. In
 CWL, they are typically referred to as log.stderr and log.stdout. WDL executors on
 the other hand tend to name these files stderr and stdout with no extension.

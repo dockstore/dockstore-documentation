@@ -99,7 +99,7 @@ parameter.
 Recall that the checker workflow refers to the workflow that connects
 the original entry with the validation tool/workflow, so that it can be
 run as one workflow. The validation tool/workflow is what does the actual
-of the validation. It is responsible for ensuring that the results of the
+validation. It is responsible for ensuring that the results of the
 original entry match expected results. 
 
 To restate: First, the original workflow is run on a known input. Then, a

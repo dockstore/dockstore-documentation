@@ -20,16 +20,15 @@ from the one where you are developing.
 Below is a visual overview of how a checker workflow looks.
 
 .. figure:: /assets/images/docs/checker-workflow.png
-   :alt: Flowchart describing how checker workflows work. The input is the checker workflow parameters, which go into the original tool or workflow. Next comes the validation tool or workflow. If that step exits 0, that represents concordant results, while other exit codes indicates non-concordant results. The checker workflow itself consists of both the original tool or workflow, and the validation tool or workflow.
+   :alt: Flowchart describing how checker workflows work. The input is the checker workflow parameters, which go into the original tool or workflow that is getting tested. Next comes the validation tool or workflow. If that step exits 0, that represents concordant results, while other exit codes indicates non-concordant results. The checker workflow itself consists of both the original tool or workflow, and the validation tool or workflow.
 
-   Checker workflow layout - note that the checker workflow "contains" the original workflow
+   Checker workflow layout - note that the checker workflow "contains" the workflow that is getting tested
 
 The term "entry" will be used as a generic term to refer to both tools
-and workflows. The entry that a checker workflow is testing will be referred to as an
-original tool/workflow/entry.
+and workflows. The entry that a checker workflow is testing will be referred to as the parent entry.
 
-For this example, we will be registering a checker workflow to test an
-original tool that calculates the MD5sum of a file. The relevant tools and 
+For this example, we will be registering a checker workflow to test a parent entry 
+that calculates the MD5sum of a file. The relevant tools and 
 workflows for both CWL and WDL can be found in the following Git
 repository: https://github.com/dockstore-testing/md5sum-checker
 
@@ -39,11 +38,11 @@ the same logic applies to the WDL. A table of the WDL and CWL counterparts follo
 +-----------------------------+-------------------------------------+-----------------------------------------+
 | File Type                   | CWL                                 | WDL                                     |
 +=============================+=====================================+=========================================+
-| Tool input parameter        | /md5sum/md5sum-input-cwl.json       | /md5sum/md5sum-wdl.json                 |
+| Parent input parameter      | /md5sum/md5sum-input-cwl.json       | /md5sum/md5sum-wdl.json                 |
++-----------------------------+-------------------------------------+-----------------------------------------+
+| Parent descriptor           | /md5sum/md5sum-tool.cwl             | /md5sum/md5sum-workflow.wdl             |
 +-----------------------------+-------------------------------------+-----------------------------------------+
 | Checker input parameter     | /checker-input-cwl.json             | /md5sum-wdl.json                        |
-+-----------------------------+-------------------------------------+-----------------------------------------+
-| Tool descriptor             | /md5sum/md5sum-tool.cwl             | /md5sum/md5sum-workflow.wdl             |
 +-----------------------------+-------------------------------------+-----------------------------------------+
 | Checker-wrapping descriptor | /checker-workflow-wrapping-tool.cwl | /checker-workflow-wrapping-workflow.wdl |
 +-----------------------------+-------------------------------------+-----------------------------------------+
@@ -55,15 +54,15 @@ Quick overview of structure
 
 Like regular workflows, a checker workflow can describe an example input
 from an input parameter file. The checker workflow can either use the
-input parameter file for the original entry, or it can define its own.
+input parameter file for the parent entry, or it can define its own.
 The second case is useful when the validation tool/workflow has some
-extra parameters not required by the original entry, such as an expected
+extra parameters not required by the parent entry, such as an expected
 md5sum or an output file to compare against.
 
-For our example the second case is used. The original tool has the input
+For our example the second case is used. The parent tool has the input
 parameter file
 `md5sum-input-cwl.json <https://github.com/dockstore-testing/md5sum-checker/blob/master/md5sum/md5sum-input-cwl.json>`__.
-This is the file that runs a particular example with the original tool.
+This is the file that runs a particular example with the parent entry.
 
 ::
 
@@ -77,9 +76,9 @@ This is the file that runs a particular example with the original tool.
 The checker workflow has the input parameter file
 `checker-input-cwl.json <https://github.com/dockstore-testing/md5sum-checker/blob/master/checker-input-cwl.json>`__.
 This is the file that we would pass to the checker workflow to ensure
-that our original tool is working properly when we run it with the input
+that our parent entry is working properly when we run it with the input
 file mentioned above. Again, in some cases this file could be the same
-as the one for the original tool parameter file, though not in this
+as the one for the parent entry's parameter file, though not in this
 case.
 
 ::
@@ -93,20 +92,20 @@ case.
     }
 
 Notice that the checker parameter file has the same content as the
-original parameter file, in addition to having a checker specific
+parent parameter file, in addition to having a checker specific
 parameter.
 
 Recall that the checker workflow refers to the workflow that connects
-the original entry with the validation tool/workflow, so that it can be
+the parent entry with the validation tool/workflow, so that it can be
 run as one workflow. The validation tool/workflow is what does the actual
 validation. It is responsible for ensuring that the results of the
-original entry match expected results. 
+parent entry match expected results. 
 
-To restate: First, the original workflow is run on a known input. Then, a
-validation workflow runs on the outputs of the original workflow, and makes
+To restate: First, the parent entry -- the workflow or tool we want to check -- is run on a known input. Then, a
+validation workflow runs on the outputs of the parent entry, and makes
 sure that they are valid. Sometimes this means comparing a known md5sum, but
 other methods may be more appropriate, especially if some level of randomness
-comes into play in your workflow or tool's outputs.
+comes into play in the parent entry's outputs.
 
 Output of checker workflow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,22 +126,22 @@ Note on CLI usage
 As mentioned before, the term "entry" will be used as a generic term to refer to both tools
 and workflows. For existing dockstore commands (tools and workflows), entry refers to
 the path of a specific tool or workflow. For checker workflows, entry
-refers to the path of the original entry. It does not refer to the
+refers to the path of the parent entry. It does not refer to the
 checker workflow's path.
 
 Creating a checker workflow 
 ---------------------------
 Checker workflows are generally easy to create. First of all, if you wish
 to create a workflow that is based on comparison to truth files and/or truth
-file md5sums, you will need to generate truth files for your original tool or
-workflow. You will then need to create the validation tool or workflow. Finally,
-combine the original workflow or tool and the validation workflow or tool into one
+file md5sums, you will need to generate truth files for your parent entry. 
+You will then need to create the validation tool or workflow. Finally,
+combine the parent entry and the validation workflow or tool into one
 entity -- this will be your checker workflow.
 
 Truth files
 ~~~~~~~~~~~
-A truth file represents the output of a workflow for a given input. For example,
-if your workflow should always output file named NWD2042242.txt containing the string
+A truth file represents the output of a parent entry for a given input. For example,
+if your parent workflow should always output file named NWD2042242.txt containing the string
 "NWD2042242" when passed NWD2042242.crai, then your truth file is a file named
 NWD2042242.txt containing the string "NWD2042242". Now, if you run that same workflow
 with the same input, but end up with a different output (such as the string being
@@ -154,7 +153,7 @@ file. You can even create multiple truth files for each output so you can test m
 than one configuration. Reusing the same example as before, if setting a workflow input
 boolean ``reverseoutput`` to ``true`` results in your output file being named 2422402DWN.txt
 instead of NWD2042242.txt, you may wish to create a truth file for that case too. Then,
-you can run your original workflow twice -- once with ``reverseoutput`` set to true, and once
+you can run your parent workflow twice -- once with ``reverseoutput`` set to true, and once
 where it's set to false -- then validate both outputs during your verification step. In
 this way, checker workflows can act not just as a way to check basic reproducibility across
 different platforms, but become more robust and may fit into a larger picture regarding CICD.
@@ -174,13 +173,13 @@ if your workflow or tool involves random sampling or includes timestamps. In suc
 an md5sum comparison is usually not the best choice. You may wish to go through files
 line-by-line, compare RData outputs within some amount of tolerance with an Rscript, count
 the number of output files... it is important to adjust your validation steps to the needs
-of your original tool or workflow.
+of your parent tool or workflow.
 
 Putting it all together
 ~~~~~~~~~~~~~~~~~~~~~~~
-In order to run your original workflow or tool as closely to a "real" run as possible, it is usually
+In order to run your parent entry as closely to a "real" run as possible, it is usually
 recommended to use imports in your checker workflow. Not all backends support imports though, so you
-can also simply copy-paste the original workflow or tool into your checker workflow. As for your
+can also simply copy-paste the parent workflow or tool into your checker workflow. As for your
 validation tasks, you can likewise import them, or put them in the workflow/tool file directly.
 
 For examples and templates for writing both validation workflows and checker
@@ -215,8 +214,8 @@ button.
 When registering a checker workflow, you need the following fields:
 
 * Default checker workflow path (path to main descriptor of the checker workflow)
-* Default test parameter file (if not given will copy over from original entry)
-* Descriptor type (CWL or WDL), if original entry is a tool
+* Default test parameter file (if not given will copy over from parent entry)
+* Descriptor type (CWL or WDL), if parent entry is a tool
 
 .. figure:: /assets/images/docs/checker-workflow-register.png
    :alt: Screenshot of a window displaying the aforementioned three fields.
@@ -224,7 +223,7 @@ When registering a checker workflow, you need the following fields:
    Filling in checker workflow fields.
 
 Once a checker workflow has been added, you can view it by going to the
-info tab of the original entry. Where there used to be an add button,
+info tab of the parent entry. Where there used to be an add button,
 there is now the view button. This view button will take you to your checker
 workflow page.
 
@@ -248,7 +247,7 @@ to the entry ``quay.io/natalieeo/md5sum-checker``.
 
 The descriptor type will default to CWL if none is provided. The
 default input parameter path will default to the default input parameter
-path of the original entry.
+path of the parent entry.
 
 Updating a checker workflow
 ---------------------------
@@ -258,7 +257,7 @@ From the UI
 
 Updating a checker workflow and associated versions can be done the same
 way as with normal workflows. The only difference is that the checker workflow
-will be nested under the original tool or workflow under My Workflows or My Tools.
+will be nested under the parent tool or workflow under My Tools or My Workflows respectively.
 
 From the CLI
 ~~~~~~~~~~~~
@@ -295,7 +294,7 @@ From the UI
 Updating the test input parameter files associated with a checker
 workflow version can be done the same way as with normal workflows. The
 only difference is that to get to the correct page in My Workflows you
-must go through the original tool or workflow, in My Tools and My
+must go through the parent tool or workflow, in My Tools and My
 Workflows respectively.
 
 From the CLI
@@ -348,7 +347,7 @@ From the CLI
 ~~~~~~~~~~~~
 
 The command for this is very simple. Again note that the entry is for
-the original entry, and not the checker workflow.
+the parent entry, and not the checker workflow.
 
 ``dockstore checker download --entry quay.io/natalieeo/md5sum-checker --version master``
 

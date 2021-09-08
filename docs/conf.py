@@ -84,7 +84,7 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
 	'logo_only' : True,
 	'display_version' : True,
-#	'style_external_links' : True,
+	'style_external_links' : True,
 }
 
 # Theme options are theme-specific and customize the look and feel of a theme

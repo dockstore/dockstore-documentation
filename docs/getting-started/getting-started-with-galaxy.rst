@@ -2,8 +2,7 @@
 Getting Started with Galaxy
 ===========================
 
-Galaxy workflow support in Dockstore is new and a preview of
-more full featured support to come.
+Dockstore has recently launched the Galaxy workflow support and the _`Launch with Galaxy <../launch-with/galaxy-launch-with>`__ tutorial elaborates different ways to launch a Galaxy workflow.
 
 Unlike WDL and CWL, Galaxy
 workflows in the near term are primarily created and modified

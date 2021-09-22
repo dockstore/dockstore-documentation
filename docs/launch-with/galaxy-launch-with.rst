@@ -8,8 +8,10 @@ There are several ways to launch Galaxy-based workflows. Here is some informatio
 
 While browsing Dockstore
 ========================
-When browsing Galaxy workflows from within Dockstore, you will see a
-Launch with Galaxy button on the right.
+
+Dockstore has a fully featured faceted search to effectively search for workflows. On the left panel, you can choose from several options to narrow down your search. Searching for workflows can be done using a specific search term. Results can be narrowed down based on the language of the workflow, author, organization, source control used among others.
+
+Once you have clicked on a workflow, you will see a Launch with Galaxy button on the right.
 
 .. figure:: /assets/images/docs/galaxy/galaxy_workflow.png
    :alt: Galaxy workflow on Dockstore

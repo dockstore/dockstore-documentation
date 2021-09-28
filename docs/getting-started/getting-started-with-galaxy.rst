@@ -4,6 +4,16 @@ Getting Started with Galaxy
 
 Dockstore supports Galaxy workflows and the :doc:`Launch with Galaxy <../../launch-with/galaxy-launch-with>` tutorial elaborates different ways to launch a Galaxy workflow. Please note that Galaxy workflows cannot be launched by the Dockstore CLI.
 
+Galaxy instances are offered by many resources, free and otherwise. Each come with their own advantages and users can make a choice based on their own needs.
+
+Using Galaxy Servers
+--------------------
+Institutions across the world maintain Galaxy instances that are often shared with the greater community for free, subsidized by grants, such as the `Use Galaxy Org <https://usegalaxy.org/>`. It offers a quick and customizable way to spin up a Galaxy instance. These are great ways to learn and use Galaxy, and many offer valuable learning resources such as the `Galaxy Training Network <https://training.galaxyproject.org/>`.
+
+Custom Galaxy in the Cloud with Terra, AnVIL, and BioData Catalyst
+------------------------------------------------------------------
+Galaxy is now integrated into the Terra cloud workspace and this provides Galaxy users the ability to create a custom environment that they can scale to their needs. Additionally, the Terra workspace is able to access a rich data corpus hosted in the cloud, including many controlled-access datasets, thus allowing users to securely conduct analyses with this data.
+
 Unlike WDL and CWL, Galaxy
 workflows in the near term are primarily created and modified
 from the Galaxy workflow editor (GUI), instead of a text editor.

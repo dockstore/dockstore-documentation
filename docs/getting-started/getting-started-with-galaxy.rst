@@ -8,7 +8,7 @@ Galaxy instances are offered by many institutions, free and otherwise. Each come
 
 Using Galaxy Servers
 --------------------
-Institutions across the world maintain Galaxy instances that are often shared with the greater community for free, subsidized by grants, such as the `Use Galaxy Org <https://usegalaxy.org/>`. These are great ways to learn and use Galaxy, and many offer valuable learning resources such as the `Galaxy Training Network <https://training.galaxyproject.org/>`.
+Institutions across the world maintain Galaxy instances that are often shared with the greater community for free, subsidized by grants, such as the `Use Galaxy Org <https://usegalaxy.org/>`__. These are great ways to learn and use Galaxy, and many offer valuable learning resources such as the `Galaxy Training Network <https://training.galaxyproject.org/>`__.
 
 Custom Galaxy in the Cloud with Terra, AnVIL, and BioData Catalyst
 ------------------------------------------------------------------

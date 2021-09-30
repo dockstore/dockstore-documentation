@@ -16,7 +16,7 @@ Once you have clicked on a workflow, you will see a Launch with Galaxy button on
 .. figure:: /assets/images/docs/galaxy/galaxy_workflow.png
    :alt: Galaxy workflow on Dockstore
 
-The button will bring up a dropdown window where you may select which Galaxy instance to launch the workflow into. A few default options such as the `Use Galaxy Org <https://usegalaxy.org/>` instances are provided by Dockstore, but if you need to launch into another instance, you may provide a custom URL. For your custom URL to work properly, it must start with ``https://`` and there should not be an ending forward slash ``/``.
+The button will bring up a dropdown window where you may select which Galaxy instance to launch the workflow into. A few default options such as the `Use Galaxy Org <https://usegalaxy.org/>` instances are provided by Dockstore, but if you need to launch into another instance, you may provide a custom URL. Further along in this tutorial, you will find how to generate a custom instance and provide the URL to Dockstore.
 
 .. figure:: /assets/images/docs/galaxy/launch_with_options.png
    :alt: Launch options for Galaxy
@@ -28,7 +28,7 @@ To spin up a custom cloud environment on Terra, navigate to the Notebooks tab on
 .. figure:: /assets/images/docs/galaxy/create_galaxy_environment.png
    :alt: Create a Cloud Environment for Galaxy
 
-It takes 8-10 minutes for the cloud environment to launch. Once it is ready, you can click on the Galaxy button on the top right and then the Launch Galaxy button. Doing so will open the Galaxy page with custom cloud environment. You can copy the URL and paste it into the Dockstore dropdown window to launch a workflow from Dockstore into this cloud instance. For your custom URL to work properly, it must start with ``https://`` and end with ``/galaxy`` without an ending forward slash ``/``.
+It takes 8-10 minutes for the cloud environment to launch. Once it is ready, you can click on the Galaxy button on the top right and then the Launch Galaxy button. Doing so will open the Galaxy page with custom cloud environment. You can copy the URL and paste it into the Dockstore dropdown window to launch a workflow from Dockstore into this cloud instance. For your custom URL to work properly, it must start with ``https://`` and end with ``/galaxy``.
 
 While browsing Galaxy
 =====================

@@ -44,7 +44,7 @@ linkcheck_anchors = False
 linkcheck_ignore = [
     'https://ci.commonwl.org', 'http://localhost:8080/ga4gh/wes/v1',
     'http://dx.doi.org/10.12688/f1000research.10137.1', 'https://dockstore.org/api/',
-    'https://dockstore.org:8443/'
+    'https://dockstore.org:8443/', 'https://support.terra.bio/hc/en-us/sections/360007274612/'
     ]
 
 # Add any paths that contain templates here, relative to this directory.

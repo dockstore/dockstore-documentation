@@ -15,7 +15,7 @@ Highlighted new features include:
    and our tutorial in progress at
    https://github.com/dockstore/dockstore/wiki/WIP-Checker-Workflow-Support-Tutorial
 -  launch-with
-   `Firecloud <https://firecloud.terra.bio//>`__
+   `Firecloud <https://firecloud.terra.bio/>`__
    support, see a summary
    :doc:`here </launch-with/terra-launch-with/>`
 -  support for the next iteration of the tool registry schema, see

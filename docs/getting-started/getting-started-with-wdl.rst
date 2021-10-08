@@ -21,7 +21,7 @@ Describe Your Tool in WDL
 -------------------------
 
 Besides CWL, you can also describe tools via the `WDL
-language <https://software.broadinstitute.org/wdl/documentation/>`__.
+language <https://support.terra.bio/hc/en-us/sections/360007274612/>`__.
 WDL does not directly have the concept of a Tool built in to the
 language like CWL. Instead, we define a tool as a one task WDL workflow,
 where the task has an associated Docker image.

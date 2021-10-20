@@ -4,20 +4,6 @@ Getting Started with Galaxy
 
 Dockstore supports Galaxy workflows and the :doc:`Launch with Galaxy <../../launch-with/galaxy-launch-with>` tutorial elaborates different ways to launch a Galaxy workflow. Please note that Galaxy workflows cannot be launched by the Dockstore CLI.
 
-Galaxy instances are offered by many institutions, free and otherwise. Each come with their own advantages and users can make a choice based on their own needs.
-
-Using Galaxy Servers
---------------------
-Institutions across the world maintain Galaxy instances that are often shared with the greater community for free, subsidized by grants, such as the `Use Galaxy Org <https://usegalaxy.org/>`__. These are great ways to learn and use Galaxy, and many offer valuable learning resources such as the `Galaxy Training Network <https://training.galaxyproject.org/>`__.
-
-Custom Galaxy in the Cloud with Terra, AnVIL, and BioData Catalyst
-------------------------------------------------------------------
-Galaxy is now integrated into the Terra cloud workspace. This provides Galaxy users the ability to readily create a custom environment that they can scale to their needs. Additionally, the Terra workspace is able to access a rich data corpus hosted in the cloud, including many controlled-access datasets, thus allowing users to securely conduct analyses with this data.
-
-Unlike WDL and CWL, Galaxy
-workflows in the near term are primarily created and modified
-from the Galaxy workflow editor (GUI), instead of a text editor.
-
 Tutorial Goals
 --------------
 
@@ -28,15 +14,31 @@ Tutorial Goals
 -  Push the workflow to GitHub
 -  Make a GitHub release
 
+About Galaxy
+------------
+
+Galaxy is a web-based platform for data analysis. Galaxy is open source and can be installed locally. Alternatively, many institutions offer access to managed Galaxy instances, free and otherwise. Different Galaxy instances come with their own advantages and users can make a choice based on their own needs.
+
+Using Existing Galaxy Servers
+-----------------------------
+
+Institutions across the world maintain Galaxy instances that are shared with the greater community and are a great way to learn and use Galaxy. Some of these instances are subsidized by grants and offered for free (such as the Galaxy US <https://usegalaxy.org/>`__, Galaxy EU <https://usegalaxy.eu/>`__, or Galaxy AU <https://usegalaxy.org.au/>`__) and some are available for a fee (such as Galaxy AnVIL <https://anvil.terra.bio/>`__ or Galaxy Pro <https://researcher.galaxyworks.io/>`__). A lot of great learning resources are available on the the Galaxy Training Network <https://training.galaxyproject.org/>`__, with help on specific questions available via Galaxy Help <https://help.galaxyproject.org/>`__.
+
+Using Custom Galaxy in the Cloud with Terra, AnVIL, and BioData Catalyst
+------------------------------------------------------------------------
+Galaxy is also integrated into the Terra cloud workspace. This provides users the ability to readily create a custom Galaxy environment that they can scale to their needs or install additional tools. Additionally, the Terra workspace is able to access a rich data corpus hosted in the cloud, including many controlled access datasets, thus allowing users to conduct analyses with this data in a compliance-based environment.
+
+Unlike WDL and CWL, Galaxy workflows in the near term are created and modified from the Galaxy workflow editor (GUI), instead of a text editor.
+
 Create a basic Galaxy workflow
 ------------------------------
 
-Create and run your workflow in Galaxy. Here  is a tutorial for `Creating, Editing, Importing Galaxy Workflows <https://training.galaxyproject.org/training-material/topics/galaxy-interface/tutorials/workflow-editor/tutorial.html>`__
+If you would like to create and run your own workflow in Galaxy, here  is a tutorial for `Creating, Editing, Importing Galaxy Workflows <https://training.galaxyproject.org/training-material/topics/galaxy-interface/tutorials/workflow-editor/tutorial.html>`__ from the Galaxy Training Network.
 
 Export the workflow to a file
 -----------------------------
 
-In Galaxy:
+Once you’ve created a workflow in Galaxy, you can export it. This is a required step to register the workflow with Dockstore.
 
 - Click on the Galaxy UI Workflow link at the top of the page.
 - Click on the workflow name to expose the drop down menu.
@@ -73,21 +75,19 @@ These steps are outlined `here. <https://docs.github.com/en/github/managing-file
 Releasing on GitHub
 -------------------
 
-Now that we've successfully created our workflow in Galaxy and tested it the
+Now that we've successfully created our workflow in Galaxy and uploaded it to GitHub, the
 workflow is ready to share with others. Making a release on GitHub will tag
 your GitHub repository with a version tag so you can always get back to
-this particular release. Follow the steps outlined `here <https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository>`__
-to create a release.
+this particular version of the workflow. Follow the steps outlined `here <https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository>`__ to create a release.
 
 Next Steps
 ----------
 
-Now that you have a git repository that includes a Galaxy workflow, and you
-have tested it and are satisfied that it works the next step is to
+Now that you have a git repository that includes a Galaxy workflow, the next step is to
 register it on Dockstore.
 
 If you haven't set up a Dockstore account follow the :doc:`next tutorial <register-on-dockstore/>` to create an
-account on Dockstore and link third party services, which includes GitHub.
+account on Dockstore and link to third party services, which includes GitHub.
 Otherwise follow the instructions for :doc:`workflow registration. <dockstore-workflows>`
 
 See Also

@@ -12,6 +12,11 @@ you to the core concepts of Dockstore, leaving you with a good understanding of 
 going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` or our `quickstart guide <https://dockstore.org/quick-start>`_.
 
 .. toctree::
+   :maxdepth: 1
+
+   Go to Dockstore <https://dockstore.org>
+
+.. toctree::
    :caption: About
    :maxdepth: 1
 
@@ -26,15 +31,19 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    getting-started/getting-started-with-cwl
    getting-started/getting-started-with-wdl
    getting-started/getting-started-with-nextflow
+   getting-started/getting-started-with-galaxy
    getting-started/register-on-dockstore
    getting-started/dockstore-tools
    getting-started/dockstore-workflows
    getting-started/hosted-tools-and-workflows
    getting-started/getting-started-with-services
+   getting-started/github-apps/github-apps-landing-page
 
 .. toctree::
+   :caption: Videos (Tutorials & Presentations)
+   :maxdepth: 1
 
-   getting-started/github-apps/github-apps-landing-page
+   videos
 
 .. toctree::
    :caption: Launch
@@ -42,9 +51,13 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
    launch-with/launch
    launch-with/anvil-launch-with
+   launch-with/bdcat-launch-with
+   launch-with/cavatica-launch-with
    launch-with/cgc-launch-with
    launch-with/dnanexus-launch-with
    launch-with/dnastack-launch-with
+   launch-with/galaxy-launch-with
+   launch-with/nextflow-tower-launch-with
    launch-with/terra-launch-with
 
 .. toctree::
@@ -55,6 +68,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    end-user-topics/faceted-search
    end-user-topics/starring
    end-user-topics/language-support
+   end-user-topics/ORCID
 
 .. toctree::
    :caption: Advanced Developer Topics
@@ -81,10 +95,11 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    advanced-topics/posting-zips
    advanced-topics/verification
    advanced-topics/organizations-and-collections
-   advanced-topics/best-practices/best-practices
+   advanced-topics/best-practices/cwl-best-practices
    advanced-topics/best-practices/wdl-best-practices
    advanced-topics/best-practices/nfl-best-practices
    advanced-topics/best-practices/best-practices-dockstore
+   advanced-topics/best-practices/best-practices-secure-fair-workflows
 
 .. toctree::
    :caption: Extras
@@ -109,6 +124,12 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    faq
 
 .. toctree::
+   :caption: Roadmap
+   :maxdepth: 1
+
+   roadmap
+
+.. toctree::
    :caption: Changelog
    :maxdepth: 1
 
@@ -123,6 +144,12 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
    news
    news/*
+
+.. toctree::
+   :caption: System Status
+   :maxdepth: 1
+
+   systemstatus
 
 .. centered:: In Affiliation with
 
@@ -188,3 +215,5 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 .. _TerraLink: https://terra.bio/
 
 .. |imagespace| unicode:: U+00A0 U+00A0 U+00A0 U+00A0 U+00A0 .. non-breaking spaces between logo images
+
+ 

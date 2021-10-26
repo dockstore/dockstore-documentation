@@ -12,7 +12,7 @@ When browsing CWL workflows from within Dockstore, you will see a
 "Launch with CGC" button on the right. The currently selected version
 of the workflow will be exported.
 
-.. figure:: /assets/images/docs/cgc/cgc_from_dockstore.png
+.. figure:: /assets/images/docs/sevenbridges/sb_from_dockstore.png
    :alt: CWL workflow
 
    CWL workflow
@@ -31,6 +31,7 @@ must already exist.
 Then hit the "Import" button and continue from within the CGC
 interface to configure and run your workflow.
 
+.. _cgc-limitations:
 
 Limitations
 -----------

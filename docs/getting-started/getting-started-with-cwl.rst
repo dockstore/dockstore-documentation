@@ -98,6 +98,10 @@ repository:
         dct: http://purl.org/dc/terms/
         foaf: http://xmlns.com/foaf/0.1/
 
+.. note:: The `sbg:draft-2 <https://docs.sevenbridges.com/docs/about-the-common-workflow-language#sbgdraft-2>`__ implementation of CWL is optimized for the Seven Bridges cloud-based platform and includes custom extensions.
+    Although Dockstore does not support CWL sbg:draft-2, we do support CWL v1.0 which natively supports these custom extensions. Seven Bridges also provides `instructions <https://sb-biodatacatalyst.readme.io/docs/maintaining-and-versioning-cwl-on-external-tool-repositories>`__
+    for how to transition tools and workflows developed in the Seven Bridges Software Development Kit to GitHub for publishing in Dockstore.
+
 You can see this tool takes two inputs, a parameter to control memory
 usage and a BAM file (binary sequence alignment file). It produces one
 output, a zip file, that contains various HTML reports that BAMStats
@@ -237,7 +241,7 @@ how to run your tool.
 The first thing I'll do is
 `setup the Dockstore CLI locally <https://dockstore.org/quick-start>`__.
 This will have me install all of the dependencies needed to run the
-Dockstore CLI on my local machine.
+Dockstore CLI on my local machine. Make sure to install cwltool as well.
 
 Next thing I'll do is create a completely local dataset and JSON
 parameterization file:
@@ -384,6 +388,7 @@ See Also
 
 - :doc:`WDL <getting-started-with-wdl>`
 - :doc:`Nextflow <getting-started-with-nextflow>`
+- :doc:`Galaxy <getting-started-with-galaxy/>`
 - :doc:`Language Support <../end-user-topics/language-support>`
 
 .. discourse::

@@ -30,7 +30,7 @@ Highlighted new features include
    limited number of other Dockstore users
 -  initially, this feature will be limited to users (or rather Google
    accounts) that are known to the
-   `Firecloud <https://software.broadinstitute.org/firecloud/>`__
+   `Firecloud <https://firecloud.terra.bio/>`__
    ecosystem, but we hope to roll this out to all users over the coming
    months
 -  login with Google and associate your account allowing you to login
@@ -52,7 +52,7 @@ Highlighted new features include
 -  updates for cwltool support from 1.0.20170828135420 to
    1.0.20180403145700
 -  to elaborate,
-   `verified <../faq.html#what-is-a-verified-tool-or-workflow>`__
+   :ref:`verified <what-is-a-verified-tool-or-workflow>`
    workflows have been run in-house succesfully with these versions
 -  updates to use the Bitbucket 2.0 API and the GitLab V4 API
 -  a large number of UI improvements and usability improvements

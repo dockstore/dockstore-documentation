@@ -128,10 +128,6 @@ mismatches.
 
     baseCommand: ["wc", "-l"]
 
-    $schemas:
-    - http://dublincore.org/2012/06/14/dcterms.rdf
-    - http://xmlns.com/foaf/spec/20140114.rdf
-
 .. include:: sample-parameter-files-intro.rst
 
 *sample.json*
@@ -244,8 +240,6 @@ demonstrating the use of JSON-LD.
       s: https://schema.org/
 
     $schemas:
-    - http://dublincore.org/2012/06/14/dcterms.rdf
-    - http://xmlns.com/foaf/spec/20140114.rdf
     - https://schema.org/docs/schema_org_rdfa.html
 
     s:author:

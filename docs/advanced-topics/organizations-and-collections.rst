@@ -90,18 +90,18 @@ can request a re-review.
 Organization membership
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Anyone can see an approved organization, though only members and
-maintainers of the organization can perform actions on the
-organizations. This includes creating and adding to collections,
-updating metadata, and adding new members.
+Anyone can see an approved organization, but only admins and
+maintainers of the organization can perform actions on it.
+This includes creating and adding to collections, updating metadata, and adding new members.
 
-There are two types of roles available:
+As of 1.9.2, there are three types of roles available:
 
-* **Maintainer** - can update organization, collections, and membership
-* **Member** - can only update organization and collections
+* **Member** - No editing permissions. Joins to show support for the organization.
+* **Maintainer** - can only update the organization and collections
+* **Admin** - can update the organization, collections, and memberships
 
 Membership can be updated on the membership tab of the organization
-page. A maintainer cannot delete their own membership.
+page. An admin cannot delete their own membership.
 
 When a user is requested to join an organization, they will receive an
 invite. Pending invitatons are displayed on the ``requests`` tab of the
@@ -183,6 +183,9 @@ collection.
 Once added, the tool/workflow will appear on the collection page. If a
 user wants to remove a tool/workflow from a collection, they can do so
 from the collections page.
+
+Note that you have the option of adding a specific version of a workflow rather than the workflow as a whole. 
+For information on why you might want to do this, please refer to the :ref:`FAQ <why-would-i-want-to-add-a-specific-version-of-a-workflow-to-a-collection>` .
 
 Events
 ------

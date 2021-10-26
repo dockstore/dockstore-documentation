@@ -36,8 +36,8 @@
             <td style="padding: 5px;"><a href="../getting-started/dockstore-tools.html">Tool registration</a></td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
-            <td style="background-color:#fcf8e3; padding: 5px;">No</td>
-            <td style="background-color:#fcf8e3; padding: 5px;">No</td>
+            <td style="background-color:lightgray; padding: 5px;">No</td>
+            <td style="background-color:lightgray; padding: 5px;">No</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;"><a href="../getting-started/dockstore-workflows.html">Workflow registration</a></td>
@@ -55,38 +55,48 @@
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;">DAG Display</td>
-            <td style="background-color:#dff0d8; padding: 5px;">Yes (cwl version=>1.1)
-                <sup>[0]</sup>
-            </td>
-            <td style="background-color:#dff0d8; padding: 5px;">Yes (wdl version&lt;=1.0)
+            <td style="background-color:#dff0d8; padding: 5px;">Yes (cwl version &lt;= 1.1)
                 <sup>[1]</sup>
+            </td>
+            <td style="background-color:#dff0d8; padding: 5px;">Yes (wdl version &lt;= 1.0)
             </td>
             <td style="background-color:#dff0d8; padding: 5px;">Limited support</td>
             <td style="background-color:#dff0d8; padding: 5px;">Limited support</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;">Tool Tab Display</td>
-            <td style="background-color:#dff0d8; padding: 5px;">Yes (cwl version=>1.1)</td>
-            <td style="background-color:#dff0d8; padding: 5px;">Yes (wdl version&lt;=1.0)</td>
+            <td style="background-color:#dff0d8; padding: 5px;">Yes (cwl version &lt;= 1.1)</td>
+            <td style="background-color:#dff0d8; padding: 5px;">Yes (wdl version &lt;= 1.0)</td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
             <td style="background-color:#dff0d8; padding: 5px;">Limited support</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
-            <td style="padding: 5px;">Launch-with Platforms</td>
+            <td style="padding: 5px;">Launch-with Platforms for workflows</td>
             <td style="background-color:#dff0d8; padding: 5px;">
-                <a href="../launch-with/cgc-launch-with.html">CGC</a> (workflows only)<sup>[2]</sup></td>
-            <td style="background-color:#dff0d8; padding: 5px;">
-                <a href="../launch-with/terra-launch-with.html">Terra</a> (workflows only)<sup>[3]</sup>
+                <a href="../launch-with/bdcat-launch-with.html">BioData Catalyst</a> <sup>[2]</sup>
                 <br>
-                <a href="../launch-with/dnastack-launch-with.html">DNAstack</a> (workflows only)<sup>[4]</sup>
+                <a href="../launch-with/cavatica-launch-with.html">Cavatica</a> <sup>[3]</sup>
                 <br>
-                <a href="../launch-with/dnanexus-launch-with.html">DNAnexus</a> (workflows only)
-                <br>
-                <a href="../launch-with/anvil-launch-with.html">AnVIL</a> (workflows only)<sup>[5]</sup>
-                <br>
+                <a href="../launch-with/cgc-launch-with.html">CGC</a> <sup>[4]</sup>
             </td>
-            <td style="background-color:#fcf8e3; padding: 5px;">Not yet!</td>
-            <td style="background-color:#fcf8e3; padding: 5px;">Not yet!</td>
+            <td style="background-color:#dff0d8; padding: 5px;">
+                <a href="../launch-with/anvil-launch-with.html">AnVIL</a> <sup>[5]</sup>
+                <br>
+                <a href="../launch-with/bdcat-launch-with.html">BioData Catalyst</a> <sup>[6]</sup>
+                <br>
+                <a href="../launch-with/dnanexus-launch-with.html">DNAnexus</a> 
+                <br>
+                <a href="../launch-with/dnastack-launch-with.html">DNAstack</a> <sup>[7]</sup>
+                <br>
+                <a href="../launch-with/terra-launch-with.html">Terra</a> <sup>[8]</sup>
+            </td>
+            <td style="background-color:#dff0d8; padding: 5px;">
+              <a href="../launch-with/nextflow-tower-launch-with.html">Nextflow Tower</a><sup>[9]</sup>
+            </td>
+            <td style="background-color:#dff0d8; padding: 5px;">
+                <a href="../launch-with/galaxy-launch-with.html">Galaxy</a>
+                <a href="../getting-started/getting-started-with-galaxy.html#custom-galaxy-in-the-cloud-with-terra-anvil-and-biodata-catalyst">Galaxy (in Terra)</a>
+            </td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;">Metadata Display</td>
@@ -107,10 +117,10 @@
             <td style="background-color:#dff0d8; padding: 5px;">cwltool, Cromwell
             </td>
             <td style="background-color:#dff0d8; padding: 5px;">Cromwell
-                <sup>[6]</sup>
+                <sup>[10]</sup>
             </td>
             <td style="background-color:#dff0d8; padding: 5px;">Nextflow</td>
-            <td style="background-color:#fcf8e3; padding: 5px;">None</td>
+            <td style="background-color:fcf8e3; padding: 5px;">None</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;"><a href="../advanced-topics/advanced-features.html#file-provisioning">File Provisioning</a> In</td>
@@ -133,7 +143,7 @@
                 <br><a href="https://www.nextflow.io/docs/latest/script.html#http-ftp-files">FTP</a>
                 <br><a href="https://www.nextflow.io/docs/latest/amazons3.html#">S3</a>
             </td>
-            <td style="background-color:#fcf8e3; padding: 5px;">No</td>
+            <td style="background-color:lightgray; padding: 5px;">No</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;">Plugins Support</td>
@@ -159,8 +169,8 @@
                 <br>
                 <a href="https://github.com/dockstore/data-object-service-plugin">Data Object Service</a>
             </td>
-            <td style="background-color:#fcf8e3; padding: 5px;">No</td>
-            <td style="background-color:#fcf8e3; padding: 5px;">No</td>
+            <td style="background-color:lightgray; padding: 5px;">No</td>
+            <td style="background-color:lightgray; padding: 5px;">No</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;">File Provisioning Out</td>
@@ -171,7 +181,7 @@
                 <br>S3 via plugins
             </td>
             <td style="background-color:#fcf8e3; padding: 5px;">
-                <sup>[7]</sup>
+                <sup>[11]</sup>
                 <br>Local File System
                 <br>HTTP
                 <br>FTP
@@ -181,14 +191,14 @@
             <td style="background-color:#dff0d8; padding: 5px;">Local File System
                 <br><a href="https://www.nextflow.io/docs/latest/process.html#storedir">S3</a>
             </td>
-            <td style="background-color:#fcf8e3; padding: 5px;">No</td>
+            <td style="background-color:lightgray; padding: 5px;">No</td>
         </tr>
         <tr style="border-top: 1px solid #ddd; ">
             <td style="padding: 5px;"><a href="../advanced-topics/advanced-features.html#notifications">Notifications</a></td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
             <td style="background-color:#dff0d8; padding: 5px;">Yes</td>
-            <td style="background-color:#fcf8e3; padding: 5px;">No</td>
-            <td style="background-color:#fcf8e3; padding: 5px;">No</td>
+            <td style="background-color:lightgray; padding: 5px;">No</td>
+            <td style="background-color:lightgray; padding: 5px;">No</td>
         </tr>
     </body>
 </table>

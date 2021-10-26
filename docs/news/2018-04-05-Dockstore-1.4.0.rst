@@ -15,7 +15,7 @@ Highlighted new features include:
    and our tutorial in progress at
    https://github.com/dockstore/dockstore/wiki/WIP-Checker-Workflow-Support-Tutorial
 -  launch-with
-   `Firecloud <https://software.broadinstitute.org/firecloud/>`__
+   `Firecloud <https://firecloud.terra.bio/>`__
    support, see a summary
    :doc:`here </launch-with/terra-launch-with/>`
 -  support for the next iteration of the tool registry schema, see
@@ -33,11 +33,11 @@ Highlighted new features include:
    update it more often
 -  CLI
 -  ability to
-   `configure <../advanced-topics/advanced-features.html#alternative-cwl-launchers>`__
+   :ref:`configure <alternative-cwl-launchers>`
    Cromwell and Bunny (rabix) version or use the `generic cwl-runner
    interface <https://github.com/common-workflow-language/cwltool/blob/master/cwltool/schemas/v1.1.0-dev1/cwl-runner.cwl>`__
    to run cwl
--  ability to `POST notifications <../advanced-topics/advanced-features.html#notifications>`__
+-  ability to :ref:`POST notifications <notifications>`
    during workflow execution to a custom endpoint
 -  ability to run unpublished tools and workflows (if you are the owner
    or in the organization for a tool or workflow)

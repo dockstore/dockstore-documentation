@@ -46,7 +46,8 @@ linkcheck_ignore = [
     'http://dx.doi.org/10.12688/f1000research.10137.1', 'https://dockstore.org/api/',
     'https://dockstore.org:8443/', 'https://support.terra.bio/hc/en-us/sections/360007274612/',
     'https://docs.snyk.io/getting-started/getting-started-snyk-products/getting-started-snyk-open-source',
-    'https://software.broadinstitute.org/firecloud/'	
+    'https://software.broadinstitute.org/firecloud/',
+    'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works'	
     ]
 
 # Add any paths that contain templates here, relative to this directory.

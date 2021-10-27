@@ -1,0 +1,12 @@
+mock==1.0.1
+pillow==5.4.1
+alabaster==0.7.12
+commonmark==0.8.1
+recommonmark==0.5.0 
+sphinx==1.8.5
+sphinx-rtd-theme==0.4.3
+readthedocs-sphinx-ext==2.1.4
+certifi==2021.5.30 
+docutils==0.17.1
+idna==3.2
+pyparsing==2.4.7

@@ -21,7 +21,7 @@ Describe Your Tool in WDL
 -------------------------
 
 Besides CWL, you can also describe tools via the `WDL
-language <https://software.broadinstitute.org/wdl/documentation/>`__.
+language <https://support.terra.bio/hc/en-us/sections/360007274612/>`__.
 WDL does not directly have the concept of a Tool built in to the
 language like CWL. Instead, we define a tool as a one task WDL workflow,
 where the task has an associated Docker image.
@@ -208,10 +208,55 @@ the Dockstore command line and descriptor rather than just directly
 calling it via Docker. This will test that the WDL correctly describes
 how to run your tool.
 
+Setting Up the Dockstore CLI
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 The first thing I'll do is
 `setup the Dockstore CLI locally <https://dockstore.org/quick-start>`__.
 This will have me install all of the dependencies needed to run the
 Dockstore CLI on my local machine.
+
+Although not strictly required, it's a good idea to set a concurrent-job-limit when running locally. This is because Cromwell, when running locally, loses the ability to set compute resources within what is specified in a task's runtime attributes. As such, the local version of Cromwell sometimes uses too many resources when running scattered tasks, causing the task to get sigkilled or for Docker to lock up. Of course, there is a tradeoff: If you set concurrent-job-limit, tests involving scattered tasks may execute slower as less instances of a scattered task will run in parallel.
+
+.. tip::  If a Docker lockup happens, you will notice tasks do not progress beyond WaitingForReturnCode and you will be temporarily unable to use Docker on your OS. This can be resolved by restarting Docker on your machine.
+
+The easiest way to avoid these issues is to set up a Cromwell configuration file that sets concurrent-job-limit.
+
+1. Download `this template file <https://github.com/broadinstitute/cromwell/blob/develop/cromwell.example.backends/cromwell.examples.conf>`__ and name it ``.cromwell.conf``
+2. Uncomment ``#default = "LocalExample"`` in the ``backend`` section in order to override the default local Cromwell setup with what is in the configuration file.
+3. Under ``LocalExample``, under ``config``, uncomment the setting for ``concurrent-job-limit`` and set it to 1. Note that this is an integer, not a boolean; you could set it to 2 if you want to up to two jobs to run at once.  
+
+The relevent part of your configuration file should now look like this, if we exclude the other providers that come before LocalExample:
+
+::
+
+    backend {
+    # Override the default backend.
+    default = "LocalExample"
+
+    # The list of providers.
+    providers {
+       
+        # Define a new backend provider.
+        LocalExample {
+            # The actor that runs the backend. In this case, it's the Shared File System (SFS) ConfigBackend.
+            actor-factory = "cromwell.backend.impl.sfs.config.ConfigBackendLifecycleActorFactory"
+          
+            # The backend custom configuration.
+            config {
+                # Optional limits on the number of concurrent jobs
+                concurrent-job-limit = 1
+
+You may optionally edit ``root = "cromwell-executions"`` to something else if you wish to be certain that your configuration is getting used, as it will change the name of the executions folder. In any case, close that file and add the following line to ~/.dockstore/config
+
+::
+
+    cromwell-vm-options: -Dconfig.file=<absolute-path-to-your-cromwell-config>
+
+You're now all set up -- the Dockstore CLI will use this configuration file, and will only allow one instance of a scattered task to run at once.
+
+Set Up Local Data
+^^^^^^^^^^^^^^^^^
 
 Next thing I’ll do is create a completely local dataset and JSON
 parameterization file:
@@ -236,6 +281,8 @@ it really doesn't matter. I'm using a sample I checked in already:
 You can see in the above I give the relative path to the input under
 ``bam_input`` and the memory in GB that I want to use for the task.
 
+Run Your Tool
+^^^^^^^^^^^^^
 At this point, let's run the tool with our local inputs and outputs via
 the JSON config file:
 

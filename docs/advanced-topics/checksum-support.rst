@@ -32,7 +32,6 @@ The resulting checksum should match what was provided by the API above.
 
 If you use the Dockstore CLI client descriptor checksums are verified before being sent to the execution engine.
 
-
 CLI Descriptor Validation Support
 ------------------------------------------
 By default, when launching tools or workflows from the CLI, primary and secondary descriptors will be validated using their SHA-1 checksums. Checksums are

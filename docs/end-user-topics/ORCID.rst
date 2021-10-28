@@ -35,9 +35,10 @@ Export your Dockstore workflow to your ORCID account
 
 Once your ORCID account is linked to Dockstore, workflow versions with a DOI URL associated with them can be exported to your ORCID account as an ORCID work.
 You simply:
-- go to the "Versions" tab
-- click the "Actions" button on the associated version
-- click the "Export to ORCID" button in the dropdown menu and follow the instructions
+
+1. Go to the "Versions" tab
+2. Click the "Actions" button on the associated version
+3. Click the "Export to ORCID" button in the dropdown menu and follow the instructions
 
 This will result in an ORCID work in your ORCID account. If needed, you can edit any of the ORCID work information through the ORCID `website <https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works>`_
 

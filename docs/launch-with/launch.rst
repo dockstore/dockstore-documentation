@@ -134,7 +134,7 @@ your first real tool/workflow. There are three descriptor languages
 available on Dockstore. Follow the links for the language that you are
 interested in.
 
-- :doc:`Best practices for CWL <../advanced-topics/best-practices/best-practices>`
+- :doc:`Best practices for CWL <../advanced-topics/best-practices/cwl-best-practices>`
 - :doc:`Best practices for WDL <../advanced-topics/best-practices/wdl-best-practices/>`
 - :doc:`Best practices for Nextflow <../advanced-topics/best-practices/nfl-best-practices/>`
 

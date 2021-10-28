@@ -95,7 +95,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    advanced-topics/posting-zips
    advanced-topics/verification
    advanced-topics/organizations-and-collections
-   advanced-topics/best-practices/best-practices
+   advanced-topics/best-practices/cwl-best-practices
    advanced-topics/best-practices/wdl-best-practices
    advanced-topics/best-practices/nfl-best-practices
    advanced-topics/best-practices/best-practices-dockstore
@@ -108,6 +108,14 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    user-created
    posters-and-talks
    /assets/templates/template.rst
+
+
+.. toctree::
+   :caption: BCC 2020
+   :maxdepth: 1
+
+   docker_instructions
+   wdl_instructions
 
 .. toctree::
    :caption: FAQ

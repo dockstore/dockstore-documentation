@@ -42,10 +42,14 @@ extensions = ['recommonmark', 'sphinxcontrib.discourse']
 
 linkcheck_anchors = False
 linkcheck_ignore = [
-    'https://ci.commonwl.org', 'http://localhost:8080/ga4gh/wes/v1',
+    'http://localhost:8080/ga4gh/wes/v1',
     'http://dx.doi.org/10.12688/f1000research.10137.1', 'https://dockstore.org/api/',
-    'https://dockstore.org:8443/'
+    'https://dockstore.org:8443/', 'https://support.terra.bio/hc/en-us/sections/360007274612/',
+    'https://docs.snyk.io/getting-started/getting-started-snyk-products/getting-started-snyk-open-source',
+    'https://software.broadinstitute.org/firecloud/',
+    'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works'	
     ]
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -81,6 +85,11 @@ pygments_style = None
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+html_theme_options = {
+	'logo_only' : True,
+	'display_version' : True,
+	'style_external_links' : True,
+}
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -102,6 +111,7 @@ html_static_path = ['_static']
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
+html_logo = 'assets/images/Dockstore-Documentation-horizontal-white.png'
 
 
 # -- Options for HTMLHelp output ---------------------------------------------

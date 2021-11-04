@@ -10,7 +10,7 @@ Summary of GitHub App usage:
 
 - Install Dockstore GitHub App
 - Push a new commit with a .dockstore.yml file present
-- Wait a while for Dockstore to process the new version
+- Wait up to 5 minutes for Dockstore to process the new version
 - See workflow on Dockstore
 
 This document gives a high level overview of how Dockstore uses GitHub apps.

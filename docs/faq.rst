@@ -261,7 +261,10 @@ How do I add other users as maintainers of a tool?
 For tools registered on Quay.io and workflows registered with GitHub,
 Dockstore automatically allows users from the same Quay.io organization
 or GitHub organization to manage tools/workflows together (users will
-need to "Refresh Organization" or "Refresh All").
+need to click "Discover Existing Dockstore Workflows" in the "My workflows"
+bar menu).
+
+.. image:: discover_existing_workflows_screenshot.png
 
 For tools registered on Docker Hub, GitLab or private registries, this
 feature currently does not exist because these registries do not allow

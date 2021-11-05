@@ -7,6 +7,14 @@ Automatic Syncing with GitHub Apps and .dockstore.yml
 Overview
 --------
 
+.. note::
+  Summary of GitHub App usage:
+
+  #. :ref:`Install Dockstore GitHub App <Registration With GitHub Apps>`
+  #. Push a new commit with a .dockstore.yml file present
+  #. Wait up to 5 minutes for Dockstore to process the new version
+  #. See workflow on Dockstore
+
 This document gives a high level overview of how Dockstore uses GitHub apps.
 For extra details on configuring and using the Dockstore
 GitHub App with workflows or services, please see either

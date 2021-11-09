@@ -255,12 +255,12 @@ How can I use the Dockstore CLI with Python 2?
 Python 2 support ends in 2020. You can get the Python 2 requirements.txt with ``curl -o requirements.txt "https://dockstore.org/api/metadata/runner_dependencies?python_version=2"``
 but it is currently untested.
 
-How do I add other users as maintainers of a tool?
---------------------------------------------------
+How do I add other users as maintainers of a tool or worklow?
+-------------------------------------------------------------
 
 For tools registered on Quay.io and workflows registered with GitHub,
 Dockstore automatically allows users from the same Quay.io organization
-or GitHub organization to manage tools/workflows together (users will
+or GitHub organization to manage tools and workflows together (users will
 need to click "Discover Existing Dockstore Workflows" in the "My workflows"
 bar menu).
 

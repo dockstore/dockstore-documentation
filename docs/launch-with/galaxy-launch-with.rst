@@ -19,7 +19,7 @@ Once you have clicked on a Galaxy workflow, you will see a Launch with Galaxy bu
 Launching a workflow on an existing Galaxy server
 -------------------------------------------------
 
-The button will bring up a dropdown window where you may select which Galaxy instance to launch the workflow into. A few default options such as the `usegalaxy.org <https://usegalaxy.org/>`__ instances are provided by Dockstore, but if you need to launch into another instance, you may provide a custom URL. Further along in this tutorial, you will find how to generate a custom instance and provide the URL to Dockstore.
+The button will bring up a dropdown window where you may select which Galaxy instance to launch the workflow into. A few default options such as the `UseGalaxy.org <https://usegalaxy.org/>`__ instances are provided by Dockstore, but if you need to launch into another instance, you may provide a custom URL. Further along in this tutorial, you will find how to generate a custom instance and provide the URL to Dockstore.
 
 .. figure:: /assets/images/docs/galaxy/launch_with_options.png
    :alt: Launch options for Galaxy

@@ -22,11 +22,11 @@ Galaxy is a web-based platform for data analysis. Galaxy is open source and can 
 Using Existing Galaxy Servers
 -----------------------------
 
-Institutions across the world maintain Galaxy instances that are shared with the greater community and are a great way to learn and use Galaxy. Some of these instances are subsidized by grants and offered for free (such as the `Galaxy US <https://usegalaxy.org/>`__, `Galaxy EU <https://usegalaxy.eu/>`__, or `Galaxy AU <https://usegalaxy.org.au/>`__) and some are available for a fee (such as `Galaxy AnVIL <https://anvil.terra.bio/>`__ or `Galaxy Pro <https://researcher.galaxyworks.io/>`__). A lot of great learning resources are available on the the `Galaxy Training Network <https://training.galaxyproject.org/>`__, with help on specific questions available via `Galaxy Help <https://help.galaxyproject.org/>`__.
+Institutions across the world maintain Galaxy instances that are shared with the greater community and are a great way to learn and use Galaxy. Some of these instances are subsidized by grants and offered for free (such as the `Galaxy US <https://usegalaxy.org/>`__, `Galaxy EU <https://usegalaxy.eu/>`__, and `Galaxy AU <https://usegalaxy.org.au/>`__) and some are available for a fee (such as `Galaxy AnVIL <https://anvil.terra.bio/>`__ or `Galaxy Pro <https://researcher.galaxyworks.io/>`__). A lot of great learning resources are available on the the `Galaxy Training Network <https://training.galaxyproject.org/>`__, with help on specific questions available via `Galaxy Help <https://help.galaxyproject.org/>`__.
 
-Using Custom Galaxy in the Cloud with Terra, AnVIL, and BioData Catalyst
+Using Custom Galaxy in the Cloud with Terra, and AnVIL
 ------------------------------------------------------------------------
-Galaxy is also integrated into the Terra cloud workspace. This provides users the ability to readily create a custom Galaxy environment that they can scale to their needs or install additional tools. Additionally, the Terra workspace is able to access a rich data corpus hosted in the cloud, including many controlled access datasets, thus allowing users to conduct analyses with this data in a compliance-based environment.
+Galaxy is also integrated into the Terra cloud workspace. This provides users the ability to readily create a custom Galaxy environment scaled to their needs or with additional tools installed. Additionally, the Terra workspace is able to access a rich data corpus hosted in the cloud, including many controlled access datasets, thus allowing users to conduct analyses with this data in a compliance-based environment.
 
 Unlike WDL and CWL, Galaxy workflows in the near term are created and modified from the Galaxy workflow editor (GUI), instead of a text editor.
 

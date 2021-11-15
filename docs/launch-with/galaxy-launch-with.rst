@@ -16,25 +16,25 @@ Once you have clicked on a Galaxy workflow, you will see a Launch with Galaxy bu
 .. figure:: /assets/images/docs/galaxy/galaxy_workflow.png
    :alt: Galaxy workflow on Dockstore
 
-Launching a workflow on an existing Galaxy server
--------------------------------------------------
+Launching a workflow from Dockstore on a Galaxy server
+------------------------------------------------------
 
 The button will bring up a dropdown window where you may select which Galaxy instance to launch the workflow into. A few default options such as the `UseGalaxy.org <https://usegalaxy.org/>`__ instances are provided by Dockstore, but if you need to launch into another instance, you may provide a custom URL. Further along in this tutorial, you will find how to generate a custom instance and provide the URL to Dockstore.
 
 .. figure:: /assets/images/docs/galaxy/launch_with_options.png
    :alt: Launch options for Galaxy
 
-Launching a workflow on a custom Galaxy instance on the cloud
--------------------------------------------------------------
+Launching a workflow on a custom Galaxy instance on Terra
+---------------------------------------------------------
 
-You can use Terra to spin up a custom cloud environment for Galaxy. Terra has integrated Galaxy making it possible for users to spin up a custom Galaxy server backed by a cloud environment and dedicated resources. This feature is available on all "faces" of Terra, such as AnVIL and NHLBI BioData Catalyst. Apart from providing a rapid and customizable Galaxy cloud instance, Terra is able to access a rich data corpus hosted in the cloud, including many controlled-access datasets facilitating the user to securely carry out analyses using this data.
+You can use Terra to spin up a custom cloud environment for Galaxy. Terra has integrated Galaxy making it possible for users to spin up a custom Galaxy server backed by a cloud environment and dedicated resources. This feature is available on all "faces" of Terra, such as AnVIL. Apart from providing a rapid and customizable Galaxy cloud instance, Terra is able to access a rich data corpus hosted in the cloud, including many controlled-access datasets facilitating the user to securely carry out analyses using this data.
 
 To spin up a custom cloud environment on Terra, navigate to the Notebooks tab on any Workspace on `Terra <https://app.terra.bio/>`__ and click on the "Create a Cloud Environment for Galaxy" on the left.
 
 .. figure:: /assets/images/docs/galaxy/create_galaxy_environment.png
    :alt: Create a Cloud Environment for Galaxy
 
-It takes 8-10 minutes for the cloud environment to launch. Once it is ready, you can click on the Galaxy button on the top right and then the Launch Galaxy button. Doing so will open the Galaxy page with a custom cloud environment. You can copy the URL and paste it into the Dockstore dropdown window to launch a workflow from Dockstore into this cloud instance. For your custom URL to work properly, it must start with ``https://`` and end with ``/galaxy``.
+It can take 8-10 minutes for the cloud environment to launch. Once it is ready, you can click on the Galaxy button on the top right and then the Launch Galaxy button. Doing so will open the Galaxy page with a custom cloud environment. You can copy the URL and paste it into the Dockstore dropdown window to launch a workflow from Dockstore into this cloud instance. For your custom URL to work properly, it must start with ``https://`` and end with ``/galaxy``.
 
 While browsing Galaxy
 =====================

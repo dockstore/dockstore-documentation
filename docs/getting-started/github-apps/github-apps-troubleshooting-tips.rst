@@ -75,13 +75,13 @@ In the case shown above, the error message is from parsing the following ``/.doc
 .. code:: yaml
 
    version: 1.2
-   test:
    workflows:
-      - subclass: CWL
+      - name: single workflow
+        subclass: CWL
         primaryDescriptorPath: /Dockstore.cwl
         testParameterFiles:
 
-It is saying that a key named ``test`` was found, but that key does not exist in our .dockstore.yml schema. It should be removed.
+It is saying that the workflow name ``single workflow`` is invalid. The workflow name may only consist of alphanumeric characters, internal underscores, and internal hyphens. This error can be fixed by changing ``single workflow`` to ``single_workflow``, ``single-workflow``, or ``singleWorkflow``.
 
 If you're having trouble finding the relevant logs, try searching for the name of your repository by using the filter on the upper left. You can also sort the rows by clicking on a column heading.
 For example, if you click the ``Success`` column heading once, it will list all the events that failed first.

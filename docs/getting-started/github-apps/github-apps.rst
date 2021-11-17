@@ -94,7 +94,7 @@ version
 workflows
     An array of workflows. Each element corresponds to a workflow on Dockstore.
 name (optional)
-    The optional workflow name for a workflow. If using a ``/.dockstore.yml`` with multiple workflows,
+    The optional workflow name for a workflow. The name may only consist of alphanumeric characters, internal underscores, and internal hyphens. It may not exceed 256 characters. If using a ``/.dockstore.yml`` with multiple workflows,
     this field is required to uniquely identify workflows in the repository.
     **Each workflow listed must have a unique (or no) name.**
 subclass
@@ -230,7 +230,7 @@ service
 subclass
     Indicates which container system will be used for your service.
 name
-    Optional name for your service.
+    Optional name for your service. The name may only consist of alphanumeric characters, internal underscores, and internal hyphens. It may not exceed 256 characters.
 authors
     Optional array of authorship information, requiring at least the ``name`` of each author.
 description

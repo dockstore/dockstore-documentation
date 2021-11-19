@@ -34,7 +34,7 @@ To spin up a custom cloud environment on Terra, navigate to the Notebooks tab on
 .. figure:: /assets/images/docs/galaxy/create_galaxy_environment.png
    :alt: Create a Cloud Environment for Galaxy
 
-It can take 8-10 minutes for the cloud environment to launch. Once it is ready, you can click on the Galaxy button on the top right and then the Launch Galaxy button. Doing so will open the Galaxy page with a custom cloud environment. You can copy the URL and paste it into the Dockstore dropdown window to launch a workflow from Dockstore into this cloud instance. For your custom URL to work properly, it must start with ``https://`` and end with ``/galaxy``.
+It can take 8-10 minutes for the cloud environment to launch. Once it is ready, you can click on the Galaxy button on the top right and then the Launch Galaxy button. Doing so will open the Galaxy page with a custom cloud environment. You can copy the URL for this page and paste it into the Dockstore dropdown window to launch a workflow from Dockstore into this cloud instance.
 
 While browsing Galaxy
 =====================

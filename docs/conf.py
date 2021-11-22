@@ -35,6 +35,9 @@ release = u''
 #
 # needs_sphinx = '1.0'
 
+# https://github.com/sphinx-doc/sphinx/issues/7369 403 blocks by support.orcid.org
+user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.

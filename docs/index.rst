@@ -67,6 +67,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    end-user-topics/end-user-topics
    end-user-topics/faceted-search
    end-user-topics/starring
+   end-user-topics/registration-options
    end-user-topics/language-support
    end-user-topics/ORCID
 

@@ -45,7 +45,7 @@ extensions = ['recommonmark', 'sphinxcontrib.discourse']
 
 linkcheck_anchors = False
 linkcheck_ignore = [
-    'http://localhost:8080/ga4gh/wes/v1',
+    'http://localhost:8080/ga4gh/wes/v1', 'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works',
     'http://dx.doi.org/10.12688/f1000research.10137.1', 'https://dockstore.org/api/',
     'https://dockstore.org:8443/', 'https://support.terra.bio/hc/en-us/sections/360007274612/'
     ]

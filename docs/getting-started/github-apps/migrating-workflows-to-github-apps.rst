@@ -3,7 +3,7 @@ Migrating Your Existing Workflows to Use GitHub Apps
 
 Dockstore 1.9.0 provides users with a way to keep their workflows automatically updated (instead of needing to manually refresh) by using GitHub apps.
 Here, we will go over how to migrate your existing Dockstore workflows to use GitHub apps.
-This tutorial assumes that you are are familiar with the  ``/.dockstore.yml`` file by having read our overview of :doc:`GitHub apps <github-apps>`. and the :ref:`Registration With GitHub Apps` section in our workflow registration document.
+This tutorial assumes that you are are familiar with the  ``/.dockstore.yml`` file by having read our overview of :doc:`GitHub apps <github-apps>` and the :ref:`Registration With GitHub Apps` section in our workflow registration document.
 
 GitHub App Installation
 -----------------------

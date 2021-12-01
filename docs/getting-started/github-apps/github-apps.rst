@@ -22,7 +22,7 @@ GitHub App with workflows or services, please see either
 :doc:`Getting Started with Services </getting-started/getting-started-with-services>`.
 
 With the Dockstore GitHub App installed, authors do not need to manually refresh their
-workflows/services on Dockstore to get the latest changes from GitHub. Dockstore will
+workflows, tools, or services on Dockstore to get the latest changes from GitHub. Dockstore will
 automatically update whenever the corresponding repository is updated on GitHub.
 
 What are GitHub Apps?
@@ -40,29 +40,29 @@ Why have a Dockstore GitHub App?
 Without a GitHub app, Dockstore does not know when you have modified a GitHub
 repository.
 
-For example, take the case when you first add a workflow to Dockstore
-from GitHub.  Dockstore indexes the repository -- it reads the the relevant
-repository content, branches, and releases from GitHub. When you subsequently
-make changes to your GitHub repo, such as push new commits, create new branches
-and/or publish new releases, Dockstore is unaware of those changes. You are
+When you first add a workflow to Dockstore from GitHub, Dockstore indexes the 
+repository -- it reads the the relevant repository content, branches, and releases
+from GitHub. But, without the Dockstore GitHub app, when you subsequently
+make changes to your GitHub repo, such as pushing new commits, creating new branches
+and/or publishing new releases, Dockstore is unaware of those changes. You are
 responsible for going to Dockstore, finding the tool/workflow that corresponds
 to the GitHub repo, and manually refreshing the tool/workflow by either clicking
 the Refresh button or making an API call to the Dockstore API.
 
 Due to the manual nature of this process, it is easy for Dockstore to get out of
-sync with the linked GitHub repository.
+sync with the linked GitHub repository without the Dockstore GitHub app.
 
 How the Dockstore GitHub App works
 ----------------------------------
 
 With the Dockstore GitHub App installed, the synchronization is done automatically. When
 you add a new branch or release of a workflow on GitHub, Dockstore is notified,
-and Dockstore updates its copy of the workflow. For example, After publishing a new release
+and Dockstore updates its copy of the workflow. For example, after publishing a new release
 of a workflow on GitHub, a new version of the workflow will be present in
-Dockstore shortly afterwards.
+Dockstore shortly afterwards, without the user needing to do anything else.
 
 For this to work, a ``/.dockstore.yml`` file is **required in the root directory of each GitHub repository** you want
-to associate with a workflow on Dockstore. A template for both workflows and services are shown below,
+to associate with a workflow on Dockstore. A template for both workflows and services is shown below,
 along with explanations for each field. For every branch/release on GitHub that has one of these files, a corresponding entry
 will be made on Dockstore.
 
@@ -168,9 +168,10 @@ Ex. /.dockstore.yml with multiple workflows
                 - /localaligner\/.*/
 
 A common pattern seen on Dockstore is GitHub repositories that store many workflows. The above ``.dockstore.yml``
-has two entries for workflows. Notice that each entry uses a different name. Names are required if you want 
-multiple workflows registered on Dockstore from a single GitHub repository. The names must be unique between
-entries of the `workflows` array. For each unique name present, an entry will be created on Dockstore.
+has two entries, one for globalAligner, and one for localAligner. Notice that each entry uses a different name. 
+Names are required if you want multiple workflows registered on Dockstore from a single GitHub repository.
+The names must be unique between entries of the `workflows` array. For each unique name present, an entry will
+be created on Dockstore.
 
 Service YML File
 +++++++++++++++++
@@ -224,7 +225,7 @@ For a service, the ``/.dockstore.yml`` has this general structure for version 1.
         tags: <String Array>
 
 version
-    The version of the .dockstore.yml schema which is currently at 1.2.
+    The version of the .dockstore.yml schema, which is currently at 1.2.
 service
     Used to describe a single service.
 subclass
@@ -250,15 +251,15 @@ prestart
 start
     Starts up the service.
 poststart
-    (Optional) Associated script will run after the service has started
+    (Optional) Associated script will run after the service has started.
 postprovision
     (Optional) After the service has been started. This might be invoked multiple times, e.g., if the user decides to load multiple sets of data.
 port
     (Optional) Which port the service is exposing. This provides a generic way for the tool to know which port is being exposed, e.g., to reverse proxy it.
 healthcheck
-    (Optional) exit code of 0 if service is running normally, non-0 otherwise.
+    (Optional) Exit code of 0 if service is running normally, non-0 otherwise.
 stop
-    (Optional) stops the service
+    (Optional) Stops the service.
 environment
     This section describes environment variables that the launcher is responsible for passing to any scripts that it invokes. The names must be valid environment variable names. Users can specify the values of the parameters in the input parameter JSON (see below). These variables are service-specific, i.e., the service creator decides what values, if any, to expose as environment variables. For every environment variable, you must give it a name and you can optionally give them a default value and description.
 data
@@ -284,7 +285,7 @@ a GitHub message was delayed or lost. We recommend waiting a few minutes and the
 Another error that could occur is that we received the message from GitHub, however the ``/.dockstore.yml`` is invalid. If we cannot read the 
 file, then we do not know which workflow or service to associate the error with. For now, please ensure that your file is a valid YAML file and
 compare it with our examples/documentation to confirm that you filled it in correctly. In the future we plan to have a system in place where
-users can keep track of these GitHub events and resulting action taken by Dockstore, even if the message was succesfully handled.
+users can keep track of these GitHub events and resulting action taken by Dockstore, even if the message was successfully handled.
 
 Another possible issue is that we received the message from GitHub, but the user who triggered the message event is not registered on Dockstore with
 the corresponding GitHub account. This is only an issue if the workflow or service does not already exist on Dockstore. When creating new workflows and

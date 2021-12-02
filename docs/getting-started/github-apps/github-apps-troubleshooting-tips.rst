@@ -16,20 +16,20 @@ This means less manual work for workflow developers, and less waiting for conten
 
 This requires the addition of a ``/.dockstore.yml`` file to your repository on GitHub.
 This file contains workflow information such as workflow path, test parameter paths, etc. that Dockstore will use to setup
-the corresponding workflow on Dockstore. It's important to note, that you will need a ``/.dockstore.yml`` file on each branch of your GitHub
+the corresponding workflow on Dockstore. Branches that do not have a ``/.dockstore.yml`` file on each branch of your GitHub
 repository if you want to sync multiple branches (versions) of your workflow.
 
 You can read more about it at :doc:`/getting-started/github-apps/github-apps`.
 
 How does this change my development flow?
 -------------------------------------------
-Adding a ``/.dockstore.yml`` file to a template branch (ex: master, develop, main), will make it so
+Adding a ``/.dockstore.yml`` file to a template branch (ex: master, develop, main) will make it so
 any new branches created from this template will be automatically added to and synced on Dockstore.
 
 Therefore, as long as your workflow is already registered on Dockstore and your ``/.dockstore.yml`` is configured correctly,
 then updates to the workflow (including adding new versions) should happen continuously and automatically.
 
-For this setup, if you *do not* want a new GitHub branch to generate a corresponding workflow-version on Dockstore,
+On the other hand, if you *do not* want a new GitHub branch to generate a corresponding workflow-version on Dockstore,
 simply remove the ``/.dockstore.yml`` from the branch *before* it is pushed to the remote/origin repository.
 
 *Note:* If you want to edit version information, such as workflow path, you will have to update the ``/.dockstore.yml`` file directly on the corresponding GitHub branch.

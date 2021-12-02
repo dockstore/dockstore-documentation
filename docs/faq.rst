@@ -252,26 +252,19 @@ not limited to):
 How can I use the Dockstore CLI with Python 2?
 ----------------------------------------------
 
-Python 2 support ends in 2020. You can get the Python 2 requirements.txt with ``curl -o requirements.txt "https://dockstore.org/api/metadata/runner_dependencies?python_version=2"``
+Python 2 support ended in 2020. You can get the Python 2 requirements.txt with ``curl -o requirements.txt "https://dockstore.org/api/metadata/runner_dependencies?python_version=2"``
 but it is currently untested.
 
-How do I add other users as maintainers of a tool or worklow?
--------------------------------------------------------------
+How do I add other users as maintainers of a workflow?
+------------------------------------------------------
 
-For tools registered on Quay.io and workflows registered with GitHub,
-Dockstore automatically allows users from the same Quay.io organization
-or GitHub organization to manage tools and workflows together (users will
-need to click "Discover Existing Dockstore Workflows" in the "My workflows"
-bar menu).
+For workflows registered with GitHub, Dockstore automatically allows users from 
+the same GitHub organization to manage workflows together (users will need to click
+"Discover Existing Dockstore Workflows" in the "My workflows" menu).
 
 .. image:: discover_existing_workflows_screenshot.png
 
-For tools registered on Docker Hub, GitLab or private registries, this
-feature currently does not exist because these registries do not allow
-the retrieval of organization information. Likewise, workflows
-registered with other source code repositories lack this feature.
-
-Finally, for participants of the :doc:`limited sharing
+For participants of the :doc:`limited sharing
 beta </advanced-topics/sharing-workflows/>`, you can enter the email
 addresses of the users you wish to share with to give them permissions
 to your workflow. This is only available for hosted workflows and users

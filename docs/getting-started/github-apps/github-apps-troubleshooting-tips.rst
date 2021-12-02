@@ -47,13 +47,14 @@ GitHub Apps can be installed on either an a user level, or an organizational lev
 Depending on the permissions you have on an organization, you may not be able to directly access an organization's settings. You can only configure GitHub Apps for organizations you are not an admin in if you go through the app installation process again, during which, the option to configure will appear. Be aware that can only add repos that you have admin access to, not just maintainer acccess.
 
 .. image:: /assets/images/docs/reinstall-app-to-cheese-org-settings.png
+   :width: 50%
 
 The changes made to my GitHub repo aren't appearing on Dockstore, but I've already installed the GitHub app and made the ``.dockstore.yml`` file. How can I figure out what's going wrong?
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 If you don't see changes, try waiting a couple of minutes and refreshing the browser on the My Workflows page again.
 
 You can also verify that the GitHub app was given access to the right repository or organization. If access was given to the wrong organization or repository,
-you'll need to push another commit after correcting it to activate the sync to Dockstore.
+or this is your first time installing the app, you'll need to push another commit after adding the correct repository to activate the sync to Dockstore.
 
 Double check the ``/.dockstore.yml`` file.
 

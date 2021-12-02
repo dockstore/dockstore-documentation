@@ -34,27 +34,26 @@ simply remove the ``/.dockstore.yml`` from the branch *before* it is pushed to t
 
 *Note:* If you want to edit version information, such as workflow path, you will have to update the ``/.dockstore.yml`` file directly on the corresponding GitHub branch. For example, if develop has a ``/.dockstore.yml`` that points to my_workflow.wdl, but my_workflow.wdl is moved to another path on the branch develop-but-better, then the ``/.dockstore.yml`` on develop-but-better will need to point to the new location of my_workflow.wdl.
 
-How do I check if the Dockstore GitHub App was installed?
------------------------------------------------------------
+How do I check if the Dockstore GitHub App was installed on an individual repository?
+--------------------------------------------------------------------------------------
+Go to your repo on GitHub, click the Settings tab, click Integrations on the left and verify our app is installed and configured correctly
+
+.. image:: /assets/images/docs/github-repo-settings.png
+
+The changes made to my GitHub repo aren't appearing on Dockstore, but I've already installed the GitHub app and made the ``.dockstore.yml`` file. How can I figure out what's going wrong?
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 If you don't see changes, try waiting a couple of minutes and refreshing the browser on the My Workflows page again.
 
 You can also verify that the GitHub app was given access to the right repository or organization. If access was given to the wrong organization or repository,
 you'll need to push another commit after correcting it to activate the sync to Dockstore.
 
-
-    - Go to your repo on GitHub, click the Settings tab, click Integrations on the left and verify our app is installed and configured correctly
-
-.. image:: /assets/images/docs/github-repo-settings.png
-
-- Double check the ``/.dockstore.yml`` file.
+Double check the ``/.dockstore.yml`` file.
 
     - Is it in the root directory?
     - Is it on the right branch?
     - Are all indentation levels correct?
     - Does the name field match, if applicable?
 
-The changes made to my GitHub repo aren't appearing on Dockstore, but I've already installed the GitHub app and made the ``.dockstore.yml`` file. How can I figure out what's going wrong?
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 If you've already tried waiting a couple of minutes and refreshing the browser on the My Workflows page, you can view GitHub App logs through Dockstore to see if there have been any errors.
 Navigate to the ``/my-workflows`` page and expand the GitHub Organization that the repository belongs to on the left hand side. Then click on the bottom where it says ``See GitHub App Logs``.
 

@@ -74,16 +74,15 @@ If a message were to get lost, unfortunately you will need to push to GitHub aga
 a GitHub message was delayed or lost. We recommend waiting a few minutes and then trying to push again. This will be changed in the future.
 
 Another error that could occur is that we received the message from GitHub, however the ``/.dockstore.yml`` is invalid. If we cannot read the 
-file, then we do not know which workflow or service to associate the error with. For now, please ensure that your file is a valid YAML file and
-compare it with our examples/documentation to confirm that you filled it in correctly. In the future we plan to have a system in place where
-users can keep track of these GitHub events and resulting action taken by Dockstore, even if the message was succesfully handled.
+file, then we do not know which workflow or service to associate the error with. For now, please ensure that your file is a valid YML file and
+compare it with our examples/documentation to confirm that you filled it in correctly.
 
 Another possible issue is that we received the message from GitHub, but the user who triggered the message event is not registered on Dockstore with
 the corresponding GitHub account. This is only an issue if the workflow or service does not already exist on Dockstore. When creating new workflows and
 services, we need to be able to associate them with a user. If the workflow or service already exists on Dockstore, then this error will not occur and the 
 version will be properly added/updated/deleted on Dockstore.
 
-See `our FAQ document <https://docs.dockstore.org/en/develop/getting-started/github-apps/github-apps-troubleshooting-tips.html>`_ for assistence in troubleshooting.
+See `our FAQ document <https://docs.dockstore.org/en/develop/getting-started/github-apps/github-apps-troubleshooting-tips.html>`_ for assistance in troubleshooting.
 
 As always, you can reach out to our team on our `discussion forum <https://discuss.dockstore.org/>`_ to discuss any issues you are facing.
 

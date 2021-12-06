@@ -262,9 +262,9 @@ For workflows registered with GitHub, Dockstore allows users from the same GitHu
 together. If a new GitHub workflow from the same GitHub organization is added to Dockstore by another user, click
 the "Discover Existing Dockstore Workflows" button in the "My Workflows" menu so the workflow will appear in My Workflows.
 
-If the workflow was added by manually registering it, click Refresh Organization.
-
 .. image:: discover_existing_workflows_screenshot.png
+
+If the workflow was added by manually registering it, click Refresh Organization.
 
 For participants of the :doc:`limited sharing
 beta </advanced-topics/sharing-workflows/>`, you can enter the email

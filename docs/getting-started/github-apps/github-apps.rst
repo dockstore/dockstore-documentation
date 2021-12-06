@@ -66,6 +66,30 @@ to associate with a workflow on Dockstore. A template for both workflows and ser
 along with explanations for each field. For every branch/release on GitHub that has one of these files, a corresponding entry
 will be made on Dockstore.
 
+Error Handling
+----------------------------------
+Since Dockstore relies on GitHub to tell us when changes have been made on GitHub, there are chances that the message gets lost or delayed.
+Typically, Dockstore reacts within seconds of a change being made on GitHub, however service disruptions can delay this to a few minutes.
+If a message were to get lost, unfortunately you will need to push to GitHub again. Currently, there is no way to tell on Dockstore whether
+a GitHub message was delayed or lost. We recommend waiting a few minutes and then trying to push again. This will be changed in the future.
+
+Another error that could occur is that we received the message from GitHub, however the ``/.dockstore.yml`` is invalid. If we cannot read the 
+file, then we do not know which workflow or service to associate the error with. For now, please ensure that your file is a valid YAML file and
+compare it with our examples/documentation to confirm that you filled it in correctly. In the future we plan to have a system in place where
+users can keep track of these GitHub events and resulting action taken by Dockstore, even if the message was succesfully handled.
+
+Another possible issue is that we received the message from GitHub, but the user who triggered the message event is not registered on Dockstore with
+the corresponding GitHub account. This is only an issue if the workflow or service does not already exist on Dockstore. When creating new workflows and
+services, we need to be able to associate them with a user. If the workflow or service already exists on Dockstore, then this error will not occur and the 
+version will be properly added/updated/deleted on Dockstore.
+
+See `our FAQ document <https://docs.dockstore.org/en/develop/getting-started/github-apps/github-apps-troubleshooting-tips.html>`_ for assistence in troubleshooting.
+
+As always, you can reach out to our team on our `discussion forum <https://discuss.dockstore.org/>`_ to discuss any issues you are facing.
+
+Example YML Files
+------------------
+
 Workflow YML File
 ++++++++++++++++++
 For a workflow, the ``/.dockstore.yml`` has the following general structure
@@ -271,26 +295,6 @@ filters
         or RegEx when the string is surrounded by ``/`` (Ex: ``/develop/``, ``/myworkflow\/.*/``).
 
 For more info on services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>`, or our :doc:`Service Version 1.2 Template</assets/templates/template.html#service-version-1-2-template>`.
-
-
-Error Handling
-----------------------------------
-Since Dockstore relies on GitHub to tell us when changes have been made on GitHub, there are chances that the message gets lost or delayed.
-Typically, Dockstore reacts within seconds of a change being made on GitHub, however service disruptions can delay this to a few minutes.
-If a message were to get lost, unfortunately you will need to push to GitHub again. Currently, there is no way to tell on Dockstore whether
-a GitHub message was delayed or lost. We recommend waiting a few minutes and then trying to push again. This will be changed in the future.
-
-Another error that could occur is that we received the message from GitHub, however the ``/.dockstore.yml`` is invalid. If we cannot read the 
-file, then we do not know which workflow or service to associate the error with. For now, please ensure that your file is a valid YAML file and
-compare it with our examples/documentation to confirm that you filled it in correctly. In the future we plan to have a system in place where
-users can keep track of these GitHub events and resulting action taken by Dockstore, even if the message was succesfully handled.
-
-Another possible issue is that we received the message from GitHub, but the user who triggered the message event is not registered on Dockstore with
-the corresponding GitHub account. This is only an issue if the workflow or service does not already exist on Dockstore. When creating new workflows and
-services, we need to be able to associate them with a user. If the workflow or service already exists on Dockstore, then this error will not occur and the 
-version will be properly added/updated/deleted on Dockstore.
-
-As always, you can reach out to our team on our `discussion forum <https://discuss.dockstore.org/>`_ to discuss any issues you are facing.
 
 See Also
 --------

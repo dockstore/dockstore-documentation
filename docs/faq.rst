@@ -258,9 +258,11 @@ but it is currently untested.
 How do I add other users as maintainers of a workflow?
 ------------------------------------------------------
 
-For workflows registered with GitHub, Dockstore automatically allows users from 
-the same GitHub organization to manage workflows together (users will need to click
-"Discover Existing Dockstore Workflows" in the "My workflows" menu).
+For workflows registered with GitHub, Dockstore allows users from the same GitHub organization to manage workflows
+together. If a new GitHub workflow from the same GitHub organization is added to Dockstore by another user, click
+the "Discover Existing Dockstore Workflows" button in the "My Workflows" menu so the workflow will appear in My Workflows.
+
+If the workflow was added by manually registering it, click Refresh Organization.
 
 .. image:: discover_existing_workflows_screenshot.png
 

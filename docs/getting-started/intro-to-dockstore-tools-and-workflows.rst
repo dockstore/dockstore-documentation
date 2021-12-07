@@ -20,9 +20,9 @@ do not have separate concepts for tools and workflows, we still maintain a disti
 | CWL                    | - Class: CommandLineTool                 | - Class: Workflow                               |
 +------------------------+------------------------------------------+-------------------------------------------------+
 | WDL                    | All must be true:                        | - >1 task                                       |
-|                        | - A single task with Docker image        | - A workflow section that connects the tasks    |
-|                        | - A workflow section that runs the task  |                                                 |
-|                        | - An associated Docker image             |                                                 |
+|                        |   - A single task with Docker image      | - A workflow section that connects the tasks    |
+|                        |   - A workflow section that runs the task|                                                 |
+|                        |   - An associated Docker image           |                                                 |
 +------------------------+------------------------------------------+-------------------------------------------------+
 | Nextflow               | - N/A                                    | - Any valid Nextflow workflow                   |
 +------------------------+------------------------------------------+-------------------------------------------------+

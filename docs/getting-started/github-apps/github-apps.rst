@@ -68,12 +68,7 @@ will be made on Dockstore.
 
 Error Handling
 ----------------------------------
-Since Dockstore relies on GitHub to tell us when changes have been made on GitHub, there are chances that the message gets lost or delayed.
-Typically, Dockstore reacts within seconds of a change being made on GitHub, however service disruptions can delay this to a few minutes.
-If a message were to get lost, unfortunately you will need to push to GitHub again. Currently, there is no way to tell on Dockstore whether
-a GitHub message was delayed or lost. We recommend waiting a few minutes and then trying to push again. This will be changed in the future.
-
-Another error that could occur is that we received the message from GitHub, however the ``/.dockstore.yml`` is invalid. If we cannot read the 
+It is possible for an invalid ``/.dockstore.yml`` to cause an errors. If we cannot read the 
 file, then we do not know which workflow or service to associate the error with. For now, please ensure that your file is a valid YML file and
 compare it with our examples/documentation to confirm that you filled it in correctly.
 

@@ -293,7 +293,7 @@ filters
         Pattern-strings use `Unix-style Glob syntax <https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)>`_ by default (Ex: ``develop``, ``myworkflow/**``),
         or RegEx when the string is surrounded by ``/`` (Ex: ``/develop/``, ``/myworkflow\/.*/``).
 
-For more info on services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>`, or our :doc:`Service Version 1.2 Template</assets/templates/template.html#service-version-1-2-template>`.
+For more info on services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>`, or our `Service Version 1.2 Template <https://docs.dockstore.org/en/develop/assets/templates/template.html#service-version-1-2-template>`_.
 
 See Also
 --------

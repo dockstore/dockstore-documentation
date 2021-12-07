@@ -2,14 +2,14 @@ Introduction to Dockstore Tools and Workflows
 =============================================
 
 
-Comparison of Tools and Workflows Across Descriptor Languages
--------------------------------------------------------------
+Comparison of Tools and Workflows
+---------------------------------
 
 When Dockstore was created, CWL was the first descriptor language we supported. CWL has a very clear distinction between a tool and a
 workflow. And while other descriptor languages, like WDL and Nextflow, do not have separate concepts for tools and workflows,
-Dockstore has chosen to treat the two differently. However, our defintion for each does not strictly align with the language's specification.
+Dockstore has chosen to treat the two differently. However, our definition for each does not completely align with the language's specification.
 Instead, Dockstore tools are more associated with creating/owning Docker images that are used in conjunction with a descriptor language, and
-Dockstore workflows are closely tied with the descriptor files themselves.
+Dockstore workflows are more closely tied to the descriptor files themselves.
 
 
 +------------------------+------------------------------------------+-------------------------------------------------+
@@ -38,7 +38,7 @@ Tools
 
 Dockstore tool registration is meant for users who have created or have access/permissions to a Docker image registered to one of our supported container registries, and have
 written tool descriptor files (in CWL/WDL) that use it. At a basic level, the Docker image describes the tool environment and the descriptor files describe how the tool is run.
-If you are unfamiliar with Docker or how to write descriptor files, check out our following tutorials:
+If you are unfamiliar with Docker or how to write descriptor files, check out the following tutorials:
 
 - :doc:`Docker <getting-started-with-docker>`
 - :doc:`CWL <getting-started-with-cwl>`
@@ -54,7 +54,7 @@ Dockstore:
 The most convenient way to register your tool and manage it on Dockstore is to have your image registered on Quay.io, your descriptor files hosted on GitHub, and choose our quick registration path.
 This gives Docktore the ability to automatically recognize the image's tags on Quay, link them back to the appropriate version on GitHub, and create the existing versions for you on Dockstore once you hit "Refresh".
 If your image is registered on one of our other supported registries, you will have to register your tool manually. This means each version you want put on Dockstore must be added manually.
-To learn more about our different registration options, read our following tutorials:
+To learn more about our different registration options, read the following tutorials:
 
 - :doc:`Tools <dockstore-tools>`
 - :doc:`Hosted Tools <hosted-tools-and-workflows>`

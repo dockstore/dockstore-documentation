@@ -16,8 +16,7 @@ This means less manual work for workflow developers, and less waiting for conten
 
 This requires the addition of a ``/.dockstore.yml`` file to your repository on GitHub.
 This file contains workflow information such as workflow path, test parameter paths, etc. that Dockstore will use to setup
-the corresponding workflow on Dockstore. Branches that do not have a ``/.dockstore.yml`` file on each branch of your GitHub
-repository if you want to sync multiple branches (versions) of your workflow.
+the corresponding workflow on Dockstore. Branches that do not have a ``/.dockstore.yml`` file will not be synchronized.
 
 You can read more about it at :doc:`/getting-started/github-apps/github-apps`.
 

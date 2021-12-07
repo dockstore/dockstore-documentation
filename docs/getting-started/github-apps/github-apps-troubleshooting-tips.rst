@@ -51,7 +51,9 @@ Depending on the permissions you have on an organization, you may not be able to
 
 The changes made to my GitHub repo aren't appearing on Dockstore, but I've already installed the GitHub app and made the ``.dockstore.yml`` file. How can I figure out what's going wrong?
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-If you don't see changes, try waiting a couple of minutes and refreshing the browser on the My Workflows page again.
+If you don't see changes, try waiting a couple of minutes and refreshing the browser on the My Workflows page again. 
+
+Be aware that a service disruption can result in a connection between GitHub and Dockstore getting delayed or lost. If the signal was lost, another push must be made.
 
 You can also verify that the GitHub app was given access to the right repository or organization. If access was given to the wrong organization or repository,
 or this is your first time installing the app, you'll need to push another commit after adding the correct repository to activate the sync to Dockstore.

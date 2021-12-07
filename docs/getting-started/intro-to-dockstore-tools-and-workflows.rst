@@ -5,30 +5,37 @@ Introduction to Dockstore Tools and Workflows
 Comparison of Tools and Workflows
 ---------------------------------
 
-When Dockstore was created, CWL was the first descriptor language we supported. CWL has a very clear distinction between a tool and a
-workflow. And while other descriptor languages, like WDL and Nextflow, do not have separate concepts for tools and workflows,
-Dockstore has chosen to treat the two differently. However, our definition for each does not completely align with the language's specification.
+When Dockstore was created, CWL was the first descriptor language we supported. CWL has a very clear distinction between a tool and a workflow.
+However, our definition for each does not completely align with the language's specification.
 Instead, Dockstore tools are more associated with creating/owning Docker images that are used in conjunction with a descriptor language, and
-Dockstore workflows are more closely tied to the descriptor files themselves.
+Dockstore workflows are more closely tied to the descriptor files themselves. While other descriptor languages, like WDL and Nextflow,
+do not have separate concepts for tools and workflows, we still maintain a distinction between a tool and a workflow for WDL.
+
+
 
 
 +------------------------+------------------------------------------+-------------------------------------------------+
-| Support                | Tool                                     | Workflow                                        |
+| Support                | Tool                                     | Workflow*                                       |
 +========================+==========================================+=================================================+
 | CWL                    | - Class: CommandLineTool                 | - Class: Workflow                               |
 +------------------------+------------------------------------------+-------------------------------------------------+
-| WDL                    | - A single task with Docker image        | - >1 task                                       |
-|                        | - A workflow section that runs the task  | - A workflow section that connects the tasks    |
+| WDL                    | All must be true:                        | - >1 task                                       |
+|                        | - A single task with Docker image        | - A workflow section that connects the tasks    |
+|                        | - A workflow section that runs the task  |                                                 |
 |                        | - An associated Docker image             |                                                 |
 +------------------------+------------------------------------------+-------------------------------------------------+
 | Nextflow               | - N/A                                    | - Any valid Nextflow workflow                   |
 +------------------------+------------------------------------------+-------------------------------------------------+
-| Galaxy                 | - N/A*                                   | - Any valid Galaxy workflow                     |
+| Galaxy                 | - N/A**                                  | - Any valid Galaxy workflow                     |
 +------------------------+------------------------------------------+-------------------------------------------------+
 | Versioning             | - Based off of image's tags              | - Based off of branches/tags from Git repository|
 +------------------------+------------------------------------------+-------------------------------------------------+
 
-\* There are tools that make up Galaxy workflows from the Galaxy toolbox or ToolShed.
+\* Keep in mind that although workflow descriptor files do not require a Docker container, you can still specify external Docker images
+within the descriptor files. In fact, a Docker image is required to run a workflow on Terra. Workflows registered on Dockstore that have a reference
+to a Docker image specified will still follow versioning from GitHub.
+
+\** There are tools that make up Galaxy workflows from the Galaxy toolbox or ToolShed.
 Dockstore does not support registration of these tools.
 
 
@@ -46,7 +53,7 @@ If you are unfamiliar with Docker or how to write descriptor files, check out th
 
 Dockstore:
 
-- has varying levels of support for images registered on Quay.io, DockerHub, GitLab, Amazon ECR, and Seven Bridges
+- has varying levels of support for images registered on Quay.io, DockerHub, GitLab, Amazon ECR, GitHub Container Registry, and Seven Bridges
 - supports descriptor files hosted on GitHub, BitBucket, GitLab, or written on Dockstore
 - supports descriptor files written in CWL or WDL
 - offers three different tool registration paths
@@ -62,12 +69,15 @@ To learn more about our different registration options, read the following tutor
 .. note::
   Dockstore tool versions are based on the image's tags, not the tags/branches from the git repository where the descriptor files are hosted.
 
+.. tip::
+  Terra does not support WDL tools. If you are writing a WDL with the intent of it being run in the Terra ecosystem, we recommend writing it as a workflow.
+
 
 Workflows
 ---------
 
 Dockstore workflow registration is meant for users who have created or have access to descriptor files (in CWL, WDL, Galaxy, Nextflow). As mentioned above in the Tools section,
-CWL and Galaxy classify tools and workflows differently, so only descriptor files written that follow language's respective specification for a workflow will be valid on Dockstore.
+CWL and Galaxy classify tools and workflows differently, so only descriptor files written in a manner that follows a language's respective specification for a workflow will be valid on Dockstore.
 
 Dockstore:
 

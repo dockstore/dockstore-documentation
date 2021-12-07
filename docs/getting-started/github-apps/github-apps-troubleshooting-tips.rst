@@ -28,8 +28,7 @@ any new branches created from this template will be automatically added to and s
 Therefore, as long as your workflow is already registered on Dockstore and your ``/.dockstore.yml`` is configured correctly,
 then updates to the workflow (including adding new versions) should happen continuously and automatically.
 
-On the other hand, if you *do not* want a new GitHub branch to generate a corresponding workflow-version on Dockstore,
-simply remove the ``/.dockstore.yml`` from the branch *before* it is pushed to the remote/origin repository.
+You can use filters in a ``/.dockstore.yml`` to avoid generating a corresponding workflow-version on Dockstore.
 
 *Note:* If you want to edit version information, such as workflow path, you will have to update the ``/.dockstore.yml`` file directly on the corresponding GitHub branch. For example, if develop has a ``/.dockstore.yml`` that points to my_workflow.wdl, but my_workflow.wdl is moved to another path on the branch develop-but-better, then the ``/.dockstore.yml`` on develop-but-better will need to point to the new location of my_workflow.wdl.
 

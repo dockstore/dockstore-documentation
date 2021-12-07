@@ -115,7 +115,7 @@ GitHub Apps, Dockstore can react to changes on GitHub as they are made, keeping 
 with GitHub automatically.
 
 Installing the GitHub App is simply -- navigate to ``/my-workflows``, click the ``+`` button on the left hand sidebar, select ``Register using GitHub Apps``, and then click
-``+ Manage Dockstore Installation on GitHub``. You'll then be redirected to GitHub where you can select which repositories can be accessed by the GitHub app.
+``+ Manage Dockstore Installation on GitHub``. You'll then be redirected to GitHub where you can grant the app access to specific repositories within whatever organization you are installing into.
 
 .. image:: /assets/images/docs/add-workflow-button.png
    :width: 40 %

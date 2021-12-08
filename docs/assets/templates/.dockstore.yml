@@ -8,6 +8,7 @@ service:
   name:
 
   # Optional array of authorship information, requires at least the name of each author.
+  # Note that just using "author" as a singular string is deprecated as of 1.2
   authors:
     - name:
       orcid:
@@ -15,6 +16,7 @@ service:
       role:
       affiliation:
 
+  # An optional, but recommended description of the service
   description:
 
   # `publish` is a service-wide setting and will affect ALL branches/tags; only set this as needed in a main branch.
@@ -33,7 +35,7 @@ service:
   # 3. start -- Starts up the service.
   # 4. poststart -- Associated script will run after the service has started
   # 5. postprovision -- After the service has been started. This might be invoked multiple times, e.g., if the user decides to load multiple sets of data.
-
+  #
   # In addition, the following scripts, if present and with a value, are for use by the launcher:
   # 1. port - Which port the service is exposing. This provides a generic way for the tool to know which port is being exposed, e.g., to reverse proxy it.
   # 2. healthcheck - exit code of 0 if service is running normally, non-0 otherwise.
@@ -46,12 +48,12 @@ service:
 
   # These are environment variables that the launcher is responsible for passing to any scripts that it invokes.
   # The names must be valid environment variable names.
-  # Users can specify the values of the parameters in the input parameter JSON (see below).
+  # Users can specify the values of the parameters in the input parameter JSON.
   # These variables are service-specific, i.e., the service creator decides what values, if any, to
   # expose as environment variables.
   # There are three parts to the environment variable
-  #    - The name
-  #    - An optional default value, which will be used if the user does not specify in the input file
+  #    - The name (in this example, httpPort)
+  #    - An optional default value (string or int), which will be used if the user does not specify in the input file
   #    - An optional description, which can be used by the service launcher as a prompt
   environment:
     httpPort:

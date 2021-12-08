@@ -77,7 +77,7 @@ the corresponding GitHub account. This is only an issue if the workflow or servi
 services, we need to be able to associate them with a user. If the workflow or service already exists on Dockstore, then this error will not occur and the 
 version will be properly added/updated/deleted on Dockstore.
 
-See `our FAQ document <https://docs.dockstore.org/en/develop/getting-started/github-apps/github-apps-troubleshooting-tips.html>`_ for assistance in troubleshooting.
+See `our FAQ document <https://docs.dockstore.org/en/develop/getting-started/github-apps/github-apps-troubleshooting-tips.html>`_ for assistance in troubleshooting, including how to interpret GitHub App logs.
 
 As always, you can reach out to our team on our `discussion forum <https://discuss.dockstore.org/>`_ to discuss any issues you are facing.
 

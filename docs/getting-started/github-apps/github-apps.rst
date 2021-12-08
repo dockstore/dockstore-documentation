@@ -70,7 +70,7 @@ Error Handling
 ----------------------------------
 It is possible for an invalid ``/.dockstore.yml`` to cause an errors. If we cannot read the 
 file, then we do not know which workflow or service to associate the error with. For now, please ensure that your file is a valid YML file and
-compare it with our examples/documentation to confirm that you filled it in correctly.
+compare it with our examples/documentation to confirm that you filled it in correctly. If the file is at least present, an error will generally appear in the GitHub App logs (see `our FAQ document <https://docs.dockstore.org/en/develop/getting-started/github-apps/github-apps-troubleshooting-tips.html>`_).
 
 Another possible issue is that we received the message from GitHub, but the user who triggered the message event is not registered on Dockstore with
 the corresponding GitHub account. This is only an issue if the workflow or service does not already exist on Dockstore. When creating new workflows and

@@ -192,7 +192,7 @@ entries of the `workflows` array. For each unique name present, an entry will be
 
 Service YML File
 +++++++++++++++++
-A template .dockstore.yml file for registering services, with explanations in the comments, can be found in our `Service Version 1.2 Template <https://docs.dockstore.org/en/develop/assets/templates/template.html#service-version-1-2-template>`_. For more info on services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>`.
+A template .dockstore.yml file for registering services, with explanations in the comments, can be found in our :doc:`Service 1.2 Template </assets/templates/template>`. For more info on services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>`.
 
 See Also
 --------

@@ -9,8 +9,6 @@ Tutorial Goals
 --------------
 
 
--  Learn the differences between tools and workflows across Descriptor
-   Languages
 -  Discover how to register a workflow on Dockstore
 -  Publish your workflow
 
@@ -28,32 +26,6 @@ This tutorial does not go through the creation of a workflow and its
 registration to GitHub, Bitbucket or GitLab. It assumes that you already
 have a repository which contains a workflow and are now trying to register
 it in Dockstore.
-
-Comparison of Tools and Workflows Across Descriptor Languages
--------------------------------------------------------------
-
-When Dockstore was created, CWL was the first descriptor language we
-supported. It had a very clear distinction between a Tool and a
-Workflow. Descriptor languages like WDL and Nextflow are less clear
-about this distinction so we briefly describe our working definitions
-below:
-
-+------------------------+------------------------------------------+-----------------------------------------------+
-| Language               | Tool                                     | Workflow                                      |
-+========================+==========================================+===============================================+
-| CWL                    | - Class: CommandLineTool                 | - Class: Workflow                             |
-+------------------------+------------------------------------------+-----------------------------------------------+
-| WDL                    | - A single task with Docker image        | - >1 task                                     |
-|                        | - A workflow section that runs the task  | - A workflow section that connects the tasks  |
-|                        | - An associated Docker image             |                                               |
-+------------------------+------------------------------------------+-----------------------------------------------+
-| Nextflow               | - N/A                                    | - Any valid Nextflow workflow                 |
-+------------------------+------------------------------------------+-----------------------------------------------+
-| Galaxy                 | - N/A*                                   | - Any valid Galaxy workflow                   |
-+------------------------+------------------------------------------+-----------------------------------------------+
-
-\* There are tools that make up Galaxy workflows from the Galaxy toolbox or ToolShed.
-Dockstore does not support registration of these tools.
 
 Register Your Workflow in Dockstore
 -----------------------------------

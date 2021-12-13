@@ -26,6 +26,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    :caption: Getting Started Guide
    :maxdepth: 1
 
+   getting-started/intro-to-dockstore-tools-and-workflows
    getting-started/getting-started
    getting-started/getting-started-with-docker
    getting-started/getting-started-with-cwl

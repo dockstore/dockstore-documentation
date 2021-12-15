@@ -132,7 +132,7 @@ Once you've installed our GitHub app on a repository or organization, you'll nee
 the root directory of a branch of the repository that contains your workflow. This file contains information like
 workflow path, test parameter file, workflow name, etc. When a push is made on GitHub to a branch
 with a ``/.dockstore.yml``, Dockstore will add that branch to the corresponding workflow on Dockstore. If the
-workflow doesn't already exist on Dockstore, one will be created. Note that a single ``/.dockstore.yml`` file can describe multiple workflows, if all of those workflows are in the same repository. This will create multiple workflow entries on Dockstore from one ``/.dockstore.yml`` file, one entry for each workflow.
+workflow doesn't already exist on Dockstore, one will be created. Note that a single ``/.dockstore.yml`` file can describe multiple workflows, if all of those workflows are in the same repository.
 
 Below is a simple example of a ``/.dockstore.yml`` file
 for an alignment workflow to show you how easy it is to use. If you are interested in using this method, please see the 

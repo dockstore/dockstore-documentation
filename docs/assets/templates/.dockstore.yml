@@ -8,7 +8,6 @@ service:
   name:
 
   # Optional array of authorship information, requires at least the name of each author.
-  # Note that just using "author" as a singular string is deprecated as of 1.2
   authors:
     - name:
       orcid:

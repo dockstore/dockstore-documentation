@@ -123,8 +123,8 @@ Installing the GitHub App is simple -- navigate to ``/my-workflows``, click the 
 .. image:: /assets/images/docs/register-workflow-github-apps.png
    :width: 40 %
 
-.. image:: /assets/images/docs/gh-app-reg-1.png
-   :width: 40 %
+.. figure:: /assets/images/docs/gh-app-reg-1.png
+   :width: 70 %
 
    Install our GitHub App on either all repositories in an organization or on specific repositories
 

@@ -66,6 +66,24 @@ to associate with a workflow on Dockstore. A template for both workflows and ser
 along with explanations for each field. For every branch/release on GitHub that has one of these files, a corresponding entry
 will be made on Dockstore.
 
+Error Handling
+----------------------------------
+It is possible for an invalid ``/.dockstore.yml`` to cause an errors. If we cannot read the 
+file, then we do not know which workflow or service to associate the error with. For now, please ensure that your file is a valid YML file and
+compare it with our examples/documentation to confirm that you filled it in correctly. If the file is at least present, an error will generally appear in the GitHub App logs (see `our FAQ document <https://docs.dockstore.org/en/develop/getting-started/github-apps/github-apps-troubleshooting-tips.html>`_).
+
+Another possible issue is that we received the message from GitHub, but the user who triggered the message event is not registered on Dockstore with
+the corresponding GitHub account. This is only an issue if the workflow or service does not already exist on Dockstore. When creating new workflows and
+services, we need to be able to associate them with a user. If the workflow or service already exists on Dockstore, then this error will not occur and the 
+version will be properly added/updated/deleted on Dockstore.
+
+See `our FAQ document <https://docs.dockstore.org/en/develop/getting-started/github-apps/github-apps-troubleshooting-tips.html>`_ for assistance in troubleshooting, including how to interpret GitHub App logs.
+
+As always, you can reach out to our team on our `discussion forum <https://discuss.dockstore.org/>`_ to discuss any issues you are facing.
+
+Example YML Files
+------------------
+
 Workflow YML File
 ++++++++++++++++++
 For a workflow, the ``/.dockstore.yml`` has the following general structure
@@ -174,124 +192,7 @@ entries of the `workflows` array. For each unique name present, an entry will be
 
 Service YML File
 +++++++++++++++++
-For a service, the ``/.dockstore.yml`` has this general structure for version 1.2:
-
-.. code:: yaml
-
-    version: 1.2
-    service:
-      subclass: <DOCKER_COMPOSE | KUBERNETES | HELM | SWARM | NOT_APPLICABLE>
-      name: <String>
-
-      author: <String> [Deprecated]
-      authors:
-        - name: <String>
-          orcid: <String>
-          email: <String>
-          role: <String>
-          affiliation: <String>
-
-      description: <String>
-
-      publish: <Boolean>
-
-      files: <String Array>
-
-      scripts:
-        preprovision: <String>
-        prestart: <String>
-        start: <String>
-        poststart: <String>
-        postprovision: <String>
-        port: <String>
-        healthcheck: <String>
-        stop: <String>
-
-      environment:
-        <environmentVariableName>:
-            default: <String | Integer>
-            description: <String>
-
-      data:
-        <datasetName>:
-            targetDirectory: <String>
-            files:
-                <name>:
-                    description: <String>
-
-      filters:
-        branches: <String Array>
-        tags: <String Array>
-
-version
-    The version of the .dockstore.yml schema which is currently at 1.2.
-service
-    Used to describe a single service.
-subclass
-    Indicates which container system will be used for your service.
-name
-    Optional name for your service. The name may only consist of alphanumeric characters, internal underscores, and internal hyphens. It may not exceed 256 characters.
-authors
-    Optional array of authorship information, requiring at least the ``name`` of each author.
-description
-    Optional description for your service
-publish
-    Optional service-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
-    Set to true to publish an unpublished workflow, or false to unpublish a published workflow.
-    Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
-files
-    An array of files Dockstore will index from your GitHub repo. Wildcards are not supported.
-scripts
-    This section description the scripts that the service launcher will execute. Can only be used with the following keys: preprovision, prestart, start, postprovision, port, healthcheck, and stop. They can filled with either the name of the script file or the commands that need to be ran for each portion.
-preprovision
-    (Optional) Invoked before any data has been downloaded and some initialization is required.
-prestart
-    (Optional) Executed after data has been downloaded locally, but before service has started (see the data section)
-start
-    Starts up the service.
-poststart
-    (Optional) Associated script will run after the service has started
-postprovision
-    (Optional) After the service has been started. This might be invoked multiple times, e.g., if the user decides to load multiple sets of data.
-port
-    (Optional) Which port the service is exposing. This provides a generic way for the tool to know which port is being exposed, e.g., to reverse proxy it.
-healthcheck
-    (Optional) exit code of 0 if service is running normally, non-0 otherwise.
-stop
-    (Optional) stops the service
-environment
-    This section describes environment variables that the launcher is responsible for passing to any scripts that it invokes. The names must be valid environment variable names. Users can specify the values of the parameters in the input parameter JSON (see below). These variables are service-specific, i.e., the service creator decides what values, if any, to expose as environment variables. For every environment variable, you must give it a name and you can optionally give them a default value and description.
-data
-    This section describes data that should be provisioned locally for use by the service. The service launcher is responsible for provisioning the data. You can create as many keys as you need where each key is the name of a dataset. For every key you create, you must give a target directory (path will be relative) to indicate where the files should be downloaded to. You must also give an array of files as a key and provide the name of each file. You can optionally provide a description of each file.
-filters
-    branches, tags
-        (Optional) Arrays of pattern-strings to specify which Git branches or tags to include for the service.
-        If no filters are given, all branches and tags are included.
-        Pattern-strings use `Unix-style Glob syntax <https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)>`_ by default (Ex: ``develop``, ``myworkflow/**``),
-        or RegEx when the string is surrounded by ``/`` (Ex: ``/develop/``, ``/myworkflow\/.*/``).
-
-It's important to note that we originally released our services tutorial using version 1.1 of the ``/.dockstore.yml`` file. For more info on
-services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>` which has been updated to use 1.2.
-
-
-Error Handling
-----------------------------------
-Since Dockstore relies on GitHub to tell us when changes have been made on GitHub, there are chances that the message gets lost or delayed.
-Typically, Dockstore reacts within seconds of a change being made on GitHub, however service disruptions can delay this to a few minutes.
-If a message were to get lost, unfortunately you will need to push to GitHub again. Currently, there is no way to tell on Dockstore whether
-a GitHub message was delayed or lost. We recommend waiting a few minutes and then trying to push again. This will be changed in the future.
-
-Another error that could occur is that we received the message from GitHub, however the ``/.dockstore.yml`` is invalid. If we cannot read the 
-file, then we do not know which workflow or service to associate the error with. For now, please ensure that your file is a valid YAML file and
-compare it with our examples/documentation to confirm that you filled it in correctly. In the future we plan to have a system in place where
-users can keep track of these GitHub events and resulting action taken by Dockstore, even if the message was succesfully handled.
-
-Another possible issue is that we received the message from GitHub, but the user who triggered the message event is not registered on Dockstore with
-the corresponding GitHub account. This is only an issue if the workflow or service does not already exist on Dockstore. When creating new workflows and
-services, we need to be able to associate them with a user. If the workflow or service already exists on Dockstore, then this error will not occur and the 
-version will be properly added/updated/deleted on Dockstore.
-
-As always, you can reach out to our team on our `discussion forum <https://discuss.dockstore.org/>`_ to discuss any issues you are facing.
+A template .dockstore.yml file for registering services, with explanations in the comments, can be found in our :doc:`Service 1.2 Template </assets/templates/template>`. For more info on services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>`.
 
 See Also
 --------

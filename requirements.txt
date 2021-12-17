@@ -1,4 +1,4 @@
 sphinx
-recommonmark
+myst-parser
 sphinx_rtd_theme
 git+https://github.com/pdavide/sphinxcontrib-discourse

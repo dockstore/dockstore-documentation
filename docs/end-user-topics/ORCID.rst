@@ -18,7 +18,9 @@ The process is quite simple. If you are logged in now, you can `click here`_ to 
 From here, you'll be redirected to ORCID. With just a few clicks, you will now see this on the link services page of Dockstore.
 
 .. image::  /assets/images/docs/orcid_after_account_linkage.png
-  :alt: After linking ORCID to Dockstore there will be options to relink, unlick, or view your token
+  :alt: After linking ORCID to Dockstore there will be options to relink, unlink, or view your token
+
+Note: Make sure to verify the email you have registered with ORCID for this process to work.
 
 Now that your account is linked, when someone views an organization page of which you are a member, your ORCID will show up, helping connect your work on Dockstore with all of your other scientific contributions.
 

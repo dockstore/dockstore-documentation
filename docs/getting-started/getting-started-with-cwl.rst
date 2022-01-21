@@ -99,7 +99,7 @@ repository:
         foaf: http://xmlns.com/foaf/0.1/
 
 .. note:: The `sbg:draft-2 <https://docs.sevenbridges.com/docs/about-the-common-workflow-language#sbgdraft-2>`__ implementation of CWL is optimized for the Seven Bridges cloud-based platform and includes custom extensions.
-    Although Dockstore does not support CWL sbg:draft-2, we do support CWL v1.0 which natively supports these custom extensions. Seven Bridges also provides `instructions <https://sb-biodatacatalyst.readme.io/docs/maintaining-and-versioning-cwl-on-external-tool-repositories>`__
+    Dockstore does not support sbg:draft-2 CWL tools and workflows, and if you register one, Dockstore will mark the entry as invalid, and you will not be able to publish, run, or launch it on any cloud compute platform. However, we do support `CWL v1.0 <https://www.commonwl.org/v1.0/>`__, which defines similar functionality and supersedes the sbg:draft-2 extensions.  Seven Bridges also provides `instructions <https://sb-biodatacatalyst.readme.io/docs/maintaining-and-versioning-cwl-on-external-tool-repositories>`__
     for how to transition tools and workflows developed in the Seven Bridges Software Development Kit to GitHub for publishing in Dockstore.
 
 You can see this tool takes two inputs, a parameter to control memory

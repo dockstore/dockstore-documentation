@@ -3,9 +3,8 @@ Welcome to Dockstore Documentation!
 
 .. note:: Our code lives on GitHub at `dockstore/dockstore <https://github.com/dockstore/dockstore>`_ and `dockstore/dockstore-ui2 <https://github.com/dockstore/dockstore-ui2>`_.
 
-Dockstore is an open platform used by the GA4GH for sharing Docker-based tools
-described with either the Common Workflow Language (CWL), the Workflow Description Language (WDL),
-or Nextflow (NFL).
+Dockstore is an open platform used by the `GA4GH <https://www.ga4gh.org/>`__ for sharing Docker-based tools, workflows, and services.
+For tools and workflows, we support Common Workflow Language (CWL), Workflow Description Language (WDL), Nextflow (NFL), and Galaxy.
 
 If this is your first time learning about Dockstore, we recommend starting with the :doc:`Getting Started Guide <getting-started/getting-started>`. This will introduce
 you to the core concepts of Dockstore, leaving you with a good understanding of the platform. However, if you are simply looking to launch tools and workflows, we recommend

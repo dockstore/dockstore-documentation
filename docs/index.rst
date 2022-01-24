@@ -177,7 +177,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
 .. centered:: Workflow Languages
 
-.. centered:: |CwlLink|_ |imagespace| |WdlLink|_ |imagespace| |NflLink|_
+.. centered:: |CwlLink|_ |imagespace| |WdlLink|_ |imagespace| |NflLink|_ |imagespace| |GalaxyLink|_
 
 .. |CwlLink| image:: /assets/images/affiliations/cwl.png
     :alt: wdl
@@ -193,6 +193,11 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
     :alt: nextflow
     :height: 65px
 .. _NflLink: https://www.nextflow.io/
+
+.. |GalaxyLink| image:: /assets/images/affiliations/galaxy.png
+    :alt: galaxy
+    :height: 65 px
+.. _GalaxyLink: https://galaxyproject.org/
 
 .. centered:: Works With
 

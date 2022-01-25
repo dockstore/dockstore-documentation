@@ -22,7 +22,7 @@ Galaxy is a web-based platform for data analysis. Galaxy is open source and can 
 Using Existing Galaxy Servers
 -----------------------------
 
-Institutions across the world maintain Galaxy instances that are shared with the greater community and are a great way to learn and use Galaxy. Some of these instances are subsidized by grants and offered for free (such as the `Galaxy US <https://usegalaxy.org/>`__, `Galaxy EU <https://usegalaxy.eu/>`__, and `Galaxy AU <https://usegalaxy.org.au/>`__) and some are available for a fee (such as `Galaxy AnVIL <https://anvil.terra.bio/>`__ or `Galaxy Pro <https://galaxyworks.io/pricing>`__). A lot of great learning resources are available on the the `Galaxy Training Network <https://training.galaxyproject.org/>`__, with help on specific questions available via `Galaxy Help <https://help.galaxyproject.org/>`__.
+Institutions across the world maintain Galaxy instances that are shared with the greater community and are a great way to learn and use Galaxy. Some of these instances are subsidized by grants and offered for free (such as the `Galaxy US <https://usegalaxy.org/>`__, `Galaxy EU <https://usegalaxy.eu/>`__, and `Galaxy AU <https://usegalaxy.org.au/>`__) and some are available for a fee (such as `Galaxy AnVIL <https://anvil.terra.bio/>`__). A lot of great learning resources are available on the the `Galaxy Training Network <https://training.galaxyproject.org/>`__, with help on specific questions available via `Galaxy Help <https://help.galaxyproject.org/>`__.
 
 Using Custom Galaxy in the Cloud with Terra, and AnVIL
 ------------------------------------------------------------------------

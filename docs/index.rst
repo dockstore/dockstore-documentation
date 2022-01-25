@@ -179,17 +179,11 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    :caption: Extras
    :maxdepth: 1
 
-   user-created
+   BCC 2020 Docker Training </docker_instructions>
+   BCC 2020 WDL Training </wdl_instructions>
    posters-and-talks
    /assets/templates/template.rst
-
-
-.. toctree::
-   :caption: BCC 2020
-   :maxdepth: 1
-
-   docker_instructions
-   wdl_instructions
+   user-created
 
 .. toctree::
    :caption: Changelog

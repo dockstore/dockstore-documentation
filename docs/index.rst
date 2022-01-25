@@ -62,7 +62,6 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
 .. centered:: |DnaStackLink|_ |imagespace| |SevenBridgesLink|_ |imagespace| |TerraLink|_
 
-
 .. |DnaStackLink| image:: /assets/images/affiliations/dnastack.png
     :alt: dnastack
     :height: 65px
@@ -86,12 +85,15 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    :maxdepth: 1
 
    Go to Dockstore <https://dockstore.org>
+   systemstatus
 
 .. toctree::
    :caption: About
    :maxdepth: 1
 
    dockstore-introduction
+   faq
+   roadmap
 
 .. toctree::
    :caption: Getting Started Guide
@@ -190,18 +192,6 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    wdl_instructions
 
 .. toctree::
-   :caption: FAQ
-   :maxdepth: 1
-
-   faq
-
-.. toctree::
-   :caption: Roadmap
-   :maxdepth: 1
-
-   roadmap
-
-.. toctree::
    :caption: Changelog
    :maxdepth: 1
 
@@ -216,11 +206,4 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
    news
    news/*
-
-.. toctree::
-   :caption: System Status
-   :maxdepth: 1
-
-   systemstatus
-
  

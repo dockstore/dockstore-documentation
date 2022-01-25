@@ -1,6 +1,16 @@
 FAQ
 ===
 
+Contents:
+
+- :ref:`General Dockstore Questions <faq-header-general-dockstore-questions>`
+- :ref:`Dockstore CLI <faq-header-dockstore-cli>`
+- :ref:`GitHub Integration <faq-header-github-integration>`
+- :ref:`Permissions <faq-header-permissions>`
+- :ref:`Miscellaneous <faq-header-other>`
+
+.. _faq-header-general-dockstore-questions:
+
 General Dockstore Questions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -59,13 +69,6 @@ not limited to):
     ``$ dockstore tool launch --entry quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig --json Dockstore.json``
 4. The docker pull command in the tools search reflects the defaultversion
 
-How can I use the Dockstore CLI with Python 2?
-----------------------------------------------
-
-Python 2 support ended in 2020. You can get the Python 2 requirements.txt with ``curl -o requirements.txt "https://dockstore.org/api/metadata/runner_dependencies?python_version=2"``
-but it is currently untested.
-
-
 
 How do I send private messages to administrators or report security vulnerabilities?
 ------------------------------------------------------------------------------------
@@ -95,6 +98,9 @@ paper <http://dx.doi.org/10.12688/f1000research.10137.1>`__.
 For citing the actual code, we recommend looking at our Zenodo entry.
 You will find a variety of citation styles and ways to export it at
 |DOI|.
+
+
+.. _faq-header-dockstore-cli:
 
 Dockstore CLI
 ^^^^^^^^^^^^^
@@ -145,6 +151,13 @@ can change what it allocates using the Docker for Mac GUI under
 * The default allocation can cause workflows or tools to fail without informing the user with a memory or resource related error message. If you find that your workflow or tool is behaving differently on a Mac compared to a similarly resourced Ubuntu environment, you can try increasing the resources allocated to Docker on the Mac to resolve the discrepancy.
 
 
+How can I use the Dockstore CLI with Python 2?
+----------------------------------------------
+
+Python 2 support ended in 2020. You can get the Python 2 requirements.txt with ``curl -o requirements.txt "https://dockstore.org/api/metadata/runner_dependencies?python_version=2"``
+but it is currently untested.
+
+
 The CLI is failing with Java 8
 ------------------------------
 
@@ -177,6 +190,7 @@ The Dockstore CLI will automatically load all Docker images in the
 directory specified prior to a ``launch --local-entry`` command
 
 
+.. _faq-header-github-integration:
 
 Integration with GitHub
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -214,7 +228,7 @@ your account in the future, do not reuse the original name of the renamed
 repository. If you do, redirects to the renamed repository will break.
 
 
-
+.. _faq-header-permissions:
 
 Permissions
 ^^^^^^^^^^^^
@@ -254,6 +268,7 @@ itself. GitHub provides a
 for approving third party apps access to your organization.
 
 
+.. _faq-header-other:
 
 Other
 ^^^^^

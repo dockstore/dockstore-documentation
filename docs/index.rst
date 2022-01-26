@@ -56,7 +56,6 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    launch-with/cavatica-launch-with
    launch-with/cgc-launch-with
    launch-with/dnanexus-launch-with
-   launch-with/dnastack-launch-with
    launch-with/galaxy-launch-with
    launch-with/nextflow-tower-launch-with
    launch-with/terra-launch-with
@@ -217,4 +216,3 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
 .. |imagespace| unicode:: U+00A0 U+00A0 U+00A0 U+00A0 U+00A0 .. non-breaking spaces between logo images
 
- 

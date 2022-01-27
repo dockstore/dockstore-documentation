@@ -23,11 +23,11 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    dockstore-introduction
 
 .. toctree::
-   :caption: Getting Started Guide
+   :caption: Getting Started (Tutorial)
    :maxdepth: 1
 
-   getting-started/intro-to-dockstore-tools-and-workflows
    getting-started/getting-started
+   getting-started/intro-to-dockstore-tools-and-workflows
    getting-started/getting-started-with-docker
    getting-started/getting-started-with-cwl
    getting-started/getting-started-with-wdl
@@ -85,6 +85,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    advanced-topics/guid-alias
    advanced-topics/set-up-file-provisioning-plugins
    advanced-topics/developing-file-provisioning-plugins
+   advanced-topics/tools-vs-workflows
    advanced-topics/advanced-features
    advanced-topics/docker-alternatives
    advanced-topics/snapshot-and-doi

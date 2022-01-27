@@ -65,7 +65,6 @@ See Also
 -  :doc:`AWS Batch <../advanced-topics/aws-batch/>`
 -  :doc:`Azure Batch <../advanced-topics/azure-batch/>`
 -  :doc:`DNAnexus Launch With <../launch-with/dnanexus-launch-with/>`
--  :doc:`DNAstack Launch With <../launch-with/dnastack-launch-with/>`
 
 .. discourse::
     :topic_identifier: 1841

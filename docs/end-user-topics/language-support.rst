@@ -30,17 +30,14 @@ Limitations <anvil-limitations>` for limitations.
 [6] Does not support some file-path based imports. See :ref:`BioData Catalyst
 Limitations <anvil-limitations>` for limitations.
 
-[7] Does not support file-path or http(s) based imports. See :ref:`DNAstack
-Limitations <dnastack-limitations>` for limitations.
-
-[8] Does not support some file-path based imports. See :ref:`Terra
+[7] Does not support some file-path based imports. See :ref:`Terra
 Limitations <terra-limitations>` for limitations.
 
-[9] Gets workflow content directly from GitHub. See :ref:`Nextflow Limitations <nextflow-limitations>` for details.
+[8] Gets workflow content directly from GitHub. See :ref:`Nextflow Limitations <nextflow-limitations>` for details.
 
-[10] All verified Dockstore WDL tools/workflows were tested successfully. However, we anticipate that more testing is needed for WDL workflows that use language features not contained within that dataset.
+[9] All verified Dockstore WDL tools/workflows were tested successfully. However, we anticipate that more testing is needed for WDL workflows that use language features not contained within that dataset.
 
-[11] Use the Dockstore CLI optional parameter --wdl-output-target which allows you to specify a remote path to provision output files to ex: s3://oicr.temp/testing-launcher/
+[10] Use the Dockstore CLI optional parameter --wdl-output-target which allows you to specify a remote path to provision output files to ex: s3://oicr.temp/testing-launcher/
 
 
 .. _converting-file-path-based-imports-to-public-http-s-based-imports-for-wdl:

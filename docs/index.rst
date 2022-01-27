@@ -76,6 +76,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    :maxdepth: 1
 
    advanced-topics/advanced-topics
+   advanced-topics/tools-vs-workflows
    advanced-topics/docker-registries
    advanced-topics/ways-to-register-tools
    advanced-topics/public-and-private-tools
@@ -85,7 +86,6 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    advanced-topics/guid-alias
    advanced-topics/set-up-file-provisioning-plugins
    advanced-topics/developing-file-provisioning-plugins
-   advanced-topics/tools-vs-workflows
    advanced-topics/advanced-features
    advanced-topics/docker-alternatives
    advanced-topics/snapshot-and-doi

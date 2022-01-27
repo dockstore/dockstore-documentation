@@ -22,6 +22,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
    dockstore-introduction
    Dockstore Blog <https://medium.com/dockstore>
+   changelog
    faq
    roadmap
 
@@ -112,13 +113,12 @@ Multi-platform: :doc:`AnVIL <launch-with/anvil-launch-with>` | :doc:`BioData Cat
    launch-with/cavatica-launch-with
    launch-with/cgc-launch-with
    launch-with/dnanexus-launch-with
-   launch-with/dnastack-launch-with
    launch-with/galaxy-launch-with
    launch-with/nextflow-tower-launch-with
    launch-with/terra-launch-with
 
 .. toctree::
-   :caption: End User Topics
+   :caption: End user topics
    :maxdepth: 1
 
    end-user-topics/end-user-topics
@@ -128,10 +128,28 @@ Multi-platform: :doc:`AnVIL <launch-with/anvil-launch-with>` | :doc:`BioData Cat
    end-user-topics/ORCID
 
 .. toctree::
-   :caption: Videos (Tutorials & Presentations)
+   :caption: Videos (tutorials & presentations)
    :maxdepth: 1
 
    videos
+
+Best practices guidelines
+-------------------------
+
+* Language-specific: :doc:`CWL <advanced-topics/best-practices/cwl-best-practices>` | :doc:`Nextflow <advanced-topics/best-practices/nfl-best-practices>` | :doc:`WDL <advanced-topics/best-practices/wdl-best-practices>`
+* :doc:`Best practices on Dockstore <advanced-topics/best-practices/best-practices-dockstore>`
+* :doc:`Best practices for secure and FAIR workflows <advanced-topics/best-practices/best-practices-secure-fair-workflows>`
+
+.. toctree::
+   :caption: Best Practices
+   :maxdepth: 1
+   :hidden:
+
+   advanced-topics/best-practices/cwl-best-practices
+   advanced-topics/best-practices/wdl-best-practices
+   advanced-topics/best-practices/nfl-best-practices
+   advanced-topics/best-practices/best-practices-dockstore
+   advanced-topics/best-practices/best-practices-secure-fair-workflows
 
 Advanced developer topics
 -------------------------
@@ -159,11 +177,6 @@ Advanced developer topics
 * :doc:`Using batch services (AWS, Azure, Google, and Consonance) <advanced-topics/batch-services>`
 * :doc:`Verified workflows and tools <advanced-topics/verification>`
 * :doc:`Organizations and collections <advanced-topics/organizations-and-collections>`
-* Best practices guidelines
-
-    * Language-specific: :doc:`Common Workflow Language (CWL) <advanced-topics/best-practices/cwl-best-practices>` | :doc:`Nextflow (NFL) <advanced-topics/best-practices/nfl-best-practices>` | :doc:`Workflow Descripton Language (WDL) <advanced-topics/best-practices/wdl-best-practices>`
-    * :doc:`Best practices on Dockstore <advanced-topics/best-practices/best-practices-dockstore>`
-    * :doc:`Best practices for secure and FAIR workflows <advanced-topics/best-practices/best-practices-secure-fair-workflows>`
 
 .. Purposely not including the AWS and Azure batch links as the batch-services one links to them and is pretty short so they are easy to find. I would even argue for removing them from the sidebar or making them a subfolder of batch-services.
 .. Purposely not including "posting zips" as it is depreciated, but it is still in the sidebar
@@ -193,11 +206,6 @@ Advanced developer topics
    advanced-topics/posting-zips
    advanced-topics/verification
    advanced-topics/organizations-and-collections
-   advanced-topics/best-practices/cwl-best-practices
-   advanced-topics/best-practices/wdl-best-practices
-   advanced-topics/best-practices/nfl-best-practices
-   advanced-topics/best-practices/best-practices-dockstore
-   advanced-topics/best-practices/best-practices-secure-fair-workflows
 
 .. toctree::
    :caption: Extras
@@ -210,13 +218,7 @@ Advanced developer topics
    user-created
 
 .. toctree::
-   :caption: Changelog
-   :maxdepth: 1
-
-   changelog
-
-.. toctree::
-   :caption: News and Events
+   :caption: News and events
    :maxdepth: 1
    :glob:
    :titlesonly:
@@ -277,12 +279,7 @@ Advanced developer topics
 
 .. centered:: Works With
 
-.. centered:: |DnaStackLink|_ |imagespace| |SevenBridgesLink|_ |imagespace| |TerraLink|_
-
-.. |DnaStackLink| image:: /assets/images/affiliations/dnastack.png
-    :alt: dnastack
-    :height: 65px
-.. _DnaStackLink: https://dnastack.com/
+.. centered:: |SevenBridgesLink|_ |imagespace| |TerraLink|_
 
 .. |SevenBridgesLink| image:: /assets/images/affiliations/sevenbridges.png
     :alt: sevenbridges

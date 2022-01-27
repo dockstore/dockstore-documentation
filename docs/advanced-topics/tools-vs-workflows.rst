@@ -1,9 +1,9 @@
-Tools versus Workflows: Detailed Comparison
-===========================================
+Tools vs Workflows: Detailed Comparison
+=======================================
 
 
-Comparison of Tools and Workflows
----------------------------------
+Overview
+--------
 
 When Dockstore was created, CWL was the first descriptor language we supported. CWL has a very clear distinction between a tool and a workflow.
 However, our definition for each does not completely align with the language's specification.

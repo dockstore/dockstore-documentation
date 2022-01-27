@@ -1,5 +1,5 @@
-Creating Snapshots and Requesting DOIs
-=============================================
+Creating Snapshots & Requesting DOIs
+====================================
 
 Introduction
 ------------------

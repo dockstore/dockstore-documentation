@@ -41,8 +41,6 @@ Dockstore does not support registration of these tools.
 +------------------------+------------------------------------------+-------------------------------------------------+
 | Dockstore Support      | Tool                                     | Workflow                                        |
 +========================+==========================================+=================================================+
-| Desciptor File         |  Just one file (ie, one .wdl file)       |  Can be multiple files (ie, ten .wdl files)     |
-+------------------------+------------------------------------------+-------------------------------------------------+
 | "Launch with" support  |  Only via Dockstore CLI                  |  Dockstore CLI & "launch with" buttons on entry |
 +------------------------+------------------------------------------+-------------------------------------------------+
 | Versioning             |  Based off of image's tags               |  Based off of branches/tags from Git repository,|

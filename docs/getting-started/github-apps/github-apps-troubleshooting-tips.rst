@@ -91,10 +91,6 @@ It is saying that the workflow name ``single workflow`` is invalid. The workflow
 If you're having trouble finding the relevant logs, try searching for the name of your repository by using the filter on the upper left. You can also sort the rows by clicking on a column heading.
 For example, if you click the ``Success`` column heading once, it will list all the events that failed first.
 
-Can I use GitHub Apps to register tools?
-------------------------------------------
-The Dockstore GitHub App currently only supports Workflows and Services.
-
 Why was a new workflow registered instead of migrating my existing one?
 --------------------------------------------------------------------------
 ..

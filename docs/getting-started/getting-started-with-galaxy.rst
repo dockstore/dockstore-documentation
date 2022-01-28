@@ -92,7 +92,7 @@ Otherwise follow the instructions for :doc:`workflow registration. <dockstore-wo
 
 See Also
 --------
-- :doc:`CWL <getting-started-with-cwl>`
+- :doc:`CWL <getting-started-with-cwlsss>`
 - :doc:`WDL <getting-started-with-wdl>`
 - :doc:`Nextflow <getting-started-with-nextflow>`
 - :doc:`Language Support <../end-user-topics/language-support>`

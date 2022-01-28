@@ -22,7 +22,8 @@ Before deciding to migrate your existing tools, consider the following differenc
 
 If you're familiar with the process of :doc:`migrating your existing workflows to use GitHub Apps <migrating-workflows-to-github-apps>`, note that the migration process for tools is different 
 because of these fundamental differences between existing tools and GitHub App tools. The migration process for tools will not convert your existing tool into a GitHub App tool.
-Instead, you will be creating a new GitHub App tool, then deleting your existing tool. 
+Instead, you will be creating a new GitHub App tool, then either deleting your existing tool or providing a link to your new GitHub App tool from your old tool. You may wish to consider the
+the latter if you have users that have bookmarked it or if you have papers that link to the old tool.
 
 GitHub App Installation
 -----------------------
@@ -52,7 +53,7 @@ Let's say we have the following CWL tool registered on Dockstore that came from 
 .. figure:: /assets/images/docs/single-tool-to-migrate.png
    :alt: Tool to Migrate
 
-As noted in our other documentation, create a ``/.dockstore.yml`` file in the root directory of the branch you want to migrate (in this example, it's the master branch) in your repository. The file should look like the following
+As noted in our other documentation, create a ``/.dockstore.yml`` file in the root directory of the branch you want to migrate (in this example, it's the master branch) in your repository. The file should look like the following:
 
 .. code:: yaml
 
@@ -69,9 +70,25 @@ The information above was filled out using the following:
 - ``primaryDescriptorPath`` is from ``CWL Path`` or ``WDL Path``, depending on the ``subclass``. 
 - ``testParameterFiles`` is from ``CWL Test Parameter File Path`` or ``WDL Test Parameter File Path``, depending on the ``subclass``.
 
-.. note:: 
-    Existing Dockstore tools can be described in two languages, CWL and WDL, but GitHub App tools can only be described in one language. If your existing tool is described in two languages, you can either pick one language
-    or register two GitHub App tools, one for each language.
+Existing Dockstore tools can be described in two languages, CWL and WDL, but GitHub App tools can only be described in one language. If your existing tool is described in two languages, you can either pick one language
+or register two GitHub App tools, one for each language. This can be accomplished using one ``.dockstore.yml``. It may look like the following:
+
+.. code:: yaml
+
+   version: 1.2
+   tools:
+      - subclass: CWL
+        primaryDescriptorPath: /Dockstore.cwl
+        testParameterFiles:
+            - /test.json
+      - subclass: WDL
+        primaryDescriptorPath: /Dockstore.wdl
+        testParameterFiles:
+            - /test.json
+        name: wdl-tool
+
+.. note::
+   The ``name`` field must be filled out for the second tool to ensure that the tool paths are unique.
 
 During the original registration for your tool, you may have filled out the ``Tool Name`` field shown in the picture below.
 
@@ -79,8 +96,8 @@ During the original registration for your tool, you may have filled out the ``To
    :alt: Tool name field
    :width: 60 %
 
-This field is required when you want to register multiple tools from the same repo, but you may have filled it out for other reasons. To check if the tool
-you want to migrate has a tool name, select the tool and look at the title on top as shown in the picture below.
+This field is required when you want to register multiple tools from the same repo or provide multiple languages for your tool, but you may have filled it out for other reasons. 
+To check if the tool you want to migrate has a tool name, select the tool and look at the title on top as shown in the picture below.
 
 The title consists of:
 ``<image registry>/<organization name>/<repository name>/<optional tool name>:<version name>``
@@ -123,8 +140,8 @@ Your ``/.dockstore.yml`` would look like the following:
             - /test.cwl.json
         name: optional-name
 
-Deleting Your Existing Tool
----------------------------
+Archiving or Deleting Your Existing Tool
+----------------------------------------
 
 Once you've adding a ``.dockstore.yml`` to the desired branch of your repository, you should see a new tool appear on your ``/my-tools`` page. The tool path will start with ``github.com`` and 
 you should see that the ``Tool Information`` section looks a bit different from your existing tool.

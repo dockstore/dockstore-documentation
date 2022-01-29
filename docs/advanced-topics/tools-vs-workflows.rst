@@ -14,7 +14,7 @@ Should I write a tool or a workflow?
 .. hint::
     We generally **discourage** people from writing/registering WDL tools and may depreciate them in the future.
 
-Dockstore tools are more associated with creating/owning Docker images that are used in conjunction with a descriptor language, and Dockstore workflows are more closely tied to the descriptor files themselves. If you control the Docker image being used by your CWL program, and want verisoning to be based upon that images tags, you should probably write a tool. If you do not control the Docker image being used, and/or are not writing in CWL, you should probably write a workflow. Of course, everyone's use case is different. We encourage you to look around Dockstore for inspiration for your next bioinformatics project.
+Dockstore tools are more associated with creating/owning Docker images that are used in conjunction with a descriptor language, and Dockstore workflows are more closely tied to the descriptor files themselves. If you control the Docker image being used by your CWL program, and want verisoning to be based upon that image's tags, you should probably write a tool. If you do not control the Docker image being used, and/or are not writing in CWL, you should probably write a workflow. Of course, everyone's use case is different. We encourage you to look around Dockstore for inspiration for your next bioinformatics project.
 
 Overview
 --------
@@ -35,7 +35,7 @@ Overview
 +------------------------+------------------------------------------+-------------------------------------------------+
 
 \* There are tools that make up Galaxy workflows from the Galaxy toolbox or ToolShed.
-Dockstore does not support registration of these tools.
+Dockstore currently does not support registration of these tools.
 
 
 +------------------------+------------------------------------------+-------------------------------------------------+

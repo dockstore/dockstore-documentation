@@ -6,7 +6,7 @@ Tools vs Workflows: Detailed Comparison
 
 History
 -------
-When Dockstore was created, CWL was the first descriptor language we supported. CWL has a very clear distinction between a tool and a workflow. However, our definition for each does not completely align with the language's specification -- strictly speaking, a CWL CommandLineTool does not require a Docker image, but we require tools to be associated with a Docker image on Dockstore. Furthermore, while other descriptor languages do not have separate concepts for tools and workflows, we still maintain a distinction between a tool and a workflow for WDL for legacy reasons.
+When Dockstore was created, CWL was the first descriptor language we supported. CWL has a very clear distinction between a tool and a workflow. However, our definition for each does not completely align with the language's specification -- strictly speaking, a CWL CommandLineTool does not require a Docker image, but we require tools to be associated with a Docker image on Dockstore. Furthermore, while WDL does not have separate concepts for tools and workflows, we still maintain a distinction between a tool and a workflow for WDL for legacy reasons.
 
 
 Should I write a tool or a workflow?
@@ -19,20 +19,20 @@ Dockstore tools are more associated with creating/owning Docker images that are 
 Overview
 --------
 
-+------------------------+------------------------------------------+-------------------------------------------------+
-| Language               | Tool                                     | Workflow                                        |
-+========================+==========================================+=================================================+
-| CWL                    |  - Class: CommandLineTool                |  - Class: Workflow                              |
-|                        |  - Dockerfile for the tool's image       |  - No Dockerfile required                       |
-+------------------------+------------------------------------------+-------------------------------------------------+
-| WDL                    |  - One task that runs in a Docker image  |  - ≥1 task, which could run in Docker image     |
-|                        |  - A workflow section that runs the task |  - A workflow section that runs the task(s)     |
-|                        |  - The Dockerfile for the task's image   |  - No Dockerfile required                       |
-+------------------------+------------------------------------------+-------------------------------------------------+
-| Nextflow               | N/A                                      | Any valid Nextflow workflow                     |
-+------------------------+------------------------------------------+-------------------------------------------------+
-| Galaxy                 | N/A*                                     | Any valid Galaxy workflow                       |
-+------------------------+------------------------------------------+-------------------------------------------------+
++------------------------+----------------------------------------------+-----------------------------------------------------+
+| Language               | Tool                                         | Workflow                                            |
++========================+==============================================+=====================================================+
+| CWL                    |  - Class: CommandLineTool                    |  - Class: Workflow                                  |
+|                        |  - Dockerfile for the tool's image           |  - No Dockerfile required                           |
++------------------------+----------------------------------------------+-----------------------------------------------------+
+| WDL                    |  - One task that runs in a Docker container  |  - ≥1 task, which could run in Docker container     |
+|                        |  - A workflow section that runs the task     |  - A workflow section that runs the task(s)         |
+|                        |  - The Dockerfile for the task's image       |  - No Dockerfile required                           |
++------------------------+----------------------------------------------+-----------------------------------------------------+
+| Nextflow               | N/A                                          | Any valid Nextflow workflow                         |
++------------------------+----------------------------------------------+-----------------------------------------------------+
+| Galaxy                 | N/A*                                         | Any valid Galaxy workflow                           |
++------------------------+----------------------------------------------+-----------------------------------------------------+
 
 \* There are tools that make up Galaxy workflows from the Galaxy toolbox or ToolShed.
 Dockstore currently does not support registration of these tools.
@@ -53,7 +53,7 @@ What about workflows that run in Docker containers?
 ---------------------------------------------------
 
 Workflow descriptor files do not require a Docker container. That being said, you can still specify external Docker images
-within the descriptor files. Each task (WDL) or step (CWL) can specify a Docker image, which might be totally different from the Docker image used by a previous task/step in the workflow. Because of this, workflows registered on Dockstore that reference Docker image(s) will still follow versioning from GitHub, instead of versioning based on the tags of the Docker image(s).
+within the descriptor files, and doing so is generally recommended. Each task (WDL) or step (CWL) can specify a Docker image, which might be totally different from the Docker image used by a previous task/step in the workflow. Because of this, workflows registered on Dockstore that reference Docker image(s) will still follow versioning from GitHub, instead of versioning based on the tags of the Docker image(s).
 
 .. hint::
     The Cromwell execution engine requires that WDL task specify a Docker image when running on GCP or AWS backends, including Terra. Therefore, if your WDL workflow needs to run on Terra, make sure that each task uses the Docker runtime attribute. For more information see the `Cromwell docs <https://cromwell.readthedocs.io/en/stable/RuntimeAttributes/#docker>`_.

@@ -2,19 +2,19 @@ Tools vs Workflows: Detailed Comparison
 =======================================
 
 .. tip::
-  Generally speaking, if you care more about the Docker image than the description file, and are using CWL, you are dealing with a tool. If you care more about the description file, you are dealing with a workflow.
+  Generally speaking, if you care more about the Docker image than the descriptor file, and are using CWL, you are dealing with a tool. If you care more about the descriptor file, you are dealing with a workflow.
 
 History
 -------
-When Dockstore was created, CWL was the first descriptor language we supported. CWL has a very clear distinction between a tool and a workflow. However, our definition for each does not completely align with the language's specification -- strictly speaking, a CWL CommandLineTool does not require a Docker image, but we require tools to be associated with a Docker image on Dockerstore. Furthermore, while other descriptor languages do not have separate concepts for tools and workflows, we still maintain a distinction between a tool and a workflow for WDL for legacy reasons.
+When Dockstore was created, CWL was the first descriptor language we supported. CWL has a very clear distinction between a tool and a workflow. However, our definition for each does not completely align with the language's specification -- strictly speaking, a CWL CommandLineTool does not require a Docker image, but we require tools to be associated with a Docker image on Dockstore. Furthermore, while other descriptor languages do not have separate concepts for tools and workflows, we still maintain a distinction between a tool and a workflow for WDL for legacy reasons.
 
 
 Should I write a tool or a workflow?
 ------------------------------------
 .. hint::
-    We generally **discourage** people from writing/registering WDL tools and may depreciate them in the future.
+    We generally **discourage** people from writing/registering WDL tools and may deprecate them in the future.
 
-Dockstore tools are more associated with creating/owning Docker images that are used in conjunction with a descriptor language, and Dockstore workflows are more closely tied to the descriptor files themselves. If you control the Docker image being used by your CWL program, and want verisoning to be based upon that image's tags, you should probably write a tool. If you do not control the Docker image being used, and/or are not writing in CWL, you should probably write a workflow. Of course, everyone's use case is different. We encourage you to look around Dockstore for inspiration for your next bioinformatics project.
+Dockstore tools are more associated with creating/owning Docker images that are used in conjunction with a descriptor language, and Dockstore workflows are more closely tied to the descriptor files themselves. If you control the Docker image being used by your CWL program, and want versioning to be based upon that image's tags, you should probably write a tool. If you do not control the Docker image being used, and/or are not writing in CWL, you should probably write a workflow. Of course, everyone's use case is different. We encourage you to look around Dockstore for inspiration for your next bioinformatics project.
 
 Overview
 --------
@@ -78,7 +78,7 @@ Dockstore:
 - offers three different tool registration paths
 
 The most convenient way to register your tool and manage it on Dockstore is to have your image registered on Quay.io, your descriptor files hosted on GitHub, and choose our quick registration path.
-This gives Docktore the ability to automatically recognize the image's tags on Quay, link them back to the appropriate version on GitHub, and create the existing versions for you on Dockstore once you hit "Refresh".
+This gives Dockstore the ability to automatically recognize the image's tags on Quay, link them back to the appropriate version on GitHub, and create the existing versions for you on Dockstore once you hit "Refresh".
 If your image is registered on one of our other supported registries, you will have to register your tool manually. This means each version you want put on Dockstore must be added manually.
 To learn more about our different registration options, read the following tutorials:
 

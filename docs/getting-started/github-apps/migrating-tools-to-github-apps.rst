@@ -1,7 +1,7 @@
 Migrating Your Existing Tools to Use GitHub Apps
 ======================================================
 
-Dockstore 1.12.0 provides users with a way to keep their tools automatically updated (instead of needing to manually refresh) by using GitHub apps.
+Dockstore 1.12 provides users with a way to keep their tools automatically updated (instead of needing to manually refresh) by using GitHub apps.
 Here, we will go over how to migrate your existing Dockstore tools to use GitHub apps.  
 This tutorial assumes that you are are familiar with the  ``/.dockstore.yml`` file by having read our overview of :doc:`GitHub apps <github-apps>` and the :ref:`Registration With GitHub Apps` section 
 in our workflow registration document. Registering a new tool with GitHub Apps is very similar to registering a new workflow with GitHub Apps.
@@ -29,14 +29,24 @@ GitHub App Installation
 -----------------------
 
 The first step to migrating a tool is the same as adding a new tool via GitHub apps: install our Dockstore GitHub app onto your repository or
-organization. You do this by navigating to ``/my-tools``, clicking the ``+`` button on the left hand sidebar, selecting ``Register using GitHub Apps``, and then clicking
-``+ Manage Dockstore Installation on GitHub``. You'll then be redirected to GitHub where you can select which repositories can be accessed by the GitHub app.
+organization. 
+
+First, navigate to the ``My Tools`` page.
+
+.. image:: /assets/images/docs/my-tools.png
+
+Click the ``+`` button on the left hand sidebar.
 
 .. image:: /assets/images/docs/add-tool-button.png
    :width: 40 %
 
+
+Select ``Register using GitHub Apps``.
+
 .. image:: /assets/images/docs/register-tool-github-apps.png
    :width: 40 %
+
+Click ``+ Manage Dockstore Installation on GitHub``. You'll then be redirected to GitHub where you can select which repositories can be accessed by the GitHub app.
 
 .. image:: /assets/images/docs/manage-gh-app-installation.png
    :width: 40 %
@@ -88,7 +98,7 @@ or register two GitHub App tools, one for each language. This can be accomplishe
         name: wdl-tool
 
 .. note::
-   The ``name`` field must be filled out for the second tool to ensure that the tool paths are unique.
+   The ``name`` field must be filled out for at least one of the tools to ensure that the tool paths are unique.
 
 During the original registration for your tool, you may have filled out the ``Tool Name`` field shown in the picture below.
 
@@ -166,9 +176,16 @@ If you need to keep your old tool, then we recommend that you add a short descri
 You may also indicate whether your old tool will be kept up to date on Dockstore through refresh. Once a short description has been added, navigate to your old tool's page and click ``Refresh`` to 
 update your tool's description with the new information.
 
-If you do not need to keep your old tool, simply delete it by navigating to your old tool and pressing the ``Delete`` button in the upper right corner.
+If you do not need to keep your old tool, you can simply delete it. 
 
-.. figure:: /assets/images/docs/delete-tool.png
+To delete your old tool, navigate to the tool on your ``My Tools`` page. Published tools cannot be deleted. If your tool is published, press the ``Unpublish`` button in the upper right corner.
+
+.. figure:: /assets/images/docs/unpublish-tool-button.png
+   :alt: Unpublish tool button
+
+Once your tool is unpublished, you should see that the ``Delete`` button is enabled. Press the ``Delete`` button to delete your tool.
+
+.. figure:: /assets/images/docs/delete-tool-button.png
    :alt: Delete tool button
 
 .. seealso::

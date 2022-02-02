@@ -1,5 +1,5 @@
-Tools vs Workflows: Detailed Comparison
-=======================================
+Detailed Comparison of Tools and Workflows
+==========================================
 
 .. tip::
   Generally speaking, if you care more about the Docker image than the descriptor file, and are using CWL, you are dealing with a tool. If you care more about the descriptor file, you are dealing with a workflow.
@@ -56,7 +56,7 @@ Workflow descriptor files do not require a Docker container. That being said, yo
 within the descriptor files, and doing so is generally recommended. Each task (WDL) or step (CWL) can specify a Docker image, which might be totally different from the Docker image used by a previous task/step in the workflow. Because of this, workflows registered on Dockstore that reference Docker image(s) will still follow versioning from GitHub, instead of versioning based on the tags of the Docker image(s).
 
 .. hint::
-    The Cromwell execution engine requires that WDL task specify a Docker image when running on GCP or AWS backends, including Terra. Therefore, if your WDL workflow needs to run on Terra, make sure that each task uses the Docker runtime attribute. For more information see the `Cromwell docs <https://cromwell.readthedocs.io/en/stable/RuntimeAttributes/#docker>`_.
+    The Cromwell execution engine requires that each WDL task specify a Docker image when submitting tasks to Google Cloud (including Terra) or AWS Batch. Therefore, if your WDL workflow needs to run on Terra, make sure that each task uses the Docker runtime attribute. For more information see the `Cromwell docs <https://cromwell.readthedocs.io/en/stable/RuntimeAttributes/#docker>`_.
 
 
 Tools

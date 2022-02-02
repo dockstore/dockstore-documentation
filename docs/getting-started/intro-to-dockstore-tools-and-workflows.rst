@@ -10,7 +10,7 @@ vcf file --> convert to GDS file --> give each variant a unique ID --> a GDS fil
 
 In this case, the output of the conversion step is the input of the step that generates unique IDs, and the unique IDs step's output is the final output of the workflow: A GDS file with unique IDs. 
 
-Managing workflows can be complicated, as you may be chaining together many steps, each with different computational requirements. This where workflow languages step in, allowing us to create formal "tasks" which can each have their own computational settings or Docker container, and chaining the output of one task into the input of another task.
+Managing workflows can be complicated, as you may be chaining together many steps, each with different computational requirements. This is where workflow languages step in, allowing us to create formal "tasks" which can each have their own computational settings or Docker container, and chaining the output of one task into the input of another task.
 
 What is a tool?
 ---------------

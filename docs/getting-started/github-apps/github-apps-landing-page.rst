@@ -11,6 +11,7 @@ Check out the following guides to learn more:
 - :doc:`github-apps`
 - :ref:`Workflow Registration with GitHub Apps <Registration With GitHub Apps>`
 - :doc:`migrating-workflows-to-github-apps`
+- :doc:`migrating-tools-to-github-apps`
 - :doc:`Getting Started with Services </getting-started/getting-started-with-services>`
 - :doc:`github-apps-troubleshooting-tips`
 
@@ -24,4 +25,5 @@ Check out the following guides to learn more:
 
     github-apps
     Migrating Existing Workflows <migrating-workflows-to-github-apps>
+    Migrating Existing Tools <migrating-tools-to-github-apps>
     Troubleshooting and FAQ <github-apps-troubleshooting-tips>

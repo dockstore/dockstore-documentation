@@ -1,4 +1,4 @@
-sphinx
-myst-parser
-sphinx_rtd_theme
+sphinx==4.4.0
+myst-parser==0.16.1
+sphinx_rtd_theme==0.4.3
 git+https://github.com/pdavide/sphinxcontrib-discourse

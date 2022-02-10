@@ -24,9 +24,15 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    faq
    roadmap
 
+Getting Started
+---------------
+* :doc:`Intro to Dockstore Tools and Workflows </getting-started/intro-to-dockstore-tools-and-workflows>`
+* Getting started tutorial (Docker | CWL | WDL | Nextflow | Galaxy)
+
 .. toctree::
    :caption: Getting Started Guide
    :maxdepth: 1
+   :hidden:
 
    getting-started/intro-to-dockstore-tools-and-workflows
    getting-started/getting-started

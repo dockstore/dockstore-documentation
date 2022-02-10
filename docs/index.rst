@@ -10,77 +10,6 @@ If this is your first time learning about Dockstore, we recommend starting with 
 you to the core concepts of Dockstore, leaving you with a good understanding of the platform. However, if you are simply looking to launch tools and workflows, we recommend
 going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` or our `quickstart guide <https://dockstore.org/quick-start>`_.
 
-.. centered:: In Affiliation with
-
-.. centered:: |CollabLink|_ |imagespace| |OicrLink|_ |imagespace| |Ga4ghLink|_ |imagespace| |UcscLink|_
-
-.. |CollabLink| image:: /assets/images/affiliations/collaboratory.png
-    :alt: collaboratory
-    :height: 65px
-.. _CollabLink: https://cancercollaboratory.org
-
-.. |OicrLink| image:: /assets/images/affiliations/oicr.png
-    :alt: oicr
-    :height: 65px
-.. _OicrLink: https://oicr.on.ca/
-
-.. |Ga4ghLink| image:: /assets/images/affiliations/ga4gh.png
-    :alt: ga4gh
-    :height: 65px
-.. _Ga4ghLink: https://www.ga4gh.org
-
-.. |UcscLink| image:: /assets/images/affiliations/ucsc.png
-    :alt: ucsc
-    :height: 65px
-.. _UcscLink: https://ucscgenomics.soe.ucsc.edu/
-
-.. centered:: Workflow Languages
-
-.. centered:: |CwlLink|_ |imagespace| |WdlLink|_ |imagespace| |NflLink|_ |imagespace| |GalaxyLink|_
-
-.. |CwlLink| image:: /assets/images/affiliations/cwl.png
-    :alt: wdl
-    :height: 65px
-.. _CwlLink: https://www.commonwl.org/
-
-.. |WdlLink| image:: /assets/images/affiliations/wdl.png
-    :alt: wdl
-    :height: 65px
-.. _WdlLink: https://openwdl.org/
-
-.. |NflLink| image:: /assets/images/affiliations/nfl.png
-    :alt: nextflow
-    :height: 65px
-.. _NflLink: https://www.nextflow.io/
-
-.. |GalaxyLink| image:: /assets/images/affiliations/galaxy.png
-    :alt: galaxy
-    :height: 65 px
-.. _GalaxyLink: https://galaxyproject.org/
-
-.. centered:: Works With
-
-.. centered:: |DnaStackLink|_ |imagespace| |SevenBridgesLink|_ |imagespace| |TerraLink|_
-
-.. |DnaStackLink| image:: /assets/images/affiliations/dnastack.png
-    :alt: dnastack
-    :height: 65px
-.. _DnaStackLink: https://dnastack.com/
-
-.. |SevenBridgesLink| image:: /assets/images/affiliations/sevenbridges.png
-    :alt: sevenbridges
-    :height: 45px
-.. _SevenBridgesLink: https://www.sevenbridges.com/
-
-.. |TerraLink| image:: /assets/images/affiliations/terra.png
-    :alt: terra
-    :height: 75px
-.. _TerraLink: https://terra.bio/
-
-.. |imagespace| unicode:: U+00A0 U+00A0 U+00A0 U+00A0 U+00A0 .. non-breaking spaces between logo images
-
-
-
 .. toctree::
    :maxdepth: 1
 
@@ -200,4 +129,81 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
    news
    news/*
- 
+
+
+.. centered:: In Affiliation with
+
+.. centered:: |CollabLink|_ |imagespace| |OicrLink|_ |imagespace| |Ga4ghLink|_ |imagespace| |UcscLink|_
+
+.. |CollabLink| image:: /assets/images/affiliations/collaboratory.png
+    :alt: collaboratory
+    :height: 65px
+.. _CollabLink: https://cancercollaboratory.org
+
+.. |OicrLink| image:: /assets/images/affiliations/oicr.png
+    :alt: oicr
+    :height: 65px
+.. _OicrLink: https://oicr.on.ca/
+
+.. |Ga4ghLink| image:: /assets/images/affiliations/ga4gh.png
+    :alt: ga4gh
+    :height: 65px
+.. _Ga4ghLink: https://www.ga4gh.org
+
+.. |UcscLink| image:: /assets/images/affiliations/ucsc.png
+    :alt: ucsc
+    :height: 65px
+.. _UcscLink: https://ucscgenomics.soe.ucsc.edu/
+
+.. centered:: Workflow Languages
+
+.. centered:: |CwlLink|_ |imagespace| |WdlLink|_ |imagespace| |NflLink|_ |imagespace| |GalaxyLink|_
+
+.. |CwlLink| image:: /assets/images/affiliations/cwl.png
+    :alt: wdl
+    :height: 65px
+.. _CwlLink: https://www.commonwl.org/
+
+.. |WdlLink| image:: /assets/images/affiliations/wdl.png
+    :alt: wdl
+    :height: 65px
+.. _WdlLink: https://openwdl.org/
+
+.. |NflLink| image:: /assets/images/affiliations/nfl.png
+    :alt: nextflow
+    :height: 65px
+.. _NflLink: https://www.nextflow.io/
+
+.. |GalaxyLink| image:: /assets/images/affiliations/galaxy.png
+    :alt: galaxy
+    :height: 65 px
+.. _GalaxyLink: https://galaxyproject.org/
+
+.. centered:: Works With
+
+.. centered:: |DnaStackLink|_ |imagespace| |SevenBridgesLink|_ |imagespace| |TerraLink|_
+
+.. |DnaStackLink| image:: /assets/images/affiliations/dnastack.png
+    :alt: dnastack
+    :height: 65px
+.. _DnaStackLink: https://dnastack.com/
+
+.. |SevenBridgesLink| image:: /assets/images/affiliations/sevenbridges.png
+    :alt: sevenbridges
+    :height: 45px
+.. _SevenBridgesLink: https://www.sevenbridges.com/
+
+.. |TerraLink| image:: /assets/images/affiliations/terra.png
+    :alt: terra
+    :height: 75px
+.. _TerraLink: https://terra.bio/
+
+.. |imagespace| unicode:: U+00A0 U+00A0 U+00A0 U+00A0 U+00A0 .. non-breaking spaces between logo images
+
+.. centered:: |horizontalline| 
+
+.. |horizontalline| image:: /assets/images/hori_line.png
+    :alt: line
+    :height: 25 px
+.. _GalaxyLink: https://galaxyproject.org/
+

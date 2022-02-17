@@ -50,7 +50,9 @@ linkcheck_ignore = [
     'https://dockstore.org:8443/', 'https://support.terra.bio/hc/en-us/sections/360007274612/',
     'https://docs.snyk.io/getting-started/getting-started-snyk-products/getting-started-snyk-open-source',
     'https://software.broadinstitute.org/firecloud/',
-    'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works'	
+    'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works',
+    'launch-with/cavatica-launch-with.html', 'launch-with/dnanexus-launch-with.html', 'launch-with/cgc-launch-with.html',
+    'launch-with/galaxy-launch-with.html', 'launch-with/nextflow-tower-launch-with.html', 'launch-with/terra-launch-with.html'
     ]
 
 

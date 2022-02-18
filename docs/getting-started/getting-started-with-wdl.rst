@@ -12,21 +12,19 @@ Tutorial Goals
 
 -  Learn about the `Workflow Description Language
    (WDL) <https://openwdl.org/>`__
--  Create a basic WDL Tool which uses a Docker image
--  Run the Tool locally
--  Describe a sample parameterization of the Tool
--  Push the Tool onto GitHub
+-  Create a basic WDL workflow which uses a Docker image
+-  Run the workflow locally
+-  Describe a sample parameterization of the workflow
+-  Push the workflow onto GitHub
 
-Describe Your Tool in WDL
--------------------------
+Describe Your Workflow in WDL
+-----------------------------
 
-Besides CWL, you can also describe tools via the `WDL
-language <https://support.terra.bio/hc/en-us/sections/360007274612/>`__.
-WDL does not directly have the concept of a Tool built in to the
-language like CWL. Instead, we define a tool as a one task WDL workflow,
-where the task has an associated Docker image.
+.. note:: On Dockstore, a one-task WDL with an associated Docker image can be registered as a WDL Tool. However, unlike CWL, WDL does not directly have the concept of a Tool built into it, instead, "WDL Tools" are a Dockstore-only concept which exists for legacy reasons. We are gradually moving away from WDL Tools and encourage people to register their WDLs, whether they be single-task or not, as workflows. A workflow can still have an associated Docker image, as will be shown in this tutorial.
 
-We provide a hello world example as follows:
+`<https://support.terra.bio/hc/en-us/sections/360007274612/>`
+
+Workflow Description Language, usually referred to as WDL ("widdle"), is a workflow language with a task section and a workflow section. Like CWL, each task in a WDL workflow can take place in an instance of a Docker image. A basic WDL might look something like this:
 
 ::
 
@@ -40,9 +38,11 @@ We provide a hello world example as follows:
       command {
         echo 'hello ${name}!'
       }
+      
       output {
         File response = stdout()
       }
+      
       runtime {
        docker: 'ubuntu:latest'
       }
@@ -52,11 +52,9 @@ We provide a hello world example as follows:
       call hello
     }
 
-The runtime section of a task allows you to use a docker image to run
+The runtime section of a task allows you to use a Docker image to run
 the task in. In this example we use the basic `Ubuntu
-image <https://hub.docker.com/_/ubuntu/>`__. This image should match the
-Dockerfile that you register on Dockstore alongside your WDL descriptor
-files.
+image <https://hub.docker.com/_/ubuntu/>`__.
 
 Again, we provide an example from the
 `dockstore-tool-bamstats <https://github.com/CancerCollaboratory/dockstore-tool-bamstats/blob/develop/Dockstore.wdl>`__
@@ -85,9 +83,6 @@ repository:
             memory: mem_gb + "GB"
         }
 
-        meta {
-            author: "Andrew Duncan"
-        }
     }
 
     workflow bamstatsWorkflow {
@@ -97,15 +92,27 @@ repository:
         }
 
         call bamstats { input: bam_input=bam_input, mem_gb=mem_gb }
+
+        meta {
+            author: "Andrew Duncan"
+            email: "andrew@foobar.com"
+            description: "## Bamstats \n This is the Bamstats workflow.\n\n Adding documentation improves clarity."
+        }
     }
 
 Let us break it down piece by piece.
 
+.. note:: Note that the top line represents the version of WDL spec being used, not necessarily the version of the workflow.
+
 You'll notice that there are two main sections of the file. First is a
 task section where we define the task level inputs and outputs of a
-given step, along with the runtime. Next, there is a workflow section
+given step, along with the runtime attributes. You can have multiple task
+sections in a WDL, as each one represents a single step. Next, there is a workflow section
 where we define workflow level inputs and outputs, and the calling of
-the task.
+the task(s).
+
+Task
+^^^^
 
 At the top of the task section we define two inputs: the input bam file
 and the amount of memory in GB to use to run the task. This looks very
@@ -123,12 +130,25 @@ on the command line. We can also pass the command parameters based on
 the inputs described above. Here we pass the amount of memory to use and
 the input BAM file to a script from the
 quay.io/collaboratory/dockstore-tool-bamstats:1.25-6\_1.0 docker image.
+When referencing variables from the input section in the command section,
+you generally refer to them using a dollar sign and curly braces.
 
 ::
 
     command {
         bash /usr/local/bin/bamstats ${mem_gb} ${bam_input}
     }
+
+Sometimes, you will see command sections defined using <<<three chevrons>>>
+rather than {curly braces}. In that scenario, variables are referenced a
+little differently, using tildes (~) instead of dollar signs. This version
+can be helpful when dealing with complicated BASH commands.
+
+::
+
+    command <<<
+        bash /usr/local/bin/bamstats ~{mem_gb} ~{bam_input}
+    >>>
 
 The output section defines the expected output for the task. Here the
 output is a ZIP file containing the results of the script.
@@ -150,12 +170,32 @@ much memory the Docker container should use.
         memory: mem_gb + "GB"
     }
 
+Workflow
+^^^^^^^^
+
+The workflow section here consists of two main parts. The first section
+is an input section, where we define the input BAM file and the memory
+to use.
+
+::
+
+    File bam_input
+    Int mem_gb
+
+Next, there is the call section where we actually call the tasks.
+Without this section our tool will not do anything. In this section we
+call the bamstats workflow, and pass it the two required parameters.
+
+::
+
+    call bamstats { input: bam_input=bam_input, mem_gb=mem_gb }
+
 Finally, we have a metadata section where we can store key value pairs.
 It is free-form, so we could put anything here. Dockstore is able to
 pick up author, email, and description if they are defined here. All
 metadata values must be a single-line string.
 
-The description field can be used to add documentation and Dockstore
+The description field can be used to add documentation which Dockstore
 will treat the string as markdown, rendering accordingly. When writing a
 description in markdown that requires newlines, specify the newlines
 with :raw-latex:`\n `or specify a blank line with
@@ -180,23 +220,6 @@ your workflow's landing page:
 
    wdl\_metadata
 
-The workflow section here consists of two main parts. The first section
-is an input section, where we define the input BAM file and the memory
-to use.
-
-::
-
-    File bam_input
-    Int mem_gb
-
-Finally there is the call section where we actually call the tasks.
-Without this section our tool will not do anything. In this section we
-call the bamstats tool, and pass it the two required parameters.
-
-::
-
-    call bamstats { input: bam_input=bam_input, mem_gb=mem_gb }
-
 .. _Testing WDL Locally:
 
 Testing Locally
@@ -214,46 +237,11 @@ Setting Up the Dockstore CLI
 The first thing I'll do is
 `setup the Dockstore CLI locally <https://dockstore.org/quick-start>`__.
 This will have me install all of the dependencies needed to run the
-Dockstore CLI on my local machine.
+Dockstore CLI on my local machine. We will be using the Dockstore CLI, which
+includes a version of the widely-used WDL executor Cromwell, to run WDL
+workflows on our local machine.
 
-Although not strictly required, it's a good idea to set a concurrent-job-limit when running locally. This is because Cromwell, when running locally, loses the ability to set compute resources within what is specified in a task's runtime attributes. As such, the local version of Cromwell sometimes uses too many resources when running scattered tasks, causing the task to get sigkilled or for Docker to lock up. Of course, there is a tradeoff: If you set concurrent-job-limit, tests involving scattered tasks may execute slower as less instances of a scattered task will run in parallel.
-
-.. tip::  If a Docker lockup happens, you will notice tasks do not progress beyond WaitingForReturnCode and you will be temporarily unable to use Docker on your OS. This can be resolved by restarting Docker on your machine.
-
-The easiest way to avoid these issues is to set up a Cromwell configuration file that sets concurrent-job-limit.
-
-1. Download `this template file <https://github.com/broadinstitute/cromwell/blob/develop/cromwell.example.backends/cromwell.examples.conf>`__ and name it ``.cromwell.conf``
-2. Uncomment ``#default = "LocalExample"`` in the ``backend`` section in order to override the default local Cromwell setup with what is in the configuration file.
-3. Under ``LocalExample``, under ``config``, uncomment the setting for ``concurrent-job-limit`` and set it to 1. Note that this is an integer, not a boolean; you could set it to 2 if you want to up to two jobs to run at once.  
-
-The relevent part of your configuration file should now look like this, if we exclude the other providers that come before LocalExample:
-
-::
-
-    backend {
-    # Override the default backend.
-    default = "LocalExample"
-
-    # The list of providers.
-    providers {
-       
-        # Define a new backend provider.
-        LocalExample {
-            # The actor that runs the backend. In this case, it's the Shared File System (SFS) ConfigBackend.
-            actor-factory = "cromwell.backend.impl.sfs.config.ConfigBackendLifecycleActorFactory"
-          
-            # The backend custom configuration.
-            config {
-                # Optional limits on the number of concurrent jobs
-                concurrent-job-limit = 1
-
-You may optionally edit ``root = "cromwell-executions"`` to something else if you wish to be certain that your configuration is getting used, as it will change the name of the executions folder. In any case, close that file and add the following line to ~/.dockstore/config
-
-::
-
-    cromwell-vm-options: -Dconfig.file=<absolute-path-to-your-cromwell-config>
-
-You're now all set up -- the Dockstore CLI will use this configuration file, and will only allow one instance of a scattered task to run at once.
+The workflow we are writing today does not use `scattered tasks <https://github.com/openwdl/wdl/blob/main/versions/1.0/SPEC.md#scatter>`__, but scattered tasks are common in more advanced workflows. Unfortunately, Cromwell (which the Dockstore CLI uses) sometimes uses too many resources when running scattered tasks on a local machine, causing several issues that would not occur when running workflows on the cloud. The easiest way to avoid these issues is to :doc:`set up a Cromwell configuration file that provides a concurrent-job-limit </advanced-topics/dockstore-cli/local-cromwell-config>`. This file is not required to run the Dockstore CLI, so you do not need to do this to complete this tutorial, although we do recommend setting it up eventually if you will be working with WDLs that have scattered tasks in order to increase stability.
 
 Set Up Local Data
 ^^^^^^^^^^^^^^^^^
@@ -276,14 +264,14 @@ it really doesn't matter. I'm using a sample I checked in already:
       "bamstatsWorkflow.mem_gb": "4"
     }
 
-.. tip::  The Dockstore CLI can handle inputs with HTTPS, FTP, GS, and S3 URLs but that's beyond the scope of this tutorial.
+.. tip::  The Dockstore CLI can handle inputs with HTTPS, FTP, GS, and S3 URLs, but that's beyond the scope of this tutorial.
 
 You can see in the above I give the relative path to the input under
 ``bam_input`` and the memory in GB that I want to use for the task.
 
-Run Your Tool
-^^^^^^^^^^^^^
-At this point, let's run the tool with our local inputs and outputs via
+Run Your Workflow
+^^^^^^^^^^^^^^^^^
+At this point, let's run the workflow with our local inputs and outputs via
 the JSON config file:
 
 ::

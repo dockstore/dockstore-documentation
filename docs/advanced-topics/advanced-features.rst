@@ -230,7 +230,7 @@ provide the location of a Cromwell config file and memory pool requirements to t
 
 ::
 
-    cromwell-vm-options: -Dconfig.file=/Users/mydir/cromwell.conf, -Xms256m, -Xmx2048m
+    cromwell-vm-options: -Dconfig.file=<insert-absolute-path-to-your-cromwell-config-file-here>, -Xms256m, -Xmx2048m
 
 
 

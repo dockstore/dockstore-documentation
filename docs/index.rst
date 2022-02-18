@@ -235,22 +235,22 @@ Advanced developer topics
 
 .. |CollabLink| image:: /assets/images/affiliations/collaboratory.png
     :alt: collaboratory
-    :height: 65px
+    :height: 55px
 .. _CollabLink: https://cancercollaboratory.org
 
 .. |OicrLink| image:: /assets/images/affiliations/oicr.png
     :alt: oicr
-    :height: 65px
+    :height: 55px
 .. _OicrLink: https://oicr.on.ca/
 
 .. |Ga4ghLink| image:: /assets/images/affiliations/ga4gh.png
     :alt: ga4gh
-    :height: 65px
+    :height: 55px
 .. _Ga4ghLink: https://www.ga4gh.org
 
 .. |UcscLink| image:: /assets/images/affiliations/ucsc.png
     :alt: ucsc
-    :height: 65px
+    :height: 55px
 .. _UcscLink: https://ucscgenomics.soe.ucsc.edu/
 
 .. centered:: Workflow Languages

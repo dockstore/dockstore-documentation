@@ -1,5 +1,5 @@
-Launching Tools and Workflows with the Dockstore CLI
-====================================================
+Dockstore CLI
+=============
 
 Tutorial Goals
 --------------

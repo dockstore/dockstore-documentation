@@ -103,7 +103,7 @@ Multi-platform: :doc:`AnVIL <launch-with/anvil-launch-with>` | :doc:`BioData Cat
 .. _TerraLaunchWith: launch-with/terra-launch-with.html
 
 .. toctree::
-   :caption: Launch
+   :caption: Launch Tools and Workflows
    :maxdepth: 1
    :hidden:
 

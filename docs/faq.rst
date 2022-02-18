@@ -1,13 +1,8 @@
 FAQ
 ===
 
-Contents:
-
-- :ref:`General Dockstore Questions <faq-header-general-dockstore-questions>`
-- :ref:`Dockstore CLI <faq-header-dockstore-cli>`
-- :ref:`GitHub Integration <faq-header-github-integration>`
-- :ref:`Permissions <faq-header-permissions>`
-- :ref:`Miscellaneous <faq-header-other>`
+.. contents:: Table of Contents
+  :local:
 
 .. _faq-header-general-dockstore-questions:
 

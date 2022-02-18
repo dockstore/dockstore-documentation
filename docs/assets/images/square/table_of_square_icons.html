@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Lato,proxima-nova,Helvetica Neue,Arial,sans-serif; background: #FFFFFF; color: #404040;}
+h1   {color: blue;}
+p    {color: green;}
+</style>
+<body>
+
+<h2>This document generates the image used on our index page, specifically the "launch with" page.</h2>
+<table>
+  <tr>
+    <td>&#xA0;&#xA0;&#xA0;<img src="cavatica_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
+    <td>&#xA0;&#xA0;&#xA0;<img src="cgc_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
+    <td>&#xA0;&#xA0;&#xA0;<img src="dnanexus_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
+    <td>&#xA0;&#xA0;&#xA0;<img src="galaxy_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
+    <td>&#xA0;&#xA0;&#xA0;<img src="nextflowtower_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
+    <td>&#xA0;&#xA0;&#xA0;<img src="../affiliations/terra.png" width="50">&#xA0;&#xA0;&#xA0;</td>
+  </tr>
+  <tr>
+    <td><center><style="color:blue;">Cavatica</center></td>
+    <td><center>CGC</center></td>
+    <td><center>DNAnexus</center></td>
+    <td><center>Galaxy</center></td>
+    <td><center>Nextflow</center></td>
+    <td><center>Terra</center></td>
+  </tr>
+  <tr>
+    <td><center></center></td>
+    <td><center></center></td>
+    <td><center></center></td>
+    <td><center></center></td>
+    <td><center>Tower</center></td>
+    <td><center></center></td>
+  </tr>
+</table>
+<p>Reasoning: Sphinx does not support putting figures (images with captions) side-by-side. But, we want to break up our index page with some images so it isn't just a wall of text. If we want to avoid using full-size logos (which have different sizes and aren't very neat when placed side by side, and some of them do not have high-res images easily available), we can use square logos. But we also want to make it clear what logo represents what launch-with partner, we ought to make an invisible table. We're rendering it in this page and then screenshotting it as an image, because doing this sort of thing in RST is a bit finicky.
+<p>In GIMP, we can then set guides via Image>Guides>New Guide (by percent) at the following horizontal values:
+<ul>
+  <li>16.67%
+  <li>33.34%
+  <li>50%
+  <li>66.67%
+  <li>83.34%
+</ul>
+<p>Then, we can split along those guides.
+</body>
+</html>

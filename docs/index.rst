@@ -113,6 +113,7 @@ Multi-platform: :doc:`AnVIL <launch-with/anvil-launch-with>` | :doc:`BioData Cat
    launch-with/cavatica-launch-with
    launch-with/cgc-launch-with
    launch-with/dnanexus-launch-with
+   launch-with/dnastack-launch-with
    launch-with/galaxy-launch-with
    launch-with/nextflow-tower-launch-with
    launch-with/terra-launch-with

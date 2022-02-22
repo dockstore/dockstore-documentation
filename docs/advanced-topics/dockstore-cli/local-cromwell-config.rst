@@ -1,3 +1,6 @@
+Setting Up Cromwell for Local Runs
+==================================
+
 Cromwell, when running locally, loses the ability to set compute resources within what is specified in a task's runtime attributes. This is a problem with scattered tasks, as by default, every instance of a scattered task may attempt to execute at the same time. As such, the local version of Cromwell sometimes uses too many resources when running scattered tasks, causing some or all instances of the scattered task to get [sigkilled](https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html). There is also the possability of concurrent instances of a scattered task locking up Docker for your operating system. 
 
 .. tip::  If a Docker lockup happens, you will notice tasks do not progress beyond WaitingForReturnCode and you will be temporarily unable to use Docker on your OS. This can be resolved by restarting Docker on your machine.

@@ -76,6 +76,8 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    :maxdepth: 1
    
    Installing the Dockstore CLI <https://dockstore.org/quick-start>
+   advanced-topics/dockstore-cli/dockstore-cli-faq
+   advanced-topics/dockstore-cli/local-cromwell-config
    advanced-topics/dockstore-cli/set-up-file-provisioning-plugins
    advanced-topics/dockstore-cli/developing-file-provisioning-plugins
    advanced-topics/dockstore-cli/advanced-features

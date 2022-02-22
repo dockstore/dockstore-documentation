@@ -156,7 +156,7 @@ Advanced developer topics
 -------------------------
 .. include:: advanced-topics/advanced-topics.rst
 
-.. To get the above to format nicely, I made changes to advanced-topics/advanced-topics that make it no longer compatiable with the Table of Contents, so advanced-topics/advanced-topics will no longer show in the sidebar. I feel that is a fair trade off.
+.. To get the above to format nicely, I made changes to advanced-topics/advanced-topics that make it no longer compatible with the Table of Contents, so advanced-topics/advanced-topics will no longer show in the sidebar. I feel that is a fair trade off.
 
 * :doc:`Docker registries <advanced-topics/docker-registries>`
 * :doc:`Different ways to register tools on Dockstore <advanced-topics/ways-to-register-tools>`
@@ -166,8 +166,8 @@ Advanced developer topics
 * :doc:`Aliases <advanced-topics/guid-alias>`
 * Dockstore CLI
 
-    * :doc:`Setting up file provising plugins <advanced-topics/set-up-file-provisioning-plugins>`
-    * :doc:`Developing file provising plugins <advanced-topics/developing-file-provisioning-plugins>`
+    * :doc:`Setting up file provisioning plugins <advanced-topics/set-up-file-provisioning-plugins>`
+    * :doc:`Developing file provisioning plugins <advanced-topics/developing-file-provisioning-plugins>`
     * :doc:`Advanced Dockstore CLI features <advanced-topics/advanced-features>`
 * :doc:`Docker alternatives <advanced-topics/docker-alternatives>`
 * Maximizing reproducibility

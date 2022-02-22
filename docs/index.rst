@@ -72,9 +72,20 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    end-user-topics/ORCID
 
 .. toctree::
+   :caption: Dockstore CLI
+   :maxdepth: 1
+   
+   Installing the Dockstore CLI <https://dockstore.org/quick-start>
+   advanced-topics/dockstore-cli/dockstore-cli-faq
+   advanced-topics/dockstore-cli/local-cromwell-config
+   advanced-topics/dockstore-cli/set-up-file-provisioning-plugins
+   advanced-topics/dockstore-cli/developing-file-provisioning-plugins
+   advanced-topics/dockstore-cli/advanced-features
+
+.. toctree::
    :caption: Advanced Developer Topics
    :maxdepth: 1
-
+   
    advanced-topics/advanced-topics
    advanced-topics/docker-registries
    advanced-topics/ways-to-register-tools
@@ -83,9 +94,6 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    advanced-topics/checker-workflow-trs
    advanced-topics/sharing-workflows
    advanced-topics/guid-alias
-   advanced-topics/set-up-file-provisioning-plugins
-   advanced-topics/developing-file-provisioning-plugins
-   advanced-topics/advanced-features
    advanced-topics/docker-alternatives
    advanced-topics/snapshot-and-doi
    advanced-topics/checksum-support

@@ -66,9 +66,17 @@ Getting Started
    getting-started/getting-started-with-services
    getting-started/github-apps/github-apps-landing-page
 
-Launching tools and workflows
------------------------------
-Multi-platform: :doc:`AnVIL <launch-with/anvil-launch-with>` | :doc:`BioData Catalyst <launch-with/bdcat-launch-with>` | :doc:`Dockstore CLI <launch-with/launch>`
+Launching tools and workflows from Dockstore
+--------------------------------------------
+Dockstore partners with several compute platforms, allowing you to export workflows into these platforms with the click of a button (or a taps of the keyboard, in the case of our CLI). In some cases, these partners are tied to specific multi-platform ecosystems, such as BioData Catalyst or the AnVIL Project. Click on the links below for more information.
+
+Ecosystems
+^^^^^^^^^^
+
+:doc:`AnVIL <launch-with/anvil-launch-with>` | :doc:`BioData Catalyst <launch-with/bdcat-launch-with>` | :doc:`Dockstore CLI <launch-with/launch>`
+
+Specific platforms
+^^^^^^^^^^^^^^^^^^
 
 .. centered:: |CavaticaLaunchWith|_ |CGCLaunchWith|_ |DnanexusLaunchWith|_ |GalaxyLaunchWith|_ |NextflowtowerLaunchWith|_ |TerraLaunchWith|_
 

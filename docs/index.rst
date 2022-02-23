@@ -21,6 +21,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    :maxdepth: 1
 
    dockstore-introduction
+   news
 
 .. toctree::
    :caption: Getting Started (Tutorial)
@@ -135,16 +136,6 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    :maxdepth: 1
 
    changelog
-
-.. toctree::
-   :caption: News and Events
-   :maxdepth: 1
-   :glob:
-   :titlesonly:
-   :reversed:
-
-   news
-   news/*
 
 .. toctree::
    :caption: System Status

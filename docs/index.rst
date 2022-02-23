@@ -24,6 +24,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    Dockstore Blog <https://medium.com/dockstore>
    changelog
    faq
+   news
    roadmap
 
 Getting Started
@@ -227,16 +228,10 @@ Advanced developer topics
    user-created
 
 .. toctree::
-   :caption: News and events
+   :caption: System Status
    :maxdepth: 1
-   :glob:
-   :titlesonly:
-   :reversed:
-   :hidden:
 
-   news
-   news/*
-
+   systemstatus
 
 .. centered:: In Affiliation with
 

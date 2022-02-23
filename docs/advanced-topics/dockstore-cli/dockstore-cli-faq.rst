@@ -1,6 +1,8 @@
 Dockstore CLI FAQ
 =================
 
+For general FAQs not related to the Dockstore CLI, please see :doc:`our main FAQ page <faq>`.
+
 How does launching with Dockstore CLI compare with cwltool?
 -----------------------------------------------------------
 
@@ -12,6 +14,18 @@ from the Dockstore website. We can also provision input and output files using H
 FTP, S3, and GCS. As of Release 1.12, the Dockstore CLI has support for running on `a WES server <https://github.com/ga4gh/workflow-execution-service-schemas>`__. We also have preliminary support for `Synapse <https://www.synapse.org/>`__ and the `ICGC Storage
 client <https://docs.icgc.org/download/guide/#score-client-usage>`__. Please see `file provisioning plugins <https://github.com/dockstore/dockstore-cli/tree/master/dockstore-file-plugin-parent>`__
 for more information on these two file transfer sources.
+
+.. _cromwell-docker-lockup:
+
+I was running a WDL locally, but some of my tasks returned 137 and/or now I cannot use Docker.
+----------------------------------------------------------------------------------------------
+
+This is a known issue with Cromwell, which the Dockstore CLI uses to launch WDL workflows. It is due to how Cromwell manages resources on a local machine, which it must do differently compared to running on the cloud. As such, it is much more likely to happen if you are running a computationally intensive scattered task, such as LD pruning 23 chromosomes where each chromosome is an instance of a scattered task. In these scenarios, Cromwell might lockup the Docker service. If a Docker lockup happens, you will notice tasks do not progress beyond WaitingForReturnCode and you will be temporarily unable to "spin up" any Docker containers, even outside of Cromwell. Thankfully, this state can be resolved by restarting the Docker service via the Docker Desktop dropdown, or entering ``service docker restart`` on the command line.
+
+Situations that cause Docker lockups tend to also result in some instances of scattered tasks getting `sigkilled <https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html>`__ by the operating system. You will know when this happens because the `rc` (return code) file will read 137.
+
+To prevent this from happening, we recommend setting up your Cromwell configuration file to limit how many scattered tasks run at once, and then setting up the Dockstore CLI to make use of that Cromwell configuration file. :doc:`A step-by-step tutorial is available here. </advanced-topics/dockstore-cli/local-cromwell-config>`
+
 
 The CLI is failing with Java 8
 ------------------------------

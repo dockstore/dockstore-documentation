@@ -1,11 +1,12 @@
-Setting Up Cromwell for Local Runs
-==================================
+Using a Cromwell config with the Dockstore CLI
+==============================================
 
-Cromwell, when running locally, loses the ability to set compute resources within what is specified in a task's runtime attributes. This is a problem with scattered tasks, as by default, every instance of a scattered task may attempt to execute at the same time. As such, the local version of Cromwell sometimes uses too many resources when running scattered tasks, causing some or all instances of the scattered task to get [sigkilled](https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html). There is also the possability of concurrent instances of a scattered task locking up Docker for your operating system. 
+Why set up a Cromwell configuration file?
+-----------------------------------------
 
-.. tip::  If a Docker lockup happens, you will notice tasks do not progress beyond WaitingForReturnCode and you will be temporarily unable to "spin up" any Docker containers, even outside of Cromwell. Thankfully, this can be resolved by restarting the Docker service via the Docker Desktop dropdown, or entering ``service docker restart`` on the command line.
+It is not necessary to set up a configuration file to use Cromwell or the Dockstore CLI, but advanced users may find some settings they may want to change. Additionally, setting up a Cromwell configuration file is the best way to avoid :ref:`Docker lockups and sigkilled tasks <cromwell-docker-lockup>` from happening when working with scattered tasks. Because avoiding those lockups is one of the more common use cases for setting up a Cromwell configuration file, we will focus on that specific use case here, but you can apply this to modify other Cromwell settings as needed.
 
-The easiest way to avoid these issues is to set up a Cromwell configuration file that sets concurrent-job-limit. Of course, there is a tradeoff: If you set a concurrent-job-limit, tests involving scattered tasks will execute slower as less instances of a scattered task will run in parallel. That being said, we still recommend setting this value when running on a local machine, as it makes Cromwell much more stable.
+To help keep scattered tasks from taking too many local resources, you can set up a Cromwell configuration file that sets a concurrent-job-limit. Of course, there is a tradeoff: If you set a concurrent-job-limit, tests involving scattered tasks will execute slower as less instances of a scattered task will run in parallel. That being said, we still recommend setting this value when running on a local machine, as it makes Cromwell much more stable.
 
 1. Download `this template file <https://github.com/broadinstitute/cromwell/blob/develop/cromwell.example.backends/cromwell.examples.conf>`__ and name it ``.cromwell.conf`` before placing it in your Users folder, ie ``/Users/ash/``, which is the same folder where ``.bashrc`` and other configuration files tend to go. If you are on Mac OS, you may get a notification about naming the file like this -- this is normal; Mac OS normally hides files that have a period at the start of the name (called "dot files") to prevent people from deleting important operating system files by accident. 
 2. Uncomment ``#default = "LocalExample"`` in the ``backend`` section in order to override the default local Cromwell setup with what is in the configuration file.
@@ -47,5 +48,5 @@ So, for example:
 You're now all set up -- the Dockstore CLI will use this configuration file, and will only allow one instance of a scattered task to run at once.
 
 How can I ensure the Dockstore CLI is using my Cromwell configuration file?
---------------------------------------------------------------------------
+---------------------------------------------------------------------------
 You may optionally edit ``root = "cromwell-executions"`` to something else if you wish to be certain that your configuration is getting used, as it will change the name of the executions folder, making it immediately clear that your config is being used. Might we suggest ``root = "dockstore-is-cool"``?

@@ -4,32 +4,14 @@ Dockstore CLI FAQ
 How does launching with Dockstore CLI compare with cwltool?
 -----------------------------------------------------------
 
-The Dockstore CLI has utilities to generate JSON parameter files from
+Under the hood, the Dockstore CLI evokes cwltool to launch CWL workflows. However, it adds additional features. Dockstore CLI has utilities to generate JSON parameter files from
 entries on Dockstore (``dockstore tool convert``).
 
 When launching tools, the Dockstore CLI makes it easy to specify entries
-from Dockstore. We can also provision input and output files using HTTP,
-FTP, and S3. We also have preliminary support for
-`Synapse <https://www.synapse.org/>`__ and the `ICGC Storage
-client <https://docs.icgc.org/download/guide/#score-client-usage>`__.
-Please see `file provisioning
-plugins <https://github.com/dockstore/dockstore-cli/tree/master/dockstore-file-plugin-parent>`__
+from the Dockstore website. We can also provision input and output files using HTTP,
+FTP, S3, and GCS. As of Release 1.12, the Dockstore CLI has support for running on `a WES server <https://github.com/ga4gh/workflow-execution-service-schemas>`__. We also have preliminary support for `Synapse <https://www.synapse.org/>`__ and the `ICGC Storage
+client <https://docs.icgc.org/download/guide/#score-client-usage>`__. Please see `file provisioning plugins <https://github.com/dockstore/dockstore-cli/tree/master/dockstore-file-plugin-parent>`__
 for more information on these two file transfer sources.
-
-The CLI is failing with Java 8
-------------------------------
-
-If you see the following error when running the Dockstore CLI, you need
-to upgrade your Java version:
-
-::
-
-    $ dockstore
-    Error: A JNI error has occurred, please check your installation and try again
-    Exception in thread "main" java.lang.UnsupportedClassVersionError: io/dockstore/client/cli/Client has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
-
-The Dockstore CLI as of 1.7.0 is compiled and tested using Java 11 due
-to the Java 8 EOL. You will need to upgrade from Java 8 to use the CLI.
 
 The CLI is failing with Java 8
 ------------------------------

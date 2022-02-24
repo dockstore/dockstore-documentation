@@ -69,7 +69,7 @@ Getting Started
 
 Launching tools and workflows from Dockstore
 --------------------------------------------
-Dockstore partners with several compute platforms, allowing you to export workflows into these platforms with the click of a button (or a taps of the keyboard, in the case of our CLI). In some cases, these partners are tied to specific multi-platform ecosystems, such as BioData Catalyst or the AnVIL Project. Click on the links below for more information.
+Dockstore partners with several compute platforms, allowing you to export workflows into these platforms with the click of a button (or a taps of the keyboard, in the case of our CLI). Click on the links below for more information.
 
 Cloud Partners
 ^^^^^^^^^^^^^^

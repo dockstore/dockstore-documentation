@@ -71,15 +71,15 @@ Launching tools and workflows from Dockstore
 --------------------------------------------
 Dockstore partners with several compute platforms, allowing you to export workflows into these platforms with the click of a button (or a taps of the keyboard, in the case of our CLI). In some cases, these partners are tied to specific multi-platform ecosystems, such as BioData Catalyst or the AnVIL Project. Click on the links below for more information.
 
-Ecosystems
-^^^^^^^^^^
+Cloud Partners
+^^^^^^^^^^^^^^
 
-:doc:`AnVIL <launch-with/anvil-launch-with>` | :doc:`BioData Catalyst <launch-with/bdcat-launch-with>` | :doc:`Dockstore CLI <launch-with/launch>`
+.. centered:: |AnVILLaunchWith|_ |CavaticaLaunchWith|_ |CGCLaunchWith|_ |DnanexusLaunchWith|_ |GalaxyLaunchWith|_ |NextflowtowerLaunchWith|_ |TerraLaunchWith|_
 
-Specific platforms
-^^^^^^^^^^^^^^^^^^
-
-.. centered:: |CavaticaLaunchWith|_ |CGCLaunchWith|_ |DnanexusLaunchWith|_ |GalaxyLaunchWith|_ |NextflowtowerLaunchWith|_ |TerraLaunchWith|_
+.. |AnVILLaunchWith| image:: /assets/images/square/anvil_text.png
+    :alt: go to launch with AnVIL page
+    :height: 140px
+.. _AnVILLaunchWith: launch-with/anvil-launch-with.html
 
 .. |CavaticaLaunchWith| image:: /assets/images/square/cavatica_text.png
     :alt: go to launch with Cavatica page
@@ -110,6 +110,8 @@ Specific platforms
     :alt: go to launch with Terra page
     :height: 140px
 .. _TerraLaunchWith: launch-with/terra-launch-with.html
+
+In addition to the above cloud partners, you can also launch workflows with :doc:`BioData Catalyst <launch-with/bdcat-launch-with>` or the :doc:`Dockstore CLI <launch-with/launch>`.
 
 .. toctree::
    :caption: Launch Tools and Workflows

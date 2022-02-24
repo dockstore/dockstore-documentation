@@ -8,41 +8,57 @@ p    {color: green;}
 <body>
 
 <h2>This document generates the image used on our index page, specifically the "launch with" page.</h2>
-<table>
-  <tr>
-    <td>&#xA0;&#xA0;&#xA0;<img src="cavatica_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
-    <td>&#xA0;&#xA0;&#xA0;<img src="cgc_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
-    <td>&#xA0;&#xA0;&#xA0;<img src="dnanexus_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
-    <td>&#xA0;&#xA0;&#xA0;<img src="galaxy_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
-    <td>&#xA0;&#xA0;&#xA0;<img src="nextflowtower_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
-    <td>&#xA0;&#xA0;&#xA0;<img src="../affiliations/terra.png" width="50">&#xA0;&#xA0;&#xA0;</td>
-  </tr>
-  <tr>
-    <td><center><style="color:blue;">Cavatica</center></td>
-    <td><center>CGC</center></td>
-    <td><center>DNAnexus</center></td>
-    <td><center>Galaxy</center></td>
-    <td><center>Nextflow</center></td>
-    <td><center>Terra</center></td>
-  </tr>
-  <tr>
-    <td><center></center></td>
-    <td><center></center></td>
-    <td><center></center></td>
-    <td><center></center></td>
-    <td><center>Tower</center></td>
-    <td><center></center></td>
-  </tr>
+<table border="10" bordercolor = "#0B1941">
+<tr>
+<td>
+  <table>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr>
+      <td>&#xA0;&#xA0;&#xA0;<img src="anvil_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
+      <td>&#xA0;&#xA0;&#xA0;<img src="cavatica_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
+      <td>&#xA0;&#xA0;&#xA0;<img src="cgc_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
+      <td>&#xA0;&#xA0;&#xA0;<img src="dnanexus_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
+      <td>&#xA0;&#xA0;&#xA0;<img src="galaxy_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
+      <td>&#xA0;&#xA0;&#xA0;<img src="nextflowtower_square.png" width="50">&#xA0;&#xA0;&#xA0;</td>
+      <td>&#xA0;&#xA0;&#xA0;<img src="../affiliations/terra.png" width="50">&#xA0;&#xA0;&#xA0;</td>
+    </tr>
+    <tr>
+      <td><center>AnVIL</center></td>
+      <td><center>Cavatica</center></td>
+      <td><center>CGC</center></td>
+      <td><center>DNAnexus</center></td>
+      <td><center>Galaxy</center></td>
+      <td><center>Nextflow</center></td>
+      <td><center>Terra</center></td>
+    </tr>
+    <tr>
+      <td><center></center></td>
+      <td><center></center></td>
+      <td><center></center></td>
+      <td><center></center></td>
+      <td><center></center></td>
+      <td><center>Tower</center></td>
+      <td><center></center></td>
+    </tr>
+  </table>
+</td>
+</tr>
 </table>
-<p>Reasoning: Sphinx does not support putting figures (images with captions) side-by-side. But, we want to break up our index page with some images so it isn't just a wall of text. If we want to avoid using full-size logos (which have different sizes and aren't very neat when placed side by side, and some of them do not have high-res images easily available), we can use square logos. But we also want to make it clear what logo represents what launch-with partner, we ought to make an invisible table. We're rendering it in this page and then screenshotting it as an image, because doing this sort of thing in RST is a bit finicky.
-<p>In GIMP, we can then set guides via Image>Guides>New Guide (by percent) at the following horizontal values:
+<p>Reasoning: We want to break up our index page with some images so it isn't just a wall of text. If we want to avoid using full-size logos (which have different sizes and aren't very neat when placed side by side, and some of them do not have high-res images easily available), we can use square logos. With the goal of square logos in mind, we originally wanted to use figures (images with captions) in this section, so that logos besides Terra and Galaxy's can immediately be understood by saying what they actually represent as a caption. But, Sphinx does not support putting figures (images with captions) side-by-side. 
+<p>So instead, we cheat a little bit by rendering the final result in HTML, where we do not have to work with the limitations of Sphinx's rendering system/RST. The method we are using here -- invisible tables -- might be possible to do natively in our docs, but doing this in HTML is going to be a lot easier.
+<p>In GIMP, we can then set guides via <b>Image>Guides>New Guide (by percent)</b> at the following horizontal values:
 <ul>
-  <li>16.67%
-  <li>33.34%
-  <li>50%
-  <li>66.67%
-  <li>83.34%
+  <li>14.29%
+  <li>28.57%
+  <li>42.86%
+  <li>57.14%
+  <li>71.43%
+  <li>85.71%
 </ul>
-<p>Then, we can split along those guides.
+<p>Then, we can split along those guides using <b>Image>Slice Using Guides</b>
 </body>
 </html>

@@ -8,8 +8,8 @@ endpoints. Keep reading to learn what is supported and how to retrieve the check
 
 File Descriptor Checksum Support
 ================================
-As of 1.9, Dockstore will calculate a SHA-1 checksum during a refresh for every container, descriptor, and test parameter file included in a
-tool or workflow. Once the refresh is done, you must publish your entry in order to access the information via our `TRS V2 endpoints <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GHV20>`_.
+Dockstore returns a SHA-256 checksum for every container, descriptor, and test parameter file included in a
+tool or workflow. You must publish your entry in order to access the information via our `TRS V2 endpoints <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GHV20>`_.
 More specifically, the endpoints that contain checksums for files are as follows:
 
 - `Descriptor (primary) <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GHV20/toolsIdVersionsVersionIdTypeDescriptorGet>`_
@@ -20,21 +20,29 @@ More specifically, the endpoints that contain checksums for files are as follows
 The id parameter used in the endpoints above can be found on an entry's public page; underneath the Info tab, look for the bolded words **TRS**.
 
 After gathering the checksum using the above method you can verify a descriptor's checksum using the shasum terminal application.
-This is done by requesting the PLAIN_WDL descriptor and piping the output to shasum.
+This is done by requesting the PLAIN_WDL, PLAIN_CWL, PLAIN_NFL, or PLAIN_GALAXY descriptor type and piping the output to shasum.
 
 ::
 
-    trsid=%23workflow%2Fgithub.com%2Fdockstore-testing%2Fdockstore-workflow-md5sum-unified%2Fwdl
-    version=1.2.0
-    curl -s https://dockstore.org/api/ga4gh/trs/v2/tools/$trsid/versions/$version/PLAIN-WDL/descriptor | shasum
+    ~$ TRS_ID=%23workflow%2Fgithub.com%2Fdockstore-testing%2Fdockstore-workflow-md5sum-unified%2Fwdl
+    ~$ TRS_VERSION=1.2.0
+    ~$ curl -s https://dockstore.org/api/ga4gh/trs/v2/tools/$TRS_ID/versions/$TRS_VERSION/WDL/descriptor | jq '.checksum'
+    [
+      {
+        "checksum": "5afec4aaeaba5a8d1261a7fe4cbdb8ca1362a57561e03b7504fc633a1f87f0cd",
+        "type": "sha-256"
+      }
+    ]
+    ~$ curl -s https://dockstore.org/api/ga4gh/trs/v2/tools/$TRS_ID/versions/$TRS_VERSION/PLAIN_WDL/descriptor | shasum -a 256
+    5afec4aaeaba5a8d1261a7fe4cbdb8ca1362a57561e03b7504fc633a1f87f0cd  -
 
 The resulting checksum should match what was provided by the API above.
 
-If you use the Dockstore CLI client descriptor checksums are verified before being sent to the execution engine.
+If you use the Dockstore CLI client, descriptor checksums are verified before being sent to the execution engine.
 
 CLI Descriptor Validation Support
 ------------------------------------------
-By default, when launching tools or workflows from the CLI, primary and secondary descriptors will be validated using their SHA-1 checksums. Checksums are
+By default, when launching tools or workflows from the CLI, primary and secondary descriptors will be validated using their SHA-256 checksums. Checksums are
 not validated when launching local entries.
 
 You can prevent checksum validation with the ``--ignore-checksums`` flag. For example, the following command will not validate descriptor
@@ -44,8 +52,6 @@ checksums:
 
     dockstore [tool/workflow] launch --ignore-checksums --entry <entryPath> --json <parameterFile>
 
-Note that if there are no remote checksums stored for a descriptor (i.e. the entry has not been refreshed since the addition of checksum support in Dockstore 1.9),
-this will not be considered a fatal checksum mismatch, and the launch command will continue to execute.
 
 Docker Image Checksum Support
 =============================

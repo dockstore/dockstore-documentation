@@ -21,13 +21,14 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    :maxdepth: 1
 
    dockstore-introduction
+   news
 
 .. toctree::
-   :caption: Getting Started Guide
+   :caption: Getting Started (Tutorial)
    :maxdepth: 1
 
-   getting-started/intro-to-dockstore-tools-and-workflows
    getting-started/getting-started
+   getting-started/intro-to-dockstore-tools-and-workflows
    getting-started/getting-started-with-docker
    getting-started/getting-started-with-cwl
    getting-started/getting-started-with-wdl
@@ -56,7 +57,6 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    launch-with/cavatica-launch-with
    launch-with/cgc-launch-with
    launch-with/dnanexus-launch-with
-   launch-with/dnastack-launch-with
    launch-with/galaxy-launch-with
    launch-with/nextflow-tower-launch-with
    launch-with/terra-launch-with
@@ -76,6 +76,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    :maxdepth: 1
 
    advanced-topics/advanced-topics
+   advanced-topics/tools-vs-workflows
    advanced-topics/docker-registries
    advanced-topics/ways-to-register-tools
    advanced-topics/public-and-private-tools
@@ -135,16 +136,6 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    :maxdepth: 1
 
    changelog
-
-.. toctree::
-   :caption: News and Events
-   :maxdepth: 1
-   :glob:
-   :titlesonly:
-   :reversed:
-
-   news
-   news/*
 
 .. toctree::
    :caption: System Status
@@ -217,4 +208,3 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
 
 .. |imagespace| unicode:: U+00A0 U+00A0 U+00A0 U+00A0 U+00A0 .. non-breaking spaces between logo images
 
- 

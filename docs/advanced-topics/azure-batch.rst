@@ -88,7 +88,6 @@ See Also
 --------
 
 -  :doc:`AWS Batch <aws-batch>`
--  :doc:`DNAstack Launch With </launch-with/dnastack-launch-with>`
 -  :doc:`Terra Launch With </launch-with/terra-launch-with>`
 
 .. discourse::

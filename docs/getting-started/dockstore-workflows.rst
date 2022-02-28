@@ -2,8 +2,8 @@
     This tutorial is a continuation of :doc:`Getting Started with Dockstore Tools </getting-started/dockstore-tools>`.
     Please complete the tutorial prior to doing this one.
 
-Workflows
-=========
+Register a Workflow on Dockstore
+================================
 
 Tutorial Goals
 --------------

@@ -49,12 +49,12 @@ Getting Started
 * :doc:`Registering workflows with the Dockstore GitHub App <getting-started/github-apps/github-apps-landing-page>`
 
 .. toctree::
-   :caption: Getting Started Guide
+   :caption: Getting Started (Tutorial)
    :maxdepth: 1
    :hidden:
 
-   getting-started/intro-to-dockstore-tools-and-workflows
    getting-started/getting-started
+   getting-started/intro-to-dockstore-tools-and-workflows
    getting-started/getting-started-with-docker
    getting-started/getting-started-with-cwl
    getting-started/getting-started-with-wdl
@@ -124,7 +124,6 @@ In addition to the above cloud partners, you can also launch workflows with :doc
    launch-with/cavatica-launch-with
    launch-with/cgc-launch-with
    launch-with/dnanexus-launch-with
-   launch-with/dnastack-launch-with
    launch-with/galaxy-launch-with
    launch-with/nextflow-tower-launch-with
    launch-with/terra-launch-with

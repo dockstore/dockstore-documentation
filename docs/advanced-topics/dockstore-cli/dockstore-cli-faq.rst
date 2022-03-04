@@ -47,12 +47,6 @@ can change what it allocates using the Docker for Mac GUI under
 
 * The default allocation can cause workflows or tools to fail without informing the user with a memory or resource related error message. If you find that your workflow or tool is behaving differently on a Mac compared to a similarly resourced Ubuntu environment, you can try increasing the resources allocated to Docker on the Mac to resolve the discrepancy.
 
-How can I use the Dockstore CLI with Python 2?
-----------------------------------------------
-
-Python 2 support ended in 2020. You can get the Python 2 requirements.txt with ``curl -o requirements.txt "https://dockstore.org/api/metadata/runner_dependencies?python_version=2"``
-but it is currently untested.
-
 How do I launch tools/workflows without internet access on compute nodes?
 -------------------------------------------------------------------------
 
@@ -70,14 +64,16 @@ directory specified prior to a ``launch --local-entry`` command.
 
 .. _cromwell-docker-lockup:
 
-I was running a WDL locally, but some of my tasks returned 137 and/or now I cannot use Docker.
-----------------------------------------------------------------------------------------------
+I was running a WDL locally, but some of my tasks are failing randomly and/or now I cannot use Docker.
+------------------------------------------------------------------------------------------------------
 
-This is a known issue with Cromwell, which the Dockstore CLI uses to launch WDL workflows. It is due to how Cromwell manages resources on a local machine, which it must do differently compared to running on the cloud. As such, it is much more likely to happen if you are running a computationally intensive scattered task, such as LD pruning 23 chromosomes where each chromosome is an instance of a scattered task. In these scenarios, Cromwell might lockup the Docker service. If a Docker lockup happens, you will notice tasks do not progress beyond WaitingForReturnCode and you will be temporarily unable to "spin up" any Docker containers, even outside of Cromwell. Thankfully, this state can be resolved by restarting the Docker service via the Docker Desktop dropdown, or entering ``service docker restart`` on the command line.
+This is a known issue with how Cromwell and Docker, which the Dockstore CLI use to launch WDL workflows, manage resources on a local machine. Certain problems related to resource management may happen when running locally that do not happen when running on the cloud. These problems are much more likely to happen if you are running a computationally intensive scattered task, such as LD pruning 23 chromosomes where each chromosome is an instance of a scattered task. The two most common problems we see are a "Docker lockup" and stochastic failure of tasks. It is possible for one, both, or neither of these problems to occur during a single submission.
 
-Situations that cause Docker lockups tend to also result in some instances of scattered tasks getting `sigkilled <https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html>`__ by the operating system. You will know when this happens because the `rc` (return code) file will read 137.
+If a Docker lockup happens, you will notice tasks do not progress beyond WaitingForReturnCode and you will be temporarily unable to "spin up" any Docker containers, even outside of Cromwell. Thankfully, this state can be resolved by restarting the Docker service via the Docker Desktop dropdown, or entering ``service docker restart`` on the command line.
 
-To prevent this from happening, we recommend setting up your Cromwell configuration file to limit how many scattered tasks run at once, and then setting up the Dockstore CLI to make use of that Cromwell configuration file. :doc:`A step-by-step tutorial is available here. </advanced-topics/dockstore-cli/local-cromwell-config>`
+The other issue we often see is some instances of scattered tasks getting `sigkilled <https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html>`__ by the operating system. You will know when this happens because the `rc` (return code) file will read 137. If it reads anything except 137, then you can assume that it wasn't actually a resource management error and look in stderr or stdout for the true culprit.
+
+To prevent these issues from happening, we recommend setting up your Cromwell configuration file to limit how many scattered tasks run at once, and then setting up the Dockstore CLI to make use of that Cromwell configuration file. :doc:`A step-by-step tutorial is available here. </advanced-topics/dockstore-cli/local-cromwell-config>`
 
 The CLI is failing with Java 8
 ------------------------------

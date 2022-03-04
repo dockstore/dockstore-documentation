@@ -102,6 +102,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    advanced-topics/best-practices/nfl-best-practices
    advanced-topics/best-practices/best-practices-dockstore
    advanced-topics/best-practices/best-practices-secure-fair-workflows
+   advanced-topics/wes/cli-wes-tutorial
 
 .. toctree::
    :caption: Extras

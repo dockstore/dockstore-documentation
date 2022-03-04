@@ -1,2 +1,0 @@
-WES Tutorial for Toil
-=====================

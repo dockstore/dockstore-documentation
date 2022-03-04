@@ -152,4 +152,3 @@ them when making WES requests.
    :maxdepth: 1
 
    wes-agc-tutorial
-   wes-toil-tutorial

@@ -16,22 +16,11 @@ The Dockstore CLI implements the WES standard, and can send your workflows as a 
 allowing quick and easy launches of Dockstore workflows. Furthermore, since the Dockstore CLI supports local workflow launches, it's easy to
 develop a workflow locally and then, once you've ironed out all the bugs, send that workflow to your WES server of choice for remote execution.
 
-TODO: The below is incorrect, as --json is a required flag, which is a bug: https://github.com/dockstore/dockstore/issues/4763
-
-For example, to launch a simple hello world workflow locally, you can execute:
-
-   .. code:: bash
-
-        dockstore workflow launch --entry github.com/dockstore-testing/dockstore-whalesay2:master
-
-and once you're ready to launch the workflow on a WES server, change the command to:
+and once you're ready to launch the workflow on a WES server, the command can be as simple as:
 
    .. code:: bash
 
         dockstore workflow wes launch --entry github.com/dockstore-testing/dockstore-whalesay2:master
-
-The WES tutorials linked to below will require slight modifications to the launch command when changing from a local execution to using
-a remote WES server.
 
 WES Basics
 --------------
@@ -41,7 +30,7 @@ GetServiceInfo
 ^^^^^^^^^^^^^^^^^^^^^^^^
 The official documentation for this endpoint can be found here: `GetServiceInfo <https://ga4gh.github.io/workflow-execution-service-schemas/docs/#operation/GetServiceInfo>`_
 
-This endpoint describes information regarding the WES server that you are interacting with. This includes information regarding which languages
+This endpoint describes information regarding the WES server that you are interacting with. This includes information such as which languages
 and language versions are supported (WDL, CWL, NFL, etc...), which version of WES the server is running, and the configuration settings of server itself.
 To view the server info of a WES server, you can run:
 
@@ -53,7 +42,7 @@ ListRuns
 ^^^^^^^^^^^^^^^^^^^^^^^^
 The official documentation for this endpoint can be found here: `ListRuns <https://ga4gh.github.io/workflow-execution-service-schemas/docs/#operation/ListRuns>`_
 
-This endpoint list previous workflow execution runs. You can specify the latest X entries by passing in a count parameter.
+This endpoint lists previous workflow execution runs. You can specify the latest X entries by passing in a count parameter.
 To view the latest 5 entries run on a WES server, you can run:
 
    .. code:: bash

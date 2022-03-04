@@ -1,7 +1,7 @@
 WES tutorial for AWS AGC
 ========================
 Amazon Web Services' (AWS) Amazon Genomics CLI (AGC) is a command line tool for launching cloud infrastructure
-within AWS accounts that can be used to execute genomics workflows. The infrastructure deploy by AGC implements the WES
+within AWS accounts that can be used to execute genomics workflows. The infrastructure deployed by AGC implements the WES
 standard, and thus can be directly communicated with by using the Dockstore CLI.
 
 Check out the official AGC `GitHub page <https://github.com/aws/amazon-genomics-cli>`_.
@@ -76,7 +76,7 @@ bucket that we will be using for one of the example workflows below.
 
         agc context deploy ctx1
 
-4. Retrieve the WES endpoint created by the context.. This will return a few values, the WES endpoint is the value under *WESENDPOINT*:
+4. Retrieve the WES endpoint created by the context. This will return a few values, the WES endpoint is the value under *WESENDPOINT*:
 
     .. code:: text
 
@@ -86,7 +86,7 @@ bucket that we will be using for one of the example workflows below.
 
         WESENDPOINT	https://example123.execute-api.us-west-2.amazonaws.com/prod/
 
-5. Copy the WES endpoint into the Dockstore CLI config file located at ``~/.dockstore/config``. append ``ga4gh/wes/v1`` to the end of the URL.
+5. Copy the WES endpoint into the Dockstore CLI config file located at ``~/.dockstore/config`` and append ``ga4gh/wes/v1`` to the end of the URL.
 Your Dockstore CLI config file should have a named AWS profile included to allow the CLI to authorize requests to AWS. The resulting
 config file will look similar to:
 
@@ -115,6 +115,8 @@ The Dockstore entry associated with this workflow can be found here `agc-hello-w
 
 This WDL workflow prints out the string "Hello from AGC" as its output.
 
+    *Dockstore.wdl*
+
     .. code:: text
 
             version 1.0
@@ -129,7 +131,7 @@ This WDL workflow prints out the string "Hello from AGC" as its output.
                 output { String out = read_string( stdout() ) }
             }
 
-1. Since this workflow is publicly posted on Dockstore.org, we can quickly launch it by passing the Dockstore CLI the entry name:
+1. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/>`_, we can quickly launch it by passing the Dockstore CLI the entry name:
 
     .. code:: text
 
@@ -187,6 +189,8 @@ FastQ read counts workflow
 The Dockstore entry associated with this workflow can be found here `agc-fastq-read-counts <https://dockstore.org/workflows/github.com/dockstore-testing/wes-testing/agc-fastq-read-counts:main?tab=info>`_.
 
 This WDL workflow tabulates read counts of the input fastq file.
+
+    *Dockstore.wdl*
 
     .. code:: text
 
@@ -246,14 +250,18 @@ This WDL workflow tabulates read counts of the input fastq file.
 
 1. This workflow takes an array of files as an input. Create a file named ``input.json`` in your working directory with contents:
 
+    *input.json*
+
     .. code:: text
 
         {
             "fastqReadCounts.countFastqReads.inputFastq": ["s3://human-pangenomics/working/HPRC_PLUS/HG005/raw_data/Illumina/child/5A1-24481579/5A1_S5_L001_R1_001.fastq.gz"]
         }
 
-2. As a requirement of AGC input parsing, create a second file named ``agcInputs.json`` in your working directory with contents.
-   This file indicates which WES attachment should be used as the input JSON for the workflow execution, in this case, we want ``input.json`` to be our input file:
+2. As a requirement of AGC input parsing, create a second file named ``agcInputs.json`` in your working directory.
+   This file indicates which WES attachment should be used as the input JSON for the workflow execution step, in this case, we want ``input.json`` to be our input file:
+
+    *agcInputs.json*
 
     .. code:: text
 
@@ -261,7 +269,7 @@ This WDL workflow tabulates read counts of the input fastq file.
             "workflowInputs": "input.json"
         }
 
-3. Since this workflow is publicly posted on Dockstore.org, we can quickly launch it by passing the Dockstore CLI the entry name, input JSON and attachment file:
+3. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/>`_, we can quickly launch it by passing the Dockstore CLI the entry name, input JSON and attachment file:
 
     .. code:: text
 

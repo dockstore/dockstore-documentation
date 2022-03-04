@@ -1,4 +1,4 @@
-WES Tutorial for AWS AGC
+WES tutorial for AWS AGC
 ========================
 Amazon Web Services' (AWS) Amazon Genomics CLI (AGC) is a command line tool for launching cloud infrastructure
 within AWS accounts that can be used to execute genomics workflows. The infrastructure deploy by AGC implements the WES
@@ -6,7 +6,7 @@ standard, and thus can be directly communicated with by using the Dockstore CLI.
 
 Check out the official AGC `GitHub page <https://github.com/aws/amazon-genomics-cli>`_.
 
-Download and Install AWS AGC
+Download and install AWS AGC
 ----------------------------
 AGC provides a `quick-start guide <https://aws.github.io/amazon-genomics-cli/docs/getting-started/>`_ for initial setup
 and getting familiar with the tool. The following workflow execution tutorials will cover all steps for using AGC once
@@ -15,7 +15,7 @@ it has been `installed <https://aws.github.io/amazon-genomics-cli/docs/getting-s
 
 
 
-Tutorial Topics
+Tutorial topics
 ----------------
 The following WDL workflow tutorials will covering deploying the proper infrastructure using AGC.
 
@@ -109,7 +109,7 @@ to your terminal with the server's configuration.
 
     The AGC context and Dockstore configuration file do not need to be modified for the remainder of these examples, and will continue to function until the resources are modified and/or destroyed.
 
-Hello World Workflow
+Hello world workflow
 ---------------------
 The Dockstore entry associated with this workflow can be found here `agc-hello-world <https://dockstore.org/workflows/github.com/dockstore-testing/wes-testing/agc-hello-world:main?tab=info>`_.
 
@@ -182,7 +182,7 @@ This WDL workflow prints out the string "Hello from AGC" as its output.
 
     Notice that the output for the worklow ``w``, task ``hello`` is "Hello from AGC".
 
-FastQ Read Counts Workflow
+FastQ read counts workflow
 --------------------------
 The Dockstore entry associated with this workflow can be found here `agc-fastq-read-counts <https://dockstore.org/workflows/github.com/dockstore-testing/wes-testing/agc-fastq-read-counts:main?tab=info>`_.
 

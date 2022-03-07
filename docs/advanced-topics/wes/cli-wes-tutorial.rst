@@ -65,7 +65,7 @@ GetRunStatus
 ^^^^^^^^^^^^^^^^^^^^^^^^
 The official documentation for this endpoint can be found here: `GetRunStatus <https://ga4gh.github.io/workflow-execution-service-schemas/docs/#operation/GetRunStatus>`_
 
-This endpoints allows you to retrieve the run status of a launched workflow. After launching a WES workflow, a run ID is returned that can
+This endpoint allows you to retrieve the run status of a launched workflow. After launching a WES workflow, a run ID is returned that can
 be used to query information regarding the run.
 To get the run status of a launched workflow, you can run:
 
@@ -77,7 +77,7 @@ GetRunLog
 ^^^^^^^^^^^^^^^^^^^^^^^^
 The official documentation for this endpoint can be found here: `GetRunLog <https://ga4gh.github.io/workflow-execution-service-schemas/docs/#operation/GetRunLog>`_
 
-This endpoints allows you to retrieve the run logs of a launched workflow. After launching a WES workflow, a run ID is returned that can
+This endpoint allows you to retrieve the run logs of a launched workflow. After launching a WES workflow, a run ID is returned that can
 be used to query information regarding the run.
 To get the run log of a launched workflow, you can run:
 
@@ -89,7 +89,7 @@ CancelRun
 ^^^^^^^^^^^^^^^^^^^^^^^^
 The official documentation for this endpoint can be found here: `CancelRun <https://ga4gh.github.io/workflow-execution-service-schemas/docs/#operation/CancelRun>`_
 
-This endpoints allows you to cancel the execution of a launched workflow. After launching a WES workflow, a run ID is returned that can
+This endpoint allows you to cancel the execution of a launched workflow. After launching a WES workflow, a run ID is returned that can
 be used to cancel the workflow run.
 To cancel a launched workflow, you can run:
 

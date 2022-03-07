@@ -6,8 +6,8 @@ For general FAQs not related to the Dockstore CLI, please see :doc:`our main FAQ
 .. contents:: Table of Contents
   :local:
 
-How does launching with Dockstore CLI compare with cwltool?
------------------------------------------------------------
+How does launching CWLs with Dockstore CLI compare with cwltool?
+----------------------------------------------------------------
 
 Under the hood, the Dockstore CLI evokes cwltool to launch CWL workflows. However, it adds additional features. Dockstore CLI has utilities to generate JSON parameter files from
 entries on Dockstore (``dockstore tool convert``).
@@ -62,6 +62,16 @@ follow these steps:
 The Dockstore CLI will automatically load all Docker images in the
 directory specified prior to a ``launch --local-entry`` command.
 
+.. _return-code-wdl:
+
+How do I find the return code for a WDL task?
+---------------------------------------------
+
+The numeric return code for a WDL task will be in that task's execution folder. It is a single file named `rc` with no extension. Generally speaking, a 0 is a success, and anything else is a failure.
+
+Let's say you are running the vcf2gds workflow, which runs the check-gds task as a scattered task on an array of three files. Cromwell will refer to each instance of that scattered task as a "shard" and will name them starting with 0. If you notice that shard 0 seems to have failed, look for `/cromwell-executions/[workflow ID]/call-check_gds/shard-0/execution/rc` keeping in mind that the workflow ID will usually be a long mix of numbers, letters, and dashes such as 18a85cc0-aa59-4749-b1b9-e2580ed5e557.
+
+
 .. _cromwell-docker-lockup:
 
 I was running a WDL locally, but some of my tasks are failing randomly and/or now I cannot use Docker.
@@ -69,9 +79,9 @@ I was running a WDL locally, but some of my tasks are failing randomly and/or no
 
 This is a known issue with how Cromwell and Docker, which the Dockstore CLI use to launch WDL workflows, manage resources on a local machine. Certain problems related to resource management may happen when running locally that do not happen when running on the cloud. These problems are much more likely to happen if you are running a computationally intensive scattered task, such as LD pruning 23 chromosomes where each chromosome is an instance of a scattered task. The two most common problems we see are a "Docker lockup" and stochastic failure of tasks. It is possible for one, both, or neither of these problems to occur during a single submission.
 
-If a Docker lockup happens, you will notice tasks do not progress beyond WaitingForReturnCode and you will be temporarily unable to "spin up" any Docker containers, even outside of Cromwell. Thankfully, this state can be resolved by restarting the Docker service via the Docker Desktop dropdown, or entering ``service docker restart`` on the command line.
+If a Docker lockup happens, you will notice in-progress WDL tasks do not progress beyond the WaitingForReturnCode status on the command line. Additionally, you will be temporarily unable to "spin up" any Docker containers, even outside of Cromwell. Thankfully, this state can be resolved by restarting the Docker service via the Docker Desktop dropdown, or entering ``service docker restart`` on the command line.
 
-The other issue we often see is some instances of scattered tasks getting `sigkilled <https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html>`__ by the operating system. You will know when this happens because the `rc` (return code) file will read 137. If it reads anything except 137, then you can assume that it wasn't actually a resource management error and look in stderr or stdout for the true culprit.
+The other issue we often see is some instances of scattered tasks getting `sigkilled <https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html>`__ by the operating system. You will know when this happens because the `rc` (return code) file will read 137. If it reads anything except 137, then you can assume that it wasn't actually a resource management error and look in stderr or stdout for the true culprit. For more on return codes, see :ref:`this FAQ <return-code-wdl>` entry.
 
 To prevent these issues from happening, we recommend setting up your Cromwell configuration file to limit how many scattered tasks run at once, and then setting up the Dockstore CLI to make use of that Cromwell configuration file. :doc:`A step-by-step tutorial is available here. </advanced-topics/dockstore-cli/local-cromwell-config>`
 

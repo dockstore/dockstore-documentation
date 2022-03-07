@@ -22,7 +22,7 @@ The following WDL workflow tutorials will cover:
 
 .. note::
 
-    1. AWS AGC requires a special JSON file to be passed as the test parameter file for workflows using the format
+    1. AWS AGC requires a special JSON file to be passed as the test parameter file for workflows, this JSON is formatted as follows:
 
         .. code:: text
 
@@ -30,8 +30,8 @@ The following WDL workflow tutorials will cover:
                 "workflowInputs": <pathToInputJSON>
             }
 
-    2. AWS AGC references descriptor files by URLs. The Dockstore CLI references the primary descriptor as a GA4GH Tool Registry Service `(TRS) <https://github.com/ga4gh/tool-registry-service-schemas>`_ URL.
-    The AGC infrastructure will only be able to access the file referenced by the TRS URL if the workflow is publicly published on Dokstore.
+    2. AWS AGC references descriptor files by URLs. The Dockstore CLI references the primary descriptor in an execution request as a GA4GH Tool Registry Service (`TRS <https://github.com/ga4gh/tool-registry-service-schemas>`_) URL.
+    The AGC infrastructure will only be able to access the file referenced by the TRS URL if the workflow is publicly published on Dockstore.
 
 Configuring AGC and the Dockstore CLI
 ----------------------------------------
@@ -58,8 +58,14 @@ This will create an AGC project named ``dockstoreAgcTutorialProject``, with a si
           - location: s3://human-pangenomics
             readOnly: true
 
-Configures the AGC contexts in this project to have read access to the AWS S3 bucket ``human-pangenomics``. This bucket is an open-access data
-bucket that we will be using for one of the example workflows below.
+configures the AGC contexts in this project to be able to read the AWS S3 bucket ``human-pangenomics``. This is an open-access data
+bucket that will be used for one of the following example workflows.
+
+.. note::
+
+    For AGC infrastructure to interact with an S3 resource, the desired S3 bucket must be specified in the project's ``agc-project.yaml`` file
+    and your AWS account must already have access to the S3 resource.
+
 
 2. Activate AGC on your account. If this is your first time running AGC on an account, this may take a few minutes.
 
@@ -179,7 +185,7 @@ This WDL workflow prints out the string "Hello from AGC" as its output.
               }
             }
 
-    Notice that the output for the worklow ``w``, task ``hello`` is "Hello from AGC".
+    Notice that the output for task ``hello`` of workflow ``w`` is "Hello from AGC".
 
 FastQ Read Counts Workflow
 --------------------------
@@ -319,7 +325,7 @@ This WDL workflow tabulates read counts of the input fastq file.
         }
 
 5. The output of this workflow is a text file containing a read count. To retrieve the file's contents, you can navigate to the S3 URL via the
-AWS console, or copy the file contents using the AWS CLI
+AWS console, or copy the file contents using the AWS CLI:
 
     .. code:: text
 

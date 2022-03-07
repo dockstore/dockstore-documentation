@@ -8,15 +8,15 @@ The WES standard defines a format for sending workflow execution, monitoring, an
 The Benefits of WES
 --------------------
 WES supports interoperability and reproducibility when launching bioinformatics workflows against execution engines, and provides a standardized
-set of API calls for gathering pertinent information regarding server information, execution run logs, and retrieving execution outputs. This
+set of API calls for gathering pertinent information regarding the target server, execution run logs, and retrieving execution outputs. This
 means that you can send the same workflow execution request to two different WES servers and they will both interpret and
 launch your workflow in a similar manner.
 
-The Dockstore CLI supports the WES standard, and can send your workflows as a WES request to a server given a URL and method of authorization,
+The Dockstore CLI supports the WES standard. This means that you can send your workflows as a WES request to a desired server, given a URL and method of authorization,
 allowing quick and easy launches of Dockstore workflows. Furthermore, since the Dockstore CLI supports local workflow launches, it's easy to
 develop a workflow locally and then, once you've ironed out all the bugs, send that workflow to your WES server of choice for remote execution.
 
-Once you're ready to launch workflows on a WES server, the command can be as simple as:
+To launch a workflow on a WES server, the command can be as simple as:
 
    .. code:: bash
 
@@ -43,11 +43,11 @@ ListRuns
 The official documentation for this endpoint can be found here: `ListRuns <https://ga4gh.github.io/workflow-execution-service-schemas/docs/#operation/ListRuns>`_
 
 This endpoint lists past and current workflow execution runs. You can specify the latest X entries by passing in a count parameter.
-To view the latest 5 entries run on a WES server, you can run:
+To view the latest 5 entries on a WES server, you can run:
 
    .. code:: bash
 
-        dockstore workflow wes logs --count 5
+        dockstore workflow wes list --count 5
 
 RunWorkflow
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -119,7 +119,7 @@ The Dockstore CLI supports two authorization types, ``aws`` and ``bearer``:
 1. The ``aws`` authorization type indicates that the provided authorization value will be the string name of an AWS named profile, and that the Dockstore CLI must use the `AWS SigV4 <https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html>`_ signing process for HTTP/HTTPS requests.
 2. The ``bearer`` authorization type indicates that the provided authorization value will be an authenticating string/token that the Dockstore CLI will attach under the *AUTHORIZATION* header for HTTP/HTTPS requests.
 
-For example, to specify an AWS API Gateway endpoint as the WES URL, and an AWS named profile as the authorization, the WES config section
+For example, to specify an AWS API Gateway endpoint as the WES URL, and an AWS named profile as the authorization value, the WES config section
 would look similar to:
 
 *~/.dockstore/config*

@@ -114,6 +114,11 @@ an authorization value:
     authorization: AUTHORIZATION_VALUE
     type: AUTHORIZATION_TYPE
 
+The Dockstore CLI supports two authorization types, ``aws`` and ``bearer``:
+
+1. The ``aws`` authorization type indicates that the provided authorization value will be the string name of an AWS named profile, and that the Dockstore CLI must use the `AWS SigV4 <https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html>`_ signing process for HTTP/HTTPS requests.
+2. The ``bearer`` authorization type indicates that the provided authorization value will be an authenticating string/token that the Dockstore CLI will attach under the *AUTHORIZATION* header for HTTP/HTTPS requests.
+
 For example, to specify an AWS API Gateway endpoint as the WES URL, and an AWS named profile as the authorization, the WES config section
 would look similar to:
 

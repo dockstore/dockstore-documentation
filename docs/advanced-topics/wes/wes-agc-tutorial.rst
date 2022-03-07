@@ -15,6 +15,7 @@ it has been `installed <https://aws.github.io/amazon-genomics-cli/docs/getting-s
 Tutorial topics
 ----------------
 The following WDL workflow tutorials will cover:
+
 1. Deploying an AGC project and context
 2. Configuring the Dockstore CLI to communicate with AGC infrastructure
 3. Launching a workflow

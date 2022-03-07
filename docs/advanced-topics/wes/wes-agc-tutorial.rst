@@ -22,7 +22,7 @@ The following WDL workflow tutorials will cover:
 
 .. note::
 
-    1. AWS AGC requires a special JSON file to passed as the test parameter file for workflows using the format
+    1. AWS AGC requires a special JSON file to be passed as the test parameter file for workflows using the format
 
         .. code:: text
 

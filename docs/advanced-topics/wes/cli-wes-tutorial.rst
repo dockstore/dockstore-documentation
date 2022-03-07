@@ -16,7 +16,7 @@ The Dockstore CLI implements the WES standard, and can send your workflows as a 
 allowing quick and easy launches of Dockstore workflows. Furthermore, since the Dockstore CLI supports local workflow launches, it's easy to
 develop a workflow locally and then, once you've ironed out all the bugs, send that workflow to your WES server of choice for remote execution.
 
-and once you're ready to launch the workflow on a WES server, the command can be as simple as:
+Once you're ready to launch workflows on a WES server, the command can be as simple as:
 
    .. code:: bash
 

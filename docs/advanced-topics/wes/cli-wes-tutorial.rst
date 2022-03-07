@@ -31,7 +31,7 @@ GetServiceInfo
 The official documentation for this endpoint can be found here: `GetServiceInfo <https://ga4gh.github.io/workflow-execution-service-schemas/docs/#operation/GetServiceInfo>`_
 
 This endpoint describes information regarding the WES server that you are interacting with. This includes information such as which languages
-and language versions are supported (WDL, CWL, NFL, etc...), which version of WES the server is running, and the configuration settings of server itself.
+and language versions are supported (WDL, CWL, NFL, etc...), which version of WES the server is running, and the configuration settings of the server itself.
 To view the server info of a WES server, you can run:
 
    .. code:: bash

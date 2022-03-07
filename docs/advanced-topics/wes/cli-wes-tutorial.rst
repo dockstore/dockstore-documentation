@@ -53,7 +53,7 @@ RunWorkflow
 ^^^^^^^^^^^^^^^^^^^^^^^^
 The official documentation for this endpoint can be found here: `RunWorkflow <https://ga4gh.github.io/workflow-execution-service-schemas/docs/#operation/RunWorkflow>`_
 
-This endpoint specifies how to send a workflow execution request to a WES server. This include passing in a primary workflow descriptor file,
+This endpoint specifies how to send a workflow execution request to a WES server. This includes passing in a primary workflow descriptor file,
 the input JSON file, and any additional attachment files needed for your workflow.
 To launch a Dockstore workflow that takes an input JSON, you can run:
 

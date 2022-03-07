@@ -53,7 +53,7 @@ Ubuntu 21.10 to be specific.
 
 
 Again, we provide an example from the
-`dockstore-tool-bamstats <https://github.com/CancerCollaboratory/dockstore-tool-bamstats/blob/develop/Dockstore.wdl>`__
+`wdl-bamstats <https://github.com/dockstore/wdl-bamstats/blob/main/Dockstore.wdl>`__
 repository:
 
 ::
@@ -350,22 +350,24 @@ the JSON config file.
 
     $> dockstore tool launch --local-entry Dockstore.wdl --json test.wdl.json
 
-What you see next will depend on what sort of operating system you are using and the names of your folders, but the beginning of it will look a little bit like this:
+What you see next will depend on which operating system you are using and the names of your folders, but the beginning of it will look a little bit like this:
 
 ::
-    Creating directories for run of Dockstore launcher in current working directory: /home/aduncan/Documents/dockstore-tool-bamstats
+    Creating directories for run of Dockstore launcher in current working directory: /home/aduncan/Documents/dockstore-bamstats
     Provisioning your input files to your local machine
-    Downloading: bamstatsWorkflow.bam_input from NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam to: /home/aduncan/Documents/dockstore-tool-bamstats/cromwell-input/aca839a6-92c4-4234-bc6d-460bcfe6f4d6/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
+    Downloading: bamstatsWorkflow.bam_input from NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam to: /home/aduncan/Documents/dockstore-bamstats/cromwell-input/aca839a6-92c4-4234-bc6d-460bcfe6f4d6/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
     Calling out to Cromwell to run your workflow
-    java -jar /home/aduncan/.dockstore/libraries/cromwell-30.2.jar run /home/aduncan/Documents/dockstore-tool-bamstats/Dockstore.wdl --inputs /tmp/foo7282099563694004806json
+    java -jar /home/aduncan/.dockstore/libraries/cromwell-30.2.jar run /home/aduncan/Documents/dockstore-bamstats/Dockstore.wdl --inputs /tmp/foo7282099563694004806json
 
-Usually, with this example, you can expect your workflow to take about 5-10 minutes (usually faster). There is going to be a lot of text as your workflow is being run, but once you see this at the bottom, you'll know it's finished.
+That text is from Cromwell and the Dockstore CLI, preparing all it needs to do in order to run your workflow. Although some of it might not seem to make sense at first -- why does a workflow running locally need to "download" files that are already on the local disk? -- keep in mind that it needs to keep this process similiar to how it would run your WDL if it were in the cloud. By copying these files over, it is mimicking how they might be downloaded on a cloud environment. This duplication also prevents the original input files from being modified or moved to another place.
+
+How long your workflow takes to run will depend on your computer's hardware, but we have found running this particular workflow on the sample data provided takes less than 5 minutes on a 2020 Macbook Pro with 16 GB of memory. There is going to be a lot of text on the command line as your workflow progresses, and at one point it might even seem to pause. This "pause" is normal; when bamstats itself is executing, it does not output text to the command line. Once you see this text on your command line, you'll know it's finished.
 
 ::
     Cromwell stderr:
 
-    Saving copy of Cromwell stdout to: /home/aduncan/Documents/dockstore-tool-bamstats/Cromwell.stdout.txt
-    Saving copy of Cromwell stderr to: /home/aduncan/Documents/dockstore-tool-bamstats/Cromwell.stderr.txt
+    Saving copy of Cromwell stdout to: /home/aduncan/Documents/dockstore-bamstats/Cromwell.stdout.txt
+    Saving copy of Cromwell stderr to: /home/aduncan/Documents/dockstore-bamstats/Cromwell.stderr.txt
     Output files left in place
 
 Scroll up a little bit and look for the following text (or something like it; remember that the folder names will be different):
@@ -378,7 +380,8 @@ Scroll up a little bit and look for the following text (or something like it; re
 
 This tells us that the final output can be found at:
 ::
-    /home/aduncan/Documents/dockstore-tool-bamstats/cromwell-executions/bamstatsWorkflow/4d24ebd1-5151-4b07-82d7-272b184fd0eb/call-bamstats/execution/bamstats_report.zip
+
+    /home/aduncan/Documents/dockstore-bamstats/cromwell-executions/bamstatsWorkflow/4d24ebd1-5151-4b07-82d7-272b184fd0eb/call-bamstats/execution/bamstats_report.zip
 
 So what's going on here? What's the Dockstore CLI doing? It can best be
 summed up with this image:
@@ -403,13 +406,13 @@ The following command is an example of how the Dockstore CLI calls out to Cromwe
 
 ::
 
-    java -jar /home/aduncan/.dockstore/libraries/cromwell-30.2.jar run /home/aduncan/Documents/dockstore-tool-bamstats/Dockstore.wdl --inputs /tmp/foo7282099563694004806json
+    java -jar /home/aduncan/.dockstore/libraries/cromwell-30.2.jar run /home/aduncan/Documents/dockstore-bamstats/Dockstore.wdl --inputs /tmp/foo7282099563694004806json
 
 .. tip::  The ``dockstore`` CLI automatically create a ``datastore``
     directory in the current working directory where you execute the command
     and uses it for inputs/outputs. It can get quite large depending on the
     tool/inputs/outputs being used. Plan accordingly e.g. execute the
-    dockstore CLI in a directory located on a partition with sufficient
+    Dockstore CLI in a directory located on a partition with sufficient
     storage.
 
 Adding a Test Parameter File
@@ -443,7 +446,7 @@ should be different. GitHub makes it very easy to release:
    :alt: Screenshot of GitHub's interface when making a new release
 
 I click on "releases" in my forked version of the GitHub project
-`page <https://github.com/CancerCollaboratory/dockstore-tool-bamstats>`__
+`page <https://github.com/dockstore/wdl-bamstats>`__
 and then follow the directions to create a new release. Simple as that!
 
 .. tip::  `HubFlow <https://datasift.github.io/gitflow/>`__ is an

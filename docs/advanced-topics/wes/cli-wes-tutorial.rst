@@ -9,7 +9,7 @@ The Benefits of WES
 --------------------
 WES supports interoperability and reproducibility when launching bioinformatics workflows against execution engines, and provides a standardized
 set of API calls for gathering pertinent information regarding server information, execution run logs, and retrieving execution outputs. This
-means that as a workflow developer you can send the same workflow execution request to two different WES servers and they will both interpret and
+means that you can send the same workflow execution request to two different WES servers and they will both interpret and
 launch your workflow in a similar manner.
 
 The Dockstore CLI implements the WES standard, and can send your workflows as a WES request to a server given a URL and method of authorization,

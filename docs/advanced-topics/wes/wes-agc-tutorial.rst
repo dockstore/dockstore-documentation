@@ -12,15 +12,11 @@ AGC provides a `quick-start guide <https://aws.github.io/amazon-genomics-cli/doc
 and getting familiar with the tool. The following workflow execution tutorials will cover all steps for using AGC once
 it has been `installed <https://aws.github.io/amazon-genomics-cli/docs/getting-started/installation/>`_.
 
-
-
-
 Tutorial topics
 ----------------
-The following WDL workflow tutorials will covering deploying the proper infrastructure using AGC.
-
-1. Deploy an AGC project and context
-2. Configure the Dockstore CLI to communicate with AGC infrastructure
+The following WDL workflow tutorials will cover:
+1. Deploying an AGC project and context
+2. Configuring the Dockstore CLI to communicate with AGC infrastructure
 3. Launching a workflow
 
 .. note::

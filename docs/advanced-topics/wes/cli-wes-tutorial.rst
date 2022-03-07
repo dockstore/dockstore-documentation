@@ -42,7 +42,7 @@ ListRuns
 ^^^^^^^^^^^^^^^^^^^^^^^^
 The official documentation for this endpoint can be found here: `ListRuns <https://ga4gh.github.io/workflow-execution-service-schemas/docs/#operation/ListRuns>`_
 
-This endpoint lists previous workflow execution runs. You can specify the latest X entries by passing in a count parameter.
+This endpoint lists past and current workflow execution runs. You can specify the latest X entries by passing in a count parameter.
 To view the latest 5 entries run on a WES server, you can run:
 
    .. code:: bash

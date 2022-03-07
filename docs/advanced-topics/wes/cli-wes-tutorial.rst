@@ -1,7 +1,7 @@
 Launching workflows using WES and the Dockstore CLI
 ===================================================
 
-The Dockstore CLI implements the Global Alliance for Genomics and Health's (`GA4GH <https://www.ga4gh.org/>`_)
+The Dockstore CLI supports the Global Alliance for Genomics and Health's (`GA4GH <https://www.ga4gh.org/>`_)
 Workflow Execution Service (`WES <https://ga4gh.github.io/workflow-execution-service-schemas/docs/>`_) standard.
 The WES standard defines a format for sending workflow execution, monitoring and retrieval requests and receiving responses between a client and server.
 

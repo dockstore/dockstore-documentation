@@ -12,7 +12,7 @@ set of API calls for gathering pertinent information regarding server informatio
 means that you can send the same workflow execution request to two different WES servers and they will both interpret and
 launch your workflow in a similar manner.
 
-The Dockstore CLI implements the WES standard, and can send your workflows as a WES request to a server given a URL and method of authorization,
+The Dockstore CLI supports the WES standard, and can send your workflows as a WES request to a server given a URL and method of authorization,
 allowing quick and easy launches of Dockstore workflows. Furthermore, since the Dockstore CLI supports local workflow launches, it's easy to
 develop a workflow locally and then, once you've ironed out all the bugs, send that workflow to your WES server of choice for remote execution.
 

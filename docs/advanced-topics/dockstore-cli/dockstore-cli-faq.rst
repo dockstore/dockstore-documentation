@@ -9,10 +9,9 @@ For general FAQs not related to the Dockstore CLI, please see :doc:`our main FAQ
 How does launching CWLs with Dockstore CLI compare with cwltool?
 ----------------------------------------------------------------
 
-Under the hood, the Dockstore CLI evokes cwltool to launch CWL workflows. However, it adds additional features. Dockstore CLI has utilities to generate JSON parameter files from
-entries on Dockstore (``dockstore tool convert``).
-
-When launching tools, the Dockstore CLI makes it easy to specify entries
+Under the hood, the Dockstore CLI evokes cwltool to launch CWL workflows. However, it adds additional features. The Dockstore CLI can generate JSON parameter files from
+entries on Dockstore (``dockstore tool convert``). 
+Additionally, when launching tools, the Dockstore CLI makes it easy to specify entries
 from the Dockstore website. We can also provision input and output files using HTTP,
 FTP, S3, and GCS. As of Release 1.12, the Dockstore CLI has support for running on `a WES server <https://github.com/ga4gh/workflow-execution-service-schemas>`__. We also have preliminary support for `Synapse <https://www.synapse.org/>`__ and the `ICGC Storage
 client <https://docs.icgc.org/download/guide/#score-client-usage>`__. Please see `file provisioning plugins <https://github.com/dockstore/dockstore-cli/tree/master/dockstore-file-plugin-parent>`__
@@ -30,7 +29,7 @@ See `Docker for Mac <https://docs.docker.com/engine/installation/mac/>`__ for in
     on a typical Ubuntu machine. By default the only shared volumes are
     /Users, /Volumes, /tmp, and /private. Note that /var is not a shared
     directory (and can't be set as one). ``cwltool`` uses your TMPDIR (the
-    env variable) to setup volumes with docker, which on a Mac can default
+    env variable) to setup volumes with Docker, which on a Mac can default
     to a subdirectory of /var. In order to get ``cwltool`` working on your
     Mac, you need to set your TMPDIR to be under one of the shared volumes
     in Docker for Mac. You can do this by doing something similar to the

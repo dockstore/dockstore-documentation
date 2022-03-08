@@ -175,11 +175,6 @@ Advanced developer topics
 * :doc:`Checker workflows <advanced-topics/checker-workflows>`, and :doc:`how to run them using TRS <advanced-topics/checker-workflow-trs>`
 * :doc:`Sharing workflows <advanced-topics/sharing-workflows>`
 * :doc:`Aliases <advanced-topics/guid-alias>`
-* Dockstore CLI
-
-    * :doc:`Setting up file provisioning plugins <advanced-topics/set-up-file-provisioning-plugins>`
-    * :doc:`Developing file provisioning plugins <advanced-topics/developing-file-provisioning-plugins>`
-    * :doc:`Advanced Dockstore CLI features <advanced-topics/advanced-features>`
 * :doc:`Docker alternatives <advanced-topics/docker-alternatives>`
 * Maximizing reproducibility
 

@@ -1,6 +1,6 @@
-================================================
-Troubleshooting and Frequently Asked Questions
-================================================
+=================================
+GitHub App Troubleshooting & FAQs
+=================================
 
 ..
     Need to update with info about checking lambda errors in UI https://github.com/dockstore/dockstore/issues/3530

@@ -3,6 +3,119 @@ FAQ
 
 For questions relating to the Dockstore CLI, please see :doc:`Dockstore CLI FAQ </advanced-topics/dockstore-cli/dockstore-cli-faq>`. 
 
+.. contents:: Table of Contents
+  :local:
+
+.. _faq-header-general-dockstore-questions:
+
+General Dockstore Questions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+What environment do you test tools in?
+--------------------------------------
+
+Typically, we test running tools in Ubuntu Linux 16.04 LTS on VMs in
+`OpenStack <https://www.openstack.org/>`__ with 8 vCPUs and 96 GB of RAM
+and above. We've also begun testing on Ubuntu 18.04 LTS and so far it's
+been successful. If you are only listing and editing tools, we have
+achieved success with much lower system requirements. However, launching
+tools will have higher system requirements dependent on the specific
+tool. Consult a tool's README or CWL/WDL description when in doubt.
+
+
+.. _what-is-a-verified-tool-or-workflow:
+
+What is a verified tool or workflow?
+------------------------------------
+
+A verified tool/workflow means that at least one version has been verified to be successfully ran on a platform.
+
+See :doc:`/advanced-topics/verification` for full details on this feature.
+
+
+What is a default version of a tool or workflow?
+------------------------------------------------
+
+Every tool/workflow is recommended to have a default version set by its
+author. It indicates to the end users which version of the tool/workflow
+they should use. For tools, the default version is uniquely identified
+by the tag from the Docker image repository. For workflows, the default
+version is identified by the Git Reference (which could be a Git tag or
+a Git branch). The default version can be set in the 'Versions' tab of a
+tool/workflow via radio buttons.
+
+Setting the default version affects a number of elements including (but
+not limited to):
+
+1. It determines what is displayed in the 'Description' section of the
+   'Info' Tab
+2. It is the first version other end users see when no version is
+   specified. For example
+   https://dockstore.org/containers/quay.io/pancancer/pcawg-bwa-mem-workflow
+   is redirected to
+   https://dockstore.org/containers/quay.io/pancancer/pcawg-bwa-mem-workflow:develop?tab=info
+3. It is the version of the tool/workflow that is launched by default
+   when users launch a tool/workflow from the Dockstore CLI.
+   For example, if version 1.0 is set as the default version of the
+   quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig tool,
+
+    ``$ dockstore tool launch --entry quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig:1.0 --json Dockstore.json`` 
+    
+    would be equivalent to
+
+    ``$ dockstore tool launch --entry quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig --json Dockstore.json``
+4. The docker pull command in the tools search reflects the defaultversion
+
+
+How do I send private messages to administrators or report security vulnerabilities?
+------------------------------------------------------------------------------------
+
+Users are able to open helpdesk tickets on `Discourse <https://discuss.dockstore.org/>`_. Users can create helpdesk tickets in
+case of privacy complaints, security vulnerabilities, or any other urgent matter related to Dockstore. Helpdesk tickets will be addressed
+by Dockstore administrators.
+
+The following steps can be taken to create a helpdesk ticket (also shown `here <https://discuss.dockstore.org/t/opening-helpdesk-tickets/1506>`_).
+
+1. Navigate to `Discourse <https://discuss.dockstore.org/>`_ and login.
+2. Select your profile icon, located in the top right corner of the screen.
+3. Select the ``mail`` icon, located in the dropdown.
+4. Send a message to the ``dockstore_admins`` group.
+
+.. Note:: If you are unable to see a ``New Message`` button on the mail page, you may be considered a new user and have insufficient privileges. \
+   Entering 5 topics and viewing 30 posts over a minimum of 10 minutes will raise your privileges. \
+   You will be notified of any privilege changes to your account via the mailbox.
+
+
+How do I cite Dockstore?
+------------------------
+
+For citing Dockstore as a paper, take a look at our `F1000
+paper <http://dx.doi.org/10.12688/f1000research.10137.1>`__.
+
+For citing the actual code, we recommend looking at our Zenodo entry.
+You will find a variety of citation styles and ways to export it at
+|DOI|.
+
+.. _faq-header-github-integration:
+
+Integration with GitHub
+^^^^^^^^^^^^^^^^^^^^^^^
+
+What is the difference between logging in with GitHub or logging in with Google?
+--------------------------------------------------------------------------------
+
+The intent here is that you should be able to login with either login
+method and still conveniently get into the same Dockstore account. With
+login via Google, if you are a Terra user you will also have access to
+:doc:`sharing functionality </advanced-topics/sharing-workflows>`.
+
+Note that for simplicity, each of your GitHub or Google accounts can
+only be associated with one account at a time. You will need to link
+with a different account for each login method or delete your account if
+you want to assign them to a new Dockstore account.
+
+
+
 What happens if I rename my GitHub repository?
 ----------------------------------------------
 
@@ -20,16 +133,51 @@ Please note the GitHub warning: If you create a new repository under
 your account in the future, do not reuse the original name of the renamed
 repository. If you do, redirects to the renamed repository will break.
 
-What environment do you test tools in?
---------------------------------------
 
-Typically, we test running tools in Ubuntu Linux 16.04 LTS on VMs in
-`OpenStack <https://www.openstack.org/>`__ with 8 vCPUs and 96 GB of RAM
-and above. We've also begun testing on Ubuntu 18.04 LTS and so far it's
-been successful. If you are only listing and editing tools, we have
-achieved success with much lower system requirements. However, launching
-tools will have higher system requirements dependent on the specific
-tool. Consult a tool's README or CWL/WDL description when in doubt.
+.. _faq-header-permissions:
+
+Permissions
+^^^^^^^^^^^^
+
+How do I add other users as maintainers of a workflow?
+------------------------------------------------------
+
+For workflows registered with GitHub, Dockstore allows users from the same GitHub organization to manage workflows
+together. If a new GitHub workflow from the same GitHub organization is added to Dockstore by another user, click
+the "Discover Existing Dockstore Workflows" button in the "My Workflows" menu so the workflow will appear in My Workflows.
+
+.. image:: discover_existing_workflows_screenshot.png
+
+If the workflow was added by manually registering it, click Refresh Organization.
+
+For participants of the :doc:`limited sharing
+beta </advanced-topics/sharing-workflows/>`, you can enter the email
+addresses of the users you wish to share with to give them permissions
+to your workflow. This is only available for hosted workflows and users
+with Google accounts linked to Terra.
+
+
+Why are my workflows from an organization I belong to not visible?
+------------------------------------------------------------------
+
+Organizations have the ability to restrict access to the API for third
+party applications. GitHub provides a
+`tutorial <https://help.github.com/en/articles/enabling-oauth-app-access-restrictions-for-your-organization/>`__
+on how to add these restrictions to your organizations.
+
+In order for Dockstore to gain access to organizations of this type, you
+will need to grant access to the Dockstore application. Dockstore will
+only be reading information on workflows in your organization and who
+has access to them in order to mirror these restrictions on Dockstore
+itself. GitHub provides a
+`tutorial <https://help.github.com/en/articles/approving-oauth-apps-for-your-organization/>`__
+for approving third party apps access to your organization.
+
+
+.. _faq-header-other:
+
+Other
+^^^^^
 
 There are too many versions of my tool, how do I delete some?
 -------------------------------------------------------------
@@ -40,15 +188,6 @@ example <https://quay.io/repository/pancancer/pcawg-bwa-mem-workflow?tab=tags>`_
 If you have the right permissions, you can delete some and then refresh
 a tool on Dockstore to clean-up.
 
-How do I cite Dockstore?
-------------------------
-
-For citing Dockstore as a paper, take a look at our `F1000
-paper <http://dx.doi.org/10.12688/f1000research.10137.1>`__.
-
-For citing the actual code, we recommend looking at our Zenodo entry.
-You will find a variety of citation styles and ways to export it at
-|DOI|.
 
 How do I get more space inside my CWL tool running in a container?
 ------------------------------------------------------------------
@@ -104,6 +243,7 @@ Also be aware that some tools will use space from your root filesystem.
 For example, Docker's storage driver and data volumes will by default
 install to and use space on your root filesystem.
 
+
 Do you have tips on creating Dockerfiles?
 -----------------------------------------
 
@@ -115,6 +255,7 @@ Do you have tips on creating Dockerfiles?
 -  do not depend on changes to ``hostname`` or ``/etc/hosts``, Docker
    will interfere with this
 -  try to keep your Docker images small
+
 
 Do you have tips on creating CWL files?
 ---------------------------------------
@@ -149,64 +290,6 @@ Additionally:
       your container. Make sure your host running Docker has sufficient
       scratch space for processing your genomics data.
 
-.. _what-is-a-verified-tool-or-workflow:
-
-What is a verified tool or workflow?
-------------------------------------
-
-A verified tool/workflow means that at least one version has been verified to be successfully ran on a platform.
-
-See :doc:`/advanced-topics/verification` for full details on this feature.
-
-What is a default version of a tool or workflow?
-------------------------------------------------
-
-Every tool/workflow is recommended to have a default version set by its
-author. It indicates to the end users which version of the tool/workflow
-they should use. For tools, the default version is uniquely identified
-by the tag from the Docker image repository. For workflows, the default
-version is identified by the Git Reference (which could be a Git tag or
-a Git branch). The default version can be set in the 'Versions' tab of a
-tool/workflow via radio buttons.
-
-Setting the default version affects a number of elements including (but
-not limited to):
-
-1. It determines what is displayed in the 'Description' section of the
-   'Info' Tab
-2. It is the first version other end users see when no version is
-   specified. For example
-   https://dockstore.org/containers/quay.io/pancancer/pcawg-bwa-mem-workflow
-   is redirected to
-   https://dockstore.org/containers/quay.io/pancancer/pcawg-bwa-mem-workflow:develop?tab=info
-3. It is the version of the tool/workflow that is launched by default
-   when users launch a tool/workflow from the Dockstore CLI.
-   For example, if version 1.0 is set as the default version of the
-   quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig tool,
-
-    ``$ dockstore tool launch --entry quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig:1.0 --json Dockstore.json`` 
-    
-    would be equivalent to
-
-    ``$ dockstore tool launch --entry quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig --json Dockstore.json``
-4. The docker pull command in the tools search reflects the defaultversion
-
-How do I add other users as maintainers of a workflow?
-------------------------------------------------------
-
-For workflows registered with GitHub, Dockstore allows users from the same GitHub organization to manage workflows
-together. If a new GitHub workflow from the same GitHub organization is added to Dockstore by another user, click
-the "Discover Existing Dockstore Workflows" button in the "My Workflows" menu so the workflow will appear in My Workflows.
-
-.. image:: discover_existing_workflows_screenshot.png
-
-If the workflow was added by manually registering it, click Refresh Organization.
-
-For participants of the :doc:`limited sharing
-beta </advanced-topics/sharing-workflows/>`, you can enter the email
-addresses of the users you wish to share with to give them permissions
-to your workflow. This is only available for hosted workflows and users
-with Google accounts linked to Terra.
 
 .. _why-would-i-want-to-add-a-specific-version-of-a-workflow-to-a-collection:
 
@@ -220,54 +303,6 @@ As an example, if your organization is responsible for a workflow and its mainte
 Note that the version of a workflow can be especially important when working with launch-with partners. Some partners will take into account the version of the workflow that you are on wheras other partners will give the option of or require selecting the workflow version when performing a workflow launch. For example, Terra will automatically bring up the version you are currently browsing when performing a launch although you will have an option to override later in the process. 
 
 In summary: you can pin either a specific version of a workflow or a workflow in general depending on what relationship you wish to express. We recommend explaining further for others in the accompanying Markdown description. 
-
-
-Why are my workflows from an organization I belong to not visible?
-------------------------------------------------------------------
-
-Organizations have the ability to restrict access to the API for third
-party applications. GitHub provides a
-`tutorial <https://help.github.com/en/articles/enabling-oauth-app-access-restrictions-for-your-organization/>`__
-on how to add these restrictions to your organizations.
-
-In order for Dockstore to gain access to organizations of this type, you
-will need to grant access to the Dockstore application. Dockstore will
-only be reading information on workflows in your organization and who
-has access to them in order to mirror these restrictions on Dockstore
-itself. GitHub provides a
-`tutorial <https://help.github.com/en/articles/approving-oauth-apps-for-your-organization/>`__
-for approving third party apps access to your organization.
-
-What is the difference between logging in with GitHub or logging in with Google?
---------------------------------------------------------------------------------
-
-The intent here is that you should be able to login with either login
-method and still conveniently get into the same Dockstore account. With
-login via Google, if you are a Terra user you will also have access to
-:doc:`sharing functionality </advanced-topics/sharing-workflows>`.
-
-Note that for simplicity, each of your GitHub or Google accounts can
-only be associated with one account at a time. You will need to link
-with a different account for each login method or delete your account if
-you want to assign them to a new Dockstore account.
-
-How do I send private messages to administrators or report security vulnerabilities?
-------------------------------------------------------------------------------------
-
-Users are able to open helpdesk tickets on `Discourse <https://discuss.dockstore.org/>`_. Users can create helpdesk tickets in
-case of privacy complaints, security vulnerabilities, or any other urgent matter related to Dockstore. Helpdesk tickets will be addressed
-by Dockstore administrators.
-
-The following steps can be taken to create a helpdesk ticket (also shown `here <https://discuss.dockstore.org/t/opening-helpdesk-tickets/1506>`_).
-
-1. Navigate to `Discourse <https://discuss.dockstore.org/>`_ and login.
-2. Select your profile icon, located in the top right corner of the screen.
-3. Select the ``mail`` icon, located in the dropdown.
-4. Send a message to the ``dockstore_admins`` group.
-
-.. Note:: If you are unable to see a ``New Message`` button on the mail page, you may be considered a new user and have insufficient privileges. \
-   Entering 5 topics and viewing 30 posts over a minimum of 10 minutes will raise your privileges. \
-   You will be notified of any privilege changes to your account via the mailbox.
 
 
 Any last tips on using Dockstore?

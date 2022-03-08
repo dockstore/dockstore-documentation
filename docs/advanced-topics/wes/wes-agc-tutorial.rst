@@ -261,10 +261,10 @@ This WDL workflow tabulates read counts of the input fastq file.
             "fastqReadCounts.countFastqReads.inputFastq": ["s3://human-pangenomics/working/HPRC_PLUS/HG005/raw_data/Illumina/child/5A1-24481579/5A1_S5_L001_R1_001.fastq.gz"]
         }
 
-2. As a requirement of AGC input parsing, create a second file named ``agcInputs.json`` in your working directory.
-   This file indicates which WES attachment should be used as the input JSON for the workflow execution step, in this case, we want ``input.json`` to be our input file:
+2. As a requirement of AGC input parsing, create a second file named ``agcWrapper.json`` in your working directory.
+   This file indicates which WES attachment will be used as the input JSON for the workflow execution step, in this case, ``input.json`` is our input file:
 
-    *agcInputs.json*
+    *agcWrapper.json*
 
     .. code:: text
 
@@ -272,11 +272,11 @@ This WDL workflow tabulates read counts of the input fastq file.
             "workflowInputs": "input.json"
         }
 
-3. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/>`_, we can quickly launch it by passing the Dockstore CLI the entry name, input JSON and attachment file:
+3. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/>`_, we can quickly launch it by passing the Dockstore CLI the entry and input files. File attachments can be specified with the ``--attach`` or ``-a`` switch:
 
     .. code:: text
 
-        dockstore workflow wes launch --entry github.com/dockstore-testing/wes-testing/agc-fastq-read-counts:main --json agcInputs.json -a input.json
+        dockstore workflow wes launch --entry github.com/dockstore-testing/wes-testing/agc-fastq-read-counts:main --json agcWrapper.json -a input.json
 
 
 4. The above command will return a unique run ID, similar to:

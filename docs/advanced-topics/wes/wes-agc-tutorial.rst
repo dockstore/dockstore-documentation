@@ -134,7 +134,7 @@ This WDL workflow prints out the string "Hello from AGC" as its output.
                 output { String out = read_string( stdout() ) }
             }
 
-1. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/>`_, we can quickly launch it by passing the Dockstore CLI the entry name:
+1. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/>`_, we can quickly launch it by passing the Dockstore CLI the entry name and its version:
 
     .. code:: text
 

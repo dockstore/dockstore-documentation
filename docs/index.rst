@@ -161,6 +161,17 @@ Best practices guidelines
    advanced-topics/best-practices/nfl-best-practices
    advanced-topics/best-practices/best-practices-dockstore
    advanced-topics/best-practices/best-practices-secure-fair-workflows
+  
+.. toctree::
+   :caption: Dockstore CLI
+   :maxdepth: 1
+   
+   Installing the Dockstore CLI <https://dockstore.org/quick-start>
+   advanced-topics/dockstore-cli/dockstore-cli-faq
+   advanced-topics/dockstore-cli/local-cromwell-config
+   advanced-topics/dockstore-cli/set-up-file-provisioning-plugins
+   advanced-topics/dockstore-cli/developing-file-provisioning-plugins
+   advanced-topics/dockstore-cli/advanced-features
 
 Advanced developer topics
 -------------------------
@@ -197,7 +208,7 @@ Advanced developer topics
    :caption: Advanced Developer Topics
    :maxdepth: 1
    :hidden:
-
+   
    advanced-topics/docker-registries
    advanced-topics/tools-vs-workflows
    advanced-topics/ways-to-register-tools
@@ -206,9 +217,6 @@ Advanced developer topics
    advanced-topics/checker-workflow-trs
    advanced-topics/sharing-workflows
    advanced-topics/guid-alias
-   advanced-topics/set-up-file-provisioning-plugins
-   advanced-topics/developing-file-provisioning-plugins
-   advanced-topics/advanced-features
    advanced-topics/docker-alternatives
    advanced-topics/snapshot-and-doi
    advanced-topics/checksum-support

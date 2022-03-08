@@ -1,6 +1,8 @@
 Set Up File Provisioning Plugins
 ================================
 
+.. note:: Currently, the Dockstore CLI's GS plugin does not support files that are located in `requester-pays <https://cloud.google.com/storage/docs/requester-pays>`__ buckets.
+
 File provisioning plugins can be used to extend the Dockstore CLI to
 allow for input and output files to be downloaded or uploaded to new
 and/or proprietary services. By default, the Dockstore CLI tries to read
@@ -21,8 +23,6 @@ have downloaded. To check if you have the plugins, run the command
 
 .. figure:: /assets/images/docs/file-provisioning-plugins.png
    :alt: file provisioning plugins
-
-   file provisioning plugins
 
 If not, run ``dockstore plugin download``.
 

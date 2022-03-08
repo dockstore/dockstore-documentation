@@ -52,7 +52,7 @@ Ubuntu 21.10 to be specific.
 .. note:: On Dockstore, a one-task WDL with an associated Docker image can be registered as a WDL Tool. However, unlike CWL, WDL does not directly have the concept of a Tool built into it, instead, "WDL Tools" are a Dockstore-only concept which exists for legacy reasons. We are gradually moving away from WDL Tools and encourage people to register their WDLs, whether they be single-task or not, as workflows. WDL workflows can use Docker images, as will be seen in this tutorial.
 
 
-Again, we provide an example from the
+We provide an example from the
 `wdl-bamstats <https://github.com/dockstore/wdl-bamstats/blob/main/Dockstore.wdl>`__
 repository:
 
@@ -98,7 +98,7 @@ repository:
 
 Let us break it down piece by piece.
 
-.. note:: The very first line represents the version of WDL specification being used, not necessarily the version of the workflow. In this case, that is `version 1.0` of the WDL spec. If this line is not included, the WDL will be parsed as if it were following the draft-2 specification. Note that most 1.0 WDLs and draft-2 WDLs are not interchangable without a few changes, so make you are using the correct version when following along with examples.
+.. note:: The very first line represents the version of WDL specification being used. In this example, we are using `version 1.0 of the WDL spec. <https://github.com/openwdl/wdl/blob/main/versions/1.0/SPEC.md>`__ If this line is not included at the top of the WDL, the WDL will be parsed as if it were following the draft-2 specification. Note that most 1.0 WDLs and draft-2 WDLs are not interchangable without a few changes, so make you are using the correct version when following along with examples.
 
 You'll notice that there are two main sections of the file. First is a
 task section where we define the task level inputs and outputs of a
@@ -127,9 +127,9 @@ the type of the variable, and to the right is its name.
 
 In WDL, you can make a variable optional by adding a ? to the end of the
 type declaration. If a ? is not included then the variable is considered
-required. So, because this says `File` and not `File?` then we know that
-`bam_input` must be defined for the pipeline to work. The same goes for
-`mem_gb` too.
+required. So, because this says ``File`` and not ``File?`` then we know that
+``bam_input`` must be defined for the pipeline to work. The same goes for
+``mem_gb`` too.
 
 Task Command
 ++++++++++++
@@ -143,7 +143,7 @@ of WDL quite familiar.
 We can also pass the command parameters based on
 the inputs described above. Here we pass the amount of memory to use and
 the input BAM file to a script from the
-quay.io/collaboratory/dockstore-tool-bamstats:1.25-6\_1.0 docker image.
+`quay.io/collaboratory/dockstore-tool-bamstats:1.25-6\_1.0 <https://quay.io/collaboratory/dockstore-tool-bamstats:1.25-6\_1.0>`__ Docker image.
 Note that bamstats requires you pass in the memory as a positional argument,
 but other programs may not require this.
 
@@ -191,7 +191,7 @@ sets an output name that is based upon the name of the input. That's not the cas
 bamstats, but it is very common, so it's worth taking a look at how this can be done.
 Assuming there are no other zip files lying around in the Docker container's
 execution directory, we can define our WDL to instead look for any zip files 
-using WDL's `glob()` feature. `glob()` returns an array of files matching a
+using WDL's ``glob()`` feature. ``glob()`` returns an array of files matching a
 regular expression string. Note that it will still be considered an array even
 if it only has one file in it. So, we could do...
 
@@ -213,7 +213,7 @@ to have that file at index zero. With that knowledge, this is also an option:
     }
 
 This is a useful trick for multi-step workflows, where it is often easier
-to deal with a variable of type `File` than of type `Array[File]`.
+to deal with a variable of type ``File`` than of type ``Array[File]``.
 
 Task Runtime
 ++++++++++++
@@ -336,7 +336,7 @@ it really doesn't matter. I'm using a sample I checked in already:
       "bamstatsWorkflow.mem_gb": "4"
     }
 
-.. tip::  The Dockstore CLI can handle inputs with HTTPS, FTP, GS, and S3 URLs, but that's beyond the scope of this tutorial. For now, we are sticking with files that come are on your local disk.
+.. tip::  The Dockstore CLI can handle inputs with HTTPS, FTP, GS, and S3 URLs, but that's beyond the scope of this tutorial. For now, we are sticking with files that are on your local disk.
 
 You can see in the above I give the relative path to the input under
 ``bam_input`` and the memory in GB that I want to use for the task.
@@ -352,7 +352,8 @@ the JSON config file.
 
 What you see next will depend on which operating system you are using and the names of your folders, but the beginning of it will look a little bit like this:
 
-::
+.. code-block:: text
+
     Creating directories for run of Dockstore launcher in current working directory: /home/aduncan/Documents/dockstore-bamstats
     Provisioning your input files to your local machine
     Downloading: bamstatsWorkflow.bam_input from NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam to: /home/aduncan/Documents/dockstore-bamstats/cromwell-input/aca839a6-92c4-4234-bc6d-460bcfe6f4d6/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
@@ -363,7 +364,8 @@ That text is from Cromwell and the Dockstore CLI, preparing all it needs to do i
 
 How long your workflow takes to run will depend on your computer's hardware, but we have found running this particular workflow on the sample data provided takes less than 5 minutes on a 2020 Macbook Pro with 16 GB of memory. There is going to be a lot of text on the command line as your workflow progresses, and at one point it might even seem to pause. This "pause" is normal; when bamstats itself is executing, it does not output text to the command line. Once you see this text on your command line, you'll know it's finished.
 
-::
+.. code-block:: text
+
     Cromwell stderr:
 
     Saving copy of Cromwell stdout to: /home/aduncan/Documents/dockstore-bamstats/Cromwell.stdout.txt

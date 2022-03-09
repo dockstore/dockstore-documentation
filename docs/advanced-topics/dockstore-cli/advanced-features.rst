@@ -330,14 +330,15 @@ with the `Cromwell <https://github.com/broadinstitute/cromwell>`__ version liste
 +-------------+-----------------------+
 |     1.11    |          57           |
 +-------------+-----------------------+
-
+|     1.12    |          77           |
++-------------+-----------------------+
 
 Additionally, you can override the cromwell version in your
 ``~/.dockstore/config`` using for example:
 
 ::
 
-    cromwell-version = 58
+    cromwell-version = 78
 
 You can test cromwell by cloning the dockstore-tool-md5sum repository:
 ``git clone git@github.com:briandoconnor/dockstore-tool-md5sum.git`` and

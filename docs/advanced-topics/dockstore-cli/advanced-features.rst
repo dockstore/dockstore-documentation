@@ -333,14 +333,18 @@ with the `Cromwell <https://github.com/broadinstitute/cromwell>`__ version liste
 |     1.12    |          77           |
 +-------------+-----------------------+
 
-Additionally, you can override the cromwell version in your
+Additionally, you can override the Cromwell version in your
 ``~/.dockstore/config`` using for example:
 
 ::
 
-    cromwell-version = 78
+    cromwell-version = 76
 
-You can test cromwell by cloning the dockstore-tool-md5sum repository:
+The Dockstore CLI will attempt to download the version of Cromwell JAR file you specify from the `Cromwell
+download area <https://github.com/broadinstitute/cromwell/releases/>`__ to
+``~/.dockstore/libraries``.
+
+You can test Cromwell by cloning the dockstore-tool-md5sum repository:
 ``git clone git@github.com:briandoconnor/dockstore-tool-md5sum.git`` and
 then test using
 ``dockstore tool launch --local-entry Dockstore.wdl --json test.wdl.json``

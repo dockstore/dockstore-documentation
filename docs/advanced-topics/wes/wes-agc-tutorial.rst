@@ -114,7 +114,7 @@ to your terminal with the server's configuration.
 
 Hello World Workflow
 ---------------------
-The Dockstore entry associated with this workflow can be found here `agc-hello-world <https://dockstore.org/workflows/github.com/dockstore-testing/wes-testing/agc-hello-world:main?tab=info>`_.
+The Dockstore entry associated with this workflow can be found here `agc-hello-world <https://dockstore.org/workflows/github.com/dockstore-testing/wes-testing/agc-hello-world:v1.12?tab=info>`_.
 
 This WDL workflow prints out the string "Hello from AGC" as its output.
 
@@ -138,7 +138,7 @@ This WDL workflow prints out the string "Hello from AGC" as its output.
 
     .. code:: text
 
-        dockstore workflow wes launch --entry github.com/dockstore-testing/wes-testing/agc-hello-world:main
+        dockstore workflow wes launch --entry github.com/dockstore-testing/wes-testing/agc-hello-world:v1.12
 
 2. The above command will return a unique run ID, similar to:
 
@@ -189,7 +189,7 @@ This WDL workflow prints out the string "Hello from AGC" as its output.
 
 FastQ Read Counts Workflow
 --------------------------
-The Dockstore entry associated with this workflow can be found here `agc-fastq-read-counts <https://dockstore.org/workflows/github.com/dockstore-testing/wes-testing/agc-fastq-read-counts:main?tab=info>`_.
+The Dockstore entry associated with this workflow can be found here `agc-fastq-read-counts <https://dockstore.org/workflows/github.com/dockstore-testing/wes-testing/agc-fastq-read-counts:v1.12?tab=info>`_.
 
 This WDL workflow tabulates read counts of the input fastq file.
 
@@ -276,7 +276,7 @@ This WDL workflow tabulates read counts of the input fastq file.
 
     .. code:: text
 
-        dockstore workflow wes launch --entry github.com/dockstore-testing/wes-testing/agc-fastq-read-counts:main --json agcWrapper.json -a input.json
+        dockstore workflow wes launch --entry github.com/dockstore-testing/wes-testing/agc-fastq-read-counts:v1.12 --json agcWrapper.json -a input.json
 
 
 4. The above command will return a unique run ID, similar to:

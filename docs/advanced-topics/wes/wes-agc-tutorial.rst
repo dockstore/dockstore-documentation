@@ -58,7 +58,7 @@ This will create an AGC project named ``dockstoreAgcTutorialProject``, with a si
           - location: s3://human-pangenomics
             readOnly: true
 
-configures the AGC contexts in this project to be able to read the AWS S3 bucket ``human-pangenomics``. This is an open-access data
+configures the AGC contexts in this project to be able to read the AWS S3 bucket ``human-pangenomics``. This is an `open-access data <https://registry.opendata.aws/>`_
 bucket that will be used for one of the following example workflows.
 
 .. note::

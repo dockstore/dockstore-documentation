@@ -176,6 +176,7 @@ Advanced developer topics
    advanced-topics/posting-zips
    advanced-topics/verification
    advanced-topics/organizations-and-collections
+   advanced-topics/wes/cli-wes-tutorial
 
 .. toctree::
    :caption: Extras

@@ -97,9 +97,9 @@ As noted in the table above, Docker image checksums are grabbed on refresh and s
 Amazon ECR, or GitLab. It's also important to note that this is done for the Docker image registered on the tool through Dockstore and not necessarily
 the one included within the descriptor file itself.
 
-Workflows
----------
-For workflows, Docker image checksums are grabbed on snapshot. However, the Docker images we can retrieve from descriptor files
+Workflows and GitHub App Tools
+------------------------------
+For workflows and GitHub App tools, Docker image checksums are grabbed on snapshot. However, the Docker images we can retrieve from descriptor files
 are more limited compared to the other checksum support covered so far. Although we can generally provide checksum info for referenced Docker
 images for CWL, WDL, and NFL, there are some caveats. Most conditions are language specific, but for all workflow languages, the images
 referenced must be from Quay.io, Docker Hub, or Amazon ECR and they must include a version. The following are the known constraints for each language.

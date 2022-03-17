@@ -79,7 +79,7 @@ Docker CLI client.
 
     docker pull quay.io/briandoconnor/dockstore-tool-md5sum:1.0.4
 
-When the download has completed, a Digest is provided in the terminal output. This should match the checksum provided
+When the download has completed, a digest is provided in the terminal output. This should match the checksum provided
 by the Dockstore API.
 
 Verifying the image checksum can give you better guarantees the image has not changed since the workflow was published to Dockstore.
@@ -95,7 +95,7 @@ Tools
 -----
 As noted in the table above, Docker image checksums are grabbed on refresh and should work as long as the image is from Quay.io, Docker Hub,
 Amazon ECR, or GitLab. It's also important to note that this is done for the Docker image registered on the tool through Dockstore and not necessarily
-the one included within the descriptor file itself.
+the one referenced within the descriptor file itself.
 
 Workflows and GitHub App Tools
 ------------------------------

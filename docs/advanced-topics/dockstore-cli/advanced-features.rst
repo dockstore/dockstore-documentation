@@ -330,7 +330,7 @@ with the `Cromwell <https://github.com/broadinstitute/cromwell>`__ version liste
 +-------------+-----------------------+
 |     1.11    |          57           |
 +-------------+-----------------------+
-|     1.12    |          77           |
+|     1.13    |          77           |
 +-------------+-----------------------+
 
 Additionally, you can override the Cromwell version in your

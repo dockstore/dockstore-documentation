@@ -132,7 +132,7 @@ testParameterFiles (optional)
     An array of absolute paths to test parameter files in the Git repository.
 authors (optional)
     An array of authorship information, requiring at least the ``name`` or ``orcid`` of each author. ``orcid`` is the author's ORCID iD, a 16-digit identifier of the form ``xxxx-xxxx-xxxx-xxxx``, where each ``x`` is a digit.
-    If an author's ``orcid`` is provided, other authorship fields should not be included because it will be retrieved from their ORCID record. 
+    If an author's ``orcid`` is provided, other authorship fields should not be included because they will be retrieved from their ORCID record. 
 latestTagAsDefault (optional)
     A boolean (true or false) that will change the default version to be displayed on Dockstore. A value of true will automatically display the latest tag updated as default, while false will retain the default version that has been specified via the Dockstore UI.
 filters (optional)

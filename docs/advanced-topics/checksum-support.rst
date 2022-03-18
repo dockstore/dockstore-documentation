@@ -71,7 +71,7 @@ Descriptions for the two endpoints of note are as follows:
 
 Just like the file endpoints, the id parameter used in the endpoints above can be found on an entry's public page; underneath the Info tab, look for the bolded words **TRS**.
 
-To verify a checksum as reported by the Dockstore API matches what you download from the Docker registry first find the checksum
+To verify if a checksum as reported by the Dockstore API matches what you download from the Docker registry, first find the checksum
 and image path using one of the above methods for the image you would like to verify. Then download the image using the
 Docker CLI client.
 
@@ -79,7 +79,7 @@ Docker CLI client.
 
     docker pull quay.io/briandoconnor/dockstore-tool-md5sum:1.0.4
 
-When the download has completed a Digest is provided in the terminal output. This should match the checksum provided
+When the download has completed, a digest is provided in the terminal output. This should match the checksum provided
 by the Dockstore API.
 
 Verifying the image checksum can give you better guarantees the image has not changed since the workflow was published to Dockstore.
@@ -94,15 +94,15 @@ or `Azure <https://docs.microsoft.com/en-us/azure/container-registry/container-r
 Tools
 -----
 As noted in the table above, Docker image checksums are grabbed on refresh and should work as long as the image is from Quay.io, Docker Hub,
-or GitLab. It's also important to note that this is done for the Docker image registered on the tool through Dockstore and not necessarily
-the one included within the descriptor file itself.
+Amazon ECR, or GitLab. It's also important to note that this is done for the Docker image registered on the tool through Dockstore and not necessarily
+the one referenced within the descriptor file itself.
 
-Workflows
----------
-For workflows, Docker image checksums are grabbed on snapshot. However, the Docker images we can retrieve from descriptor files
+Workflows and GitHub App Tools
+------------------------------
+For workflows and GitHub App tools, Docker image checksums are grabbed on snapshot. However, the Docker images we can retrieve from descriptor files
 are more limited compared to the other checksum support covered so far. Although we can generally provide checksum info for referenced Docker
-images for CWL, WDL, and NFL, there are some caveats. Most conditions are language specific, but for all workflow langagues, the images
-referenced must be from Quay.io or Docker Hub and they must include a version. The following are the known constraints for each language.
+images for CWL, WDL, and NFL, there are some caveats. Most conditions are language specific, but for all workflow languages, the images
+referenced must be from Quay.io, Docker Hub, or Amazon ECR and they must include a version. The following are the known constraints for each language.
 
 .. There is a ticket to expand on when we are not able to parse the docker images. This is only what I'm fairly sure about...
 

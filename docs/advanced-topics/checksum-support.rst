@@ -87,8 +87,8 @@ However, in some cases the image checksum may diverge, for example, if the image
 been updated. For best results, and to avoid your Docker image being deleted because of a registry's retention policy,
 use Docker images referred to by a tagged version or digest. The verification features available may vary between execution engines.
 
-Note: Checksum gathering will only work with Docker images pushed after roughly 2016 or specifically with a Docker version after 1.10.
-This ensures that the images use the Docker V2 Schema 2 image manifest.
+Note: For Amazon ECR and GitHub Container Registry images, checksum gathering will only work with Docker images produced with
+Docker version 1.10 or later, which creates images using the Docker V2 Schema 2 image manifest.
 Docker has deprecated the Schema 1 manifest and we do not support it.
 
 For more information on Docker registry retention policies see posts from `Docker <https://www.docker.com/blog/scaling-dockers-business-to-serve-millions-more-developers-storage/>`_,

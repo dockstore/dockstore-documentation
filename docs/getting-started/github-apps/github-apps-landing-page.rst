@@ -14,6 +14,7 @@ Check out the following guides to learn more:
 - :doc:`migrating-tools-to-github-apps`
 - :doc:`Getting Started with Services </getting-started/getting-started-with-services>`
 - :doc:`github-apps-troubleshooting-tips`
+- :doc:`Template .dockstore.yml files </assets/templates/template>`
 
 
 ..

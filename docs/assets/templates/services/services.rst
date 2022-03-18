@@ -2,13 +2,13 @@
 ===================================================
 Two templates are provided here, one for you to quickly copy-paste into your repository, and one with a complete explanation of the possible fields and values you can use.
 
-Service Version 1.2 Simple Template
------------------------------------
+Simple template
+---------------
 .. include:: /assets/templates/services/barebones-.dockstore.yml
   :code:
 
-Service Version 1.2 Full Template
----------------------------------
+Full template with explanation of all available fields
+------------------------------------------------------
 .. include:: /assets/templates/services/.dockstore.yml
   :code:
   

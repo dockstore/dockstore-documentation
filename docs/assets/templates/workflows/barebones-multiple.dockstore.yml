@@ -1,90 +1,22 @@
-# The .dockstore.yml for version 1.2
 version: 1.2
-
-# A required key named service
-service:
-  # The subclass is required, and can be DOCKER_COMPOSE, KUBERNETES, HELM, SWARM, or NOT_APPLICABLE.
-  subclass:
-  name:
-
-  # Optional array of authorship information, requires at least the name of each author.
-  authors:
-    - name:
-      orcid:
-      email:
-      role:
-      affiliation:
-
-  # An optional, but recommended description of the service
-  description:
-
-  # `publish` is a service-wide setting and will affect ALL branches/tags; only set this as needed in a main branch.
-  # `publish` may be set to true to publish an unpublished service, or false to unpublish a published service.
-  # Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
-  publish:
-
-  # These are files the Dockstore will index. They will be directly downloadable from Dockstore. Wildcards are not supported.
-  files:
-
-  # The service launcher will execute the scripts in the following order. All steps other than start are optional,
-  # and if they are missing or have no value specified, will be ignored.
-  #
-  # 1. preprovision -- Invoked before any data has been downloaded and some initialization is required. Not sure if we need this one.
-  # 2. prestart -- Executed after data has been downloaded locally, but before service has started (see the data section).
-  # 3. start -- Starts up the service.
-  # 4. poststart -- Associated script will run after the service has started
-  # 5. postprovision -- After the service has been started. This might be invoked multiple times, e.g., if the user decides to load multiple sets of data.
-  #
-  # In addition, the following scripts, if present and with a value, are for use by the launcher:
-  # 1. port - Which port the service is exposing. This provides a generic way for the tool to know which port is being exposed, e.g., to reverse proxy it.
-  # 2. healthcheck - exit code of 0 if service is running normally, non-0 otherwise.
-  # 3. stop - stops the service
-  scripts:
-    start:
-    postprovision:
-    port:
-    stop:
-
-  # These are environment variables that the launcher is responsible for passing to any scripts that it invokes.
-  # The names must be valid environment variable names.
-  # Users can specify the values of the parameters in the input parameter JSON.
-  # These variables are service-specific, i.e., the service creator decides what values, if any, to
-  # expose as environment variables.
-  # There are three parts to the environment variable
-  #    - The name (in this example, httpPort)
-  #    - An optional default value (string or int), which will be used if the user does not specify in the input file
-  #    - An optional description, which can be used by the service launcher as a prompt
-  environment:
-    httpPort:
-      default:
-      description:
-
-  # This section describes data that should be provisioned locally for use by
-  # the service. The service launcher is responsible for provisioning the data.
-  #
-  # Each key in this section is the name of a dataset. Each dataset can have
-  # 1 to n files.
-  #
-  # Each dataset has the following properties:
-  #   - targetDirectory -- required, indicates where the files in the dataset should be downloaded to. Paths are relative.
-  #   - files -- required, 1 to n files, where each file has the following attributes:
-  #           - description -- a description of the file
-  #           - targetDirectory -- optionally override the dataset's targetDirectory if this file needs to go in a different location.
-  data:
-    dataset_1:
-      targetDirectory:
-      files:
-        tsv:
-          description:
-        metadata:
-          description:
-
-  # Filters allow specifying sets of branches and tags to include for the service.
-  # If no filters are given, all branches and tags are included.
-  # Branches and tags are arrays of pattern-strings.
-  # Pattern-strings use Unix-style Glob syntax by default (Ex: `develop`, `myworkflow/**`)
-  # https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)
-  # or RegEx when the string is surrounded by / (Ex: `/develop/`, `/myworkflow\/.*/`).
-  filters:
-    branches:
-    tags:
+workflows:
+  - name: globalAligner
+    subclass: CWL
+    publish: True
+    primaryDescriptorPath: /runGlobalAligner.cwl
+    testParameterFiles:
+        - /test/globalAligner.cwl.json
+    filters:  # All tags, no branches
+        tags:
+            - /.*/
+  - name: localAligner
+    subclass: CWL
+    primaryDescriptorPath: /runLocalAligner.cwl
+    testParameterFiles:
+        - /test/localAligner.cwl.json
+    filters:  # Only develop or master branches and localAligner/** tags
+        branches:
+            - develop
+            - master
+        tags:
+            - /localaligner\/.*/

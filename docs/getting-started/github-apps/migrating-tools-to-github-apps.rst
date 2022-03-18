@@ -136,19 +136,7 @@ Let's say we want to convert these two tools that come from this `repository <ht
 
 Your ``/.dockstore.yml`` would look like the following:
 
-.. code:: yaml
-
-   version: 1.2
-   tools:
-      - subclass: CWL
-        primaryDescriptorPath: /Dockstore.cwl
-        testParameterFiles:
-            - /test.cwl.json
-      - subclass: CWL
-        primaryDescriptorPath: /Dockstore2.cwl
-        testParameterFiles:
-            - /test.cwl.json
-        name: optional-name
+.. include: templates/tools/barebones-multiple.dockstore.yml
 
 Archiving or Deleting Your Existing Tool
 ----------------------------------------

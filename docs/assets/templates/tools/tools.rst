@@ -1,19 +1,19 @@
 .dockstore.yml for Tools Templates (version 1.2)
 ================================================
-Three templates are provided here, one for you to quickly copy-paste into your repository, and one with a complete explanation of the possible fields and values you can use.
+Several templates and examples are provided here for you to reference for your own .dockstore.yml files. The last example provides a complete explanation of the possible fields and values you can use.
 
-Single tool template
---------------------
+Simple generic template for a tool
+----------------------------------
 .. include:: /assets/templates/tools/barebones-.dockstore.yml
   :code:
 
-Multiple tools in the same repository
--------------------------------------
+Filled-out example of multiple tools in the same repository
+-----------------------------------------------------------
 .. include:: /assets/templates/tools/barebones-multiple.dockstore.yml
   :code:
 
-Tool Version 1.2 Full Template
-------------------------------
+Full template with explanation of all available fields
+------------------------------------------------------
 .. include:: /assets/templates/tools/.dockstore.yml
   :code:
   

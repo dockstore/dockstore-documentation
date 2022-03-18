@@ -8,7 +8,8 @@ service:
   name:
 
   # Optional array of authorship information, requires at least the name or orcid of each author.
-  # If an author's ORCID iD is provided, other authorship fields should not be included because they will be retrieved from their ORCID record.
+  # If an author's ORCID iD is provided, other authorship fields should not be included because 
+  # they will be retrieved from their ORCID record. If included, they will be ignored.
   authors:
     - name:
       email:

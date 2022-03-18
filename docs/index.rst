@@ -66,7 +66,7 @@ Getting Started
    getting-started/hosted-tools-and-workflows
    getting-started/getting-started-with-services
    getting-started/github-apps/github-apps-landing-page
-
+  
 Launching tools and workflows from Dockstore
 --------------------------------------------
 Dockstore partners with several compute platforms, allowing you to export workflows into these platforms with the click of a button. We also provide a CLI to run tools and workflows locally. Click on the links below for more information.
@@ -222,6 +222,7 @@ Advanced developer topics
    advanced-topics/posting-zips
    advanced-topics/verification
    advanced-topics/organizations-and-collections
+   advanced-topics/wes/cli-wes-tutorial
 
 .. toctree::
    :caption: Extras

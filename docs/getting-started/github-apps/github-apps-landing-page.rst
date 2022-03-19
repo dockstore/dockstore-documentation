@@ -9,6 +9,7 @@ The Dockstore GitHub App adds support for registering and automatically syncing 
 Check out the following guides to learn more:
 
 - :doc:`github-apps`
+- :doc:`Installing the GitHub App </getting-started/github-apps/installation>`
 - :ref:`Workflow Registration with GitHub Apps <Registration With GitHub Apps>`
 - :doc:`migrating-workflows-to-github-apps`
 - :doc:`migrating-tools-to-github-apps`
@@ -25,6 +26,7 @@ Check out the following guides to learn more:
     :hidden:
 
     github-apps
+    Installing the GitHub App </getting-started/github-apps/installation>
     Migrating Existing Workflows <migrating-workflows-to-github-apps>
     Migrating Existing Tools <migrating-tools-to-github-apps>
     Troubleshooting and FAQ <github-apps-troubleshooting-tips>

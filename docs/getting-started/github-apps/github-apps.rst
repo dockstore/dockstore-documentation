@@ -4,9 +4,6 @@ Automatic Syncing with GitHub Apps and .dockstore.yml -- Overview
 ..
     TODO: update error handling section with info about checking lambda errors in UI https://github.com/dockstore/dockstore/issues/3530
 
-Overview
---------
-
 .. note::
   Summary of GitHub App usage:
 
@@ -140,6 +137,7 @@ See Also
 - :doc:`Getting Started with Services </getting-started/getting-started-with-services>`
 - :doc:`Getting Started with Workflows </getting-started/dockstore-workflows>`
 - :doc:`Getting Started with Tools </getting-started/dockstore-tools>`
+- :doc:`Other docs involving the Dockstore GitHub App </getting-started/github-apps/github-apps>`
 
 .. discourse::
        :topic_identifier: 2240

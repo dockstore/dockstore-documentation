@@ -85,58 +85,7 @@ Registration With GitHub Apps
 This is the newest way of getting content onto Dockstore and is by far the most automated. Using
 GitHub Apps, Dockstore can react to changes on GitHub as they are made, keeping Dockstore synced
 with GitHub automatically.
-
-Installing the GitHub App is simple -- navigate to ``/my-workflows``, click the ``+`` button on the left hand sidebar, select ``Register using GitHub Apps``, and then click
-``+ Manage Dockstore Installation on GitHub``. You'll then be redirected to GitHub where you can grant the app access to specific repositories within whatever organization you are installing into.
-
-.. image:: /assets/images/docs/add-workflow-button.png
-   :width: 40 %
-
-.. image:: /assets/images/docs/register-workflow-github-apps.png
-   :width: 40 %
-
-.. figure:: /assets/images/docs/gh-app-reg-1.png
-   :width: 70 %
-
-   Install our GitHub App on either all repositories in an organization or on specific repositories
-
-Once you've installed our GitHub app on a repository or organization, you'll need to add a ``/.dockstore.yml`` file to
-the root directory of a branch of the repository that contains your workflow. This file contains information like
-workflow path, test parameter file, workflow name, etc. When a push is made on GitHub to a branch
-with a ``/.dockstore.yml``, Dockstore will add that branch to the corresponding workflow on Dockstore. If the
-workflow doesn't already exist on Dockstore, one will be created. Note that a single ``/.dockstore.yml`` file can describe multiple workflows, if all of those workflows are in the same repository.
-
-Below is a simple example of a ``/.dockstore.yml`` file
-for an alignment workflow to show you how easy it is to use. If you are interested in using this method, please see the 
-complete documentation at the :doc:`Dockstore GitHub Apps <github-apps/github-apps>` page. All paths in the file must be absolute.
-
-.. code:: yaml
-
-   version: 1.2
-   workflows:
-      - subclass: CWL
-        primaryDescriptorPath: /aligner.cwl
-        testParameterFiles:
-        - /test/aligner.cwl.json
-
-If you had our GitHub App installed on the repository ``myorg/alignments`` and then add the above ``/.dockstore.yml`` to the **develop** branch,
-the following would occur.
-
-* A **CWL** workflow with the ID ``github.com/myorg/alignments`` will be created on Dockstore
-* The version **develop** is added to the workflow ``github.com/myorg/alignments``
-* The version has the primary descriptor file set to ``/aligner.cwl``
-* The version has one test parameter file: ``/test/aligner.cwl.json``
-
-Now that your workflow has been added, any time there is a push to a branch on GitHub for this repository that has a ``/.dockstore.yml``,
-it is automatically updated on Dockstore! Anytime there is a deletion of a branch on GitHub that has a ``/.dockstore.yml``, the version is
-removed from Dockstore.
-
-.. important:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
-
-.. seealso::
-    - :doc:`Automatic Syncing with GitHub Apps and .dockstore.yml <github-apps/github-apps/>` - details on writing a .dockstore.yml file
-    - :doc:`Migrating Your Existing Workflows <github-apps/migrating-workflows-to-github-apps>` - a tutorial on converting already registered workflows
-    - :doc:`Troubleshooting and FAQ <github-apps/github-apps-troubleshooting-tips>` - tips on resolving Dockstore Github App issues.
+.. include: getting-started/
 
 Traditional Registration
 ~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,7 +1,3 @@
-====================================
-Installing the Dockstore GitHub App
-====================================
-
 Installing the GitHub App is simple. Navigate to ``/my-tools``, ``/my-workflows``, or ``/my-services`` using the drop down menu in the top right. In these screenshots, we will go via ``/my-tools``, but the process is essentially the same for any of the other options.
 
 .. image:: /assets/images/docs/my-tools.png

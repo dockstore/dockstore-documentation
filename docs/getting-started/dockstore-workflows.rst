@@ -5,18 +5,22 @@
 Register a Workflow on Dockstore
 ================================
 
+.. contents::
+   :local:
+   :depth: 2
+
+
 Tutorial Goals
 --------------
-
 
 -  Discover how to register a workflow on Dockstore
 -  Publish your workflow
 
 This tutorial walks through the process of registering and sharing more
-complex workflows which are comprised of multiple tools, strung together in some
+complex workflows which are usually comprised of multiple tools, strung together in some
 sort of order (often a directed acyclic graph (DAG)). Workflows also
 differ from tools since they are not required to define their own
-environment, instead a workflow engine like
+environment. Instead, a workflow engine like
 `Arvados <https://arvados.org/>`__ or
 `Cromwell <https://github.com/broadinstitute/cromwell>`__, or
 an infrastructure like `Galaxy <https://usegalaxy.org/>`__ will provide
@@ -27,24 +31,11 @@ registration to GitHub, Bitbucket or GitLab. It assumes that you already
 have a repository which contains a workflow and are now trying to register
 it in Dockstore.
 
-Register Your Workflow in Dockstore
------------------------------------
-There are a variety of ways to get your workflows into Dockstore. Users can either
-use GitHub App registration or traditional registration. GitHub App registration is the
-recommended way to register for all new workflows on Dockstore using GitHub. The traditional registration
-is the legacy registration process which is less automated, and used for Bitbucket and GitLab.
+A Note on Naming Workflows on Dockstore
+---------------------------------------
 
-.. note:: To register content on Dockstore, you must have an account on Dockstore and
-   link the necessary third-party accounts. Once this is done you can register
-   workflows from the My Workflows page.
-
-
-Naming Workflows on Dockstore
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note:: Workflow paths are unique, descriptive identifiers for a workflow.
-
-Each workflow on Dockstore has a unique identifier in the form of a path. This path is based on
+Workflow paths are unique, descriptive identifiers for a workflow. In other words,
+each workflow on Dockstore has a unique identifier in the form of a path. This path is based on
 the Git repository that the workflow comes from. There are four components to a path, but only
 three are required. In most cases these three required components are all you need.
 
@@ -76,12 +67,18 @@ If we set the workflow name, we must include it in our path when referencing the
 .. tip:: Quick register does not support workflow names. Please use an alternative registration
    process if you would like to register a workflow with a workflow name.
 
+Register Your Workflow in Dockstore
+-----------------------------------
+There are a variety of ways to get your workflows into Dockstore. GitHub App registration is the
+recommended way to register for all new workflows on Dockstore using GitHub. The traditional registration
+is the legacy registration process which is less automated, and used for Bitbucket and GitLab.
 
+.. note:: To register content on Dockstore, you must have an account on Dockstore and
+   link the necessary third-party accounts. Once this is done you can register
+   workflows from the My Workflows page.
 
-.. _Registration With GitHub Apps:
-
-Registration With GitHub Apps
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Option A: Registration With GitHub Apps (Recommended)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This is the newest way of getting content onto Dockstore and is by far the most automated. Using
 GitHub Apps, Dockstore can react to changes on GitHub as they are made, keeping Dockstore synced
 with GitHub automatically.
@@ -119,8 +116,8 @@ Now that your workflow has been added, any time there is a push to a branch on G
 it is automatically updated on Dockstore! Anytime there is a deletion of a branch on GitHub that has a ``/.dockstore.yml``, the version is
 removed from Dockstore.
 
-Traditional Registration
-~~~~~~~~~~~~~~~~~~~~~~~~
+Option B: Traditional Registration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 When using Bitbucket and GitLab for you workflows, use the traditional registration.
 There are two types of traditional registration: quick registration and manual registration.
 
@@ -138,8 +135,8 @@ related files. Following the above tips will help streamline the registration
 process, though you can still register workflows with non-standard format by
 using manual registration.
 
-Quick Register
-~~~~~~~~~~~~~~
+Option C: Quick Register
+~~~~~~~~~~~~~~~~~~~~~~~~
 Quick register provides a flow that lets you browse the repositories you
 have access to and quickly create workflows. You can access 
 quick register by clicking the plus button on the My Workflows page. You'll
@@ -169,8 +166,8 @@ be refreshed to get it synced up with Bitbucket/GitLab.
    The solution is to use manual register, defined below, which allows you to append
    a workflow name to the path.
 
-Manual Registration of Workflows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Option D: Manual Registration of Workflows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 In certain cases, you may wish to register workflows in a different
 source code structure, especially when working with complex project
 structures. For example, if you want to register two workflows from the

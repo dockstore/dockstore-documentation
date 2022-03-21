@@ -1,10 +1,7 @@
 Migrating Your Existing Tools to Use GitHub Apps
 ======================================================
 
-Dockstore 1.12 provides users with a way to keep their tools automatically updated (instead of needing to manually refresh) by using GitHub apps.
-Here, we will go over how to migrate your existing Dockstore tools to use GitHub apps.  
-This tutorial assumes that you are are familiar with the  ``/.dockstore.yml`` file by having read our overview of :doc:`GitHub apps <github-apps>` and the :ref:`Registration With GitHub Apps` section 
-in our workflow registration document. Registering a new tool with GitHub Apps is very similar to registering a new workflow with GitHub Apps.
+Dockstore 1.12 provides users with a way to keep their tools automatically updated (instead of needing to manually refresh) by using GitHub apps. Registering a new tool with GitHub Apps is very similar to registering a new workflow with GitHub Apps.
 
 Before deciding to migrate your existing tools, consider the following differences between an existing Dockstore tool and a GitHub App tool:
 
@@ -98,7 +95,10 @@ or register two GitHub App tools, one for each language. This can be accomplishe
 .. include:: /assets/templates/tools/barebones-multiple.dockstore.yml
   :code: yaml
 
+Install the Dockstore GitHub App
+--------------------------------
 .. include:: /getting-started/github-apps/installation.rst
+
 
 Your New Entry in Dockstore
 ---------------------------

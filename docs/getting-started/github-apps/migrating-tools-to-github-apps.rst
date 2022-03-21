@@ -22,34 +22,10 @@ Before deciding to migrate your existing tools, consider the following differenc
 
 If you're familiar with the process of :doc:`migrating your existing workflows to use GitHub Apps <migrating-workflows-to-github-apps>`, note that the migration process for tools is different 
 because of these fundamental differences between existing tools and GitHub App tools. The migration process for tools will not convert your existing tool into a GitHub App tool.
-Instead, you will be creating a new GitHub App tool, then either deleting your existing tool or providing a link to your new GitHub App tool from your old tool. You may wish to consider the
-the latter if you have users that have bookmarked it or if you have papers that link to the old tool.
+Instead, you will be creating a new GitHub App tool, then either deleting your existing tool or providing a link to your new GitHub App tool from your old tool. You may wish to consider
+the latter if you have users that have bookmarked it or if you have papers that link to the old tool. :ref:`More information on that here <keeping old tool around>`.
 
-GitHub App Installation
------------------------
-
-The first step to migrating a tool is the same as adding a new tool via GitHub apps: install our Dockstore GitHub app onto your repository or
-organization. 
-
-First, navigate to the ``My Tools`` page.
-
-.. image:: /assets/images/docs/my-tools.png
-
-Click the ``+`` button on the left hand sidebar.
-
-.. image:: /assets/images/docs/add-tool-button.png
-   :width: 40 %
-
-
-Select ``Register using GitHub Apps``.
-
-.. image:: /assets/images/docs/register-tool-github-apps.png
-   :width: 40 %
-
-Click ``+ Manage Dockstore Installation on GitHub``. You'll then be redirected to GitHub where you can select which repositories can be accessed by the GitHub app.
-
-.. image:: /assets/images/docs/manage-gh-app-installation.png
-   :width: 40 %
+.. include: /getting-started/github-apps/installation
 
 Creating a .dockstore.yml File
 -------------------------------
@@ -138,8 +114,8 @@ Your ``/.dockstore.yml`` would look like the following:
 
 .. include: templates/tools/barebones-multiple.dockstore.yml
 
-Archiving or Deleting Your Existing Tool
-----------------------------------------
+Your New Entry in Dockstore
+---------------------------
 
 Once you've adding a ``.dockstore.yml`` to the desired branch of your repository, you should see a new tool appear on your ``/my-tools`` page. The tool path will start with ``github.com`` and 
 you should see that the ``Tool Information`` section looks a bit different from your existing tool.
@@ -149,6 +125,11 @@ you should see that the ``Tool Information`` section looks a bit different from 
 
 The mode is ``Automatically synced via GitHub App`` instead of one of our three build modes, and information about paths and your Docker Image is no longer included.
 You are also not able to refresh or restub the new GitHub App tool. Since you can't refresh the entire tool anymore, **new** versions from GitHub (releases/branches) that you want to add to Dockstore must have a ``.dockstore.yml`` file.
+
+.. _keeping old tool around:
+
+Archiving or Deleting Your Existing Tool
+----------------------------------------
 
 If you look on the left hand side bar, you should see that your old tool still exists. Your new GitHub App tool will start with ``github.com``, and your old tool will start with
 the Docker registry, which is ``quay.io`` in this case.
@@ -160,9 +141,13 @@ the Docker registry, which is ``quay.io`` in this case.
 At this point, you must decide whether you want to keep your old tool around. You may want to keep it if you want to preserve the link to the tool. For example, you may choose to keep the tool if this tool was linked in a research paper
 and other people might visit the tool's page.
 
-If you need to keep your old tool, then we recommend that you add a short description to your GitHub repository's README indicating where the new GitHub App tool can be found on Dockstore. 
-You may also indicate whether your old tool will be kept up to date on Dockstore through refresh. Once a short description has been added, navigate to your old tool's page and click ``Refresh`` to 
-update your tool's description with the new information.
+If you need to keep your old tool, then we recommend that you link to your new entry. You could do this in multiple ways:
+* Add a short description to your GitHub repository's README indicating where the new GitHub App tool can be found on Dockstore.  You may also indicate whether your old tool will be kept up to date on Dockstore through refresh. Once a short description has been added, navigate to your old tool's page and click ``Refresh`` to update your tool's description with the new information. Reverting that commit and then not Refreshing the old tool from then on will keep that notice in the tool's description on Dockstore.
+* Create a new version/branch that has the new link in the readme and hide that version in the new Dockstore entry so that it only appears in the old entry
+* Set "topic" to "manual" in your old entry and include the URL of your new entry within the text field.
+
+.. figure:: /assets/images/docs/edit_topic_to_link_to_new_entry.png
+   :alt: Screenshot of an old tool's entry topic field linking to a new one, with the topic field circled in red
 
 If you do not need to keep your old tool, you can simply delete it. 
 

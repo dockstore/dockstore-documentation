@@ -1,28 +1,41 @@
 .. note::
-  This tutorial is a continuation of :doc:`Creating a Dockstore Account </getting-started/register-on-dockstore>`. Please complete
-  the tutorial prior to doing this one.
+  This document is a continuation of :doc:`Creating a Dockstore Account </getting-started/register-on-dockstore>`. Please complete
+  the tutorial prior to doing this one. It also assumes you have already have a tool ready to register. If you don't, please check :doc:`Getting Started With CWL </getting-started/getting-started-with-cwl>` first. If you are working with any non-CWL language, you may be looking for :doc:`Registering Workflows on Dockstore </getting-started/dockstore-workflows>` instead of this document.
 
 Register a Tool on Dockstore
 ============================
 
+.. contents::
+   :local:
+   :depth: 2
+
 Tutorial Goals
 --------------
 
+-  Learn about different ways to register a tool
 -  Register a tool on Dockstore
--  Learn about Quick registration vs Manual Registration
 -  Publish your tool
 
 Register Your Tool in Dockstore
 -------------------------------
 
-Now that you have your ``Dockerfile``, ``Dockstore.cwl`` and/or
-``Dockstore.wdl`` in GitHub, have setup Quay.io to automatically build
+If you followed :doc:`Getting Started With CWL </getting-started/getting-started-with-cwl>`,
+you will now have your ``Dockerfile`` and ``Dockstore.cwl`` 
+in GitHub, have setup Quay.io to automatically build
 your Docker image, and have linked your accounts to Dockstore, it is
 time to register your tool. This tutorial will assume you are using CWL
-and/or WDL. Currently, Nextflow is not supported for tools on Dockstore.
+and/or WDL.
 
-Quick Registration via the Web UI
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. note:: WDL tools are a legacy feature. Although you can still register WDL tools on Dockstore using the methods below, we are now encouraging people to :doc:`register WDLs as workflows </getting-started/dockstore-workflows>` instead. Tools are not supported at all for Galaxy or Nextflow; they can only be workflows.
+
+Option A: Registration with the Dockstore GitHub App (Recommended)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+As of Release 1.12, we have a new method for registering tools that we
+recommend most people use, as it allows for automatic sychronization
+between Dockstore and GitHub. You can read more about it :doc:`in our docs about the Dockstore GitHub App </getting-started/github-apps/github-apps-landing-page>`.
+
+Option B: Quick Registration via the Web UI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the authenticated Web UI, navigate to 'My Tools' to begin managing
 Docker images imported through your linked account(s). These pages will
@@ -96,8 +109,8 @@ versions. This also allows you to pre-select a version of your tool to
 present to users in the "Launch With" section, and the Dockerfile and
 Descriptor tabs.
 
-Quick Registration of Alternate Tools
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Option C: Quick Registration of Alternate Tools
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Outside of this tutorial, you may wish to re-register a pre-existing
 tool with a new name. This can occur when you've quick registered a
@@ -140,8 +153,8 @@ the new alternate tool.
 
    Newly created alternate tool
 
-Manual Registration of Tools
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Option D: Manual Registration of Tools
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Outside of this tutorial, in certain cases, it is not possible for
 Dockstore to register every existing tool, especially those with unusual
@@ -205,8 +218,8 @@ information to be useful to other users. Selecting ``Hidden`` will
 prevent the tag from appearing in the public listing of tags for the
 image.
 
-CLI Client
-~~~~~~~~~~
+Option E: CLI Client
+~~~~~~~~~~~~~~~~~~~~
 
 The ``dockstore`` command line can be used as an alternative to the GUI
 and has a couple modes.

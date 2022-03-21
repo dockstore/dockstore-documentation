@@ -2,8 +2,36 @@
 Installing the Dockstore GitHub App
 ====================================
 
-Installing the GitHub App is simple -- navigate to ``/my-workflows``, click the ``+`` button on the left hand sidebar, select ``Register using GitHub Apps``, and then click
-``+ Manage Dockstore Installation on GitHub``.
+Installing the GitHub App is simple. Navigate to ``/my-tools``, ``/my-workflows``, or ``/my-services`` using the drop down menu in the top right.
+
+.. image:: /assets/images/docs/my-tools.png
+
+Click the ``+`` button on the left hand sidebar.
+
+.. image:: /assets/images/docs/add-tool-button.png
+   :width: 40 %
+
+
+Select ``Register using GitHub Apps``.
+
+.. image:: /assets/images/docs/register-tool-github-apps.png
+   :width: 40 %
+
+Click ``+ Manage Dockstore Installation on GitHub``. You'll then be redirected to GitHub where you can select which repositories can be accessed by the GitHub app.
+
+.. image:: /assets/images/docs/manage-gh-app-installation.png
+   :width: 40 %
+
+You'll then be redirected to GitHub where you can grant the app access to specific repositories within whatever organization you are installing into. Note that GitHub treats your username as its own "organization." For instance, my GitHub username is aofarrel. If I want to install the GitHub App so it could access aofarrel/mycoolrepo, I would choose the first option here.
+
+.. figure:: /assets/images/docs/gh-app-install-where.png
+   :width: 40 %
+
+   Install our GitHub App on either all repositories in an organization or on specific repositories
+
+.. important:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
+
+You can also begin the installation via ``/my-workflows`` too.
 
 .. image:: /assets/images/docs/add-workflow-button.png
    :width: 30 %
@@ -12,16 +40,7 @@ Installing the GitHub App is simple -- navigate to ``/my-workflows``, click the 
    :width: 30 %
 
 .. figure:: /assets/images/docs/gh-app-reg-1.png
-   :width: 60 %
-
-   Install our GitHub App on either all repositories in an organization or on specific repositories
-
-You'll then be redirected to GitHub where you can grant the app access to specific repositories within whatever organization you are installing into. Note that GitHub treats your username as its own "organization." For instance, my GitHub username is aofarrel. If I want to install the GitHub App so it could access aofarrel/mycoolrepo, I would choose the first option here.
-
-.. image:: /assets/images/docs/gh-app-install-where.png
    :width: 40 %
-
-.. important:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
 
 A note on permissions
 ~~~~~~~~~~~~~~~~~~~~~

@@ -6,7 +6,7 @@ Advanced CLI Features
 File Provisioning
 -----------------
 
-As a convenience, the dockstore command-line can perform file
+As a convenience, the Dockstore CLI can perform file
 provisioning for inputs and outputs.
 
 File provisioning for some protocols, like HTTP and FTP, is built-in
@@ -205,7 +205,7 @@ Running Launchers with Extra flags
 
 When running a tool or workflow, you may want to add additional
 parameters or flags to the executor. You can do this by updating your
-dockstore config file  (``~/.dockstore/config``).
+Dockstore config file  (``~/.dockstore/config``).
 
 As an example, adding the following line to your config file will stop
 ``cwltool`` from removing the Docker container and temp directory as
@@ -248,7 +248,7 @@ provide the ``-t`` and ``--options`` options to the Cromwell command line.
 Alternative CWL Launchers
 -------------------------
 
-By default, the dockstore CLI launches CWL tools/workflows using
+By default, the Dockstore CLI launches CWL tools/workflows using
 `cwltool <https://github.com/common-workflow-language/cwltool>`__.
 However, we have an experimental integration with other launchers such
 as: -

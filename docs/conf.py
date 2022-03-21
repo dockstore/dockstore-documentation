@@ -55,7 +55,9 @@ linkcheck_ignore = [
     'https://doi.org/10.7490/f1000research.1116584.1',
     'https://doi.org/10.7490/f1000research.1117142.1',
     'https://doi.org/10.7490/f1000research.1118245.1',
-    'https://doi.org/10.7490/f1000research.1118300.1'
+    'https://doi.org/10.7490/f1000research.1118300.1',
+    'launch-with/anvil-launch-with.html', 'launch-with/cavatica-launch-with.html', 'launch-with/dnanexus-launch-with.html', 'launch-with/cgc-launch-with.html',
+    'launch-with/galaxy-launch-with.html', 'launch-with/nextflow-tower-launch-with.html', 'launch-with/terra-launch-with.html'
     ]
 
 

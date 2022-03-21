@@ -42,10 +42,24 @@ How do I configure the GitHub App across multiple repositories?
 ------------------------------------------------------------------
 GitHub Apps can be installed on either an a user level, or an organizational level. If you installed the app for your own repos that are not in an organization, you will be able to verify the Dockstore GitHub App is installed by clicking "Applications" in the left menu in your GitHub settings. Our app, along with any others you may have installed, will be there. Clicking the "configure" button will allow you to adjust which repos the app has access to.
 
-Depending on the permissions you have on an organization, you may not be able to directly access an organization's settings. You can only configure GitHub Apps for organizations you are not an admin in if you go through the app installation process again, during which, the option to configure will appear. Be aware that can only add repos that you have admin access to, not just maintainer acccess.
+Depending on the permissions you have on an organization, you may not be able to directly access an organization's settings. If that is case for you, consider asking the organization's admin to set it up. You can also try re-installing the app again, which will take you to the app configuration process, although depending on your permissions your selected changes may not be saved. (See next question.)
 
 .. image:: /assets/images/docs/reinstall-app-to-cheese-org-settings.png
    :width: 50%
+
+.. _GitHub App permissions FAQ:
+
+Can I use the GitHub App if I am not the admin of the organization and/or repo I am trying to use it with?
+----------------------------------------------------------------------------------------------------------
+
+Perhaps. GitHub permissions can quickly get complicated, as it involves two levels of permissions (organization-level and repo-level). As such, it isn't possible for us to cover all possibilities here, but we can over some of the more common ones.
+
+First of all, you can only configure already-installed GitHub Apps for organizations you are not an admin in if you go through the app installation process again. Be aware that in this scenario, you can only add repos that you have admin access to, not just maintainer access.
+
+You may also still run into scenarios where your changes appear to not get saved, even though GitHub will not throw an error. For example, if you tried to give the GitHub App access to databiosphere/analysis_pipeline_wdl, and upon re-installation into the DataBiosphere organization, you do not see databiosphere/analysis_pipeline_wdl in the list of repositories it already has access to, there is a good chance GitHub is blocking you.
+
+If it seems your GitHub App access just won't "stick" or you are having other permissions issues, consider asking the administrator of your organization to install the app. If they set it up to have access to all repositories on the organization, this will only need to be done once.
+
 
 The changes made to my GitHub repo aren't appearing on Dockstore, but I've already installed the GitHub app and made the ``.dockstore.yml`` file. How can I figure out what's going wrong?
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

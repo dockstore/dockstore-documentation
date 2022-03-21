@@ -50,7 +50,12 @@ linkcheck_ignore = [
     'https://dockstore.org:8443/', 'https://support.terra.bio/hc/en-us/sections/360007274612/',
     'https://docs.snyk.io/getting-started/getting-started-snyk-products/getting-started-snyk-open-source',
     'https://software.broadinstitute.org/firecloud/',
-    'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works'	
+    'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works',
+    'https://doi.org/10.12688/f1000research.10137.1',
+    'https://doi.org/10.7490/f1000research.1116584.1',
+    'https://doi.org/10.7490/f1000research.1117142.1',
+    'https://doi.org/10.7490/f1000research.1118245.1',
+    'https://doi.org/10.7490/f1000research.1118300.1'
     ]
 
 

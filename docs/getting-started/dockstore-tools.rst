@@ -34,6 +34,8 @@ As of Release 1.12, we have a new method for registering tools that we
 recommend most people use, as it allows for automatic sychronization
 between Dockstore and GitHub. You can read more about it :doc:`in our docs about the Dockstore GitHub App </getting-started/github-apps/github-apps-landing-page>`.
 
+.. I made the decision to not make this symmetric with the GitHub App-related section of dockstore-workflows.rst, because the differences between gh-tools and non-gh-tools are significant. Whenever possible, when people are learning about tools and the GH app, they should be taken to the chart breaking down the differences between gh-tools and non-gh-tools. I do not think embedding that chart here is a good idea as it will confuse users who are not used to the non-gh-tool standard. Just introduce one in this doc, and link out to the other standard at the top.
+
 Option B: Quick Registration via the Web UI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

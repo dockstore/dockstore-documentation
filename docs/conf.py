@@ -52,7 +52,8 @@ linkcheck_ignore = [
     'https://software.broadinstitute.org/firecloud/',
     'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works',
     'launch-with/anvil-launch-with.html', 'launch-with/cavatica-launch-with.html', 'launch-with/dnanexus-launch-with.html', 'launch-with/cgc-launch-with.html',
-    'launch-with/galaxy-launch-with.html', 'launch-with/nextflow-tower-launch-with.html', 'launch-with/terra-launch-with.html'	
+    'launch-with/galaxy-launch-with.html', 'launch-with/nextflow-tower-launch-with.html', 'launch-with/terra-launch-with.html',
+    'https://doi.org/*'
     ]
 
 

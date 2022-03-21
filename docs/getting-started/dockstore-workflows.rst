@@ -86,7 +86,7 @@ This is the newest way of getting content onto Dockstore and is by far the most 
 GitHub Apps, Dockstore can react to changes on GitHub as they are made, keeping Dockstore synced
 with GitHub automatically.
 
-.. include: getting-started/github-apps/installation
+.. include:: /getting-started/github-apps/installation.rst
 
 Once you've installed our GitHub app on a repository or organization, you'll need to add a ``/.dockstore.yml`` file to
 the root directory of a branch of the repository that contains your workflow. This file contains information like

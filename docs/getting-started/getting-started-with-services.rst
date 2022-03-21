@@ -48,23 +48,7 @@ Registering your service works differently than tools and workflows on Dockstore
 By doing so, Dockstore will automatically register the services you create by keeping track of the releases and pre-releases you make on GitHub. This makes getting your service registered to Dockstore easy!
 You do not need the service to be fully working, and you can start experimenting on Dockstore while you write it. The following steps walk you through the installation process.
 
-First, create a repo on GitHub which contains a valid ``.dockstore.yml`` file in its root. Then, login to Dockstore and go to the my-services tab.
-
-.. figure:: /assets/images/docs/initial-my-services-page.png
-
-On this page, you will need to click the + icon located on the top left. This is the “Manage on GitHub” button, and will redirect you to the screen pictured below in order to install our Dockstore GitHub app into an organization of your choice.
-
-.. figure:: /assets/images/docs/install-dockstore-app.png
-
-After choosing an organization to install Dockstore on, you will be taken to the following GitHub page.
-
-.. figure:: /assets/images/docs/github-app-settings-page.png
-
-Here you can select whether to give access to all repositories or only select ones. If the organization you choose is intended to be just for services, we recommend choosing all repositories. Otherwise, it is probably more intuitive to select only certain repositories. Click save and you will be taken back to the "My Services" page on Dockstore.
-
-Under "My Services", you should now see the organization and the repositories you chose to keep track of in the unpublished page.
-
-.. figure:: /assets/images/docs/my-services-filled.png
+.. include:: /getting-started/github-apps/installation.rst
 
 
 Publishing Your Service

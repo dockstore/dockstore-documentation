@@ -25,12 +25,10 @@ because of these fundamental differences between existing tools and GitHub App t
 Instead, you will be creating a new GitHub App tool, then either deleting your existing tool or providing a link to your new GitHub App tool from your old tool. You may wish to consider
 the latter if you have users that have bookmarked it or if you have papers that link to the old tool. :ref:`More information on that here <keeping old tool around>`.
 
-.. include: /getting-started/github-apps/installation
-
 Creating a .dockstore.yml File
 -------------------------------
 
-Once the GitHub app is installed on the correct repo, the next step is to create a ``/.dockstore.yml`` file. We'll cover a very straightforward example
+The first step is to create a ``/.dockstore.yml`` file. We'll cover a very straightforward example
 first, but depending on how you configured the tool during registration and whether your GitHub repository houses multiple tools published on Dockstore,
 there will be additional steps to writing your ``/.dockstore.yml`` file.
 
@@ -112,7 +110,9 @@ Let's say we want to convert these two tools that come from this `repository <ht
 
 Your ``/.dockstore.yml`` would look like the following:
 
-.. include: templates/tools/barebones-multiple.dockstore.yml
+.. include:: /assets/templates/tools/barebones-multiple.dockstore.yml
+
+.. include:: /getting-started/github-apps/installation.rst
 
 Your New Entry in Dockstore
 ---------------------------

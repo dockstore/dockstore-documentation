@@ -1,13 +1,11 @@
-.. code:: yaml
-
-   version: 1.2
-   tools:
-      - subclass: CWL
-        primaryDescriptorPath: /Dockstore.cwl
-        testParameterFiles:
-            - /test.cwl.json
-      - subclass: CWL
-        primaryDescriptorPath: /Dockstore2.cwl
-        testParameterFiles:
-            - /test.cwl.json
-        name: optional-name
+version: 1.2
+tools:
+  - subclass: CWL
+    primaryDescriptorPath: /Dockstore.cwl
+    testParameterFiles:
+        - /test.cwl.json
+  - subclass: CWL
+    primaryDescriptorPath: /Dockstore2.cwl
+    testParameterFiles:
+        - /test.cwl.json
+    name: optional-name

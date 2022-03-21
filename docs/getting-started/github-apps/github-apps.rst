@@ -84,11 +84,12 @@ Example YML Files
 
 Workflow YML File
 ++++++++++++++++++
-For a workflow, the ``/.dockstore.yml`` has the following general structure
+For a workflow, the ``/.dockstore.yml`` has the following general structure:
 
 .. include:: /assets/templates/workflows/barebones-.dockstore.yml
+  :code: yaml
 
-As an example, here is a filled-out ``/.dockstore.yml`` for a single workflow.  Note that the name is not present since the name field is optional when only a single workflow is involved.
+As an example, here is a filled-out ``/.dockstore.yml`` for a single CWL workflow.  Note that the name is not present since the name field is optional when only a single workflow is involved.
 
 .. code:: yaml
 
@@ -109,8 +110,9 @@ entries of the `workflows` array. For each unique name present, an entry will be
     file corresponds to a unique entry on Dockstore.
 
 .. include:: /assets/templates/workflows/barebones-multiple.dockstore.yml
+  :code: yaml
 
-For more examples, please see :doc:`our .dockstore.yml templates and examples for workflows</assets/templates/workflows/workflows>`
+For more examples, please see :doc:`our .dockstore.yml templates and examples for workflows</assets/templates/workflows/workflows>`.
 
 Tool YML File
 +++++++++++++
@@ -125,7 +127,7 @@ The /.dockstore.yml file for a tool is very similiar in structure to that of a w
         testParameterFiles:
             - /test.json
 
-For more examples, please see :doc:`our .dockstore.yml templates and examples for tools</assets/templates/tools/tools>`
+For more examples, please see :doc:`our .dockstore.yml templates and examples for tools</assets/templates/tools/tools>`.
 
 Service YML File
 +++++++++++++++++

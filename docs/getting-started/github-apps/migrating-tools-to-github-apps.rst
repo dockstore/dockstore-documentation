@@ -54,25 +54,10 @@ The information above was filled out using the following:
 - ``primaryDescriptorPath`` is from ``CWL Path`` or ``WDL Path``, depending on the ``subclass``. 
 - ``testParameterFiles`` is from ``CWL Test Parameter File Path`` or ``WDL Test Parameter File Path``, depending on the ``subclass``.
 
-Existing Dockstore tools can be described in two languages, CWL and WDL, but GitHub App tools can only be described in one language. If your existing tool is described in two languages, you can either pick one language
-or register two GitHub App tools, one for each language. This can be accomplished using one ``.dockstore.yml``. It may look like the following:
+The ``name`` Field
+~~~~~~~~~~~~~~~~~~
 
-.. code:: yaml
-
-   version: 1.2
-   tools:
-      - subclass: CWL
-        primaryDescriptorPath: /Dockstore.cwl
-        testParameterFiles:
-            - /test.json
-      - subclass: WDL
-        primaryDescriptorPath: /Dockstore.wdl
-        testParameterFiles:
-            - /test.json
-        name: wdl-tool
-
-.. note::
-   The ``name`` field must be filled out for at least one of the tools to ensure that the tool paths are unique.
+If you have more than one tool in the same repository, the ``name`` field must be filled out for at least one of the tools to ensure that the tool paths are unique.
 
 During the original registration for your tool, you may have filled out the ``Tool Name`` field shown in the picture below.
 
@@ -107,10 +92,11 @@ Let's say we want to convert these two tools that come from this `repository <ht
 
 .. image:: /assets/images/docs/github-apps-multiple-tools-with-name.png
 
-
-Your ``/.dockstore.yml`` would look like the following:
+Existing Dockstore tools can be described in two languages, CWL and WDL, but each individual GitHub App tool can only be described in one language. If your existing tool is described in two languages, you can either pick one language
+or register two GitHub App tools, one for each language. This can be accomplished using one ``.dockstore.yml``. In that case, your ``.dockstore.yml`` may look like the following:
 
 .. include:: /assets/templates/tools/barebones-multiple.dockstore.yml
+  :code: yaml
 
 .. include:: /getting-started/github-apps/installation.rst
 

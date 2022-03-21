@@ -139,7 +139,7 @@ process, though you can still register workflows with non-standard format by
 using manual registration.
 
 Quick Register
-^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~
 Quick register provides a flow that lets you browse the repositories you
 have access to and quickly create workflows. You can access 
 quick register by clicking the plus button on the My Workflows page. You'll
@@ -170,7 +170,7 @@ be refreshed to get it synced up with Bitbucket/GitLab.
    a workflow name to the path.
 
 Manual Registration of Workflows
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 In certain cases, you may wish to register workflows in a different
 source code structure, especially when working with complex project
 structures. For example, if you want to register two workflows from the

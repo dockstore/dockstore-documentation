@@ -8,7 +8,7 @@ Users can grant a GitHub app specific permissions on the repos and/or organizati
 The Dockstore GitHub App adds support for registering and automatically syncing workflows and services.
 Check out the following guides to learn more:
 
-- :doc:`github-apps`
+- Start here first! --> :doc:`github-apps`
 - :doc:`Installing the GitHub App </getting-started/github-apps/installation>`
 - :doc:`migrating-workflows-to-github-apps`
 - :doc:`migrating-tools-to-github-apps`

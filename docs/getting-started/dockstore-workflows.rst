@@ -1,7 +1,3 @@
-.. note::
-    This tutorial is a continuation of :doc:`Getting Started with Dockstore Tools </getting-started/dockstore-tools>`.
-    Please complete the tutorial prior to doing this one.
-
 Register a Workflow on Dockstore
 ================================
 
@@ -69,10 +65,8 @@ If we set the workflow name, we must include it in our path when referencing the
 
 Register Your Workflow in Dockstore
 -----------------------------------
-.. note:: To register content on Dockstore, you must have an account on Dockstore and
-   link the necessary third-party accounts. Once this is done you can register
-   workflows from the My Workflows page.
-   
+.. include:: /getting-started/github-apps/note--registration.rst
+
 There are a variety of ways to get your workflows into Dockstore. GitHub App registration is the
 recommended way to register for all new workflows on Dockstore using GitHub. The traditional registration
 is the legacy registration process which is less automated, and used for Bitbucket and GitLab.

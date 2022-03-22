@@ -1,6 +1,5 @@
 .. note::
-  This document is a continuation of :doc:`Creating a Dockstore Account </getting-started/register-on-dockstore>`. Please complete
-  the tutorial prior to doing this one. It also assumes you have already have a tool ready to register. If you don't, please check :doc:`Getting Started With CWL </getting-started/getting-started-with-cwl>` first. If you are working with any non-CWL language, you may be looking for :doc:`Registering Workflows on Dockstore </getting-started/dockstore-workflows>` instead of this document.
+  This document assumes you have already have a tool ready to register. If you don't, please check :doc:`Getting Started With CWL </getting-started/getting-started-with-cwl>` first. If you are working with any non-CWL language, you may be looking for :doc:`Registering Workflows on Dockstore </getting-started/dockstore-workflows>` instead of this document.
 
 Register a Tool on Dockstore
 ============================
@@ -18,6 +17,7 @@ Tutorial Goals
 
 Register Your Tool in Dockstore
 -------------------------------
+.. include:: /getting-started/github-apps/note--registration.rst
 
 If you followed :doc:`Getting Started With CWL </getting-started/getting-started-with-cwl>`,
 you will now have your ``Dockerfile`` and ``Dockstore.cwl`` 

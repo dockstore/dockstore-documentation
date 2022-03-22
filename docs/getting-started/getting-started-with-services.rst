@@ -44,6 +44,8 @@ Finally, if your service needs to have data provisioned locally, you should incl
 
 Registering Your Service
 ------------------------
+.. include:: /getting-started/github-apps/note--registration.rst
+
 Registering your service works differently than tools and workflows on Dockstore. For services, you need to install our Dockstore GitHub application into at least one of your organizations.
 By doing so, Dockstore will automatically register the services you create by keeping track of the releases and pre-releases you make on GitHub. This makes getting your service registered to Dockstore easy!
 You do not need the service to be fully working, and you can start experimenting on Dockstore while you write it. The following steps walk you through the installation process.

@@ -51,6 +51,11 @@ linkcheck_ignore = [
     'https://docs.snyk.io/getting-started/getting-started-snyk-products/getting-started-snyk-open-source',
     'https://software.broadinstitute.org/firecloud/',
     'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works',
+    'https://doi.org/10.12688/f1000research.10137.1',
+    'https://doi.org/10.7490/f1000research.1116584.1',
+    'https://doi.org/10.7490/f1000research.1117142.1',
+    'https://doi.org/10.7490/f1000research.1118245.1',
+    'https://doi.org/10.7490/f1000research.1118300.1',
     'launch-with/anvil-launch-with.html', 'launch-with/cavatica-launch-with.html', 'launch-with/dnanexus-launch-with.html', 'launch-with/cgc-launch-with.html',
     'launch-with/galaxy-launch-with.html', 'launch-with/nextflow-tower-launch-with.html', 'launch-with/terra-launch-with.html'	
     ]

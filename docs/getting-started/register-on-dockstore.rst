@@ -23,8 +23,7 @@ account and link the relevant services. Dockstore supports login through
 GitHub using OAuth2. You can register at the `login/register
 page <https://dockstore.org/login>`__.
 
-You can also login with your Google Account. This is required to use the
-workflow sharing feature for users coming from Terra.
+You can also login with your Google Account. Although this is not required to register public workflows on Dockstore that can be imported into Terra, linking with a Google account is required to use :doc:`the advanced workflow sharing feature </advanced-topics/sharing-workflows>` which limits a workflow's visibility to specific users coming from Terra.
 
 Dockstore usernames
 -------------------

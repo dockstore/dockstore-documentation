@@ -7,13 +7,15 @@ service:
   subclass:
   name:
 
-  # Optional array of authorship information, requires at least the name of each author.
+  # Optional array of authorship information, requires at least the name or orcid of each author.
+  # If an author's ORCID iD is provided, other authorship fields should not be included because 
+  # they will be retrieved from their ORCID record. If included, they will be ignored.
   authors:
     - name:
-      orcid:
       email:
       role:
       affiliation:
+    - orcid:
 
   # An optional, but recommended description of the service
   description:

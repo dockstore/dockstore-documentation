@@ -17,7 +17,7 @@ Automatic Syncing with GitHub Apps and .dockstore.yml -- Overview
 
 This document gives a high level overview of how Dockstore uses GitHub apps.
 For extra details on configuring and using the Dockstore
-GitHub App, `see our other docs on the here </getting-started/github-apps/github-apps-landing-page>`.
+GitHub App, :doc:`see our other docs on the here </getting-started/github-apps/github-apps-landing-page>`.
 
 With the Dockstore GitHub App installed, authors do not need to manually refresh their
 workflows/services/tools on Dockstore to get the latest changes from GitHub. Dockstore will

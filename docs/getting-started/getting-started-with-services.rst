@@ -50,7 +50,7 @@ Registering your service works differently than tools and workflows on Dockstore
 By doing so, Dockstore will automatically register the services you create by keeping track of the releases and pre-releases you make on GitHub. This makes getting your service registered to Dockstore easy!
 You do not need the service to be fully working, and you can start experimenting on Dockstore while you write it. The following steps walk you through the installation process.
 
-.. include:: /getting-started/github-apps/vocabulary-note.rst
+.. include:: /getting-started/github-apps/note--vocabulary.rst
 
 Install the Dockstore GitHub App
 --------------------------------

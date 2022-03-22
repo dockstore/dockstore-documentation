@@ -1,7 +1,7 @@
 Migrating Your Existing Tools to Use GitHub Apps
 ======================================================
 
-.. include:: /getting-started/github-apps/vocabulary-note.rst
+.. include:: /getting-started/github-apps/note--vocabulary.rst
 
 Dockstore 1.12 provides users with a way to keep their tools automatically updated (instead of needing to manually refresh) by using GitHub apps. Registering a new tool with GitHub Apps is very similar to registering a new workflow with GitHub Apps.
 

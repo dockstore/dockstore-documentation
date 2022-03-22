@@ -77,7 +77,7 @@ This is the newest way of getting content onto Dockstore and is by far the most 
 GitHub Apps, Dockstore can react to changes on GitHub as they are made, keeping Dockstore synced
 with GitHub automatically.
 
-.. include:: /getting-started/github-apps/vocabulary-note.rst
+.. include:: /getting-started/github-apps/note--vocabulary.rst
 
 .. include:: /getting-started/github-apps/installation.rst
 

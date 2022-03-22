@@ -226,7 +226,7 @@ Option E: CLI Client
 ~~~~~~~~~~~~~~~~~~~~
 
 The ``dockstore`` command line can be used as an alternative to the GUI
-and has a couple modes.
+and has two modes.
 
 ::
 

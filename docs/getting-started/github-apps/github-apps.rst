@@ -57,8 +57,8 @@ With the Dockstore GitHub App installed, the synchronization is done automatical
 you add a new branch or release of a workflow on GitHub, Dockstore is notified,
 and Dockstore updates its copy of the workflow. For example, After publishing a new release
 of a workflow on GitHub, a new version of the workflow will be present in
-Dockstore shortly afterwards. For this to work, a ``/.dockstore.yml`` file is **required in the root directory of each GitHub repository** you want
-to associate with a workflow/tool/service on Dockstore.
+Dockstore shortly afterwards. For this to work, a ``/.dockstore.yml`` file is **required in the root directory of each GitHub repository (or inside ``.github``)** you want
+to associate with a workflow/tool/service on Dockstore. It should not be inside any subfolder (except ``.github``).
 
 Simple templates for tools, workflows, and services are shown below,
 as well as links to more advanced explanations of every field. For every branch/release on GitHub that has one of these files, a corresponding entry

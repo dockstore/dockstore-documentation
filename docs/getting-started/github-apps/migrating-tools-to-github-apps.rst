@@ -1,7 +1,11 @@
 Migrating Your Existing Tools to Use GitHub Apps
 ======================================================
 
+.. include:: /getting-started/github-apps/vocabulary-note.rst
+
 Dockstore 1.12 provides users with a way to keep their tools automatically updated (instead of needing to manually refresh) by using GitHub apps. Registering a new tool with GitHub Apps is very similar to registering a new workflow with GitHub Apps.
+
+.. _dockstore yml tools vs old school tools:
 
 Before deciding to migrate your existing tools, consider the following differences between an existing Dockstore tool and a GitHub App tool:
 
@@ -25,16 +29,16 @@ the latter if you have users that have bookmarked it or if you have papers that 
 Creating a .dockstore.yml File
 -------------------------------
 
-The first step is to create a ``/.dockstore.yml`` file. We'll cover a very straightforward example
+The first step is to create a ``.dockstore.yml`` file. We'll cover a very straightforward example
 first, but depending on how you configured the tool during registration and whether your GitHub repository houses multiple tools published on Dockstore,
-there will be additional steps to writing your ``/.dockstore.yml`` file.
+there will be additional steps to writing your ``.dockstore.yml`` file.
 
 Let's say we have the following CWL tool registered on Dockstore that came from this `repository <https://github.com/kathy-t/dockstore-tool-helloworld>`__ and you would like to convert the master branch.
 
 .. figure:: /assets/images/docs/single-tool-to-migrate.png
    :alt: Tool to Migrate
 
-As noted in our other documentation, create a ``/.dockstore.yml`` file in the root directory of the branch you want to migrate (in this example, it's the master branch) in your repository. The file should look like the following:
+As noted in our other documentation, create a ``.dockstore.yml`` file in the root directory of the branch you want to migrate (in this example, it's the master branch) in your repository. The file should look like the following:
 
 .. code:: yaml
 
@@ -80,7 +84,7 @@ If you see a tool name inserted, you must include the name field in your ``/.doc
             - /test.json
         name: optional-name
 
-If you have multiple tools registered on Dockstore that stem from the same GitHub repo, a single ``/.dockstore.yml`` can be used to convert them.
+If you have multiple tools registered on Dockstore that stem from the same GitHub repo, a single ``.dockstore.yml`` can be used to convert them.
 Again, you need to check for the ``Tool Name`` field being set because it's needed for multi tool repositories to ensure that the tool paths on Dockstore are unique.
 
 Let's say we want to convert these two tools that come from this `repository <https://github.com/dockstore/dockstore-tool-bamstats>`__.

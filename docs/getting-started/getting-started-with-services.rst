@@ -21,7 +21,7 @@ Create Your Service
 
 The first step is to create a file named ``.dockstore.yml``. The ``.dockstore.yml``  is a configuration file used to describe your service. Technically, having a valid YAML and the right version is
 all that is required for your service to appear on Dockstore. But, we will briefly cover an example ``.dockstore.yml`` written for the Xena Hub to show what will generally be needed to create a working service.
-You can also view a template ``.dockstore.yml`` file :doc:`here </assets/templates/template>`.
+You can also view template ``.dockstore.yml`` files :doc:`here </assets/templates/services/services>`.
 
 .. figure:: /assets/images/docs/service-example-1.2.png
 
@@ -47,6 +47,8 @@ Registering Your Service
 Registering your service works differently than tools and workflows on Dockstore. For services, you need to install our Dockstore GitHub application into at least one of your organizations.
 By doing so, Dockstore will automatically register the services you create by keeping track of the releases and pre-releases you make on GitHub. This makes getting your service registered to Dockstore easy!
 You do not need the service to be fully working, and you can start experimenting on Dockstore while you write it. The following steps walk you through the installation process.
+
+.. include:: /getting-started/github-apps/vocabulary-note.rst
 
 Install the Dockstore GitHub App
 --------------------------------

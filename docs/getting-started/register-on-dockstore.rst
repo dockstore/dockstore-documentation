@@ -18,7 +18,7 @@ Tutorial Goals
 Register on Dockstore
 ---------------------
 
-Before you can publish your new tool, you need to create a Dockstore
+Before you can publish your new tool/workflow, you need to create a Dockstore
 account and link the relevant services. Dockstore supports login through
 GitHub using OAuth2. You can register at the `login/register
 page <https://dockstore.org/login>`__.

@@ -8,6 +8,10 @@ workflows:
   # and internal underscores and hyphens. Names may not exceed 256 characters. 
   # If using a ``/.dockstore.yml`` with multiple workflows, this field is required 
   # to uniquely identify workflows in the repository.
+  #
+  # It should be noted that having the name come first is an arbitrary decision.
+  # You could use subclass instead, for instance. Provided arrays are not broken
+  # up, the order of fields within a .dockstore.yml is not important.
   - name: <String>
     
     # The descriptor language used for the workflow. CWL, WDL, NFL (Nextflow), or GALAXY. 
@@ -27,6 +31,10 @@ workflows:
     primaryDescriptorPath: <String>
 
     # An optional array of absolute paths to test parameter files in the Git repository.
+    # For example...
+    # testParameterFiles:
+    #   - /null-model/null-model.json
+    #   - /null-model/null-model-binary.json
     testParameterFiles: <String Array>
 
     # An optional array of authorship information, requiring at least the ``name`` of each author.
@@ -51,9 +59,3 @@ workflows:
     filters:
       branches: <String Array>
       tags: <String Array>
-
-
-
-
-
-

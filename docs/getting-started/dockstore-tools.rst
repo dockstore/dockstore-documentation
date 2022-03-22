@@ -36,6 +36,8 @@ between Dockstore and GitHub. You can read more about it :doc:`in our docs about
 
 .. I made the decision to not make this symmetric with the GitHub App-related section of dockstore-workflows.rst, because the differences between gh-tools and non-gh-tools are significant. Whenever possible, when people are learning about tools and the GH app, they should be taken to the chart breaking down the differences between gh-tools and non-gh-tools. I do not think embedding that chart here is a good idea as it will confuse users who are not used to the non-gh-tool standard. Just introduce one in this doc, and link out to the other standard at the top.
 
+.. With that being said, there is a potential to confuse users, as we do not have documentation that is labeled as being for registering a brand new tool onto Dockstore via the app, only converting old tools. I don't know what the best solution for this is. I think further improvements will be needed.
+
 Option B: Quick Registration via the Web UI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -8,4 +8,4 @@ tools:
     primaryDescriptorPath: /Dockstore2.cwl
     testParameterFiles:
         - /test.cwl.json
-    name: optional-name
+    name: some-cool-name

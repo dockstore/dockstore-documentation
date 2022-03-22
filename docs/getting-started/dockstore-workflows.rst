@@ -34,6 +34,9 @@ it in Dockstore.
 A Note on Naming Workflows on Dockstore
 ---------------------------------------
 
+.. tip:: Quick register does not support workflow names. Please use an alternative registration
+   process if you would like to register a workflow with a workflow name.
+
 Workflow paths are unique, descriptive identifiers for a workflow. In other words,
 each workflow on Dockstore has a unique identifier in the form of a path. This path is based on
 the Git repository that the workflow comes from. There are four components to a path, but only
@@ -64,24 +67,23 @@ Using the previous example, we could set the workflow name to ``coverage``. Our 
 
 If we set the workflow name, we must include it in our path when referencing the workflow.
 
-.. tip:: Quick register does not support workflow names. Please use an alternative registration
-   process if you would like to register a workflow with a workflow name.
-
 Register Your Workflow in Dockstore
 -----------------------------------
-There are a variety of ways to get your workflows into Dockstore. GitHub App registration is the
-recommended way to register for all new workflows on Dockstore using GitHub. The traditional registration
-is the legacy registration process which is less automated, and used for Bitbucket and GitLab.
-
 .. note:: To register content on Dockstore, you must have an account on Dockstore and
    link the necessary third-party accounts. Once this is done you can register
    workflows from the My Workflows page.
+   
+There are a variety of ways to get your workflows into Dockstore. GitHub App registration is the
+recommended way to register for all new workflows on Dockstore using GitHub. The traditional registration
+is the legacy registration process which is less automated, and used for Bitbucket and GitLab.
 
 Option A: Registration With GitHub Apps (Recommended)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This is the newest way of getting content onto Dockstore and is by far the most automated. Using
 GitHub Apps, Dockstore can react to changes on GitHub as they are made, keeping Dockstore synced
 with GitHub automatically.
+
+.. include:: /getting-started/github-apps/vocabulary-note.rst
 
 .. include:: /getting-started/github-apps/installation.rst
 

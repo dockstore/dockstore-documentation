@@ -66,11 +66,57 @@ Getting Started
    getting-started/hosted-tools-and-workflows
    getting-started/getting-started-with-services
    getting-started/github-apps/github-apps-landing-page
+  
+Launching tools and workflows from Dockstore
+--------------------------------------------
+Dockstore partners with several compute platforms, allowing you to export workflows into these platforms with the click of a button. We also provide a CLI to run tools and workflows locally. Click on the links below for more information.
 
-.. this section will be replaced with the updated landing page on another PR
+Cloud Partners
+^^^^^^^^^^^^^^
+
+.. centered:: |AnVILLaunchWith|_ |CavaticaLaunchWith|_ |CGCLaunchWith|_ |DnanexusLaunchWith|_ |GalaxyLaunchWith|_ |NextflowtowerLaunchWith|_ |TerraLaunchWith|_
+
+.. |AnVILLaunchWith| image:: /assets/images/square/anvil_text.png
+    :alt: go to launch with AnVIL page
+    :height: 140px
+.. _AnVILLaunchWith: launch-with/anvil-launch-with.html
+
+.. |CavaticaLaunchWith| image:: /assets/images/square/cavatica_text.png
+    :alt: go to launch with Cavatica page
+    :height: 140px
+.. _CavaticaLaunchWith: launch-with/cavatica-launch-with.html
+
+.. |CGCLaunchWith| image:: /assets/images/square/cgc_text.png
+    :alt: go to launch with Cancer Genome Cloud (CGC) page
+    :height: 140px
+.. _CGCLaunchWith: launch-with/cgc-launch-with.html
+
+.. |DnanexusLaunchWith| image:: /assets/images/square/dnanexus_text.png
+    :alt: go to launch with DNA Nexus page
+    :height: 140px
+.. _DnanexusLaunchWith: launch-with/dnanexus-launch-with.html
+
+.. |GalaxyLaunchWith| image:: /assets/images/square/galaxy_text.png
+    :alt: go to launch with Galaxy page
+    :height: 140px
+.. _GalaxyLaunchWith: launch-with/galaxy-launch-with.html
+
+.. |NextflowtowerLaunchWith| image:: /assets/images/square/nextflowtower_text.png
+    :alt: go to launch with Nextflow Tower page
+    :height: 140px
+.. _NextflowtowerLaunchWith: launch-with/nextflow-tower-launch-with.html
+
+.. |TerraLaunchWith| image:: /assets/images/square/terra_text.png
+    :alt: go to launch with Terra page
+    :height: 140px
+.. _TerraLaunchWith: launch-with/terra-launch-with.html
+
+In addition to the above cloud partners, you can also launch workflows with :doc:`BioData Catalyst <launch-with/bdcat-launch-with>` or the :doc:`Dockstore CLI <launch-with/launch>`.
+
 .. toctree::
    :caption: Launch Tools and Workflows
    :maxdepth: 1
+   :hidden:
 
    launch-with/launch
    launch-with/anvil-launch-with

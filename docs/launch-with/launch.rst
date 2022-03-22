@@ -1,5 +1,5 @@
-Launching Tools and Workflows
-=============================
+Dockstore CLI
+=============
 
 Tutorial Goals
 --------------

@@ -36,7 +36,9 @@ tools:
     #     - /null-model/null-model-binary.json
     testParameterFiles: <String Array>
 
-    # An optional array of authorship information, requiring at least the ``name`` of each author.
+    # An optional array of authorship information.
+    # Note that if orcid is present, then all other fields will be ignored, as information will be taken from orcid.
+    # If orcid is not present, make sure to at a minimum include the name field for each author.
     authors:
       - name: <String>
         orcid: <String>

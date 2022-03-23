@@ -1,6 +1,6 @@
 version: 1.2
 tools:
-  - subclass: <CWL | WDL | NFL | GALAXY>
+  - subclass: CWL
     primaryDescriptorPath: <String>
     testParameterFiles: <String Array>
     authors:

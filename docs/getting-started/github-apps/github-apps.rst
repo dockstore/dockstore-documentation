@@ -13,7 +13,7 @@ Automatic Syncing with GitHub Apps and .dockstore.yml -- Overview
   #. Wait up to 5 minutes for Dockstore to process the new version
   #. See workflow on Dockstore
 
-  Our docs sometimes use "GitHub App registration" and "registration with a .dockstore.yml file" interchangeably, as they are equivalent terms. The Dockstore GitHub App and a .dockstore.yml file are two components of the same registration method.
+  Our docs sometimes use "GitHub App registration" and "registration with a .dockstore.yml file" interchangeably, as they are equivalent terms. The Dockstore GitHub App and a ``.dockstore.yml`` file are two components of the same registration method.
 
 This document gives a high level overview of how Dockstore uses GitHub apps.
 For extra details on configuring and using the Dockstore
@@ -57,7 +57,7 @@ With the Dockstore GitHub App installed, the synchronization is done automatical
 you add a new branch or release of a workflow on GitHub, Dockstore is notified,
 and Dockstore updates its copy of the workflow. For example, After publishing a new release
 of a workflow on GitHub, a new version of the workflow will be present in
-Dockstore shortly afterwards. For this to work, a ``/.dockstore.yml`` file is **required in the root directory of each GitHub repository (or inside ``.github``)** you want
+Dockstore shortly afterwards. For this to work, a ``.dockstore.yml`` file is **required** in the root directory (or inside the ``.github`` directory) of each GitHub repository you want
 to associate with a workflow/tool/service on Dockstore. It should not be inside any subfolder (except ``.github``).
 
 Simple templates for tools, workflows, and services are shown below,
@@ -66,7 +66,7 @@ will be made on Dockstore.
 
 Error Handling
 ----------------------------------
-It is possible for an invalid ``/.dockstore.yml`` to cause an errors. If we cannot read the 
+It is possible for an invalid ``.dockstore.yml`` to cause an errors. If we cannot read the 
 file, then we do not know which workflow or service to associate the error with. For now, please ensure that your file is a valid YML file and
 compare it with our examples/documentation to confirm that you filled it in correctly. If the file is at least present, an error will generally appear in the GitHub App logs (see `our FAQ document <https://docs.dockstore.org/en/develop/getting-started/github-apps/github-apps-troubleshooting-tips.html>`_).
 
@@ -84,12 +84,12 @@ Example YML Files
 
 Workflow YML File
 ++++++++++++++++++
-For a workflow, the ``/.dockstore.yml`` has the following general structure:
+For a workflow, the ``.dockstore.yml`` has the following general structure:
 
 .. include:: /assets/templates/workflows/barebones-.dockstore.yml
   :code: yaml
 
-As an example, here is a filled-out ``/.dockstore.yml`` for a single CWL workflow.  Note that the name is not present since the name field is optional when only a single workflow is involved.
+As an example, here is a filled-out ``.dockstore.yml`` for a single CWL workflow.  Note that the name is not present since the name field is optional when only a single workflow is involved.
 
 .. code:: yaml
 
@@ -116,7 +116,7 @@ For more examples, please see :doc:`our .dockstore.yml templates and examples fo
 
 Tool YML File
 +++++++++++++
-The /.dockstore.yml file for a tool is very similiar in structure to that of a workflow. Here's a simple example:
+The ``.dockstore.yml`` file for a tool is very similiar in structure to that of a workflow. Here's a simple example:
 
 .. code:: yaml
 
@@ -131,7 +131,7 @@ For more examples, please see :doc:`our .dockstore.yml templates and examples fo
 
 Service YML File
 +++++++++++++++++
-A template .dockstore.yml file for registering services, with explanations in the comments, can be found in our :doc:`Service 1.2 Template </assets/templates/template>`. For more info on services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>`.
+A template ``.dockstore.yml`` file for registering services, with explanations in the comments, can be found in our :doc:`Service 1.2 Template </assets/templates/template>`. For more info on services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>`.
 
 See Also
 --------

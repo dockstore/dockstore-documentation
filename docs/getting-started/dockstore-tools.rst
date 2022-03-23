@@ -8,18 +8,102 @@ Register a Tool on Dockstore
 Tutorial Goals
 --------------
 
--  Register a tool on Dockstore
--  Learn about Quick registration vs Manual Registration
+-  Discover how to register a tool on Dockstore
 -  Publish your tool
 
 Register Your Tool in Dockstore
 -------------------------------
+There are a variety of ways to get your tools into Dockstore. Users can either use GitHub App registration or our traditional registration methods.
+GitHub App registration is the recommended way to register for all new tools on Dockstore. GitHub App tools and tools registered using our other methods (traditional tools) are
+very different from one another. Use the following questions to determine which methodo to use:
 
-Now that you have your ``Dockerfile``, ``Dockstore.cwl`` and/or
-``Dockstore.wdl`` in GitHub, have setup Quay.io to automatically build
-your Docker image, and have linked your accounts to Dockstore, it is
-time to register your tool. This tutorial will assume you are using CWL
-and/or WDL. Currently, Nextflow is not supported for tools on Dockstore.
+- Registering a CWL CommandLineTool?
+
+  - Hosted on GitHub?
+
+    - Register using GitHub App Tools
+
+  - Hosted on BitBucket or GitLab?
+
+    - Register using traditional tool registration methods.
+
+- Registering a CWL Workflow, WDL, Nextflow, or Galaxy descriptor files?
+
+  - Register as a workflow. Refer to our :doc:`Dockstore Workflows <dockstore-workflows>` documentation.
+
+If you must use the traditional tool registration methods, then you may want to read :doc:`Dockstore Tools Overhaul </../advanced-topics/dockstore-tools-overhaul>` before continuing
+to the traditional methods described below.
+
+
+.. note:: To register content on Dockstore, you must have an account on Dockstore and
+   link the necessary third-party accounts. Once this is done you can register
+   tools from the My Tools page.
+
+
+Now that you have your ``Dockstore.cwl`` CommandLineTool in GitHub and have linked your accounts to Dockstore, it is
+time to register your tool.
+
+.. _Tool Registration With GitHub Apps:
+
+Registration With GitHub Apps
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Dockstore has added GitHub App support for registering tools. Using GitHub Apps, Dockstore can react to changes on GitHub as they are made,
+keeping Dockstore synced with GitHub automatically.
+
+Installing the GitHub App is simple -- navigate to ``/my-tools``, click the ``+`` button on the left hand sidebar, select ``Register using GitHub Apps``, and then click
+``+ Manage Dockstore Installation on GitHub``. You'll then be redirected to GitHub where you can grant the app access to specific repositories within whatever organization you are installing into.
+
+.. image:: /assets/images/docs/add-tool-button.png
+   :width: 40 %
+
+.. image:: /assets/images/docs/register-tool-github-apps.png
+   :width: 40 %
+
+.. figure:: /assets/images/docs/gh-app-reg-tool.png
+   :width: 70 %
+
+   Install our GitHub App on either all repositories in an organization or on specific repositories
+
+Once you've installed our GitHub app on a repository or organization, you'll need to add a ``/.dockstore.yml`` file to
+the root directory of a branch of the repository that contains your tool. This file contains information like
+tool path, test parameter file, workflow name, etc. When a push is made on GitHub to a branch
+with a ``/.dockstore.yml``, Dockstore will add that branch to the corresponding tool on Dockstore. If the
+tool doesn't already exist on Dockstore, one will be created. Note that a single ``/.dockstore.yml`` file can describe multiple tools, if all of those tools are in the same repository.
+
+Below is a simple example of a ``/.dockstore.yml`` file
+for an alignment workflow to show you how easy it is to use. If you are interested in using this method, please see the
+complete documentation at the :doc:`Dockstore GitHub Apps <github-apps/github-apps>` page. All paths in the file must be absolute.
+
+.. code:: yaml
+
+   version: 1.2
+   tools:
+      - subclass: CWL
+        primaryDescriptorPath: /aligner.cwl
+        testParameterFiles:
+        - /test/aligner.cwl.json
+
+If you had our GitHub App installed on the repository ``myorg/alignments`` and then add the above ``/.dockstore.yml`` to the **develop** branch,
+the following would occur.
+
+* A **CWL** tool with the ID ``github.com/myorg/alignments`` will be created on Dockstore
+* The version **develop** is added to the tool ``github.com/myorg/alignments``
+* The version has the primary descriptor file set to ``/aligner.cwl``
+* The version has one test parameter file: ``/test/aligner.cwl.json``
+
+Now that your tool has been added, any time there is a push to a branch on GitHub for this repository that has a ``/.dockstore.yml``,
+it is automatically updated on Dockstore! Anytime there is a deletion of a branch on GitHub that has a ``/.dockstore.yml``, the version is
+removed from Dockstore.
+
+Traditional Registration
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. important:: The following methods are NOT recommended and should only be used if your tool descriptor files are registered on BitBucket or GitLab.
+
+.. important:: These methods require that you have created or have permissions to a Docker image. If that is not the case, consider reading our creating a Docker image or switching to GitHub as your code hosting platform.
+
+To use the following registration options, you need have your ``Dockerfile`` created in the :doc:`Getting Started with Docker <getting-started-with-docker>` tutorial, ``Dockstore.cwl`` in GitHub, have setup Quay.io to automatically build
+your Docker image, and have linked your accounts to Dockstore.
 
 Quick Registration via the Web UI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -78,8 +162,7 @@ click "Publish". The tool is now listed on Dockstore!
 
 You can also click on the "Versions" tab and should notice ``1.25-6`` is
 present and valid. If any versions are invalid it is likely due to a
-path issue to the ``Dockstore.cwl``, ``Dockerfile``, or
-``Dockstore.wdl`` (if used) files. In BAMStats I used the default value
+path issue to the ``Dockstore.cwl`` or ``Dockerfile``. In BAMStats I used the default value
 of ``Dockstore.cwl`` and ``Dockerfile`` in the root repo directory so
 this was not an issue.
 
@@ -90,7 +173,7 @@ this was not an issue.
 
 Next, pick a version of your tool that you wish to present to the world
 by clicking on the radio selector in the Version column. This will
-determine which version of your CWL/WDL file will be used to find the
+determine which version of your CWL file will be used to find the
 author, email, and description in the case that it changes between
 versions. This also allows you to pre-select a version of your tool to
 present to users in the "Launch With" section, and the Dockerfile and
@@ -165,7 +248,7 @@ next.
 
 The Source Code Repository and Image Registry fields must be filled out,
 and they are in the format ``namespace/name`` (the two paths may
-differ). The Dockerfile Path, CWL/WDL Descriptor Paths, and CWL/WDL Test
+differ). The Dockerfile Path, CWL Descriptor Paths, and CWL Test
 Parameter Paths are relative to the root of the Source Code Repository
 (and must begin with '/'). These will be the default locations to find
 their corresponding files, unless specified otherwise in the tags. The
@@ -205,193 +288,6 @@ information to be useful to other users. Selecting ``Hidden`` will
 prevent the tag from appearing in the public listing of tags for the
 image.
 
-CLI Client
-~~~~~~~~~~
-
-The ``dockstore`` command line can be used as an alternative to the GUI
-and has a couple modes.
-
-::
-
-    $ dockstore
-
-    HELP FOR DOCKSTORE
-    ------------------
-    See https://www.dockstore.org for more information
-
-    Usage: dockstore [mode] [flags] [command] [command parameters]
-
-    Modes:
-       tool                Puts dockstore into tool mode.
-       workflow            Puts dockstore into workflow mode.
-       checker             Puts dockstore into checker mode.
-       plugin              Configure and debug plugins.
-       deps                Print tool/workflow runner dependencies.
-
-    ------------------
-
-    Flags:
-      --help               Print help information
-                           Default: false
-      --debug              Print debugging information
-                           Default: false
-      --version            Print dockstore's version
-                           Default: false
-      --server-metadata    Print metdata describing the dockstore webservice
-                           Default: false
-      --upgrade            Upgrades to the latest stable release of Dockstore
-                           Default: false
-      --upgrade-stable     Force upgrade to the latest stable release of Dockstore
-                           Default: false
-      --upgrade-unstable   Force upgrade to the latest unstable release of Dockstore
-                           Default: false
-      --config <file>      Override config file
-                           Default: ~/.dockstore/config
-      --script             Will not check Github for newer versions of Dockstore
-                           Default: false
-      --clean-cache        Delete the Dockstore launcher cache to save space
-
-    ------------------
-
-First, we will work in tool mode (``dockstore tool``). We recommend you
-first ``dockstore tool refresh`` to ensure the latest GitHub, Bitbucket,
-GitLab and Quay.io information is indexed properly.
-
-::
-
-    $ dockstore tool
-
-    HELP FOR DOCKSTORE
-    ------------------
-    See https://www.dockstore.org for more information
-
-    Usage: dockstore tool [flags] [command] [command parameters]
-
-    Commands:
-
-      list             :  lists all the Tools published by the user
-
-      search           :  allows a user to search for all published Tools that match the criteria
-
-      publish          :  publish/unpublish a Tool in the dockstore
-
-      info             :  print detailed information about a particular published Tool
-
-      cwl              :  returns the Common Workflow Language Tool definition for this entry
-                          which enables integration with Global Alliance compliant systems
-
-      wdl              :  returns the Workflow Descriptor Langauge definition for this Docker image.
-
-      refresh          :  updates your list of Tools stored on Dockstore or an individual Tool
-
-      label            :  updates labels for an individual Tool
-
-      test_parameter   :  updates test parameter files for a version of a Tool
-
-      convert          :  utilities that allow you to convert file types
-
-      launch           :  launch Tools (locally)
-
-      download         :  download Tools to the local directory
-
-      version_tag      :  updates version tags for an individual tool
-
-      update_tool      :  updates certain fields of a tool
-
-      manual_publish   :  registers a Docker Hub (or manual Quay) tool in the dockstore and then attempt to publish
-
-    ------------------
-
-    Flags:
-      --help               Print help information
-                           Default: false
-      --debug              Print debugging information
-                           Default: false
-      --config <file>      Override config file
-                           Default: ~/.dockstore/config
-      --script             For usage with scripts. Will not check for updates to Dockstore CLI.
-                           Default: false
-
-
-    ------------------
-
-You can then use ``dockstore tool publish`` to see the list of available
-Docker images you can register with Dockstore. This is for you to
-publish tools that are auto-detected from Quay.io. The key is that
-Docker images you wish to (quick) publish have the following qualities:
-
-1. Public
-2. At least one valid tag. In order to be valid, a tag has to:
-
-   -  be automated from a GitHub, Bitbucket, or GitLab reference
-   -  have the reference be linked to the ``Dockerfile``
-   -  have the reference be linked a corresponding ``Dockstore.cwl``
-
-::
-
-        $ dockstore tool publish
-        YOUR AVAILABLE CONTAINERS
-        ------------------
-                NAME                                                         DESCRIPTION                                          Git Repo                                                                   On Dockstore?   Descriptor      Automated
-                quay.io/cancercollaboratory/dockstore-tool-samtools-index    Prints alignments in the specified input alignm...   git@github.com:CancerCollaboratory/dockstore-tool-samtools-index.git       No
-                Yes             Yes
-                quay.io/cancercollaboratory/dockstore-tool-samtools-rmdup    Remove potential PCR duplicates: if multiple re...   git@github.com:CancerCollaboratory/dockstore-tool-samtools-rmdup.git       No
-                Yes             Yes
-                quay.io/cancercollaboratory/dockstore-tool-samtools-sort     Sort alignments by leftmost coordinates, or by ...   git@github.com:CancerCollaboratory/dockstore-tool-samtools-sort.git        No
-                Yes             Yes
-                quay.io/cancercollaboratory/dockstore-tool-samtools-view     Prints alignments in the specified input alignm...   git@github.com:CancerCollaboratory/dockstore-tool-samtools-view.git        No
-                Yes             Yes
-                quay.io/cancercollaboratory/dockstore-tool-snpeff            Annotates and predicts the effects of variants ...   git@github.com:CancerCollaboratory/dockstore-tool-snpeff.git               No
-                Yes             Yes
-        $ dockstore tool publish --entry quay.io/cancercollaboratory/dockstore-tool-snpeff
-        Successfully published  quay.io/cancercollaboratory/dockstore-tool-snpeff
-
-You can see in the above, the tool (identified with
-``quay.io/cancercollaboratory/dockstore-tool-snpeff`` in Dockstore and
-Quay.io) was successfully registered and can be seen by anyone on the
-Dockstore site.
-
-The ``dockstore tool manual_publish`` command can be used to manually
-register a tool on Docker Hub. Its usage is outlined in the
-publish\_manual help menu. This will allow you to register entries that
-do not follow the qualities above (non-automated builds and Docker Hub
-images).
-
-::
-
-    $ dockstore tool manual_publish --help
-
-    HELP FOR DOCKSTORE
-    ------------------
-    See https://www.dockstore.org for more information
-
-    Usage: dockstore tool manual_publish --help
-           dockstore tool manual_publish [parameters]
-
-    Description:
-      Manually register an tool in the dockstore. Currently this is used to register entries for images on Docker Hub.
-
-    Required parameters:
-      --name <name>                Name for the docker container
-      --namespace <namespace>      Organization for the docker container
-      --git-url <url>              Reference to the git repo holding descriptor(s) and Dockerfile ex: "git@github.com:user/test1.git"
-      --git-reference <reference>  Reference to git branch or tag where the CWL and Dockerfile is checked-in
-
-    Optional parameters:
-      --dockerfile-path <file>                                 Path for the dockerfile, defaults to /Dockerfile
-      --cwl-path <file>                                        Path for the CWL document, defaults to /Dockstore.cwl
-      --wdl-path <file>                                        Path for the WDL document, defaults to /Dockstore.wdl
-      --test-cwl-path <test-cwl-path>                          Path to default test cwl location, defaults to /test.cwl.json
-      --test-wdl-path <test-wdl-path>                          Path to default test wdl location, defaults to /test.wdl.json
-      --toolname <toolname>                                    Name of the tool, can be omitted, defaults to null
-      --registry <registry>                                    Docker registry, can be omitted, defaults to DOCKER_HUB. Run command with no parameters to see available registries.
-      --version-name <version>                                 Version tag name for Dockerhub containers only, defaults to latest.
-      --private <true/false>                                   Is the tool private or not, defaults to false.
-      --tool-maintainer-email <tool maintainer email>          The contact email for the tool maintainer. Required for private repositories.
-      --custom-docker-path <custom docker path>                Custom Docker registry path (ex. registry.hub.docker.com). Only available for certain registries.
-
-
-    ------------------
 
 Additional Information on Build Modes
 -------------------------------------

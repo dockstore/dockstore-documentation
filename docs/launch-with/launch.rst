@@ -22,10 +22,10 @@ Support for AWS S3 and `ICGC Score
 client <https://github.com/dockstore/icgc-storage-client-plugin>`__ is
 provided via plugins installed by default.
 
-Launch Tools
-~~~~~~~~~~~~
 
-If you have followed the tutorial, you will have a tool registered on
+Launch Legacy Tools
+~~~~~~~~~~~~~~~~~~~
+If you have a tool registered without using GitHub apps, then you have a legacy tool registered on
 Dockstore. You may want to test it out for your own work. For now you
 can use the Dockstore command-line interface (CLI) to run several useful
 commands:
@@ -74,14 +74,15 @@ follows:
 This information is also provided in the "Launch With" section of every
 tool.
 
-Launch Workflows
-~~~~~~~~~~~~~~~~
+Launch Workflows and GitHub App Tools
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. note:: GitHub App Tools run in the CLI's workflow mode.
 
-Launching CWL and WDL Workflows
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Launching CWL and WDL Workflows/GitHub App Tools
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A parallel set of commands is available for workflows. ``convert``,
-``wdl``, ``cwl``, and ``launch`` are all available under the
+A parallel set of commands (``convert``,
+``wdl``, ``cwl``, and ``launch``) are all available under the
 ``dockstore workflow`` mode.
 
 While launching tools and workflows locally is useful for testing, this

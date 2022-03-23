@@ -14,15 +14,10 @@ Managing workflows can be complicated, as you may be chaining together many step
 
 What is a tool?
 ---------------
+How Dockstore defines a tool is changing, but our aim is to align our tool definition with that of the languages we support.
+For the sake of simplicity, Dockstore only recommends registering a Dockstore tool when your work is a CWL CommandLineTool.
 
-In a very broad sense, we define a tool on Dockstore as a CWL or WDL program that performs a single task in a unique Docker container.
-
-The distinction between a tool and a workflow is very clear in CWL, because they are seperate classes (CommandLineTool vs Workflow). In WDL, things are a little fuzzier, but think of them as single-task workflows associated with a unique Docker image. Tools do not exist in the context of Nextflow or Galaxy.
-
-Dockstore tool versions are based on the image's tags, while Dockstore workflow versions are based on the tags/branches from the git repository that hosts the descriptor file. For more information, you can read :doc:`a detailed breakdown on tools and services here </advanced-topics/tools-vs-workflows>`.
-
-.. tip::
-  Although Terra requires that each task in a WDL workflow runs in a Docker container, Terra does not support WDL tools. If you are writing a WDL with the intent of it being run in the Terra ecosystem, we recommend writing it as a workflow.
+If you want a deeper understanding of the history of Dockstore tools and where we plan on going, read :doc:`Dockstore Tools Overhaul </../advanced-topics/dockstore-tools-overhaul>`.
 
 
 What is a service?

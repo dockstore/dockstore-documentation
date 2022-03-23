@@ -5,6 +5,5 @@ workflows:
     testParameterFiles: <String Array>
     authors:
       - name: <String>
-        orcid: <String>
         email: <String>
     name: <String>

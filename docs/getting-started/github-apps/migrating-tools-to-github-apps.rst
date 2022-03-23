@@ -19,7 +19,8 @@ Before deciding to migrate your existing tools, consider the following differenc
 +------------------------+------------------------------------------+-------------------------------------------------+
 | Tool Path              | Docker container location                | GitHub repository location                      |
 +------------------------+------------------------------------------+-------------------------------------------------+
-
+| Languages              | Supports CWL and WDL tools               | Only supports CWL                               |
++------------------------+------------------------------------------+-------------------------------------------------+
 
 If you're familiar with the process of :doc:`migrating your existing workflows to use GitHub Apps <migrating-workflows-to-github-apps>`, note that the migration process for tools is different 
 because of these fundamental differences between existing tools and GitHub App tools. The migration process for tools will not convert your existing tool into a GitHub App tool.
@@ -56,8 +57,8 @@ As noted in our other documentation, create a ``.dockstore.yml`` file in the roo
 The information above was filled out using the following:
 
 - ``subclass`` is based on the descriptor language your tool is described in. In this case, the tool is described in CWL.
-- ``primaryDescriptorPath`` is from ``CWL Path`` or ``WDL Path``, depending on the ``subclass``. 
-- ``testParameterFiles`` is from ``CWL Test Parameter File Path`` or ``WDL Test Parameter File Path``, depending on the ``subclass``.
+- ``primaryDescriptorPath`` is the path to the CWL descriptor file.
+- ``testParameterFiles`` is the path to any test parameter files.
 
 The ``name`` Field
 ~~~~~~~~~~~~~~~~~~
@@ -96,12 +97,6 @@ Let's say we want to convert these two tools that come from this `repository <ht
 .. image:: /assets/images/docs/github-apps-multiple-tools.png
 
 .. image:: /assets/images/docs/github-apps-multiple-tools-with-name.png
-
-Existing Dockstore tools can be described in two languages, CWL and WDL, but each individual GitHub App tool can only be described in one language. If your existing tool is described in two languages, you can either pick one language
-or register two GitHub App tools, one for each language. This can be accomplished using one ``.dockstore.yml``. In that case, your ``.dockstore.yml`` may look like the following:
-
-.. include:: /assets/templates/tools/barebones-multiple.dockstore.yml
-  :code: yaml
 
 Your New Entry in Dockstore
 ---------------------------

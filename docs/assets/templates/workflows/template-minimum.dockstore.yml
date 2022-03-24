@@ -6,4 +6,3 @@ workflows:
     authors:
       - name: <String>
         email: <String>
-    name: <String>

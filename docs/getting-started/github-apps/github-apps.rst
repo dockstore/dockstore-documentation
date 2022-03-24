@@ -35,7 +35,7 @@ creating a new release, the GitHub app issues notifications.
 Why have a Dockstore GitHub App?
 --------------------------------
 
-Without a GitHub app, Dockstore does not know when you have modified a GitHub
+Without a GitHub App, Dockstore does not know when you have modified a GitHub
 repository.
 
 For example, take the case when you first add a workflow to Dockstore
@@ -48,7 +48,7 @@ to the GitHub repo, and manually refreshing the tool/workflow by either clicking
 the Refresh button or making an API call to the Dockstore API.
 
 Due to the manual nature of this process, it is easy for Dockstore to get out of
-sync with the linked GitHub repository.
+sync with the linked GitHub repository if the Dockstore GitHub App is not being used.
 
 How the Dockstore GitHub App works
 ----------------------------------
@@ -86,52 +86,32 @@ Workflow YML File
 ++++++++++++++++++
 For a workflow, the ``.dockstore.yml`` has the following general structure:
 
-.. include:: /assets/templates/workflows/barebones-.dockstore.yml
+.. include:: /assets/templates/workflows/template-minimum.dockstore.yml
   :code: yaml
 
-As an example, here is a filled-out ``.dockstore.yml`` for a single CWL workflow.  Note that the name is not present since the name field is optional when only a single workflow is involved.
+As an example, here is a filled-out ``.dockstore.yml`` for a single WDL workflow which happens to have more than one test parameter file.  Note that the name is not present since the name field is optional when only a single workflow is involved.
 
-.. code:: yaml
-
-   version: 1.2
-   workflows:
-      - subclass: CWL
-        primaryDescriptorPath: /Dockstore.cwl
-        testParameterFiles:
-            - /test/dockstore.cwl.json
-
-A common pattern seen on Dockstore is GitHub repositories that store many workflows. The below ``.dockstore.yml``
-has two entries for workflows. Notice that each entry uses a different name. Names are required if you want 
-multiple workflows registered on Dockstore from a single GitHub repository. The names must be unique between
-entries of the `workflows` array. For each unique name present, an entry will be created on Dockstore.
+.. include:: /assets/templates/workflows/example-1-noname.yml
+  :code: yaml
 
 .. important:: Though the **name** field is optional when a ``.dockstore.yml`` has one workflow in it,
     it must be used when a ``.dockstore.yml`` has multiple workflows in it. Each entry within a ``.dockstore.yml``
     file corresponds to a unique entry on Dockstore.
 
-.. include:: /assets/templates/workflows/barebones-multiple.dockstore.yml
-  :code: yaml
-
-For more examples, please see :doc:`our .dockstore.yml templates and examples for workflows</assets/templates/workflows/workflows>`.
+For more examples, including multi-workflow examples and a complete breakdown of all possible fields, please see :doc:`our .dockstore.yml templates and examples for workflows</assets/templates/workflows/workflows>`.
 
 Tool YML File
 +++++++++++++
-The ``.dockstore.yml`` file for a tool is very similiar in structure to that of a workflow. Here's a simple example:
+The ``.dockstore.yml`` file for a tool is very similiar in structure to that of a workflow.
 
-.. code:: yaml
+.. include:: /assets/templates/tools/template-minimum.dockstore.yml
+  :code: yaml
 
-   version: 1.2
-   tools:
-      - subclass: CWL
-        primaryDescriptorPath: /Dockstore.cwl
-        testParameterFiles:
-            - /test.json
-
-For more examples, please see :doc:`our .dockstore.yml templates and examples for tools</assets/templates/tools/tools>`.
+For more examples, including multi-workflow examples and a complete breakdown of all possible fields, please see :doc:`our .dockstore.yml templates and examples for tools</assets/templates/tools/tools>`.
 
 Service YML File
 +++++++++++++++++
-A template ``.dockstore.yml`` file for registering services, with explanations in the comments, can be found in our :doc:`Service 1.2 Template </assets/templates/template>`. For more info on services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>`.
+The ``.dockstore.yml`` for a service will depend heavily on the nature of the service it describes. A template ``.dockstore.yml`` file for registering services, with explanations in the comments, can be found in our :doc:`Service 1.2 Template </assets/templates/template>`. For more info on services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>`.
 
 See Also
 --------

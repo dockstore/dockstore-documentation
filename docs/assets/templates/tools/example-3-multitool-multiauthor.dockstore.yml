@@ -1,22 +1,20 @@
 version: 1.2
-workflows:
+tools:
   - name: globalAligner
     subclass: CWL
-    publish: True
     primaryDescriptorPath: /runGlobalAligner.cwl
     testParameterFiles:
         - /test/globalAligner.cwl.json
-    filters:  # All tags, no branches
-        tags:
-            - /.*/
+    authors:
+        - name: Bob Generic Example
+          email: makesuretofilloutanactualemailaddress@ucsc.edu
   - name: localAligner
     subclass: CWL
     primaryDescriptorPath: /runLocalAligner.cwl
     testParameterFiles:
         - /test/localAligner.cwl.json
-    filters:  # Only develop or master branches and localAligner/** tags
-        branches:
-            - develop
-            - master
-        tags:
-            - /localaligner\/.*/
+    authors:
+        - orcid: 0000-0000-0000-0000
+        - orcid: 1111-1111-1111-1111
+        - name: Bob Generic Example Jr
+          email: anotherpersonsemailaddress@ucsc.edu

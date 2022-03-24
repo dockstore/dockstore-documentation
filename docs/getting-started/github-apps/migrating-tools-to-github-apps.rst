@@ -45,14 +45,8 @@ Let's say we have the following CWL tool registered on Dockstore that came from 
 
 As noted in our other documentation, create a ``.dockstore.yml`` file in the root directory of the branch you want to migrate (in this example, it's the master branch) in your repository. The file should look like the following:
 
-.. code:: yaml
-
-   version: 1.2
-   tools:
-      - subclass: CWL
-        primaryDescriptorPath: /Dockstore.cwl
-        testParameterFiles:
-            - /test.json
+.. include:: /assets/templates/tools/example-1-noname.yml
+  :code:
 
 The information above was filled out using the following:
 
@@ -65,38 +59,24 @@ The ``name`` Field
 
 If you have more than one tool in the same repository, the ``name`` field must be filled out for at least one of the tools to ensure that the tool paths are unique.
 
-During the original registration for your tool, you may have filled out the ``Tool Name`` field shown in the picture below.
+If you registered your tool using the Web UI, you may have filled out the ``Tool Name`` field shown in the picture below.
 
 .. figure:: /assets/images/docs/tool-name-field.png
    :alt: Tool name field
    :width: 60 %
 
 This field is required when you want to register multiple tools from the same repo or provide multiple languages for your tool, but you may have filled it out for other reasons. 
-To check if the tool you want to migrate has a tool name, select the tool and look at the title on top as shown in the picture below.
-
-The title consists of:
+To check if the tool you want to migrate has a tool name, select the tool's entry on Dockstore and look at the title on top. The title consists of:
 ``<image registry>/<organization name>/<repository name>/<optional tool name>:<version name>``
 
 If you see a tool name inserted, you must include the name field in your ``/.dockstore.yml``.
 
-.. code:: yaml
+.. include:: /assets/templates/tools/example-2-name.yml
+  :code:
 
-   version: 1.2
-   tools:
-      - subclass: CWL
-        primaryDescriptorPath: /Dockstore.cwl
-        testParameterFiles:
-            - /test.json
-        name: optional-name
+If you have multiple tools registered on Dockstore that stem from the same GitHub repo, a single ``.dockstore.yml`` can be used to convert them. For examples of this, check out our :doc:`template .dockstore.yml files <assets/templates/tools/tools>`
 
-If you have multiple tools registered on Dockstore that stem from the same GitHub repo, a single ``.dockstore.yml`` can be used to convert them.
-Again, you need to check for the ``Tool Name`` field being set because it's needed for multi tool repositories to ensure that the tool paths on Dockstore are unique.
-
-Let's say we want to convert these two tools that come from this `repository <https://github.com/dockstore/dockstore-tool-bamstats>`__.
-
-.. image:: /assets/images/docs/github-apps-multiple-tools.png
-
-.. image:: /assets/images/docs/github-apps-multiple-tools-with-name.png
+.. decided to remove /assets/images/docs/github-apps-multiple-tools.png and /assets/images/docs/github-apps-multiple-tools-with-name.png as the filenames within them are a little confusing; may be worth doing something like that but with globalAligner and localAligner later
 
 Your New Entry in Dockstore
 ---------------------------

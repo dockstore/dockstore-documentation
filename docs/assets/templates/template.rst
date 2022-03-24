@@ -21,6 +21,17 @@ Tips and tricks
         tags:
             - /.*/
 
+* You can use this regex pattern to include tags that only start with ``localaligner`` and the branches named ``develop`` and ``master``:
+
+.. code:: yaml
+    
+    filters:
+        branches:
+            - develop
+            - master
+        tags:
+            - /localaligner\/.*/
+
 .. toctree::
     :hidden:
 

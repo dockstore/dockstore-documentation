@@ -9,8 +9,8 @@ about how Docker and workflow languages like CWL, WDL, Nextflow, Galaxy are chan
 and create tools via a series of tutorials which goes through the whole
 process of:
 
-- Creating a Docker container that an analysis will run within
-- Describing a simple analysis with a descriptor file written in one the following languages: CWL, WDL, Nextflow, Galaxy)
+- Creating a Docker image that an analysis will run within
+- Describing a simple analysis with a descriptor file written in one the following languages: CWL, WDL, Nextflow, Galaxy
 - Creating a Dockstore account
 - Registering the descriptor files on Dockstore
 

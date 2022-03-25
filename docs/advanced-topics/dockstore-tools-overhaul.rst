@@ -7,15 +7,29 @@ This documentation explains:
 * How tools registered with GitHub Apps work differently
 * How Dockstore envisions future support for tools
 
+At a Glance
+-----------
 
-Dockstore Tools Prior to 1.12
------------------------------
++------------------------+------------------------------------------+-------------------------------------------------+
+| Differences            | Legacy Tool                              | GitHub App Tool                                 |
++========================+==========================================+=================================================+
+| Use case               |   - User owns the image                  | - User doesn't need to own the image            |
+|                        |   - Dockerfile required                  | - Dockerfile not required                       |
++------------------------+------------------------------------------+-------------------------------------------------+
+| Versioning             | Based on image's tags                    | Based on GitHub repository's branches/tags      |
++------------------------+------------------------------------------+-------------------------------------------------+
+| Tool Path              | Docker container location                | GitHub repository location                      |
++------------------------+------------------------------------------+-------------------------------------------------+
+
+
+Dockstore Tools Prior to 1.12 (Legacy Tools)
+--------------------------------------------
 
 In a very broad sense, we defined a tool on Dockstore as a CWL or WDL program that performs a single task in a unique Docker container. Dockstore tool versions were based on the Docker image's tags and we required
 that the image be owned by the Dockstore user. However, working on GitHub App registration for tools caused a lot of internal discussion because we realized that Dockstore tool support was confusing.
 
 For starters, we created distinctions between tools and workflows even when one did not exist in one language's specification.
-When Dockstore was created, CWL was the first descriptor language we supported. CWL does have a very clear distinction between a tool and a workflow and we followed it.
+When Dockstore was created, CWL was the first descriptor language we supported. CWL does have a very clear distinction between a tool and a workflow.
 WDL was the next language Dockstore supported, but it does not have separate concepts for tools and workflows. At the time, we decided to create our own definition;
 we defined WDL tools as a WDL descriptor file that contained a single task and a WDL workflow as one that had more than one task.
 
@@ -23,7 +37,7 @@ Secondly, the requirement that the Docker image tied to the Dockstore tool must 
 
 #. Neither CWL or WDL require that a Docker image be specified (although using one is best practice)
 #. If you do specify a Docker image, it is not necessary that it be one you created or owned. It is perfectly valid to use someone else's Docker image.
-#. Even when an image was specified the user, Dockstore did not enforce that the image registered was actuall the one referenced in the descriptor file.
+#. Even when an image was specified the user, Dockstore did not enforce that the image registered was actual the one referenced in the descriptor file.
 
 
 GitHub App Tools
@@ -47,7 +61,7 @@ Future of Dockstore Tools
 Dockstore wants to continue simplifying and automating the registration process for tools. Eventually we want to:
 
 * Completely eliminate WDL tools and only support WDL workflows in order to match the language specification
-* Deprecate the other tool registration methods (traditional tools)
-* Continue to display already published tools that were created using the traditional registration methods
+* Deprecate the other tool registration methods (legacy tools)
+* Continue to display already published tools that were created using the legacy tool registration methods
 
 

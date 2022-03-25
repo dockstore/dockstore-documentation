@@ -3,33 +3,21 @@
   the tutorial prior to doing this one.
 
 Register a Tool on Dockstore
-============================
+############################
 
 Tutorial Goals
---------------
+==============
 
 -  Discover how to register a tool on Dockstore
 -  Publish your tool
 
 Register Your Tool in Dockstore
--------------------------------
+===============================
 There are a variety of ways to get your tools into Dockstore. Users can either use GitHub App registration or our traditional registration methods.
 GitHub App registration is the recommended way to register all new tools on Dockstore. GitHub App tools and tools registered using our other methods (traditional tools) are
 very different from one another. Use the following questions to determine which method to use:
 
-- Registering a CWL CommandLineTool?
-
-  - Hosted on GitHub?
-
-    - Register using GitHub App Tools
-
-  - Hosted on BitBucket or GitLab?
-
-    - Register using traditional tool registration methods.
-
-- Registering a CWL Workflow, WDL, Nextflow, or Galaxy descriptor files?
-
-  - Register as a workflow. Refer to our :doc:`Dockstore Workflows <dockstore-workflows>` documentation.
+.. include:: /getting-started/how-to-register-work.rst
 
 If you must use the traditional tool registration methods, then you may want to read :doc:`Dockstore Tools Overhaul </../advanced-topics/dockstore-tools-overhaul>` before continuing
 to the traditional methods described below.
@@ -46,7 +34,7 @@ time to register your tool.
 .. _Tool Registration With GitHub Apps:
 
 Registration With GitHub Apps
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 Dockstore has added GitHub App support for registering tools. Using GitHub Apps, Dockstore can react to changes on GitHub as they are made,
 keeping Dockstore synced with GitHub automatically.
 
@@ -66,7 +54,7 @@ Installing the GitHub App is simple -- navigate to ``/my-tools``, click the ``+`
 
 Once you've installed our GitHub app on a repository or organization, you'll need to add a ``/.dockstore.yml`` file to
 the root directory of a branch of the repository that contains your tool. This file contains information like
-tool path, test parameter file, tool name, etc. When a push to a branch or tag is created on GitHub
+tool path, test parameter file, tool name, etc. When a push is made or a tag is created on GitHub
 with a ``/.dockstore.yml``, Dockstore will add that branch to the corresponding tool on Dockstore. If the
 tool doesn't already exist on Dockstore, one will be created. Note that a single ``/.dockstore.yml`` file can describe multiple tools, if all of those tools are in the same repository.
 
@@ -95,14 +83,15 @@ Now that your tool has been added, any time there is a push to a branch on GitHu
 it is automatically updated on Dockstore! Anytime there is a deletion of a branch on GitHub that has a ``/.dockstore.yml``, the version is
 removed from Dockstore.
 
-Traditional Registration
-~~~~~~~~~~~~~~~~~~~~~~~~
+Legacy Tool Registration
+------------------------
 
 .. important:: The following methods are NOT recommended and should only be used if your tool descriptor files are registered on BitBucket or GitLab.
 
 .. important:: These methods require that you have created or have permissions to a Docker image. If that is not the case, consider reading our creating a Docker image or switching to GitHub as your code hosting platform.
 
-To use the following registration options, you need have your Dockerfile and your CWL file in GitHub, have set an autobuilding Docker image, and have linked your accounts to Dockstore. We describe this process with a CWL tool in the :doc:Getting Started with Docker <getting-started-with-docker> and :doc:Getting Started with CWL <getting-started-with-docker> tutorial.
+To use the following registration options, you need have your Dockerfile and your CWL file in GitHub, have set an autobuilding Docker image, and have linked your accounts to Dockstore.
+We describe this process with a CWL tool in the :doc:`Getting Started with Docker <getting-started-with-docker>` and :doc:`Getting Started with CWL <getting-started-with-docker>` tutorial.
 
 Quick Registration via the Web UI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

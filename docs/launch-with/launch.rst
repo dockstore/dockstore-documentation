@@ -25,8 +25,8 @@ provided via plugins installed by default.
 
 Launch Legacy Tools
 ~~~~~~~~~~~~~~~~~~~
-If you have a tool registered without using GitHub apps, then you have a legacy tool registered on
-Dockstore. You may want to test it out for your own work. For now you
+If you registered a tool on Dockstore without using GitHub apps, then you have a legacy tool.
+You may want to test it out for your own work. For now you
 can use the Dockstore command-line interface (CLI) to run several useful
 commands:
 
@@ -78,8 +78,8 @@ Launch Workflows and GitHub App Tools
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. note:: GitHub App Tools run in the CLI's workflow mode.
 
-Launching CWL and WDL Workflows/GitHub App Tools
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Launching GitHub App Tools, CWL Workflows, and WDL Workflows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A parallel set of commands (``convert``,
 ``wdl``, ``cwl``, and ``launch``) are all available under the

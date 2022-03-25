@@ -70,25 +70,7 @@ not limited to):
 How should I register my work in Dockstore?
 -------------------------------------------
 
-Registering a CWL CommandLineTool?
-
-- Hosted on GitHub?
-
-  - Register using GitHub App Tools
-
-- Hosted on BitBucket or GitLab?
-
-  - Register using traditional tool registration methods.
-
-Registering a CWL Workflow, WDL, Nextflow, or Galaxy descriptor files?
-
-- Hosted on GitHub?
-
-  - Register using GitHub App Workflows
-
-- Hosted on BitBucket or GitLab?
-
-  - Register using traditional workflow registration methods
+.. include:: /getting-started/how-to-register-work.rst
 
 
 How do I send private messages to administrators or report security vulnerabilities?

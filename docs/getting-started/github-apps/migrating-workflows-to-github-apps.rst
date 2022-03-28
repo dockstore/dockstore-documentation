@@ -14,16 +14,16 @@ organization, if you have not already done so.
 Creating a .dockstore.yml File
 -------------------------------
 
-Once the GitHub app is installed on the correct repo, the next step is to create a ``/.dockstore.yml`` file. We'll cover a very straightforward example
+Once the GitHub app is installed on the correct repo, the next step is to create a .dockstore.yml file. We'll cover a very straightforward example
 first, but depending on how you configured the workflow during registration and whether your GitHub repository houses multiple workflows published on Dockstore,
-there will be additional steps to writing your ``/.dockstore.yml`` file.
+there will be additional steps to writing your .dockstore.yml file.
 
 Let's say we have the following CWL workflow registered on Dockstore that came from this `repository <https://github.com/NatalieEO/ghapps-single-workflow>`__ and you would like to convert the master branch.
 
 .. figure:: /assets/images/docs/single-workflow-to-migrate.png
    :alt: Workflow to Migrate
 
-As noted in our other documentation, create a ``/.dockstore.yml`` file in the root directory of the branch you want to migrate (in this example, it's the master branch) in your repository. The file should look like the following
+As noted in our other documentation, create a .dockstore.yml file in the root directory of the branch you want to migrate (in this example, it's the master branch) in your repository. The file should look like the following
 
 .. code:: yaml
 
@@ -52,7 +52,7 @@ you want to migrate has a workflow name set, select the workflow and look at the
 The title consists of:
 ``<sourceControl>/<organization name>/<repository name>/<optional workflow name>:<version name>``
 
-If you see a workflow name inserted, you must include the name field in your ``/.dockstore.yml``.
+If you see a workflow name inserted, you must include the name field in your .dockstore.yml file.
 
 .. code:: yaml
 
@@ -64,7 +64,7 @@ If you see a workflow name inserted, you must include the name field in your ``/
             - /test/dockstore.cwl.json
         name: optional-name
 
-If you have multiple workflows registered on Dockstore that stem from the same GitHub repo, a single ``/.dockstore.yml`` can be used to convert them.
+If you have multiple workflows registered on Dockstore that stem from the same GitHub repo, a single .dockstore.yml can be used to convert them.
 Again, you need to check for the Workflow Name field being set because it's needed for multi workflow repositories.
 If the name field in the ``dockstore.yml`` doesn't match the Workflow Name field in Dockstore, the migration of your workflow on Dockstore will not go through and it will instead create a new Dockstore entry.
 Let's say we want to convert these two workflows that come from this `repository <https://github.com/NatalieEO/ghapps-single-workflow>`__.
@@ -73,7 +73,7 @@ Let's say we want to convert these two workflows that come from this `repository
 
 .. image:: /assets/images/docs/github-apps-multiple-workflows-with-name.png
 
-Your ``/.dockstore.yml`` would look like the following:
+Your .dockstore.yml would look like the following:
 
 .. code:: yaml
 

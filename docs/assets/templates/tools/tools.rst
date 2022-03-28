@@ -11,16 +11,24 @@ Simple generic template for a tool
 
 Filled-out example of a single tool without a name
 --------------------------------------------------
+Although the author has a name, the tool itself is not identified with one.
+
 .. include:: /assets/templates/tools/example-1-noname.yml
   :code:
 
 Filled-out example of a single tool with a name
 -----------------------------------------------
+Same as the example above, but we explictly name the tool globalAligner.
+
 .. include:: /assets/templates/tools/example-2-name.yml
   :code:
 
 Filled-out example of multiple tools in the same repository
 -----------------------------------------------------------
+This .dockstore.yml will result in the creation of two entries on Dockstore: One for globalAligner, and one for localAligner.
+
+You will note that localAligner has three authors. The first two are identified with orcids. The third author is instead identified with their name and email address.
+
 .. include:: /assets/templates/tools/example-3-multitool-multiauthor.dockstore.yml
   :code:
 

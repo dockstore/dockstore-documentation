@@ -4,7 +4,6 @@ service:
   name: <String>
   authors:
     - name: <String>
-      orcid: <String>
       email: <String>
   description: <String>
   publish: <Boolean>

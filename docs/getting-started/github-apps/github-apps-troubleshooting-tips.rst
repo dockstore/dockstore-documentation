@@ -14,23 +14,23 @@ Why should I migrate my existing workflows to use GitHub Apps and a .dockstore.y
 Installing our Dockstore GitHub App onto your GitHub repository or organization will automatically sync your workflow on Dockstore whenever code is pushed to GitHub.
 This means less manual work for workflow developers, and less waiting for content to update.
 
-This requires the addition of a ``/.dockstore.yml`` file to your repository on GitHub.
+This requires the addition of a .dockstore.yml file to your repository on GitHub.
 This file contains workflow information such as workflow path, test parameter paths, etc. that Dockstore will use to setup
-the corresponding workflow on Dockstore. Branches that do not have a ``/.dockstore.yml`` file will not be synchronized.
+the corresponding workflow on Dockstore. Branches that do not have a .dockstore.yml file will not be synchronized.
 
 You can read more about it at :doc:`/getting-started/github-apps/github-apps`.
 
 How does this change my development flow?
 -------------------------------------------
-Adding a ``/.dockstore.yml`` file to a template branch (ex: master, develop, main) will make it so
+Adding a .dockstore.yml file to a template branch (ex: master, develop, main) will make it so
 any new branches created from this template will be automatically added to and synced on Dockstore.
 
-Therefore, as long as your workflow is already registered on Dockstore and your ``/.dockstore.yml`` is configured correctly,
+Therefore, as long as your workflow is already registered on Dockstore and your .dockstore.yml is configured correctly,
 then updates to the workflow (including adding new versions) should happen continuously and automatically.
 
-You can use filters in a ``/.dockstore.yml`` to avoid generating a corresponding workflow-version on Dockstore.
+You can use filters in a .dockstore.yml to avoid generating a corresponding workflow-version on Dockstore.
 
-*Note:* If you want to edit version information, such as workflow path, you will have to update the ``/.dockstore.yml`` file directly on the corresponding GitHub branch. For example, if develop has a ``/.dockstore.yml`` that points to my_workflow.wdl, but my_workflow.wdl is moved to another path on the branch develop-but-better, then the ``/.dockstore.yml`` on develop-but-better will need to point to the new location of my_workflow.wdl.
+*Note:* If you want to edit version information, such as workflow path, you will have to update the .dockstore.yml file directly on the corresponding GitHub branch. For example, if develop has a .dockstore.yml that points to my_workflow.wdl, but my_workflow.wdl is moved to another path on the branch develop-but-better, then the .dockstore.yml on develop-but-better will need to point to the new location of my_workflow.wdl.
 
 How do I check if the Dockstore GitHub App was installed on an individual repository?
 --------------------------------------------------------------------------------------
@@ -61,14 +61,14 @@ You may also still run into scenarios where your changes appear to not get saved
 If it seems your GitHub App access just won't "stick" or you are having other permissions issues, consider asking the administrator of your organization to install the app. If they set it up to have access to all repositories on the organization, this will only need to be done once.
 
 
-The changes made to my GitHub repo aren't appearing on Dockstore, but I've already installed the GitHub app and made the ``.dockstore.yml`` file. How can I figure out what's going wrong?
+The changes made to my GitHub repo aren't appearing on Dockstore, but I've already installed the GitHub app and made the .dockstore.yml file. How can I figure out what's going wrong?
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 If you don't see changes, try waiting a couple of minutes and refreshing the browser on the My Workflows page again. 
 
 You can also verify that the GitHub app was given access to the right repository or organization. If access was given to the wrong organization or repository,
 or this is your first time installing the app, you'll need to push another commit after adding the correct repository to activate the sync to Dockstore.
 
-Double check the ``/.dockstore.yml`` file.
+Double check the .dockstore.yml file.
 
     - Is it in the root directory?
     - Is it on the right branch?
@@ -89,7 +89,7 @@ Here you can view all the GitHub app events Dockstore is aware of and whether th
 
 .. image:: /assets/images/docs/github-app-logs-error-message.png
 
-In the case shown above, the error message is from parsing the following ``/.dockstore.yml`` file.
+In the case shown above, the error message is from parsing the following .dockstore.yml file.
 
 .. code:: yaml
 
@@ -111,7 +111,7 @@ Why was a new workflow registered instead of migrating my existing one?
     Todo: Add information of how to delete
 
 During the original registration for your workflow, you may have filled out the ``Workflow Name`` field shown in the picture below.
-A new separate workflow will be registered if the original ``Workflow Name`` isn't included or doesn't match the ``name`` field in your ``/.dockstore.yml``.
+A new separate workflow will be registered if the original ``Workflow Name`` isn't included or doesn't match the ``name`` field in your .dockstore.yml.
 
 .. figure:: /assets/images/docs/workflow-name-field.png
    :alt: Workflow to Migrate
@@ -120,8 +120,8 @@ A new separate workflow will be registered if the original ``Workflow Name`` isn
 
 How can I convert my entire existing workflow at once?
 ----------------------------------------------------------
-Currently you cannot convert all existing branches/versions at once. You must add a ``/.dockstore.yml`` to each branch in order for the GitHub app
+Currently you cannot convert all existing branches/versions at once. You must add a .dockstore.yml to each branch in order for the GitHub app
 automatically detect and sync changes with the corresponding version on Dockstore.
 
-If you have a ``/.dockstore.yml`` file in your master or develop branches on GitHub, any new branches you create from these as your template
-will have a  ``/.dockstore.yml``.
+If you have a .dockstore.yml file in your master or develop branches on GitHub, any new branches you create from these as your template
+will have a  .dockstore.yml.

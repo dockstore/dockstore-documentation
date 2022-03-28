@@ -6,7 +6,7 @@ tools:
   
   # The optional name for a tool, which may only consist of alphanumerics
   # and internal underscores and hyphens. Names may not exceed 256 characters. 
-  # If using a ``/.dockstore.yml`` with multiple tools, this field is required 
+  # If using a .dockstore.yml with multiple tools, this field is required 
   # to uniquely identify tools in the repository. Otherwise, it is optional.
   # 
   # It should be noted that having the name come first is an arbitrary decision.
@@ -14,10 +14,9 @@ tools:
   # up, the order of fields within a .dockstore.yml is not important.
   - name: <String>
     
-    # The descriptor language used for the tool. As a reminder, we generally advise against WDL tools.
-    # Only select one of these -- if your tool has a CWL and a WDL version, then register them each
-    # as a seperate entry.
-    subclass: <CWL | WDL>
+    # The descriptor language used for the tool. Note that .dockstore.yml registration does not support WDL tools,
+    # as we discourage the registration of WDL tools and may deprecate them in the future.
+    subclass: <CWL>
     
     # Tool-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
     # Set to true to publish an unpublished tool, or false to unpublish a published tool.

@@ -11,16 +11,24 @@ Simple generic template for a workflow
 
 Filled-out example of a single workflow without a name
 ------------------------------------------------------
+In this example, the workflow author is identified with an orcid. When an orcid is specified, there is no need to specify an author's name and email as that information will be pulled from the orcid. There are also three test parameter files given for the workflow.
+
 .. include:: /assets/templates/workflows/example-1-noname.yml
   :code:
 
 Filled-out example of a single workflow with a name
 ---------------------------------------------------
+This example is identical to the one above, but the workflow in question now is identified with the ``name`` field.
+
 .. include:: /assets/templates/workflows/example-2-name.yml
   :code:
 
 Filled-out example of multiple workflows in the same repository
 ---------------------------------------------------------------
+First, you will notice that we swapped the order of the ``name`` and ``author`` fields for association-aggregate-wdl compared to the examples above, to demonstrate that the order is arbitrary. Next, we added a new section for pc-air-wdl, which has a different author and its own test parameter files and descriptor file. 
+
+This .dockstore.yml will result in the creation of two entries on Dockstore -- one for association-aggregate-wdl, and one for pc-air-wdl.
+
 .. include:: /assets/templates/workflows/example-3-multiworkflow-multiauthor.dockstore.yml
   :code:
 

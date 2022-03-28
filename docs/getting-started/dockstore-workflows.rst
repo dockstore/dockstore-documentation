@@ -81,13 +81,13 @@ with GitHub automatically.
 
 .. include:: /getting-started/github-apps/installation.rst
 
-Once you've installed our GitHub app on a repository or organization, you'll need to add a ``/.dockstore.yml`` file to
+Once you've installed our GitHub app on a repository or organization, you'll need to add a dockstore.yml file to
 the root directory of a branch of the repository that contains your workflow. This file contains information like
 workflow path, test parameter file, workflow name, etc. When a push is made on GitHub to a branch
-with a ``/.dockstore.yml``, Dockstore will add that branch to the corresponding workflow on Dockstore. If the
-workflow doesn't already exist on Dockstore, one will be created (but will not automatically be published publically). Note that a single ``/.dockstore.yml`` file can describe multiple workflows, if all of those workflows are in the same repository.
+with a dockstore.yml, Dockstore will add that branch to the corresponding workflow on Dockstore. If the
+workflow doesn't already exist on Dockstore, one will be created (but will not automatically be published publically). Note that a single dockstore.yml file can describe multiple workflows, if all of those workflows are in the same repository.
 
-Below is a simple example of a ``/.dockstore.yml`` file
+Below is a simple example of a dockstore.yml file
 for an alignment workflow to show you how easy it is to use. If you are interested in using this method, please see the 
 complete documentation at the :doc:`Dockstore GitHub Apps </getting-started/github-apps/github-apps>` page. All paths in the file must be absolute.
 
@@ -100,7 +100,7 @@ complete documentation at the :doc:`Dockstore GitHub Apps </getting-started/gith
         testParameterFiles:
         - /test/aligner.cwl.json
 
-If you had our GitHub App installed on the repository ``myorg/alignments`` and then add the above ``/.dockstore.yml`` to the **develop** branch,
+If you had our GitHub App installed on the repository ``myorg/alignments`` and then add the above dockstore.yml to the **develop** branch,
 the following would occur.
 
 * A **CWL** workflow with the ID ``github.com/myorg/alignments`` will be created on Dockstore
@@ -108,8 +108,8 @@ the following would occur.
 * The version has the primary descriptor file set to ``/aligner.cwl``
 * The version has one test parameter file: ``/test/aligner.cwl.json``
 
-Now that your workflow has been added, any time there is a push to a branch on GitHub for this repository that has a ``/.dockstore.yml``,
-it is automatically updated on Dockstore! Anytime there is a deletion of a branch on GitHub that has a ``/.dockstore.yml``, the version is
+Now that your workflow has been added, any time there is a push to a branch on GitHub for this repository that has a dockstore.yml,
+it is automatically updated on Dockstore! Anytime there is a deletion of a branch on GitHub that has a dockstore.yml, the version is
 removed from Dockstore.
 
 Option B: Traditional Registration

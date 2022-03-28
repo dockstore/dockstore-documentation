@@ -6,7 +6,7 @@ workflows:
   
   # The optional workflow name for a workflow, which may only consist of alphanumerics
   # and internal underscores and hyphens. Names may not exceed 256 characters. 
-  # If using a ``/.dockstore.yml`` with multiple workflows, this field is required 
+  # If using a .dockstore.yml with multiple workflows, this field is required 
   # to uniquely identify workflows in the repository.
   #
   # It should be noted that having the name come first is an arbitrary decision.

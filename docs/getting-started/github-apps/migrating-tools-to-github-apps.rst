@@ -34,16 +34,16 @@ Install the Dockstore GitHub App
 Creating a .dockstore.yml File
 -------------------------------
 
-The next step is to create a ``.dockstore.yml`` file. We'll cover a very straightforward example
+The next step is to create a .dockstore.yml file. We'll cover a very straightforward example
 first, but depending on how you configured the tool during registration and whether your GitHub repository houses multiple tools published on Dockstore,
-there will be additional steps to writing your ``.dockstore.yml`` file.
+there will be additional steps to writing your .dockstore.yml file.
 
 Let's say we have the following CWL tool registered on Dockstore that came from this `repository <https://github.com/kathy-t/dockstore-tool-helloworld>`__ and you would like to convert the master branch.
 
 .. figure:: /assets/images/docs/single-tool-to-migrate.png
    :alt: Tool to Migrate
 
-As noted in our other documentation, create a ``.dockstore.yml`` file in the root directory of the branch you want to migrate (in this example, it's the master branch) in your repository. The file should look like the following:
+As noted in our other documentation, create a .dockstore.yml file in the root directory of the branch you want to migrate (in this example, it's the master branch) in your repository. The file should look like the following:
 
 .. include:: /assets/templates/tools/example-1-noname.yml
   :code:
@@ -69,26 +69,26 @@ This field is required when you want to register multiple tools from the same re
 To check if the tool you want to migrate has a tool name, select the tool's entry on Dockstore and look at the title on top. The title consists of:
 ``<image registry>/<organization name>/<repository name>/<optional tool name>:<version name>``
 
-If you see a tool name inserted, you must include the name field in your ``/.dockstore.yml``.
+If you see a tool name inserted, you must include the name field in your .dockstore.yml file.
 
 .. include:: /assets/templates/tools/example-2-name.yml
   :code:
 
-If you have multiple tools registered on Dockstore that stem from the same GitHub repo, a single ``.dockstore.yml`` can be used to convert them. For examples of this, check out our :doc:`template .dockstore.yml files <assets/templates/tools/tools>`
+If you have multiple tools registered on Dockstore that stem from the same GitHub repo, a single .dockstore.yml can be used to convert them. For examples of this, check out our :doc:`template .dockstore.yml files </assets/templates/tools/tools>`
 
 .. decided to remove /assets/images/docs/github-apps-multiple-tools.png and /assets/images/docs/github-apps-multiple-tools-with-name.png as the filenames within them are a little confusing; may be worth doing something like that but with globalAligner and localAligner later
 
 Your New Entry in Dockstore
 ---------------------------
 
-Once you've adding a ``.dockstore.yml`` to the desired branch of your repository and installed the app, you should see a new tool appear on your ``/my-tools`` page. The tool path will start with ``github.com`` and 
+Once you've adding a .dockstore.yml to the desired branch of your repository and installed the app, you should see a new tool appear on your ``/my-tools`` page. The tool path will start with ``github.com`` and 
 you should see that the ``Tool Information`` section looks a bit different from your existing tool.
 
 .. figure:: /assets/images/docs/github-app-tool.png
    :alt: New GitHub App tool
 
 The mode is ``Automatically synced via GitHub App`` instead of one of our three build modes, and information about paths and your Docker Image is no longer included.
-You are also not able to refresh or restub the new GitHub App tool. Since you can't refresh the entire tool anymore, **new** versions from GitHub (releases/branches) that you want to add to Dockstore must have a ``.dockstore.yml`` file.
+You are also not able to refresh or restub the new GitHub App tool. Since you can't refresh the entire tool anymore, **new** versions from GitHub (releases/branches) that you want to add to Dockstore must have a .dockstore.yml file.
 
 .. _keeping old tool around:
 

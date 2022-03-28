@@ -26,8 +26,8 @@ Register Your Tool in Dockstore
 -------------------------------
 .. include:: /getting-started/github-apps/note--registration.rst
 
-Option A: Registration with the Dockstore GitHub App (Recommended)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Option A: Register Your Tool to Automatically Sync with GitHub (Recommended)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 As of Release 1.12, we have a new method for registering tools that we
 recommend most people use, as it allows for automatic sychronization
 between Dockstore and GitHub. You can read more about it :doc:`in our docs about the Dockstore GitHub App </getting-started/github-apps/github-apps>`.

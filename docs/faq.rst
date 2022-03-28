@@ -173,6 +173,30 @@ itself. GitHub provides a
 `tutorial <https://help.github.com/en/articles/approving-oauth-apps-for-your-organization/>`__
 for approving third party apps access to your organization.
 
+Why do I get an error when I try to request a DOI?
+--------------------------------------------------
+
+The following error occurs when another user from your GitHub organization has already requested a DOI for a workflow version belonging to the same workflow. 
+
+.. figure:: /assets/images/docs/doi-permission-error.png
+   :alt: Request DOI permission error
+
+You are unable to request a DOI because you do not have the permission to create a deposition version for the Zenodo deposit that the other user created and owns. 
+Until Zenodo supports the sharing of deposits, only one user of an organization is able to request a DOI. This user is the user who is first to request a DOI for the workflow.
+
+You must ask the user from your organization who already requested a DOI for a workflow version to request a DOI for the workflow version you want. 
+You may view the DOI on Zenodo to see who created the DOI by clicking on the workflow DOI or workflow version DOI.
+
+The workflow DOI can be found on the Info tab.
+
+.. figure:: /assets/images/docs/workflow-doi.png
+   :alt: Workflow DOI
+
+
+The workflow version DOI can be found on the Versions tab.
+
+.. figure:: /assets/images/docs/workflow-version-doi.png
+   :alt: Workflow version DOI
 
 .. _faq-header-other:
 

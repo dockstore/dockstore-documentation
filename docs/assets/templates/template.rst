@@ -11,6 +11,7 @@ Tips and tricks
 ---------------
 * Make sure your file is saved as ``.dockstore.yml``, not ``dockstore.yml`` or ``.dockstore.yaml``
 * Put the .dockstore.yml file in the top of your repo or inside ``.github/``
+* The first line of a .dockstore.yml file references the version of .dockstore.yml syntax being used, not the version/tag of the workflow/tool/service it describes
 * You can use a single .dockstore.yml file to register multiple tools and workflows, provided they are all in the same repo as the .dockstore.yml file
 * A **workflow** registered with via a .dockstore.yml file is not fundamentally different than a workflow registered in another method, other than the fact that the .dockstore.yml version will be kept up-to-date automatically -- but a .dockstore.yml registered **tool** is different from tools registered in other methods (:ref:`see this table for more information <dockstore yml tools vs old school tools>`)
 

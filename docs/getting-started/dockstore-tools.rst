@@ -88,7 +88,7 @@ Legacy Tool Registration
 
 .. important:: The following methods are NOT recommended and should only be used if your tool descriptor files are registered on BitBucket or GitLab.
 
-.. important:: These methods require that you have created or have permissions to a Docker image. If that is not the case, consider reading our creating a Docker image or switching to GitHub as your code hosting platform.
+.. important:: These methods require that you have created or have permissions to a Docker image. If that is not the case, consider reading :doc:`Getting Started with Docker <getting-started-with-docker>` or switching to GitHub as your code hosting platform.
 
 To use the following registration options, you need have your Dockerfile and your CWL file in GitHub, have set an autobuilding Docker image, and have linked your accounts to Dockstore.
 We describe this process with a CWL tool in the :doc:`Getting Started with Docker <getting-started-with-docker>` and :doc:`Getting Started with CWL <getting-started-with-docker>` tutorial.

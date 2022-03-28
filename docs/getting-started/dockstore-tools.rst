@@ -1,6 +1,3 @@
-.. note::
-  This document assumes you have already have a tool ready to register. If you don't, please check :doc:`Getting Started With CWL </getting-started/getting-started-with-cwl>` first. If you are working with any non-CWL language, you may be looking for :doc:`Registering Workflows on Dockstore </getting-started/dockstore-workflows>` instead of this document.
-
 Register a Tool on Dockstore
 ============================
 
@@ -15,18 +12,19 @@ Tutorial Goals
 -  Register a tool on Dockstore
 -  Publish your tool
 
+Assumptions
+-----------
+This document assumes you have already have a tool ready to register. If you don't, check :doc:`Getting Started With CWL </getting-started/getting-started-with-cwl>` first for an walkthrough of creating a CWL tool.
+
+If you followed :doc:`Getting Started With CWL </getting-started/getting-started-with-cwl>`, you will now have your ``Dockerfile`` and ``Dockstore.cwl`` in GitHub, have setup Quay.io to automatically build your Docker image, and have linked your accounts to Dockstore. We will build upon that work in our examples below, but you can apply this information to tools you have created on your own.
+
+Regardless of how you made your tool, this tutorial will assume you are using CWL and/or WDL. Galaxy and Nextflow do not have a concept of tools, so if you are workfing in those languages, :doc:`please see our documentation on workflows instead </getting-started/dockstore-workflows>`.
+
+.. note:: The WDL community does not explicitly differentiate tools and workflows. However, Dockstore allows the registration of "WDL tools" as a legacy feature (more on that :doc:`here </getting-started/intro-to-dockstore-tools-and-workflows>`). We encourage people to :doc:`register WDLs as workflows </getting-started/dockstore-workflows>` instead of tools, but most of the methods below can be used to register WDL tools, except for registration with the Dockstore GitHub App.
+
 Register Your Tool in Dockstore
 -------------------------------
 .. include:: /getting-started/github-apps/note--registration.rst
-
-If you followed :doc:`Getting Started With CWL </getting-started/getting-started-with-cwl>`,
-you will now have your ``Dockerfile`` and ``Dockstore.cwl`` 
-in GitHub, have setup Quay.io to automatically build
-your Docker image, and have linked your accounts to Dockstore, it is
-time to register your tool. This tutorial will assume you are using CWL
-and/or WDL.
-
-.. note:: WDL tools are a legacy feature. Although you can still register WDL tools on Dockstore using the methods below, we are now encouraging people to :doc:`register WDLs as workflows </getting-started/dockstore-workflows>` instead. Tools are not supported at all for Galaxy or Nextflow; they can only be workflows.
 
 Option A: Registration with the Dockstore GitHub App (Recommended)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

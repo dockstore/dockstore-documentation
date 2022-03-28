@@ -22,34 +22,36 @@ Legacy Dockstore tools are more associated with creating/owning Docker images th
 Overview
 --------
 
-+------------------------+----------------------------------------------+-------------------------------------------------+----------------------------------------------+
-| Language               | Tool                                         | GitHub App Tool                                 | Workflow                                     |
-+========================+==============================================+=================================================+==============================================+
-| CWL                    |  - Class: CommandLineTool                    | - Class: CommandLineTool                        |  - Class: Workflow                           |
-|                        |  - Dockerfile for the tool's image           | - User doesn't need to own the image            |  - No Dockerfile required                    |
-|                        |                                              | - Dockerfile not required                       |                                              |
-+------------------------+----------------------------------------------+-------------------------------------------------+----------------------------------------------+
-| WDL                    |  - One task that runs in a Docker container  |  - N/A                                          | - Any valid WDL workflow                     |
-|                        |  - A workflow section that runs the task     |                                                 |                                              |
-|                        |  - The Dockerfile for the task's image       |                                                 |                                              |
-+------------------------+----------------------------------------------+-------------------------------------------------+----------------------------------------------+
-| Nextflow               | N/A                                          | - N/A                                           | - Any valid Nextflow workflow                |
-+------------------------+----------------------------------------------+-------------------------------------------------+----------------------------------------------+
-| Galaxy                 | N/A*                                         | - N/A                                           | - Any valid Galaxy workflow                  |
-+------------------------+----------------------------------------------+-------------------------------------------------+----------------------------------------------+
++------------------------+----------------------------------------------+-----------------------------------------------+--------------------------------------------+
+| Language               | Legacy Tool                                  | GitHub App Tool                               | Workflow                                   |
++========================+==============================================+===============================================+============================================+
+| CWL                    |  - Class: CommandLineTool                    | - Class: CommandLineTool                      |  - Class: Workflow                         |
+|                        |  - Dockerfile for the tool's image           | - User doesn't need to own the image          |  - No Dockerfile required                  |
+|                        |                                              | - Dockerfile not required                     |                                            |
++------------------------+----------------------------------------------+-----------------------------------------------+--------------------------------------------+
+| WDL                    |  - One task that runs in a Docker container  | N/A                                           | Any valid WDL workflow                     |
+|                        |  - A workflow section that runs the task     |                                               |                                            |
+|                        |  - The Dockerfile for the task's image       |                                               |                                            |
++------------------------+----------------------------------------------+-----------------------------------------------+--------------------------------------------+
+| Nextflow               | N/A                                          | N/A                                           | Any valid Nextflow workflow                |
++------------------------+----------------------------------------------+-----------------------------------------------+--------------------------------------------+
+| Galaxy                 | N/A*                                         | N/A                                           | Any valid Galaxy workflow                  |
++------------------------+----------------------------------------------+-----------------------------------------------+--------------------------------------------+
 
 \* There are tools that make up Galaxy workflows from the Galaxy toolbox or ToolShed.
 Dockstore currently does not support registration of these tools.
 
 
 +------------------------+------------------------------------------+-------------------------------------------------+-------------------------------------------------+
-| Dockstore Support      | Tool                                     | GitHub App Tool                                 | Workflow                                        |
+| Dockstore Support      | Legacy Tool                              | GitHub App Tool                                 | Workflow                                        |
 +========================+==========================================+=================================================+=================================================+
 | "Launch with" support  |  Only via Dockstore CLI (tool mode)      |  - Dockstore CLI (workflow mode)                | - Dockstore CLI (workflow mode)                 |
 |                        |                                          |  - "launch with" buttons on entry               | - "launch with" buttons on entry                |
 +------------------------+------------------------------------------+-------------------------------------------------+-------------------------------------------------+
 | Versioning             |  Based off of image's tags               |  Based off of branches/tags from Git repository,| Based off of branches/tags from Git repository, |
+|                        |                                          |                                                 |                                                 |
 |                        |                                          |  even if one of the tasks executes in a Docker  | even if one of the tasks executes in a Docker   |
+|                        |                                          |                                                 |                                                 |
 |                        |                                          |  image.                                         |                                                 |
 |                        |                                          |                                                 |                                                 |
 +------------------------+------------------------------------------+-------------------------------------------------+-------------------------------------------------+

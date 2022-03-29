@@ -87,7 +87,6 @@ Dockstore:
 - has varying levels of support for images registered on Quay.io, DockerHub, GitLab, Amazon ECR, GitHub Container Registry, and Seven Bridges
 - supports descriptor files hosted on GitHub (but you should use GitHub App registration), BitBucket, GitLab, or written on Dockstore
 - supports descriptor files written in CWL or WDL (WDL "tools" are supported but strongly advised against. Please register as a workflow)
-- offers three different tool registration paths
 
 The most convenient way to register your legacy tool and manage it on Dockstore is to have your image registered on Quay.io, your descriptor files hosted on GitHub, and choose our quick registration path.
 This gives Dockstore the ability to automatically recognize the image's tags on Quay, link them back to the appropriate version on GitHub, and create the existing versions for you on Dockstore once you hit "Refresh".

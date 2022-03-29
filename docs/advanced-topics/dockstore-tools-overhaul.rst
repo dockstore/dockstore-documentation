@@ -10,16 +10,7 @@ This documentation explains:
 At a Glance
 -----------
 
-+------------------------+------------------------------------------+-------------------------------------------------+
-| Differences            | Legacy Tool                              | GitHub App Tool                                 |
-+========================+==========================================+=================================================+
-| Use case               |   - User owns the image                  | - User doesn't need to own the image            |
-|                        |   - Dockerfile required                  | - Dockerfile not required                       |
-+------------------------+------------------------------------------+-------------------------------------------------+
-| Versioning             | Based on image's tags                    | Based on GitHub repository's branches/tags      |
-+------------------------+------------------------------------------+-------------------------------------------------+
-| Tool Path              | Docker container location                | GitHub repository location                      |
-+------------------------+------------------------------------------+-------------------------------------------------+
+.. include:: /advanced-topics/legacy/table--legtool-vs-ghatool.rst
 
 
 Dockstore Tools Prior to 1.12 (Legacy Tools)

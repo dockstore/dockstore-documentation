@@ -34,8 +34,8 @@ very different from one another. Use the following questions to determine which 
 If you must use the legacy tool registration methods, then you may want to read :doc:`Dockstore Tools Overhaul </../advanced-topics/dockstore-tools-overhaul>` before continuing
 to the legacy methods described below.
 
-Option A: Register Your Tool to Automatically Sync with GitHub (Recommended)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Register Your Tool to Automatically Sync with GitHub (Recommended)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 As of Release 1.12, we have a new method for registering tools that we
 recommend most people use, as it allows for automatic sychronization
 between Dockstore and GitHub. You can read more about it :doc:`in our docs about the Dockstore GitHub App </getting-started/github-apps/github-apps>`.

@@ -9,7 +9,7 @@ GitHub App Installation
 The first step to migrating a workflow is the same as adding a new workflow via GitHub Apps: install our Dockstore GitHub App onto your repository or
 organization, if you have not already done so.
 
-.. include:: installation.rst
+.. include:: /getting-started/github-apps/snippet--installation.rst
 
 .. include:: /advanced-topics/naming-workflows.rst
 

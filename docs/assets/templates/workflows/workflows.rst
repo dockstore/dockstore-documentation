@@ -18,7 +18,7 @@ In this example, the workflow author is identified with an orcid. When an orcid 
 
 Filled-out example of a single workflow with a name
 ---------------------------------------------------
-This example is identical to the one above, but the workflow in question now is identified with the ``name`` field.
+This example is identical to the one above, but the workflow in question now is identified with the ``name`` field. :doc:`See here for more information on naming workflows </advanced-topics/naming-workflows>`.
 
 .. include:: /assets/templates/workflows/example-2-name.yml
   :code:

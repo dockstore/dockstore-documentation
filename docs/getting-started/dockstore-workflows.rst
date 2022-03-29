@@ -41,7 +41,7 @@ with GitHub automatically.
 
 .. include:: /getting-started/github-apps/note--registration.rst
 
-.. include:: /getting-started/github-apps/installation.rst
+.. include:: /getting-started/github-apps/snippet--installation.rst
 
 Once you've installed our GitHub app on a repository or organization, you'll need to add a dockstore.yml file to
 the root directory of a branch of the repository that contains your workflow. This file contains information like

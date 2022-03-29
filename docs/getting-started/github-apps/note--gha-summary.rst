@@ -1,7 +1,7 @@
 .. note::
   Summary of GitHub App usage:
 
-  #. :doc:`Install Dockstore GitHub App <installation>`
+  #. :doc:`Install Dockstore GitHub App </getting-started/github-apps/snippet--installation>`
   #. Put a valid .dockstore.yml file into the top level of your repository
   #. Push a new commit with a .dockstore.yml file present
   #. Wait up to 5 minutes for Dockstore to process the new version

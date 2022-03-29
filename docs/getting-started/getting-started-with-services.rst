@@ -54,7 +54,7 @@ You do not need the service to be fully working, and you can start experimenting
 
 Install the Dockstore GitHub App
 --------------------------------
-.. include:: /getting-started/github-apps/installation.rst
+.. include:: /getting-started/github-apps/snippet--installation.rst
 
 
 Publishing Your Service

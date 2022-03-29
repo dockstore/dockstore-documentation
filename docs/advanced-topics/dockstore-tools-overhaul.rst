@@ -36,13 +36,13 @@ GitHub App Tools
 
 In the 1.12 release, Dockstore introduced a new registration path for tools via GitHub Apps. We introduced this feature for two main reasons:
 
-#. Allow Dockstore tools to be automatically synced with the work that has been pushed to GitHub and
+#. Allow Dockstore tools to be automatically synced with the work that has been pushed to GitHub, and
 #. Let users register a tool without needing to specify a Docker image that the user owned
 
-But, we also saw this feature as an opportunity to start eliminating some of the confusion surrounding Dockstore tools. GitHub App tools will:
+But, we also saw this feature as an opportunity to start eliminating some of the confusion surrounding Dockstore tools. As a result, we decided that GitHub App tools should:
 
 * Be the recommended way of registering tools
-* Not support WDL
+* Not support "WDL tools" (but the App does support WDL workflows!)
 * Have versioning based on the versioning on GitHub
 
 

@@ -43,7 +43,7 @@ Register Your Tool to Automatically Sync with GitHub (Recommended)
 Dockstore has added GitHub App support for registering tools. Using GitHub Apps, Dockstore can react to changes on GitHub as they are made,
 keeping Dockstore synced with GitHub automatically. You can read more about it :doc:`in our docs about the Dockstore GitHub App </getting-started/github-apps/github-apps>`, but a summary is present below.
 
-.. include:: /getting-started/github-apps/installation.rst
+.. include:: /getting-started/github-apps/snippet--installation.rst
 
 Once you've installed our GitHub app on a repository or organization, you'll need to add a .dockstore.yml file to
 the root directory of a branch of the repository that contains your tool. This file contains information like

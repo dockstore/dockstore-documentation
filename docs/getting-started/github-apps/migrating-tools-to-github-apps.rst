@@ -29,7 +29,7 @@ the latter if you have users that have bookmarked it or if you have papers that 
 
 Install the Dockstore GitHub App
 --------------------------------
-.. include:: /getting-started/github-apps/installation.rst
+.. include:: /getting-started/github-apps/snippet--installation.rst
 
 Creating a .dockstore.yml File
 -------------------------------

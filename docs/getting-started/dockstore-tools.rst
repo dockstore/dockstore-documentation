@@ -13,8 +13,8 @@ Tutorial Goals
 
 Register Your Tool in Dockstore
 ===============================
-There are a variety of ways to get your tools into Dockstore. Users can either use GitHub App registration or our traditional registration methods.
-GitHub App registration is the recommended way to register all new tools on Dockstore. GitHub App tools and tools registered using our other methods (traditional tools) are
+There are a variety of ways to get your tools into Dockstore. Users can either use GitHub App registration or our legacy registration methods.
+GitHub App registration is the recommended way to register all new tools on Dockstore. GitHub App tools and tools registered using our other methods (legacy tools) are
 very different from one another. Use the following questions to determine which method to use:
 
 .. include:: /getting-started/how-to-register-work.rst

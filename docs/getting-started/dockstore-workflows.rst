@@ -26,38 +26,6 @@ registration to GitHub, Bitbucket or GitLab. It assumes that you already
 have a repository which contains a workflow and are now trying to register
 it in Dockstore.
 
-A Note on Naming Workflows on Dockstore
----------------------------------------
-Workflow paths are unique, descriptive identifiers for a workflow. In other words,
-each workflow on Dockstore has a unique identifier in the form of a path. This path is based on
-the Git repository that the workflow comes from. There are four components to a path, but only
-three are required. In most cases these three required components are all you need.
-
-First we will look at the required components. This is the Git registry, the organization, and
-the repository. They are joined together by forward slashes, which can be seen below:
-
-``Git Registry/Organization/Repository``
-
-Ex. If I had a GitHub repository called BAMstats that existed in the OICR organization, the path of
-the workflow created from that repository would be the following:
-
-``github.com/OICR/BAMstats``
-
-Why not simply use a number to identify the workflow? With a path like that shown above, users
-can quickly understand the purpose of a workflow along with where it came from.
-
-The final optional component for the workflow path is the workflow name. This is a user defined
-string that will be appended to the end of the required workflow path. It is useful in two situations:
-
-1) The name of the repository doesn't represent the workflow, or
-2) The repository contains multiple workflows
-
-Using the previous example, we could set the workflow name to ``coverage``. Our path would now be:
-
-``github.com/OICR/BAMstats/coverage``
-
-If we set the workflow name, we must include it in our path when referencing the workflow.
-
 Register Your Workflow in Dockstore
 -----------------------------------
 .. include:: /getting-started/github-apps/note--registration.rst
@@ -117,6 +85,11 @@ If you are using BitBucket or GitLab and would prefer not to use GitHub, or if y
 Sharing Your Workflow
 ----------------------
 .. include:: /getting-started/snippet--publish-workflow.rst
+
+**For Terra Users** : You have the ability to share hosted workflows
+through Dockstore. This allows for you to share workflows wth other
+users who have used their Google account to register on Terra. Learn
+more at :doc:`Workflow Sharing <../advanced-topics/sharing-workflows/>`.
 
 Next Steps
 ----------

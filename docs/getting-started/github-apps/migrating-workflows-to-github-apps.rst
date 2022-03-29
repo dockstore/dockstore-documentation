@@ -11,6 +11,8 @@ organization, if you have not already done so.
 
 .. include:: installation.rst
 
+.. include:: /advanced-topics/naming-workflows.rst
+
 Creating a .dockstore.yml File
 -------------------------------
 
@@ -46,13 +48,7 @@ During the original registration for your workflow, you may have filled out the 
    :alt: Workflow to Migrate
    :width: 60 %
 
-This field is required when you want to register multiple workflows from the same repo, but you may have filled it out for other reasons. To check if the workflow
-you want to migrate has a workflow name set, select the workflow and look at the title on top as shown in the picture below.
-
-The title consists of:
-``<sourceControl>/<organization name>/<repository name>/<optional workflow name>:<version name>``
-
-If you see a workflow name inserted, you must include the name field in your .dockstore.yml file.
+To check if the workflow you want to migrate has a workflow name set, select the workflow and look at the title on top, seeing if it has a fourth component to its title. As mentioned above, if you see a workflow name inserted, you must include the name field in your .dockstore.yml file.
 
 .. code:: yaml
 

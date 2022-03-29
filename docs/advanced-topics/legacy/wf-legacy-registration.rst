@@ -9,8 +9,8 @@ Legacy Workflow Registration Methods
 
 If you would prefer not to use GitHub App registration for your workflows, you can instead use one of these methods.
 
-Option A: Traditional Registration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Traditional Registration
+~~~~~~~~~~~~~~~~~~~~~~~~
 When using Bitbucket and GitLab for you workflows, use the traditional registration.
 There are two types of traditional registration: quick registration and manual registration.
 
@@ -28,9 +28,9 @@ related files. Following the above tips will help streamline the registration
 process, though you can still register workflows with non-standard format by
 using manual registration.
 
-Option B: Quick Register
-~~~~~~~~~~~~~~~~~~~~~~~~
-.. tip:: Quick register does not support workflow names. Please use an alternative registration
+Option A: Quick Register
+------------------------
+.. tip:: Quick register does not support :doc:`workflow names </advanced-topics/naming-workflows>`. Please use an alternative registration
    process if you would like to register a workflow with a workflow name.
 
 Quick register provides a flow that lets you browse the repositories you
@@ -62,8 +62,8 @@ be refreshed to get it synced up with Bitbucket/GitLab.
    The solution is to use manual register, defined below, which allows you to append
    a workflow name to the path.
 
-Option C: Manual Registration of Workflows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Option B: Manual Registration of Workflows
+------------------------------------------
 In certain cases, you may wish to register workflows in a different
 source code structure, especially when working with complex project
 structures. For example, if you want to register two workflows from the

@@ -6,11 +6,10 @@ Migrating Your Existing Tools to Use GitHub Apps
 Dockstore 1.12 provides users with a way to keep their tools automatically updated (instead of needing to manually refresh) by using GitHub apps. Registering a new tool with GitHub Apps is very similar to registering a new workflow with GitHub Apps.
 
 .. _dockstore yml tools vs old school tools:
-
 Before deciding to migrate your existing tools, consider the following differences between an existing Dockstore tool and a GitHub App tool:
 
 +------------------------+------------------------------------------+-------------------------------------------------+
-| Differences            | Existing Tool                            | GitHub App Tool                                 |
+| Differences            | Legacy Tool                              | GitHub App Tool                                 |
 +========================+==========================================+=================================================+
 | Use case               |   - User owns the image                  | - User doesn't need to own the image            |
 |                        |   - Dockerfile required                  | - Dockerfile not required                       |

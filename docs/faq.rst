@@ -67,6 +67,12 @@ not limited to):
 4. The docker pull command in the tools search reflects the defaultversion
 
 
+How should I register my work in Dockstore?
+-------------------------------------------
+
+.. include:: /getting-started/how-to-register-work.rst
+
+
 How do I send private messages to administrators or report security vulnerabilities?
 ------------------------------------------------------------------------------------
 

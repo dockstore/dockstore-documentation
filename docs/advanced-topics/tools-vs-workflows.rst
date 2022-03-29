@@ -42,25 +42,25 @@ Overview
 Dockstore currently does not support registration of these tools.
 
 
-+----------------------+-----------------------------+----------------------------------------+-------------------------------------------------+
-| Dockstore Support    | Legacy Tool                 | GitHub App Tool                        | Workflow                                        |
-+======================+=============================+========================================+=================================================+
-| Dockstore CLI        |  run in tool mode           |  run in workflow mode                  | run in workflow mode                            |
-+----------------------+-----------------------------+----------------------------------------+-------------------------------------------------+
-| Launch with buttons  |  currently not supported    |  currently not supported               | supported                                       |
-+----------------------+-----------------------------+----------------------------------------+-------------------------------------------------+
-| Versioning           |  based off of image's tags  |  based off of branches/tags from git   | based off of branches/tags from git repository, |
-|                      |                             |                                        |                                                 |
-|                      |                             |  repository, even if one of the tasks  | even if one of the tasks executes in a docker   |
-|                      |                             |                                        |                                                 |
-|                      |                             |  executes  in a docker image.          |                                                 |
-+----------------------+-----------------------------+----------------------------------------+-------------------------------------------------+
++----------------------+-----------------------------+----------------------------------------+----------------------------------------+
+| Dockstore Support    | Legacy Tool                 | GitHub App Tool                        | Workflow                               |
++======================+=============================+========================================+========================================+
+| Dockstore CLI        |  run in tool mode           |  run in workflow mode                  | run in workflow mode                   |
++----------------------+-----------------------------+----------------------------------------+----------------------------------------+
+| Launch with buttons  |  currently not supported    |  currently not supported               | supported                              |
++----------------------+-----------------------------+----------------------------------------+----------------------------------------+
+| Versioning           |  based off of image's tags  |  based off of branches/tags from git   | based off of branches/tags from git    |
+|                      |                             |                                        |                                        | 
+|                      |                             |  repository, even if one of the tasks  | repository, even if one of the tasks   |
+|                      |                             |                                        |                                        | 
+|                      |                             |  executes in a Docker image.           | executes in a Docker image.            | 
++----------------------+-----------------------------+----------------------------------------+----------------------------------------+
 
-what about workflows that run in docker containers?
+What about workflows that run in Docker containers?
 ---------------------------------------------------
 
-workflow descriptor files do not require a docker container. that being said, you can still specify external docker images
-within the descriptor files, and doing so is generally recommended. each task (wdl) or step (cwl) can specify a docker image, which might be totally different from the docker image used by a previous task/step in the workflow. because of this, workflows registered on dockstore that reference docker image(s) will still follow versioning from github, instead of versioning based on the tags of the docker image(s).
+Workflow descriptor files do not require a Docker container. That being said, you can still specify external Docker images
+within the descriptor files, and doing so is generally recommended. Each task (WDL) or step (CWL) can specify a Docker image, which might be totally different from the Docker image used by a previous task/step in the workflow. Because of this, workflows registered on Dockstore that reference Docker image(s) will still follow versioning from GitHub, instead of versioning based on the tags of the Docker image(s).
 
 .. hint::
     The Cromwell execution engine requires that each WDL task specify a Docker image when submitting tasks to Google Cloud (including Terra) or AWS Batch. Therefore, if your WDL workflow needs to run on Terra, make sure that each task uses the Docker runtime attribute. For more information see the `Cromwell docs <https://cromwell.readthedocs.io/en/stable/RuntimeAttributes/#docker>`_.

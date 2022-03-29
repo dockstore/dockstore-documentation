@@ -133,9 +133,9 @@ Advanced developer topics
 
 .. To get the above to format nicely, I made changes to advanced-topics/advanced-topics that make it no longer compatible with the Table of Contents, so advanced-topics/advanced-topics will no longer show in the sidebar. I feel that is a fair trade off.
 
-* :doc:`Docker registries <advanced-topics/docker-registries>`
+* :doc:`Dockstore Tools Overhaul <advanced-topics/dockstore-tools-overhaul>`
 * :doc:`Detailed comparison of tools and workflows <advanced-topics/tools-vs-workflows>`
-* :doc:`Different ways to register tools on Dockstore <advanced-topics/ways-to-register-tools>`
+* :doc:`Docker registries <advanced-topics/docker-registries>`
 * :doc:`Public and private tools <advanced-topics/public-and-private-tools>`
 * :doc:`Checker workflows <advanced-topics/checker-workflows>`, and :doc:`how to run them using TRS <advanced-topics/checker-workflow-trs>`
 * :doc:`Sharing workflows <advanced-topics/sharing-workflows>`
@@ -158,9 +158,9 @@ Advanced developer topics
    :maxdepth: 1
    :hidden:
    
+   advanced-topics/dockstore-tools-overhaul
    advanced-topics/docker-registries
    advanced-topics/tools-vs-workflows
-   advanced-topics/ways-to-register-tools
    advanced-topics/public-and-private-tools
    advanced-topics/checker-workflows
    advanced-topics/checker-workflow-trs

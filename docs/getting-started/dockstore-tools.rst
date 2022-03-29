@@ -3,23 +3,95 @@
   the tutorial prior to doing this one.
 
 Register a Tool on Dockstore
-============================
+############################
 
 Tutorial Goals
---------------
+==============
 
--  Register a tool on Dockstore
--  Learn about Quick registration vs Manual Registration
+-  Discover how to register a tool on Dockstore
 -  Publish your tool
 
 Register Your Tool in Dockstore
--------------------------------
+===============================
+There are a variety of ways to get your tools into Dockstore. Users can either use GitHub App registration or our legacy registration methods.
+GitHub App registration is the recommended way to register all new tools on Dockstore. GitHub App tools and tools registered using our other methods (legacy tools) are
+very different from one another. Use the following questions to determine which method to use:
 
-Now that you have your ``Dockerfile``, ``Dockstore.cwl`` and/or
-``Dockstore.wdl`` in GitHub, have setup Quay.io to automatically build
-your Docker image, and have linked your accounts to Dockstore, it is
-time to register your tool. This tutorial will assume you are using CWL
-and/or WDL. Currently, Nextflow is not supported for tools on Dockstore.
+.. include:: /getting-started/how-to-register-work.rst
+
+If you must use the legacy tool registration methods, then you may want to read :doc:`Dockstore Tools Overhaul </../advanced-topics/dockstore-tools-overhaul>` before continuing
+to the legacy methods described below.
+
+
+.. note:: To register content on Dockstore, you must have an account on Dockstore and
+   link the necessary third-party accounts. Once this is done you can register
+   tools from the My Tools page.
+
+
+Now that you have your ``Dockstore.cwl`` CommandLineTool in GitHub and have linked your accounts to Dockstore, it is
+time to register your tool.
+
+.. _Tool Registration With GitHub Apps:
+
+Registration With GitHub Apps
+-----------------------------
+Dockstore has added GitHub App support for registering tools. Using GitHub Apps, Dockstore can react to changes on GitHub as they are made,
+keeping Dockstore synced with GitHub automatically.
+
+Installing the GitHub App is simple -- navigate to ``/my-tools``, click the ``+`` button on the left hand sidebar, select ``Register using GitHub Apps``, and then click
+``+ Manage Dockstore Installation on GitHub``. You'll then be redirected to GitHub where you can grant the app access to specific repositories within whatever organization you are installing into.
+
+.. image:: /assets/images/docs/add-tool-button.png
+   :width: 40 %
+
+.. image:: /assets/images/docs/register-tool-github-apps.png
+   :width: 40 %
+
+.. figure:: /assets/images/docs/gh-app-reg-tool.png
+   :width: 70 %
+
+   Install our GitHub App on either all repositories in an organization or on specific repositories
+
+Once you've installed our GitHub app on a repository or organization, you'll need to add a ``/.dockstore.yml`` file to
+the root directory of a branch of the repository that contains your tool. This file contains information like
+tool path, test parameter file, tool name, etc. When a push is made or a tag is created on GitHub
+with a ``/.dockstore.yml``, Dockstore will add that branch to the corresponding tool on Dockstore. If the
+tool doesn't already exist on Dockstore, one will be created. Note that a single ``/.dockstore.yml`` file can describe multiple tools, if all of those tools are in the same repository.
+
+Below is a simple example of a ``/.dockstore.yml`` file
+for an alignment workflow to show you how easy it is to use. If you are interested in using this method, please see the
+complete documentation at the :doc:`Dockstore GitHub Apps <github-apps/github-apps>` page. All paths in the file must be absolute.
+
+.. code:: yaml
+
+   version: 1.2
+   tools:
+      - subclass: CWL
+        primaryDescriptorPath: /aligner.cwl
+        testParameterFiles:
+        - /test/aligner.cwl.json
+
+If you had our GitHub App installed on the repository ``myorg/alignments`` and then add the above ``/.dockstore.yml`` to the **develop** branch,
+the following would occur.
+
+* A **CWL** tool with the ID ``github.com/myorg/alignments`` will be created on Dockstore
+* The version **develop** is added to the tool ``github.com/myorg/alignments``
+* The version has the primary descriptor file set to ``/aligner.cwl``
+* The version has one test parameter file: ``/test/aligner.cwl.json``
+
+Now that your tool has been added, any time there is a push to a branch on GitHub for this repository that has a ``/.dockstore.yml``,
+it is automatically updated on Dockstore! Anytime there is a deletion of a branch on GitHub that has a ``/.dockstore.yml``, the version is
+removed from Dockstore.
+
+Legacy Tool Registration
+------------------------
+
+.. important:: The following methods are NOT recommended and should only be used if your tool descriptor files are registered on BitBucket or GitLab.
+
+.. important:: These methods require that you have created or have permissions to a Docker image. If that is not the case, consider reading :doc:`Getting Started with Docker <getting-started-with-docker>` or switching to GitHub as your code hosting platform.
+
+To use the following registration options, you need have your Dockerfile and your CWL file in GitHub, have set an autobuilding Docker image, and have linked your accounts to Dockstore.
+We describe this process with a CWL tool in the :doc:`Getting Started with Docker <getting-started-with-docker>` and :doc:`Getting Started with CWL <getting-started-with-docker>` tutorial.
 
 Quick Registration via the Web UI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -78,8 +150,7 @@ click "Publish". The tool is now listed on Dockstore!
 
 You can also click on the "Versions" tab and should notice ``1.25-6`` is
 present and valid. If any versions are invalid it is likely due to a
-path issue to the ``Dockstore.cwl``, ``Dockerfile``, or
-``Dockstore.wdl`` (if used) files. In BAMStats I used the default value
+path issue to the ``Dockstore.cwl`` or ``Dockerfile``. In BAMStats I used the default value
 of ``Dockstore.cwl`` and ``Dockerfile`` in the root repo directory so
 this was not an issue.
 
@@ -90,7 +161,7 @@ this was not an issue.
 
 Next, pick a version of your tool that you wish to present to the world
 by clicking on the radio selector in the Version column. This will
-determine which version of your CWL/WDL file will be used to find the
+determine which version of your CWL file will be used to find the
 author, email, and description in the case that it changes between
 versions. This also allows you to pre-select a version of your tool to
 present to users in the "Launch With" section, and the Dockerfile and
@@ -165,7 +236,7 @@ next.
 
 The Source Code Repository and Image Registry fields must be filled out,
 and they are in the format ``namespace/name`` (the two paths may
-differ). The Dockerfile Path, CWL/WDL Descriptor Paths, and CWL/WDL Test
+differ). The Dockerfile Path, CWL Descriptor Paths, and CWL Test
 Parameter Paths are relative to the root of the Source Code Repository
 (and must begin with '/'). These will be the default locations to find
 their corresponding files, unless specified otherwise in the tags. The

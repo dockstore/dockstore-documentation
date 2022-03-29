@@ -6,23 +6,10 @@ Here, we will go over how to migrate your existing Dockstore tools to use GitHub
 This tutorial assumes that you are are familiar with the  ``/.dockstore.yml`` file by having read our overview of :doc:`GitHub apps <github-apps>` and the :ref:`Registration With GitHub Apps` section 
 in our workflow registration document. Registering a new tool with GitHub Apps is very similar to registering a new workflow with GitHub Apps.
 
-Before deciding to migrate your existing tools, consider the following differences between an existing Dockstore tool and a GitHub App tool:
-
-+------------------------+------------------------------------------+-------------------------------------------------+
-| Differences            | Existing Tool                            | GitHub App Tool                                 |
-+========================+==========================================+=================================================+
-| Use case               |   - User owns the image                  | - User doesn't need to own the image            |
-|                        |   - Dockerfile required                  | - Dockerfile not required                       |
-+------------------------+------------------------------------------+-------------------------------------------------+
-| Versioning             | Based on image's tags                    | Based on GitHub repository's branches/tags      |
-+------------------------+------------------------------------------+-------------------------------------------------+
-| Tool Path              | Docker container location                | GitHub repository location                      |
-+------------------------+------------------------------------------+-------------------------------------------------+
-
 
 If you're familiar with the process of :doc:`migrating your existing workflows to use GitHub Apps <migrating-workflows-to-github-apps>`, note that the migration process for tools is different 
-because of these fundamental differences between existing tools and GitHub App tools. The migration process for tools will not convert your existing tool into a GitHub App tool.
-Instead, you will be creating a new GitHub App tool, then either deleting your existing tool or providing a link to your new GitHub App tool from your old tool. You may wish to consider the
+because of these fundamental differences between existing tools and GitHub App tools. If you wish to learn more about the differences, refer to our :doc:`Overhauling Dockstore Tools <../../advanced-topics/dockstore-tools-overhaul>` documentation.
+The migration process for tools will not convert your existing tool into a GitHub App tool. Instead, you will be creating a new GitHub App tool, then either deleting your existing tool or providing a link to your new GitHub App tool from your old tool. You may wish to consider the
 the latter if you have users that have bookmarked it or if you have papers that link to the old tool.
 
 GitHub App Installation

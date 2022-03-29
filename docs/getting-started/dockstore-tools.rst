@@ -19,8 +19,8 @@ very different from one another. Use the following questions to determine which 
 
 .. include:: /getting-started/how-to-register-work.rst
 
-If you must use the traditional tool registration methods, then you may want to read :doc:`Dockstore Tools Overhaul </../advanced-topics/dockstore-tools-overhaul>` before continuing
-to the traditional methods described below.
+If you must use the legacy tool registration methods, then you may want to read :doc:`Dockstore Tools Overhaul </../advanced-topics/dockstore-tools-overhaul>` before continuing
+to the legacy methods described below.
 
 
 .. note:: To register content on Dockstore, you must have an account on Dockstore and

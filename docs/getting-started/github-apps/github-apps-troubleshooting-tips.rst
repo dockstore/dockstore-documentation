@@ -11,12 +11,12 @@ GitHub App Troubleshooting & FAQs
 
 Why should I migrate my existing workflows to use GitHub Apps and a .dockstore.yml?
 ----------------------------------------------------------------------------------------
-Installing our Dockstore GitHub App onto your GitHub repository or organization will automatically sync your workflow on Dockstore whenever code is pushed to GitHub.
+Installing our Dockstore GitHub App onto your GitHub repository or organization will automatically sync your workflow/tool on Dockstore whenever code is pushed to GitHub.
 This means less manual work for workflow developers, and less waiting for content to update.
 
 This requires the addition of a .dockstore.yml file to your repository on GitHub.
-This file contains workflow information such as workflow path, test parameter paths, etc. that Dockstore will use to setup
-the corresponding workflow on Dockstore. Branches that do not have a .dockstore.yml file will not be synchronized.
+This file contains information that Dockstore will use to setup
+the corresponding workflow/tool entry on Dockstore. Branches that do not have a .dockstore.yml file, or that are filtered out via the filter feature, will not be synchronized.
 
 You can read more about it at :doc:`/getting-started/github-apps/github-apps`.
 
@@ -25,8 +25,7 @@ How does this change my development flow?
 Adding a .dockstore.yml file to a template branch (ex: master, develop, main) will make it so
 any new branches created from this template will be automatically added to and synced on Dockstore.
 
-Therefore, as long as your workflow is already registered on Dockstore and your .dockstore.yml is configured correctly,
-then updates to the workflow (including adding new versions) should happen continuously and automatically.
+Therefore, as long as your workflow is already registered on Dockstore and your .dockstore.yml is configured correctly, updates to the workflow (including adding new versions) should happen continuously and automatically.
 
 You can use filters in a .dockstore.yml to avoid generating a corresponding workflow-version on Dockstore.
 
@@ -38,11 +37,18 @@ Go to your repo on GitHub, click the Settings tab, click Integrations on the lef
 
 .. image:: /assets/images/docs/github-repo-settings.png
 
+You may not have access to this page if you are not an administrator of your GitHub organization, :ref:`but you may still be able to see if it installed. <view github app permissions hack>`
+
 How do I configure the GitHub App across multiple repositories?
 ------------------------------------------------------------------
 GitHub Apps can be installed on either an a user level, or an organizational level. If you installed the app for your own repos that are not in an organization, you will be able to verify the Dockstore GitHub App is installed by clicking "Applications" in the left menu in your GitHub settings. Our app, along with any others you may have installed, will be there. Clicking the "configure" button will allow you to adjust which repos the app has access to.
 
-Depending on the permissions you have on an organization, you may not be able to directly access an organization's settings. If that is case for you, consider asking the organization's admin to set it up. You can also try re-installing the app again, which will take you to the app configuration process, although depending on your permissions your selected changes may not be saved. (See next question.)
+.. _view github app permissions hack:
+
+How do I view/configure the GitHub App if I am not the admin of an organization?
+--------------------------------------------------------------------------------
+
+You may be able to tell if your organization has already installed the app by trying re-installing the app again, which will take you to the app configuration process, although depending on your permissions your selected changes may not be saved. (See next question.)
 
 .. image:: /assets/images/docs/reinstall-app-to-cheese-org-settings.png
    :width: 50%
@@ -60,23 +66,26 @@ You may also still run into scenarios where your changes appear to not get saved
 
 If it seems your GitHub App access just won't "stick" or you are having other permissions issues, consider asking the administrator of your organization to install the app. If they set it up to have access to all repositories on the organization, this will only need to be done once.
 
-
 The changes made to my GitHub repo aren't appearing on Dockstore, but I've already installed the GitHub app and made the .dockstore.yml file. How can I figure out what's going wrong?
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-If you don't see changes, try waiting a couple of minutes and refreshing the browser on the My Workflows page again. 
+The general troubleshooting flow we recommend is the following:
 
-You can also verify that the GitHub app was given access to the right repository or organization. If access was given to the wrong organization or repository,
-or this is your first time installing the app, you'll need to push another commit after adding the correct repository to activate the sync to Dockstore.
-
-Double check the .dockstore.yml file.
+- Try waiting a couple of minutes and refreshing the browser on the My Workflows/My Tools page again. Sometimes, GitHub takes a few minutes to send Dockstore the changes made to a repository.
+- Verify that the GitHub app was given access to the right repository or organization. 
+- If access was given to the wrong organization or repository, or this is your first time installing the app, you'll need to push another commit after adding the correct repository to activate the sync to Dockstore.
+- Double check the .dockstore.yml file.
 
     - Is it in the root directory?
     - Is it on the right branch?
     - Are all indentation levels correct?
+    - Is it named `.dockstore.yml` instead of `dockstore.yml` or `.dockstore.yaml`?
     - Does the name field match, if applicable?
 
-If you've already tried waiting a couple of minutes and refreshing the browser on the My Workflows page, you can view GitHub App logs through Dockstore to see if there have been any errors.
-Navigate to the ``/my-workflows`` page and expand the GitHub Organization that the repository belongs to on the left hand side. Then click on the bottom where it says ``See GitHub App Logs``.
+If you've already tried these, you can view GitHub App logs through Dockstore to see if there have been any errors (see next section).
+
+How do I view the GitHub App logs?
+----------------------------------
+Navigate to the ``/my-workflows`` (or ``/my-tools``) page and expand the GitHub Organization that the repository belongs to on the left hand side. Then click on the bottom where it says ``See GitHub App Logs``.
 
 .. image:: /assets/images/docs/github-app-logs-button.png
    :width: 40 %
@@ -110,16 +119,20 @@ Why was a new workflow registered instead of migrating my existing one?
 ..
     Todo: Add information of how to delete
 
-During the original registration for your workflow, you may have filled out the ``Workflow Name`` field shown in the picture below.
-A new separate workflow will be registered if the original ``Workflow Name`` isn't included or doesn't match the ``name`` field in your .dockstore.yml.
+During the original registration for your workflow/tool, you may have filled out the name field as shown in the pictures below.
+A new separate workflow/tool will be registered if the original name isn't included or doesn't match the ``name`` field in your .dockstore.yml file.
 
 .. figure:: /assets/images/docs/workflow-name-field.png
    :alt: Workflow to Migrate
-   :width: 75 %
+   :width: 55 %
+
+.. figure:: /assets/images/docs/tool-name-field.png
+   :alt: Tool to Migrate
+   :width: 55 %
 
 
-How can I convert my entire existing workflow at once?
-----------------------------------------------------------
+How can I convert my entire existing workflow/tool at once?
+-------------------------------------------------------------
 Currently you cannot convert all existing branches/versions at once. You must add a .dockstore.yml to each branch in order for the GitHub app
 automatically detect and sync changes with the corresponding version on Dockstore.
 

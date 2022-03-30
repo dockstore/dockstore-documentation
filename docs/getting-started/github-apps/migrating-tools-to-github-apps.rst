@@ -57,7 +57,7 @@ The information above was filled out using the following:
 The ``name`` Field
 ~~~~~~~~~~~~~~~~~~
 
-If you have more than one tool in the same repository, the ``name`` field must be filled out for the tools to ensure that the tool paths are unique.
+If you have more than one tool in the same repository, the ``name`` field must be filled out for each individual tool's section in your .dockstore.yml file. This is to ensure that the tool paths are unique -- as mentioned in the table above, tool paths are based upon the GitHub repository, so tools without a name in the same repository would have the same path, which we want to avoid. (Strictly speaking, you can leave one of the tools' name fields blank if you would like, but make sure that all other tools in your repository have a name.)
 
 If you registered your tool using the Web UI, you may have filled out the ``Tool Name`` field shown in the picture below.
 
@@ -69,7 +69,7 @@ This field is required when you want to register multiple tools from the same re
 To check if the tool you want to migrate has a tool name, select the tool's entry on Dockstore and look at the title on top. The title consists of:
 ``<image registry>/<organization name>/<repository name>/<optional tool name>:<version name>``
 
-If you see a tool name inserted, you must include the name field in your .dockstore.yml file.
+If you see a tool name inserted, you must include the name field in your .dockstore.yml file for the transfer to work correctly.
 
 .. include:: /assets/templates/tools/example-2-name.yml
   :code:

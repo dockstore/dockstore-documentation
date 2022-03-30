@@ -1,0 +1,64 @@
+# The first line refers to the version 1.2 of the .dockstore.yml schema
+version: 1.2
+
+# An array of workflows. Each element corresponds to a workflow on Dockstore.
+workflows:
+  
+  # The optional workflow name for a workflow, which may only consist of alphanumerics
+  # and internal underscores and hyphens. Names may not exceed 256 characters. 
+  # If using a .dockstore.yml with multiple workflows, this field is required 
+  # to uniquely identify workflows in the repository.
+  #
+  # It should be noted that having the name come first is an arbitrary decision.
+  # You could use subclass instead, for instance. Provided arrays are not broken
+  # up, the order of fields within a .dockstore.yml is not important.
+  - name: <String>
+    
+    # The descriptor language used for the workflow. CWL, WDL, NFL (Nextflow), or GALAXY. 
+    # This cannot be changed once the workflow is registered.
+    subclass: <CWL | WDL | NFL | GALAXY>
+    
+    # Workflow-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
+    # Set to true to publish an unpublished workflow, or false to unpublish a published workflow.
+    # Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
+    publish: <Boolean>
+
+    # The absolute path to the primary descriptor file in the Git repository.
+    # - For CWL, the primary descriptor is a .cwl file.
+    # - For WDL, the primary descriptor is a .wdl file.
+    # - For Galaxy, the primary descriptor is a .ga file.
+    # - Nextflow differs from these as the primary descriptor is a nextflow.config file.
+    primaryDescriptorPath: <String>
+
+    # An optional array of absolute paths to test parameter files in the Git repository.
+    # For example...
+    # testParameterFiles:
+    #   - /null-model/null-model.json
+    #   - /null-model/null-model-binary.json
+    testParameterFiles: <String Array>
+
+    # An optional array of authorship information.
+    # Note that if orcid is present, then all other fields will be ignored, as information will be taken from orcid.
+    # If orcid is not present, make sure to at a minimum include the name field for each author.
+    authors:
+      - name: <String>
+        orcid: <String>
+        email: <String>
+        role: <String>
+        affiliation: <String>
+    
+    # A boolean that will change the default version to be displayed on Dockstore. Default: False.
+    # A value of true will automatically display the latest tag updated as default.
+    # A value of false will retain the default version that has been specified via the Dockstore UI.
+    latestTagAsDefault: <Boolean>
+    
+    # The optional filters section allow specifying sets of Git branches and tags to include for the workflow.
+    # If no filters are given, all branches and tags are included.
+    # Branches and tags are arrays of pattern-strings.
+    # Pattern-strings use Unix-style Glob syntax by default (Ex: `develop`, `myworkflow/**`)
+    # https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)
+    # or RegEx when the string is surrounded by / (Ex: `/develop/`, `/myworkflow\/.*/`).
+    filters:
+      branches: <String Array>
+      tags: <String Array>
+

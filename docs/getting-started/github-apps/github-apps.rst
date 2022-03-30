@@ -1,28 +1,17 @@
-======================================================
-Automatic Syncing with GitHub Apps and .dockstore.yml
-======================================================
+=================================================================
+Automatic Syncing with GitHub Apps and .dockstore.yml -- Overview
+=================================================================
 ..
     TODO: update error handling section with info about checking lambda errors in UI https://github.com/dockstore/dockstore/issues/3530
 
-Overview
---------
-
-.. note::
-  Summary of GitHub App usage:
-
-  #. :ref:`Install Dockstore GitHub App <Registration With GitHub Apps>`
-  #. Push a new commit with a .dockstore.yml file present
-  #. Wait up to 5 minutes for Dockstore to process the new version
-  #. See workflow on Dockstore
+.. include:: /getting-started/github-apps/note--gha-summary.rst
 
 This document gives a high level overview of how Dockstore uses GitHub apps.
 For extra details on configuring and using the Dockstore
-GitHub App with workflows or services, please see either
-:ref:`Registration with GitHub Apps <Registration With GitHub Apps>` or
-:doc:`Getting Started with Services </getting-started/getting-started-with-services>`.
+GitHub App, :doc:`see our other docs on the here </getting-started/github-apps/github-apps-landing-page>`.
 
 With the Dockstore GitHub App installed, authors do not need to manually refresh their
-workflows/services on Dockstore to get the latest changes from GitHub. Dockstore will
+workflows/services/tools on Dockstore to get the latest changes from GitHub. Dockstore will
 automatically update whenever the corresponding repository is updated on GitHub.
 
 What are GitHub Apps?
@@ -37,7 +26,7 @@ creating a new release, the GitHub app issues notifications.
 Why have a Dockstore GitHub App?
 --------------------------------
 
-Without a GitHub app, Dockstore does not know when you have modified a GitHub
+Without a GitHub App, Dockstore does not know when you have modified a GitHub
 repository.
 
 For example, take the case when you first add a workflow to Dockstore
@@ -50,7 +39,7 @@ to the GitHub repo, and manually refreshing the tool/workflow by either clicking
 the Refresh button or making an API call to the Dockstore API.
 
 Due to the manual nature of this process, it is easy for Dockstore to get out of
-sync with the linked GitHub repository.
+sync with the linked GitHub repository if the Dockstore GitHub App is not being used.
 
 How the Dockstore GitHub App works
 ----------------------------------
@@ -59,16 +48,16 @@ With the Dockstore GitHub App installed, the synchronization is done automatical
 you add a new branch or release of a workflow on GitHub, Dockstore is notified,
 and Dockstore updates its copy of the workflow. For example, After publishing a new release
 of a workflow on GitHub, a new version of the workflow will be present in
-Dockstore shortly afterwards.
+Dockstore shortly afterwards. For this to work, a .dockstore.yml file is **required** in the root directory (or inside the ``.github`` directory) of each GitHub repository you want
+to associate with a workflow/tool/service on Dockstore. It should not be inside any subfolder (except ``.github``).
 
-For this to work, a ``/.dockstore.yml`` file is **required in the root directory of each GitHub repository** you want
-to associate with a workflow on Dockstore. A template for both workflows and services are shown below,
-along with explanations for each field. For every branch/release on GitHub that has one of these files, a corresponding entry
+Simple templates for tools, workflows, and services are shown below,
+as well as links to more advanced explanations of every field. For every branch/release on GitHub that has one of these files, a corresponding entry
 will be made on Dockstore.
 
 Error Handling
 ----------------------------------
-It is possible for an invalid ``/.dockstore.yml`` to cause an errors. If we cannot read the 
+An invalid .dockstore.yml will cause errors. If we cannot read the 
 file, then we do not know which workflow or service to associate the error with. For now, please ensure that your file is a valid YML file and
 compare it with our examples/documentation to confirm that you filled it in correctly. If the file is at least present, an error will generally appear in the GitHub App logs (see `our FAQ document <https://docs.dockstore.org/en/develop/getting-started/github-apps/github-apps-troubleshooting-tips.html>`_).
 
@@ -86,122 +75,42 @@ Example YML Files
 
 Workflow YML File
 ++++++++++++++++++
-For a workflow, the ``/.dockstore.yml`` has the following general structure
+For a workflow, the .dockstore.yml has the following general structure:
 
-.. code:: yaml
+.. include:: /assets/templates/workflows/template-small.dockstore.yml
+  :code: yaml
 
-   version: 1.2
-   workflows:
-      - name: <String>
-        subclass: <CWL | WDL | NFL | GALAXY>
-        publish: <Boolean>
-        primaryDescriptorPath: <String>
-        testParameterFiles: <String Array>
-        authors:
-          - name: <String>
-            email: <String>
-            role: <String>
-            affiliation: <String>
-          - orcid: <String>
-        filters:
-          branches: <String Array>
-          tags: <String Array>
+As an example, here is a filled-out .dockstore.yml for a single WDL workflow which happens to have more than one test parameter file.  Note that the name is not present since the name field is optional when only a single workflow is involved.
 
-version
-    The version of the .dockstore.yml schema. Currently at 1.2.
-workflows
-    An array of workflows. Each element corresponds to a workflow on Dockstore.
-name (optional)
-    The optional workflow name for a workflow. The name may only consist of alphanumeric characters, internal underscores, and internal hyphens. It may not exceed 256 characters. If using a ``/.dockstore.yml`` with multiple workflows,
-    this field is required to uniquely identify workflows in the repository.
-    **Each workflow listed must have a unique (or no) name.**
-subclass
-    The descriptor language used for the workflow. Supported values include CWL, WDL, NFL (Nextflow), and GALAXY. This cannot be changed once the workflow is registered.
-publish (optional)
-    Workflow-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
-    Set to true to publish an unpublished workflow, or false to unpublish a published workflow.
-    Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
-primaryDescriptorPath
-    The absolute path to the primary descriptor file in the Git repository. 
-    
-    - For CWL, the primary descriptor is a .cwl file.
-    - For WDL, the primary descriptor is a .wdl file.
-    - For Galaxy, the primary descriptor is a .ga file.
-    - Nextflow differs from these as the primary descriptor is a nextflow.config file.
-testParameterFiles (optional)
-    An array of absolute paths to test parameter files in the Git repository.
-authors (optional)
-    An array of authorship information, requiring at least the ``name`` or ``orcid`` of each author. 
-    
-    ``orcid`` is the author's ORCID iD, a 16-digit identifier of the form ``xxxx-xxxx-xxxx-xxxx``, where each ``x`` is a digit.
-    If an author's ``orcid`` is provided, other authorship fields should not be included because they will be retrieved from their ORCID record. If included, they will be ignored.
-latestTagAsDefault (optional)
-    A boolean (true or false) that will change the default version to be displayed on Dockstore. A value of true will automatically display the latest tag updated as default, while false will retain the default version that has been specified via the Dockstore UI.
-filters (optional)
-    branches, tags (optional)
-        Arrays of pattern-strings to specify which Git branches or tags to include for the workflow.
-        If no filters are given, all branches and tags are included.
-        Pattern-strings use `Unix-style Glob syntax <https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)>`_ by default (Ex: ``develop``, ``myworkflow/**``),
-        or RegEx when the string is surrounded by ``/`` (Ex: ``/develop/``, ``/myworkflow\/.*/``).
+.. include:: /assets/templates/workflows/example-1-noname.yml
+  :code: yaml
 
-Ex. /.dockstore.yml with a single workflow
-
-.. code:: yaml
-
-   version: 1.2
-   workflows:
-      - subclass: CWL
-        primaryDescriptorPath: /Dockstore.cwl
-        testParameterFiles:
-            - /test/dockstore.cwl.json
-
-The above ``/.dockstore.yml`` is for a single workflow. Note that the name is not present since it is optional.
-
-Ex. /.dockstore.yml with multiple workflows
-
-.. important:: Though the **name** field is optional when a ``.dockstore.yml`` has one workflow in it,
-    it must be used when a ``.dockstore.yml`` has multiple workflows in it. Each entry within a ``.dockstore.yml``
+.. important:: Though the **name** field is optional when a .dockstore.yml has one workflow in it,
+    it must be used when a .dockstore.yml has multiple workflows in it. Each entry within a .dockstore.yml
     file corresponds to a unique entry on Dockstore.
 
-.. code:: yaml
+For more examples, including multi-workflow examples and a complete breakdown of all possible fields, please see :doc:`our .dockstore.yml templates and examples for workflows</assets/templates/workflows/workflows>`.
 
-   version: 1.2
-   workflows:
-      - name: globalAligner
-        subclass: CWL
-        publish: True
-        primaryDescriptorPath: /runGlobalAligner.cwl
-        testParameterFiles:
-            - /test/globalAligner.cwl.json
-        filters:  # All tags, no branches
-            tags:
-                - /.*/
-      - name: localAligner
-        subclass: CWL
-        primaryDescriptorPath: /runLocalAligner.cwl
-        testParameterFiles:
-            - /test/localAligner.cwl.json
-        filters:  # Only develop or master branches and localAligner/** tags
-            branches:
-                - develop
-                - master
-            tags:
-                - /localaligner\/.*/
+Tool YML File
++++++++++++++
+The .dockstore.yml file for a tool is very similiar in structure to that of a workflow.
 
-A common pattern seen on Dockstore is GitHub repositories that store many workflows. The above ``.dockstore.yml``
-has two entries for workflows. Notice that each entry uses a different name. Names are required if you want 
-multiple workflows registered on Dockstore from a single GitHub repository. The names must be unique between
-entries of the `workflows` array. For each unique name present, an entry will be created on Dockstore.
+.. include:: /assets/templates/tools/template-small.dockstore.yml
+  :code: yaml
+
+For more examples, including multi-workflow examples and a complete breakdown of all possible fields, please see :doc:`our .dockstore.yml templates and examples for tools</assets/templates/tools/tools>`.
 
 Service YML File
 +++++++++++++++++
-A template .dockstore.yml file for registering services, with explanations in the comments, can be found in our :doc:`Service 1.2 Template </assets/templates/template>`. For more info on services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>`.
+The .dockstore.yml for a service will depend heavily on the nature of the service it describes. A template .dockstore.yml file for registering services, with explanations in the comments, can be found in our :doc:`Service 1.2 Template </assets/templates/template>`. For more info on services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>`.
 
 See Also
 --------
 
 - :doc:`Getting Started with Services </getting-started/getting-started-with-services>`
 - :doc:`Getting Started with Workflows </getting-started/dockstore-workflows>`
+- :doc:`Getting Started with Tools </getting-started/dockstore-tools>`
+- :doc:`Other docs involving the Dockstore GitHub App </getting-started/github-apps/github-apps>`
 
 .. discourse::
        :topic_identifier: 2240

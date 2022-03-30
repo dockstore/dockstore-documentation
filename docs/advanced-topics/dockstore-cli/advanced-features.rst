@@ -333,7 +333,6 @@ with the `Cromwell <https://github.com/broadinstitute/cromwell>`__ version liste
 |     1.12    |          57           |
 +-------------+-----------------------+
 
-
 Additionally, you can override the Cromwell version in your
 ``~/.dockstore/config`` using for example:
 

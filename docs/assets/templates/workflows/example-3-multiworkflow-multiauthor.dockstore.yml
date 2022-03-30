@@ -1,0 +1,19 @@
+version: 1.2
+workflows:
+  - subclass: WDL
+    primaryDescriptorPath: /assoc-aggregate/assoc-aggregate.wdl
+    testParameterFiles:
+      - /assoc-aggregate/assoc-aggregate-terra-allele.json
+      - /assoc-aggregate/assoc-aggregate-terra-position.json
+      - /assoc-aggregate/assoc-aggregate-terra-weights.json
+    name: assoc-aggregate-wdl
+    authors:
+      - orcid: 0000-0003-4896-1858
+  - subclass: WDL
+    primaryDescriptorPath: /pc-air/pc-air.wdl
+    testParameterFiles:
+      - /pc-air/pc-air-local.json
+      - /pc-air/pc-air-terra.json
+    name: pc-air-wdl
+    authors:
+      - orcid: 0000-0001-9163-2756

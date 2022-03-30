@@ -135,6 +135,7 @@ Advanced developer topics
 
 * :doc:`Dockstore Tools Overhaul <advanced-topics/dockstore-tools-overhaul>`
 * :doc:`Detailed comparison of tools and workflows <advanced-topics/tools-vs-workflows>`
+* :doc:`Legacy features <advanced-topics/legacy/legacy>`
 * :doc:`Docker registries <advanced-topics/docker-registries>`
 * :doc:`Public and private tools <advanced-topics/public-and-private-tools>`
 * :doc:`Checker workflows <advanced-topics/checker-workflows>`, and :doc:`how to run them using TRS <advanced-topics/checker-workflow-trs>`
@@ -159,8 +160,9 @@ Advanced developer topics
    :hidden:
    
    advanced-topics/dockstore-tools-overhaul
-   advanced-topics/docker-registries
    advanced-topics/tools-vs-workflows
+   advanced-topics/legacy/legacy
+   advanced-topics/docker-registries
    advanced-topics/public-and-private-tools
    advanced-topics/checker-workflows
    advanced-topics/checker-workflow-trs

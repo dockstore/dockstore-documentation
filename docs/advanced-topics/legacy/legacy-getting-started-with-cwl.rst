@@ -15,7 +15,7 @@ Tutorial Goals
 
 Tutorial Background
 -------------------
-This is a legacy version of our "Getting Started with CWL" tutorial. As is mentioned in :doc:`Overhauling Dockstore Tools </advanced-topics/dockstore-tools-overhaul>`, our definition of a tool has changed over time. This tutorial was designed for the older definition, where we required people to associate a tool with a Dockerfile. Strictly speaking, you can still follow this tutorial to end up with a valid CWL tool and register it as a GitHub App tool, but the work you are doing in this tutorial goes above and beyond what we now require for CWL tools. You can find a simplier version of this tutorial at :doc:`Getting Started With CWL </getting-started/getting-started-with-cwl>`.
+This is a legacy version of our "Getting Started with CWL" tutorial. As is mentioned in :doc:`Overhauling Dockstore Tools </advanced-topics/dockstore-tools-overhaul>`, our definition of a tool has changed over time. This tutorial was designed for the older definition, where we required people to associate a tool with a Dockerfile. You can still follow this tutorial to create a valid CWL tool and register it as a GitHub App tool, but we recommend following a simpler version of this tutorial at :doc:`Getting Started With CWL </getting-started/getting-started-with-cwl>`.
 
 Describe Your Tool in CWL
 -------------------------

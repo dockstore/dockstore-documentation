@@ -160,6 +160,7 @@ Advanced developer topics
    
    advanced-topics/dockstore-tools-overhaul
    advanced-topics/docker-registries
+   advanced-topics/legacy/legacy
    advanced-topics/tools-vs-workflows
    advanced-topics/public-and-private-tools
    advanced-topics/checker-workflows

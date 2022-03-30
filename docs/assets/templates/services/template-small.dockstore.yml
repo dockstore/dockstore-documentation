@@ -12,7 +12,7 @@ service:
     start: <String>
   environment:
     <String-name-of-environment-variable>:
-      default: <String or Int>
+      default: <String>
       description: <String>
   data:
     <String-name-of-dataset>:

@@ -57,7 +57,7 @@ will be made on Dockstore.
 
 Error Handling
 ----------------------------------
-It is possible for an invalid .dockstore.yml to cause an errors. If we cannot read the 
+An invalid .dockstore.yml will cause errors. If we cannot read the 
 file, then we do not know which workflow or service to associate the error with. For now, please ensure that your file is a valid YML file and
 compare it with our examples/documentation to confirm that you filled it in correctly. If the file is at least present, an error will generally appear in the GitHub App logs (see `our FAQ document <https://docs.dockstore.org/en/develop/getting-started/github-apps/github-apps-troubleshooting-tips.html>`_).
 
@@ -77,7 +77,7 @@ Workflow YML File
 ++++++++++++++++++
 For a workflow, the .dockstore.yml has the following general structure:
 
-.. include:: /assets/templates/workflows/template-minimum.dockstore.yml
+.. include:: /assets/templates/workflows/template-small.dockstore.yml
   :code: yaml
 
 As an example, here is a filled-out .dockstore.yml for a single WDL workflow which happens to have more than one test parameter file.  Note that the name is not present since the name field is optional when only a single workflow is involved.
@@ -95,7 +95,7 @@ Tool YML File
 +++++++++++++
 The .dockstore.yml file for a tool is very similiar in structure to that of a workflow.
 
-.. include:: /assets/templates/tools/template-minimum.dockstore.yml
+.. include:: /assets/templates/tools/template-small.dockstore.yml
   :code: yaml
 
 For more examples, including multi-workflow examples and a complete breakdown of all possible fields, please see :doc:`our .dockstore.yml templates and examples for tools</assets/templates/tools/tools>`.

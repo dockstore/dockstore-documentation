@@ -3,11 +3,7 @@
 +======================+=============================+========================================+
 | Use case             | User owns the Docker image  | User doesn't need to own the image     |
 |                      |                             |                                        |
-|                      | and considers new versions  | (or their tool does not use Docker)    |
-|                      |                             |                                        |
-|                      | of the image to be new      |                                        |
-|                      |                             |                                        |
-|                      | versions of the tool        |                                        |
+|                      |                             | (or their tool does not use Docker)    |
 +----------------------+-----------------------------+----------------------------------------+
 | Dockerfile           | Dockerfile required         | Dockerfile not required                |
 +----------------------+-----------------------------+----------------------------------------+

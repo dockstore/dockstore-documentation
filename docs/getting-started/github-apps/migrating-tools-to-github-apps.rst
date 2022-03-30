@@ -57,7 +57,7 @@ The information above was filled out using the following:
 The ``name`` Field
 ~~~~~~~~~~~~~~~~~~
 
-If you have more than one tool in the same repository, the ``name`` field must be filled out for at least one of the tools to ensure that the tool paths are unique.
+If you have more than one tool in the same repository, the ``name`` field must be filled out for the tools to ensure that the tool paths are unique.
 
 If you registered your tool using the Web UI, you may have filled out the ``Tool Name`` field shown in the picture below.
 

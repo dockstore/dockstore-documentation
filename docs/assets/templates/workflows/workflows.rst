@@ -6,7 +6,7 @@ Several templates and examples are provided here for you to reference for your o
 
 Simple generic template for a workflow
 --------------------------------------
-.. include:: /assets/templates/workflows/template-minimum.dockstore.yml
+.. include:: /assets/templates/workflows/template-small.dockstore.yml
   :code:
 
 Filled-out example of a single workflow without a name
@@ -34,7 +34,7 @@ This .dockstore.yml will result in the creation of two entries on Dockstore -- o
 
 Full template with explanation of all available fields
 ------------------------------------------------------
-.. include:: /assets/templates/workflows/template-maximum.dockstore.yml
+.. include:: /assets/templates/workflows/template-big.dockstore.yml
   :code:
   
 

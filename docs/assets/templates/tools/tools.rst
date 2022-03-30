@@ -6,7 +6,7 @@ Several templates and examples are provided here for you to reference for your o
 
 Simple generic template for a tool
 ----------------------------------
-.. include:: /assets/templates/tools/template-minimum.dockstore.yml
+.. include:: /assets/templates/tools/template-small.dockstore.yml
   :code:
 
 Filled-out example of a single tool without a name
@@ -34,7 +34,7 @@ You will note that localAligner has three authors. The first two are identified 
 
 Full template with explanation of all available fields
 ------------------------------------------------------
-.. include:: /assets/templates/tools/template-maximum.dockstore.yml
+.. include:: /assets/templates/tools/template-big.dockstore.yml
   :code:
   
 

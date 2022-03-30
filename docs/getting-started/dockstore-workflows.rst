@@ -39,8 +39,6 @@ This is the newest way of getting content onto Dockstore and is by far the most 
 GitHub Apps, Dockstore can react to changes on GitHub as they are made, keeping Dockstore synced
 with GitHub automatically.
 
-.. include:: /getting-started/github-apps/note--registration.rst
-
 .. include:: /getting-started/github-apps/snippet--installation.rst
 
 Once you've installed our GitHub app on a repository or organization, you'll need to add a dockstore.yml file to
@@ -80,7 +78,7 @@ Legacy Registration Methods
 
 .. include:: /getting-started/github-apps/note--legacy-dont-sync.rst
 
-If you are using BitBucket or GitLab and would prefer not to use GitHub, or if you are using GitHub but do not wish to install our app, our legacy registration methods have you covered. Several options are available to you and described in our :doc:`legacy registration methods documentation </advanced-topics/legacy/wf-legacy-registration>`.
+If you are using BitBucket or GitLab and would prefer not to use GitHub, or if you are using GitHub but do not wish to install our app, our legacy registration methods have you covered. Several options are available to you and described in our :doc:`legacy registration methods documentation </advanced-topics/legacy/workflow-legacy-registration>`.
 
 Sharing Your Workflow
 ----------------------

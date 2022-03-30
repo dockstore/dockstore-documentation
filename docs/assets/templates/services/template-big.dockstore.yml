@@ -55,7 +55,7 @@ service:
   # expose as environment variables.
   # There are three parts to the environment variable
   #    - The name (in this example, httpPort)
-  #    - An optional default value (string or int), which will be used if the user does not specify in the input file
+  #    - An optional default value (string), which will be used if the user does not specify in the input file
   #    - An optional description, which can be used by the service launcher as a prompt
   environment:
     httpPort:

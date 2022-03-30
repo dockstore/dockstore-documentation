@@ -6,12 +6,12 @@ Two templates are provided here, one for you to quickly copy-paste into your rep
 
 Simple template
 ---------------
-.. include:: /assets/templates/services/template-minimum.dockstore.yml
+.. include:: /assets/templates/services/template-small.dockstore.yml
   :code:
 
 Full template with explanation of all available fields
 ------------------------------------------------------
-.. include:: /assets/templates/services/template-maximum.dockstore.yml
+.. include:: /assets/templates/services/template-big.dockstore.yml
   :code:
   
   

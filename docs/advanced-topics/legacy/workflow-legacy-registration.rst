@@ -7,14 +7,9 @@ Legacy Workflow Registration Methods
 
 .. include:: /getting-started/github-apps/note--legacy-dont-sync.rst
 
-If you would prefer not to use GitHub App registration for your workflows, you can instead use one of these methods.
+If you would prefer not to use GitHub App registration for your workflows, you can instead use one of these methods. These methods will work if your workflow is hosted on GitHub, GitLab, or BitBucket.
 
-Traditional Registration
-~~~~~~~~~~~~~~~~~~~~~~~~
-When using Bitbucket and GitLab for you workflows, use the traditional registration.
-There are two types of traditional registration: quick registration and manual registration.
-
-There are some ways to make the traditional registration process more seamless.
+There are some ways to make the legacy registration process more seamless.
 
 - For your primary workflow descriptor, use the file suffixes ``cwl``,
   ``wdl``, ``config`` (for Nextflow), or ``ga`` (for Galaxy) depending on the descriptor language
@@ -27,6 +22,8 @@ By default, Dockstore will search the root of your repository for workflow
 related files. Following the above tips will help streamline the registration
 process, though you can still register workflows with non-standard format by
 using manual registration.
+
+There are two types of legacy registration that are available: quick registration and manual registration.
 
 Option A: Quick Register
 ------------------------

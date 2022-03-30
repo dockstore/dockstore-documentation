@@ -24,7 +24,7 @@ You'll then be redirected to GitHub where you can grant the app access to specif
 
    Install our GitHub App on either all repositories in an organization or on specific repositories
 
-After selection an organization, you can select whether to give access to all repositories or only select ones. If the organization you choose is intended to be just for Dockstore tools/workflows/services, or if you know the person who will be adding new entries to Dockstore is not an admin of the organization (see below note on permissions), we recommend choosing all repositories. Otherwise, it is may be more intuitive to select only certain repositories. Click save and you will be taken back to the page you started on in Dockstore -- either  ``/my-tools``, ``/my-workflows``, or ``/my-services``, depending where you started.
+After selection of an organization, you can select whether to give access to all repositories or only select ones. If the organization you choose is intended to be just for Dockstore tools/workflows/services, you may want to allow access to all repositories. Otherwise, it is may be more intuitive to select only certain repositories. Click save and you will be taken back to the page you started on in Dockstore -- either  ``/my-tools``, ``/my-workflows``, or ``/my-services``, depending where you started.
 
 .. important:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
 

@@ -89,7 +89,8 @@ this was not an issue.
    Publish
 
 Next, pick a version of your tool that you wish to present to the world
-by clicking on the radio selector in the Version column. This will
+by clicking on the radio selector in the Version column, then selecting
+"set as default version." This will
 determine which version of your CWL file will be used to find the
 author, email, and description in the case that it changes between
 versions. This also allows you to pre-select a version of your tool to

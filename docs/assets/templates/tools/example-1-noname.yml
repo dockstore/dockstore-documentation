@@ -1,0 +1,10 @@
+version: 1.2
+
+tools:
+  - subclass: CWL
+    primaryDescriptorPath: /runGlobalAligner.cwl
+    testParameterFiles:
+        - /test/globalAligner.cwl.json
+    authors:
+        - name: Bob Generic Example
+          email: makesuretofilloutanactualemailaddress@ucsc.edu

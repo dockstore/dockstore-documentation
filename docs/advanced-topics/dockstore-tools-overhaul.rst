@@ -42,7 +42,7 @@ In the 1.12 release, Dockstore introduced a new registration path for tools via 
 But, we also saw this feature as an opportunity to start eliminating some of the confusion surrounding Dockstore tools. As a result, we decided that GitHub App tools should:
 
 * Be the recommended way of registering tools
-* Not support "WDL tools" (but the App does support WDL workflows!)
+* Not support "WDL tools" (but continue to support WDL workflows)
 * Have versioning based on the versioning on GitHub
 
 

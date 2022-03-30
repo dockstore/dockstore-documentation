@@ -17,7 +17,7 @@ Before deciding to migrate your existing tools, consider the following differenc
 +------------------------+------------------------------------------+-------------------------------------------------+
 | Versioning             | Based on image's tags                    | Based on GitHub repository's branches/tags      |
 +------------------------+------------------------------------------+-------------------------------------------------+
-| Tool Path              | Docker container location                | GitHub repository location                      |
+| Tool Path              | Docker image location                    | GitHub repository location                      |
 +------------------------+------------------------------------------+-------------------------------------------------+
 | Languages              | Supports CWL and WDL tools               | Only supports CWL                               |
 +------------------------+------------------------------------------+-------------------------------------------------+

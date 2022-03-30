@@ -44,7 +44,7 @@ new versions of the tool will be automatically added.
    My Tools
 
 The left side menu is a list of all image repositories associated with
-the user, grouped lexicographically by namespace. Each tool is named
+the user, grouped alphabetically by namespace. Each tool is named
 after the docker location of the associated Docker image, in this
 example, ``quay.io/collaboratory/dockstore-tool-bamstats``. Detailed
 information and links for each tool are located on the 'Info' tab. The
@@ -54,7 +54,7 @@ Descriptor files can be modified on a per-tag basis in the 'Versions'
 tab. The Dockerfile, CWL/WDL Descriptor and test parameter files may be
 viewed in the 'Files' tab, by the Version tag (corresponding to a Git
 tag/branch). Finally, 'Manage labels' (located above the tabs) allows
-you to add/edit keywords that you want to be associated with a workflow
+you to add/edit keywords that you want to be associated with a tool
 for efficient searching and grouping.
 
 We also look for ``/test.cwl.json`` and ``/test.wdl.json`` in the git

@@ -48,7 +48,7 @@ GitHub Apps can be installed on either an a user level, or an organizational lev
 How do I view/configure the GitHub App if I am not the admin of an organization?
 --------------------------------------------------------------------------------
 
-You may be able to tell if your organization has already installed the app by trying re-installing the app again, which will take you to the app configuration process, although depending on your permissions your selected changes may not be saved. (See next question.)
+A GitHub organization's admins can configure an app directly in the organization's settings, but other members of the organization with less access may not see this option. However, you may be able to tell if your organization has already installed the app by trying to install the app again, which will take you to the app configuration process, although depending on your permissions your selected changes may not be saved. (See next question.)
 
 .. image:: /assets/images/docs/reinstall-app-to-cheese-org-settings.png
    :width: 50%
@@ -58,7 +58,7 @@ You may be able to tell if your organization has already installed the app by tr
 Can I use the GitHub App if I am not the admin of the organization and/or repo I am trying to use it with?
 ----------------------------------------------------------------------------------------------------------
 
-Perhaps. GitHub permissions can quickly get complicated, as it involves two levels of permissions (organization-level and repo-level). As such, it isn't possible for us to cover all possibilities here, but we can over some of the more common ones.
+Perhaps. GitHub permissions can quickly get complicated, as it involves two levels of permissions (organization-level and repo-level). As such, it isn't possible for us to cover all possibilities here, but we can go over some of the more common ones.
 
 First of all, you can only configure already-installed GitHub Apps for organizations you are not an admin in if you go through the app installation process again. Be aware that in this scenario, you can only add repos that you have admin access to, not just maintainer access.
 

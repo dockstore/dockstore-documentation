@@ -30,11 +30,11 @@ Workflow Description Language, usually referred to as WDL ("widdle"), is a workf
       command {
         echo 'hello ${name}!'
       }
-      
+
       output {
         File response = stdout()
       }
-      
+
       runtime {
        docker: 'ubuntu:impish-20220105'
       }
@@ -46,7 +46,7 @@ Workflow Description Language, usually referred to as WDL ("widdle"), is a workf
 
 The runtime section of a task allows you to use a Docker image to run
 the task in. In this example we use the basic `Ubuntu
-image <https://hub.docker.com/_/ubuntu/>`__, the one associated with 
+image <https://hub.docker.com/_/ubuntu/>`__, the one associated with
 Ubuntu 21.10 to be specific.
 
 .. note:: On Dockstore, a one-task WDL with an associated Docker image can be registered as a WDL Tool. However, unlike CWL, WDL does not directly have the concept of a Tool built into it, instead, "WDL Tools" are a Dockstore-only concept which exists for legacy reasons. We are gradually moving away from WDL Tools and encourage people to register their WDLs, whether they be single-task or not, as workflows. WDL workflows can use Docker images, as will be seen in this tutorial.
@@ -75,7 +75,7 @@ repository:
         }
 
         runtime {
-            docker: "quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0" 
+            docker: "quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0"
             memory: mem_gb + "GB"
         }
     }
@@ -85,7 +85,7 @@ repository:
             File bam_input
             Int mem_gb
         }
-        
+
         call bamstats { input: bam_input=bam_input, mem_gb=mem_gb }
 
         meta {
@@ -159,9 +159,9 @@ you generally refer to them using a dollar sign and curly braces.
 Sometimes, you will see command sections defined using <<<three chevrons>>>
 rather than {curly braces}. In that scenario, variables are referenced a
 little differently, using tildes (~) instead of dollar signs. This version
-can be helpful when dealing with complicated Bash commands, because using 
+can be helpful when dealing with complicated Bash commands, because using
 ${this} method to reference your task's input variables will sometimes cause
-conflicts with other uses of $ and {curly braces} that Bash natively supports. 
+conflicts with other uses of $ and {curly braces} that Bash natively supports.
 For simple workflows like this, it does not matter which one we use. If we had chosen
 to write our command in the chevron syntax, it would look like this instead:
 
@@ -190,7 +190,7 @@ be a zip file? Situations like this can happen if a program you are running in W
 sets an output name that is based upon the name of the input. That's not the case with
 bamstats, but it is very common, so it's worth taking a look at how this can be done.
 Assuming there are no other zip files lying around in the Docker container's
-execution directory, we can define our WDL to instead look for any zip files 
+execution directory, we can define our WDL to instead look for any zip files
 using WDL's ``glob()`` feature. ``glob()`` returns an array of files matching a
 regular expression string. Note that it will still be considered an array even
 if it only has one file in it. So, we could do...
@@ -218,7 +218,7 @@ to deal with a variable of type ``File`` than of type ``Array[File]``.
 Task Runtime
 ++++++++++++
 
-The runtime section is very important. It is here where we define what Docker 
+The runtime section is very important. It is here where we define what Docker
 image to use to run the task in. We also define how much memory the Docker
 container should use. There are other arguments we could put here, such as
 using the ``disks`` argument to indicate how much disk space should be
@@ -260,10 +260,10 @@ Note that we could have also written it as:
 
 ::
 
-    call bamstats { 
-        input: 
-            bam_input=bam_input, 
-            mem_gb=mem_gb 
+    call bamstats {
+        input:
+            bam_input=bam_input,
+            mem_gb=mem_gb
     }
 
 Finally, we have a metadata section where we can store key value pairs.
@@ -311,7 +311,7 @@ includes a version of the widely-used WDL executor Cromwell, to run WDL
 workflows on our local machine. With that in mind, the first thing to do is
 `setup the Dockstore CLI locally <https://dockstore.org/quick-start>`__.
 This will have you install all of the dependencies needed to run the
-Dockstore CLI on your local machine. 
+Dockstore CLI on your local machine.
 
 The workflow we are writing today does not use `scattered tasks <https://github.com/openwdl/wdl/blob/main/versions/1.0/SPEC.md#scatter>`__, but scattered tasks are common in more advanced workflows. This is excellent for parallelization in the cloud, but it is not optimized for running locally, so sometimes running scattered tasks on a local machine will cause issues due to the scattered tasks overloading your machine's resources. The easiest way to avoid these issues is to :doc:`follow our instructions on setting up a Cromwell configuration file that provides a concurrent-job-limit </advanced-topics/dockstore-cli/local-cromwell-config>` to limit how many tasks can run at the time. This file is not required to run the Dockstore CLI, so you do not need to do this to complete this tutorial, although we do recommend setting it up eventually if you will be working with WDLs that have scattered tasks in order to increase stability.
 
@@ -348,7 +348,7 @@ the JSON config file.
 
 ::
 
-    $> dockstore tool launch --local-entry Dockstore.wdl --json test.wdl.json
+    $> dockstore workflow launch --local-entry Dockstore.wdl --json test.wdl.json
 
 What you see next will depend on which operating system you are using and the names of your folders, but the beginning of it will look a little bit like this:
 

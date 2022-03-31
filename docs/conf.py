@@ -41,7 +41,7 @@ user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Ge
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark', 'sphinxcontrib.discourse']
+extensions = ['myst_parser', 'sphinxcontrib.discourse']
 
 linkcheck_anchors = False
 linkcheck_ignore = [
@@ -50,7 +50,15 @@ linkcheck_ignore = [
     'https://dockstore.org:8443/', 'https://support.terra.bio/hc/en-us/sections/360007274612/',
     'https://docs.snyk.io/getting-started/getting-started-snyk-products/getting-started-snyk-open-source',
     'https://software.broadinstitute.org/firecloud/',
-    'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works'	
+    'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works',
+    'https://doi.org/10.12688/f1000research.10137.1',
+    'https://doi.org/10.7490/f1000research.1116584.1',
+    'https://doi.org/10.7490/f1000research.1117142.1',
+    'https://doi.org/10.7490/f1000research.1118245.1',
+    'https://doi.org/10.7490/f1000research.1118300.1',
+    'launch-with/anvil-launch-with.html', 'launch-with/cavatica-launch-with.html', 'launch-with/dnanexus-launch-with.html', 'launch-with/cgc-launch-with.html',
+    'launch-with/galaxy-launch-with.html', 'launch-with/nextflow-tower-launch-with.html', 'launch-with/terra-launch-with.html',
+    'https://doi.org/*'
     ]
 
 
@@ -61,6 +69,9 @@ templates_path = ['_templates']
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
+#
+# Note that because we have the myst_parser extension, .md files we will
+# be rendered too, even though they are not listed below
 source_suffix = '.rst'
 
 # The master toctree document.

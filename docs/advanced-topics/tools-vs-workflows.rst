@@ -1,53 +1,64 @@
 Detailed Comparison of Tools and Workflows
 ==========================================
 
-.. tip::
-  Generally speaking, if you care more about the Docker image than the descriptor file, and are using CWL, you are dealing with a tool. If you care more about the descriptor file, you are dealing with a workflow.
-
 History
 -------
-When Dockstore was created, CWL was the first descriptor language we supported. CWL has a very clear distinction between a tool and a workflow. However, our definition for each does not completely align with the language's specification -- strictly speaking, a CWL CommandLineTool does not require a Docker image, but we require tools to be associated with a Docker image on Dockstore. Furthermore, while WDL does not have separate concepts for tools and workflows, we still maintain a distinction between a tool and a workflow for WDL for legacy reasons.
+When Dockstore was created, CWL was the first descriptor language we supported. CWL has a very clear distinction between a tool and a workflow.
+However, our definition for each does not completely align with the language's specification -- strictly speaking, a CWL CommandLineTool does not require a Docker image, but we required tools to be associated with a Docker image on Dockstore.
+Furthermore, while WDL does not have separate concepts for tools and workflows, we still maintained a distinction between a tool and a workflow for WDL for legacy reasons.
+
+However, the introduction of GitHub App tools has changed how tools are supported on Dockstore. Registration using GitHub App tools aligns with specification of the languages we support and does not require ownership of a Docker image.
+For these reasons, Dockstore highly recommends the usage of GitHub App tools over the other tool registration options.
 
 
-Should I write a tool or a workflow?
-------------------------------------
-.. hint::
-    We generally **discourage** people from writing/registering WDL tools and may deprecate them in the future.
+How should I register my work on Dockstore?
+-------------------------------------------
+Use the following questions to help you figure out which you should use:
 
-Dockstore tools are more associated with creating/owning Docker images that are used in conjunction with a descriptor language, and Dockstore workflows are more closely tied to the descriptor files themselves. If you control the Docker image being used by your CWL program, and want versioning to be based upon that image's tags, you should probably write a tool. If you do not control the Docker image being used, and/or are not writing in CWL, you should probably write a workflow. Of course, everyone's use case is different. We encourage you to look around Dockstore for inspiration for your next bioinformatics project.
+.. include:: ../getting-started/how-to-register-work.rst
+
+Legacy Dockstore tools are more associated with creating/owning Docker images that are used in conjunction with a descriptor language, and GitHub App Tools and Dockstore workflows are more closely tied to the descriptor files themselves.
 
 Overview
 --------
 
-+------------------------+----------------------------------------------+-----------------------------------------------------+
-| Language               | Tool                                         | Workflow                                            |
-+========================+==============================================+=====================================================+
-| CWL                    |  - Class: CommandLineTool                    |  - Class: Workflow                                  |
-|                        |  - Dockerfile for the tool's image           |  - No Dockerfile required                           |
-+------------------------+----------------------------------------------+-----------------------------------------------------+
-| WDL                    |  - One task that runs in a Docker container  |  - ≥1 task, which could run in Docker container     |
-|                        |  - A workflow section that runs the task     |  - A workflow section that runs the task(s)         |
-|                        |  - The Dockerfile for the task's image       |  - No Dockerfile required                           |
-+------------------------+----------------------------------------------+-----------------------------------------------------+
-| Nextflow               | N/A                                          | Any valid Nextflow workflow                         |
-+------------------------+----------------------------------------------+-----------------------------------------------------+
-| Galaxy                 | N/A*                                         | Any valid Galaxy workflow                           |
-+------------------------+----------------------------------------------+-----------------------------------------------------+
++------------------------+--------------------------------------------+---------------------------------------------+--------------------------------------------+
+| Language               | Legacy Tool                                | GitHub App Tool                             | Workflow                                   |
++========================+============================================+=============================================+============================================+
+| CWL                    | • Class: CommandLineTool                   | • Class: CommandLineTool                    | • Class: Workflow                          |
+|                        |                                            |                                             |                                            |
+|                        | • Dockerfile for the tool's image          | • User doesn't need to own the image        | • No Dockerfile required                   |
+|                        |                                            |                                             |                                            |
+|                        |                                            | • Dockerfile not required                   |                                            |
++------------------------+--------------------------------------------+---------------------------------------------+--------------------------------------------+
+| WDL                    | • One task that runs in a Docker container | N/A                                         | Any valid WDL workflow                     |
+|                        |                                            |                                             |                                            |
+|                        | • A workflow section that runs the task    |                                             |                                            |
+|                        |                                            |                                             |                                            |
+|                        | • The Dockerfile for the task's image      |                                             |                                            |
++------------------------+--------------------------------------------+---------------------------------------------+--------------------------------------------+
+| Nextflow               | N/A                                        | N/A                                         | Any valid Nextflow workflow                |
++------------------------+--------------------------------------------+---------------------------------------------+--------------------------------------------+
+| Galaxy                 | N/A*                                       | N/A                                         | Any valid Galaxy workflow                  |
++------------------------+--------------------------------------------+---------------------------------------------+--------------------------------------------+
 
 \* There are tools that make up Galaxy workflows from the Galaxy toolbox or ToolShed.
 Dockstore currently does not support registration of these tools.
 
 
-+------------------------+------------------------------------------+-------------------------------------------------+
-| Dockstore Support      | Tool                                     | Workflow                                        |
-+========================+==========================================+=================================================+
-| "Launch with" support  |  Only via Dockstore CLI                  |  Dockstore CLI & "launch with" buttons on entry |
-+------------------------+------------------------------------------+-------------------------------------------------+
-| Versioning             |  Based off of image's tags               |  Based off of branches/tags from Git repository,|
-|                        |                                          |                                                 |
-|                        |                                          |  even if one of the tasks executes in a Docker  |
-|                        |                                          |  image.                                         |
-+------------------------+------------------------------------------+-------------------------------------------------+
++----------------------+-----------------------------+----------------------------------------+----------------------------------------+
+| Dockstore Support    | Legacy Tool                 | GitHub App Tool                        | Workflow                               |
++======================+=============================+========================================+========================================+
+| Dockstore CLI        |  Run in tool mode           |  Run in workflow mode                  | Run in workflow mode                   |
++----------------------+-----------------------------+----------------------------------------+----------------------------------------+
+| Launch with buttons  |  Currently not supported    |  Currently not supported               | Supported                              |
++----------------------+-----------------------------+----------------------------------------+----------------------------------------+
+| Versioning           |  Based off of image's tags  |  Based off of branches/tags from git   | Based off of branches/tags from git    |
+|                      |                             |                                        |                                        | 
+|                      |                             |  repository, even if one of the tasks  | repository, even if one of the tasks   |
+|                      |                             |                                        |                                        | 
+|                      |                             |  executes in a Docker image.           | executes in a Docker image.            | 
++----------------------+-----------------------------+----------------------------------------+----------------------------------------+
 
 What about workflows that run in Docker containers?
 ---------------------------------------------------
@@ -61,8 +72,9 @@ within the descriptor files, and doing so is generally recommended. Each task (W
 
 Tools
 -----
+GitHub App Tools are the recommended way to register any new tools on Dockstore and you should consider migrating any legacy tools you may have.
 
-Dockstore tool registration is meant for users who have created or have access/permissions to a Docker image registered on one of our supported container registries, and have
+Dockstore legacy tool registration is meant for users who do not have their work in a GitHub repository, have created or have access/permissions to a Docker image registered on one of our supported container registries, and have
 written descriptor files (in CWL/WDL) that use it. At a basic level, the Docker image describes the tool environment and the descriptor files describe how the tool is run.
 If you are unfamiliar with Docker or how to write descriptor files, check out the following tutorials:
 
@@ -73,11 +85,10 @@ If you are unfamiliar with Docker or how to write descriptor files, check out th
 Dockstore:
 
 - has varying levels of support for images registered on Quay.io, DockerHub, GitLab, Amazon ECR, GitHub Container Registry, and Seven Bridges
-- supports descriptor files hosted on GitHub, BitBucket, GitLab, or written on Dockstore
-- supports descriptor files written in CWL or WDL
-- offers three different tool registration paths
+- supports descriptor files hosted on GitHub (but you should use GitHub App registration), BitBucket, GitLab, or written on Dockstore
+- supports descriptor files written in CWL or WDL (WDL "tools" are supported but strongly advised against. Please register as a workflow)
 
-The most convenient way to register your tool and manage it on Dockstore is to have your image registered on Quay.io, your descriptor files hosted on GitHub, and choose our quick registration path.
+The most convenient way to register your legacy tool and manage it on Dockstore is to have your image registered on Quay.io, your descriptor files hosted on GitHub, and choose our quick registration path.
 This gives Dockstore the ability to automatically recognize the image's tags on Quay, link them back to the appropriate version on GitHub, and create the existing versions for you on Dockstore once you hit "Refresh".
 If your image is registered on one of our other supported registries, you will have to register your tool manually. This means each version you want put on Dockstore must be added manually.
 To learn more about our different registration options, read the following tutorials:
@@ -86,7 +97,7 @@ To learn more about our different registration options, read the following tutor
 - :doc:`Hosted Tools </getting-started/hosted-tools-and-workflows>`
 
 .. note::
-  Dockstore tool versions are based on the image's tags, not the tags/branches from the git repository where the descriptor files are hosted.
+  Dockstore legacy tool versions are based on the image's tags, not the tags/branches from the git repository where the descriptor files are hosted.
 
 .. tip::
   Terra does not support WDL tools. If you are writing a WDL with the intent of it being run in the Terra ecosystem, we recommend writing it as a workflow.

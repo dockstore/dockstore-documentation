@@ -1,0 +1,2 @@
+.. note::
+    Our docs sometimes use "GitHub App registration" and "registration with a .dockstore.yml file" interchangeably, as they are equivalent terms. The Dockstore GitHub App and a .dockstore.yml file are two components of the same registration method.

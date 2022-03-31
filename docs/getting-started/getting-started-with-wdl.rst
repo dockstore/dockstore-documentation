@@ -1,8 +1,4 @@
-.. role:: raw-latex(raw)
-   :format: latex
-..
-
-.. note:: This tutorial is a continuation of :doc:`Getting Started With Docker <getting-started-with-docker>`. Please complete that tutorial prior to doing this one.
+.. note:: This document assumes you have basic knowledge of what Docker is. It is recommended, but not required, that you complete :doc:`Getting Started With Docker <getting-started-with-docker>` before this tutorial.
 
 Getting Started with WDL
 ========================
@@ -12,21 +8,15 @@ Tutorial Goals
 
 -  Learn about the `Workflow Description Language
    (WDL) <https://openwdl.org/>`__
--  Create a basic WDL Tool which uses a Docker image
--  Run the Tool locally
--  Describe a sample parameterization of the Tool
--  Push the Tool onto GitHub
+-  Create a basic WDL workflow which uses a Docker image
+-  Run the workflow locally
+-  Describe a sample parameterization of the workflow
+-  Push the workflow onto GitHub
 
-Describe Your Tool in WDL
--------------------------
+Describe Your Workflow in WDL
+-----------------------------
 
-Besides CWL, you can also describe tools via the `WDL
-language <https://support.terra.bio/hc/en-us/sections/360007274612/>`__.
-WDL does not directly have the concept of a Tool built in to the
-language like CWL. Instead, we define a tool as a one task WDL workflow,
-where the task has an associated Docker image.
-
-We provide a hello world example as follows:
+Workflow Description Language, usually referred to as WDL ("widdle"), is a workflow language with a task section and a workflow section. Like CWL, each task in a WDL workflow can take place in an instance of a Docker image. `Terra maintains documentation on WDL <https://support.terra.bio/hc/en-us/sections/360007274612/>`__, but we will go over the basics here. A simple WDL might look something like this:
 
 ::
 
@@ -40,11 +30,13 @@ We provide a hello world example as follows:
       command {
         echo 'hello ${name}!'
       }
+
       output {
         File response = stdout()
       }
+
       runtime {
-       docker: 'ubuntu:latest'
+       docker: 'ubuntu:impish-20220105'
       }
     }
 
@@ -52,14 +44,16 @@ We provide a hello world example as follows:
       call hello
     }
 
-The runtime section of a task allows you to use a docker image to run
+The runtime section of a task allows you to use a Docker image to run
 the task in. In this example we use the basic `Ubuntu
-image <https://hub.docker.com/_/ubuntu/>`__. This image should match the
-Dockerfile that you register on Dockstore alongside your WDL descriptor
-files.
+image <https://hub.docker.com/_/ubuntu/>`__, the one associated with
+Ubuntu 21.10 to be specific.
 
-Again, we provide an example from the
-`dockstore-tool-bamstats <https://github.com/CancerCollaboratory/dockstore-tool-bamstats/blob/develop/Dockstore.wdl>`__
+.. note:: On Dockstore, a one-task WDL with an associated Docker image can be registered as a WDL Tool. However, unlike CWL, WDL does not directly have the concept of a Tool built into it, instead, "WDL Tools" are a Dockstore-only concept which exists for legacy reasons. We are gradually moving away from WDL Tools and encourage people to register their WDLs, whether they be single-task or not, as workflows. WDL workflows can use Docker images, as will be seen in this tutorial.
+
+
+We provide an example from the
+`wdl-bamstats <https://github.com/dockstore/wdl-bamstats/blob/main/Dockstore.wdl>`__
 repository:
 
 ::
@@ -68,12 +62,12 @@ repository:
 
     task bamstats {
         input {
-          File bam_input
-          Int mem_gb
+            File bam_input
+            Int mem_gb
         }
 
         command {
-            bash /usr/local/bin/bamstats ${mem_gb} ${bam_input}
+            /usr/local/bin/bamstats ${mem_gb} ${bam_input}
         }
 
         output {
@@ -84,10 +78,6 @@ repository:
             docker: "quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0"
             memory: mem_gb + "GB"
         }
-
-        meta {
-            author: "Andrew Duncan"
-        }
     }
 
     workflow bamstatsWorkflow {
@@ -97,19 +87,36 @@ repository:
         }
 
         call bamstats { input: bam_input=bam_input, mem_gb=mem_gb }
+
+        meta {
+            author: "Andrew Duncan"
+            email: "andrew@foobar.com"
+            description: "## Bamstats \n This is the Bamstats workflow.\n\n Adding documentation improves clarity."
+        }
     }
+
 
 Let us break it down piece by piece.
 
+.. note:: The very first line represents the version of WDL specification being used. In this example, we are using `version 1.0 of the WDL spec. <https://github.com/openwdl/wdl/blob/main/versions/1.0/SPEC.md>`__ If this line is not included at the top of the WDL, the WDL will be parsed as if it were following the draft-2 specification. Note that most 1.0 WDLs and draft-2 WDLs are not interchangable without a few changes, so make you are using the correct version when following along with examples.
+
 You'll notice that there are two main sections of the file. First is a
 task section where we define the task level inputs and outputs of a
-given step, along with the runtime. Next, there is a workflow section
+given step, along with the runtime attributes. You can have multiple task
+sections in a WDL, as each one represents a single step. Next, there is a workflow section
 where we define workflow level inputs and outputs, and the calling of
-the task.
+the task(s).
+
+Task
+^^^^
+
+Task Inputs
++++++++++++
 
 At the top of the task section we define two inputs: the input bam file
 and the amount of memory in GB to use to run the task. This looks very
-similar to variable declaration in most programming languages.
+similar to variable declaration in most programming languages. To the left is
+the type of the variable, and to the right is its name.
 
 ::
 
@@ -118,20 +125,59 @@ similar to variable declaration in most programming languages.
       Int mem_gb
     }
 
+In WDL, you can make a variable optional by adding a ? to the end of the
+type declaration. If a ? is not included then the variable is considered
+required. So, because this says ``File`` and not ``File?`` then we know that
+``bam_input`` must be defined for the pipeline to work. The same goes for
+``mem_gb`` too.
+
+Task Command
+++++++++++++
+
 Next is the command section. This specifies what command we want to run
-on the command line. We can also pass the command parameters based on
+on the command line. Usually, it is written like a Bash script. We won't
+be going over all the details of using Bash, but if you are running
+scientific workflows on the command line already, you will find this part
+of WDL quite familiar.
+
+We can also pass the command parameters based on
 the inputs described above. Here we pass the amount of memory to use and
 the input BAM file to a script from the
-quay.io/collaboratory/dockstore-tool-bamstats:1.25-6\_1.0 docker image.
+`quay.io/collaboratory/dockstore-tool-bamstats:1.25-6\_1.0 <https://quay.io/collaboratory/dockstore-tool-bamstats:1.25-6\_1.0>`__ Docker image.
+Note that bamstats requires you pass in the memory as a positional argument,
+but other programs may not require this.
+
+When referencing variables from the input section in the command section,
+you generally refer to them using a dollar sign and curly braces.
 
 ::
 
     command {
-        bash /usr/local/bin/bamstats ${mem_gb} ${bam_input}
+        /usr/local/bin/bamstats ${mem_gb} ${bam_input}
     }
 
+Sometimes, you will see command sections defined using <<<three chevrons>>>
+rather than {curly braces}. In that scenario, variables are referenced a
+little differently, using tildes (~) instead of dollar signs. This version
+can be helpful when dealing with complicated Bash commands, because using
+${this} method to reference your task's input variables will sometimes cause
+conflicts with other uses of $ and {curly braces} that Bash natively supports.
+For simple workflows like this, it does not matter which one we use. If we had chosen
+to write our command in the chevron syntax, it would look like this instead:
+
+::
+
+    command <<<
+        /usr/local/bin/bamstats ~{mem_gb} ~{bam_input}
+    >>>
+
+Task Outputs
+++++++++++++
+
 The output section defines the expected output for the task. Here the
-output is a ZIP file containing the results of the script.
+output is a zip file containing the results of the script. In this case,
+we know bamstats creates an output with the filename "bamstats_report.zip"
+so we set that as our output.
 
 ::
 
@@ -139,9 +185,46 @@ output is a ZIP file containing the results of the script.
         File bamstats_report = "bamstats_report.zip"
     }
 
-The runtime section is very important to Dockstore. It is here where we
-define what Docker image to use to run the task in. We also define how
-much memory the Docker container should use.
+What if we did not know what the output file name would be, but we knew it had to
+be a zip file? Situations like this can happen if a program you are running in WDL
+sets an output name that is based upon the name of the input. That's not the case with
+bamstats, but it is very common, so it's worth taking a look at how this can be done.
+Assuming there are no other zip files lying around in the Docker container's
+execution directory, we can define our WDL to instead look for any zip files
+using WDL's ``glob()`` feature. ``glob()`` returns an array of files matching a
+regular expression string. Note that it will still be considered an array even
+if it only has one file in it. So, we could do...
+
+::
+
+    output {
+        Array[File] bamstats_report = glob("*.zip")
+    }
+
+In this example, there is only zip file in the execution directory, so the array
+will only consist of one file ("bamstats_report.zip"). Arrays in WDL are indexed
+starting with zero, so we know that an array with only one file in it is going
+to have that file at index zero. With that knowledge, this is also an option:
+
+::
+
+    output {
+        File bamstats_report = glob("*.zip")[0]
+    }
+
+This is a useful trick for multi-step workflows, where it is often easier
+to deal with a variable of type ``File`` than of type ``Array[File]``.
+
+Task Runtime
+++++++++++++
+
+The runtime section is very important. It is here where we define what Docker
+image to use to run the task in. We also define how much memory the Docker
+container should use. There are other arguments we could put here, such as
+using the ``disks`` argument to indicate how much disk space should be
+allocated for the task, but we will keep it simple for now.
+
+.. note:: Some WDL execution engines will ignore certain things in the runtime section, depending what kind of backend you are running on. For example, the Google Cloud-specific ``preemptible`` (which we do not include in this bamstats WDL, but is sometimes used in workflows) would be ignored if you are running on AWS.
 
 ::
 
@@ -150,19 +233,51 @@ much memory the Docker container should use.
         memory: mem_gb + "GB"
     }
 
+Workflow
+^^^^^^^^
+
+The workflow section here consists of two main parts. The first section
+is an input section, where we define the input BAM file and the memory
+to use. In our case, because we only have one task, it is identical to
+the inputs of that one task.
+
+::
+
+    input {
+        File bam_input
+        Int mem_gb
+    }
+
+Next, there is the call section where we actually call the tasks.
+Without this section our workflow will not do anything. In this section we
+call the bamstats task, and pass it the two required parameters.
+
+::
+
+    call bamstats { input: bam_input=bam_input, mem_gb=mem_gb }
+
+Note that we could have also written it as:
+
+::
+
+    call bamstats {
+        input:
+            bam_input=bam_input,
+            mem_gb=mem_gb
+    }
+
 Finally, we have a metadata section where we can store key value pairs.
 It is free-form, so we could put anything here. Dockstore is able to
 pick up author, email, and description if they are defined here. All
 metadata values must be a single-line string.
 
-The description field can be used to add documentation and Dockstore
-will treat the string as markdown, rendering accordingly. When writing a
-description in markdown that requires newlines, specify the newlines
-with :raw-latex:`\n `or specify a blank line with
-:raw-latex:`\n`:raw-latex:`\n`.
-
 .. note:: If no description is defined in the descriptor file, the
           README from the corresponding Git repository is used.
+
+The description field can be used to add documentation, which Dockstore
+will render with markdown formatting. When writing a
+description in markdown that requires newlines, specify the newlines
+with \\n
 
 Below we show an example metadata section and how it will display on
 your workflow's landing page:
@@ -176,84 +291,29 @@ your workflow's landing page:
     }
 
 .. figure:: /assets/images/docs/wdl_meta_example.png
-   :alt: wdl\_metadata
-
-   wdl\_metadata
-
-The workflow section here consists of two main parts. The first section
-is an input section, where we define the input BAM file and the memory
-to use.
-
-::
-
-    File bam_input
-    Int mem_gb
-
-Finally there is the call section where we actually call the tasks.
-Without this section our tool will not do anything. In this section we
-call the bamstats tool, and pass it the two required parameters.
-
-::
-
-    call bamstats { input: bam_input=bam_input, mem_gb=mem_gb }
+   :alt: Screenshot of how the WDL metadata shows up.
 
 .. _Testing WDL Locally:
 
 Testing Locally
 ---------------
 
-So at this point, you’ve created a Docker-based tool and have described
-how to call that tool using WDL. Let’s test running the BAMStats using
-the Dockstore command line and descriptor rather than just directly
-calling it via Docker. This will test that the WDL correctly describes
-how to run your tool.
+So at this point, you’ve created a Docker-based workflow and have described
+how to call that workflow using WDL. Let's test running bamstats using
+the Dockstore command line and descriptor. This will test that the WDL correctly describes
+how to run your workflow.
 
 Setting Up the Dockstore CLI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The first thing I'll do is
+We will be using the Dockstore CLI, which
+includes a version of the widely-used WDL executor Cromwell, to run WDL
+workflows on our local machine. With that in mind, the first thing to do is
 `setup the Dockstore CLI locally <https://dockstore.org/quick-start>`__.
-This will have me install all of the dependencies needed to run the
-Dockstore CLI on my local machine.
+This will have you install all of the dependencies needed to run the
+Dockstore CLI on your local machine.
 
-Although not strictly required, it's a good idea to set a concurrent-job-limit when running locally. This is because Cromwell, when running locally, loses the ability to set compute resources within what is specified in a task's runtime attributes. As such, the local version of Cromwell sometimes uses too many resources when running scattered tasks, causing the task to get sigkilled or for Docker to lock up. Of course, there is a tradeoff: If you set concurrent-job-limit, tests involving scattered tasks may execute slower as less instances of a scattered task will run in parallel.
-
-.. tip::  If a Docker lockup happens, you will notice tasks do not progress beyond WaitingForReturnCode and you will be temporarily unable to use Docker on your OS. This can be resolved by restarting Docker on your machine.
-
-The easiest way to avoid these issues is to set up a Cromwell configuration file that sets concurrent-job-limit.
-
-1. Download `this template file <https://github.com/broadinstitute/cromwell/blob/develop/cromwell.example.backends/cromwell.examples.conf>`__ and name it ``.cromwell.conf``
-2. Uncomment ``#default = "LocalExample"`` in the ``backend`` section in order to override the default local Cromwell setup with what is in the configuration file.
-3. Under ``LocalExample``, under ``config``, uncomment the setting for ``concurrent-job-limit`` and set it to 1. Note that this is an integer, not a boolean; you could set it to 2 if you want to up to two jobs to run at once.  
-
-The relevent part of your configuration file should now look like this, if we exclude the other providers that come before LocalExample:
-
-::
-
-    backend {
-    # Override the default backend.
-    default = "LocalExample"
-
-    # The list of providers.
-    providers {
-       
-        # Define a new backend provider.
-        LocalExample {
-            # The actor that runs the backend. In this case, it's the Shared File System (SFS) ConfigBackend.
-            actor-factory = "cromwell.backend.impl.sfs.config.ConfigBackendLifecycleActorFactory"
-          
-            # The backend custom configuration.
-            config {
-                # Optional limits on the number of concurrent jobs
-                concurrent-job-limit = 1
-
-You may optionally edit ``root = "cromwell-executions"`` to something else if you wish to be certain that your configuration is getting used, as it will change the name of the executions folder. In any case, close that file and add the following line to ~/.dockstore/config
-
-::
-
-    cromwell-vm-options: -Dconfig.file=<absolute-path-to-your-cromwell-config>
-
-You're now all set up -- the Dockstore CLI will use this configuration file, and will only allow one instance of a scattered task to run at once.
+The workflow we are writing today does not use `scattered tasks <https://github.com/openwdl/wdl/blob/main/versions/1.0/SPEC.md#scatter>`__, but scattered tasks are common in more advanced workflows. This is excellent for parallelization in the cloud, but it is not optimized for running locally, so sometimes running scattered tasks on a local machine will cause issues due to the scattered tasks overloading your machine's resources. The easiest way to avoid these issues is to :doc:`follow our instructions on setting up a Cromwell configuration file that provides a concurrent-job-limit </advanced-topics/dockstore-cli/local-cromwell-config>` to limit how many tasks can run at the time. This file is not required to run the Dockstore CLI, so you do not need to do this to complete this tutorial, although we do recommend setting it up eventually if you will be working with WDLs that have scattered tasks in order to increase stability.
 
 Set Up Local Data
 ^^^^^^^^^^^^^^^^^
@@ -276,45 +336,54 @@ it really doesn't matter. I'm using a sample I checked in already:
       "bamstatsWorkflow.mem_gb": "4"
     }
 
-.. tip::  The Dockstore CLI can handle inputs with HTTPS, FTP, GS, and S3 URLs but that's beyond the scope of this tutorial.
+.. tip::  The Dockstore CLI can handle inputs with HTTPS, FTP, GS, and S3 URLs, but that's beyond the scope of this tutorial. For now, we are sticking with files that are on your local disk.
 
 You can see in the above I give the relative path to the input under
 ``bam_input`` and the memory in GB that I want to use for the task.
 
-Run Your Tool
-^^^^^^^^^^^^^
-At this point, let's run the tool with our local inputs and outputs via
-the JSON config file:
+Run Your Workflow
+^^^^^^^^^^^^^^^^^
+At this point, let's run the workflow with our local inputs and outputs via
+the JSON config file.
 
 ::
 
-    $> dockstore tool launch --local-entry Dockstore.wdl --json test.wdl.json
-    Creating directories for run of Dockstore launcher in current working directory: /home/aduncan/Documents/dockstore-tool-bamstats
+    $> dockstore workflow launch --local-entry Dockstore.wdl --json test.wdl.json
+
+What you see next will depend on which operating system you are using and the names of your folders, but the beginning of it will look a little bit like this:
+
+.. code-block:: text
+
+    Creating directories for run of Dockstore launcher in current working directory: /home/aduncan/Documents/dockstore-bamstats
     Provisioning your input files to your local machine
-    Downloading: bamstatsWorkflow.bam_input from NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam to: /home/aduncan/Documents/dockstore-tool-bamstats/cromwell-input/aca839a6-92c4-4234-bc6d-460bcfe6f4d6/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
+    Downloading: bamstatsWorkflow.bam_input from NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam to: /home/aduncan/Documents/dockstore-bamstats/cromwell-input/aca839a6-92c4-4234-bc6d-460bcfe6f4d6/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
     Calling out to Cromwell to run your workflow
-    java -jar /home/aduncan/.dockstore/libraries/cromwell-30.2.jar run /home/aduncan/Documents/dockstore-tool-bamstats/Dockstore.wdl --inputs /tmp/foo7282099563694004806json
-    Cromwell exit code: 0
-    Cromwell stdout:
-    [2018-08-30 14:23:40,47] [info] Running with database db.url = jdbc:hsqldb:mem:93932e57-4451-41b9-8d64-c550c1f8afc6;shutdown=false;hsqldb.tx=mvcc   [2018-08-30 14:23:43,78] [info] Running migration RenameWorkflowOptionsInMetadata with a read batch size of 100000 and a write batch size of 100000 [2018-08-30 14:23:43,78] [info] [RenameWorkflowOptionsInMetadata] 100%  [2018-08-30 14:23:43,84] [info] Running with database db.url = jdbc:hsqldb:mem:0424c7e8-e6fd-41dc-a21a-5daa245e038c;shutdown=false;hsqldb.tx=mvcc   [2018-08-30 14:23:44,05] [info] Slf4jLogger started [2018-08-30 14:23:44,15] [info] Metadata summary refreshing every 2 seconds.    [2018-08-30 14:23:44,16] [info] Starting health monitor with the following checks: DockerHub, Engine Database   [2018-08-30 14:23:44,17] [info] WriteMetadataActor configured to write to the database with batch size 200 and flush rate 5 seconds.    [2018-08-30 14:23:44,18] [info] CallCacheWriteActor configured to write to the database with batch size 100 and flush rate 3 seconds.   [2018-08-30 14:23:44,64] [info] SingleWorkflowRunnerActor: Submitting workflow  [2018-08-30 14:23:44,67] [info] Workflow 4d24ebd1-5151-4b07-82d7-272b184fd0eb submitted.    [2018-08-30 14:23:44,67] [info] SingleWorkflowRunnerActor: Workflow submitted 4d24ebd1-5151-4b07-82d7-272b184fd0eb  [2018-08-30 14:23:44,67] [info] 1 new workflows fetched [2018-08-30 14:23:44,67] [info] WorkflowManagerActor Starting workflow 4d24ebd1-5151-4b07-82d7-272b184fd0eb [2018-08-30 14:23:44,68] [info] WorkflowManagerActor Successfully started WorkflowActor-4d24ebd1-5151-4b07-82d7-272b184fd0eb    [2018-08-30 14:23:44,68] [info] Retrieved 1 workflows from the WorkflowStoreActor   [2018-08-30 14:23:45,18] [info] MaterializeWorkflowDescriptorActor [4d24ebd1]: Call-to-Backend assignments: bamstatsWorkflow.bamstats -> Local  [2018-08-30 14:23:45,25] [warn] Local [4d24ebd1]: Key/s [memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.    [2018-08-30 14:23:45,25] [warn] Couldn't find a suitable DSN, defaulting to a Noop one. [2018-08-30 14:23:45,26] [info] Using noop to send events.  [2018-08-30 14:23:47,30] [info] WorkflowExecutionActor-4d24ebd1-5151-4b07-82d7-272b184fd0eb [4d24ebd1]: Starting calls: bamstatsWorkflow.bamstats:NA:1  [2018-08-30 14:23:47,88] [warn] BackgroundConfigAsyncJobExecutionActor [4d24ebd1bamstatsWorkflow.bamstats:NA:1]: Unrecognized runtime attribute keys: memory    [2018-08-30 14:23:47,92] [info] BackgroundConfigAsyncJobExecutionActor [4d24ebd1bamstatsWorkflow.bamstats:NA:1]: bash /usr/local/bin/bamstats 4 /cromwell-executions/bamstatsWorkflow/4d24ebd1-5151-4b07-82d7-272b184fd0eb/call-bamstats/inputs/home/aduncan/Documents/dockstore-tool-bamstats/cromwell-input/aca839a6-92c4-4234-bc6d-460bcfe6f4d6/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam   [2018-08-30 14:23:47,93] [info] BackgroundConfigAsyncJobExecutionActor [4d24ebd1bamstatsWorkflow.bamstats:NA:1]: executing: docker run \      --cidfile /home/aduncan/Documents/dockstore-tool-bamstats/cromwell-executions/bamstatsWorkflow/4d24ebd1-5151-4b07-82d7-272b184fd0eb/call-bamstats/execution/docker_cid \    --rm -i \    \      --entrypoint /bin/bash \    -v /home/aduncan/Documents/dockstore-tool-bamstats/cromwell-executions/bamstatsWorkflow/4d24ebd1-5151-4b07-82d7-272b184fd0eb/call-bamstats:/cromwell-executions/bamstatsWorkflow/4d24ebd1-5151-4b07-82d7-272b184fd0eb/call-bamstats \  quay.io/collaboratory/dockstore-tool-bamstats@sha256:8472101666cda2a29be9abe8184ec2c7cae4360b75e712706921476b6b537679 /cromwell-executions/bamstatsWorkflow/4d24ebd1-5151-4b07-82d7-272b184fd0eb/call-bamstats/execution/script    [2018-08-30 14:23:47,95] [info] BackgroundConfigAsyncJobExecutionActor [4d24ebd1bamstatsWorkflow.bamstats:NA:1]: job id: 27953  [2018-08-30 14:23:47,95] [info] BackgroundConfigAsyncJobExecutionActor [4d24ebd1bamstatsWorkflow.bamstats:NA:1]: Status change from - to WaitingForReturnCodeFile   [2018-08-30 14:25:08,39] [info] BackgroundConfigAsyncJobExecutionActor [4d24ebd1bamstatsWorkflow.bamstats:NA:1]: Status change from WaitingForReturnCodeFile to Done    [2018-08-30 14:25:10,30] [info] WorkflowExecutionActor-4d24ebd1-5151-4b07-82d7-272b184fd0eb [4d24ebd1]: Workflow bamstatsWorkflow complete. Final Outputs:  {     "bamstatsWorkflow.bamstats.bamstats_report": "/home/aduncan/Documents/dockstore-tool-bamstats/cromwell-executions/bamstatsWorkflow/4d24ebd1-5151-4b07-82d7-272b184fd0eb/call-bamstats/execution/bamstats_report.zip"  }   [2018-08-30 14:25:10,32] [info] WorkflowManagerActor WorkflowActor-4d24ebd1-5151-4b07-82d7-272b184fd0eb is in a terminal state: WorkflowSucceededState  [2018-08-30 14:25:27,76] [info] SingleWorkflowRunnerActor workflow finished with status 'Succeeded'.    {     "outputs": {      "bamstatsWorkflow.bamstats.bamstats_report": "/home/aduncan/Documents/dockstore-tool-bamstats/cromwell-executions/bamstatsWorkflow/4d24ebd1-5151-4b07-82d7-272b184fd0eb/call-bamstats/execution/bamstats_report.zip"      },      "id": "4d24ebd1-5151-4b07-82d7-272b184fd0eb"  }   [2018-08-30 14:25:27,81] [info] Message [cromwell.core.actor.StreamActorHelper$StreamFailed] without sender to Actor[akka://cromwell-system/deadLetters] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.   [2018-08-30 14:25:27,81] [info] Message [cromwell.core.actor.StreamActorHelper$StreamFailed] without sender to Actor[akka://cromwell-system/deadLetters] was not delivered. [2] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.   [2018-08-30 14:25:27,84] [info] Automatic shutdown of the async connection  [2018-08-30 14:25:27,84] [info] Gracefully shutdown sentry threads. [2018-08-30 14:25:27,84] [info] Shutdown finished.  
+    java -jar /home/aduncan/.dockstore/libraries/cromwell-30.2.jar run /home/aduncan/Documents/dockstore-bamstats/Dockstore.wdl --inputs /tmp/foo7282099563694004806json
+
+That text is from Cromwell and the Dockstore CLI, preparing all it needs to do in order to run your workflow. Although some of it might not seem to make sense at first -- why does a workflow running locally need to "download" files that are already on the local disk? -- keep in mind that it needs to keep this process similiar to how it would run your WDL if it were in the cloud. By copying these files over, it is mimicking how they might be downloaded on a cloud environment. This duplication also prevents the original input files from being modified or moved to another place.
+
+How long your workflow takes to run will depend on your computer's hardware, but we have found running this particular workflow on the sample data provided takes less than 5 minutes on a 2020 Macbook Pro with 16 GB of memory. There is going to be a lot of text on the command line as your workflow progresses, and at one point it might even seem to pause. This "pause" is normal; when bamstats itself is executing, it does not output text to the command line. Once you see this text on your command line, you'll know it's finished.
+
+.. code-block:: text
+
     Cromwell stderr:
 
-    Saving copy of Cromwell stdout to: /home/aduncan/Documents/dockstore-tool-bamstats/Cromwell.stdout.txt
-    Saving copy of Cromwell stderr to: /home/aduncan/Documents/dockstore-tool-bamstats/Cromwell.stderr.txt
+    Saving copy of Cromwell stdout to: /home/aduncan/Documents/dockstore-bamstats/Cromwell.stdout.txt
+    Saving copy of Cromwell stderr to: /home/aduncan/Documents/dockstore-bamstats/Cromwell.stderr.txt
     Output files left in place
 
-So that’s a lot of information but you can see the process was a
-success. The output is kind of hard to parse, but look for the following
-text
+Scroll up a little bit and look for the following text (or something like it; remember that the folder names will be different):
 
 ::
 
     Workflow bamstatsWorkflow complete. Final Outputs:  {
-            "bamstatsWorkflow.bamstats.bamstats_report": "/home/aduncan/Documents/dockstore-tool-bamstats/cromwell-executions/bamstatsWorkflow/4d24ebd1-5151-4b07-82d7-272b184fd0eb/call-bamstats/execution/bamstats_report.zip"
+            "bamstatsWorkflow.bamstats.bamstats_report": "/home/aduncan/Documents/dockstore-bamstats/cromwell-executions/bamstatsWorkflow/4d24ebd1-5151-4b07-82d7-272b184fd0eb/call-bamstats/execution/bamstats_report.zip"
             }
 
-The final output can be found at
-``/home/aduncan/Documents/dockstore-tool-bamstats/cromwell-executions/bamstatsWorkflow/4d24ebd1-5151-4b07-82d7-272b184fd0eb/call-bamstats/execution/bamstats_report.zip``.
+This tells us that the final output can be found at:
+::
+
+    /home/aduncan/Documents/dockstore-bamstats/cromwell-executions/bamstatsWorkflow/4d24ebd1-5151-4b07-82d7-272b184fd0eb/call-bamstats/execution/bamstats_report.zip
 
 So what's going on here? What's the Dockstore CLI doing? It can best be
 summed up with this image:
@@ -322,12 +391,10 @@ summed up with this image:
 .. figure:: /assets/images/docs/dockstore_lifecycle_wdl.png
    :alt: Lifecycle
 
-   Lifecycle
-
 The command line first provisions input files. In our case, the files
 were local so no provisioning was needed. But as the tip above
 mentioned, these can be various URLs pointing to remote files. After
-provisioning the docker image is pulled and ran via the ``Cromwell``
+provisioning the Docker image is pulled and ran via the ``Cromwell``
 command line. This uses the ``Dockstore.wdl`` and parameterization JSON
 file (``test.wdl.json``) to construct the underlying ``docker run``
 command. Finally, the Dockstore CLI provisions files back.
@@ -341,29 +408,52 @@ The following command is an example of how the Dockstore CLI calls out to Cromwe
 
 ::
 
-    java -jar /home/aduncan/.dockstore/libraries/cromwell-30.2.jar run /home/aduncan/Documents/dockstore-tool-bamstats/Dockstore.wdl --inputs /tmp/foo7282099563694004806json
+    java -jar /home/aduncan/.dockstore/libraries/cromwell-30.2.jar run /home/aduncan/Documents/dockstore-bamstats/Dockstore.wdl --inputs /tmp/foo7282099563694004806json
 
 .. tip::  The ``dockstore`` CLI automatically create a ``datastore``
     directory in the current working directory where you execute the command
     and uses it for inputs/outputs. It can get quite large depending on the
     tool/inputs/outputs being used. Plan accordingly e.g. execute the
-    dockstore CLI in a directory located on a partition with sufficient
+    Dockstore CLI in a directory located on a partition with sufficient
     storage.
 
 Adding a Test Parameter File
 ----------------------------
 
-.. include:: adding-a-test-parameter-file.rst
+We are able to register the above input parameterization of the workflow
+into Dockstore so that users can see and test an example with our workflow.
+Users can manually add test parameter files through both the command line and the versions tab in
+the UI.
+
+.. tip::  Make sure that any required input files are given as publically
+    accessible URLs so that a user can run the example successfully.
 
 Releasing on GitHub
 -------------------
 
-.. include:: releasing-on-github.rst
+At this point, we've successfully
+written a workflow language descriptor that describes how to run a program, and
+tested running this via the Dockstore command line. All of this work has
+been done locally; so if we encounter problems along the way, it is fast
+to perform debug cycles. At this point, we're confident that the workflow is
+bug free and ready to share with others. It's time to make a release.
 
-Building on Quay.io
--------------------
+Releasing will tag your GitHub repository with a version tag so you can
+always get back to this particular release. I'm going to use the tag
+``1.25-6_1.1`` Note that if you're following the tutorial
+using a forked version of the bamstats repo, your organization name
+should be different. GitHub makes it very easy to release:
 
-.. include:: building-on-quayio.rst
+.. figure:: /assets/images/docs/release.png
+   :alt: Screenshot of GitHub's interface when making a new release
+
+I click on "releases" in my forked version of the GitHub project
+`page <https://github.com/dockstore/wdl-bamstats>`__
+and then follow the directions to create a new release. Simple as that!
+
+.. tip::  `HubFlow <https://datasift.github.io/gitflow/>`__ is an
+    excellent way to manage the lifecycle of releases on GitHub. Take a
+    look!
 
 Next Steps
 ----------

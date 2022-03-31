@@ -1,7 +1,7 @@
-.. note:: This tutorial assumes basic familarity with Docker as its example involves a Docker image. You may wish to start with :doc:`Getting Started With Docker </getting-started/getting-started-with-docker>` if you are not familiar with it.
+.. note:: This tutorial is a continuation of :doc:`Getting Started With Docker </getting-started/getting-started-with-docker>`. Please complete that tutorial prior to doing this one.
 
-Getting Started with CWL
-========================
+Getting Started with CWL (Legacy)
+=================================
 
 Tutorial Goals
 --------------
@@ -13,12 +13,18 @@ Tutorial Goals
 -  Describe a sample parameterization of the Tool
 -  Push the Tool onto GitHub
 
+Tutorial Background
+-------------------
+This is a legacy version of our "Getting Started with CWL" tutorial. As is mentioned in :doc:`Overhauling Dockstore Tools </advanced-topics/dockstore-tools-overhaul>`, our definition of a tool has changed over time. This tutorial was designed for the older definition, where we required people to associate a tool with a Dockerfile. You can still follow this tutorial to create a valid CWL tool and register it as a GitHub App tool, but we recommend following a simpler version of this tutorial at :doc:`Getting Started With CWL </getting-started/getting-started-with-cwl>`.
+
 Describe Your Tool in CWL
 -------------------------
 
-The first step is to create is to create a `CWL tool definition
+Now that you have a git repository that includes a ``Dockerfile``, you
+have tested it, and are satisfied that your tool works in Docker, the
+next step is to create a `CWL tool definition
 file <https://www.commonwl.org/user_guide/02-1st-example/>`__. This YAML
-(Or JSON) file describes the inputs, outputs, and Docker image
+(or JSON) file describes the inputs, outputs, and Docker image
 dependencies for your tool.
 
 It is recommended that you have the following minimum fields:
@@ -34,7 +40,7 @@ It is recommended that you have the following minimum fields:
     dct:creator:
       foaf:name: <name>
 
-We provide an example from the
+Again, we provide an example from the
 `dockstore-tool-bamstats <https://github.com/CancerCollaboratory/dockstore-tool-bamstats/blob/develop/Dockstore.cwl>`__
 repository:
 
@@ -156,7 +162,8 @@ identifer for researchers) or use an email address for your id.
       - class: DockerRequirement
         dockerPull: "quay.io/collaboratory/dockstore-tool-bamstats:1.25-6"
 
-This section links the Docker image used for this CWL.
+This section links the Docker image used for this CWL. Notice it's
+exactly the same as the ``-t`` you used when building your image.
 
 ::
 
@@ -166,7 +173,7 @@ This section links the Docker image used for this CWL.
         ramMin: 4092 # the process requires at least 4G of RAM
         outdirMin: 512000
 
-This may or may not be honoured by the executor calling this CWL, but at
+This may or may not be honoured by the tool calling this CWL, but at
 least it gives you a place to declare computational requirements.
 
 ::
@@ -224,13 +231,11 @@ chat <https://gitter.im/common-workflow-language/common-workflow-language>`__
 is an active community to help drive the development of CWL in positive
 directions and we recommend tool authors make their voices heard.
 
-.. _Testing CWL Locally:
-
 Testing Locally
 ---------------
 
-So at this point, you've described
-how to call a Docker-based tool using CWL. Let's test running the BAMStats using
+So at this point, you've created a Docker-based tool and have described
+how to call that tool using CWL. Let's test running the BAMStats using
 the Dockstore command line and descriptor, rather than just directly
 calling it via Docker. This will test that the CWL correctly describes
 how to run your tool.
@@ -362,22 +367,17 @@ but it could copy the result to a destination in S3 for example.
 Adding a Test Parameter File
 ----------------------------
 
-.. include:: adding-a-test-parameter-file.rst
+.. include:: ../../getting-started/adding-a-test-parameter-file.rst
 
+Releasing on GitHub
+-------------------
 
-Next Steps
-----------
+.. include:: /getting-started/releasing-on-github.rst
 
-Follow the :doc:`next tutorial </getting-started/register-on-dockstore/>` to create an
-account on Dockstore and link third party services.
+Building on Quay.io
+-------------------
 
-See Also
---------
-
-- :doc:`WDL <getting-started-with-wdl>`
-- :doc:`Nextflow <getting-started-with-nextflow>`
-- :doc:`Galaxy <getting-started-with-galaxy/>`
-- :doc:`Language Support <../end-user-topics/language-support>`
+.. include:: /getting-started/building-on-quayio.rst
 
 .. discourse::
     :topic_identifier: 1276

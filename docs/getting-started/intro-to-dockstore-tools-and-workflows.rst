@@ -8,9 +8,9 @@ Not all descriptor languages make a distinction between a tool and a workflow. M
 What is a workflow?
 -------------------
 
-In general terms, a workflow describes a chain of commands in a specific order. For example, a simple two-step workflow that converts a VCF into a GDS file may conceptually look like this:
+In general terms, a workflow describes a chain of commands. For example, a simple two-step workflow that converts a VCF into a GDS file may conceptually look like this:
 
-VCF file --> call tool convert to GDS file --> give each variant a unique ID --> a GDS file with unique IDs
+VCF file --> convert to GDS file --> give each variant a unique ID --> a GDS file with unique IDs
 
 In this case, the output of the conversion step is the input of the step that generates unique IDs, and the unique IDs step's output is the final output of the workflow: A GDS file with unique IDs. 
 

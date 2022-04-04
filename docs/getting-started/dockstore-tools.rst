@@ -80,8 +80,6 @@ For more information on this method, as well as general troubleshooting advice, 
 Legacy Tool Registration
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. important:: The following methods are NOT recommended and should only be used if your tool descriptor files are registered on BitBucket or GitLab.
-
 .. include:: /getting-started/github-apps/note--legacy-dont-sync.rst
 
 If you are using BitBucket or GitLab and would prefer not to use GitHub, or if you are using GitHub but do not wish to install our app, our legacy registration methods have you covered. Several options are available to you and described in our :doc:`legacy registration methods documentation </advanced-topics/legacy/tool-legacy-registration>`.

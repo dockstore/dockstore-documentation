@@ -5,6 +5,8 @@ GitHub App Troubleshooting & FAQs
 ..
     Need to update with info about checking lambda errors in UI https://github.com/dockstore/dockstore/issues/3530
 
+.. _topGHAFAQ:
+
 .. contents::
    :local:
    :depth: 2
@@ -20,6 +22,8 @@ the corresponding workflow/tool entry on Dockstore. Branches that do not have a 
 
 You can read more about it at :doc:`/getting-started/github-apps/github-apps`.
 
+:ref:`(back to top) <topGHAFAQ>`
+
 How does this change my development flow?
 -------------------------------------------
 Adding a .dockstore.yml file to a template branch (ex: master, develop, main) will make it so
@@ -31,6 +35,8 @@ You can use filters in a .dockstore.yml to avoid generating a corresponding work
 
 *Note:* If you want to edit version information, such as workflow path, you will have to update the .dockstore.yml file directly on the corresponding GitHub branch. For example, if develop has a .dockstore.yml that points to my_workflow.wdl, but my_workflow.wdl is moved to another path on the branch develop-but-better, then the .dockstore.yml on develop-but-better will need to point to the new location of my_workflow.wdl.
 
+:ref:`(back to top) <topGHAFAQ>`
+
 How do I check if the Dockstore GitHub App was installed on an individual repository?
 --------------------------------------------------------------------------------------
 Go to your repo on GitHub, click the Settings tab, click Integrations on the left and verify our app is installed and configured correctly
@@ -39,9 +45,13 @@ Go to your repo on GitHub, click the Settings tab, click Integrations on the lef
 
 You may not have access to this page if you are not an administrator of your GitHub organization, :ref:`but you may still be able to see if it installed. <view github app permissions hack>`
 
+:ref:`(back to top) <topGHAFAQ>`
+
 How do I configure the GitHub App across multiple repositories?
 ------------------------------------------------------------------
 GitHub Apps can be installed on either an a user level, or an organizational level. If you installed the app for your own repos that are not in an organization, you will be able to verify the Dockstore GitHub App is installed by clicking "Applications" in the left menu in your GitHub settings. Our app, along with any others you may have installed, will be there. Clicking the "configure" button will allow you to adjust which repos the app has access to.
+
+:ref:`(back to top) <topGHAFAQ>`
 
 .. _view github app permissions hack:
 
@@ -52,6 +62,8 @@ A GitHub organization's admins can configure an app directly in the organization
 
 .. image:: /assets/images/docs/reinstall-app-to-cheese-org-settings.png
    :width: 50%
+
+:ref:`(back to top) <topGHAFAQ>`
 
 .. _GitHub App permissions FAQ:
 
@@ -65,6 +77,8 @@ First of all, you can only configure already-installed GitHub Apps for organizat
 You may also still run into scenarios where your changes appear to not get saved, even though GitHub will not throw an error. For example, if you tried to give the GitHub App access to databiosphere/analysis_pipeline_wdl, and upon re-installation into the DataBiosphere organization, you do not see databiosphere/analysis_pipeline_wdl in the list of repositories it already has access to, there is a good chance GitHub is blocking you.
 
 If it seems your GitHub App access just won't "stick" or you are having other permissions issues, consider asking the administrator of your organization to install the app. If they set it up to have access to all repositories on the organization, this will only need to be done once.
+
+:ref:`(back to top) <topGHAFAQ>`
 
 The changes made to my GitHub repo aren't appearing on Dockstore, but I've already installed the GitHub app and made the .dockstore.yml file. How can I figure out what's going wrong?
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -82,6 +96,8 @@ The general troubleshooting flow we recommend is the following:
     - Does the name field match, if applicable?
 
 If you've already tried these, you can view GitHub App logs through Dockstore to see if there have been any errors (see next section).
+
+:ref:`(back to top) <topGHAFAQ>`
 
 How do I view the GitHub App logs?
 ----------------------------------
@@ -114,6 +130,8 @@ It is saying that the workflow name ``single workflow`` is invalid. The workflow
 If you're having trouble finding the relevant logs, try searching for the name of your repository by using the filter on the upper left. You can also sort the rows by clicking on a column heading.
 For example, if you click the ``Success`` column heading once, it will list all the events that failed first.
 
+:ref:`(back to top) <topGHAFAQ>`
+
 Why was a new workflow registered instead of migrating my existing one?
 --------------------------------------------------------------------------
 ..
@@ -130,6 +148,7 @@ A new separate workflow/tool will be registered if the original name isn't inclu
    :alt: Tool to Migrate
    :width: 55 %
 
+:ref:`(back to top) <topGHAFAQ>`
 
 How can I convert my entire existing workflow/tool at once?
 -------------------------------------------------------------
@@ -138,3 +157,5 @@ automatically detect and sync changes with the corresponding version on Dockstor
 
 If you have a .dockstore.yml file in your master or develop branches on GitHub, any new branches you create from these as your template
 will have a  .dockstore.yml.
+
+:ref:`(back to top) <topGHAFAQ>`

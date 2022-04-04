@@ -15,9 +15,7 @@ Assumptions
 -----------
 This document assumes you have already have a tool ready to register. You do not need to have a Dockerfile associated with it unless you are using one our legacy registration methods (more on that below).
 
-If you followed :doc:`Getting Started With CWL </getting-started/getting-started-with-cwl>` to create a CWL tool, you will now have your ``Dockerfile`` and ``Dockstore.cwl`` in GitHub, have setup Quay.io to automatically build your Docker image, and have linked your accounts to Dockstore. This will allow you to use any of our registration methods, including legacy methods. Of course, you can always follow along with your own unique tools too, which may or may not be associated with an autobuilding Docker image.
-
-Regardless of how you made your tool, this tutorial will assume you are using CWL. For all other languages, :doc:`please see our documentation on workflows instead </getting-started/dockstore-workflows>`.
+If you followed :doc:`Getting Started With CWL </getting-started/getting-started-with-cwl>` to create a CWL tool, you will now your ``Dockstore.cwl`` in GitHub and have linked your accounts to Dockstore. This will allow you to use the Dockstore GitHub App to register your tool. Of course, you can always follow along with your own unique tools too. Regardless of how you made your tool, this tutorial will assume you are using CWL. For all other languages, :doc:`please see our documentation on workflows instead </getting-started/dockstore-workflows>`.
 
 .. note:: The WDL community does not explicitly differentiate :doc:`tools versus workflows </getting-started/intro-to-dockstore-tools-and-workflows>`. However, Dockstore allows the registration of "WDL tools" using legacy registration methods. We encourage people to :doc:`register WDLs as workflows </getting-started/dockstore-workflows>` instead.
 

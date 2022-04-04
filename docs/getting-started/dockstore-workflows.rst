@@ -71,6 +71,8 @@ Now that your workflow has been added, any time there is a push to a branch on G
 it is automatically updated on Dockstore! Anytime there is a deletion of a branch on GitHub that has a .dockstore.yml, the version is
 removed from Dockstore.
 
+.. include:: /getting-started/github-apps/note--addl-commit.rst
+
 For more information on this method, as well as general troubleshooting advice, please check our :doc:`Dockstore GitHub Apps Overview </getting-started/github-apps/github-apps>` page.
 
 Legacy Registration Methods

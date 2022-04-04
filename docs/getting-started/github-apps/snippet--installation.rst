@@ -42,9 +42,3 @@ If you are adding the GitHub App to an organization for which you are not an adm
     - :doc:`Automatic Syncing with GitHub Apps and .dockstore.yml </getting-started/github-apps/github-apps/>` - details on writing a .dockstore.yml file
     - :doc:`Migrating Your Existing Workflows </getting-started/github-apps/migrating-workflows-to-github-apps>` - a tutorial on converting already registered workflows
     - :doc:`Troubleshooting and FAQ </getting-started/github-apps/github-apps-troubleshooting-tips>` - tips on resolving Dockstore Github App issues.
-
-Ensuring sychronization
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Once the GitHub App is installed and a .dockstore.yml is present, please make sure to push one *additional* commit to your repository. This helps make sure your workflows, tools, and services show up in Dockstore.
-

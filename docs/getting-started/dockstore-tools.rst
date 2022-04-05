@@ -77,7 +77,7 @@ Legacy Tool Registration
 
 .. include:: /getting-started/github-apps/note--legacy-dont-sync.rst
 
-If you are using BitBucket or GitLab and would prefer not to use GitHub, or if you are using GitHub but do not wish to install our app, our legacy registration methods have you covered. Several options are available to you and described in our :doc:`legacy registration methods documentation </advanced-topics/legacy/tool-legacy-registration>`.
+If you are using BitBucket or GitLab and would prefer not to use GitHub, or if you are using GitHub but do not wish to install our app, our legacy registration methods have you covered. Several options are available to you and described in our :doc:`legacy registration methods documentation </advanced-topics/legacy/tool-legacy-registration>`. If you must use the legacy tool registration methods, then you may want to read :doc:`how our definition of tool is different for these legacy methods </../advanced-topics/dockstore-tools-overhaul>`.
 
 Sharing Your Tool
 -----------------

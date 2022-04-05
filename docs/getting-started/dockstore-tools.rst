@@ -34,7 +34,7 @@ Register Your Tool to Automatically Sync with GitHub (Recommended)
 .. include:: /getting-started/github-apps/note--registration.rst
 
 Using GitHub Apps, Dockstore can react to changes on GitHub as they are made,
-keeping Dockstore synced with GitHub automatically. You can learn more :doc:`in our Dockstore GitHub App </getting-started/github-apps/github-apps> doc`.
+keeping Dockstore synced with GitHub automatically. You can learn more :doc:`in our Dockstore GitHub App </getting-started/github-apps/github-apps>` doc.
 
 .. include:: /getting-started/github-apps/snippet--installation.rst
 

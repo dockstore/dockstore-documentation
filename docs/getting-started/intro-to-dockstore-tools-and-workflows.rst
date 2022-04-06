@@ -1,5 +1,5 @@
-Introduction to Workflows, Tools, and Services
-==============================================
+Introduction to Workflows and Tools
+===================================
 
 Workflows and tools hosted on Dockstore are computational programs described in languages that make it easy for their reuse in different compute environments. Generally, descriptor languages leverage a containerized compute environment (such as a Docker image) that packages up all of the code and dependencies needed to complete the computational step. Not all descriptor languages make a distinction between a tool and a workflow. Most users will register workflows on Dockstore. 
 
@@ -19,7 +19,3 @@ What is a tool?
 A tool represents a single command line tool wrapped in a descriptor language.  Languages that formally describe tools (such as CWL) may chain them together into a workflow.
 
 Dockstore recently updated how we define tools to align with the languages we support. If you want a deeper understanding of the history of Dockstore tools and where we plan on going, read :doc:`Dockstore Tools Overhaul </../advanced-topics/dockstore-tools-overhaul>`.
-
-What is a service?
-------------------
-Services are containerized programs that are meant to be long running processes, usually web services or interactive applications, and that can be launched by a user into different environments. Dockstore services are currently in beta. 

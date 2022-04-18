@@ -190,12 +190,6 @@ Advanced developer topics
    /assets/templates/template.rst
    user-created
 
-.. toctree::
-   :caption: System Status
-   :maxdepth: 1
-
-   systemstatus
-
 .. centered:: In Affiliation with
 
 .. centered:: |CollabLink|_ |imagespace| |OicrLink|_ |imagespace| |Ga4ghLink|_ |imagespace| |UcscLink|_

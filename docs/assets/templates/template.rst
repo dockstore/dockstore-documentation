@@ -9,6 +9,7 @@ Not sure if you are working with a workflow, a tool, or a service? :doc:`Check o
 
 Tips and tricks
 ---------------
+* This form of registration is only available to workflows, tools, and services that are hosted on GitHub
 * Make sure your file is saved as ``.dockstore.yml``, not ``dockstore.yml`` or ``.dockstore.yaml``
 * Put the .dockstore.yml file in the top of your repo or inside ``.github/``
 * The first line of a .dockstore.yml file references the version of .dockstore.yml syntax being used, not the version/tag of the workflow/tool/service it describes
@@ -17,7 +18,7 @@ Tips and tricks
 
 Examples of the filters field
 -----------------------------
-* The ``filters:`` field allows for limiting which branches and tags appear on a Dockstore entry. Regex can be used here.
+* The ``filters:`` field allows for limiting which GitHub [tags](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-commits/managing-tags) and [branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches) appear on a Dockstore entry. Regex can be used here.
 * You can use this regex pattern to include all tags but no branches:
 
 .. code:: yaml

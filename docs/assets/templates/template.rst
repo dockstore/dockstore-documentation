@@ -18,7 +18,7 @@ Tips and tricks
 
 Examples of the filters field
 -----------------------------
-* The ``filters:`` field allows for limiting which GitHub [tags](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-commits/managing-tags) and [branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches) appear on a Dockstore entry. Regex can be used here.
+* The ``filters:`` field allows for limiting which GitHub `tags <https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-commits/managing-tags>`_ and `branches <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches>`_ appear on a Dockstore entry. Regex can be used here.
 * You can use this regex pattern to include all tags but no branches:
 
 .. code:: yaml

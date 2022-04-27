@@ -16,8 +16,8 @@ See also: https://developers.google.com/style/accessibility
 	* 	When color schemes convey non-essential meaning, avoid using color schemes that would be inaccessible to red-green colorblind users
 	* 	When color schemes convey essential meaning (vital UI elements, etc) they should be functional in grayscale
 * Do not use things that would be a nightmare for screen readers
- 	* Avoid using non-ASCII symbols 𝙨𝙪𝙘𝙝 𝙖𝙨 𝙩𝙝𝙞𝙨, 𝙬𝙝𝙞𝙘𝙝 𝙪𝙨𝙚𝙨 𝙘𝙤𝙙𝙚𝙥𝙤𝙞𝙣𝙩𝙨 𝙙𝙚𝙨𝙞𝙜𝙣𝙚𝙙 𝙛𝙤𝙧 𝙢𝙖𝙩𝙝𝙚𝙢𝙖𝙩𝙞𝙘𝙨, 𝙣𝙤𝙩 𝙩𝙚𝙭𝙩
-		* Exception: Examples showing non-English text such as 山田太郎
+ 	* Avoid using non-ASCII symbols unless you are writing something meaningful in another language
+ 		* For example, do not use symbols from U+1D400 𝒔𝒖𝒄𝒉 𝒂𝒔 𝒕𝒉𝒆𝒔𝒆 as a replacement for ***actual bold and italic formatting***
 		* Using actual bold and italics formatting is acceptable, but bear in mind screen readers may not declare something as being bold or italic
 
 ## Assumptions about a user's system

@@ -1,5 +1,6 @@
 Dockstore 1.5.0
 ===============
+*Septmeber 12, 2018*
 
 We've just released the next major version of Dockstore!
 

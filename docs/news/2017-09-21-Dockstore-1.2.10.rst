@@ -1,5 +1,6 @@
 Dockstore 1.2.10
 ================
+*September 21, 2017*
 
 We're hard at work on the next major version of Dockstore.
 

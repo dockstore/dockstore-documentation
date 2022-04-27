@@ -1,5 +1,6 @@
 Dockstore 1.2.5
 ===============
+*July 11, 2017*
 
 Visit our `new forum <https://discuss.dockstore.org/>`__. Discuss tools,
 tooling, bioinformatics cloud computing, etc. This will replace both the

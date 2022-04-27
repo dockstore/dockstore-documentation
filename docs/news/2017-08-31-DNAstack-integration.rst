@@ -1,5 +1,6 @@
 DNAstack Integration
 ====================
+*August 31, 2017*
 
 For those not following Twitter, we're pleased (and excited!) to
 announce our first integration with a cloud-based genomics software

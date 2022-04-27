@@ -1,5 +1,6 @@
 Dockstore 1.10.0
 ================
+*December 3, 2020*
 
 Highlighted new features include:
 ---------------------------------

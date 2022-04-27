@@ -1,5 +1,6 @@
 Dockstore 1.6.0
 ===============
+*April 8, 2019*
 
 Highlighted new features include
 --------------------------------

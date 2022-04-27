@@ -1,5 +1,6 @@
 Upcoming Features
 =================
+*April 5, 2017*
 
 To give you a taste of what we're working on for the next major version
 of Dockstore, we're looking at features in the following main areas:

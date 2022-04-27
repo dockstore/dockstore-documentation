@@ -44,25 +44,25 @@ See also: https://developers.google.com/style/accessibility
 * Use `.. comment` to write comments
 * Use consistent indentation spacing within a single RST file
 * Do not break up body text with a newline every x characters
-* Use use \`this style <https://example.com>\`_ of formatting external hyperlinks, as it is less error prone than the method involving setting the target in another paragraph
+* Use use \`this style \<https://example.com\>_` of formatting external hyperlinks, as it is less error prone than the method involving setting the target in another paragraph
 * Use headings in this way throughout the entire repository to avoid issues with embedding RST files into other RST files:
 
-> `page title`
+> `page title`  
 > `==========`
 > 
-> `heading level 1`
+> `heading level 1`  
 > `---------------`
 >
-> `heading level 2`
+> `heading level 2`  
 > `~~~~~~~~~~~~~~~`
 >
-> `heading level 3`
+> `heading level 3`  
 > `***************`
 >
-> `heading level 4`
+> `heading level 4`  
 > `+++++++++++++++`
 >
-> `heading level 5`
+> `heading level 5`  
 > `\``````````````
 >
  

@@ -1,6 +1,6 @@
 Upcoming Features
 =================
-*April 5, 2017*
+*May 5, 2017*
 
 To give you a taste of what we're working on for the next major version
 of Dockstore, we're looking at features in the following main areas:
@@ -33,13 +33,12 @@ bug, drop us a line on
 `GitHub <https://github.com/dockstore/dockstore/issues>`__
 
 April 19, 2017 - Dockstore 1.2 Release
---------------------------------------
+======================================
 
-The latest Dockstore major release includes a large number of new
-features and fixes. A subset of highlighted new features follows.
+`The latest Dockstore major release <https://github.com/dockstore/dockstore/releases/tag/1.2.0>`_ includes a large number of new features and fixes. A subset of highlighted new features follows.
 
 Highlighted New Features
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 -  Support for private tools
 -  users can register tools where users will need to ask the original
@@ -57,7 +56,7 @@ Highlighted New Features
    tools
 
 Breaking Changes
-~~~~~~~~~~~~~~~~
+----------------
 
 -  The default Dockstore install no longer includes S3 support. Instead,
    S3 support is provided by a plugin that can be installed via

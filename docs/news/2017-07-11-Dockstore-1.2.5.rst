@@ -17,7 +17,7 @@ formally released later) includes fixes for the following:
 -  Issues saving workflow test json files
 
 Breaking Changes
-~~~~~~~~~~~~~~~~
+----------------
 
 -  We needed to clear out unpublished workflows to do some clean-up. Let
    us know if you had anything important stored in unpublished as

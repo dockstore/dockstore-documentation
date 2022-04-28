@@ -4,9 +4,9 @@ Dockstore 1.2.10
 
 We're hard at work on the next major version of Dockstore.
 
-In the meantime, our hotfix release includes fixes for the following:
+In the meantime, `our hotfix release <https://github.com/dockstore/dockstore/releases/tag/1.2.10>`_ includes fixes for the following:
 
-* fixes for file provisioning with the `GA4GH/DREAM challenge <https://www.synapse.org/#!Synapse:syn8507133/wiki/415976>`_ series of workflows
+* fixes for file provisioning with the `GA4GH DREAM challenge <https://www.synapse.org/#!Synapse:syn8507133/wiki/415976>`_ series of workflows
 * spelling and verbiage fixes, some contributed from our users
 * fixes for display of test files and registry locations
 * fixes for consistency with the GA4GH Tool Registry Schema

@@ -14,6 +14,8 @@ Highlighted New Features and Fixes
 -  CWL generation of parameter files now supports YAML as well as JSON
 -  Documentation updates and tooltips!
 
+Feel free to explore `this release on GitHub <https://github.com/dockstore/dockstore/releases/tag/1.1>`_.
+
 .. discourse::
     :topic_identifier: 2019
     

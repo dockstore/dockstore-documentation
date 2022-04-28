@@ -28,7 +28,7 @@ See also: https://developers.google.com/style/accessibility
 	* Assume that if they are using an HPC, they at least know how to use their HPC's job submission system (SLURM, etc)
 	* If working with/installing something requiring root permissions such as Docker, mention that root permission is needed once, then assume from that point forward that your HPC users have root privileges
 	* However, do not assume that HPC users know how programs you introduce may work differently on an HPC
-		* Example: Running a WDL on an HPC via Cromwell (ie via the Dockstore CLI) requires additional runtime arguments that a local user does not need to include in their WDL program, so make sure to either include those runtime arguments in your examples or tell HPC users what additional things they need
+		* Example: Running a WDL on an HPC via Cromwell (e.g. via the Dockstore CLI) requires additional runtime arguments that a local user does not need to include in their WDL program, so make sure to either include those runtime arguments in your examples or tell HPC users what additional things they need
 * Assume Linux users are using Ubuntu or know how to translate into their own distro
 	* Exception: If directing very new users to install software via apt-get, consider mentioning that the instructions are specific to Ubuntu -- UCSC's linux lab for students runs on CentOS (which uses yum instead) so this is not a rare occurrence
 * Keep in mind that some of our users are using Macs, so make a note about these situations in the text if they occur:
@@ -44,7 +44,7 @@ See also: https://developers.google.com/style/accessibility
 * Use `.. comment` to write comments
 * Use consistent indentation spacing within a single RST file
 * Do not break up body text with a newline every x characters
-* Use use \`this style \<https://example.com\>_` of formatting external hyperlinks, as it is less error prone than the method involving setting the target in another paragraph
+* Use \`this style \<https://example.com\>_` of formatting external hyperlinks, as it is less error prone than the method involving setting the target in another paragraph
 * Use headings in this way throughout the entire repository to avoid issues with embedding RST files into other RST files:
 
 > `page title`  
@@ -72,7 +72,7 @@ See also: https://developers.google.com/style/translation
 * Avoid using idioms ("it's raining cats and dogs in Santa Cruz")
 * Avoid using culturally-specific comparisons ("the button is green like a dollar bill")
 * Try to use relatively simple English whenever possible
-* Make sure programs/templates you are providing to the user have a way to handle non-ASCII names, family-name-first ordering, and names with apostrophes and hyphens
+* Make sure programs/templates you are providing to the user have a way to handle non-ASCII names and names with apostrophes and hyphens
 
 ## Inclusion
 See also: https://developers.google.com/style/inclusive-documentation
@@ -82,7 +82,7 @@ See also: https://developers.google.com/style/inclusive-documentation
 * Avoid terms like master/slave or blacklist/whitelist - use parent/child or denylist/allowlist
 	* blacklist/whitelist can be used as verbs or nouns, while denylist/allowlist tend to only be used as nouns; consider "add to the allowlist" as a replacement for the verb form of "whitelist"
 * Avoid calling tasks "simple" or "easy" as it may frustrate users who are finding it to not be all that easy
-	* It is acceptable to use comparisons, ie to say that something is easier than something else
+	* It is acceptable to use comparisons, e.g. to say that something is easier than something else
 
 ## Logos
 * Before using a new logo for an external organization or moving an existing logo to a place where it has a next context, make a good-faith effort to reach out to the organization for approval if usage of that logo is not clear from their policy

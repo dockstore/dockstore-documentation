@@ -43,7 +43,8 @@ See also: https://developers.google.com/style/accessibility
 * Write in RST, not markdown
 * Use `.. comment` to write comments
 * Use consistent indentation spacing within a single RST file
-* Do not break up body text with a newline every x characters
+* Keep all sentences in a given paragraph that renders as body text on one line, i.e. do not break up body text every x characters
+* Make RST tables human-readible instead of compact -- consider using [this table generator](https://tableconvert.com/restructuredtext-generator)
 * Use \`this style \<https://example.com\>_` of formatting external hyperlinks, as it is less error prone than the method involving setting the target in another paragraph
 * Use headings in this way throughout the entire repository to avoid issues with embedding RST files into other RST files:
 

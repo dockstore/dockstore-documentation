@@ -3,7 +3,7 @@
 This style guide is based upon [Google's style guide](https://developers.google.com/style/) but contains several sections specific to Dockstore itself. It is not exhaustive nor authoritative; this document is designed as a quick reference guide.
 
 ## Accessibility
-See also: https://developers.google.com/style/accessibility
+See also: [Google's guidelines for accessibility](https://developers.google.com/style/accessibility)
 
 * Always set descriptive alt text for images, except for decorative images
  	* If the image contains important text, repeat that text in the alt text
@@ -67,8 +67,8 @@ See also: https://developers.google.com/style/accessibility
 > `\``````````````
 >
  
-## International
-See also: https://developers.google.com/style/translation 
+## International/Translation
+See also: [Google's guidelines r/e translation](https://developers.google.com/style/translation) 
 
 * Avoid using idioms ("it's raining cats and dogs in Santa Cruz")
 * Avoid using culturally-specific comparisons ("the button is green like a dollar bill")
@@ -76,7 +76,7 @@ See also: https://developers.google.com/style/translation
 * Make sure programs/templates you are providing to the user have a way to handle non-ASCII names and names with apostrophes and hyphens
 
 ## Inclusion
-See also: https://developers.google.com/style/inclusive-documentation
+See also: [Google's guidelines for inclusive documentation](https://developers.google.com/style/inclusive-documentation).
 
 * Use gender-neutral language wherever possible (firefighter vs fireman)
 * Use gender-neutral pronouns when referring to a hypothetical person ("they" instead of "he or she"), even if that requires changing a verb conjugation ("they **adjust** their settings" vs "he or she **adjusts** his or her settings")
@@ -98,11 +98,12 @@ See also: https://developers.google.com/style/inclusive-documentation
 * Focus more on the how-to-do-things than what's happening under the hood
 
 ## Timeliness
-* Follow these guidelines: https://developers.google.com/style/timeless-documentation
+* Follow [Google's timeless documentation guidelines](https://developers.google.com/style/timeless-documentation)
 * In places where it is truly necessary to anchor something to a point in time, consider adding an RST comment reading `.. !time` nearby so that later maintainers of the documentation will be able to search all such instances and update them as necessary.
 
 ## Tone
-Adapted from: https://developers.google.com/style/tone
+Adapted from [Google's style guide r/e tone](https://developers.google.com/style/tone)
+
 * Humor in the form of slightly silly examples is okay, but generally keep things formal
 	* "My Cool Workflow", etc is okay
 * Never include any humor at the expense of a person, organization, or group of people

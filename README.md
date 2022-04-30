@@ -1,6 +1,6 @@
 # Dockstore Documentation
 
-Dockstore is using [Read the Docs](https://readthedocs.org/) for documentation!
+Dockstore is using [Read the Docs](https://readthedocs.org/) for documentation! Please take a look at [our style guide](./style-guide.md) to learn about our approach to documentation.
 
 Below are some tips for setting up the documentation locally and updating the code.
 

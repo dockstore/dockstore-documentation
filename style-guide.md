@@ -76,7 +76,7 @@ See also: [Google's guidelines r/e translation](https://developers.google.com/st
 * Make sure programs/templates you are providing to the user have a way to handle non-ASCII names and names with apostrophes and hyphens
 
 ## Inclusion
-See also: [Google's guidelines for inclusive documentation](https://developers.google.com/style/inclusive-documentation).
+See also: [Google's guidelines for inclusive documentation](https://developers.google.com/style/inclusive-documentation), but be aware that some terms are still being discussed without a clear consensus at this time. The examples below demonstrate our understanding of currently recognized best practices, and may need to be adjusted over time.
 
 * Use gender-neutral language wherever possible (firefighter vs fireman)
 * Use gender-neutral pronouns when referring to a hypothetical person ("they" instead of "he or she"), even if that requires changing a verb conjugation ("they **adjust** their settings" vs "he or she **adjusts** his or her settings")

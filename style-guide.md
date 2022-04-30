@@ -24,20 +24,20 @@ See also: https://developers.google.com/style/accessibility
 * If talking about a program that does not support certain operating systems, make it clear which systems are supported relatively early in documentation introducing that program
 	* If possible, give an alternative for unsupported OSs
 	* "The Dockstore CLI is only supported on Unix-like operating systems, including Linux and Mac. Windows users may wish to..."
-* Do not assume users are or are not using an HPC
-	* Assume that if they are using an HPC, they at least know how to use their HPC's job submission system (SLURM, etc)
+* Keep in mind users might be using an HPC
+	* Assume that if they are using an HPC, they know how to use their HPC's job submission system (SLURM, etc)
 	* If working with/installing something requiring root permissions such as Docker, mention that root permission is needed once, then assume from that point forward that your HPC users have root privileges
-	* However, do not assume that HPC users know how programs you introduce may work differently on an HPC
-		* Example: Running a WDL on an HPC via Cromwell (e.g. via the Dockstore CLI) requires additional runtime arguments that a local user does not need to include in their WDL program, so make sure to either include those runtime arguments in your examples or tell HPC users what additional things they need
-* Assume Linux users are using Ubuntu or know how to translate into their own distro
-	* Exception: If directing very new users to install software via apt-get, consider mentioning that the instructions are specific to Ubuntu -- UCSC's linux lab for students runs on CentOS (which uses yum instead) so this is not a rare occurrence
-* Keep in mind that some of our users are using Macs, so make a note about these situations in the text if they occur:
+	* If a program you introduce runs differently on an HPC, beyond needing root privileges, make note of those differences
+		* Example: Running a WDL on an HPC via Cromwell (e.g. via the Dockstore CLI) requires additional runtime arguments that a local user does not need to include in their WDL program, tell HPC users what additional things they need
+* When talking about Linux, mention that your instructions are specific to Ubuntu, and from that point on in the document assume users are either using Ubuntu or know how to translate into their own distribution
+	* Exception: If directing users to install software via apt-get, provide alternatives for Red Hat (yum), Arch (pacman), and Gentoo (emerge) if those alternatives are available
+* Make a note about these Mac-specific situations in the text if they occur:
 	* If there is an important functional difference between the Linux and the Mac version, such as xargs
 	* If there is an important installation difference between the Linux and the Mac version, such as the installation of the Dockstore CLI
 	* If something does not work/works differently on Apple Silicon Macs
-	* If there is an important difference between the bash and zsh version of something
-		* Do not assume that a Mac user is aware of whether they are using bash or zsh (the default changed in Catalina) or knows how to change between the two
-		* Do not worry about other shells
+* If the bash and zsh version of something would be different, provided both versions
+	* Unless this bash/zsh difference only applies to Linux, make note of the fact that zsh is the default shell in Mac OS as of Catalina (10.15)
+	* Do not worry about other shells besides bash and zsh
 
 ## Coding in RST
 * Write in RST, not markdown

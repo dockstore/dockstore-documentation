@@ -79,8 +79,8 @@ See also: https://developers.google.com/style/inclusive-documentation
 
 * Use gender-neutral language wherever possible (firefighter vs fireman)
 * Use gender-neutral pronouns when referring to a hypothetical person ("they" instead of "he or she"), even if that requires changing a verb conjugation ("they **adjust** their settings" vs "he or she **adjusts** his or her settings")
-* Avoid terms like master/slave or blacklist/whitelist - use parent/child or denylist/allowlist
-	* blacklist/whitelist can be used as verbs or nouns, while denylist/allowlist tend to only be used as nouns; consider "add to the allowlist" as a replacement for the verb form of "whitelist"
+* Avoid unnecessarily using socially-charged terms for technical concepts
+	* For example, avoid terms such as blacklist, whitelist, sanity check, and first-class citizen. Instead, consider denylist, allowlist, overall check, first-class object, etc
 * Avoid calling tasks "simple" or "easy" as it may frustrate users who are finding it to not be all that easy
 	* It is acceptable to use comparisons, e.g. to say that something is easier than something else
 
@@ -107,5 +107,4 @@ Adapted from: https://developers.google.com/style/tone
 * Never include any humor at the expense of a person, organization, or group of people
 * You can make the case for a feature's existence, but avoid sounding too much like a salesperson
 * When telling someone to preform a task in a tutorial, use second-person implicit whenever it makes sense to do so -- e.g., write "Click this button to delete System32" instead of "You can click this button to delete System32"
-* In general, try to avoid passive voice -- e.g., write "Click this button to delete System32" instead of "This button can be clicked to delete System32"
- 
+* In general, try to avoid passive voice -- e.g., write "Click this button to delete System32" instead of "This button can be clicked to delete System32" 

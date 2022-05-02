@@ -7,7 +7,7 @@ Docker Alternatives
 In some situations using Docker may be impractical because it requires all users to have root access.
 Several alternatives have been developed to make it possible to run rootless containers, including
 `Singularity <https://sylabs.io/docs/>`_ and 
-`rootless Docker <https://engineering.docker.com/2019/02/experimenting-with-rootless-docker/>`_.
+`rootless Docker <https://medium.com/@tonistiigi/experimenting-with-rootless-docker-416c9ad8c0d6>`_.
 While Dockstore uses Docker by default, if necessary it may be possible to run your workflows with one
 of these alternatives. Because the call to Docker or an alternative is made by the workflow runner, usually cwltool
 or Cromwell, and not Dockstore directly, the difficulty of configuring a Docker alternative depends on the workflow

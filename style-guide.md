@@ -112,5 +112,7 @@ Adapted from [Google's style guide r/e tone](https://developers.google.com/style
 	* "My Cool Workflow", etc is okay
 * Never include any humor at the expense of a person, organization, or group of people
 * You can make the case for a feature's existence, but avoid sounding too much like a salesperson
-* When telling someone to preform a task in a tutorial, use second-person implicit whenever it makes sense to do so -- e.g., write "Click this button to delete System32" instead of "You can click this button to delete System32"
-* In general, try to avoid passive voice -- e.g., write "Click this button to delete System32" instead of "This button can be clicked to delete System32" 
+* Use [second-person](https://developers.google.com/style/person) whenever it makes sense to do so
+* When telling someone to preform a task in a tutorial or otherwise using imperatives, make the second-person subject [implicit](https://editorsmanual.com/articles/sentence-implied-subject-grammar/)
+	* Example: "Click this button to delete System32" instead of "You can click this button to delete System32"
+* Use [active voice](https://developers.google.com/style/voice)

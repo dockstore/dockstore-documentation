@@ -24,7 +24,7 @@ See also: [Google's guidelines for accessibility](https://developers.google.com/
 * If talking about a program that does not support certain operating systems, make it clear which systems are supported relatively early in documentation introducing that program
 	* If possible, give an alternative for unsupported OSs
 	* "The Dockstore CLI is only supported on Unix-like operating systems, including Linux and Mac. Windows users may wish to..."
-* Keep in mind users might be using an HPC
+* Keep in mind users might be working in a high performance computing (HPC) environment
 	* Assume that if they are using an HPC, they know how to use their HPC's job submission system (SLURM, etc)
 	* If working with/installing something requiring root permissions such as Docker, mention that root permission is needed once, then assume from that point forward that your HPC users have root privileges
 	* If a program you introduce runs differently on an HPC, beyond needing root privileges, make note of those differences

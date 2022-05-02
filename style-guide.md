@@ -93,8 +93,12 @@ See also: [Google's guidelines for inclusive documentation](https://developers.g
 ## Technical detail
 * Generally speaking, assume that your audience is computer literate but may not know their way around the command line, git, Docker, or workflow languages
 	* This will vary - a user seeking out best practices for a specific workflow language will know what a workflow language is
-* Keep track of technical phrases and add them to the glossary if they are not already defined in the glossary
+* Keep track of technical phrases and acronyms, and add them to the glossary if they are not already defined in the glossary
 	* What is considered a "technical phrase" can be nebulous; use your best judgment
+	* Define language-specific acronyms (CWL, WDL, etc) the first time they are rendered on an HTML page
+	* Define CLI when introducing the concept to new users, but you do not need to define it in all docs about the Dockstore CLI
+* Glossary terms should define the functional meaning of acronyms for your audience, not just what they stand for
+	* Example: If your audiance are pet owners, "Light Amplification by the Stimulated Emission of Radiation" is much less helpful than "a device that emits light based on stimulation of electromagnetic radiation, which can be used to create a small red dot that cats find fascinating"
 * Focus more on the how-to-do-things than what's happening under the hood
 
 ## Timeliness

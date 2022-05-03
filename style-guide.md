@@ -41,11 +41,14 @@ See also: [Google's guidelines for accessibility](https://developers.google.com/
 
 ## Coding in RST
 * Write in RST, not markdown
-* Use `.. comment` to write comments
+	* Archived documents orignally presented in markdown may remain in markdown
+	* Keep this style guide in markdown in order to display RST formatting
+* Use \`.. comment\` to write comments
 * Use consistent indentation spacing within a single RST file
 * Keep all sentences in a given paragraph that renders as body text on one line, i.e. do not break up body text every x characters
 * Make RST tables human-readable instead of compact -- consider using [this table generator](https://tableconvert.com/restructuredtext-generator)
 * Use \`this style \<https://example.com\>_` of formatting external hyperlinks, as it is less error prone than the method involving setting the target in another paragraph
+	* Exception: It is acceptable to use the other format to get around RST limitations about nested formatting, [as demonstrated in this commit](https://github.com/dockstore/dockstore-documentation/pull/198/commits/226410b4bd86b96e86a2dcc3045bbcfac7d04adc)
 * Use headings in this way throughout the entire repository to avoid issues with embedding RST files into other RST files:
 
 > `page title`  

@@ -1,5 +1,6 @@
 First Workflow from the PCAWG Project released
 ==============================================
+*November 18, 2015*
 
 ICGC on the cloud goes live and is described on the AWS Blog at `New AWS
 Public Data Sets – TCGA and

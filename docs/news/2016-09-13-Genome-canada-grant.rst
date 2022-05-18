@@ -1,5 +1,6 @@
 Genome Canada Grant
 ===================
+*September 13, 2016*
 
 The Government of Canada via Genome Canada `announces a grant for
 Dockstore <https://www.genomecanada.ca/en/news/government-canada-invests-new-genomics-big-data-research-projects-aimed-real-world-challenges>`__!

@@ -1,0 +1,77 @@
+.dockstore.yml
+AnVIL Project
+API
+AWS
+BD Catalyst
+BDC
+BioData Catalyst
+Cancer Genomics Cloud
+categories
+CGC
+CLI
+cloud computing
+collections
+Common Workflow Language
+container
+Cromwell
+CWL
+DAG
+descriptor file
+Docker
+Docker container
+Docker image
+Dockerfile
+Dockstore CLI
+Dockstore GitHub App
+DOI
+DS-I Africa
+EC2
+egress
+eLwazi
+entry
+faceted search
+FAIR
+GA4GH
+Galaxy
+Galaxy workflow
+GCP
+Gen3
+GitHub App registration
+GitHub App tool
+GitHub App workflow
+immutable
+interoperable
+JSON
+Jupyter
+kernel
+Kids First
+labels
+launch with
+layer
+legacy registration
+legacy tool
+legacy workflow
+NCI
+NCPI
+Nextflow
+NFL
+NHGRI
+NHLBI
+NIH
+OICR
+ORCID
+organization
+parameter file
+preemptible
+Seven Bridges
+Spot Instance
+Terra
+TES
+tool
+UCSC
+VM
+WDL
+workflow
+Workflow Description Language
+Workflow Execution Service
+YAML

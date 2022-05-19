@@ -8,7 +8,7 @@ from glossarpy.GlossEntry import GlossEntry
 import gc  # gc = garbage collector; we can use this to get instances of particular objects
 import os  # used to delete old versions of glossary_outfile and glossary_outfile
 
-glossary_outfile = "glossary.rst"  # this one gets rendered
+glossary_outfile = "dictionary.rst"  # this one gets rendered
 contents_outfile = "_attic/glossary_entries_list_dynamic.txt"  # does not get rendered, just for quick reference
 
 try:

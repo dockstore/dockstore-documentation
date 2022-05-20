@@ -89,7 +89,7 @@ Dockstore Dictionary
 --------------
     This file is part of :ref:`dict GitHub App registration`. It indexes workflows or tools within a repository, including their optional test parameter files, and the author(s) of said workflows or tools.  
 
-Further reading: `<./assets/templates/template.html>`_  
+Further reading: :doc:`/assets/templates/template </assets/templates/template>`  
 
 
 

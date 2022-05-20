@@ -10,7 +10,7 @@ from glossarpy.GlossEntry import GlossEntry
 dotDockstoredotYAML = GlossEntry(".dockstore.yml", 
 	acronym_full="", 
 	definition="This file is part of [GitHub App registration]. It indexes workflows or tools within a repository, including their optional test parameter files, and the author(s) of said workflows or tools.", 
-	furtherreading="./assets/templates/template.html", 
+	furtherreading="/assets/templates/template", 
 	institute="", 
 	pronunciation='', 
 	seealso="")

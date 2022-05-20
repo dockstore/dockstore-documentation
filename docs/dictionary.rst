@@ -91,8 +91,6 @@ Dockstore Dictionary
 
 Further reading: `<./assets/templates/template.html>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict AnVIL Project:
@@ -105,8 +103,6 @@ AnVIL Project
 
 Further reading: `<https://anvilproject.org/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict API:
@@ -117,8 +113,6 @@ API
 
     A software-based intermediary used to exchange data, often between two different platforms. Communication between different cloud platforms is mediated by various APIs, such as :ref:`dict TES`.  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -134,8 +128,6 @@ see also :ref:`dict GCP`
 
 Further reading: `<https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict BD Catalyst:
@@ -144,8 +136,6 @@ BD Catalyst
 -----------
 *abbreviation for* :ref:`dict BioData Catalyst`  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -158,8 +148,6 @@ pronounced "bee-dee-see"
 *abbreviation for* :ref:`dict BioData Catalyst`  
 
 
-.. updated 2022-05-18  
-
 
 
 .. _dict BioData Catalyst:
@@ -170,8 +158,6 @@ BioData Catalyst
 
 Further reading: `<https://biodatacatalyst.nhlbi.nih.gov/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict Cancer Genomics Cloud:
@@ -180,8 +166,6 @@ Cancer Genomics Cloud
 ---------------------
     A cloud platform by :ref:`dict Seven Bridges` and funded by :ref:`dict NCI` for bioinformatics analysis.  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -192,8 +176,6 @@ categories
     A group of workflows or tools curated by Dockstore with a similar scientific purpose.  
 
 
-.. updated 2022-05-18  
-
 
 
 .. _dict CGC:
@@ -202,8 +184,6 @@ CGC
 ---
 *abbreviation for* :ref:`dict Cancer Genomics Cloud`  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -217,8 +197,6 @@ CLI
 
 Further reading: `<https://en.wikipedia.org/wiki/Command-line_interface>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict cloud computing:
@@ -229,8 +207,6 @@ cloud computing
 
 Further reading: `<https://en.wikipedia.org/wiki/Cloud_computing>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict collections:
@@ -239,8 +215,6 @@ collections
 -----------
     A group of workflows or tools on Dockstore associated with a particular :ref:`dict organization`.  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -254,8 +228,6 @@ see also :ref:`dict CWL`
 
 Further reading: `<https://www.commonwl.org/user_guide/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict container:
@@ -264,8 +236,6 @@ container
 ---------
     An emulated computer system that contains programs and their prerequisites, but does not contain the entire operating system. Unlike a :ref:`dict VM`, a container shares the same kernel as the host OS. A well known type of container is a :ref:`dict Docker container`.  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -279,8 +249,6 @@ Cromwell
 
 Further reading: `<https://cromwell.readthedocs.io/en/stable/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict CWL:
@@ -289,8 +257,6 @@ CWL
 ---
 *abbreviation for* :ref:`dict Common Workflow Language`  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -304,8 +270,6 @@ DAG
 
 Further reading: `<https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict descriptor file:
@@ -314,8 +278,6 @@ descriptor file
 ---------------
     A file used to programmatically describe a tool or workflow. This file represents the instructions that will actually be executed. On Dockstore, we support .ga, .cwl, .wdl, and .nfl file extensions for :ref:`dict Galaxy`, :ref:`dict CWL`, :ref:`dict WDL`, and :ref:`dict Nextflow` respectively.  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -329,8 +291,6 @@ pronounced "daw-ker", rhymes with walker
 
 Further reading: `<https://docker-curriculum.com/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict Docker container:
@@ -341,8 +301,6 @@ Docker container
 
 Further reading: `<https://www.docker.com/resources/what-container/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict Docker image:
@@ -351,8 +309,6 @@ Docker image
 ------------
     A read-only file that represents a filesystem that contains some sort of code and that code's dependencies. A Docker image can be created using the `docker build` command in conjunction with a :ref:`dict Dockerfile`. If a workflow language references a Docker image, then the workflow executor will download that Docker image (unless was already downloaded previously) and add a writable layer onto the Docker image, which results in the creation of a :ref:`dict Docker container`.  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -363,8 +319,6 @@ Dockerfile
     A file describing the creation of a :ref:`dict Docker image` by running commands that each form a :ref:`dict layer`.  
 
 Further reading: `<https://docs.docker.com/engine/reference/builder/>`_  
-
-.. updated 2022-05-18  
 
 
 
@@ -380,8 +334,6 @@ see also :ref:`dict CLI`
 
 Further reading: `<https://docs.dockstore.org/en/stable/advanced-topics/dockstore-cli/dockstore-cli-faq.html>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict Dockstore GitHub App:
@@ -391,8 +343,6 @@ Dockstore GitHub App
     The GitHub App that allows for Dockstore to communicate with GitHub repositories.  
 
 see also :ref:`dict GitHub App registration`  
-
-.. updated 2022-05-18  
 
 
 
@@ -404,8 +354,6 @@ DOI
 
     An identifier that provides a long-lasting link to some sort of :ref:`dict immutable` digital object. On Dockstore, you can use Zenodo to mint a DOI of your workflows and tools to increase reproducibility.  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -419,8 +367,6 @@ DS-I Africa
 
 Further reading: `<https://commonfund.nih.gov/africadata>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict EC2:
@@ -432,8 +378,6 @@ EC2
     The cloud computing side of :ref:`dict AWS`. When running workflows on these backends, disk size will scale with your workflow requirements automatically. EC2 instances allow you to make use of Amazon's :ref:`dict spot instance` feature, which may reduce the cost of running workflows.  
 
 Further reading: `<https://docs.aws.amazon.com/ec2/index.html>`_  
-
-.. updated 2022-05-18  
 
 
 
@@ -447,8 +391,6 @@ pronounced "ee-gress", rhymes with aggress
 
 .. note:: This term as we define it here is associated with cloud computing and may have different definitions in other contexts.  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict eLwazi:
@@ -461,8 +403,6 @@ pronounced "el-woz-ee", derived from the Xhosa word for knowledge (uLwazi) and t
 
 Further reading: `<https://elwazi.org/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict entry:
@@ -473,8 +413,6 @@ entry
 
 .. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict faceted search:
@@ -484,8 +422,6 @@ faceted search
     A type of search which allows users to narrow down their results based upon certain aspects of the things being searched. On Dockstore, our faceted search at <https://dockstore.org/search> allows users to narrow down their search to a particular workflow language, author, or other fields.  
 
 Further reading: `<https://en.wikipedia.org/wiki/Faceted_search>`_  
-
-.. updated 2022-05-18  
 
 
 
@@ -501,8 +437,6 @@ pronounced "fair", rhymes with pear
 
 Further reading: `<https://www.go-fair.org/fair-principles/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict GA4GH:
@@ -515,8 +449,6 @@ GA4GH
 
 Further reading: `<https://www.ga4gh.org/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict Galaxy:
@@ -527,8 +459,6 @@ Galaxy
 
 Further reading: `<https://galaxyproject.org/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict Galaxy workflow:
@@ -538,8 +468,6 @@ Galaxy workflow
     A type of :ref:`dict workflow` that follows the standards of the :ref:`dict Galaxy` execution system. Dockstore supports the registration of Galaxy workflows with the file extension .ga  
 
 Further reading: `<https://galaxyproject.org/learn/advanced-workflow/>`_  
-
-.. updated 2022-05-18  
 
 
 
@@ -555,8 +483,6 @@ see also :ref:`dict EC2`
 
 Further reading: `<https://cloud.google.com/gcp>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict Gen3:
@@ -567,8 +493,6 @@ Gen3
 
 Further reading: `<https://gen3.org/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict GitHub App registration:
@@ -578,8 +502,6 @@ GitHub App registration
     The recommended way to register a :ref:`dict tool` or :ref:`dict workflow` on Dockstore. This involves creating a :ref:`dict .dockstore.yml` file on the GitHub repository (other source-control methods are not supported) that hosts the tool or workflow, as well as installing the Dockstore GitHub App. This allows a Dockstore entry to remain in sync with the source-control repository automatically, including new branches, tagged commits, and releases created on GitHub after registration of the entry.  
 
 .. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
-
-.. updated 2022-05-18  
 
 
 
@@ -593,8 +515,6 @@ GitHub App tool
 
 see also :ref:`dict GitHub App registration`  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict GitHub App workflow:
@@ -607,8 +527,6 @@ GitHub App workflow
 
 see also :ref:`dict GitHub App registration`  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict immutable:
@@ -618,8 +536,6 @@ immutable
     Unchanging, unable to be modified. Immutability implies that an object cannot be updated.  
 
 
-.. updated 2022-05-18  
-
 
 
 .. _dict interoperable:
@@ -628,8 +544,6 @@ interoperable
 -------------
     The ability of data or tools from multiple resources to effectively integrate data, or operate processes, across all systems with a moderate degree of effort.  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -647,8 +561,6 @@ see also :ref:`dict YAML`
 
 Further reading: `<https://www.json.org/json-en.html>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict Jupyter:
@@ -661,8 +573,6 @@ pronounced "Jupiter" like the planet
 
 Further reading: `<https://jupyter.org/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict kernel:
@@ -672,8 +582,6 @@ kernel
     An operating system's core program that is always loaded in memory, and modulates interactions between software and physical hardware, including but not limited to managing memory access for any program currently in RAM.  
 
 Further reading: `<https://en.wikipedia.org/wiki/Kernel_(operating_system)>`_  
-
-.. updated 2022-05-18  
 
 
 
@@ -687,8 +595,6 @@ Kids First
 
 Further reading: `<https://commonfund.nih.gov/kidsfirst/highlights>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict labels:
@@ -698,8 +604,6 @@ labels
     On Dockstore, we use labels to "tag" Dockstore entries with information about them. Workflow or tool developers can add labels to a Dockstore :ref:`dict entry` page that they have edit access to. Labels cannot contain spaces.  
 
 
-.. updated 2022-05-18  
-
 
 
 .. _dict launch with:
@@ -708,8 +612,6 @@ launch with
 -----------
     On Dockstore, this refers to the functionality of exporting a :ref:`dict workflow` to one of our cloud execution partners.  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -723,8 +625,6 @@ layer
 
 Further reading: `<https://docs.docker.com/storage/storagedriver/#images-and-layers>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict legacy registration:
@@ -734,8 +634,6 @@ legacy registration
     One of the two main ways of registering a :ref:`dict tool` or :ref:`dict workflow`. Legacy methods support a variety of source-control repositories, but new changes to the tool or workflow after registration will not be reflected on Dockstore until the maintainer of the Dockstore :ref:`dict entry` manually refreshes the tool or workflow in Dockstore's UI. For this reason, we generally recommend people use :ref:`dict GitHub App registration` instead.  
 
 .. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
-
-.. updated 2022-05-18  
 
 
 
@@ -747,8 +645,6 @@ legacy tool
 
 .. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict legacy workflow:
@@ -758,8 +654,6 @@ legacy workflow
     On Dockstore, we use this term to refer to a :ref:`dict workflow` that is registered using a :ref:`dict legacy registration` method. Legacy workflows are not automatically synchronized with their source control repository, but can be updated manually by the workflow maintainer. A legacy workflow can be converted into a :ref:`dict GitHub App workflow` via the following process: <https://docs.dockstore.org/en/stable/getting-started/github-apps/migrating-workflows-to-github-apps.html>  
 
 .. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
-
-.. updated 2022-05-18  
 
 
 
@@ -772,8 +666,6 @@ NCI
     A division of the :ref:`dict NIH` focused on cancer research.  
 
 Further reading: `<https://www.nih.gov/about-nih/what-we-do/nih-almanac/national-cancer-institute-nci>`_  
-
-.. updated 2022-05-18  
 
 
 
@@ -789,8 +681,6 @@ NCPI
 
 Further reading: `<https://datascience.nih.gov/nih-cloud-platform-interoperability-effort>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict Nextflow:
@@ -800,8 +690,6 @@ Nextflow
     A Java-based computational workflow engine. Dockstore supports the hosting of Nextflow workflows.  
 
 Further reading: `<https://www.nextflow.io/>`_  
-
-.. updated 2022-05-18  
 
 
 
@@ -813,8 +701,6 @@ NFL
 
     An uncommon acronym for :ref:`dict Nextflow`. This abbreviation is not used as frequently as :ref:`dict CWL` or :ref:`dict WDL`, but does see usage occasionally.  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -828,8 +714,6 @@ NHGRI
 
 Further reading: `<https://www.genome.gov/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict NHLBI:
@@ -841,8 +725,6 @@ NHLBI
     A division of the :ref:`dict NIH` that focuses on heart, lung, blood, and sleep health. Funds the :ref:`dict BioData Catalyst` platform.  
 
 Further reading: `<https://www.nhlbi.nih.gov/>`_  
-
-.. updated 2022-05-18  
 
 
 
@@ -856,8 +738,6 @@ NIH
 
 Further reading: `<https://www.nih.gov/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict OICR:
@@ -869,8 +749,6 @@ OICR
     A non-profit research institute based in Toronto that is focused on cancer detection and treatment. One of the two institutes involved in the development of Dockstore, the other being :ref:`dict UCSC`.  
 
 Further reading: `<https://oicr.on.ca/>`_  
-
-.. updated 2022-05-18  
 
 
 
@@ -886,8 +764,6 @@ pronounced "or-kid", rhymes with kid
 
 Further reading: `<https://info.orcid.org/what-is-orcid/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict organization:
@@ -898,8 +774,6 @@ organization
 
 Further reading: `<https://dockstore.org/organizations>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict parameter file:
@@ -908,8 +782,6 @@ parameter file
 --------------
     A :ref:`dict JSON` or :ref:`dict YAML` file that describes the inputs to a workflow. This usually includes internal links, or links to data in a Google or S3 bucket.  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -925,8 +797,6 @@ see also :ref:`dict spot instance`
 
 Further reading: `<https://cloud.google.com/compute/docs/instances/preemptible>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict Seven Bridges:
@@ -938,8 +808,6 @@ Seven Bridges
 see also :ref:`dict Terra`  
 
 Further reading: `<https://www.sevenbridges.com/platform/>`_  
-
-.. updated 2022-05-18  
 
 
 
@@ -955,8 +823,6 @@ see also :ref:`dict preemptible`
 
 Further reading: `<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict Terra:
@@ -968,8 +834,6 @@ Terra
 see also :ref:`dict Seven Bridges`  
 
 Further reading: `<https://terra.bio>`_  
-
-.. updated 2022-05-18  
 
 
 
@@ -983,8 +847,6 @@ TES
 
 Further reading: `<https://ga4gh.github.io/task-execution-schemas/docs/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict tool:
@@ -996,8 +858,6 @@ tool
 see also :ref:`dict workflow`  
 
 Further reading: `<https://docs.dockstore.org/en/stable/getting-started/intro-to-dockstore-tools-and-workflows.html>`_  
-
-.. updated 2022-05-18  
 
 
 
@@ -1011,8 +871,6 @@ UCSC
 
 Further reading: `<https://ucsc.edu>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict VM:
@@ -1025,8 +883,6 @@ VM
 
 see also :ref:`dict container`  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict WDL:
@@ -1037,8 +893,6 @@ pronounced "widdle", rhymes with riddle
 
 *abbreviation for* :ref:`dict Workflow Description Language`  
 
-
-.. updated 2022-05-18  
 
 
 
@@ -1052,8 +906,6 @@ see also :ref:`dict tool`
 
 Further reading: `<https://docs.dockstore.org/en/stable/getting-started/intro-to-dockstore-tools-and-workflows.html>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict Workflow Description Language:
@@ -1066,8 +918,6 @@ see also :ref:`dict WDL`
 
 Further reading: `<https://openwdl.org/>`_  
 
-.. updated 2022-05-18  
-
 
 
 .. _dict Workflow Execution Service:
@@ -1077,8 +927,6 @@ Workflow Execution Service
     A standardized API developed by :ref:`dict GA4GH` for describing a standard programmatic way to run and manage workflows.  
 
 Further reading: `<https://ga4gh.github.io/workflow-execution-service-schemas/>`_  
-
-.. updated 2022-05-18  
 
 
 
@@ -1095,8 +943,6 @@ pronounced "yah-mul", rhymes with camel
 see also :ref:`dict JSON`  
 
 Further reading: `<https://yaml.org/>`_  
-
-.. updated 2022-05-18  
 
 
 

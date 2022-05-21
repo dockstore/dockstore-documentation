@@ -1,4 +1,6 @@
 .dockstore.yml
+AGC
+Amazon Genomics CLI
 AnVIL Project
 API
 AWS
@@ -10,7 +12,7 @@ categories
 CGC
 CLI
 cloud computing
-collections
+collection
 Common Workflow Language
 container
 Cromwell
@@ -65,12 +67,14 @@ parameter file
 preemptible
 Seven Bridges
 Spot Instance
+Task Execution Service
 Terra
 TES
 tool
 UCSC
 VM
 WDL
+WES
 workflow
 Workflow Description Language
 Workflow Execution Service

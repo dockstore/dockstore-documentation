@@ -6,6 +6,8 @@ Dockstore Dictionary
 	:columns: 3
 
 	* :ref:`dict .dockstore.yml`
+	* :ref:`dict AGC`
+	* :ref:`dict Amazon Genomics CLI`
 	* :ref:`dict AnVIL Project`
 	* :ref:`dict API`
 	* :ref:`dict AWS`
@@ -17,7 +19,7 @@ Dockstore Dictionary
 	* :ref:`dict CGC`
 	* :ref:`dict CLI`
 	* :ref:`dict cloud computing`
-	* :ref:`dict collections`
+	* :ref:`dict collection`
 	* :ref:`dict Common Workflow Language`
 	* :ref:`dict container`
 	* :ref:`dict Cromwell`
@@ -72,12 +74,14 @@ Dockstore Dictionary
 	* :ref:`dict preemptible`
 	* :ref:`dict Seven Bridges`
 	* :ref:`dict Spot Instance`
+	* :ref:`dict Task Execution Service`
 	* :ref:`dict Terra`
 	* :ref:`dict TES`
 	* :ref:`dict tool`
 	* :ref:`dict UCSC`
 	* :ref:`dict VM`
 	* :ref:`dict WDL`
+	* :ref:`dict WES`
 	* :ref:`dict workflow`
 	* :ref:`dict Workflow Description Language`
 	* :ref:`dict Workflow Execution Service`
@@ -93,13 +97,32 @@ Further reading: :doc:`/assets/templates/template </assets/templates/template>`
 
 
 
+.. _dict AGC:
+
+AGC
+---
+*abbreviation for* :ref:`dict Amazon Genomics CLI`  
+
+
+
+
+.. _dict Amazon Genomics CLI:
+
+Amazon Genomics CLI
+-------------------
+    A :ref:`dict CLI`-based tool that supports launching bioinformatics-related workflows on :ref:`dict AWS` cloud infrastructure. Supports the :ref:`dict WES` standard, and can communicate with the :ref:`dict Dockstore CLI`.  
+
+Further reading: `<https://aws.amazon.com/blogs/industries/announcing-amazon-genomics-cli-preview/>`_  
+
+
+
 .. _dict AnVIL Project:
 
 AnVIL Project
 -------------
 *abbreviation for* Analysis Visualization and Informatics Labspace  
 
-    A cloud-based ecosystem funded by :ref:`dict NHGRI`, bringing together Dockstore, :ref:`dict Gen3`, :ref:`dict Terra`, :ref:`dict NCPI`, :ref:`dict Galaxy`, :ref:`dict Jupyter`, Seqr, and Bioconductor into an integrated platform. Sometimes referred to as just "the AnVIL" or "AnVIL".  
+    A federated cloud platform funded by :ref:`dict NHGRI` designed to manage and store genomics and related data, enable population-scale analysis, and facilitate collaboration through the sharing of data, code, and analysis results. Sometimes referred to as just "the AnVIL" or "AnVIL".  
 
 Further reading: `<https://anvilproject.org/>`_  
 
@@ -111,7 +134,7 @@ API
 ---
 *abbreviation for* Application Programmer Interface  
 
-    A software-based intermediary used to exchange data, often between two different platforms. Communication between different cloud platforms is mediated by various APIs, such as :ref:`dict TES`.  
+    A software connection or interface used to exchange data, often between two different platforms. Communication between different cloud platforms is mediated by various APIs, such as :ref:`dict TES`.  
 
 
 
@@ -154,7 +177,7 @@ pronounced "bee-dee-see"
 
 BioData Catalyst
 ----------------
-    An initiative funded by :ref:`dict NHLBI` to connect several cloud-based bioinformatics platforms together to increase reproducibility in bioinformatics. Involves Dockstore, :ref:`dict Terra`, Seven Bridges, Gen3, and PIC-SURE.  
+    A cloud-based platform funded by :ref:`dict NHLBI` to provide tools, applications, and workflows in secure workspaces to expand research in heart, lung, blood, and sleep health.  
 
 Further reading: `<https://biodatacatalyst.nhlbi.nih.gov/>`_  
 
@@ -209,12 +232,13 @@ Further reading: `<https://en.wikipedia.org/wiki/Cloud_computing>`_
 
 
 
-.. _dict collections:
+.. _dict collection:
 
-collections
------------
-    A group of workflows or tools on Dockstore associated with a particular :ref:`dict organization`.  
+collection
+----------
+    A group of at least one :ref:`dict entry` on Dockstore that the members of an :ref:`dict organization` found useful, created themselves, or considered interesting. Each collection has a description, which you can read to see why the organization compiled workflows/tools in a collection  
 
+.. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
 
 
 
@@ -222,7 +246,7 @@ collections
 
 Common Workflow Language
 ------------------------
-    A workflow language that describes how to run command-line tools. CWL is based on Java and can use Java commands within its own commands. :ref:`dict WDL` and CWL are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features.  
+    A workflow language that describes how to run command-line tools. :ref:`dict WDL` and CWL are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features. For example, CWL has the ability to use Javascript expressions within its own commands.  
 
 see also :ref:`dict CWL`  
 
@@ -332,7 +356,7 @@ Dockstore CLI
 
 see also :ref:`dict CLI`  
 
-Further reading: `<https://docs.dockstore.org/en/stable/advanced-topics/dockstore-cli/dockstore-cli-faq.html>`_  
+Further reading: :doc:`/advanced-topics/dockstore-cli/dockstore-cli-faq </advanced-topics/dockstore-cli/dockstore-cli-faq>`  
 
 
 
@@ -340,9 +364,11 @@ Further reading: `<https://docs.dockstore.org/en/stable/advanced-topics/dockstor
 
 Dockstore GitHub App
 --------------------
-    The GitHub App that allows for Dockstore to communicate with GitHub repositories.  
+    The GitHub App that allows for Dockstore to automatically sync changes made in a GitHub repository with an :ref:`dict entry` in Dockstore.  
 
 see also :ref:`dict GitHub App registration`  
+
+Further reading: :doc:`/getting-started/github-apps/github-apps-landing-page </getting-started/github-apps/github-apps-landing-page>`  
 
 
 
@@ -387,7 +413,7 @@ egress
 ------
 pronounced "ee-gress", rhymes with aggress  
 
-    The action of leaving a place. In the context of :ref:`dict cloud computing`, an egress charge is a fee charged for downloading a file. Sometimes, the person hosting the file is charged for data egress. Other times, the person downloading the file is charged.  
+    The action of leaving a place. In the context of :ref:`dict cloud computing`, data egress refers to data being moved from one location to another, such as from the cloud to a local machine, between cloud providers, and between locations of a single cloud provider. Data egress often results in the charge of fees (usually called egress charges). Data egress can be one of the most expensive cloud costs incurred. Sometimes, the person hosting the file is charged for data egress. Other times, the person downloading the file is charged (such as when downloading files from a Google bucket that has the requester-pays option enabled).  
 
 .. note:: This term as we define it here is associated with cloud computing and may have different definitions in other contexts.  
 
@@ -399,7 +425,7 @@ eLwazi
 ------
 pronounced "el-woz-ee", derived from the Xhosa word for knowledge (uLwazi) and the Luganda word for rock symbolizing robustness (Olwazi)  
 
-    An African-lead open data science platform funded as part of the :ref:`dict NIH`'s :ref:`dict DS-I Africa` program. Leverages :ref:`dict Gen3`, :ref:`dict Terra`, and Dockstore.  
+    An African-lead open data science platform funded as part of the :ref:`dict NIH`'s :ref:`dict DS-I Africa` program.  
 
 Further reading: `<https://elwazi.org/>`_  
 
@@ -409,7 +435,7 @@ Further reading: `<https://elwazi.org/>`_
 
 entry
 -----
-    A :ref:`dict tool` or :ref:`dict workflow` on Dockstore. A single entry on Dockstore has a description, a link to the original source-control repository, and at least one :ref:`dict descriptor file` which does some sort of computational task using :ref:`dict CWL`, :ref:`dict WDL`, :ref:`dict Nextflow`, or :ref:`dict Galaxy workflow` syntax. An entry can optionally include a :ref:`dict parameter file` that links to open-access test data. A single entry will include all versions of the tool or workflow that has been registered, with that versioning being based upon the versioning and branches of the source-control repository the descriptor file is hosted on (with the exception of a :ref:`dict legacy tool`, which have versioning based upon their Docker image tags), and any version can be pinned as the default. Entries can be added to :ref:`dict collections` associated with a particular :ref:`dict organization`, or added to :ref:`dict categories` so they can be grouped with other entries that have a similar scientific purpose. Entries may also have :ref:`dict labels` attached to them to help them be found via Dockstore's :ref:`dict faceted search` feature. If the entry is registered using the :ref:`dict Dockstore GitHub App`, then the entry will stay in sync automatically with the source-control repository. Additionally, if an entry is a valid :ref:`dict workflow`, any user can use our :ref:`dict launch with` feature to import the workflow to one of our cloud compute partners.  
+    A :ref:`dict tool` or :ref:`dict workflow` on Dockstore. A single entry on Dockstore has a description, a link to the original source-control repository, and at least one :ref:`dict descriptor file` which does some sort of computational task using :ref:`dict CWL`, :ref:`dict WDL`, :ref:`dict Nextflow`, or :ref:`dict Galaxy workflow` syntax. An entry can optionally include a :ref:`dict parameter file` that links to open-access test data. A single entry will include all versions of the tool or workflow that has been registered, with that versioning being based upon the versioning and branches of the source-control repository the descriptor file is hosted on (with the exception of a :ref:`dict legacy tool`, which have versioning based upon their Docker image tags), and any version can be pinned as the default. Entries can be added to a :ref:`dict collection` associated with a particular :ref:`dict organization`, or added to :ref:`dict categories` so they can be grouped with other entries that have a similar scientific purpose. Entries may also have :ref:`dict labels` attached to them to help them be found via Dockstore's :ref:`dict faceted search` feature. If the entry is registered using the :ref:`dict Dockstore GitHub App`, then the entry will stay in sync automatically with the source-control repository. Additionally, if an entry is a valid :ref:`dict workflow`, any user can use our :ref:`dict launch with` feature to import the workflow to one of our cloud compute partners.  
 
 .. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
 
@@ -419,7 +445,7 @@ entry
 
 faceted search
 --------------
-    A type of search which allows users to narrow down their results based upon certain aspects of the things being searched. On Dockstore, our faceted search at <https://dockstore.org/search> allows users to narrow down their search to a particular workflow language, author, or other fields.  
+    A type of search which allows users to narrow down their results based upon certain aspects of the things being searched. On Dockstore, our faceted search at <https://dockstore.org/search> allows users to narrow down their search to a particular workflow language, author, and/or other fields.  
 
 Further reading: `<https://en.wikipedia.org/wiki/Faceted_search>`_  
 
@@ -455,7 +481,7 @@ Further reading: `<https://www.ga4gh.org/>`_
 
 Galaxy
 ------
-    An open-source platform that uses :ref:`dict FAIR` principles, most well-known for its web-based UI which can be used to run a variety of bioinformatics tools.  
+    An open-source platform that uses :ref:`dict FAIR` principles, most well-known for its web-based UI used to create and run a variety of bioinformatics tools.  
 
 Further reading: `<https://galaxyproject.org/>`_  
 
@@ -499,9 +525,11 @@ Further reading: `<https://gen3.org/>`_
 
 GitHub App registration
 -----------------------
-    The recommended way to register a :ref:`dict tool` or :ref:`dict workflow` on Dockstore. This involves creating a :ref:`dict .dockstore.yml` file on the GitHub repository (other source-control methods are not supported) that hosts the tool or workflow, as well as installing the Dockstore GitHub App. This allows a Dockstore entry to remain in sync with the source-control repository automatically, including new branches, tagged commits, and releases created on GitHub after registration of the entry.  
+    The recommended way to register a :ref:`dict tool` or :ref:`dict workflow` on Dockstore. This involves creating a :ref:`dict .dockstore.yml` file on the GitHub repository (other source-control methods are not supported) that hosts the tool or workflow, as well as installing the :ref:`dict Dockstore GitHub App`. This allows a Dockstore entry to remain in sync with the source-control repository automatically, including new branches, tagged commits, and releases created on GitHub after registration of the entry.  
 
 .. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
+
+Further reading: :doc:`/getting-started/github-apps/github-apps-landing-page </getting-started/github-apps/github-apps-landing-page>`  
 
 
 
@@ -569,7 +597,7 @@ Jupyter
 -------
 pronounced "Jupiter" like the planet  
 
-    A project focused on developing "notebooks" for programming languages, most famously Python due to it starting as a splinter of iPython in the early 2010s, but including other languages as well such as R. Jupyter notebooks allow for blocks of code to be nestled between markdown text, allowing for easy documentation of the code blocks and reproducibility of analysis.  
+    A project focused on developing "notebooks" for programming languages, most famously Python due to it starting as a splinter of iPython in the early 2010s. Other languages such as R are also supported. Jupyter notebooks allow for blocks of code to be nestled between markdown text, allowing for easy documentation of the code blocks and reproducibility of analysis.  
 
 Further reading: `<https://jupyter.org/>`_  
 
@@ -641,7 +669,7 @@ legacy registration
 
 legacy tool
 -----------
-    On Dockstore, we use this term to refer to a :ref:`dict tool` that is registered using a :ref:`dict legacy registration` method. Legacy tools are not automatically synchronized with their source control repository, but can be updated manually by the tool maintainer. Additionally, legacy tools require a :ref:`dict Dockerfile` to be registered, and are versioned based on the tags of their associated :ref:`dict Docker image`. A legacy tool can be converted into a :ref:`dict GitHub App tool` via the following process: <https://docs.dockstore.org/en/stable/getting-started/github-apps/migrating-tools-to-github-apps.html>  
+    On Dockstore, we use this term to refer to a :ref:`dict tool` that is registered using a :ref:`dict legacy registration` method. Legacy tools are not automatically synchronized with their source control repository, but can be updated manually by the tool maintainer. Additionally, legacy tools require a :ref:`dict Dockerfile` to be registered, and are versioned based on the tags of their associated :ref:`dict Docker image`. A legacy tool can be converted into a :ref:`dict GitHub App tool` via :doc:`the method described here </getting-started/github-apps/migrating-tools-to-github-apps>`.  
 
 .. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
 
@@ -651,7 +679,7 @@ legacy tool
 
 legacy workflow
 ---------------
-    On Dockstore, we use this term to refer to a :ref:`dict workflow` that is registered using a :ref:`dict legacy registration` method. Legacy workflows are not automatically synchronized with their source control repository, but can be updated manually by the workflow maintainer. A legacy workflow can be converted into a :ref:`dict GitHub App workflow` via the following process: <https://docs.dockstore.org/en/stable/getting-started/github-apps/migrating-workflows-to-github-apps.html>  
+    On Dockstore, we use this term to refer to a :ref:`dict workflow` that is registered using a :ref:`dict legacy registration` method. Legacy workflows are not automatically synchronized with their source control repository, but can be updated manually by the workflow maintainer. A legacy workflow can be converted into a :ref:`dict GitHub App workflow` via :doc:`the method described here </getting-started/github-apps/migrating-workflows-to-github-apps>`.  
 
 .. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
 
@@ -732,7 +760,7 @@ Further reading: `<https://www.nhlbi.nih.gov/>`_
 
 NIH
 ---
-*abbreviation for* National Institute of Health  
+*abbreviation for* National Institutes of Health  
 
     An American government institution, part of the Department of Health and Human Services (HHS), that engages in medical research.  
 
@@ -770,7 +798,7 @@ Further reading: `<https://info.orcid.org/what-is-orcid/>`_
 
 organization
 ------------
-    In the context of Dockstore, an organization is a representation of some sort of institute, grant, project, or company. Organizations are created by Dockstore admins, but any user with at least two external accounts linked to their Dockstore account can request the creation of an organization on Dockstore.  
+    In the context of Dockstore, an organization is a representation of some sort of institute, grant, project, or company. Organizations are approved by Dockstore admins, but any user with at least two external accounts linked to their Dockstore account (and have the authority to speak for the institute, grant, etc. in a technical manner) can request the creation of an organization on Dockstore.  
 
 Further reading: `<https://dockstore.org/organizations>`_  
 
@@ -780,7 +808,7 @@ Further reading: `<https://dockstore.org/organizations>`_
 
 parameter file
 --------------
-    A :ref:`dict JSON` or :ref:`dict YAML` file that describes the inputs to a workflow. This usually includes internal links, or links to data in a Google or S3 bucket.  
+    A :ref:`dict JSON` or :ref:`dict YAML` file that describes the inputs to a workflow. This usually includes internal links to files within the same source-control repository, or links to data in a Google or S3 bucket.  
 
 
 
@@ -789,7 +817,7 @@ parameter file
 
 preemptible
 -----------
-    A type of :ref:`dict GCP` :ref:`dict VM` which may have its running jobs interrupted at any given time, and will be shut down if running for more than 24 hours. A preemptible machine is significantly cheaper than a standard VM, at the cost of possibly stopping before your computational work is finish. You can use preemptible machines when running workflows on GCP backends to save on compute costs.  
+    A type of :ref:`dict GCP` :ref:`dict VM` which may have its running jobs interrupted at any given time, and will be shut down if running for more than 24 hours. A preemptible machine is significantly cheaper than a standard VM, at the cost of possibly stopping before your computational work is finished. You can use preemptible machines when running workflows on GCP backends to save on compute costs.  
 
 .. note:: This term as we define it here is associated with Google and may have different definitions in other contexts.  
 
@@ -803,7 +831,7 @@ Further reading: `<https://cloud.google.com/compute/docs/instances/preemptible>`
 
 Seven Bridges
 -------------
-    A cloud-based workflow execution platform developed by Seven Bridges Genomics. Seven Bridges supports the execution of :ref:`dict CWL` workflows and features a graph-based GUI to make workflow development easier. The computational backend of a Seven Bridges workspace can be selected by the user, with both :ref:`dict GCP` and :ref:`dict AWS` being supported. Dockstore supports directly importing :ref:`dict CWL` workflows into a Seven Bridges workspace. Seven Bridges is part of the :ref:`dict BioData Catalyst` grant.  
+    A cloud-based workflow execution platform developed by Seven Bridges Genomics. Seven Bridges supports the execution of :ref:`dict CWL` workflows and features a graph-based GUI to make workflow development easier. The computational backend of a Seven Bridges workspace can be selected by the user, with both :ref:`dict GCP` and :ref:`dict AWS` being supported. Dockstore supports directly importing :ref:`dict CWL` workflows into a Seven Bridges workspace. Seven Bridges is part of the :ref:`dict BioData Catalyst` consortium.  
 
 see also :ref:`dict Terra`  
 
@@ -825,11 +853,21 @@ Further reading: `<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spo
 
 
 
+.. _dict Task Execution Service:
+
+Task Execution Service
+----------------------
+    A standardized :ref:`dict API` developed by :ref:`dict GA4GH` for describing and executing batch execution tasks.  
+
+Further reading: `<https://ga4gh.github.io/task-execution-schemas/docs/>`_  
+
+
+
 .. _dict Terra:
 
 Terra
 -----
-    A cloud-based workflow execution platform developed by the Broad Institute. Terra supports the execution of :ref:`dict WDL` workflows, Jupyter/R notebooks, and integrated apps such as a DICOM-file viewer. The computational backend of a Terra workspace is based upon Google, allowing Google-specific features such as :ref:`dict preemptible` machines to be used in workflows. Dockstore supports directly importing :ref:`dict WDL` workflows into a Terra workspace. Terra is part of the :ref:`dict BioData Catalyst`, :ref:`dict AnVIL Project`, and :ref:`dict eLwazi` grants.  
+    A cloud-based workflow execution platform developed by the Broad Institute. Terra supports the execution of :ref:`dict WDL` workflows, Jupyter/R notebooks, and integrated apps. The computational backend of a Terra workspace is based upon Google, allowing Google-specific features such as :ref:`dict preemptible` machines to be used in workflows. Dockstore supports directly importing :ref:`dict WDL` workflows into a Terra workspace. Terra is part of the :ref:`dict BioData Catalyst`, :ref:`dict AnVIL Project`, and :ref:`dict eLwazi` consortia.  
 
 see also :ref:`dict Seven Bridges`  
 
@@ -841,11 +879,8 @@ Further reading: `<https://terra.bio>`_
 
 TES
 ---
-*abbreviation for* Task Execution Service  
+*abbreviation for* :ref:`dict Task Execution Service`  
 
-    A standardized API developed by :ref:`dict GA4GH` for describing and executing batch execution tasks.  
-
-Further reading: `<https://ga4gh.github.io/task-execution-schemas/docs/>`_  
 
 
 
@@ -857,7 +892,7 @@ tool
 
 see also :ref:`dict workflow`  
 
-Further reading: `<https://docs.dockstore.org/en/stable/getting-started/intro-to-dockstore-tools-and-workflows.html>`_  
+Further reading: :doc:`/getting-started/intro-to-dockstore-tools-and-workflows </getting-started/intro-to-dockstore-tools-and-workflows>`  
 
 
 
@@ -896,6 +931,17 @@ pronounced "widdle", rhymes with riddle
 
 
 
+.. _dict WES:
+
+WES
+---
+pronounced "wes", rhymes with mess  
+
+*abbreviation for* :ref:`dict Workflow Execution Service`  
+
+
+
+
 .. _dict workflow:
 
 workflow
@@ -904,7 +950,7 @@ workflow
 
 see also :ref:`dict tool`  
 
-Further reading: `<https://docs.dockstore.org/en/stable/getting-started/intro-to-dockstore-tools-and-workflows.html>`_  
+Further reading: :doc:`/getting-started/intro-to-dockstore-tools-and-workflows </getting-started/intro-to-dockstore-tools-and-workflows>`  
 
 
 
@@ -924,7 +970,7 @@ Further reading: `<https://openwdl.org/>`_
 
 Workflow Execution Service
 --------------------------
-    A standardized API developed by :ref:`dict GA4GH` for describing a standard programmatic way to run and manage workflows.  
+    A standardized :ref:`dict API` developed by :ref:`dict GA4GH` for describing a standard programmatic way to run and manage workflows. This standard, also known as :ref:`dict WES`, can be launched using the :ref:`dict Dockstore CLI` as described in this Dockstore blog post: <https://medium.com/dockstore/dockstore-partners-with-aws-agc-to-make-launching-workflows-quick-and-easy-7213510dabd8>  
 
 Further reading: `<https://ga4gh.github.io/workflow-execution-service-schemas/>`_  
 

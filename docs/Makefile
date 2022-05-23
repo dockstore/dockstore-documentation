@@ -12,6 +12,7 @@ help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 glossary:
+	echo "\033[1mGenerating dictionary.rst...\033[0m"
 	python _attic/glossary_generator.py
 
 .PHONY: help Makefile
@@ -19,5 +20,5 @@ glossary:
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
-	python _attic/glossary_generator.py
+	make glossary
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)

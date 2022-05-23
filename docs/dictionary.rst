@@ -401,7 +401,7 @@ EC2
 ---
 *abbreviation for* Elastic Compute Cloud  
 
-    The cloud computing side of :ref:`dict AWS`. When running workflows on these backends, disk size will scale with your workflow requirements automatically. EC2 instances allow you to make use of Amazon's :ref:`dict spot instance` feature, which may reduce the cost of running workflows.  
+    The cloud computing side of :ref:`dict AWS`. You can make use of Amazon's :ref:`dict spot instance` feature, which may reduce the cost of running workflows, when using EC2 instances.  
 
 Further reading: `<https://docs.aws.amazon.com/ec2/index.html>`_  
 
@@ -629,7 +629,7 @@ Further reading: `<https://commonfund.nih.gov/kidsfirst/highlights>`_
 
 labels
 ------
-    On Dockstore, we use labels to "tag" Dockstore entries with information about them. Workflow or tool developers can add labels to a Dockstore :ref:`dict entry` page that they have edit access to. Labels cannot contain spaces.  
+    On Dockstore, we use labels to "tag" Dockstore entries with information about them. Workflow or tool developers can add labels to a Dockstore :ref:`dict entry` page that they have edit access to. An entry's labels will appear in search results.  
 
 
 
@@ -703,7 +703,7 @@ NCPI
 ----
 *abbreviation for* NIH Cloud Platform Interoperability  
 
-    An effort to connect five :ref:`dict NIH` cloud projects and ensure they are interoperable. The five projects covered under this are the :ref:`dict AnVIL Project`, :ref:`dict BioData Catalyst`, Cancer Research Data Commons, Kids First, and the National Center for Biotechnology Information.  
+    An effort to connect five :ref:`dict NIH` cloud projects and ensure they are interoperable. The five projects covered under this are the :ref:`dict AnVIL Project`, :ref:`dict BioData Catalyst`, Cancer Research Data Commons, :ref:`dict Kids First`, and the National Center for Biotechnology Information.  
 
 .. note:: This term as we define it here is associated with NIH and may have different definitions in other contexts.  
 

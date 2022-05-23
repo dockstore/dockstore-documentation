@@ -17,8 +17,7 @@ dotDockstoredotYAML = GlossEntry(".dockstore.yml",
 	definition="This file is part of [GitHub App registration]. It indexes workflows or tools within a repository, including their optional test parameter files, and the author(s) of said workflows or tools.", 
 	furtherreading="/assets/templates/template", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 AGC = GlossEntry("AGC",
 	acronym_full="[Amazon Genomics CLI]")
@@ -27,8 +26,7 @@ AmazonGenomicsCLI = GlossEntry("Amazon Genomics CLI",
 	definition="A [CLI]-based tool that supports launching bioinformatics-related workflows on [AWS] cloud infrastructure. Supports the [WES] standard, and can communicate with the [Dockstore CLI].", 
 	furtherreading="https://aws.amazon.com/blogs/industries/announcing-amazon-genomics-cli-preview/", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 AnVIL = GlossEntry("AnVIL Project", 
 	acronym_full="Analysis Visualization and Informatics Labspace", 
@@ -42,8 +40,7 @@ API = GlossEntry("API",
 	definition="A software connection or interface used to exchange data, often between two different platforms. Communication between different cloud platforms is mediated by various APIs, such as [TES].", 
 	furtherreading="", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 AWS = GlossEntry("AWS", 
 	acronym_full="Amazon Web Services", 
@@ -51,7 +48,7 @@ AWS = GlossEntry("AWS",
 	furtherreading="https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do", 
 	institute="", 
 	pronunciation="", 
-	seealso="GCP")
+	seealso="[GCP]")
 
 BDC = GlossEntry("BDC", 
 	acronym_full="[BioData Catalyst]", 
@@ -65,16 +62,14 @@ BioDataCatalyst = GlossEntry("BioData Catalyst",
 	definition="A cloud-based platform funded by [NHLBI] to provide tools, applications, and workflows in secure workspaces to expand research in heart, lung, blood, and sleep health.", 
 	furtherreading="https://biodatacatalyst.nhlbi.nih.gov/", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 CancerGenomicsCloud = GlossEntry("Cancer Genomics Cloud", 
 	acronym_full="", 
 	definition="A cloud platform by [Seven Bridges] and funded by [NCI] for bioinformatics analysis.", 
 	furtherreading="", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 CGC = GlossEntry("CGC", 
 	acronym_full="[Cancer Genomics Cloud]")
@@ -84,32 +79,28 @@ CLI = GlossEntry("CLI",
 	definition="A program that can be interacted with on the command line, usually via \"Terminal\" on MacOS and Linux or \"cmd\"/Command Prompt on Windows. CLI programs generally do not have a graphical user interface.", 
 	furtherreading="https://en.wikipedia.org/wiki/Command-line_interface", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 CloudComputing = GlossEntry("cloud computing", 
 	acronym_full="", 
 	definition="Doing computational tasks on a remote machine that is made available on-demand without the user having to manage all aspects of it. Generally implies that the user is essentially renting computational resources from someone else. Well-known cloud providers include [GCP], [AWS], Microsoft Azure, and Alibaba Cloud.", 
 	furtherreading="https://en.wikipedia.org/wiki/Cloud_computing", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 Catagories = GlossEntry("categories", 
 	acronym_full="", 
 	definition="A group of workflows or tools curated by Dockstore with a similar scientific purpose.", 
 	furtherreading="", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 Collections = GlossEntry("collection", 
 	acronym_full="", 
 	definition="A group of at least one [entry] on Dockstore that the members of an [organization] found useful, created themselves, or considered interesting. Each collection has a description, which you can read to see why the organization compiled workflows/tools in a collection", 
 	furtherreading="", 
 	institute="Dockstore", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 CommonWorkflowLanguage = GlossEntry("Common Workflow Language", 
 	acronym_full="", 
@@ -117,23 +108,21 @@ CommonWorkflowLanguage = GlossEntry("Common Workflow Language",
 	furtherreading="https://www.commonwl.org/user_guide/", 
 	institute="", 
 	pronunciation="", 
-	seealso="CWL")
+	seealso="[CWL], [WDL]")
 
 Container = GlossEntry("container", 
 	acronym_full="", 
 	definition="An emulated computer system that contains programs and their prerequisites, but does not contain the entire operating system. Unlike a [VM], a container shares the same kernel as the host OS. A well known type of container is a [Docker container].", 
-	furtherreading="", 
+	furtherreading="https://en.wikipedia.org/wiki/OS-level_virtualization", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 Cromwell = GlossEntry("Cromwell", 
 	acronym_full="", 
 	definition="An open-source [WDL] executor managed by the Broad Institute. Cromwell is the default executor for the [Dockstore CLI] and is the executor used by [Terra].", 
 	furtherreading="https://cromwell.readthedocs.io/en/stable/", 
 	institute="Broad Institute", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 CWL = GlossEntry("CWL", 
 	acronym_full="[Common Workflow Language]")
@@ -143,48 +132,42 @@ DAG = GlossEntry("DAG",
 	definition="A directional graph like a flowchart that does not have any loops. On Dockstore we use DAGs to show the steps that a workflow takes.", 
 	furtherreading="https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 DescriptorFile = GlossEntry("descriptor file", 
 	acronym_full="", 
 	definition="A file used to programmatically describe a tool or workflow. This file represents the instructions that will actually be executed. On Dockstore, we support .ga, .cwl, .wdl, and .nfl file extensions for [Galaxy], [CWL], [WDL], and [Nextflow] respectively.", 
 	furtherreading="", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 Docker = GlossEntry("Docker", 
 	acronym_full="", 
 	definition="A program that can create \"images\" which are somewhat similar to virtual machines, as well as run those images. In the context of bioinformatics, this technology has two main benefits: First, a [Docker image] bundles up everything a given piece of software needs to run, meaning that someone who wants to run (for example) samtools via Docker only needs to install Docker, not samtools. Second, an instance of a Docker image is a relatively standardized environment even when running on different backends, meaning that two people running the same software in the same Docker image on two different computers are likely to get the exact same results. In other words, Docker is good for reproducibility and ease of use.", 
 	furtherreading="https://docker-curriculum.com/", 
 	institute="", 
-	pronunciation='"daw-ker", rhymes with walker', 
-	seealso="")
+	pronunciation='"daw-ker", rhymes with walker')
 
 DockerContainer = GlossEntry("Docker container", 
 	acronym_full="", 
 	definition="In order to actually use the software inside a [Docker image] using the `docker run` command, the Docker program creates a writable [layer] on top of the image, which leads to the creation of a [Docker container]. You can think of a Docker image as an unchanging template, and a Docker container as a writable instance generated from that template. A Docker image can exist on its own, but a Docker container requires a Docker image.", 
 	furtherreading="https://www.docker.com/resources/what-container/", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 Dockerfile = GlossEntry("Dockerfile", 
 	acronym_full="", 
 	definition="A file describing the creation of a [Docker image] by running commands that each form a [layer].", 
 	furtherreading="https://docs.docker.com/engine/reference/builder/", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 DockerImage = GlossEntry("Docker image", 
 	acronym_full="", 
 	definition="A read-only file that represents a filesystem that contains some sort of code and that code's dependencies. A Docker image can be created using the `docker build` command in conjunction with a [Dockerfile]. If a workflow language references a Docker image, then the workflow executor will download that Docker image (unless was already downloaded previously) and add a writable layer onto the Docker image, which results in the creation of a [Docker container].", 
 	furtherreading="", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 DockstoreCLI = GlossEntry("Dockstore CLI", 
 	acronym_full="Dockstore Command Line Interface", 
@@ -192,7 +175,7 @@ DockstoreCLI = GlossEntry("Dockstore CLI",
 	furtherreading="/advanced-topics/dockstore-cli/dockstore-cli-faq", 
 	institute="", 
 	pronunciation="", 
-	seealso="CLI")
+	seealso="[CLI]")
 
 DockstoreGHA = GlossEntry("Dockstore GitHub App", 
 	acronym_full="", 
@@ -200,95 +183,84 @@ DockstoreGHA = GlossEntry("Dockstore GitHub App",
 	furtherreading="/getting-started/github-apps/github-apps-landing-page", 
 	institute="", 
 	pronunciation='', 
-	seealso="GitHub App registration")
+	seealso="[GitHub App registration]")
 
 DOI = GlossEntry("DOI", 
 	acronym_full="Digital Object Identifier", 
 	definition="An identifier that provides a long-lasting link to some sort of [immutable] digital object. On Dockstore, you can use Zenodo to mint a DOI of your workflows and tools to increase reproducibility. ", 
 	furtherreading="", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 DSIAfrica = GlossEntry("DS-I Africa", 
 	acronym_full="Data Science for health discovery and Innovation in Africa", 
 	definition="An [NIH] initiative to leverage data science to address the African continent's public health needs.", 
 	furtherreading="https://commonfund.nih.gov/africadata", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 EC2 = GlossEntry("EC2", 
 	acronym_full="Elastic Compute Cloud", 
 	definition="The cloud computing side of [AWS]. You can make use of Amazon's [spot instance] feature, which may reduce the cost of running workflows, when using EC2 instances.", 
 	furtherreading="https://docs.aws.amazon.com/ec2/index.html", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 Egress = GlossEntry("egress", 
 	acronym_full="", 
 	definition="The action of leaving a place. In the context of [cloud computing], data egress refers to data being moved from one location to another, such as from the cloud to a local machine, between cloud providers, and between locations of a single cloud provider. Data egress often results in the charge of fees (usually called egress charges). Data egress can be one of the most expensive cloud costs incurred. Sometimes, the person hosting the file is charged for data egress. Other times, the person downloading the file is charged (such as when downloading files from a Google bucket that has the requester-pays option enabled).", 
 	furtherreading="", 
 	institute="cloud computing", 
-	pronunciation='"ee-gress", rhymes with aggress', 
-	seealso="")
+	pronunciation='"ee-gress", rhymes with aggress')
 
 Elwazi = GlossEntry("eLwazi", 
 	acronym_full="", 
 	definition="An African-lead open data science platform funded as part of the [NIH]'s [DS-I Africa] program.", 
 	furtherreading="https://elwazi.org/",
 	institute="", 
-	pronunciation='"el-woz-ee", derived from the Xhosa word for knowledge (uLwazi) and the Luganda word for rock symbolizing robustness (Olwazi)', 
-	seealso="")
+	pronunciation='"el-woz-ee", derived from the Xhosa word for knowledge (uLwazi) and the Luganda word for rock symbolizing robustness (Olwazi)')
 
 Entry = GlossEntry("entry", 
 	acronym_full="", 
 	definition="A [tool] or [workflow] on Dockstore. A single entry on Dockstore has a description, a link to the original source-control repository, and at least one [descriptor file] which does some sort of computational task using [CWL], [WDL], [Nextflow], or [Galaxy workflow] syntax. An entry can optionally include a [parameter file] that links to open-access test data. A single entry will include all versions of the tool or workflow that has been registered, with that versioning being based upon the versioning and branches of the source-control repository the descriptor file is hosted on (with the exception of a [legacy tool], which have versioning based upon their Docker image tags), and any version can be pinned as the default. Entries can be added to a [collection] associated with a particular [organization], or added to [categories] so they can be grouped with other entries that have a similar scientific purpose. Entries may also have [labels] attached to them to help them be found via Dockstore's [faceted search] feature. If the entry is registered using the [Dockstore GitHub App], then the entry will stay in sync automatically with the source-control repository. Additionally, if an entry is a valid [workflow], any user can use our [launch with] feature to import the workflow to one of our cloud compute partners.", 
 	furtherreading="", 
 	institute="Dockstore", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 FacetedSearch = GlossEntry("faceted search", 
 	acronym_full="", 
 	definition="A type of search which allows users to narrow down their results based upon certain aspects of the things being searched. On Dockstore, our faceted search at <https://dockstore.org/search> allows users to narrow down their search to a particular workflow language, author, and/or other fields.", 
 	furtherreading="https://en.wikipedia.org/wiki/Faceted_search", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 FAIR = GlossEntry("FAIR", 
 	acronym_full="Findable, Accessible, Interoperable, and Reusable", 
 	definition="A set of guidelines to improve the Findability, Accessibility, Interoperability, and Reuse of digital assets. This concept is often applied to data, but can be applied to other assets such as workflows.", 
 	furtherreading="https://www.go-fair.org/fair-principles/",
 	institute="", 
-	pronunciation='"fair", rhymes with pear', 
-	seealso="")
+	pronunciation='"fair", rhymes with pear')
 
 GA4GH = GlossEntry("GA4GH", 
 	acronym_full="Global Alliance For Genomics and Health", 
 	definition="A network of public and private institutions which aims to accelerate progress in genomic research and human health by cultivating a common framework of standards and harmonized approaches for effective and responsible genomic and health-related data sharing.", 
 	furtherreading="https://www.ga4gh.org/", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 Galaxy = GlossEntry("Galaxy", 
 	acronym_full="", 
 	definition="An open-source platform that uses [FAIR] principles, most well-known for its web-based UI used to create and run a variety of bioinformatics tools.", 
 	furtherreading="https://galaxyproject.org/", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 GalaxyWorkflow = GlossEntry("Galaxy workflow", 
 	acronym_full="", 
 	definition="A type of [workflow] that follows the standards of the [Galaxy] execution system. Dockstore supports the registration of Galaxy workflows with the file extension .ga", 
 	furtherreading="https://galaxyproject.org/learn/advanced-workflow/", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 GCP = GlossEntry("GCP", 
 	acronym_full="Google Cloud Platform", 
@@ -296,55 +268,51 @@ GCP = GlossEntry("GCP",
 	furtherreading="https://cloud.google.com/gcp", 
 	institute="", 
 	pronunciation="", 
-	seealso="EC2")
+	seealso="[EC2]")
 
 Gen3 = GlossEntry("Gen3", 
 	acronym_full="", 
 	definition="A data science platform affiliated with the University of Chicago. Hosts phenotypic and genotypic data for the [BD Catalyst], [AnVIL Project], [Kids First], and [eLwazi] grants.", 
 	furtherreading="https://gen3.org/", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 GitHubAppRegistration = GlossEntry("GitHub App registration", 
 	acronym_full="", 
 	definition="The recommended way to register a [tool] or [workflow] on Dockstore. This involves creating a [.dockstore.yml] file on the GitHub repository (other source-control methods are not supported) that hosts the tool or workflow, as well as installing the [Dockstore GitHub App]. This allows a Dockstore entry to remain in sync with the source-control repository automatically, including new branches, tagged commits, and releases created on GitHub after registration of the entry.", 
 	furtherreading="/getting-started/github-apps/github-apps-landing-page", 
 	institute="Dockstore", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 GitHubAppTool = GlossEntry("GitHub App tool", 
 	acronym_full="", 
-	definition="A [tool] registered using the Dockstore GitHub App.", 
+	definition="A [tool] registered using the [Dockstore GitHub App].", 
 	furtherreading="", 
 	institute="Dockstore", 
 	pronunciation='', 
-	seealso="GitHub App registration")
+	seealso="[GitHub App registration]")
 
 GitHubAppWorkflow = GlossEntry("GitHub App workflow", 
 	acronym_full="", 
-	definition="A [workflow] registered with the Dockstore GitHub App.", 
+	definition="A [workflow] registered with the [Dockstore GitHub App].", 
 	furtherreading="", 
 	institute="Dockstore", 
 	pronunciation='', 
-	seealso="GitHub App registration")
+	seealso="[GitHub App registration]")
 
 Immutable = GlossEntry("immutable", 
 	acronym_full="", 
 	definition="Unchanging, unable to be modified. Immutability implies that an object cannot be updated.", 
 	furtherreading="", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 Interoperable = GlossEntry("interoperable", 
 	acronym_full="", 
 	definition="The ability of data or tools from multiple resources to effectively integrate data, or operate processes, across all systems with a moderate degree of effort.", 
 	furtherreading="", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 JSON = GlossEntry("JSON", 
 	acronym_full="JavaScript Object Notation", 
@@ -352,23 +320,21 @@ JSON = GlossEntry("JSON",
 	furtherreading="https://www.json.org/json-en.html", 
 	institute="", 
 	pronunciation='"jason"', 
-	seealso="YAML")
+	seealso="[YAML]")
 
 Jupyter = GlossEntry("Jupyter", 
 	acronym_full="", 
 	definition="A project focused on developing \"notebooks\" for programming languages, most famously Python due to it starting as a splinter of iPython in the early 2010s. Other languages such as R are also supported. Jupyter notebooks allow for blocks of code to be nestled between markdown text, allowing for easy documentation of the code blocks and reproducibility of analysis.", 
 	furtherreading="https://jupyter.org/", 
 	institute="", 
-	pronunciation='"Jupiter" like the planet', 
-	seealso="")
+	pronunciation='"Jupiter" like the planet')
 
 Kernel = GlossEntry("kernel", 
 	acronym_full="", 
 	definition="An operating system's core program that is always loaded in memory, and modulates interactions between software and physical hardware, including but not limited to managing memory access for any program currently in RAM.", 
 	furtherreading="https://en.wikipedia.org/wiki/Kernel_(operating_system)", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 # I am purposely choosing the word "birth abnormalities" instead of "birth defects" and would prefer this
 # definition not be changed to "birth defects" due to the fact Kids First also studies intersexuality.
@@ -379,144 +345,126 @@ KidsFirst = GlossEntry("Kids First",
 	definition="An [NIH] program, supported by the NIH Common Fund, relating to the influence of genomics on pediatric health, with a focus on pediatric cancer and structural birth abnormalities (such as cleft palate).", 
 	furtherreading="https://commonfund.nih.gov/kidsfirst/highlights", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 Labels = GlossEntry("labels", 
 	acronym_full="", 
 	definition="On Dockstore, we use labels to \"tag\" Dockstore entries with information about them. Workflow or tool developers can add labels to a Dockstore [entry] page that they have edit access to. An entry's labels will appear in search results.", 
 	furtherreading="", 
-	institute="", 
-	pronunciation='', 
-	seealso="")
+	institute="Dockstore", 
+	pronunciation='')
 
 LaunchWith = GlossEntry("launch with", 
 	acronym_full="", 
 	definition="On Dockstore, this refers to the functionality of exporting a [workflow] to one of our cloud execution partners.", 
 	furtherreading="", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 Layer = GlossEntry("layer", 
 	acronym_full="", 
 	definition="In the context of Docker, a layer is a component of a Docker image. Each `RUN`, `COPY`, and `ADD` instruction in a [Dockerfile] will lead to the creation of a layer.", 
 	furtherreading="https://docs.docker.com/storage/storagedriver/#images-and-layers", 
-	institute="Docker", 
-	pronunciation="", 
-	seealso="")
+	institute="", 
+	pronunciation="")
 
 LegacyRegistration = GlossEntry("legacy registration", 
 	acronym_full="", 
 	definition="One of the two main ways of registering a [tool] or [workflow]. Legacy methods support a variety of source-control repositories, but new changes to the tool or workflow after registration will not be reflected on Dockstore until the maintainer of the Dockstore [entry] manually refreshes the tool or workflow in Dockstore's UI. For this reason, we generally recommend people use [GitHub App registration] instead.", 
 	furtherreading="", 
 	institute="Dockstore", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 LegacyTool = GlossEntry("legacy tool", 
 	acronym_full="",
 	definition="On Dockstore, we use this term to refer to a [tool] that is registered using a [legacy registration] method. Legacy tools are not automatically synchronized with their source control repository, but can be updated manually by the tool maintainer. Additionally, legacy tools require a [Dockerfile] to be registered, and are versioned based on the tags of their associated [Docker image]. A legacy tool can be converted into a [GitHub App tool] via :doc:`the method described here </getting-started/github-apps/migrating-tools-to-github-apps>`.", 
 	furtherreading="", 
 	institute="Dockstore", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 LegacyWorkflow = GlossEntry("legacy workflow", 
 	acronym_full="", 
 	definition="On Dockstore, we use this term to refer to a [workflow] that is registered using a [legacy registration] method. Legacy workflows are not automatically synchronized with their source control repository, but can be updated manually by the workflow maintainer. A legacy workflow can be converted into a [GitHub App workflow] via :doc:`the method described here </getting-started/github-apps/migrating-workflows-to-github-apps>`.", 
 	furtherreading="", 
 	institute="Dockstore", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 NCI = GlossEntry("NCI", 
 	acronym_full="National Cancer Institute ", 
 	definition="A division of the [NIH] focused on cancer research.", 
 	furtherreading="https://www.nih.gov/about-nih/what-we-do/nih-almanac/national-cancer-institute-nci", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 NCPI = GlossEntry("NCPI", 
 	acronym_full="NIH Cloud Platform Interoperability", 
 	definition="An effort to connect five [NIH] cloud projects and ensure they are interoperable. The five projects covered under this are the [AnVIL Project], [BioData Catalyst], Cancer Research Data Commons, [Kids First], and the National Center for Biotechnology Information.",
 	furtherreading="https://datascience.nih.gov/nih-cloud-platform-interoperability-effort", 
 	institute="NIH", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 Nextflow = GlossEntry("Nextflow", 
 	acronym_full="", 
 	definition="A Java-based computational workflow engine. Dockstore supports the hosting of Nextflow workflows.", 
 	furtherreading="https://www.nextflow.io/", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 NFL = GlossEntry("NFL", 
 	acronym_full="[Nextflow]", 
 	definition="An uncommon acronym for [Nextflow]. This abbreviation is not used as frequently as [CWL] or [WDL], but does see usage occasionally.", 
 	furtherreading="", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 NHGRI = GlossEntry("NHGRI", 
 	acronym_full="National Human Genome Research Institute", 
 	definition="A division of the [NIH] that focus on genomics research. Funds the [AnVIL Project].", 
 	furtherreading="https://www.genome.gov/", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 NHLBI = GlossEntry("NHLBI", 
 	acronym_full="National Heart, Lungs, and Blood Institute", 
 	definition="A division of the [NIH] that focuses on heart, lung, blood, and sleep health. Funds the [BioData Catalyst] platform.", 
 	furtherreading="https://www.nhlbi.nih.gov/", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 NIH = GlossEntry("NIH", 
 	acronym_full="National Institutes of Health", 
 	definition="An American government institution, part of the Department of Health and Human Services (HHS), that engages in medical research.", 
 	furtherreading="https://www.nih.gov/", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 OICR = GlossEntry("OICR", 
 	acronym_full="Ontario Institute for Cancer Research", 
 	definition="A non-profit research institute based in Toronto that is focused on cancer detection and treatment. One of the two institutes involved in the development of Dockstore, the other being [UCSC].", 
 	furtherreading="https://oicr.on.ca/", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 ORCID = GlossEntry("ORCID", 
 	acronym_full="Open Researcher and Contributor ID", 
 	definition="A unique ID used to identify researchers and their work in a way that doesn't solely rely on names.", 
 	furtherreading="https://info.orcid.org/what-is-orcid/", 
 	institute="", 
-	pronunciation='"or-kid", rhymes with kid', 
-	seealso="")
+	pronunciation='"or-kid", rhymes with kid')
 
 Organization = GlossEntry("organization", 
 	acronym_full="", 
 	definition="In the context of Dockstore, an organization is a representation of some sort of institute, grant, project, or company. Organizations are approved by Dockstore admins, but any user with at least two external accounts linked to their Dockstore account (and have the authority to speak for the institute, grant, etc. in a technical manner) can request the creation of an organization on Dockstore.", 
 	furtherreading="https://dockstore.org/organizations", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 ParameterFile = GlossEntry("parameter file", 
 	acronym_full="", 
 	definition="A [JSON] or [YAML] file that describes the inputs to a workflow. This usually includes internal links to files within the same source-control repository, or links to data in a Google or S3 bucket.", 
 	furtherreading="", 
 	institute="", 
-	pronunciation='', 
-	seealso="")
+	pronunciation='')
 
 Preemptible = GlossEntry("preemptible", 
 	acronym_full="", 
@@ -524,7 +472,7 @@ Preemptible = GlossEntry("preemptible",
 	furtherreading="https://cloud.google.com/compute/docs/instances/preemptible", 
 	institute="Google", 
 	pronunciation='', 
-	seealso="spot instance")
+	seealso="[spot instance]")
 
 SevenBridges = GlossEntry("Seven Bridges", 
 	acronym_full="", 
@@ -532,7 +480,7 @@ SevenBridges = GlossEntry("Seven Bridges",
 	furtherreading="https://www.sevenbridges.com/platform/", 
 	institute="", 
 	pronunciation='', 
-	seealso="Terra")
+	seealso="[Terra]")
 
 SpotInstance = GlossEntry("Spot Instance", 
 	acronym_full="", 
@@ -540,7 +488,7 @@ SpotInstance = GlossEntry("Spot Instance",
 	furtherreading="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html", 
 	institute="Amazon", 
 	pronunciation='', 
-	seealso="preemptible")
+	seealso="[preemptible]")
 
 TaskExecutionService = GlossEntry("Task Execution Service", 
 	definition="A standardized [API] developed by [GA4GH] for describing and executing batch execution tasks.", 
@@ -555,7 +503,7 @@ Terra = GlossEntry("Terra",
 	furtherreading="https://terra.bio", 
 	institute="", 
 	pronunciation="", 
-	seealso="Seven Bridges")
+	seealso="[Seven Bridges]")
 
 Tool = GlossEntry("tool", 
 	acronym_full="", 
@@ -563,15 +511,14 @@ Tool = GlossEntry("tool",
 	furtherreading="/getting-started/intro-to-dockstore-tools-and-workflows",
 	institute="", 
 	pronunciation='', 
-	seealso="workflow")
+	seealso="[workflow]")
 
 UCSC = GlossEntry("UCSC", 
 	acronym_full="University of California, Santa Cruz", 
 	definition="A public university located in Santa Cruz that is focused on undergraduate and graduate education and research. The Genomics Institute, a branch of UCSC's engineering department, is one of the two institutes involved in the development of Dockstore, the other being [OICR].", 
 	furtherreading="https://ucsc.edu", 
 	institute="", 
-	pronunciation="", 
-	seealso="")
+	pronunciation="")
 
 VM = GlossEntry("VM", 
 	acronym_full="virtual machine", 
@@ -579,7 +526,7 @@ VM = GlossEntry("VM",
 	furtherreading="", 
 	institute="", 
 	pronunciation='', 
-	seealso="container")
+	seealso="[container]")
 
 WDL = GlossEntry("WDL",
 	acronym_full="[Workflow Description Language]",
@@ -599,12 +546,12 @@ Workflow = GlossEntry("workflow",
 	furtherreading="/getting-started/intro-to-dockstore-tools-and-workflows", 
 	institute="", 
 	pronunciation='', 
-	seealso="tool")
+	seealso="[tool]")
 
 Workflow_Description_Language = GlossEntry("Workflow Description Language",
 	furtherreading="https://openwdl.org/",
 	definition="A workflow language managed by the Open WDL Project that is designed to describe command-line tools. Usually written as [WDL]. WDL and [CWL] are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features.",
-	seealso="WDL")
+	seealso="[WDL], [CWL]")
 
 YAML = GlossEntry("YAML", 
 	acronym_full="YAML Ain't Markup Language", 
@@ -612,4 +559,4 @@ YAML = GlossEntry("YAML",
 	furtherreading="https://yaml.org/", 
 	institute="", 
 	pronunciation='"yah-mul", rhymes with camel', 
-	seealso="JSON")
+	seealso="[JSON]")

@@ -166,7 +166,7 @@ BD Catalyst
 
 BDC
 ---
-pronounced "bee-dee-see"  
+[pronounced "bee-dee-see"]  
 
 *abbreviation for* :ref:`dict BioData Catalyst`  
 
@@ -248,7 +248,7 @@ Common Workflow Language
 ------------------------
     A workflow language that describes how to run command-line tools. :ref:`dict WDL` and CWL are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features. For example, CWL has the ability to use Javascript expressions within its own commands.  
 
-see also :ref:`dict CWL`  
+see also :ref:`dict CWL`, :ref:`dict WDL`  
 
 Further reading: `<https://www.commonwl.org/user_guide/>`_  
 
@@ -260,6 +260,7 @@ container
 ---------
     An emulated computer system that contains programs and their prerequisites, but does not contain the entire operating system. Unlike a :ref:`dict VM`, a container shares the same kernel as the host OS. A well known type of container is a :ref:`dict Docker container`.  
 
+Further reading: `<https://en.wikipedia.org/wiki/OS-level_virtualization>`_  
 
 
 
@@ -309,7 +310,7 @@ descriptor file
 
 Docker
 ------
-pronounced "daw-ker", rhymes with walker  
+[pronounced "daw-ker", rhymes with walker]  
 
     A program that can create "images" which are somewhat similar to virtual machines, as well as run those images. In the context of bioinformatics, this technology has two main benefits: First, a :ref:`dict Docker image` bundles up everything a given piece of software needs to run, meaning that someone who wants to run (for example) samtools via Docker only needs to install Docker, not samtools. Second, an instance of a Docker image is a relatively standardized environment even when running on different backends, meaning that two people running the same software in the same Docker image on two different computers are likely to get the exact same results. In other words, Docker is good for reproducibility and ease of use.  
 
@@ -411,7 +412,7 @@ Further reading: `<https://docs.aws.amazon.com/ec2/index.html>`_
 
 egress
 ------
-pronounced "ee-gress", rhymes with aggress  
+[pronounced "ee-gress", rhymes with aggress]  
 
     The action of leaving a place. In the context of :ref:`dict cloud computing`, data egress refers to data being moved from one location to another, such as from the cloud to a local machine, between cloud providers, and between locations of a single cloud provider. Data egress often results in the charge of fees (usually called egress charges). Data egress can be one of the most expensive cloud costs incurred. Sometimes, the person hosting the file is charged for data egress. Other times, the person downloading the file is charged (such as when downloading files from a Google bucket that has the requester-pays option enabled).  
 
@@ -423,7 +424,7 @@ pronounced "ee-gress", rhymes with aggress
 
 eLwazi
 ------
-pronounced "el-woz-ee", derived from the Xhosa word for knowledge (uLwazi) and the Luganda word for rock symbolizing robustness (Olwazi)  
+[pronounced "el-woz-ee", derived from the Xhosa word for knowledge (uLwazi) and the Luganda word for rock symbolizing robustness (Olwazi)]  
 
     An African-lead open data science platform funded as part of the :ref:`dict NIH`'s :ref:`dict DS-I Africa` program.  
 
@@ -455,7 +456,7 @@ Further reading: `<https://en.wikipedia.org/wiki/Faceted_search>`_
 
 FAIR
 ----
-pronounced "fair", rhymes with pear  
+[pronounced "fair", rhymes with pear]  
 
 *abbreviation for* Findable, Accessible, Interoperable, and Reusable  
 
@@ -537,7 +538,7 @@ Further reading: :doc:`/getting-started/github-apps/github-apps-landing-page </g
 
 GitHub App tool
 ---------------
-    A :ref:`dict tool` registered using the Dockstore GitHub App.  
+    A :ref:`dict tool` registered using the :ref:`dict Dockstore GitHub App`.  
 
 .. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
 
@@ -549,7 +550,7 @@ see also :ref:`dict GitHub App registration`
 
 GitHub App workflow
 -------------------
-    A :ref:`dict workflow` registered with the Dockstore GitHub App.  
+    A :ref:`dict workflow` registered with the :ref:`dict Dockstore GitHub App`.  
 
 .. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
 
@@ -579,7 +580,7 @@ interoperable
 
 JSON
 ----
-pronounced "jason"  
+[pronounced "jason"]  
 
 *abbreviation for* JavaScript Object Notation  
 
@@ -595,7 +596,7 @@ Further reading: `<https://www.json.org/json-en.html>`_
 
 Jupyter
 -------
-pronounced "Jupiter" like the planet  
+[pronounced "Jupiter" like the planet]  
 
     A project focused on developing "notebooks" for programming languages, most famously Python due to it starting as a splinter of iPython in the early 2010s. Other languages such as R are also supported. Jupyter notebooks allow for blocks of code to be nestled between markdown text, allowing for easy documentation of the code blocks and reproducibility of analysis.  
 
@@ -631,6 +632,7 @@ labels
 ------
     On Dockstore, we use labels to "tag" Dockstore entries with information about them. Workflow or tool developers can add labels to a Dockstore :ref:`dict entry` page that they have edit access to. An entry's labels will appear in search results.  
 
+.. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
 
 
 
@@ -648,8 +650,6 @@ launch with
 layer
 -----
     In the context of Docker, a layer is a component of a Docker image. Each `RUN`, `COPY`, and `ADD` instruction in a :ref:`dict Dockerfile` will lead to the creation of a layer.  
-
-.. note:: This term as we define it here is associated with Docker and may have different definitions in other contexts.  
 
 Further reading: `<https://docs.docker.com/storage/storagedriver/#images-and-layers>`_  
 
@@ -784,7 +784,7 @@ Further reading: `<https://oicr.on.ca/>`_
 
 ORCID
 -----
-pronounced "or-kid", rhymes with kid  
+[pronounced "or-kid", rhymes with kid]  
 
 *abbreviation for* Open Researcher and Contributor ID  
 
@@ -924,7 +924,7 @@ see also :ref:`dict container`
 
 WDL
 ---
-pronounced "widdle", rhymes with riddle  
+[pronounced "widdle", rhymes with riddle]  
 
 *abbreviation for* :ref:`dict Workflow Description Language`  
 
@@ -935,7 +935,7 @@ pronounced "widdle", rhymes with riddle
 
 WES
 ---
-pronounced "wes", rhymes with mess  
+[pronounced "wes", rhymes with mess]  
 
 *abbreviation for* :ref:`dict Workflow Execution Service`  
 
@@ -960,7 +960,7 @@ Workflow Description Language
 -----------------------------
     A workflow language managed by the Open WDL Project that is designed to describe command-line tools. Usually written as :ref:`dict WDL`. WDL and :ref:`dict CWL` are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features.  
 
-see also :ref:`dict WDL`  
+see also :ref:`dict WDL`, :ref:`dict CWL`  
 
 Further reading: `<https://openwdl.org/>`_  
 
@@ -980,7 +980,7 @@ Further reading: `<https://ga4gh.github.io/workflow-execution-service-schemas/>`
 
 YAML
 ----
-pronounced "yah-mul", rhymes with camel  
+[pronounced "yah-mul", rhymes with camel]  
 
 *abbreviation for* YAML Ain't Markup Language  
 

@@ -504,7 +504,7 @@ GCP
 ---
 *abbreviation for* Google Cloud Platform  
 
-    A backend used for cloud computing and cloud storage hosted by Google. :ref:`dict Terra` is an example of a system that runs on a GCP backend. When running workflows on these backends, make sure to account for the storage needed for your workflow, as GCP compute backends do not automatically scale their storage size at runtime. GCP backends allow you to make use of Google's :ref:`dict preemptible` feature, which may reduce the cost of running workflows.  
+    A system used for cloud computing and cloud storage hosted by Google. Well-known users of GCP include LinkedIn and Verizon, but GCP can also power bioinformatics. :ref:`dict Terra` is an example of a bioinformatics system that runs on a GCP backend. When running workflows on GCP backends, make sure to account for the storage needed for your workflow, as GCP compute backends do not automatically scale their storage size at runtime. GCP backends allow you to make use of Google's :ref:`dict preemptible` feature, which may reduce the cost of running workflows.  
 
 see also :ref:`dict EC2`  
 

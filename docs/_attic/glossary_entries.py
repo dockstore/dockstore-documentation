@@ -1,9 +1,14 @@
-# This file uses glossarpy to generate an RST file. glossarpy will alphabetize the glossary before
-# rendering it, but please try to keep this list in alphabetical order for the sake of organization.
+# This file is called by _attic/glossary_generator.py to generate a glossary in RST format. 
+# Its dependency, glossarpy, is currently managed by Ash O'Farrell/Team Lighthouse Point.
+# _attic/glossary_generator.py will alphabetize entries before putting rendering the RST, but please try to keep this list in alphabetical order for the sake of organization.
 #
-# Due to RST limitations, do not make internal links plural
-# acceptable: [WDL] [WDL], [WDL]. [WDL]'s [Seven Bridges] [Seven Bridges], [Seven Bridges]. [Seven Bridges]'s
-# will break: [WDL]s [Seven Bridges]s
+# Style Guide:
+# * Do not create newlines within strings (glossarpy can handle this but it makes tracking changes harder).
+# * Do not use title case for the `name` of a GlossEntry; follow actual dictionary capitalization conventions
+# * To link one GlossEntry to another in `definition` or `acronym_full` enclose the name (first position arg) of the entry to link in [brackets]
+# * Due to RST limitations, do not make internal links plural
+#   * acceptable: [WDL] [WDL], [WDL]. [WDL]'s [Seven Bridges] [Seven Bridges], [Seven Bridges]. [Seven Bridges]'s
+#   * will break: [WDL]s [Seven Bridges]s
 
 from glossarpy.GlossEntry import GlossEntry
 

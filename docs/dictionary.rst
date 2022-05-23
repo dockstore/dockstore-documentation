@@ -110,7 +110,9 @@ AGC
 
 Amazon Genomics CLI
 -------------------
-    A :ref:`dict CLI`-based tool that supports launching bioinformatics-related workflows on :ref:`dict AWS` cloud infrastructure. Supports the :ref:`dict WES` standard, and can communicate with the :ref:`dict Dockstore CLI`.  
+    A :ref:`dict CLI`-based tool that supports launching bioinformatics-related workflows on :ref:`dict AWS` cloud infrastructure. The :ref:`dict Dockstore CLI` can launch workflows on AWS using Amazon Genomics CLI's :ref:`dict WES` implementation.  
+
+see also :ref:`dict AGC`  
 
 Further reading: `<https://aws.amazon.com/blogs/industries/announcing-amazon-genomics-cli-preview/>`_  
 
@@ -504,7 +506,7 @@ GCP
 ---
 *abbreviation for* Google Cloud Platform  
 
-    A backend used for cloud computing and cloud storage hosted by Google. :ref:`dict Terra` is an example of a system that runs on a GCP backend. When running workflows on these backends, make sure to account for the storage needed for your workflow, as GCP compute backends do not automatically scale their storage size at runtime. GCP backends allow you to make use of Google's :ref:`dict preemptible` feature, which may reduce the cost of running workflows.  
+    A system used for cloud computing and cloud storage hosted by Google. Well-known users of GCP include LinkedIn and Verizon, but GCP can also power bioinformatics. :ref:`dict Terra` is an example of a bioinformatics system that runs on a GCP backend. When running workflows on GCP backends, make sure to account for the storage needed for your workflow, as GCP compute backends do not automatically scale their storage size at runtime. GCP backends allow you to make use of Google's :ref:`dict preemptible` feature, which may reduce the cost of running workflows.  
 
 see also :ref:`dict EC2`  
 

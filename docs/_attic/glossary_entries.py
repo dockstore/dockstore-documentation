@@ -23,10 +23,11 @@ AGC = GlossEntry("AGC",
 	acronym_full="[Amazon Genomics CLI]")
 
 AmazonGenomicsCLI = GlossEntry("Amazon Genomics CLI", 
-	definition="A [CLI]-based tool that supports launching bioinformatics-related workflows on [AWS] cloud infrastructure. Supports the [WES] standard, and can communicate with the [Dockstore CLI].", 
+	definition="A [CLI]-based tool that supports launching bioinformatics-related workflows on [AWS] cloud infrastructure. The [Dockstore CLI] can launch workflows on AWS using Amazon Genomics CLI's [WES] implementation.", 
 	furtherreading="https://aws.amazon.com/blogs/industries/announcing-amazon-genomics-cli-preview/", 
 	institute="", 
-	pronunciation='')
+	pronunciation='',
+	seealso="[AGC]")
 
 AnVIL = GlossEntry("AnVIL Project", 
 	acronym_full="Analysis Visualization and Informatics Labspace", 
@@ -264,7 +265,7 @@ GalaxyWorkflow = GlossEntry("Galaxy workflow",
 
 GCP = GlossEntry("GCP", 
 	acronym_full="Google Cloud Platform", 
-	definition="A backend used for cloud computing and cloud storage hosted by Google. [Terra] is an example of a system that runs on a GCP backend. When running workflows on these backends, make sure to account for the storage needed for your workflow, as GCP compute backends do not automatically scale their storage size at runtime. GCP backends allow you to make use of Google's [preemptible] feature, which may reduce the cost of running workflows.", 
+	definition="A system used for cloud computing and cloud storage hosted by Google. Well-known users of GCP include LinkedIn and Verizon, but GCP can also power bioinformatics. [Terra] is an example of a bioinformatics system that runs on a GCP backend. When running workflows on GCP backends, make sure to account for the storage needed for your workflow, as GCP compute backends do not automatically scale their storage size at runtime. GCP backends allow you to make use of Google's [preemptible] feature, which may reduce the cost of running workflows.", 
 	furtherreading="https://cloud.google.com/gcp", 
 	institute="", 
 	pronunciation="", 

@@ -10,27 +10,30 @@ Tutorial Goals
 -  Learn about Docker
 -  Create a Docker image for a real tool
 -  Create a tag locally
--  Test Docker image locally
+-  Test your Docker image locally
 
 Introduction to Docker
 ----------------------
 
-.. note:: See `Docker Overview <https://docs.docker.com/get-started/overview/>`__ for an excellent overview about Docker.
+.. note:: See `Docker Overview <https://docs.docker.com/get-started/overview/>`__ for an excellent overview of Docker.
 
-Docker is a fantastic tool for creating light-weight containers to run
-your tools. It gives you a fast, VM-like environment for Linux where you
-can automatically install dependencies, make configurations, and setup
-your tool exactly the way you want, just as you would on a "normal"
-Linux host. You can then quickly and easily share these Docker images
-with the world using registries like Quay.io (indexed by Dockstore),
-Docker Hub, and GitLab.
+There is a good chance that you have heard of containerization. A container is essentially an emulated computer system that bundles up kind of software. It's similar to a virtual machine, but is usually much lighter on system resources, as a container, unlike a VM, does not need to run an extra operating system.
 
-Here we will go through a simple representative example. The end-product
-is a Dockerfile for a BAMStats tool stored in a supported Git
-repository.
+Docker is a well-known type of containerization software. It provides a fast environment for both users and developers. A developer can package software and its dependencies into an Docker image, and then share that Docker image with users. Users who download your Docker image and run it with the Docker program will be able to run the software you packaged without having to handle the installation of your program's prerequisites or anything else; it's ready to go as-is.
+
+Docker images are usually shared on registries such as Quay.io, Docker Hub, and GitLab. When a user downloads an image and runs it locally, it creates an editable copy of the image. The editable copy is called a Docker container. You can think of an image as a template, and a container as something made from that template.
+
+What do I need to run Docker?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Docker generally recommends that people `install it via Docker Desktop <https://docs.docker.com/desktop/#download-and-install>`__. Linux users can also `install the Docker Engine from binaries <https://docs.docker.com/engine/install/binaries/>`__, but this is generally not recommended as it is a little harder to install than Docker Desktop and does not automatically receive updates. In either case, to install a modern version of Docker, you will need a 64 bit system. Generally speaking you will also need root permissions on whatever system you are running on.
+
+Users of HPC (high performance compute) systems often do not have root permissions. Additionally, many HPCs do not allow Docker to be used on them at all for security reasons. We can't go over all of the alternatives here, but we recommend checking out `Singularity <https://sylabs.io/guides/2.6/user-guide/singularity_and_docker.html>`__ and `Shifter <https://github.com/NERSC/shifter>`__, both of which are designed for running Docker images without using the Docker Engine program.
+
+Tutorial: Making a Dockerfile for the BAMstats tool
+---------------------------------------------------
 
 Create a new repository
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 See the
 `dockstore-tool-bamstats <https://github.com/CancerCollaboratory/dockstore-tool-bamstats>`__
@@ -45,8 +48,8 @@ own GitHub account.
 With a repository established in GitHub, the next step is to create the
 Docker image with BAMStats correctly installed.
 
-Creating a Dockerfile
----------------------
+Create a Dockerfile
+~~~~~~~~~~~~~~~~~~~
 
 We will create a Docker image with BAMStats and all of its dependencies
 installed. To do this we must create a ``Dockerfile``. Here's my sample
@@ -163,8 +166,8 @@ Read more on the development process at
 on building your Docker image on Quay.io we recommend their
 `tutorial <https://quay.io/tutorial/>`__.
 
-Building Docker Images
-~~~~~~~~~~~~~~~~~~~~~~
+Build a Docker Images
+~~~~~~~~~~~~~~~~~~~~~
 
 Now that you've created the ``Dockerfile``, the next step is to build
 the image. Install the Docker Engine `here <https://docs.docker.com/engine/install/ubuntu/>`__. The docker command line is used for this:

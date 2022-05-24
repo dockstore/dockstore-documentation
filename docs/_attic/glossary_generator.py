@@ -22,5 +22,5 @@ for glossary_object in gc.get_objects():
     if isinstance(glossary_object, GlossEntry):
         dockstore_dictionary.add_entry(glossary_object)
 dockstore_dictionary.sort_entries()
-dockstore_dictionary.write_toc(contents_outfile, format="txt", skipSource=True)
+dockstore_dictionary.write_toc(contents_outfile, format="txt", skipSource=False, sourcefile=__file__)
 dockstore_dictionary.write_glossary(glossary_outfile, sourcefile=__file__)

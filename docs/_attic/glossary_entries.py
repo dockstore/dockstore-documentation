@@ -120,7 +120,7 @@ Container = GlossEntry("container",
 
 Cromwell = GlossEntry("Cromwell", 
 	acronym_full="", 
-	definition="An open-source [WDL] executor managed by the Broad Institute. Cromwell is the default executor for the [Dockstore CLI] and is the executor used by [Terra].", 
+	definition="An open-source [WDL] executor managed by the Broad Institute. Cromwell is the default [WDL] executor for the [Dockstore CLI] and is the executor used by [Terra].", 
 	furtherreading="https://cromwell.readthedocs.io/en/stable/", 
 	institute="Broad Institute", 
 	pronunciation="")
@@ -223,7 +223,7 @@ Elwazi = GlossEntry("eLwazi",
 
 Entry = GlossEntry("entry", 
 	acronym_full="", 
-	definition="A [tool] or [workflow] on Dockstore. A single entry on Dockstore has a description, a link to the original source-control repository, and at least one [descriptor file] which does some sort of computational task using [CWL], [WDL], [Nextflow], or [Galaxy workflow] syntax. An entry can optionally include a [parameter file] that links to open-access test data. A single entry will include all versions of the tool or workflow that has been registered, with that versioning being based upon the versioning and branches of the source-control repository the descriptor file is hosted on (with the exception of a [legacy tool], which have versioning based upon their Docker image tags), and any version can be pinned as the default. Entries can be added to a [collection] associated with a particular [organization], or added to [categories] so they can be grouped with other entries that have a similar scientific purpose. Entries may also have [labels] attached to them to help them be found via Dockstore's [faceted search] feature. If the entry is registered using the [Dockstore GitHub App], then the entry will stay in sync automatically with the source-control repository. Additionally, if an entry is a valid [workflow], any user can use our [launch with] feature to import the workflow to one of our cloud compute partners.", 
+	definition="Shorthand for a [tool] or [workflow] that has been registered on Dockstore.", 
 	furtherreading="", 
 	institute="Dockstore", 
 	pronunciation='')
@@ -462,7 +462,7 @@ Organization = GlossEntry("organization",
 
 ParameterFile = GlossEntry("parameter file", 
 	acronym_full="", 
-	definition="A [JSON] or [YAML] file that describes the inputs to a workflow. This usually includes internal links to files within the same source-control repository, or links to data in a Google or S3 bucket.", 
+	definition="A [JSON] or [YAML] file that describes the inputs to a workflow, such as runtime parameters or links to cloud data.", 
 	furtherreading="", 
 	institute="", 
 	pronunciation='')

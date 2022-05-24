@@ -270,7 +270,7 @@ Further reading: `<https://en.wikipedia.org/wiki/OS-level_virtualization>`_
 
 Cromwell
 --------
-    An open-source :ref:`dict WDL` executor managed by the Broad Institute. Cromwell is the default executor for the :ref:`dict Dockstore CLI` and is the executor used by :ref:`dict Terra`.  
+    An open-source :ref:`dict WDL` executor managed by the Broad Institute. Cromwell is the default :ref:`dict WDL` executor for the :ref:`dict Dockstore CLI` and is the executor used by :ref:`dict Terra`.  
 
 .. note:: This term as we define it here is associated with Broad Institute and may have different definitions in other contexts.  
 
@@ -438,7 +438,7 @@ Further reading: `<https://elwazi.org/>`_
 
 entry
 -----
-    A :ref:`dict tool` or :ref:`dict workflow` on Dockstore. A single entry on Dockstore has a description, a link to the original source-control repository, and at least one :ref:`dict descriptor file` which does some sort of computational task using :ref:`dict CWL`, :ref:`dict WDL`, :ref:`dict Nextflow`, or :ref:`dict Galaxy workflow` syntax. An entry can optionally include a :ref:`dict parameter file` that links to open-access test data. A single entry will include all versions of the tool or workflow that has been registered, with that versioning being based upon the versioning and branches of the source-control repository the descriptor file is hosted on (with the exception of a :ref:`dict legacy tool`, which have versioning based upon their Docker image tags), and any version can be pinned as the default. Entries can be added to a :ref:`dict collection` associated with a particular :ref:`dict organization`, or added to :ref:`dict categories` so they can be grouped with other entries that have a similar scientific purpose. Entries may also have :ref:`dict labels` attached to them to help them be found via Dockstore's :ref:`dict faceted search` feature. If the entry is registered using the :ref:`dict Dockstore GitHub App`, then the entry will stay in sync automatically with the source-control repository. Additionally, if an entry is a valid :ref:`dict workflow`, any user can use our :ref:`dict launch with` feature to import the workflow to one of our cloud compute partners.  
+    Shorthand for a :ref:`dict tool` or :ref:`dict workflow` that has been registered on Dockstore.  
 
 .. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
 
@@ -810,7 +810,7 @@ Further reading: `<https://dockstore.org/organizations>`_
 
 parameter file
 --------------
-    A :ref:`dict JSON` or :ref:`dict YAML` file that describes the inputs to a workflow. This usually includes internal links to files within the same source-control repository, or links to data in a Google or S3 bucket.  
+    A :ref:`dict JSON` or :ref:`dict YAML` file that describes the inputs to a workflow, such as runtime parameters or links to cloud data.  
 
 
 

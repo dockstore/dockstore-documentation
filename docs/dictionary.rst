@@ -110,7 +110,9 @@ AGC
 
 Amazon Genomics CLI
 -------------------
-    A :ref:`dict CLI`-based tool that supports launching bioinformatics-related workflows on :ref:`dict AWS` cloud infrastructure. Supports the :ref:`dict WES` standard, and can communicate with the :ref:`dict Dockstore CLI`.  
+    A :ref:`dict CLI`-based tool that supports launching bioinformatics-related workflows on :ref:`dict AWS` cloud infrastructure. The :ref:`dict Dockstore CLI` can launch workflows on AWS using Amazon Genomics CLI's :ref:`dict WES` implementation.  
+
+see also :ref:`dict AGC`  
 
 Further reading: `<https://aws.amazon.com/blogs/industries/announcing-amazon-genomics-cli-preview/>`_  
 

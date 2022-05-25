@@ -26,6 +26,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    faq
    news
    roadmap
+   dictionary
 
 Getting Started
 ---------------

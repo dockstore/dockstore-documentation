@@ -8,7 +8,7 @@ This series is an introduction to everything required to properly use Dockstore 
 
 - :doc:`Creating a Docker image that an analysis will run within </getting-started/getting-started-with-docker>`
 - Describing a simple analysis with a descriptor file written in one the following languages: :doc:`CWL </getting-started/getting-started-with-cwl>`, :doc:`WDL </getting-started/getting-started-with-wdl>`, :doc:`Nextflow </getting-started/getting-started-with-nextflow>`, or :doc:`Galaxy </getting-started/getting-started-with-galaxy>`
-- :doc:`Creating a Dockstore account </getting-started/register-on-dockstore>
+- :doc:`Creating a Dockstore account </getting-started/register-on-dockstore>`
 - Registering :doc:`a tool </getting-started/dockstore-tools>` or :doc:`a workflow </getting-started/dockstore-workflows>` on Dockstore
 
 The tool we will be using throughout this tutorial is

@@ -5,8 +5,11 @@ Tutorial Goals
 --------------
 This is the first part of our "Getting Started" tutorial series, where we will walk you through the creation of a tool called BAMstats and publish it onto Dockstore. This particular page, "Getting Started with Docker," will go through the basics of Docker and have you develop a Dockerfile for the BAMstats tool.
 
+This tutorial assumes you have basic knowledge of a Unix-like file system, such as working directories, moving between directories on the command line.
+
 -  Learn about Docker
--  Create a Docker image for a real tool using a Dockerfile
+-  Create a Dockerfile
+-  Use the Dockerfile you created to make a Docker image for a real bioinformatics tool
 -  Create a tag locally
 -  Test your Docker image locally
 
@@ -125,13 +128,7 @@ This switches to the ``root`` user to perform software installs. It
 downloads BAMStats, unzips it, and installs it in the correct location,
 ``/opt``.
 
-This is one of the main advantages of Docker. On some systems the above process
-might take days or weeks of working with a sys admin to install
-dependencies. Instead of installing dependencies on every machine someone might want to run a workflow/tool on, we can instead control and install
-whatever we like inside a Docker image - correctly configuring the
-environment for a tool and avoiding the time to set up these
-dependencies in the places we want to run. This greatly simplifies the
-install process for other users.
+This is one of the main advantages of Docker. On some systems the above process might take days or weeks of working with a sysadmin to install dependencies. Instead of installing dependencies on every machine someone might want to run a workflow/tool on, we can create a Docker image that wraps that workflow/tool. With Docker, we only need to correctly configure the environment and dependencies for a program once, and once that Docker image is set up, we avoid repeating that process. All we need to do is transfer that Docker image to other machines, and they will be able to run what's inside it. This greatly simplifies the process for other users.
 
 .. code:: dockerfile
 
@@ -139,10 +136,9 @@ install process for other users.
     RUN chmod a+x /usr/local/bin/bamstats
 
 This copies the local helper script ``bamstats`` from the git checkout
-directory to ``/usr/local/bin``. This is an important example; it shows
+directory to ``/usr/local/bin``. (We'll talk more about that helper script later.) This is an important example; it shows
 how to use ``COPY`` to copy files in the git directory structure to
-inside the Docker image. After copying to ``/usr/local/bin`` the script
-is made runnable by all users.
+inside the Docker image. After copying to ``/usr/local/bin`` we make the helper script executable by all users in the next line via `chmod` which is used to modify permissions in Unix-like systems.
 
 .. code:: dockerfile
 
@@ -153,8 +149,8 @@ is made runnable by all users.
     CMD ["/bin/bash"]
 
 The user ``ubuntu`` is created and switched to in order to make file
-ownership easier and the default command for this Docker image is set to
-``/bin/bash`` which is a typical default.
+ownership easier, and the default command for this Docker image is set to
+``/bin/bash`` which is a typical default. ``bash`` is the command line interpreter that most Unix-like systems use, so we essentially say that by default this Docker image will allow the user to directly interact with it using bash commands.
 
 An important thing to note is that this ``Dockerfile`` only scratches
 the surface. Take a look at `Best practices for writing
@@ -166,8 +162,8 @@ Read more on the development process at
 on building your Docker image on Quay.io we recommend their
 `tutorial <https://quay.io/tutorial/>`__.
 
-Build a Docker Images
-~~~~~~~~~~~~~~~~~~~~~
+Build a Docker Image
+~~~~~~~~~~~~~~~~~~~~
 
 Now that you've created the ``Dockerfile``, the next step is to build the image. Install `Docker Engine <https://docs.docker.com/engine/install/ubuntu/>`__ or `Docker Desktop <https://docs.docker.com/desktop/linux/install/>`__. Once it is installed, you can use this command to build your Docker image:
 
@@ -194,7 +190,7 @@ should see something like:
 
     Successfully built 01a7ccf55063
 
-It might have a different name than ``01a7ccf55063`` but it should a success regardless. Check that the tool is now in your local Docker image cache:
+It might have a different name than ``01a7ccf55063`` but it should be a success regardless. Check that the tool is now in your local Docker image cache:
 
 ::
 
@@ -238,10 +234,8 @@ from the 1000 Genomes project:
     $> wget https://s3.amazonaws.com/oconnor-test-bucket/sample-data/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
     $> /usr/local/bin/bamstats 4 NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
 
-What's really going on here? The ``bamstats`` command above is a simple
-script we wrote to make it easier to call BAMStats. This is what we used
-the ``COPY`` command to move into the Docker image via the Dockerfile.
-Here's the script's contents:
+What's really going on here? The ``bamstats`` command above is a simple script someone wrote to make it easier to call BAMStats. This is the same helper script we mentioned earlier when writing the Dockerfile. This is what the ``COPY`` command copied into the Docker image via the Dockerfile.
+Here's the helper script's contents:
 
 ::
 
@@ -262,7 +256,7 @@ file followed by cleanup.
     the CWL tool described later assumes that outputs are all located in the
     current working directory that it executes your command in.
 
-The ``-v`` parameter used earlier is mounting the current working
+Let's take another look at the ``docker run`` command. The ``-v`` parameter is mounting the current working
 directory into ``/home/ubuntu`` which was the directory we worked in
 when running ``/usr/local/bin/bamstats`` above. The net effect is when
 you exit the Docker container (with command ``exit`` or pressing

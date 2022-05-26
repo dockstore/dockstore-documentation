@@ -1,14 +1,12 @@
-
-.. note:: This is the first part of a tutorial series where you will create a tool called BAMStats and publish it onto Dockstore.
-
 Getting Started with Docker
 ===========================
 
 Tutorial Goals
 --------------
+This is the first part of our "Getting Started" tutorial series, where we will walk you through the creation of a tool called BAMstats and publish it onto Dockstore. This particular page, "Getting Started with Docker," will go through the basics of Docker and have you develop a Dockerfile for the BAMstats tool.
 
 -  Learn about Docker
--  Create a Docker image for a real tool
+-  Create a Docker image for a real tool using a Dockerfile
 -  Create a tag locally
 -  Test your Docker image locally
 
@@ -25,9 +23,11 @@ Docker images are usually shared on registries such as Quay.io, Docker Hub, and 
 
 What do I need to run Docker?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Docker generally recommends that people `install it via Docker Desktop <https://docs.docker.com/desktop/#download-and-install>`__. Linux users can also `install the Docker Engine from binaries <https://docs.docker.com/engine/install/binaries/>`__, but this is generally not recommended as it is a little harder to install than Docker Desktop and does not automatically receive updates. In either case, to install a modern version of Docker, you will need a 64 bit system. Generally speaking you will also need root permissions on whatever system you are running on.
+Docker generally recommends that people `install it via Docker Desktop <https://docs.docker.com/desktop/#download-and-install>`__. Docker Desktop includes the command line Docker Engine program that we will be using in this tutorial, plus a GUI to make adjustment of certain settings a little easier. You could instead `install the Docker Engine from binaries <https://docs.docker.com/engine/install/binaries/>`__, but this is generally not recommended as it is a little harder to install than Docker Desktop and does not automatically receive updates. In either case, to install a modern version of Docker, you will need a 64 bit system. Generally speaking you will also need root permissions on whatever system you are running on.
 
-Users of HPC (high performance compute) systems often do not have root permissions. Additionally, many HPCs do not allow Docker to be used on them at all for security reasons. We can't go over all of the alternatives here, but we recommend checking out `Singularity <https://sylabs.io/guides/2.6/user-guide/singularity_and_docker.html>`__ and `Shifter <https://github.com/NERSC/shifter>`__, both of which are designed for running Docker images without using the Docker Engine program.
+Users of HPC (high performance compute) systems may not be able to run Docker Engine directly, depending on your sysadmin's policies and the details of your HPC's scheduling system. We can't go over all of possible HPC setups here, but we recommend checking out `Singularity <https://sylabs.io/guides/2.6/user-guide/singularity_and_docker.html>`__ and `Shifter <https://github.com/NERSC/shifter>`__, both of which are designed for running Docker images without using the Docker Engine program. If your HPC does not support Docker Engine, there is a strong chance it is already set up with an alternative.
+
+For the sake of simplicity, this tutorial will assume you are running Docker Engine on a non-HPC Unix-like system.
 
 Tutorial: Making a Dockerfile for the BAMstats tool
 ---------------------------------------------------
@@ -185,7 +185,7 @@ This allows me to build and test locally then, eventually, switch over
 to the quay.io-built version. The next part of the tag,
 ``collaboratory/dockstore-tool-bamstats``, denotes the name of the tool
 which is derived from the organization and repository name on Quay.io.
-Finally ``1.25-6`` denotes a version string. Typically,. you want to sync your version string with releases on GitHub.
+Finally ``1.25-6`` denotes a version string. Typically, you want to sync your version string with releases on GitHub.
 
 The tool should build normally and should exit without errors. You
 should see something like:
@@ -290,7 +290,7 @@ your Docker image from the command-line.
 Next Steps
 ----------
 
-**You could stop here!** However, we currently lack a standardized way to describe how to run your tool. That's what descriptor languages and Dockstore provide. We think it's valuable, and there's an increasing number of tools and workflows designed to work with various descriptor languages. To that end, we have continued this tutorial to describe how the commandline programs and input files can be parameterized and constructed via a descriptor language.
+**You could stop here!** However, we currently lack a standardized way to describe how to run this tool. That's what descriptor languages and Dockstore provide. We think it's valuable, and there's an increasing number of tools and workflows designed to work with various descriptor languages. To that end, we have continued this tutorial to describe how the command-line programs and input files can be parameterized and constructed via a descriptor language.
 
 There are several descriptor languages available on Dockstore. Follow the
 links to get an introduction.

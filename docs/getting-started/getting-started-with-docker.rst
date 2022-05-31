@@ -5,7 +5,7 @@ Tutorial Goals
 --------------
 This is the first part of our "Getting Started" tutorial series, where we will walk you through the creation of a tool called BAMstats and publish it onto Dockstore. This particular page, "Getting Started with Docker," will go through the basics of Docker and have you develop a Dockerfile for the BAMstats tool.
 
-This tutorial assumes you have basic knowledge of a Unix-like file system, such as working directories, moving between directories on the command line.
+This tutorial assumes you have basic knowledge of a Unix-like file system, such as what a working directory is, and how to move between directories on the command line.
 
 -  Learn about Docker
 -  Create a Dockerfile
@@ -18,7 +18,7 @@ Introduction to Docker
 
 .. note:: See `Docker Overview <https://docs.docker.com/get-started/overview/>`__ for an excellent overview of Docker.
 
-There is a good chance that you have heard of containerization. A container is essentially an emulated computer system that bundles up kind of software. It's similar to a virtual machine, but is usually much lighter on system resources, as a container, unlike a VM, does not need to run an extra operating system.
+There is a good chance that you have heard of containerization. A container is essentially an emulated filesystem that bundles up some kind of software. It's similar to a virtual machine, but is usually much lighter on system resources, because a container (unlike a VM) does not need to run an extra operating system.
 
 Docker is a well-known type of containerization software. It provides a fast environment for both users and developers. A developer can package software and its dependencies into an Docker image, and then share that Docker image with users. Users who download your Docker image and run it with the Docker program will be able to run the software you packaged without having to handle the installation of your program's prerequisites or anything else; it's ready to go as-is.
 

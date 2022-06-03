@@ -1,4 +1,4 @@
-.. note:: This document assumes you have basic knowledge of what Docker is. It is recommended, but not required, that you complete :doc:`Getting Started With Docker <getting-started-with-docker>` before this tutorial.
+.. note:: This document assumes you have basic knowledge of what Docker is, and have access to a system that can run Docker. It is recommended, but not required, that you complete :doc:`Getting Started With Docker <getting-started-with-docker>` before this tutorial.
 
 Getting Started with WDL
 ========================

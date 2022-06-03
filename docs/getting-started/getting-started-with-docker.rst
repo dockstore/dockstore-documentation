@@ -22,7 +22,7 @@ There is a good chance that you have heard of containerization. A container is e
 
 Docker is a well-known type of containerization software. It provides a fast environment for both users and developers. A developer can package software and its dependencies into an Docker image, and then share that Docker image with users. Users who download your Docker image and run it with the Docker program will be able to run the software you packaged without having to handle the installation of your program's prerequisites or anything else; it's ready to go as-is.
 
-Docker images are usually shared on registries such as Quay.io, Docker Hub, and GitLab. When a user downloads an image and runs it locally, the Docker Engine spins up an instance of the Docker image that can be edited and has its own filesystem. This instance is called a Docker container. You can think of an image as a template, and a container as something made from that template.
+Docker images are usually shared on registries such as Quay.io, Docker Hub, and GitLab. When a user downloads an image and runs it locally, the Docker Engine spins up an instance of the Docker image. This instance is called a Docker container. You can think of an image as a template, and a container as something made from that template.
 
 What do I need to run Docker?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

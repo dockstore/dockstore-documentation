@@ -27,7 +27,9 @@ We also implement certain utilities such as file provisioning plugins that suppo
 Building a Community
 --------------------
 
-Several large projects in the Biosciences, specifically cancer sequencing projects such as PCAWG, PrecisionFDA, the Broad Institute, the University of California Santa Cruz, and Cancer IT at Sanger have registered between 10 and 60 workflows each in Dockstore as of August 2018. We hope this work will aid the community and promote the registration of a large number of high-quality workflows in the system. 
+Several large projects in the biosciences have registered workflows on Dockstore, including cancer sequencing projects such as PCAWG, PrecisionFDA, the Broad Institute, the University of California at Santa Cruz, and Cancer IT at Sanger. Dockstore is also a component of several NIH-funded cloud ecosystems including BioData Catalyst, the AnVIL Project, and eLwazi. We hope this work will aid the community and promote the registration of a large number of high-quality workflows in the system.
+
+You can browse workflows uploaded by such projects in `our organizations page <https://dockstore.org/organizations>`__.
 
 Future Plans
 ------------

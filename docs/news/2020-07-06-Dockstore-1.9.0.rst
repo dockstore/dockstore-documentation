@@ -1,5 +1,6 @@
 Dockstore 1.9.0
 ===============
+*July 6, 2020*
 
 Highlighted new features include:
 ---------------------------------

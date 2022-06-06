@@ -11,6 +11,7 @@ Built with Docker and Git
 .. note:: See `Docker Overview <https://docs.docker.com/get-started/overview/>`__ for an excellent overview about Docker.
 
 Docker repositories, like `Docker Hub <https://hub.docker.com/>`__, `Quay.io <https://quay.io/>`__ and `GitLab <https://about.gitlab.com>`__, and source control repositories like `GitHub <https://github.com>`__, `Bitbucket <https://bitbucket.org/>`__, and `GitLab <https://about.gitlab.com>`__, provide much of the infrastructure we need. Docker repositories allow users to build, publish, and share both public and private Docker images. However, the services lack standardized ways of describing how to invoke tools contained within Docker containers. Workflow descriptor languages provide standardised ways to define the inputs, parameterizations, and outputs of tools in a controlled way. Together, these resources provide the necessary tools to share analytical tools in a highly portable way, a key concern for the scientific community. 
+
 .. figure:: /assets/images/docs/Ways_to_get_into_Dockstore.png
    :alt: Overview
 

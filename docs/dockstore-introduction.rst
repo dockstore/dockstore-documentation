@@ -34,9 +34,7 @@ You can browse workflows uploaded by such projects in `our organizations page <h
 Future Plans
 ------------
 
-We plan on expanding the Dockstore in several ways over the coming months. Please see our `issues page <https://github.com/dockstore/dockstore/issues>`__ for details and discussions.
-
-For longer term plans, please see our `roadmap page <https://github.com/dockstore/dockstore/wiki/Dockstore-Roadmap>`__.
+Dockstore is continuously evolving, and as an open-source project, you can get involved too! Please see our `issues page <https://github.com/dockstore/dockstore/issues>`__ for details and discussions. For longer term plans, please see our `roadmap page <https://github.com/dockstore/dockstore/wiki/Dockstore-Roadmap>`__.
 
 
 Ready to get started?

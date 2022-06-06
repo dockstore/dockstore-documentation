@@ -1,6 +1,8 @@
 Services
 ========
 
+Services are containerized programs that are meant to be long running processes, usually web services or interactive applications, and that can be launched by a user into different environments. 
+
 .. note:: Dockstore Services is currently in beta mode. Also note that the screenshots below were taken on our staging site.
 
 Tutorial Goals

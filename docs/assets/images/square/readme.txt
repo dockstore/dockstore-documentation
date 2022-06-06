@@ -1,0 +1,1 @@
+Some of these images are rendered using an HTML document in the attic folder.

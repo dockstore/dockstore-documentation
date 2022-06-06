@@ -1,5 +1,6 @@
 Dockstore 1.1 Release
 =====================
+*November 25, 2016*
 
 Highlighted New Features and Fixes
 
@@ -12,6 +13,8 @@ Highlighted New Features and Fixes
 -  Support for administrators to verify versions of tools and workflows
 -  CWL generation of parameter files now supports YAML as well as JSON
 -  Documentation updates and tooltips!
+
+Feel free to explore `this release on GitHub <https://github.com/dockstore/dockstore/releases/tag/1.1>`_.
 
 .. discourse::
     :topic_identifier: 2019

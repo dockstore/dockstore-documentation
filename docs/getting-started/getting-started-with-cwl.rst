@@ -1,4 +1,4 @@
-.. note:: This tutorial assumes basic familarity with Docker as its example involves a Docker image. You may wish to start with :doc:`Getting Started With Docker </getting-started/getting-started-with-docker>` if you are not familiar with it.
+.. note:: This tutorial assumes basic familiarity with Docker as its example involves a Docker image. It also assumes you have access to a system that can run Docker. You may wish to start with :doc:`Getting Started With Docker </getting-started/getting-started-with-docker>` if you are not familiar with it.
 
 Getting Started with CWL
 ========================

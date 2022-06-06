@@ -1,5 +1,6 @@
 Dockstore Paper
 ===============
+*February 27, 2017*
 
 A Dockstore paper has been published and indexed as `The Dockstore:
 enabling modular, community-focused sharing of Docker-based genomics

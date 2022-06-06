@@ -26,6 +26,7 @@ going straight to the :doc:`End User Topics <end-user-topics/end-user-topics>` o
    faq
    news
    roadmap
+   dictionary
 
 Getting Started
 ---------------
@@ -189,12 +190,6 @@ Advanced developer topics
    posters-and-talks
    /assets/templates/template.rst
    user-created
-
-.. toctree::
-   :caption: System Status
-   :maxdepth: 1
-
-   systemstatus
 
 .. centered:: In Affiliation with
 

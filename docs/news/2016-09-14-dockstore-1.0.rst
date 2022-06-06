@@ -1,5 +1,6 @@
 Dockstore 1.0
 =============
+*September 14, 2016*
 
 This date marks the launch of `Dockstore
 1.0 <https://github.com/dockstore/dockstore/releases/tag/1.0>`__. This

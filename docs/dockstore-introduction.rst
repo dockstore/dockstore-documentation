@@ -10,32 +10,6 @@ Building off Docker and Git
 
 There are existing repositories for Docker images, such as  `Docker Hub <https://hub.docker.com/>`__, `Quay.io <https://quay.io/>`__, and `GitLab <https://about.gitlab.com>`__ which allow users to build, publish, and share both public and private Docker images. There are also source control repositories like `GitHub <https://github.com>`__, `Bitbucket <https://bitbucket.org/>`__, and `GitLab <https://about.gitlab.com>`__, which are based on the `git <https://git-scm.com/>`__ approach to source control. This infrastructure is important, and indeed, Dockstore can link to those services for multiple tasks. However, the services on their own lack standardized ways of describing how to invoke tools contained within Docker containers. This is where Dockstore and workflow description language step in, providing standardised ways to define the inputs, parameterizations, and outputs of tools in a controlled way. The Dockstore website and CLI additionally implement GA4GH standards and APIs to make the execution of workflows and tools, whether that be on your local laptop or on the cloud, easier and more standardized. Together, these resources provide the necessary tools to share analytical tools in a highly portable and reproducible way, a key concern for the scientific community.
 
-Strategies
-----------
-
-You can register your tools and workflows on Dockstore in three broad
-ways as depicted above.
-
-A) Following our
-   :doc:`tutorials <getting-started/getting-started>`,
-   you can save your descriptors on GitHub, build your Docker image
-   automatically on Quay.io, and have Dockstore reach out and index your
-   tools
-
-B) Dockstore can retrieve your workflow descriptors from GitHub and
-   other source control methods. You are responsible for ensuring that
-   your descriptors point at valid Docker images.
-
-C) You will be able to use our new hosted workflows service to store
-   tools and workflows directly on dockstore.org to quickly get started,
-   prototype your ideas, and share workflows with a limited audience.
-
-In all three cases, you will have an opportunity to clean-up and configure your work before publishing to the rest of the world to see.
-
-You can mix and match in a number of these approaches. For example, you can go beyond our simple tutorials and automated approach to manually register tools that point at locations like Docker Hub, Seven Bridges, and Amazon ECR. You can substitute WDL and Nextflow for the descriptor language for workflows. You might even be able to mix and match descriptor languages eventually! 
-
-Over time, we find "skinny" Docker images, those with single tools installed in them, are more helpful for extending and building new workflows with. That being said, "fat" Docker containers, which include multiple tools and even full workflows with frameworks like `SeqWare <https://seqware.github.io/>`__ or `Galaxy <https://galaxyproject.org/>`__, can have their place as well. Projects like the ICGC `PanCancer Analysis of Whole Genomes <https://dcc.icgc.org/pcawg>`__ (PCAWG) made use of "fat" Docker containers that had complex workflows that fully encapsulated alignment and variant calling. The self-contained nature of these Docker containers allowed for mobility between a wide variety of environments and greatly simplified the setup of these pipelines across a wide variety of HPC and cloud environments. Either approach works for the Dockstore so long as you can describe the tool or workflow inside the Docker container as a CWL/WDL-defined tool (which you can for most things). 
-
 Promoting Standards
 -------------------
 
@@ -61,6 +35,12 @@ Future Plans
 We plan on expanding the Dockstore in several ways over the coming months. Please see our `issues page <https://github.com/dockstore/dockstore/issues>`__ for details and discussions.
 
 For longer term plans, please see our `roadmap page <https://github.com/dockstore/dockstore/wiki/Dockstore-Roadmap>`__.
+
+
+Ready to get started?
+---------------------
+
+See our :doc:`Getting Started series </getting-started/getting-started>` for a walkthrough of creating your first workflow and uploading it to Dockstore!
 
 
 .. discourse::

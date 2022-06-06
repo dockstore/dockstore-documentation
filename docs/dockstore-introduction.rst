@@ -13,16 +13,16 @@ There are existing repositories for Docker images, such as  `Docker Hub <https:/
 Promoting Standards
 -------------------
 
-We hope Dockstore provides a reference implementation for tool sharing in the sciences. The Dockstore is essentially a living and evolving proof of concept designed as a starting point for two activities that we hope will result in community standards within the GA4GH: 
+Dockstore provides a reference implementation for sharing computational analysis procedures in the sciences. It is essentially a living and evolving proof of concept designed as a starting point for three activities that we hope will result in community standards within the GA4GH: 
 
--  a best practices guide for describing tools in Docker containers with
-   CWL/WDL/Nextflow
--  a minimal web service standard for registering, searching and
-   describing CWL-annotated Docker containers that can be federated and
-   indexed by multiple websites similar to `Maven
-   Central <https://search.maven.org/>`__
+-  a best practices guide for describing tools in Docker containers with descriptor languages
+-  a web service standard for registering, searching, and
+   describing annotated Docker images that can be federated and
+   indexed by multiple websites
+-  a CLI tool to interact with both the Dockstore webservice and local workflow executors such as
+   Cromwell or cwltool
 
-We also implement certain utilities such as file provisioning plugins that support the GA4GH DOS (Data Object Service) standard or command-line launchers that present a common interface across CWL and WDL as almost a polyfill to demonstrate what we wish to use over time natively. 
+We also implement certain utilities such as file provisioning plugins that support the GA4GH DOS (Data Object Service) standard or command-line launchers that present a common interface across CWL and WDL as a proof-of-concept demonstration of what we wish to use over time natively.
 
 Building a Community
 --------------------

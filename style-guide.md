@@ -69,7 +69,18 @@ See also: [Google's guidelines for accessibility](https://developers.google.com/
 > `heading level 5`  
 > `\``````````````
 >
- 
+
+## Consistent vocabulary
+Keep vocabulary consistent across documentation. Try to stick to American English spellings (customi*z*e vs customi*s*e, etc).
+
+| ✅            | ❌                         	| Info                         	|
+|--------------	|---------------------------	|------------------------------	|
+| CLI          	| cli                       	|                              	|
+| command line 	| command-line, commandline 	|                              	|
+| Docker       	| docker                    	| unless quoting a CLI command 	|
+| install      	| instal                    	|                              	|
+
+
 ## International/Translation
 See also: [Google's guidelines r/e translation](https://developers.google.com/style/translation) 
 

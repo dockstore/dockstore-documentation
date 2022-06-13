@@ -8,6 +8,8 @@ This is the first part of our "Getting Started" tutorial series, where we will w
 This tutorial assumes you have basic knowledge of a Unix-like file system, such as what a working directory is, and how to move between directories on the command line.
 
 -  Learn about Docker
+-  Learn how to find existing Docker images
+-  Download an existing Docker image from Docker Hub, and 
 -  Create a Dockerfile
 -  Use the Dockerfile you created to make a Docker image for a real bioinformatics tool
 -  Create a tag locally
@@ -22,21 +24,57 @@ There is a good chance that you have heard of containerization. A container is e
 
 Docker is a well-known type of containerization software. It provides a fast environment for both users and developers. A developer can package software and its dependencies into an Docker image, and then share that Docker image with users. Users who download your Docker image and run it with the Docker program will be able to run the software you packaged without having to handle the installation of your program's prerequisites or anything else; it's ready to go as-is.
 
-Docker images are usually shared on registries such as Quay.io, Docker Hub, and GitLab. When a user downloads an image and runs it locally, the Docker Engine spins up an instance of the Docker image. This instance is called a Docker container. You can think of an image as a template, and a container as something made from that template.
+When a runs a Docker image locally, the Docker Engine spins up an instance of the Docker image. This instance is called a Docker container. You can think of an image as a template, and a container as something made from that template. Note that the filesystem of a Docker container is sequestered from the rest of your computer, so you will either want the container to already have any extra files you might need, or get those files into the Docker container by "mounting" them. We will not be covering how to mount files in this tutorial, as workflow languages handle this for us automatically, as will be shown in :doc:`Getting Started with Nextflow <getting-started-with-nextflow>`, :doc:`Getting Started with CWL <getting-started-with-cwl>`, and :doc:`Getting Started with WDL <getting-started-with-wdl>`. However, when we talk about how to create a Dockerfile, you will learn how to create a Docker image that already has the files you need -- whether it's a simple 3 line Python script saved as a text file, or a complicated compiled program with lots of prerequisites.
+
+Docker is a robust piece of software with dozens of features. We won't be going over everything in this tutorial, but we will give you the overview needed to use Docker in the context of tools and workflows.
 
 What do I need to run Docker?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Docker generally recommends that people `install it via Docker Desktop <https://docs.docker.com/desktop/#download-and-install>`__. Docker Desktop includes the command line Docker Engine program that we will be using in this tutorial, plus a GUI to make adjustment of certain settings a little easier. You could instead `install the Docker Engine from binaries <https://docs.docker.com/engine/install/binaries/>`__, but this is generally not recommended as it is a little harder to install than Docker Desktop and does not automatically receive updates. In either case, to install a modern version of Docker, you will need a 64 bit system. Generally speaking you will also need root permissions on whatever system you are running on.
+Docker generally recommends that people `install it via Docker Desktop <https://docs.docker.com/desktop/#download-and-install>`__. Docker Desktop includes the command line Docker Engine program that we will be using in this tutorial, plus a GUI to make adjustment of certain settings a little easier, and a quick tutorial for new users (which we recommend you try out!). You could instead `install the Docker Engine from binaries <https://docs.docker.com/engine/install/binaries/>`__, but this is generally not recommended as it is a little harder to install than Docker Desktop and does not automatically receive updates. In either case, to install a modern version of Docker, you will need a 64 bit system. Generally speaking you will also need root permissions on whatever system you are running on.
 
 Users of HPC (High Performance Compute) systems may not be able to run Docker Engine directly, depending on your sysadmin's policies and the details of your HPC's scheduling system. We can't go over all of possible HPC setups here, but we recommend checking out `Singularity <https://sylabs.io/guides/2.6/user-guide/singularity_and_docker.html>`__ and `Shifter <https://github.com/NERSC/shifter>`__, both of which are designed for running Docker images without using the Docker Engine program. If your HPC does not support Docker Engine, there is a strong chance it is already set up with an alternative.
 
-For the sake of simplicity, this tutorial will assume you are running Docker Engine on a non-HPC Unix-like system.
+For the sake of simplicity, this tutorial will assume you are running Docker on a non-HPC Unix or Unix-like system.
 
 Thick vs thin Docker images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Docker images are sometimes described in terms of thick versus thin/slim, describing how much stuff is inside them. These are relative terms, not a precise definition, but they can be useful shorthands for two different schools of thought around Docker: Including a single tool, or multiple tools.
 
 Over time, we at Dockstore have found that slim Docker images, those with single tools installed in them, are more helpful for extending and building new workflows with. That being said, thick Docker containers, which include multiple tools and even full workflows with frameworks like `SeqWare <https://seqware.github.io/>`__ or `Galaxy <https://galaxyproject.org/>`__, can have their place as well. Projects like the ICGC `PanCancer Analysis of Whole Genomes <https://dcc.icgc.org/pcawg>`__ (PCAWG) made use of thick Docker containers that had complex workflows that fully encapsulated alignment and variant calling. Another example is the `UWGAC Analysis Workflows <https://dockstore.org/organizations/bdcatalyst/collections/UWGACAncestryRelatedness>`__, which all use the same Docker image full of R scripts in order to preform everything from file conversion to a full GWAS analysis. The self-contained nature of these Docker containers allow for mobility between a wide variety of environments, and sometimes simplify the setup of these pipelines across a wide variety of HPC and cloud environments. Either approach works for the Dockstore so long as you can describe the tool or workflow inside the Docker container as a CWL/WDL/NFL-defined tool (which you can for most things).
+
+Using existing Docker images
+----------------------------
+Sometimes, the tool you want to run is already Dockerized. Perhaps you want to use that existing image for your own research, or maybe you want to base a pipeline off it. But how would you know that such an image exists? Where do you look for Docker images? And how do you know if you've found a good one?
+
+Container registries
+~~~~~~~~~~~~~~~~~~~~
+Docker images are usually shared on registries. `Quay.io <https://quay.io/>`__ and `Docker Hub <https://hub.docker.com/>`__ are examples of popular public registries, which anyone can browse online. `GitLab Container Registry <https://about.gitlab.com/blog/2016/05/23/gitlab-container-registry/>`__ on the other hand is a private registry, so it can't be easily browsed by outside users.
+
+Container registries usually show you the layers that make up a particular Docker image, what versions are available, and the username or organization that the Docker image is associated with. They also usually give you the command line text you need to use in order to download a particular image locally, which will allow you use to the image on your own machine.
+
+.. note:: Different registries have different limits on how often you can download images from the command line. If you are not logged in with the service you are using, these limits are usually based upon IP address, and may start blocking you from downloading if you are doing it too many times in a short period of time. As of our writing this, [Docker Hub in particular limits your IP to 100 downloads per six hours](https://docs.docker.com/docker-hub/download-rate-limit/) if you are not logged in.
+
+Looking for an official image
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A good place to start when looking for Docker images (or for one to base your own Docker image upon) are official images maintained by institutions. Docker Hub makes this easy by maintaining `a curated list of official images <https://hub.docker.com/search?image_filter=official&q=>`__, and `a curated list of verified images maintained by commerercial entities <https://hub.docker.com/search?q=&image_filter=store>`__. These images include the likes of `Ubuntu <https://hub.docker.com/_/ubuntu>`__, `golang <https://hub.docker.com/_/golang>`__, the `AWS CLI <https://hub.docker.com/r/amazon/aws-cli>`__, `Python <https://hub.docker.com/_/python>`__, and even `Docker <https://hub.docker.com/_/docker>`__. Yes, you can run Docker in Docker!
+
+Quay.io does not maintain a list of official images like Docker Hub, but you can nonetheless find official images on there with a bit of searching, such as `CentOS <https://quay.io/repository/centos/centos?tab=info>`__. Because Quay is owned by Red Hat, it is a good place to find images based on Red Hat Linux distributions.
+
+Looking for an oft-maintained image
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Official images are generally well-maintained. By this we mean that they get frequent updates. Most Docker registries will show you the last time an image was updated, and will show a history going back several updates. This is important not only because it means you can get the latest features of new versions of software, but it also usually indicates that someone is paying attention to the security side of things too. No one wants to use a container only to discover that it still contains `the infamous log4j vulnerability <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046>`__, after all.
+
+Tutorial: Downloading and running an existing Docker image
+----------------------------------------------------------
+Let's start with Docker Hub. From the homepage, we can click "Explore" in the top righthand corner in order to get to `the search page <https://hub.docker.com/search?q=>`__, allowing us to start digging through all of its images. Don't worry, it won't load all 9,200,012 images at once.
+
+First, let's click the "Docker Official Image" option on the left, then search "Python" using the search bar at the top. Fittingly, our top result is the official Python image.
+
+
+
+What if I want to make my own image?
+------------------------------------
+Perhaps, instead of using someone else's software, you want to containerize your own. Or, maybe you need to work with the same files every time in a certain Docker container, and you do not wish to keep mounting the same files into your container every time you launch it. Let's walk through how to generate your very own Docker image using a Dockerfile.
 
 Tutorial: Making a Dockerfile for the BAMstats tool
 ---------------------------------------------------
@@ -280,7 +318,7 @@ example, here's a snippet:
    Sample report
 
 Rather than interactively working with the image, you could also run
-your Docker image from the command-line.
+your Docker image from the command line.
 
 ::
 
@@ -290,7 +328,7 @@ your Docker image from the command-line.
 Next Steps
 ----------
 
-**You could stop here!** However, we currently lack a standardized way to describe how to run this tool. That's what descriptor languages and Dockstore provide. We think it's valuable, and there's an increasing number of tools and workflows designed to work with various descriptor languages. To that end, we have continued this tutorial to describe how the command-line programs and input files can be parameterized and constructed via a descriptor language.
+**You could stop here!** However, we currently lack a standardized way to describe how to run this tool. That's what descriptor languages and Dockstore provide. We think it's valuable, and there's an increasing number of tools and workflows designed to work with various descriptor languages. To that end, we have continued this tutorial to describe how the command line programs and input files can be parameterized and constructed via a descriptor language.
 
 There are several descriptor languages available on Dockstore. Follow the
 links to get an introduction.

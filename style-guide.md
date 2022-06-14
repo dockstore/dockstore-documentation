@@ -81,7 +81,7 @@ See also: [Google's guidelines for accessibility](https://developers.google.com/
 >
 
 ## Consistent vocabulary
-Keep vocabulary consistent across documentation. Try to stick to American English spellings (customi*z*e vs customi*s*e, etc).
+Keep vocabulary consistent across documentation.
 
 | ✅                  | ❌                         	| Info                         	|
 |-------------------  |---------------------------	|------------------------------	|
@@ -96,6 +96,11 @@ Keep vocabulary consistent across documentation. Try to stick to American Englis
 ## International/Translation
 See also: [Google's guidelines r/e translation](https://developers.google.com/style/translation) 
 
+* [Use Oxford commas](https://en.wikipedia.org/wiki/Serial_comma)
+* Use American English spellings (customi*z*e vs customi*s*e, etc)
+* Try to avoid region-specific slang (buck as in dollar, stag/bachelor) but when a word does not really have a universally agreed upon name and the difference is enough that confusion may result, use the American English version followed by the most common alternative and/or the scientific name if it is an organism.
+	* Example of no universal name, but likely not confusing: Sidewalk (vs footpath, pavement) --> write "sidewalk"
+	* Example of no universal name, and can cause confusion: Arugula (vs rocket) --> write "arugula (also known as rocket, *Eruca vesicaria*)"
 * Avoid using idioms ("it's raining cats and dogs in Santa Cruz")
 * Avoid using culturally-specific comparisons ("the button is green like a dollar bill")
 * Try to use relatively simple English whenever possible

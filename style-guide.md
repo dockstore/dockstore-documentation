@@ -73,12 +73,14 @@ See also: [Google's guidelines for accessibility](https://developers.google.com/
 ## Consistent vocabulary
 Keep vocabulary consistent across documentation. Try to stick to American English spellings (customi*z*e vs customi*s*e, etc).
 
-| ✅            | ❌                         	| Info                         	|
-|--------------	|---------------------------	|------------------------------	|
-| CLI          	| cli                       	|                              	|
-| command line 	| command-line, commandline 	|                              	|
-| Docker       	| docker                    	| unless quoting a CLI command 	|
-| install      	| instal                    	|                              	|
+| ✅                  | ❌                         	| Info                         	|
+|-------------------  |---------------------------	|------------------------------	|
+| CLI                 | cli                       	|                              	|
+| command line        | command-line, commandline 	|                              	|
+| Docker              | docker                    	| unless quoting a CLI command 	|
+| install             | instal                    	|                              	|
+| walkthrough (noun)  | walkthru, walk through      |                              	|
+| walk through (verb) | walkthru, walkthrough       |                              	|
 
 
 ## International/Translation

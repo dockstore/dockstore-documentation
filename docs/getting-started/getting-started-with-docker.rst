@@ -52,11 +52,11 @@ Docker images are usually shared on registries. `Quay.io <https://quay.io/>`__ a
 
 Container registries usually show you the layers that make up a particular Docker image, what versions are available, and the username or organization that the Docker image is associated with. They also usually give you the command line text you need to use in order to download a particular image locally, which will allow you use to the image on your own machine.
 
-.. note:: Different registries have different limits on how often you can download images from the command line. If you are not logged in with the service you are using, these limits are usually based upon IP address, and may start blocking you from downloading if you are doing it too many times in a short period of time. As of our writing this, [Docker Hub in particular limits your IP to 100 downloads per six hours](https://docs.docker.com/docker-hub/download-rate-limit/) if you are not logged in.
+.. note:: Different registries have different limits on how often you can download images from the command line. If you are not logged in with the service you are using, these limits are usually based upon IP address, and may start blocking you from downloading if you are doing it too many times in a short period of time. As of our writing this, `Docker Hub in particular limits your IP to 100 downloads per six hours <https://docs.docker.com/docker-hub/download-rate-limit/>`__ if you are not logged in.
 
 Looking for an official image
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-A good place to start when looking for Docker images (or for one to base your own Docker image upon) are official images maintained by institutions. Docker Hub makes this easy by maintaining `a curated list of official images <https://hub.docker.com/search?image_filter=official&q=>`__, and `a curated list of verified images maintained by commerercial entities <https://hub.docker.com/search?q=&image_filter=store>`__. These images include the likes of `Ubuntu <https://hub.docker.com/_/ubuntu>`__, `golang <https://hub.docker.com/_/golang>`__, the `AWS CLI <https://hub.docker.com/r/amazon/aws-cli>`__, `Python <https://hub.docker.com/_/python>`__, and even `Docker <https://hub.docker.com/_/docker>`__. Yes, you can run Docker in Docker!
+A good place to start when looking for Docker images (or for one to base your own Docker image upon) are official images maintained by institutions. Docker Hub makes this easy by maintaining `a curated list of official images <https://hub.docker.com/search?image_filter=official&q=>`__, and `a curated list of verified images maintained by commerercial entities <https://hub.docker.com/search?q=&image_filter=store>`__. These images include the likes of `Ubuntu <https://hub.docker.com/_/ubuntu>`__, `golang <https://hub.docker.com/_/golang>`__, the `AWS CLI <https://hub.docker.com/r/amazon/aws-cli>`__, and even `Docker <https://hub.docker.com/_/docker>`__. Yes, you can run Docker in Docker!
 
 Quay.io does not maintain a list of official images like Docker Hub, but you can nonetheless find official images on there with a bit of searching, such as `CentOS <https://quay.io/repository/centos/centos?tab=info>`__. Because Quay is owned by Red Hat, it is a good place to find images based on Red Hat Linux distributions.
 
@@ -66,10 +66,96 @@ Official images are generally well-maintained. By this we mean that they get fre
 
 Tutorial: Downloading and running an existing Docker image
 ----------------------------------------------------------
+
+Finding an official image
+~~~~~~~~~~~~~~~~~~~~~~~~~
 Let's start with Docker Hub. From the homepage, we can click "Explore" in the top righthand corner in order to get to `the search page <https://hub.docker.com/search?q=>`__, allowing us to start digging through all of its images. Don't worry, it won't load all 9,200,012 images at once.
 
 First, let's click the "Docker Official Image" option on the left, then search "Python" using the search bar at the top. Fittingly, our top result is the official Python image.
 
+.. image:: /assets/images/docs/docker/dockerhub-search-python.png
+    :alt: Screenshot of the Docker Hub search feature, with the official Python image showing up as the first result
+
+Upon clicking on that result, we are taken to a description page. There is a lot of information here, such as an explanation of the multiple variants of the image. But what we're interested in right now is the command in the black box towards the top right. Assuming you have `installed Docker <https://docs.docker.com/desktop/linux/install/>`__ already -- now is a good time to do that -- this is the command used to pull the image from Docker Hub's servers into your computer, allowing you to execute it locally.
+
+.. image:: /assets/images/docs/docker/dockerhub-python-descript.png
+    :alt: Screenshot of the Docker Hub's page for Python, which has the gray text "Copy and paste to pull this image" above a black box containing the words "docker pull python"
+
+Let's try that next!
+
+Downloading an image from Docker Hub
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Once Docker is installed, open up the command line and enter the following:
+
+::
+
+    $> docker pull python
+
+The response will, at first, look a bit like this:
+
+.. code:: bash
+    
+    Using default tag: latest
+    latest: Pulling from library/python
+    e756f3fdd6a3: Pull complete
+    bf168a674899: Pull complete
+    e604223835cc: Pull complete
+    6d5c91c4cd86: Extracting [>                                                  ]  557.1kB/54.58MB
+    2cc8d8854262: Downloading [========================================>          ]  159.8MB/196.7MB
+    2767dbfeeb87: Download complete
+    9d5e973c5e10: Download complete
+    45f2aca7694f: Download complete
+    1123e010bf80: Download complete
+
+This shows the progress of downloading each :ref:`dict layer` included in the image, one at a time, plus extracting them. Once a layer is downloaded and extracted, it will read "Pull complete" in the CLI. This whole process usually takes just a few seconds. In this case, it creates the Python Docker image.
+
+Once everything has downloaded and been extracted, you will see something like:
+
+.. code:: bash
+
+    Using default tag: latest
+    latest: Pulling from library/python
+    e756f3fdd6a3: Pull complete
+    bf168a674899: Pull complete
+    e604223835cc: Pull complete
+    6d5c91c4cd86: Pull complete
+    2cc8d8854262: Pull complete
+    2767dbfeeb87: Pull complete
+    9d5e973c5e10: Pull complete
+    45f2aca7694f: Pull complete
+    1123e010bf80: Pull complete
+    Digest: sha256:b7bfea0126f539ba570a01fb595ee84cc4e7dcac971ad83d12c848942fa52cb6
+    Status: Downloaded newer image for python:latest
+    docker.io/library/python:latest
+
+.. note::
+    The name of each layer, the number of layers, the size of each layer and the overall image, and the sha256 digest that are written down here are likely to be different for you. Because we did not specify a tag when we pulled the container, Docker defaulted to looking for the `latest` tag, which is frequently updated.
+
+Running a Docker image locally
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Now, let's see what this image can do! Use this command to actually run the image as a container:
+
+::
+    
+    docker run -it python
+
+Don't forget to include the ``-it`` -- it is necessary to run the container in interactive mode. Without this, this Python container will simply open, then immediately close itself.
+
+What we see next is the Python 3 command line. Exactly what version of Python 3 will depending on what's on the ``latest`` tag when you run this tutorial, but for us, it is currently Python 3.10.5. If we ask the interpreter to print some text, it will do this task dutifully.
+
+.. code:: bash
+    
+    Python 3.10.5 (main, Jun  7 2022, 18:39:11) [GCC 10.2.1 20210110] on linux
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> print("hello world")
+    hello world
+
+Feel free to type in whatever Python code you would like (but keep in mind the filesystem is seperated from the rest of your computer, so file IO may not work quite as you would expect). When you are finished, you can exit the running container using ``exit()`` or ``quit()``.
+
+.. note::
+    Many images take in bash commands, instead of running a Python interpreter. In that case, use the bash `exit` command to quit the container.
+
+    A stopped container still exists on your hard disk, although it is usually very small. You can delete all stopped containers using the command ``docker container prune``. If you want to remove all Docker images on the other hand, and you have no containers running at the moment, you can use the command ``docker rmi $(docker images -q)``.
 
 
 What if I want to make my own image?
@@ -209,7 +295,7 @@ on building your Docker image on Quay.io we recommend their
 Build a Docker Image
 ~~~~~~~~~~~~~~~~~~~~
 
-Now that you've created the ``Dockerfile``, the next step is to build the image. Install `Docker Engine <https://docs.docker.com/engine/install/ubuntu/>`__ or `Docker Desktop <https://docs.docker.com/desktop/linux/install/>`__. Once it is installed, you can use this command to build your Docker image:
+Now that you've created the ``Dockerfile``, the next step is to build the image. Install `Docker Engine <https://docs.docker.com/engine/install/ubuntu/>`__ or `Docker Desktop <https://docs.docker.com/desktop/linux/install/>`__ if you have not done so already. Once it is installed, you can use this command to build your Docker image:
 
 ::
 

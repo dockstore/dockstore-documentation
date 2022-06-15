@@ -37,6 +37,7 @@ base_branch=$(curl  $pr | jq '.base.ref')
 echo $base_branch
 cd project
 pwd
+git diff ..develop
 git diff --name-only ${base_branch}..
 for file in $(git diff --name-only ${base_branch}..| grep -E "*\.rst" | grep -Fvxf $DOES_NOT_REQUIRE_DISCOURSE_TOPIC)
 do

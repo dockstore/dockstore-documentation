@@ -34,7 +34,8 @@ DOES_NOT_REQUIRE_DISCOURSE_TOPIC=no-discourse-required.txt
 # Determine the base branch (ie. master or develop) from the PR
 pr=$(echo $CIRCLE_PULL_REQUEST | sed 's+https://github.com+https://api.github.com/repos+' | sed 's/pull/pulls/')
 base_branch=$(curl  $pr | jq '.base.ref')
-
+echo $base_branch
+git diff --name-only ${base_branch}..
 for file in $(git diff --name-only ${base_branch}.. | grep -E "*\.rst" | grep -Fvxf $DOES_NOT_REQUIRE_DISCOURSE_TOPIC)
 do
   fileToCheck=$file

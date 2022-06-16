@@ -15,7 +15,7 @@
 
 # This script determines if all changed files rst files in a PR have a discourse topic
 
-
+echo $1
 # Determines if a file has a discourse topic
 function containsDiscourseTopic {
   grep -A1 "^.. discourse::" $fileToCheck | tail -n1 | grep -E "^( )*:topic_identifier:( )+[0-9]+" > /dev/null
@@ -33,16 +33,13 @@ DOES_NOT_REQUIRE_DISCOURSE_TOPIC=no-discourse-required.txt
 
 # Determine the base branch (ie. master or develop) from the PR
 pr=$(echo $CIRCLE_PULL_REQUEST | sed 's+https://github.com+https://api.github.com/repos+' | sed 's/pull/pulls/')
-base_branch=$(curl  $pr | jq '.base.ref')
-echo $base_branch
-pwd
-git diff --name-only ..develop
-git diff --name-only ${base_branch}..
-for file in $(git diff --name-only ${base_branch}..| grep -E "*\.rst" | grep -Fvxf $DOES_NOT_REQUIRE_DISCOURSE_TOPIC)
+branch=$(curl -s $pr | jq '.base.ref') # This gets a variable such as "develop"
+branch=${branch:1:-1}  # This removes the "" from branch
+for file in $(git diff --name-only $"branch"..| grep -E "*\.rst" | grep -Fvxf $DOES_NOT_REQUIRE_DISCOURSE_TOPIC)
 do
   fileToCheck=$file
   if ! containsDiscourseTopic
-  then
+  thenc
     RETURN_VALUE=1
   fi
 done

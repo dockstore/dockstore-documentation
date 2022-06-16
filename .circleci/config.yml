@@ -18,11 +18,7 @@ jobs:
       - run:
           name: Discourse Topic Check
           command: |
-            if [ -n $CIRCLE_PULL_REQUEST ]; then
-              bash discourse-topic-check.sh
-            else
-              echo "This check was not done as it was not a PR"
-            fi
+            bash discourse-topic-check.sh
 orbs:
   jq: circleci/jq@2.2.0
 workflows:

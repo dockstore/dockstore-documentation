@@ -14,9 +14,6 @@
 #    limitations under the License.
 
 # This script determines if all changed files rst files in a PR have a discourse topic
-# This script requires the variable CIRCLE_PULL_REQUEST to be set to the URL of the PR,
-# this is done automatically in CircleCI.
-# An example value of CIRCLE_PULL_REQUEST is https://github.com/dockstore/dockstore-documentation/pull/209
 
 # Determines if a file has a discourse topic
 
@@ -33,9 +30,20 @@ function containsDiscourseTopic {
 
 RETURN_VALUE=0
 DOES_NOT_REQUIRE_DISCOURSE_TOPIC=no-discourse-topic-required.txt
-# Determine the base branch (ie. master or develop) from the PR
-pr=$(echo $CIRCLE_PULL_REQUEST | sed 's+https://github.com+https://api.github.com/repos+' | sed 's/pull/pulls/')
-branch="$(curl -s $pr | jq -r '.base.ref')"
+
+if [[ -n $CIRCLE_PULL_REQUEST ]]
+then
+  # This step requires the variable CIRCLE_PULL_REQUEST to be set to the URL of the PR,
+  # this is done automatically in CircleCI.
+  # An example value of CIRCLE_PULL_REQUEST is https://github.com/dockstore/dockstore-documentation/pull/209
+  pr=$(echo $CIRCLE_PULL_REQUEST | sed 's+https://github.com+https://api.github.com/repos+' | sed 's/pull/pulls/')
+  branch="$(curl -s $pr | jq -r '.base.ref')"
+else
+  # Defaulting the value of branch to develop if it is not a PR
+  branch=develop
+  echo "This is not a PR, therefore we are assuming the base branch is develop"
+fi
+
 for file in $(git diff --name-only "$branch"..| grep -E "*\.rst" | grep -Fvxf $DOES_NOT_REQUIRE_DISCOURSE_TOPIC)
 do
   fileToCheck=$file

@@ -45,6 +45,8 @@ done
 if [ $RETURN_VALUE != 0 ]
 then
   echo "If your files do not require a discourse topic you can add them to ${DOES_NOT_REQUIRE_DISCOURSE_TOPIC}"
+else
+  echo "All of the modified files have discourse topics"
 fi
 
 exit $RETURN_VALUE

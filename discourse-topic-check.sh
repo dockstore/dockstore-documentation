@@ -17,7 +17,7 @@
 
 # Determines if a file has a discourse topic
 function containsDiscourseTopic {
-  grep -A1 "^.. discourse::" $fileToCheck | tail -n1 | grep -E "^( )*:topic_identifier:( )+[0-9]+" > /dev/null
+  grep -A1 "^.. discourse::" $fileToCheck | tail -n1 | grep -E "^( )*:topic_identifier:( )*[0-9]+" > /dev/null
   if [ $? != 0 ]
   then
     echo "${fileToCheck} does not have a discourse topic"

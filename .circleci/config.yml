@@ -6,15 +6,15 @@ jobs:
     steps:
       - checkout
       - jq/install
-#      - run:
-#          name: Install dependencies
-#          command: pip install -r requirements.txt
-#      - run:
-#          name: Make html
-#          command: cd docs && make html
-#      - run:
-#          name: Link check
-#          command: cd docs && make linkcheck
+      - run:
+          name: Install dependencies
+          command: pip install -r requirements.txt
+      - run:
+          name: Make html
+          command: cd docs && make html
+      - run:
+          name: Link check
+          command: cd docs && make linkcheck
       - run:
           name: Discourse Topic Check
           command: bash discourse-topic-check.sh

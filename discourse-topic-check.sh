@@ -28,11 +28,11 @@ function containsDiscourseTopic {
 }
 
 RETURN_VALUE=0
-DOES_NOT_REQUIRE_DISCOURSE_TOPIC=no-discourse-required.txt
+DOES_NOT_REQUIRE_DISCOURSE_TOPIC=no-discourse-topic-required.txt
 
 # Determine the base branch (ie. master or develop) from the PR
 pr=$(echo $CIRCLE_PULL_REQUEST | sed 's+https://github.com+https://api.github.com/repos+' | sed 's/pull/pulls/')
-branch=$(curl -s $pr | jq -r '.base.ref')
+branch="$(curl -s $pr | jq -r '.base.ref')"
 for file in $(git diff --name-only "$branch"..| grep -E "*\.rst" | grep -Fvxf $DOES_NOT_REQUIRE_DISCOURSE_TOPIC)
 do
   fileToCheck=$file

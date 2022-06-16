@@ -1,5 +1,5 @@
 NO discourse included
 
 
-..discourse::
+.. discourse::
 	:topic_identifier:55

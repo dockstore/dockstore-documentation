@@ -35,7 +35,7 @@ DOES_NOT_REQUIRE_DISCOURSE_TOPIC=no-discourse-required.txt
 pr=$(echo $CIRCLE_PULL_REQUEST | sed 's+https://github.com+https://api.github.com/repos+' | sed 's/pull/pulls/')
 branch=$(curl -s $pr | jq '.base.ref') # This gets a variable such as "develop"
 branch=${branch:1:-1}  # This removes the "" from branch
-for file in $(git diff --name-only $"branch"..| grep -E "*\.rst" | grep -Fvxf $DOES_NOT_REQUIRE_DISCOURSE_TOPIC)
+for file in $(git diff --name-only "$branch"..| grep -E "*\.rst" | grep -Fvxf $DOES_NOT_REQUIRE_DISCOURSE_TOPIC)
 do
   fileToCheck=$file
   if ! containsDiscourseTopic

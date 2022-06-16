@@ -54,7 +54,7 @@ Image / Container Best Practices
 
 - Use Dockerfiles to describe and configure images:
 
-		- See `Best Practices from Docker <https://www.docker.com/blog/intro-guide-to-dockerfile-best-practices/>`_ and `10 Simple Rules for Writing Dockerfiles for Reproducible Analysis <https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316>`_.
+		- See `Best Practices from Docker <https://web.archive.org/web/20211208133226/https://www.docker.com/blog/intro-guide-to-dockerfile-best-practices/>`_ and `10 Simple Rules for Writing Dockerfiles for Reproducible Analysis <https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316>`_.
 		- Use a source control site (as mentioned above in :ref:`version-control-best-practices`) for versioning Dockerfiles (see a `simple example for versioning your Docker Image <https://medium.com/better-programming/how-to-version-your-docker-images-1d5c577ebf54>`_). 
 
 - Keep images light:

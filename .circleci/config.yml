@@ -17,7 +17,12 @@ jobs:
           command: cd docs && make linkcheck
       - run:
           name: Discourse Topic Check
-          command: bash discourse-topic-check.sh
+          command: |
+            if [ -n $CIRCLE_PULL_REQUEST ]; then
+              bash discourse-topic-check.sh
+            else
+              echo "This check was not done as it was not a PR"
+            fi
 orbs:
   jq: circleci/jq@2.2.0
 workflows:

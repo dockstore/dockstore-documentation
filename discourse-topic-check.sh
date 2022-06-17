@@ -16,6 +16,7 @@
 # This script determines if all changed files rst files in a PR have a discourse topic
 
 # Determines if a file has a discourse topic
+source base-branch.sh
 
 function containsDiscourseTopic {
   grep -A1 "^.. discourse::" $fileToCheck | tail -n1 | grep -E "^( )*:topic_identifier:( )*[0-9]+" > /dev/null
@@ -37,14 +38,10 @@ then
   # this is done automatically in CircleCI.
   # An example value of CIRCLE_PULL_REQUEST is https://github.com/dockstore/dockstore-documentation/pull/209
   pr=$(echo $CIRCLE_PULL_REQUEST | sed 's+https://github.com+https://api.github.com/repos+' | sed 's/pull/pulls/')
-  branch="$(curl -s $pr | jq -r '.base.ref')"
-else
-  # Defaulting the value of branch to develop if it is not a PR
-  branch=develop
-  echo "This is not a PR, therefore we are assuming the base branch is develop"
+  baseBranch="$(curl -s $pr | jq -r '.base.ref')"
 fi
 
-for file in $(git diff --name-only "$branch"..| grep -E "*\.rst" | grep -Fvxf $DOES_NOT_REQUIRE_DISCOURSE_TOPIC)
+for file in $(git diff --name-only "$baseBranch".. | grep -E "*\.rst" | grep -Fvxf $DOES_NOT_REQUIRE_DISCOURSE_TOPIC)
 do
   fileToCheck=$file
   if ! containsDiscourseTopic

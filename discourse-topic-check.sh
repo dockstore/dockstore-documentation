@@ -14,9 +14,9 @@
 #    limitations under the License.
 
 # This script determines if all changed files rst files in a PR have a discourse topic
+source base-branch.sh
 
 # Determines if a file has a discourse topic
-source base-branch.sh
 
 function containsDiscourseTopic {
   grep -A1 "^.. discourse::" $fileToCheck | tail -n1 | grep -E "^( )*:topic_identifier:( )*[0-9]+" > /dev/null

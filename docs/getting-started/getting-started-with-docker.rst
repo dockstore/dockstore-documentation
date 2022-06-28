@@ -111,7 +111,7 @@ The response will, at first, look a bit like this:
     45f2aca7694f: Download complete
     1123e010bf80: Download complete
 
-This shows the progress of downloading each :ref:`dict layer` included in the image, one at a time, plus extracting them. Once a layer is downloaded and extracted, it will read "Pull complete" in the CLI. This whole process usually takes just a few seconds. In this case, it creates the Python Docker image.
+This shows the progress of downloading each :ref:`dict layer` included in the image, one at a time, plus extracting them. Once a layer is downloaded and extracted, it will read "Pull complete" in the CLI. This whole process usually takes just a few minutes (depending on the speed of your internet connection). In this case, it creates the Python Docker image.
 
 Once everything has downloaded and been extracted, you will see something like:
 
@@ -299,7 +299,7 @@ on building your Docker image on Quay.io we recommend their
 Build a Docker Image
 ~~~~~~~~~~~~~~~~~~~~
 
-Now that you've created the ``Dockerfile``, the next step is to build the image. Install `Docker Engine <https://docs.docker.com/engine/install/ubuntu/>`__ or `Docker Desktop <https://docs.docker.com/desktop/linux/install/>`__ if you have not done so already. Once it is installed, you can use this command to build your Docker image:
+Now that you've created the ``Dockerfile``, the next step is to build the image. Install `Docker Engine <https://docs.docker.com/engine/install/ubuntu/>`__ or `Docker Desktop <https://docs.docker.com/desktop/#download-and-install>`__ if you have not done so already. Once it is installed, you can use this command to build your Docker image:
 
 ::
 

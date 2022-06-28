@@ -38,7 +38,7 @@ How do I install Docker?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Docker generally recommends that people `install it via Docker Desktop <https://docs.docker.com/desktop/#download-and-install>`__. Docker Desktop includes the command line Docker Engine program that we will be using in this tutorial, plus a GUI to make adjustment of certain settings a little easier, and a quick tutorial for new users (which we recommend you try out!). Linux users have the option of using either Docker Desktop, or `using a package manager <https://docs.docker.com/engine/install/ubuntu/>` to solely install Docker Engine.
 
-For the sake of simplicity, this tutorial will assume you are running Docker on a non-HPC Unix or Unix-like system.
+For the sake of simplicity, this tutorial will assume you are running Docker on a non-HPC Ubuntu machine. Although installation can vary across operating systems, the actual tutorial instructions we use here work almost identically across different operating systems running Docker.
 
 Thick vs thin Docker images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

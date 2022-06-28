@@ -36,15 +36,9 @@ Users of HPC (High Performance Compute) systems may not be able to run Docker En
 
 How do I install Docker?
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Docker generally recommends that people `install it via Docker Desktop <https://docs.docker.com/desktop/#download-and-install>`__. Docker Desktop includes the command line Docker Engine program that we will be using in this tutorial, plus a GUI to make adjustment of certain settings a little easier, and a quick tutorial for new users (which we recommend you try out!). Linux users have the option of using either Docker Desktop, or `using a package manager <https://docs.docker.com/engine/install/ubuntu/>` to solely install Docker Engine.
+Docker generally recommends that people `install it via Docker Desktop <https://docs.docker.com/desktop/#download-and-install>`__. Docker Desktop includes the command line Docker Engine program that we will be using in this tutorial, plus a GUI to make adjustment of certain settings a little easier, and a quick tutorial for new users (which we recommend you try out!). Linux users have the option of using either Docker Desktop, or `using a package manager <https://docs.docker.com/engine/install/ubuntu/>`__ to solely install Docker Engine.
 
 For the sake of simplicity, this tutorial will assume you are running Docker on a non-HPC Ubuntu machine. Although installation can vary across operating systems, the actual tutorial instructions we use here work almost identically across different operating systems running Docker.
-
-Thick vs thin Docker images
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Docker images are sometimes described in terms of thick versus thin/slim, describing how much stuff is inside them. These are relative terms, not a precise definition, but they can be useful shorthands for two different schools of thought around Docker: Including a single tool, or multiple tools.
-
-Over time, we at Dockstore have found that slim Docker images, those with single tools installed in them, are more helpful for extending and building new workflows with. That being said, thick Docker containers, which include multiple tools and even full workflows with frameworks like `SeqWare <https://seqware.github.io/>`__ or `Galaxy <https://galaxyproject.org/>`__, can have their place as well. Projects like the ICGC `PanCancer Analysis of Whole Genomes <https://dcc.icgc.org/pcawg>`__ (PCAWG) made use of thick Docker containers that had complex workflows that fully encapsulated alignment and variant calling. Another example is the `UWGAC Analysis Workflows <https://dockstore.org/organizations/bdcatalyst/collections/UWGACAncestryRelatedness>`__, which all use the same Docker image full of R scripts in order to preform everything from file conversion to a full GWAS analysis. The self-contained nature of these Docker containers allow for mobility between a wide variety of environments, and sometimes simplify the setup of these pipelines across a wide variety of HPC and cloud environments. Either approach works for the Dockstore so long as you can describe the tool or workflow inside the Docker container as a CWL/WDL/NFL-defined tool (which you can for most things).
 
 Using existing Docker images
 ----------------------------
@@ -67,6 +61,18 @@ Quay.io does not maintain a list of official images like Docker Hub, but you can
 Looking for an oft-maintained image
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Official images are generally well-maintained. By this we mean that they get frequent updates. Most Docker registries will show you the last time an image was updated, and will show a history going back several updates. This is important not only because it means you can get the latest features of new versions of software, but it also usually indicates that someone is paying attention to the security side of things too. No one wants to use a container only to discover that it still contains `the infamous log4j vulnerability <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046>`__, after all.
+
+Security considerations
+~~~~~~~~~~~~~~~~~~~~~~~
+.. note:: Containers operate in an isolated filesystem, and you can *generally* do whatever you like inside of them without affecting the rest of the system. However, it is theoretically possible for malicious software in a container to "escape" into the system at large.
+
+Speaking of log4j, how does one make sure that their images are secure? Even if you think that your research is not a high-value target for hackers, your system might still be useful to someone hoping to mine cryptocurrency, steal credentials, or operate a botnet. Whether you make your own images or use existing ones, there are several things you can do to help keep yourself and your users safe from malicious software. See :ref:`image-container-best-practices` for more information.
+
+Thick vs thin Docker images
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Docker images are sometimes described in terms of thick versus thin/slim, describing how much stuff is inside them. These are relative terms, not a precise definition, but they can be useful shorthands for two different schools of thought around Docker: Including a single tool, or multiple tools.
+
+Over time, we at Dockstore have found that slim Docker images, those with single tools installed in them, are more helpful for extending and building new workflows with. That being said, thick Docker containers, which include multiple tools and even full workflows with frameworks like `SeqWare <https://seqware.github.io/>`__ or `Galaxy <https://galaxyproject.org/>`__, can have their place as well. Projects like the ICGC `PanCancer Analysis of Whole Genomes <https://dcc.icgc.org/pcawg>`__ (PCAWG) made use of thick Docker containers that had complex workflows that fully encapsulated alignment and variant calling. Another example is the `UWGAC Analysis Workflows <https://dockstore.org/organizations/bdcatalyst/collections/UWGACAncestryRelatedness>`__, which all use the same Docker image full of R scripts in order to preform everything from file conversion to a full GWAS analysis. The self-contained nature of these Docker containers allow for mobility between a wide variety of environments, and sometimes simplify the setup of these pipelines across a wide variety of HPC and cloud environments. Either approach works for the Dockstore so long as you can describe the tool or workflow inside the Docker container as a CWL/WDL/NFL-defined tool (which you can for most things).
 
 Tutorial: Downloading and running an existing Docker image
 ----------------------------------------------------------

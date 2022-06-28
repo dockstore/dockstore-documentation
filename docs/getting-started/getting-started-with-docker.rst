@@ -28,11 +28,15 @@ When a user runs a Docker image locally, the Docker Engine spins up an instance 
 
 Docker is a robust piece of software with dozens of features. We won't be going over everything in this tutorial, but we will give you the overview needed to use Docker in the context of tools and workflows.
 
-What do I need to run Docker?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Docker generally recommends that people `install it via Docker Desktop <https://docs.docker.com/desktop/#download-and-install>`__. Docker Desktop includes the command line Docker Engine program that we will be using in this tutorial, plus a GUI to make adjustment of certain settings a little easier, and a quick tutorial for new users (which we recommend you try out!). You could instead `install the Docker Engine from binaries <https://docs.docker.com/engine/install/binaries/>`__, but this is generally not recommended as it is a little harder to install than Docker Desktop and does not automatically receive updates. In either case, to install a modern version of Docker, you will need a 64 bit system. Generally speaking you will also need root permissions on whatever system you are running on.
+Where can I run Docker?
+~~~~~~~~~~~~~~~~~~~~~~~
+Most 64-bit systems can run Docker. Your local Windows/Mac/Linux machine can likely run it, and most cloud compute systems have support for Docker or similar software too.
 
 Users of HPC (High Performance Compute) systems may not be able to run Docker Engine directly, depending on your sysadmin's policies and the details of your HPC's scheduling system. We can't go over all of possible HPC setups here, but we recommend checking out `Singularity <https://sylabs.io/guides/2.6/user-guide/singularity_and_docker.html>`__ and `Shifter <https://github.com/NERSC/shifter>`__, both of which are designed for running Docker images without using the Docker Engine program. If your HPC does not support Docker Engine, there is a strong chance it is already set up with an alternative.
+
+How do I install Docker?
+~~~~~~~~~~~~~~~~~~~~~~~~
+Docker generally recommends that people `install it via Docker Desktop <https://docs.docker.com/desktop/#download-and-install>`__. Docker Desktop includes the command line Docker Engine program that we will be using in this tutorial, plus a GUI to make adjustment of certain settings a little easier, and a quick tutorial for new users (which we recommend you try out!). Linux users have the option of using either Docker Desktop, or `using a package manager <https://docs.docker.com/engine/install/ubuntu/>` to solely install Docker Engine.
 
 For the sake of simplicity, this tutorial will assume you are running Docker on a non-HPC Unix or Unix-like system.
 
@@ -76,7 +80,7 @@ First, let's click the "Docker Official Image" option on the left, then search "
 .. image:: /assets/images/docs/docker/dockerhub-search-python.png
     :alt: Screenshot of the Docker Hub search feature, with the official Python image showing up as the first result
 
-Upon clicking on that result, we are taken to a description page. There is a lot of information here, such as an explanation of the multiple variants of the image. But what we're interested in right now is the command in the black box towards the top right. Assuming you have `installed Docker <https://docs.docker.com/desktop/linux/install/>`__ already -- now is a good time to do that -- this is the command used to pull the image from Docker Hub's servers into your computer, allowing you to execute it locally.
+Upon clicking on that result, we are taken to a description page. There is a lot of information here, such as an explanation of the multiple variants of the image. But what we're interested in right now is the command in the black box towards the top right. Assuming you have `installed Docker <https://docs.docker.com/desktop/#download-and-install>`__ already -- now is a good time to do that -- this is the command used to pull the image from Docker Hub's servers into your computer, allowing you to execute it locally.
 
 .. image:: /assets/images/docs/docker/dockerhub-python-descript.png
     :alt: Screenshot of the Docker Hub's page for Python, which has the gray text "Copy and paste to pull this image" above a black box containing the words "docker pull python"

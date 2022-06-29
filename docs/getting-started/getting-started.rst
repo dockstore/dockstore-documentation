@@ -1,6 +1,6 @@
 Introduction
 ============
-We described the mission of Dockstore on our about page, but now it's time to learn how to actually use it as a contributor.
+We described the mission of Dockstore on :doc:`our about page <../dockstore-introduction>`, but now it's time to learn how to actually use it as a contributor.
 
 This "Getting Started" series is an introduction to everything required to properly use Dockstore as a contributor of workflows or tools. It is designed to be somewhat modular, so if you wish to jump into any individual topics, you may do so. But if you follow it in order, you'll learn an overview of how Docker and workflow languages like CWL, WDL, Nextflow, and Galaxy are changing how scientists use and create tools via a series of tutorials which goes through the whole process of:
 

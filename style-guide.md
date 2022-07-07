@@ -39,13 +39,23 @@ See also: [Google's guidelines for accessibility](https://developers.google.com/
 	* Unless this bash/zsh difference only applies to Linux, make note of the fact that zsh is the default shell in Mac OS as of Catalina (10.15)
 	* Do not worry about other shells besides bash and zsh
 
-## Coding in RST
+## Coding in RST (headers, spacing, etc)
 * Write in RST, not markdown
 	* Archived documents orignally presented in markdown may remain in markdown
 	* Keep this style guide in markdown in order to display RST formatting
-* Use \`.. comment\` to write comments
-* Use consistent indentation spacing within a single RST file
+* Use \`.. comment\` to write comments that will not render on the HTML page
+* Use consistent indentation within a single RST file
 * Keep all sentences in a given paragraph that renders as body text on one line, i.e. do not break up body text every x characters
+* There should be one newline per bulletpoint, but two newlines per body paragraph, such as:
+> `1. Sequence the genome`
+> `2. Upload the genome`
+> `3. Be granted tenure`
+> ``
+> `I am a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis felis ac ligula ultrices pellentesque ullamcorper ac dolor. Sed condimentum vel lectus id auctor. Pellentesque consectetur sed ipsum vitae elementum. Praesent nunc libero, sodales in tortor at, fermentum pellentesque metus.`
+> 
+> `I am the next paragraph. Proin laoreet, eros sed elementum ultrices, eros lorem posuere augue, non maximus arcu lectus eget ante. Sed eget ex quis neque faucibus accumsan ut vel ligula. Fusce quis hendrerit augue, eget euismod nunc. Aliquam varius ipsum ligula, ac gravida nisi efficitur in. Duis nec lacinia quam. In hac habitasse platea dictumst.`
+> 
+
 * Make RST tables human-readable instead of compact -- consider using [this table generator](https://tableconvert.com/restructuredtext-generator)
 * Use \`this style \<https://example.com\>_` of formatting external hyperlinks, as it is less error prone than the method involving setting the target in another paragraph
 	* Exception: It is acceptable to use the other format to get around RST limitations about nested formatting, [as demonstrated in this commit](https://github.com/dockstore/dockstore-documentation/pull/198/commits/226410b4bd86b96e86a2dcc3045bbcfac7d04adc)
@@ -69,10 +79,28 @@ See also: [Google's guidelines for accessibility](https://developers.google.com/
 > `heading level 5`  
 > `\``````````````
 >
- 
+
+## Consistent vocabulary
+Keep vocabulary consistent across documentation.
+
+| ✅                  | ❌                         	| Info                         	|
+|-------------------  |---------------------------	|------------------------------	|
+| CLI                 | cli                       	|                              	|
+| command line        | command-line, commandline 	|                              	|
+| Docker              | docker                    	| unless quoting a CLI command 	|
+| install             | instal                    	|                              	|
+| walkthrough (noun)  | walkthru, walk through      |                              	|
+| walk through (verb) | walkthru, walkthrough       |                              	|
+
+
 ## International/Translation
 See also: [Google's guidelines r/e translation](https://developers.google.com/style/translation) 
 
+* [Use Oxford commas](https://en.wikipedia.org/wiki/Serial_comma)
+* Use American English spellings (customi*z*e vs customi*s*e, etc)
+* Try to avoid region-specific slang (buck as in dollar, stag/bachelor) but when a word does not really have a universally agreed upon name and the difference is enough that confusion may result, use the American English version followed by the most common alternative and/or the scientific name if it is an organism.
+	* Example of no universal name, but likely not confusing: Sidewalk (vs footpath, pavement) --> write "sidewalk"
+	* Example of no universal name, and can cause confusion: Arugula (vs rocket) --> write "arugula (also known as rocket, *Eruca vesicaria*)"
 * Avoid using idioms ("it's raining cats and dogs in Santa Cruz")
 * Avoid using culturally-specific comparisons ("the button is green like a dollar bill")
 * Try to use relatively simple English whenever possible

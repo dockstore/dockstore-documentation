@@ -1,4 +1,4 @@
-.. note:: This tutorial is a continuation of :doc:`Getting Started With Docker </getting-started/getting-started-with-docker>`. Please complete that tutorial prior to doing this one.
+.. note:: This tutorial assumes basic familiarity with Docker as its example involves a Docker image. It also assumes you have access to a system that can run Docker. You may wish to start with :doc:`Getting Started With Docker </getting-started/getting-started-with-docker>` if you are not familiar with it.
 
 Getting Started with CWL
 ========================
@@ -16,9 +16,7 @@ Tutorial Goals
 Describe Your Tool in CWL
 -------------------------
 
-Now that you have a git repository that includes a ``Dockerfile``, you
-have tested it, and are satisfied that your tool works in Docker, the
-next step is to create a `CWL tool definition
+The first step is to create is to create a `CWL tool definition
 file <https://www.commonwl.org/user_guide/02-1st-example/>`__. This YAML
 (Or JSON) file describes the inputs, outputs, and Docker image
 dependencies for your tool.
@@ -36,7 +34,7 @@ It is recommended that you have the following minimum fields:
     dct:creator:
       foaf:name: <name>
 
-Again, we provide an example from the
+We provide an example from the
 `dockstore-tool-bamstats <https://github.com/CancerCollaboratory/dockstore-tool-bamstats/blob/develop/Dockstore.cwl>`__
 repository:
 
@@ -99,7 +97,7 @@ repository:
         foaf: http://xmlns.com/foaf/0.1/
 
 .. note:: The `sbg:draft-2 <https://docs.sevenbridges.com/docs/about-the-common-workflow-language#sbgdraft-2>`__ implementation of CWL is optimized for the Seven Bridges cloud-based platform and includes custom extensions.
-    Although Dockstore does not support CWL sbg:draft-2, we do support CWL v1.0 which natively supports these custom extensions. Seven Bridges also provides `instructions <https://sb-biodatacatalyst.readme.io/docs/maintaining-and-versioning-cwl-on-external-tool-repositories>`__
+    Dockstore does not support sbg:draft-2 CWL tools and workflows, and if you register one, Dockstore will mark the entry as invalid, and you will not be able to publish, run, or launch it on any cloud compute platform. However, we do support `CWL v1.0 <https://www.commonwl.org/v1.0/>`__, which defines similar functionality and supersedes the sbg:draft-2 extensions.  Seven Bridges also provides `instructions <https://sb-biodatacatalyst.readme.io/docs/maintaining-and-versioning-cwl-on-external-tool-repositories>`__
     for how to transition tools and workflows developed in the Seven Bridges Software Development Kit to GitHub for publishing in Dockstore.
 
 You can see this tool takes two inputs, a parameter to control memory
@@ -158,8 +156,7 @@ identifer for researchers) or use an email address for your id.
       - class: DockerRequirement
         dockerPull: "quay.io/collaboratory/dockstore-tool-bamstats:1.25-6"
 
-This section links the Docker image used for this CWL. Notice it's
-exactly the same as the ``-t`` you used when building your image.
+This section links the Docker image used for this CWL.
 
 ::
 
@@ -169,7 +166,7 @@ exactly the same as the ``-t`` you used when building your image.
         ramMin: 4092 # the process requires at least 4G of RAM
         outdirMin: 512000
 
-This may or may not be honoured by the tool calling this CWL, but at
+This may or may not be honoured by the executor calling this CWL, but at
 least it gives you a place to declare computational requirements.
 
 ::
@@ -232,8 +229,8 @@ directions and we recommend tool authors make their voices heard.
 Testing Locally
 ---------------
 
-So at this point, you've created a Docker-based tool and have described
-how to call that tool using CWL. Let's test running the BAMStats using
+So at this point, you've described
+how to call a Docker-based tool using CWL. Let's test running the BAMStats using
 the Dockstore command line and descriptor, rather than just directly
 calling it via Docker. This will test that the CWL correctly describes
 how to run your tool.
@@ -367,15 +364,6 @@ Adding a Test Parameter File
 
 .. include:: adding-a-test-parameter-file.rst
 
-Releasing on GitHub
--------------------
-
-.. include:: releasing-on-github.rst
-
-Building on Quay.io
--------------------
-
-.. include:: building-on-quayio.rst
 
 Next Steps
 ----------

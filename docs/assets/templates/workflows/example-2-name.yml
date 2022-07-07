@@ -1,0 +1,11 @@
+version: 1.2
+workflows:
+  - subclass: WDL
+    primaryDescriptorPath: /assoc-aggregate/assoc-aggregate.wdl
+    testParameterFiles:
+      - /assoc-aggregate/assoc-aggregate-terra-allele.json
+      - /assoc-aggregate/assoc-aggregate-terra-position.json
+      - /assoc-aggregate/assoc-aggregate-terra-weights.json
+    authors:
+      - orcid: 0000-0003-4896-1858
+    name: assoc-aggregate-wdl

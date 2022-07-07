@@ -1,5 +1,6 @@
 Upcoming Features
 =================
+*May 5, 2017*
 
 To give you a taste of what we're working on for the next major version
 of Dockstore, we're looking at features in the following main areas:
@@ -30,43 +31,6 @@ of Dockstore, we're looking at features in the following main areas:
 As usual, we're open to suggestions. If you have one or if you spot a
 bug, drop us a line on
 `GitHub <https://github.com/dockstore/dockstore/issues>`__
-
-April 19, 2017 - Dockstore 1.2 Release
---------------------------------------
-
-The latest Dockstore major release includes a large number of new
-features and fixes. A subset of highlighted new features follows.
-
-Highlighted New Features
-~~~~~~~~~~~~~~~~~~~~~~~~
-
--  Support for private tools
--  users can register tools where users will need to ask the original
-   author for access
--  Support for
-   `private <https://dockstore.org/docs/docker_registries>`__ Docker
-   images hosted in GitLab and Amazon ECR
--  Allow users to star tools and workflows
--  Stargazers page to show all users who have starred a particular tool
-   or workflow
--  Support for `file provisioning
-   plugins <https://github.com/dockstore/dockstore-cli/tree/master/dockstore-file-plugin-parent>`__
--  Better error messaging passed along from a newer cwltool version
--  Compatibility with a Write API service for programmatically adding
-   tools
-
-Breaking Changes
-~~~~~~~~~~~~~~~~
-
--  The default Dockstore install no longer includes S3 support. Instead,
-   S3 support is provided by a plugin that can be installed via
-   ``dockstore plugin download``
--  The command ``dockstore tool launch`` used to use ``--local-entry``
-   as a flag to indicate that ``--entry`` was pointing at a local file.
-   Now, it replaces ``--entry``. i.e. use
-   ``dockstore tool launch --local-entry <your local file>`` rather than
-   ``dockstore tool launch --local-entry --entry <your local file>``
--  Update your cwltool install, details in the onboarding wizard
 
 .. discourse::
     :topic_identifier: 2021

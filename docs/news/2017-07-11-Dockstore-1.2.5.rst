@@ -1,5 +1,6 @@
 Dockstore 1.2.5
 ===============
+*July 11, 2017*
 
 Visit our `new forum <https://discuss.dockstore.org/>`__. Discuss tools,
 tooling, bioinformatics cloud computing, etc. This will replace both the
@@ -16,7 +17,7 @@ formally released later) includes fixes for the following:
 -  Issues saving workflow test json files
 
 Breaking Changes
-~~~~~~~~~~~~~~~~
+----------------
 
 -  We needed to clear out unpublished workflows to do some clean-up. Let
    us know if you had anything important stored in unpublished as

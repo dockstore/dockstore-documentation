@@ -6,7 +6,7 @@ Advanced CLI Features
 File Provisioning
 -----------------
 
-As a convenience, the dockstore command-line can perform file
+As a convenience, the Dockstore CLI can perform file
 provisioning for inputs and outputs.
 
 File provisioning for some protocols, like HTTP and FTP, is built-in
@@ -205,7 +205,7 @@ Running Launchers with Extra flags
 
 When running a tool or workflow, you may want to add additional
 parameters or flags to the executor. You can do this by updating your
-dockstore config file  (``~/.dockstore/config``).
+Dockstore config file  (``~/.dockstore/config``).
 
 As an example, adding the following line to your config file will stop
 ``cwltool`` from removing the Docker container and temp directory as
@@ -248,7 +248,7 @@ provide the ``-t`` and ``--options`` options to the Cromwell command line.
 Alternative CWL Launchers
 -------------------------
 
-By default, the dockstore CLI launches CWL tools/workflows using
+By default, the Dockstore CLI launches CWL tools/workflows using
 `cwltool <https://github.com/common-workflow-language/cwltool>`__.
 However, we have an experimental integration with other launchers such
 as: -
@@ -330,16 +330,23 @@ with the `Cromwell <https://github.com/broadinstitute/cromwell>`__ version liste
 +-------------+-----------------------+
 |     1.11    |          57           |
 +-------------+-----------------------+
+|     1.12    |          57           |
++-------------+-----------------------+
+|     1.13    |          77           |
++-------------+-----------------------+
 
-
-Additionally, you can override the cromwell version in your
+Additionally, you can override the Cromwell version in your
 ``~/.dockstore/config`` using for example:
 
 ::
 
-    cromwell-version = 58
+    cromwell-version = 76
 
-You can test cromwell by cloning the dockstore-tool-md5sum repository:
+The Dockstore CLI will attempt to download the version of Cromwell JAR file you specify from the `Cromwell
+download area <https://github.com/broadinstitute/cromwell/releases/>`__ to
+``~/.dockstore/libraries``.
+
+You can test Cromwell by cloning the dockstore-tool-md5sum repository:
 ``git clone git@github.com:briandoconnor/dockstore-tool-md5sum.git`` and
 then test using
 ``dockstore tool launch --local-entry Dockstore.wdl --json test.wdl.json``

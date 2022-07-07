@@ -1,5 +1,5 @@
-Launching Tools and Workflows
-=============================
+Dockstore CLI
+=============
 
 Tutorial Goals
 --------------
@@ -22,11 +22,11 @@ Support for AWS S3 and `ICGC Score
 client <https://github.com/dockstore/icgc-storage-client-plugin>`__ is
 provided via plugins installed by default.
 
-Launch Tools
-~~~~~~~~~~~~
 
-If you have followed the tutorial, you will have a tool registered on
-Dockstore. You may want to test it out for your own work. For now you
+Launch Legacy Tools
+~~~~~~~~~~~~~~~~~~~
+If you registered a tool on Dockstore without using GitHub apps, then you have a legacy tool.
+You may want to test it out for your own work. For now you
 can use the Dockstore command-line interface (CLI) to run several useful
 commands:
 
@@ -74,14 +74,15 @@ follows:
 This information is also provided in the "Launch With" section of every
 tool.
 
-Launch Workflows
-~~~~~~~~~~~~~~~~
+Launch Workflows and GitHub App Tools
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. note:: GitHub App Tools run in the CLI's workflow mode.
 
-Launching CWL and WDL Workflows
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Launching GitHub App Tools, CWL Workflows, and WDL Workflows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A parallel set of commands is available for workflows. ``convert``,
-``wdl``, ``cwl``, and ``launch`` are all available under the
+A parallel set of commands (``convert``,
+``wdl``, ``cwl``, and ``launch``) are all available under the
 ``dockstore workflow`` mode.
 
 While launching tools and workflows locally is useful for testing, this
@@ -144,7 +145,6 @@ See Also
 -  :doc:`AWS Batch <../advanced-topics/aws-batch/>`
 -  :doc:`Azure Batch <../advanced-topics/azure-batch/>`
 -  :doc:`CGC Launch With <../launch-with/cgc-launch-with/>`
--  :doc:`DNAstack Launch With <../launch-with/dnastack-launch-with/>`
 -  :doc:`Terra Launch With <../launch-with/terra-launch-with/>`
 
 .. discourse::

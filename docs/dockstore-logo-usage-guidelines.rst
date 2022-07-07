@@ -67,8 +67,6 @@ If the surrounding color is visually unappealing with Dockstore Blue, please use
 Logos
 =====
 
-  .. tabularcolumns:: |c|c|c|
-
   .. list-table::
     :header-rows: 1
 
@@ -117,13 +115,13 @@ Do:
 * Spacing:
   * In most cases, the logo should be of equal prominence to any other brands with which it is shown.
   * Allow for adequate space around the logo when used in conjunction with other identifiers.
-  * Do not place other identifiers closer than the equivalent of the width of 1/2 the logo.
 
 Do Not:
 
-* Don’t place the logo on clashing colored backgrounds.
-* Don’t place the reverse logo on similar tints.
-* Don’t place any logo variation on busy backgrounds.
-* Don’t place special effects such as drop shadows on the logo.
-* Don’t skew or distort the logo.
-* Don’t alternate the color of the logo.
+* Place the logo on clashing colored backgrounds.
+* Place the reverse logo on similar tints.
+* Place any logo variation on busy backgrounds.
+* Place special effects such as drop shadows on the logo.
+* Skew or distort the logo.
+* Alternate the color of the logo.
+* Place other identifiers closer than the equivalent of the width of 1/2 the logo.

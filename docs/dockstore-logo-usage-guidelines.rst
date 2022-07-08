@@ -48,7 +48,7 @@ Dockstore Logo Usage Guidelines
 
 About
 =====
-It is important to establish a sense of branding throughout our publicly facing, digital media. Currently, we have several themes / layouts, navigation systems, font sets, color palettes. We would like to unify our designs under a single set of standards.
+It is important to establish a sense of branding throughout our publicly facing, digital media. This document provides the guidelines for the use of the Dockstore logo and icon.
 
 Color
 =====
@@ -111,17 +111,16 @@ Use
 Do:
 
 * Use the logo or icon color that works best in the context of the document, web page, or application.
-* The Dockstore logo is preferred.  Use the Dockstore icon only when space is limited or when it is clear that the reference is to Dockstore.
-* Spacing:
-  * In most cases, the logo should be of equal prominence to any other brands with which it is shown.
-  * Allow for adequate space around the logo when used in conjunction with other identifiers.
+* Use the Dockstore logo when space permits. Use the Dockstore icon only when space is limited or when it is clear that the reference is to Dockstore.
+* Provide the Dockstore logo equal prominence to any other brands with which it is shown.
+* Allow for adequate space around the logo when used in conjunction with other identifiers.
 
-Do Not:
+Do not:
 
 * Place the logo on clashing colored backgrounds.
-* Place the reverse logo on similar tints.
+* Place the logo on similar tints.
 * Place any logo variation on busy backgrounds.
 * Place special effects such as drop shadows on the logo.
 * Skew or distort the logo.
-* Alternate the color of the logo.
+* Alter the color of the logo.
 * Place other identifiers closer than the equivalent of the width of 1/2 the logo.

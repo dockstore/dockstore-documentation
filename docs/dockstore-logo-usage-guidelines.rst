@@ -48,7 +48,7 @@ Dockstore Logo Usage Guidelines
 
 About
 =====
-It is important to establish a sense of branding throughout our publicly facing, digital media. This document provides the guidelines for the use of the Dockstore logo and icon.
+This document provides the guidelines for the use of the Dockstore logo and icon.
 
 Color
 =====

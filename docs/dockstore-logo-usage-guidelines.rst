@@ -67,6 +67,8 @@ If the surrounding color is visually unappealing with Dockstore Blue, please use
 Logos
 =====
 
+A zip file containing these logos in both PNG and SVG formats can be downloaded :download:`here </assets/images/Dockstore_Logos_and_Icons.zip>`.
+
   .. list-table::
     :header-rows: 1
 
@@ -104,8 +106,6 @@ Logos
       - Dockstore-logo-vertical-white-blue
       -
 
-A zip file containing these logos in both PNG and SVG formats can be found :download:`here </assets/images/Dockstore_Logos_and_Icons.zip>`.
-
 Use
 ===
 Do:
@@ -123,4 +123,3 @@ Do not:
 * Place special effects such as drop shadows on the logo.
 * Skew or distort the logo.
 * Alter the color of the logo.
-* Place other identifiers closer than the equivalent of the width of 1/2 the logo.

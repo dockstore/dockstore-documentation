@@ -67,7 +67,13 @@ If the surrounding color is visually unappealing with Dockstore Blue, please use
 Logos
 =====
 
-A zip file containing these logos in both PNG and SVG formats can be downloaded :download:`here </assets/images/Dockstore_Logos_and_Icons.zip>`.
+A zip file containing logos can be downloaded :download:`here </assets/images/Dockstore_Logos_and_Icons.zip>`.
+
+The zip file contains:
+
+  * PNG files in several resolutions of the logos and icons.
+  * SVG files of the logos and icons.
+  * EPS files of the logos and icons.
 
   .. list-table::
     :header-rows: 1

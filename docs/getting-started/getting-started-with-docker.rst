@@ -160,7 +160,38 @@ What we see next is the Python 3 command line. Exactly what version of Python 3 
     >>> print("hello world")
     hello world
 
-Feel free to type in whatever Python code you would like (but keep in mind the filesystem is seperated from the rest of your computer, so file IO may not work quite as you would expect). When you are finished, you can exit the running container using ``exit()`` or ``quit()``.
+Feel free to type in whatever Python code you would like - but keep in mind the filesystem is seperated from the rest of your computer, so file IO may not work quite as you would expect).
+
+This seperated filesystem is actually one of the advantages of Docker. It offers you a relatively secure sandbox where you can test programs without breaking your filesystem. If you paste the following code into the Dockerized Python interpreter, you can all the fun of recursively pasting an internet meme into every subdirectory with none of the long-term consequences!
+
+.. warning::
+    Although not really malicious, this code can be very annoying to clean up after, and has a chance to break things if it gets into system-managed folders. Don't run this outside of a Docker image!
+
+.. code:: python
+
+    import subprocess
+    import shutil
+    import os
+    import sys
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
+    import requests
+
+    res = requests.get("https://pbs.twimg.com/media/EfKADlvWAAE7P0p?format=jpg&name=small", stream = True)
+    if res.status_code == 200:
+        counter = 0
+        for x in os.walk("."):
+            try:
+                with open("%s/wow.jpg" % x[0], 'wb') as meme:
+                    shutil.copyfileobj(res.raw, meme)
+                    counter += 1
+            except OSError:
+                pass
+        print("Wrote image %s times." % counter)
+    else:
+        print("Darn... they're onto us.")
+
+When you are finished decorating your Docker container with pictures of dogs, you can exit the running container using ``exit()`` or ``quit()``. This will take you back to your "real" filesystem, which will not have `wow.jpg` in every subdirectory.
+
 
 .. note::
     Many images take in bash commands, instead of running a Python interpreter. In that case, use the bash `exit` command to quit the container.

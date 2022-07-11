@@ -66,7 +66,7 @@ Security considerations
 ~~~~~~~~~~~~~~~~~~~~~~~
 .. note:: Containers operate in an isolated filesystem, and you can *generally* do whatever you like inside of them without affecting the rest of the system. However, it is theoretically possible for malicious software in a container to "escape" into the system at large.
 
-Speaking of log4j, how does one make sure that their images are secure? Even if you think that your research is not a high-value target for hackers, your system might still be useful to someone hoping to mine cryptocurrency, steal credentials, or operate a botnet. Whether you make your own images or use existing ones, there are several things you can do to help keep yourself and your users safe from malicious software. See :ref:`image-container-best-practices` for more information.
+How does one make sure that their images are secure? Even if you think that your research is not a high-value target for hackers, your system might still be useful to someone hoping to mine cryptocurrency, steal credentials, or operate a botnet. Whether you make your own images or use existing ones, there are several things you can do to help keep yourself and your users safe from malicious software. See :ref:`image-container-best-practices` for more information.
 
 Thick vs thin Docker images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

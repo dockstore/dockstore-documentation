@@ -11,7 +11,7 @@ For extra details on configuring and using the Dockstore
 GitHub App, :doc:`see our other docs on the here </getting-started/github-apps/github-apps-landing-page>`.
 
 With the Dockstore GitHub App installed, authors do not need to manually refresh their
-workflows/services/tools on Dockstore to get the latest changes from GitHub. Dockstore will
+workflows, tools, or services on Dockstore to get the latest changes from GitHub. Dockstore will
 automatically update whenever the corresponding repository is updated on GitHub.
 
 What are GitHub Apps?
@@ -29,11 +29,11 @@ Why have a Dockstore GitHub App?
 Without a GitHub App, Dockstore does not know when you have modified a GitHub
 repository.
 
-For example, take the case when you first add a workflow to Dockstore
-from GitHub.  Dockstore indexes the repository -- it reads the the relevant
-repository content, branches, and releases from GitHub. When you subsequently
-make changes to your GitHub repo, such as push new commits, create new branches
-and/or publish new releases, Dockstore is unaware of those changes. You are
+When you first add a workflow to Dockstore from GitHub, Dockstore indexes the 
+repository -- it reads the the relevant repository content, branches, and releases
+from GitHub. But, without the Dockstore GitHub app, when you subsequently
+make changes to your GitHub repo, such as pushing new commits, creating new branches
+and/or publishing new releases, Dockstore is unaware of those changes. You are
 responsible for going to Dockstore, finding the tool/workflow that corresponds
 to the GitHub repo, and manually refreshing the tool/workflow by either clicking
 the Refresh button or making an API call to the Dockstore API.
@@ -46,14 +46,12 @@ How the Dockstore GitHub App works
 
 With the Dockstore GitHub App installed, the synchronization is done automatically. When
 you add a new branch or release of a workflow on GitHub, Dockstore is notified,
-and Dockstore updates its copy of the workflow. For example, After publishing a new release
-of a workflow on GitHub, a new version of the workflow will be present in
-Dockstore shortly afterwards. For this to work, a .dockstore.yml file is **required** in the root directory (or inside the ``.github`` directory) of each GitHub repository you want
+and Dockstore updates its copy of the workflow. For example, after publishing a new release
+of a workflow on GitHub, a new version of the workflow will be present in Dockstore shortly afterwards. For this to work, a .dockstore.yml file is **required** in the root directory (or inside the ``.github`` directory) of each GitHub repository you want
 to associate with a workflow/tool/service on Dockstore. It should not be inside any subfolder (except ``.github``).
 
 Simple templates for tools, workflows, and services are shown below,
-as well as links to more advanced explanations of every field. For every branch/release on GitHub that has one of these files, a corresponding entry
-will be made on Dockstore.
+as well as links to more advanced explanations of every field. For every branch/release on GitHub that has one of these files, a corresponding entry will be made on Dockstore.
 
 Error Handling
 ----------------------------------
@@ -97,12 +95,6 @@ The .dockstore.yml file for a tool is very similiar in structure to that of a wo
 
 .. include:: /assets/templates/tools/template-small.dockstore.yml
   :code: yaml
-
-For more examples, including multi-workflow examples and a complete breakdown of all possible fields, please see :doc:`our .dockstore.yml templates and examples for tools</assets/templates/tools/tools>`.
-
-Service YML File
-+++++++++++++++++
-The .dockstore.yml for a service will depend heavily on the nature of the service it describes. A template .dockstore.yml file for registering services, with explanations in the comments, can be found in our :doc:`Service 1.2 Template </assets/templates/template>`. For more info on services and registering them, check out our :doc:`Getting Started with Services </getting-started/getting-started-with-services>`.
 
 See Also
 --------

@@ -332,13 +332,15 @@ with the `Cromwell <https://github.com/broadinstitute/cromwell>`__ version liste
 +-------------+-----------------------+
 |     1.12    |          57           |
 +-------------+-----------------------+
+|     1.13    |          77           |
++-------------+-----------------------+
 
 Additionally, you can override the Cromwell version in your
 ``~/.dockstore/config`` using for example:
 
 ::
 
-    cromwell-version = 58
+    cromwell-version = 76
 
 The Dockstore CLI will attempt to download the version of Cromwell JAR file you specify from the `Cromwell
 download area <https://github.com/broadinstitute/cromwell/releases/>`__ to

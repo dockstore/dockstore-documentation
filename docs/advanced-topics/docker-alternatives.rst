@@ -14,6 +14,11 @@ or Cromwell, and not Dockstore directly, the difficulty of configuring a Docker 
 type. Some Dockstore entries will run seamlessly without Docker, and some may be entirely incompatible in a rootless
 environment.
 
+Rootless Docker
+---------------
+`Experiments <https://medium.com/@tonistiigi/experimenting-with-rootless-docker-416c9ad8c0d6#:~:text=Docker%20engine%20provides%20lots%20of,Linux%20you%20need%20privileged%20capabilities.>`__ with a version of Docker that does not require root permissions have been proposed and experimented with for a while now. In December 2020 with the release of Docker Engine v20.10, "rootless Docker" has officially become part of Docker itself. While this does open the door for some systems, it does require special setup and it has some limitations. You can read all about it on `Docker's own docs about Rootless Mode <https://docs.docker.com/engine/security/rootless/>`__.
+
+
 Singularity
 -----------
 

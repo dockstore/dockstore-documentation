@@ -22,7 +22,7 @@ the corresponding workflow/tool entry on Dockstore. Branches that do not have a 
 
 You can read more about it at :doc:`/getting-started/github-apps/github-apps`.
 
-:ref:`(back to top) <topGHAFAQ>`
+:ref:`▲ <topGHAFAQ>`
 
 How does this change my development flow?
 -------------------------------------------

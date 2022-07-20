@@ -13,7 +13,7 @@ help:
 
 glossary:
 	echo "\033[1mGenerating dictionary.rst...\033[0m"
-	python _attic/glossary_generator.py
+	python3 _attic/glossary_generator.py
 
 .PHONY: help Makefile
 

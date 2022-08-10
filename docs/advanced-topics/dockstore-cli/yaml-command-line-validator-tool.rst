@@ -17,7 +17,7 @@ is a valid yaml file and display the following if `.dockstore.yml <https://docs.
 If `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_ is not a valid yaml file the following
 will be displayed along with an error message explaining why `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_ is not a valid yaml file,
 ::
-  path/to/.dockstore.yml is a valid yaml file
+  path/to/.dockstore.yml is not a valid yaml file
 
 
 

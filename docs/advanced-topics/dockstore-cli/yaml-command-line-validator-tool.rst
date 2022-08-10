@@ -96,3 +96,6 @@ However, if ``./my/fantastic/workflow/.github/.dockstore.yml`` contained the fol
     - /workflow.cwl
 
 and you selected ``./my/fantastic/workflow/.github`` as the path paratmer, then the Yaml Command Line Validator Tool would check that the file ``./my/fantastic/workflow/workflow.cwl`` exists.
+
+.. discourse::
+    :topic_identifier: 5577

@@ -58,7 +58,7 @@ The Yaml Command Line Validator Tool can be used with the following command in t
 
 **Path Parameter**
 
-The ``--path`` paramter must must be set to the directory that contains `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_, but must not include `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_.
+The ``--path`` parameter must must be set to the directory that contains `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_, but must not include `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_.
 For example,
 
 ::

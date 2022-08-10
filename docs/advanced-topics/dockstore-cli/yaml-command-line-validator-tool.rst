@@ -58,7 +58,7 @@ The Yaml Command Line Validator Tool can be used with the following command in t
 
 **Path Parameter**
 
-The ``--path`` parameter must must be set to the directory that contains `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_, but must not include `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_.
+The ``--path`` parameter must be set to the directory that contains `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_, but must not include `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_.
 For example,
 
 ::
@@ -76,7 +76,7 @@ is not acceptable.
 The ``--path`` parameter can be either an absolute or relative directory.
 
 Please note that all files referenced in `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_,
-are checked relative to the path paramter, unless the path paramter ends in ``.github``, in this case all files referenced in  `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_
+are checked relative to the path parameter, unless the path parameter ends in ``.github``, in this case all files referenced in  `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_
 are checked relative to the parent of the path parameter.
 
 For example if ``./my/awesome/workflow/.dockstore.yml`` contained the following,
@@ -86,7 +86,7 @@ For example if ``./my/awesome/workflow/.dockstore.yml`` contained the following,
   testParameterFiles:
     - /dockstore.wdl.json
 
-and you selected ``./my/awesome/workflow`` as the path paratmer, then the Yaml Command Line Validator Tool would check that the file ``./my/awesome/workflow/dockstore.wdl.json`` exists. 
+and you selected ``./my/awesome/workflow`` as the path parameter, then the Yaml Command Line Validator Tool would check that the file ``./my/awesome/workflow/dockstore.wdl.json`` exists.
 
 However, if ``./my/fantastic/workflow/.github/.dockstore.yml`` contained the following,
 
@@ -95,7 +95,7 @@ However, if ``./my/fantastic/workflow/.github/.dockstore.yml`` contained the fol
   testParameterFiles:
     - /workflow.cwl
 
-and you selected ``./my/fantastic/workflow/.github`` as the path paratmer, then the Yaml Command Line Validator Tool would check that the file ``./my/fantastic/workflow/workflow.cwl`` exists.
+and you selected ``./my/fantastic/workflow/.github`` as the path parameter, then the Yaml Command Line Validator Tool would check that the file ``./my/fantastic/workflow/workflow.cwl`` exists.
 
 .. discourse::
     :topic_identifier: 5577

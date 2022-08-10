@@ -73,7 +73,28 @@ is acceptable, however
 
 is not acceptable.
 
-The ``--path`` parameter can be either an absolute or relative directory.
+The ``--path`` parameter can be either an absolute or relative directory. Therefore, the following are valid uses of the Yaml Command Line Validator Tool,
+
+::
+
+  dockstore yaml validate --path directory/of/.dockstore.yml
+
+::
+
+  dockstore yaml validate --path ../../path/to/service
+
+::
+
+  dockstore yaml validate --path .
+
+::
+
+  dockstore yaml validate --path ~/path/to/workflow
+
+::
+
+  dockstore yaml validate --path /usr/jdoe/dockstore/workflow
+
 
 Please note that all files referenced in `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_,
 are checked relative to the path parameter, unless the path parameter ends in ``.github``, in this case all files referenced in  `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_

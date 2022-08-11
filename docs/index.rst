@@ -170,6 +170,7 @@ Best practices guidelines
    advanced-topics/dockstore-cli/set-up-file-provisioning-plugins
    advanced-topics/dockstore-cli/developing-file-provisioning-plugins
    advanced-topics/dockstore-cli/advanced-features
+   advanced-topics/dockstore-cli/yaml-command-line-validator-tool
 
 Advanced developer topics
 -------------------------

@@ -12,7 +12,7 @@ by adding a :ref:`dict .dockstore.yml` to the root or ``.github`` directory of t
 is valid before pushing, and it can help you to determine why your repository is not syncing with Dockstore.
 
 The Dockstore Yaml Command Line Validator Tool will first determine if :ref:`dict .dockstore.yml`
-is a valid yaml file and display the following if :ref:`dict .dockstore.yml` is a valtid yaml file
+is a valid yaml file and display the following if :ref:`dict .dockstore.yml` is a valid yaml file
 (but not necessarily valid for use in Dockstore),
 
 ::
@@ -120,9 +120,9 @@ However, if ``./my/fantastic/workflow/.github/.dockstore.yml`` contained the fol
 ::
 
   testParameterFiles:
-    - /workflow.cwl
+    - /workflow.cwl.json
 
-and you selected ``./my/fantastic/workflow/.github`` as the path parameter, then the Dockstore Yaml Command Line Validator Tool would check that the file ``./my/fantastic/workflow/workflow.cwl`` exists.
+and you selected ``./my/fantastic/workflow/.github`` as the path parameter, then the Dockstore Yaml Command Line Validator Tool would check that the file ``./my/fantastic/workflow/workflow.cwl.json`` exists.
 
 .. discourse::
     :topic_identifier: 5577

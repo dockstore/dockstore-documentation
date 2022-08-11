@@ -77,15 +77,16 @@ The ``--path`` parameter can be either an absolute or relative directory. Theref
 
 ::
 
+  dockstore yaml validate --path .
+
+
+::
+
   dockstore yaml validate --path directory/of/.dockstore.yml
 
 ::
 
   dockstore yaml validate --path ../../path/to/service
-
-::
-
-  dockstore yaml validate --path .
 
 ::
 

@@ -1,13 +1,13 @@
-Yaml Command Line Validator Tool
+Dockstore Yaml Command Line Validator Tool
 ================================
 
 Description
 -----------------
 
-The Yaml Command Line Validator Tool is used to verify that a :ref:`dict .dockstore.yml`
+The Dockstore Yaml Command Line Validator Tool is used to verify that a :ref:`dict .dockstore.yml`
 file is valid for use in Dockstore and that all referenced files are present.
 
-The Yaml Command Line Validator Tool will first determine if :ref:`dict .dockstore.yml`
+The Dockstore Yaml Command Line Validator Tool will first determine if :ref:`dict .dockstore.yml`
 is a valid yaml file and display the following if :ref:`dict .dockstore.yml` is a valid yaml file
 (but not necessarily valid for use in Dockstore),
 
@@ -25,7 +25,7 @@ will be displayed along with an error message explaining why :ref:`dict .docksto
 
 
 
-Next, the Yaml Command Line Validator Tool will determine if :ref:`dict .dockstore.yml`
+Next, the Dockstore Yaml Command Line Validator Tool will determine if :ref:`dict .dockstore.yml`
 is valid for use in Dockstore, if it is it will display this message,
 
 ::
@@ -33,7 +33,7 @@ is valid for use in Dockstore, if it is it will display this message,
   path/to/.dockstore.yml is a valid dockstore yaml file and all required files are present
   
 If :ref:`dict .dockstore.yml` is not a valid for use in Dockstore
-the Yaml Command Line Validator Tool will display a helpful error message, such as,
+the Dockstore Yaml Command Line Validator Tool will display a helpful error message, such as,
 
 ::
 
@@ -50,7 +50,7 @@ or,
 Usage
 -----------------
 
-The Yaml Command Line Validator Tool can be used with the following command in the :ref:`dict Dockstore CLI`,
+The Dockstore Yaml Command Line Validator Tool can be used with the following command in the :ref:`dict Dockstore CLI`,
 
 ::
 
@@ -73,7 +73,7 @@ is acceptable, however
 
 is not acceptable.
 
-The ``--path`` parameter can be either an absolute or relative directory. Therefore, the following are valid uses of the Yaml Command Line Validator Tool,
+The ``--path`` parameter can be either an absolute or relative directory. Therefore, the following are valid uses of the Dockstore Yaml Command Line Validator Tool,
 
 ::
 
@@ -108,7 +108,7 @@ For example if ``./my/awesome/workflow/.dockstore.yml`` contained the following,
   testParameterFiles:
     - /dockstore.wdl.json
 
-and you selected ``./my/awesome/workflow`` as the path parameter, then the Yaml Command Line Validator Tool would check that the file ``./my/awesome/workflow/dockstore.wdl.json`` exists.
+and you selected ``./my/awesome/workflow`` as the path parameter, then the Dockstore Yaml Command Line Validator Tool would check that the file ``./my/awesome/workflow/dockstore.wdl.json`` exists.
 
 However, if ``./my/fantastic/workflow/.github/.dockstore.yml`` contained the following,
 
@@ -117,7 +117,7 @@ However, if ``./my/fantastic/workflow/.github/.dockstore.yml`` contained the fol
   testParameterFiles:
     - /workflow.cwl
 
-and you selected ``./my/fantastic/workflow/.github`` as the path parameter, then the Yaml Command Line Validator Tool would check that the file ``./my/fantastic/workflow/workflow.cwl`` exists.
+and you selected ``./my/fantastic/workflow/.github`` as the path parameter, then the Dockstore Yaml Command Line Validator Tool would check that the file ``./my/fantastic/workflow/workflow.cwl`` exists.
 
 .. discourse::
     :topic_identifier: 5577

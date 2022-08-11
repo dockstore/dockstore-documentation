@@ -1,5 +1,5 @@
 Dockstore Yaml Command Line Validator Tool
-================================
+==========================================
 
 Description
 -----------------

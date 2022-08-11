@@ -7,8 +7,12 @@ Description
 The Dockstore Yaml Command Line Validator Tool is used to verify that a :ref:`dict .dockstore.yml`
 file is valid for use in Dockstore and that all referenced files are present.
 
+The Dockstore Yaml Command Line Validator Tool is particularly helpful when you are trying to sync a GitHub repository with Dockstore
+by adding a :ref:`dict .dockstore.yml` to the root or ``.github`` directory of the repository. As you can verify that :ref:`dict .dockstore.yml`
+is valid before pushing, and it can help you to determine why your repository is not syncing with Dockstore.
+
 The Dockstore Yaml Command Line Validator Tool will first determine if :ref:`dict .dockstore.yml`
-is a valid yaml file and display the following if :ref:`dict .dockstore.yml` is a valid yaml file
+is a valid yaml file and display the following if :ref:`dict .dockstore.yml` is a valtid yaml file
 (but not necessarily valid for use in Dockstore),
 
 ::

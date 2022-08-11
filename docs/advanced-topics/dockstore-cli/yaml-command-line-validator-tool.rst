@@ -56,7 +56,8 @@ The Dockstore Yaml Command Line Validator Tool can be used with the following co
 
   dockstore yaml validate --path directory/of/.dockstore.yml
 
-**Path Parameter**
+Path Parameter
+```````````````
 
 The ``--path`` parameter must be set to the directory that contains :ref:`dict .dockstore.yml`, but must not include :ref:`dict .dockstore.yml`.
 For example,

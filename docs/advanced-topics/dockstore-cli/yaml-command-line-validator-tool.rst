@@ -4,11 +4,11 @@ Yaml Command Line Validator Tool
 Description
 -----------------
 
-The Yaml Command Line Validator Tool is used to verify that a `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_ 
+The Yaml Command Line Validator Tool is used to verify that a :ref:`dict .dockstore.yml`
 file is valid for use in Dockstore and that all referenced files are present.
 
-The Yaml Command Line Validator Tool will first determine if `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_ 
-is a valid yaml file and display the following if `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_ is a valid yaml file
+The Yaml Command Line Validator Tool will first determine if :ref:`dict .dockstore.yml`
+is a valid yaml file and display the following if :ref:`dict .dockstore.yml` is a valid yaml file
 (but not necessarily valid for use in Dockstore),
 
 ::
@@ -16,8 +16,8 @@ is a valid yaml file and display the following if `.dockstore.yml <https://docs.
   path/to/.dockstore.yml is a valid yaml file
 
 
-If `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_ is not a valid yaml file the following
-will be displayed along with an error message explaining why `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_ is not a valid yaml file,
+If :ref:`dict .dockstore.yml` is not a valid yaml file the following
+will be displayed along with an error message explaining why :ref:`dict .dockstore.yml` is not a valid yaml file,
 
 ::
 
@@ -25,14 +25,14 @@ will be displayed along with an error message explaining why `.dockstore.yml <ht
 
 
 
-Next, the Yaml Command Line Validator Tool will determine if `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_
+Next, the Yaml Command Line Validator Tool will determine if :ref:`dict .dockstore.yml`
 is valid for use in Dockstore, if it is it will display this message,
 
 ::
 
   path/to/.dockstore.yml is a valid dockstore yaml file and all required files are present
   
-If `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_ is not a valid for use in Dockstore
+If :ref:`dict .dockstore.yml` is not a valid for use in Dockstore
 the Yaml Command Line Validator Tool will display a helpful error message, such as,
 
 ::
@@ -50,7 +50,7 @@ or,
 Usage
 -----------------
 
-The Yaml Command Line Validator Tool can be used with the following command in the `Dockstore CLI <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-cli>`_,
+The Yaml Command Line Validator Tool can be used with the following command in the :ref:`dict Dockstore CLI`,
 
 ::
 
@@ -58,7 +58,7 @@ The Yaml Command Line Validator Tool can be used with the following command in t
 
 **Path Parameter**
 
-The ``--path`` parameter must be set to the directory that contains `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_, but must not include `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_.
+The ``--path`` parameter must be set to the directory that contains :ref:`dict .dockstore.yml`, but must not include :ref:`dict .dockstore.yml`.
 For example,
 
 ::
@@ -97,8 +97,8 @@ The ``--path`` parameter can be either an absolute or relative directory. Theref
   dockstore yaml validate --path /usr/jdoe/dockstore/workflow
 
 
-Please note that all files referenced in `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_,
-are checked relative to the path parameter, unless the path parameter ends in ``.github``, in this case all files referenced in  `.dockstore.yml <https://docs.dockstore.org/en/stable/dictionary.html?highlight=.dockstore.yml#dict-dockstore-yml>`_
+Please note that all files referenced in :ref:`dict .dockstore.yml`,
+are checked relative to the path parameter, unless the path parameter ends in ``.github``, in this case all files referenced in  :ref:`dict .dockstore.yml`
 are checked relative to the parent of the path parameter.
 
 For example if ``./my/awesome/workflow/.dockstore.yml`` contained the following,

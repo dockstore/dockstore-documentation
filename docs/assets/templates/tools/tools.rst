@@ -18,7 +18,7 @@ Although the author has a name, the tool itself is not identified with one.
 
 Filled-out example of a single tool with a name
 -----------------------------------------------
-Same as the example above, but we explictly name the tool "globalAligner" using the ``name`` field, a user-defined string that can contain letters, numbers, internal hyphens, and internal underscores, but no spaces or other characters.
+Same as the example above, but we explictly name the tool "globalAligner" using the ``name`` field, a user-defined identifying string that can contain letters, numbers, internal hyphens, and internal underscores, but no spaces or other characters.
 
 .. include:: /assets/templates/tools/example-2-name.yml
   :code:

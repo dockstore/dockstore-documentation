@@ -1,11 +1,11 @@
-# The first line refers to the version 1.2 of the .dockstore.yml schema
+ # The first line refers to the version 1.2 of the .dockstore.yml schem2
 version: 1.2
 
 # An array of tools. Each element corresponds to a tool entry on Dockstore.
 tools:
   
   # The optional name for a tool, which may only consist of alphanumerics
-  # and internal underscores and hyphens. Names may not exceed 256 characters. 
+  # and internal underscores and hyphens, but no spaces or other characters. Names may not exceed 256 characters.
   # If using a .dockstore.yml with multiple tools, this field is required 
   # to uniquely identify tools in the repository. Otherwise, it is optional.
   # 

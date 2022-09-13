@@ -10,7 +10,7 @@ Simple generic template for a workflow
 .. include:: /assets/templates/workflows/template-small.dockstore.yml
   :code:
 
-Always use absolute paths to specify the :ref:`primary descriptor <dict primary descriptor file>` and :ref:`test parameter <dict parameter file>` files.
+Always use :ref:`absolute paths <dict absolute path>` to specify the :ref:`primary descriptor <dict primary descriptor file>` and :ref:`test parameter <dict parameter file>` files.
 
 Filled-out example of a single workflow without a name
 ------------------------------------------------------

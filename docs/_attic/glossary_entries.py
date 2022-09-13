@@ -22,6 +22,12 @@ dotDockstoredotYAML = GlossEntry(".dockstore.yml",
 AGC = GlossEntry("AGC",
 	acronym_full="[Amazon Genomics CLI]")
 
+AbsolutePath = GlossEntry("absolute path",
+	definition="A path that starts with the character ``/`` and contains the full set of directories necessary to resolve a file, starting from the root directory. For example: ``/Dockstore.cwl`` or ``/bin/sh``",
+	furtherreading="",
+	institute="",
+	pronunciation='')
+
 AmazonGenomicsCLI = GlossEntry("Amazon Genomics CLI", 
 	definition="A [CLI]-based tool that supports launching bioinformatics-related workflows on [AWS] cloud infrastructure. The [Dockstore CLI] can launch workflows on AWS using Amazon Genomics CLI's [WES] implementation.", 
 	furtherreading="https://aws.amazon.com/blogs/industries/announcing-amazon-genomics-cli-preview/", 
@@ -476,18 +482,18 @@ Preemptible = GlossEntry("preemptible",
 	seealso="[spot instance]")
 
 PrimaryDescriptorFile = GlossEntry("primary descriptor file",
-        acronym_full="",
-        definition="The main [descriptor file] that describes a workflow or tool.",
-        furtherreading="",
-        institute="",
-        pronunciation='')
+	acronym_full="",
+	definition="The main [descriptor file] that describes a workflow or tool.",
+	furtherreading="",
+	institute="",
+	pronunciation='')
 
 SecondaryDescriptorFile = GlossEntry("secondary descriptor file",
-        acronym_full="",
-        definition="An ancillary [descriptor file], referenced by the [primary descriptor file] or another secondary descriptor file, that describes part of a workflow or tool.",
-        furtherreading="",
-        institute="",
-        pronunciation='')
+	acronym_full="",
+	definition="An ancillary [descriptor file], referenced by the [primary descriptor file] or another secondary descriptor file, that describes part of a workflow or tool.",
+	furtherreading="",
+	institute="",
+	pronunciation='')
 
 SevenBridges = GlossEntry("Seven Bridges", 
 	acronym_full="", 

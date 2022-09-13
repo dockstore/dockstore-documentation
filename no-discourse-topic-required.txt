@@ -5,3 +5,4 @@ docs/advanced-topics/docker-alternatives.rst
 docs/dockstore-logo-usage-guidelines.rst
 docs/advanced-topics/naming-workflows.rst
 docs/assets/templates/workflows/workflows.rst
+docs/assets/templates/tools/tools.rst

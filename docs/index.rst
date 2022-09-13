@@ -24,6 +24,7 @@ If this is your first time learning about Dockstore, we recommend starting with 
    news
    roadmap
    dictionary
+   /assets/templates/template.rst
 
 Getting Started
 ---------------
@@ -231,7 +232,6 @@ Advanced developer topics
    BCC 2020 Docker Training </docker_instructions>
    BCC 2020 WDL Training </wdl_instructions>
    posters-and-talks
-   /assets/templates/template.rst
    user-created
 
 .. centered:: In Affiliation with

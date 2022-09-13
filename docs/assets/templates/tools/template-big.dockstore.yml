@@ -1,4 +1,4 @@
- # The first line refers to the version 1.2 of the .dockstore.yml schem2
+# The first line refers to the version 1.2 of the .dockstore.yml schema
 version: 1.2
 
 # An array of tools. Each element corresponds to a tool entry on Dockstore.

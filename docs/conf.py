@@ -58,7 +58,9 @@ linkcheck_ignore = [
     'https://doi.org/10.7490/f1000research.1118300.1',
     'launch-with/anvil-launch-with.html', 'launch-with/cavatica-launch-with.html', 'launch-with/dnanexus-launch-with.html', 'launch-with/cgc-launch-with.html',
     'launch-with/galaxy-launch-with.html', 'launch-with/nextflow-tower-launch-with.html', 'launch-with/terra-launch-with.html',
-    'https://doi.org/*'
+    'https://doi.org/*',
+    # Confusing, linkcheck and curl report expired cert, but cert date is correct in browser
+    'https://support.orcid.org/hc/en-us/articles/360006971593-Do-you-have-more-than-one-account'
     ]
 
 

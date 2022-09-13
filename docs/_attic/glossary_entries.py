@@ -475,6 +475,20 @@ Preemptible = GlossEntry("preemptible",
 	pronunciation='', 
 	seealso="[spot instance]")
 
+PrimaryDescriptorFile = GlossEntry("primary descriptor file",
+        acronym_full="",
+        definition="The main [descriptor file] that describes a workflow or tool.",
+        furtherreading="",
+        institute="",
+        pronunciation='')
+
+SecondaryDescriptorFile = GlossEntry("secondary descriptor file",
+        acronym_full="",
+        definition="An ancillary [descriptor file], referenced by the [primary descriptor file] or another secondary descriptor file, that describes part of a workflow or tool.",
+        furtherreading="",
+        institute="",
+        pronunciation='')
+
 SevenBridges = GlossEntry("Seven Bridges", 
 	acronym_full="", 
 	definition="A cloud-based workflow execution platform developed by Seven Bridges Genomics. Seven Bridges supports the execution of [CWL] workflows and features a graph-based GUI to make workflow development easier. The computational backend of a Seven Bridges workspace can be selected by the user, with both [GCP] and [AWS] being supported. Dockstore supports directly importing [CWL] workflows into a Seven Bridges workspace. Seven Bridges is part of the [BioData Catalyst] consortium.", 

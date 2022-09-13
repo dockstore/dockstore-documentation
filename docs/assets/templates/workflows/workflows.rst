@@ -2,12 +2,15 @@
 ====================================================
 Several templates and examples are provided here for you to reference for your own .dockstore.yml files. The last example provides a complete explanation of the possible fields and values you can use.
 
-.. filled-out examples based on DataBiosphere/analysis_pipeline_wdl
+..
+  filled-out examples based on DataBiosphere/analysis_pipeline_wdl
 
 Simple generic template for a workflow
 --------------------------------------
 .. include:: /assets/templates/workflows/template-small.dockstore.yml
   :code:
+
+Always use absolute paths to specify the :ref:`primary descriptor <dict primary descriptor file>` and :ref:`test parameter <dict parameter file>` files.
 
 Filled-out example of a single workflow without a name
 ------------------------------------------------------
@@ -18,7 +21,7 @@ In this example, the workflow author is identified with an orcid. When an orcid 
 
 Filled-out example of a single workflow with a name
 ---------------------------------------------------
-This example is identical to the one above, but the workflow in question now is identified with the ``name`` field. :doc:`See here for more information on naming workflows </advanced-topics/naming-workflows>`.
+This example is identical to the one above, but the workflow in question now is identified with the ``name`` field, a user-defined string that can contain letters, numbers, internal hyphens, and internal underscores, but no spaces or other characters. :doc:`See here for more information on naming workflows </advanced-topics/naming-workflows>`.
 
 .. include:: /assets/templates/workflows/example-2-name.yml
   :code:

@@ -72,6 +72,11 @@ Upload the workflow to GitHub
 
 These steps are outlined `here. <https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository>`__
 
+Add Test Parameter File
+-----------------------
+
+You can add a test :ref:`dict parameter file` to your source code repository, allowing other users to easily launch a test run of your workflow.  Follow `these instructions <https://usegalaxy.org/training-material/topics/contributing/tutorials/create-new-tutorial-technical/tutorial.html#testing-the-workflow-recommended>`__ to create a test parameter file.  Then, add the file you have created to your GitHub repository as you did with your '.ga' Galaxy workflow file above.
+
 Releasing on GitHub
 -------------------
 

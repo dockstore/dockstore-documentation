@@ -193,6 +193,13 @@ DOI = GlossEntry("DOI",
 	institute="", 
 	pronunciation="")
 
+DRS = GlossEntry("DRS",
+        acronym_full="Data Repository Service",
+        definition="A standardized [API], created by the [GA4GH] Cloud Work Stream, that provides portable access to a repository of data resources.",
+        furtherreading="https://github.com/ga4gh/data-repository-service-schemas",
+        institute="GA4GH",
+        pronunciation='"derse", rhymes with verse')
+
 DSIAfrica = GlossEntry("DS-I Africa", 
 	acronym_full="Data Science for health discovery and Innovation in Africa", 
 	definition="An [NIH] initiative to leverage data science to address the African continent's public health needs.", 
@@ -251,7 +258,7 @@ GA4GH = GlossEntry("GA4GH",
 
 Galaxy = GlossEntry("Galaxy", 
 	acronym_full="", 
-	definition="An open-source platform that uses [FAIR] principles, most well-known for its web-based UI used to create and run a variety of bioinformatics tools.", 
+	definition="An open-source platform that uses [FAIR] principles, most well-known for its web-based UI used to create and run a variety of bioinformatics tools. A Galaxy `instance` is a running Galaxy interface/server that can be used to create and execute tools and workflows.",
 	furtherreading="https://galaxyproject.org/", 
 	institute="", 
 	pronunciation='')
@@ -513,6 +520,13 @@ Tool = GlossEntry("tool",
 	institute="", 
 	pronunciation='', 
 	seealso="[workflow]")
+
+TRS = GlossEntry("TRS",
+        acronym_full="Tool Registry Service",
+        definition="A standardized [API], created by the [GA4GH] Cloud Work Stream, that provides portable access to a registry of tools, workflows, and associated files.  In TRS, each resource is assigned a unique public ID that can be used to retrieve it.  Dockstore `provides <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GH>`__ a TRS interface to its database.",
+        furtherreading="https://ga4gh.github.io/tool-registry-service-schemas/",
+        institute="GA4GH",
+        pronunciation='"terse", rhymes with verse')
 
 UCSC = GlossEntry("UCSC", 
 	acronym_full="University of California, Santa Cruz", 

@@ -73,7 +73,7 @@ on the version you want to import.
 Import from a TRS ID
 ---------------------
 
-If you have already found a workflow on Dockstore that you would like to launch, click on the copy symbol next to the TRS in the Workflow Description box. This will copy the TRS ID to your clipboard.
+If you have already found a workflow on Dockstore that you would like to launch, click on the copy symbol next to the TRS in the Workflow Description box. This will copy the :ref:`dict TRS` ID to your clipboard.
 
 .. figure:: /assets/images/docs/galaxy/copy_TRS_ID.png
    :alt: Copy TRS ID

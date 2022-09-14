@@ -23,7 +23,7 @@ AGC = GlossEntry("AGC",
 	acronym_full="[Amazon Genomics CLI]")
 
 AbsolutePath = GlossEntry("absolute path",
-	definition="A path that starts with the character ``/`` and contains the full set of directories necessary to resolve a file, starting from the root directory. For example: ``/Dockstore.cwl`` or ``/bin/sh``",
+	definition="A path that starts with the character ``/`` and contains the full set of directories necessary to resolve a file, starting from the root directory of the repository or filesystem. For example: ``/Dockstore.cwl`` or ``/bin/sh``",
 	furtherreading="",
 	institute="",
 	pronunciation='')
@@ -483,7 +483,7 @@ Preemptible = GlossEntry("preemptible",
 
 PrimaryDescriptorFile = GlossEntry("primary descriptor file",
 	acronym_full="",
-	definition="The main [descriptor file] that describes a workflow or tool.",
+	definition="The [descriptor file] that provides the overall description of a workflow or tool, which Dockstore processes first when the workflow or tool is registered.",
 	furtherreading="",
 	institute="",
 	pronunciation='')

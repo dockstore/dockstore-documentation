@@ -31,6 +31,8 @@ You can use filters in a .dockstore.yml to avoid generating a corresponding work
 
 *Note:* If you want to edit version information, such as workflow path, you will have to update the .dockstore.yml file directly on the corresponding GitHub branch. For example, if develop has a .dockstore.yml that points to my_workflow.wdl, but my_workflow.wdl is moved to another path on the branch develop-but-better, then the .dockstore.yml on develop-but-better will need to point to the new location of my_workflow.wdl.
 
+.. _Check GitHub App installation on repository:
+
 How do I check if the Dockstore GitHub App was installed on an individual repository?
 --------------------------------------------------------------------------------------
 Go to your repo on GitHub, click the Settings tab, click Integrations on the left and verify our app is installed and configured correctly

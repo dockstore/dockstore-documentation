@@ -33,10 +33,14 @@ You should now see the organization and the repositories you chose to keep track
 .. figure:: /assets/images/docs/my-services-filled.png
 
 
-A note on permissions
-~~~~~~~~~~~~~~~~~~~~~
+A note on permissions when installing the GitHub App to an organization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are adding the GitHub App to an organization for which you are not an admin, GitHub may block your ability to install the app, even if you have maintainer access to the repository you are hoping to give the GitHub App permission to view. Please see :ref:`this FAQ entry <GitHub App permissions FAQ>` for more information.
+Only organization admins and repository admins can install the GitHub App. Organization admins will have the easiest time installing the GitHub App because they can install the app to any repository in the organization on the installation page.
+
+Repository admins who are not organization admins can only install the GitHub App on the repositories that they are an admin of. Even though they are an admin of the repository they are trying to install the app to, they may get an error from GitHub if the GitHub App is already installed on all repositories, which would have been configured by an organization admin. In this case, the repository admin can :ref:`check the repository to see if the app is indeed installed <Check GitHub App installation on repository>`. If they attempt to install the app on a repository that they are not an admin of, it may look like the app install successfully, but in reality, it did not install. Instead, an organization admin receives a request to install the GitHub App on the repository. 
+
+For more information on troubleshooting GitHub App permissions, please see :ref:`this FAQ entry <GitHub App permissions FAQ>`.
 
 .. seealso::
     - :doc:`Automatic Syncing with GitHub Apps and .dockstore.yml </getting-started/github-apps/github-apps/>` - details on writing a .dockstore.yml file

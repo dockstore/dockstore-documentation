@@ -33,12 +33,22 @@ You should now see the organization and the repositories you chose to keep track
 .. figure:: /assets/images/docs/my-services-filled.png
 
 
-A note on permissions when installing the GitHub App to an organization
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A note on permissions when installing the GitHub App to a GitHub organization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Only organization admins and repository admins can install the GitHub App. Organization admins will have the easiest time installing the GitHub App because they can install the app to any repository in the organization on the installation page.
 
-Repository admins who are not organization admins can only install the GitHub App on the repositories that they are an admin of. Even though they are an admin of the repository they are trying to install the app to, they may get an error from GitHub if the GitHub App is already installed on all repositories, which would have been configured by an organization admin. In this case, the repository admin can :ref:`check the repository to see if the app is indeed installed <Check GitHub App installation on repository>`. If they attempt to install the app on a repository that they are not an admin of, it may look like the app install successfully, but in reality, it did not install. Instead, an organization admin receives a request to install the GitHub App on the repository. 
+Users who are not organization admins can only install the GitHub App on repositories that they are an admin of. There are two scenarios to be aware of when installing the GitHub App as a repository admin who is not an organization admin.
+
+1. An organization admin configured the GitHub App to be installed on all repositories.
+
+   * Attempts to install the GitHub App on any repository in the organization will result in an error from GitHub, regardless of whether or not the repository is one that the user has admin access to.
+   * If it is a repository that the user has admin access to, the user can :ref:`check the repository to see if the app is indeed installed <Check GitHub App installation on repository>`.
+
+2. An organization admin configured the GitHub App to be installed on select repositories or the GitHub App is not configured at all. 
+
+   * The user can install the GitHub App on repositories that they are an admin of.
+   * If they attempt to install the app on a repository that they are not an admin of, it may look like the app install successfully, but in reality, it did not install. Instead, an organization admin would receive a request to install the GitHub App on the repository. 
 
 For more information on troubleshooting GitHub App permissions, please see :ref:`this FAQ entry <GitHub App permissions FAQ>`.
 

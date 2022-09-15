@@ -36,9 +36,9 @@ You should now see the organization and the repositories you chose to keep track
 A note on permissions when installing the Dockstore GitHub App to a GitHub organization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Only organization admins and repository admins can install the Dockstore GitHub App. Organization admins will have the easiest time installing the Dockstore GitHub App because they can install it to any repository in the organization on the installation page.
+Only organization admins and repository admins can install the Dockstore GitHub App. 
 
-Users who are not organization admins can only install the Dockstore GitHub App on repositories that they are an admin of.
+Organization admins will have the easiest time installing the Dockstore GitHub App because they can install it to any repository in the organization on the installation page. Users who are not organization admins can only install the Dockstore GitHub App on repositories that they are an admin of.
 
 For more information on troubleshooting GitHub App permissions, please see :ref:`this FAQ entry <GitHub App permissions FAQ>`.
 

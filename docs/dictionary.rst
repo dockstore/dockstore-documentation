@@ -396,7 +396,7 @@ DRS
 
 *abbreviation for* Data Repository Service  
 
-    A standardized :ref:`dict API`, created by the :ref:`dict GA4GH` Cloud Work Stream, that provides portable access to a repository of data resources.  
+    A standardized :ref:`dict API`, created by the :ref:`dict GA4GH` Cloud Work Stream, that provides portable access to repositories of data resources.  
 
 .. note:: This term as we define it here is associated with GA4GH and may have different definitions in other contexts.  
 
@@ -924,7 +924,7 @@ TRS
 
 *abbreviation for* Tool Registry Service  
 
-    A standardized :ref:`dict API`, created by the :ref:`dict GA4GH` Cloud Work Stream, that provides portable access to a registry of tools, workflows, and associated files. Every resource in a TRS registry has a public ID that can be used to retrieve it. Dockstore `provides <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GH>`__ a TRS interface to its database.  
+    A standardized :ref:`dict API`, created by the :ref:`dict GA4GH` Cloud Work Stream, that provides portable access to a registry of tools, workflows, and associated files. Every resource in a TRS registry has a public ID that can be used to retrieve it. Dockstore `provides <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GHV20>`__ a TRS interface.  
 
 .. note:: This term as we define it here is associated with GA4GH and may have different definitions in other contexts.  
 

@@ -1,4 +1,5 @@
 docs/index.rst
+docs/dictionary.rst
 docs/news/2019-09-26-Dockstore-1.7.0.rst
 docs/advanced-topics/best-practices/best-practices-secure-fair-workflows.rst
 docs/advanced-topics/docker-alternatives.rst

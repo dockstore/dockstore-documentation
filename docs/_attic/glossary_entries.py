@@ -195,7 +195,7 @@ DOI = GlossEntry("DOI",
 
 DRS = GlossEntry("DRS",
         acronym_full="Data Repository Service",
-        definition="A standardized [API], created by the [GA4GH] Cloud Work Stream, that provides portable access to a repository of data resources.",
+        definition="A standardized [API], created by the [GA4GH] Cloud Work Stream, that provides portable access to repositories of data resources.",
         furtherreading="https://github.com/ga4gh/data-repository-service-schemas",
         institute="GA4GH",
         pronunciation='"derse", rhymes with verse')
@@ -523,7 +523,7 @@ Tool = GlossEntry("tool",
 
 TRS = GlossEntry("TRS",
         acronym_full="Tool Registry Service",
-        definition="A standardized [API], created by the [GA4GH] Cloud Work Stream, that provides portable access to a registry of tools, workflows, and associated files.  Every resource in a TRS registry has a public ID that can be used to retrieve it.  Dockstore `provides <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GH>`__ a TRS interface to its database.",
+        definition="A standardized [API], created by the [GA4GH] Cloud Work Stream, that provides portable access to a registry of tools, workflows, and associated files.  Every resource in a TRS registry has a public ID that can be used to retrieve it.  Dockstore `provides <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GHV20>`__ a TRS interface to its database.",
         furtherreading="https://ga4gh.github.io/tool-registry-service-schemas/",
         institute="GA4GH",
         pronunciation='"terse", rhymes with verse')

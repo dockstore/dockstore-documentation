@@ -53,6 +53,9 @@ outputs, and Galaxy Tool Shed dependencies for your workflow.
 
    Download
 
+
+.. note:: As of this writing, the Galaxy team has created an `improved YAML-based file format <https://github.com/galaxyproject/gxformat2>`__, known as "Format 2", that is more human-friendly and preferred over the original '.ga' format.  Currently, the Galaxy interface only exports files in the original '.ga' format, but this `may change <https://github.com/galaxyproject/galaxy/issues/13584>`__.  If the Galaxy interface allows it, you should export your Galaxy workflow as a "Format 2" file.
+
 Setting up GitHub
 -----------------
 
@@ -67,7 +70,7 @@ Upload the workflow to GitHub
 
 - Go to your repository and click on the Upload Files menu item under Add Files
 - Click on the 'choose your files' link
-- Select your '.ga' Galaxy workflow file
+- Select your exported Galaxy workflow file
 - Click on 'Commit changes'
 
 These steps are outlined `here. <https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository>`__
@@ -75,7 +78,7 @@ These steps are outlined `here. <https://docs.github.com/en/github/managing-file
 Add Test Parameter File
 -----------------------
 
-You can add a test :ref:`dict parameter file` to your source code repository, allowing other users to easily launch a test run of your workflow.  Follow `these instructions <https://usegalaxy.org/training-material/topics/contributing/tutorials/create-new-tutorial-technical/tutorial.html#testing-the-workflow-recommended>`__ to create a test parameter file.  Then, add the file you have created to your GitHub repository as you did with your '.ga' Galaxy workflow file above.
+You can add a test :ref:`dict parameter file` to your source code repository, allowing other users to easily launch a test run of your workflow.  Follow `these instructions <https://usegalaxy.org/training-material/topics/contributing/tutorials/create-new-tutorial-technical/tutorial.html#testing-the-workflow-recommended>`__ to create a test parameter file.  Then, add the file you have created to your GitHub repository as you did with your exported Galaxy workflow file above.
 
 Releasing on GitHub
 -------------------

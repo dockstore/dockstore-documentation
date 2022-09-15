@@ -3,3 +3,6 @@ docs/news/2019-09-26-Dockstore-1.7.0.rst
 docs/advanced-topics/best-practices/best-practices-secure-fair-workflows.rst
 docs/advanced-topics/docker-alternatives.rst
 docs/dockstore-logo-usage-guidelines.rst
+docs/advanced-topics/naming-workflows.rst
+docs/assets/templates/workflows/workflows.rst
+docs/assets/templates/tools/tools.rst

@@ -5,7 +5,7 @@ each workflow on Dockstore has a unique identifier in the form of a path. This p
 the Git repository that the workflow comes from. There are four components to a path, but only
 three are required. It has the following structure:
 
-``<sourceControl>/<organization name>/<repository name>/<optional workflow name>:<version name>``
+``<source-control>/<organization-name>/<repository-name>/<optional-workflow-name>:<version-name>``
 
 Why not simply use a number to identify the workflow? With a path like that shown above, users
 can quickly understand the purpose of a workflow along with where it came from.
@@ -14,8 +14,10 @@ Ex. If I had a GitHub repository called BAMstats that existed in the OICR organi
 
 ``github.com/OICR/BAMstats``
 
-The final optional component for the workflow path is the workflow name. This is a user defined
-string that will be appended to the end of the required workflow path. It is useful in two situations:
+The final optional component for the workflow path is the workflow name, which is a user-defined
+string that will be appended to the end of the required workflow path. It can contain letters, numbers, internal hyphens, and internal underscores, but no spaces or other characters.
+
+A workflow name is useful in two situations:
 
 1) The name of the repository doesn't represent the workflow, or
 2) The repository contains multiple workflows

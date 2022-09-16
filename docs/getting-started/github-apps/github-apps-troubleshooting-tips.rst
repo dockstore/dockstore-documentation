@@ -66,17 +66,17 @@ First of all, you can only configure already-installed GitHub Apps for organizat
 
 There are two scenarios to be aware of when installing the Dockstore GitHub App as a repository admin who is not an organization admin.
 
-1. An organization admin configured the Dockstore GitHub App to be installed on all repositories.
+1. Another person, who is an organization admin, configured the Dockstore GitHub App to be installed on all current and future repositories in the organization.
 
    * Attempts to install the Dockstore GitHub App on any repository in the organization will result in an error from GitHub, regardless of whether or not the repository is one that the user has admin access to.
    * If it is a repository that the user has admin access to, the user can :ref:`check the repository to see if the app is indeed installed <Check GitHub App installation on repository>`.
 
-2. An organization admin configured the Dockstore GitHub App to be installed on select repositories or the Dockstore GitHub App is not configured at all. 
+2. The Dockstore GitHub App is not configured at all, or another person who is an organization admin configured the Dockstore GitHub to be installed on only select repositories in the organization.
 
    * The user can install the Dockstore GitHub App on repositories that they are an admin of.
-   * If they attempt to install the app on a repository that they are not an admin of, it may look like the app install successfully, but in reality, it did not install. Instead, an organization admin will receive a request to install the Dockstore GitHub App on the repository. 
+   * If they attempt to install the app on a repository that they are not an admin of, it may look like the app installed successfully, but in reality, it did not install. Instead, an organization admin will receive a request to install the Dockstore GitHub App on the repository. 
 
-You may also still run into scenarios where your changes appear to not get saved, even though GitHub will not throw an error. For example, if you tried to give the GitHub App access to databiosphere/analysis_pipeline_wdl, and upon re-installation into the DataBiosphere organization, you do not see databiosphere/analysis_pipeline_wdl in the list of repositories it already has access to, there is a good chance GitHub is blocking you.
+You may also still run into scenarios where your changes appear to not get saved, even though GitHub will not throw an error. For example, if you tried to give the GitHub App access to databiosphere/analysis_pipeline_wdl, and upon re-installation of the app into the DataBiosphere organization, you do not see databiosphere/analysis_pipeline_wdl in the list of repositories it already has access to, there is a good chance GitHub is blocking you.
 
 If it seems your GitHub App access just won't "stick" or you are having other permissions issues, consider asking the administrator of your organization to install the app. If they set it up to have access to all repositories on the organization, this will only need to be done once.
 

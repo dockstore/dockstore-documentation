@@ -22,9 +22,9 @@ You'll then be redirected to GitHub where you can grant the app access to specif
 .. figure:: /assets/images/docs/gh-app-install-where.png
    :width: 65 %
 
-   Install our GitHub App on either all repositories in an organization or on specific repositories
+   Install our GitHub App on either all current and future repositories in an organization or on specific repositories
 
-After selection of an organization, you can select whether to give access to all repositories or only select ones. If the organization you choose is intended to be just for Dockstore tools/workflows/services, you may want to allow access to all repositories. Otherwise, it is may be more intuitive to select only certain repositories. Click save and you will be taken back to the page you started on in Dockstore -- either  ``/my-tools``, ``/my-workflows``, or ``/my-services``, depending where you started.
+After selection of an organization, you can select whether to give access to all current and future repositories or only select ones. If the organization you choose is intended to be just for Dockstore tools/workflows/services, you may want to allow access to all repositories. Otherwise, it is may be more intuitive to select only certain repositories. Click save and you will be taken back to the page you started on in Dockstore -- either  ``/my-tools``, ``/my-workflows``, or ``/my-services``, depending where you started.
 
 .. important:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
 
@@ -33,10 +33,14 @@ You should now see the organization and the repositories you chose to keep track
 .. figure:: /assets/images/docs/my-services-filled.png
 
 
-A note on permissions
-~~~~~~~~~~~~~~~~~~~~~
+A note on permissions when installing the Dockstore GitHub App to a GitHub organization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are adding the GitHub App to an organization for which you are not an admin, GitHub may block your ability to install the app, even if you have maintainer access to the repository you are hoping to give the GitHub App permission to view. Please see :ref:`this FAQ entry <GitHub App permissions FAQ>` for more information.
+Only organization admins and repository admins can install the Dockstore GitHub App. 
+
+Organization admins will have the easiest time installing the Dockstore GitHub App because they can install it to any repository in the organization on the installation page. Users who are not organization admins can only install the Dockstore GitHub App on repositories that they are an admin of.
+
+For more information on troubleshooting GitHub App permissions, please see :ref:`this FAQ entry <GitHub App permissions FAQ>`.
 
 .. seealso::
     - :doc:`Automatic Syncing with GitHub Apps and .dockstore.yml </getting-started/github-apps/github-apps/>` - details on writing a .dockstore.yml file

@@ -65,7 +65,7 @@ Getting Started
    getting-started/hosted-tools-and-workflows
    getting-started/getting-started-with-services
    getting-started/github-apps/github-apps-landing-page
-  
+
 Launching tools and workflows from Dockstore
 --------------------------------------------
 Dockstore partners with several compute platforms, allowing you to export workflows into these platforms with the click of a button. We also provide a CLI to run tools and workflows locally. Click on the links below for more information.
@@ -160,17 +160,18 @@ Best practices guidelines
    advanced-topics/best-practices/nfl-best-practices
    advanced-topics/best-practices/best-practices-dockstore
    advanced-topics/best-practices/best-practices-secure-fair-workflows
-  
+
 .. toctree::
    :caption: Dockstore CLI
    :maxdepth: 1
-   
+
    Installing the Dockstore CLI <https://dockstore.org/quick-start>
    advanced-topics/dockstore-cli/dockstore-cli-faq
    advanced-topics/dockstore-cli/local-cromwell-config
    advanced-topics/dockstore-cli/set-up-file-provisioning-plugins
    advanced-topics/dockstore-cli/developing-file-provisioning-plugins
    advanced-topics/dockstore-cli/advanced-features
+   advanced-topics/dockstore-cli/yaml-command-line-validator-tool
 
 Advanced developer topics
 -------------------------
@@ -203,7 +204,7 @@ Advanced developer topics
    :caption: Advanced Developer Topics
    :maxdepth: 1
    :hidden:
-   
+
    advanced-topics/dockstore-tools-overhaul
    advanced-topics/tools-vs-workflows
    advanced-topics/legacy/legacy
@@ -233,6 +234,7 @@ Advanced developer topics
    BCC 2020 WDL Training </wdl_instructions>
    posters-and-talks
    user-created
+   Dockstore Logo Usage Guidelines </dockstore-logo-usage-guidelines>
 
 .. centered:: In Affiliation with
 
@@ -298,7 +300,7 @@ Advanced developer topics
 
 .. |imagespace| unicode:: U+00A0 U+00A0 U+00A0 U+00A0 U+00A0 .. non-breaking spaces between logo images
 
-.. centered:: |horizontalline| 
+.. centered:: |horizontalline|
 
 .. |horizontalline| image:: /assets/images/hori_line.png
     :alt: line

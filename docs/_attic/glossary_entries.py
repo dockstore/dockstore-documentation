@@ -22,6 +22,12 @@ dotDockstoredotYAML = GlossEntry(".dockstore.yml",
 AGC = GlossEntry("AGC",
 	acronym_full="[Amazon Genomics CLI]")
 
+AbsolutePath = GlossEntry("absolute path",
+	definition="A path that starts with the character ``/`` and contains the full set of directories necessary to resolve a file, starting from the root directory of the repository or filesystem. For example: ``/Dockstore.cwl`` or ``/bin/sh``",
+	furtherreading="",
+	institute="",
+	pronunciation='')
+
 AmazonGenomicsCLI = GlossEntry("Amazon Genomics CLI", 
 	definition="A [CLI]-based tool that supports launching bioinformatics-related workflows on [AWS] cloud infrastructure. The [Dockstore CLI] can launch workflows on AWS using Amazon Genomics CLI's [WES] implementation.", 
 	furtherreading="https://aws.amazon.com/blogs/industries/announcing-amazon-genomics-cli-preview/", 
@@ -193,6 +199,13 @@ DOI = GlossEntry("DOI",
 	institute="", 
 	pronunciation="")
 
+DRS = GlossEntry("DRS",
+        acronym_full="Data Repository Service",
+        definition="A standardized [API], created by the [GA4GH] Cloud Work Stream, that provides portable access to repositories of data resources.",
+        furtherreading="https://github.com/ga4gh/data-repository-service-schemas",
+        institute="GA4GH",
+        pronunciation='"derse", rhymes with verse')
+
 DSIAfrica = GlossEntry("DS-I Africa", 
 	acronym_full="Data Science for health discovery and Innovation in Africa", 
 	definition="An [NIH] initiative to leverage data science to address the African continent's public health needs.", 
@@ -251,7 +264,7 @@ GA4GH = GlossEntry("GA4GH",
 
 Galaxy = GlossEntry("Galaxy", 
 	acronym_full="", 
-	definition="An open-source platform that uses [FAIR] principles, most well-known for its web-based UI used to create and run a variety of bioinformatics tools.", 
+	definition="An open-source platform that uses [FAIR] principles, most well-known for its web-based UI used to create and run a variety of bioinformatics tools. A Galaxy `instance` is a running Galaxy interface/server that can be used to create and execute tools and workflows.",
 	furtherreading="https://galaxyproject.org/", 
 	institute="", 
 	pronunciation='')
@@ -475,6 +488,20 @@ Preemptible = GlossEntry("preemptible",
 	pronunciation='', 
 	seealso="[spot instance]")
 
+PrimaryDescriptorFile = GlossEntry("primary descriptor file",
+	acronym_full="",
+	definition="The [descriptor file] that provides the overall description of a workflow or tool, which Dockstore processes first when the workflow or tool is registered.",
+	furtherreading="",
+	institute="",
+	pronunciation='')
+
+SecondaryDescriptorFile = GlossEntry("secondary descriptor file",
+	acronym_full="",
+	definition="An ancillary [descriptor file], referenced by the [primary descriptor file] or another secondary descriptor file, that describes part of a workflow or tool.",
+	furtherreading="",
+	institute="",
+	pronunciation='')
+
 SevenBridges = GlossEntry("Seven Bridges", 
 	acronym_full="", 
 	definition="A cloud-based workflow execution platform developed by Seven Bridges Genomics. Seven Bridges supports the execution of [CWL] workflows and features a graph-based GUI to make workflow development easier. The computational backend of a Seven Bridges workspace can be selected by the user, with both [GCP] and [AWS] being supported. Dockstore supports directly importing [CWL] workflows into a Seven Bridges workspace. Seven Bridges is part of the [BioData Catalyst] consortium.", 
@@ -513,6 +540,13 @@ Tool = GlossEntry("tool",
 	institute="", 
 	pronunciation='', 
 	seealso="[workflow]")
+
+TRS = GlossEntry("TRS",
+        acronym_full="Tool Registry Service",
+        definition="A standardized [API], created by the [GA4GH] Cloud Work Stream, that provides portable access to a registry of tools, workflows, and associated files.  Every resource in a TRS registry has a public ID that can be used to retrieve it.  Dockstore `provides <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GHV20>`__ a TRS interface.",
+        furtherreading="https://ga4gh.github.io/tool-registry-service-schemas/",
+        institute="GA4GH",
+        pronunciation='"terse", rhymes with verse')
 
 UCSC = GlossEntry("UCSC", 
 	acronym_full="University of California, Santa Cruz", 

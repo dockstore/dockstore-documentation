@@ -4,6 +4,9 @@ docs/advanced-topics/best-practices/best-practices-secure-fair-workflows.rst
 docs/advanced-topics/docker-alternatives.rst
 docs/advanced-topics/naming-workflows.rst
 docs/assets/templates/tools/tools.rst
+docs/dictionary.rst
+docs/getting-started/github-apps/github-apps-troubleshooting-tips.rst
+docs/getting-started/github-apps/snippet--installation.rst
 docs/assets/templates/workflows/workflows.rst
 docs/dockstore-logo-usage-guidelines.rst
 docs/getting-started/getting-started-with-galaxy.rst

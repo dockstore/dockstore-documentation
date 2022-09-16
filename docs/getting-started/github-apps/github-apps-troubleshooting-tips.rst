@@ -31,6 +31,8 @@ You can use filters in a .dockstore.yml to avoid generating a corresponding work
 
 *Note:* If you want to edit version information, such as workflow path, you will have to update the .dockstore.yml file directly on the corresponding GitHub branch. For example, if develop has a .dockstore.yml that points to my_workflow.wdl, but my_workflow.wdl is moved to another path on the branch develop-but-better, then the .dockstore.yml on develop-but-better will need to point to the new location of my_workflow.wdl.
 
+.. _Check GitHub App installation on repository:
+
 How do I check if the Dockstore GitHub App was installed on an individual repository?
 --------------------------------------------------------------------------------------
 Go to your repo on GitHub, click the Settings tab, click Integrations on the left and verify our app is installed and configured correctly
@@ -62,7 +64,19 @@ Perhaps. GitHub permissions can quickly get complicated, as it involves two leve
 
 First of all, you can only configure already-installed GitHub Apps for organizations you are not an admin in if you go through the app installation process again. Be aware that in this scenario, you can only add repos that you have admin access to, not just maintainer access.
 
-You may also still run into scenarios where your changes appear to not get saved, even though GitHub will not throw an error. For example, if you tried to give the GitHub App access to databiosphere/analysis_pipeline_wdl, and upon re-installation into the DataBiosphere organization, you do not see databiosphere/analysis_pipeline_wdl in the list of repositories it already has access to, there is a good chance GitHub is blocking you.
+There are two scenarios to be aware of when installing the Dockstore GitHub App as a repository admin who is not an organization admin.
+
+1. Another person, who is an organization admin, configured the Dockstore GitHub App to be installed on all current and future repositories in the organization.
+
+   * Attempts to install the Dockstore GitHub App on any repository in the organization will result in an error from GitHub, regardless of whether or not the repository is one that the user has admin access to.
+   * If it is a repository that the user has admin access to, the user can :ref:`check the repository to see if the app is indeed installed <Check GitHub App installation on repository>`.
+
+2. The Dockstore GitHub App is not configured at all, or another person who is an organization admin configured the Dockstore GitHub to be installed on only select repositories in the organization.
+
+   * The user can install the Dockstore GitHub App on repositories that they are an admin of.
+   * If they attempt to install the app on a repository that they are not an admin of, it may look like the app installed successfully, but in reality, it did not install. Instead, an organization admin will receive a request to install the Dockstore GitHub App on the repository. 
+
+You may also still run into scenarios where your changes appear to not get saved, even though GitHub will not throw an error. For example, if you tried to give the GitHub App access to databiosphere/analysis_pipeline_wdl, and upon re-installation of the app into the DataBiosphere organization, you do not see databiosphere/analysis_pipeline_wdl in the list of repositories it already has access to, there is a good chance GitHub is blocking you.
 
 If it seems your GitHub App access just won't "stick" or you are having other permissions issues, consider asking the administrator of your organization to install the app. If they set it up to have access to all repositories on the organization, this will only need to be done once.
 

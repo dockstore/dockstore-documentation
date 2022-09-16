@@ -34,6 +34,7 @@ Dockstore Dictionary
 	* :ref:`dict Dockstore CLI`
 	* :ref:`dict Dockstore GitHub App`
 	* :ref:`dict DOI`
+	* :ref:`dict DRS`
 	* :ref:`dict DS-I Africa`
 	* :ref:`dict EC2`
 	* :ref:`dict egress`
@@ -81,6 +82,7 @@ Dockstore Dictionary
 	* :ref:`dict Terra`
 	* :ref:`dict TES`
 	* :ref:`dict tool`
+	* :ref:`dict TRS`
 	* :ref:`dict UCSC`
 	* :ref:`dict VM`
 	* :ref:`dict WDL`
@@ -398,6 +400,22 @@ DOI
 
 
 
+.. _dict DRS:
+
+DRS
+---
+[pronounced "derse", rhymes with verse]  
+
+*abbreviation for* Data Repository Service  
+
+    A standardized :ref:`dict API`, created by the :ref:`dict GA4GH` Cloud Work Stream, that provides portable access to repositories of data resources.  
+
+.. note:: This term as we define it here is associated with GA4GH and may have different definitions in other contexts.  
+
+Further reading: `<https://github.com/ga4gh/data-repository-service-schemas>`_  
+
+
+
 .. _dict DS-I Africa:
 
 DS-I Africa
@@ -496,7 +514,7 @@ Further reading: `<https://www.ga4gh.org/>`_
 
 Galaxy
 ------
-    An open-source platform that uses :ref:`dict FAIR` principles, most well-known for its web-based UI used to create and run a variety of bioinformatics tools.  
+    An open-source platform that uses :ref:`dict FAIR` principles, most well-known for its web-based UI used to create and run a variety of bioinformatics tools. A Galaxy `instance` is a running Galaxy interface/server that can be used to create and execute tools and workflows.  
 
 Further reading: `<https://galaxyproject.org/>`_  
 
@@ -925,6 +943,22 @@ tool
 see also :ref:`dict workflow`  
 
 Further reading: :doc:`/getting-started/intro-to-dockstore-tools-and-workflows </getting-started/intro-to-dockstore-tools-and-workflows>`  
+
+
+
+.. _dict TRS:
+
+TRS
+---
+[pronounced "terse", rhymes with verse]  
+
+*abbreviation for* Tool Registry Service  
+
+    A standardized :ref:`dict API`, created by the :ref:`dict GA4GH` Cloud Work Stream, that provides portable access to a registry of tools, workflows, and associated files. Every resource in a TRS registry has a public ID that can be used to retrieve it. Dockstore `provides <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GHV20>`__ a TRS interface.  
+
+.. note:: This term as we define it here is associated with GA4GH and may have different definitions in other contexts.  
+
+Further reading: `<https://ga4gh.github.io/tool-registry-service-schemas/>`_  
 
 
 

@@ -28,6 +28,7 @@ Dockerfile
 Dockstore CLI
 Dockstore GitHub App
 DOI
+DRS
 DS-I Africa
 EC2
 egress
@@ -75,6 +76,7 @@ Task Execution Service
 Terra
 TES
 tool
+TRS
 UCSC
 VM
 WDL

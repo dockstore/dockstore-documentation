@@ -78,6 +78,9 @@ Podman
 
 Podman is a daemon-less alternative of Docker that allows end users to run docker/OCI containers without root privileges.
 
+Podman can be installed following the instructions
+`here <https://podman.io/getting-started/installation>`__.
+
 cwltool
 ~~~~~~~
 

@@ -16,7 +16,7 @@ environment.
 
 Rootless Docker
 ---------------
-`Experiments <https://medium.com/@tonistiigi/experimenting-with-rootless-docker-416c9ad8c0d6#:~:text=Docker%20engine%20provides%20lots%20of,Linux%20you%20need%20privileged%20capabilities.>`__ with a version of Docker that does not require root permissions have been proposed and experimented with for a while now. In December 2020 with the release of Docker Engine v20.10, "rootless Docker" has officially become part of Docker itself. While this does open the door for some systems, it does require special setup and it has some limitations. You can read all about it on `Docker's own docs about Rootless Mode <https://docs.docker.com/engine/security/rootless/>`__.
+In December 2020 with the release of Docker Engine v20.10, "rootless Docker" has officially become part of Docker itself. While this does open the door for some systems, it does require special setup and it has some limitations. You can read all about it on `Docker's own docs about Rootless Mode <https://docs.docker.com/engine/security/rootless/>`__.
 
 
 Singularity
@@ -40,10 +40,10 @@ More information about compatibility of dockerfiles with Singularity
 can be found `here <https://sylabs.io/guides/3.4/user-guide/singularity_and_docker.html#best-practices>`__.
 
 Singularity can be installed following the instructions
-`here <https://sylabs.io/guides/3.4/user-guide/quick_start.html>`__. Note that the installation is relatively complicated
-and requires ``sudo``. Neither the macOS version (Singularity Desktop) nor the Debian/Ubuntu package version currently
-available (2.6.1) is compatible. You will need to download a version >3.0.0 and build it from source.
+`here <https://github.com/sylabs/singularity/blob/main/INSTALL.md>`__.
 
+.. note:: Multiple installations of Go has been seen to cause a ``Go compiler not found`` error when installing Singularity.
+   If you see this error, please uninstall all versions of Go and reinstall just one version.
 
 cwltool
 ~~~~~~~
@@ -72,6 +72,33 @@ add a line to your ``~/.dockstore/config``:
 ::
 
     cromwell-vm-options: -Dconfig.file=<absolute path to your Cromwell conf>
+
+Podman
+---------------
+
+Podman is a daemon-less alternative of Docker that allows end users to run docker/OCI containers without root privileges.
+
+cwltool
+~~~~~~~
+
+Podman is also available as a command line option for cwltool like this:
+::
+
+    cwltool --podman <workflow> <input json>
+
+To set this option through Dockstore, add the following line to your ``~/.dockstore/config``:
+::
+
+    cwltool-extra-parameters: --podman
+
+Cromwell
+~~~~~~~~
+For cromwell, we can set a symbolic link to run Podman instead of docker on workflows.
+::
+
+    ln -s /usr/bin/podman /usr/bin/docker
+
+Note that docker should not be installed when running this command.
 
 Rootless Docker
 ---------------

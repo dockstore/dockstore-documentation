@@ -152,3 +152,12 @@ automatically detect and sync changes with the corresponding version on Dockstor
 
 If you have a .dockstore.yml file in your master or develop branches on GitHub, any new branches you create from these as your template
 will have a  .dockstore.yml.
+
+
+Why are only some branches appearing on my workflow/tool entry?
+-----------------------------------------------------------------
+The Dockstore GitHub App is currently unable to parse branches containing parenthesis, brackets, apostrophes, accented vowels, and potentially other special characters. These limitations are stricter than what GitHub itself allows.
+
+If you have a GitHub branch named something like `Ó-Fearghail`, `branch-with-{curly-braces}`, or `Robert');-DROP-TABLE-Students;`, that branch will not appear on Dockstore. If you check the Dockstore GitHub App logs, you'll see these branches throw an error such as `Reference refs/heads/branch-with-{curly-braces} is not of the valid form`. However, branches with names like `main` and `develop` will continue to update as normal, so you can still use the repo provided you don't need those branches on Dockstore.
+
+Not all special characters are unsupported -- the Dockstore GitHub App does support underscores and dashes, so feel free to use those in your branch names.

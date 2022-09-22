@@ -96,12 +96,12 @@ To set this option through Dockstore, add the following line to your ``~/.dockst
 
 Cromwell
 ~~~~~~~~
-For cromwell, we can set a symbolic link to run Podman instead of docker on workflows.
+For cromwell, we can set a symbolic link to run Podman instead of Docker on workflows.
 ::
 
     ln -s /usr/bin/podman /usr/bin/docker
 
-Note that docker should not be installed when running this command.
+Note that you should not do this if you already have Docker installed on your machine.
 
 Rootless Docker
 ---------------

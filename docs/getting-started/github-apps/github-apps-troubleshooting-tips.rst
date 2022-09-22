@@ -156,8 +156,7 @@ will have a  .dockstore.yml.
 
 Why are only some branches appearing on my workflow/tool entry?
 -----------------------------------------------------------------
-The Dockstore GitHub App is currently unable to parse branches containing parenthesis, brackets, apostrophes, accented vowels, and potentially other special characters. These limitations are stricter than what GitHub itself allows.
+The Dockstore GitHub App is currently unable to parse branches that use special characters besides numerical digits, non-leading dashes, forward slashes, periods, and underscores. "Special characters" includes alphabetical characters with accents, tildes, circumflexes, umlauts, or non-English letters such as ß and ø. These limitations are stricter than what GitHub itself allows. As a result, if you have a GitHub branch named something like `Ó-Fearghail`, `branch-with-{curly-braces}`, or `Robert');-DROP-TABLE-Students;`, that branch will not appear on Dockstore. If you check the Dockstore GitHub App logs, you'll see these branches throw an error such as `Reference refs/heads/branch-with-{curly-braces} is not of the valid form`. 
 
-If you have a GitHub branch named something like `Ó-Fearghail`, `branch-with-{curly-braces}`, or `Robert');-DROP-TABLE-Students;`, that branch will not appear on Dockstore. If you check the Dockstore GitHub App logs, you'll see these branches throw an error such as `Reference refs/heads/branch-with-{curly-braces} is not of the valid form`. However, branches with names like `main` and `develop` will continue to update on Dockstore as normal, and the public view of your published entry will not show any errors (it will simply not show the branches with unsupported names).
+However, even if you have branches with unsupported names, other branches with names like `main` and `develop` will continue to update on Dockstore as normal. The public view of your published entry will not show any errors -- it will simply not show the branches with unsupported names.
 
-Not all special characters are unsupported -- the Dockstore GitHub App does support underscores and dashes, so feel free to use those in your branch names.

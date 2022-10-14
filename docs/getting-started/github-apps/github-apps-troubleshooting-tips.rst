@@ -154,8 +154,8 @@ If you have a .dockstore.yml file in your master or develop branches on GitHub, 
 will have a  .dockstore.yml.
 
 
-Why are only some branches appearing on my workflow/tool entry?
------------------------------------------------------------------
+Why are only some branches appearing on my workflow/tool?
+----------------------------------------------------------
 The Dockstore GitHub App is currently unable to parse branches that use special characters besides numerical digits, non-leading dashes, forward slashes, periods, and underscores. "Special characters" includes alphabetical characters with accents, tildes, circumflexes, umlauts, or non-English letters such as ß and ø. These limitations are stricter than what GitHub itself allows. As a result, if you have a GitHub branch named something like `Ó-Fearghail`, `branch-with-{curly-braces}`, or `Robert');-DROP-TABLE-Students;`, that branch will not appear on Dockstore. If you check the Dockstore GitHub App logs, you'll see these branches throw an error such as `Reference refs/heads/branch-with-{curly-braces} is not of the valid form`. 
 
 However, even if you have branches with unsupported names, other branches with names like `main` and `develop` will continue to update on Dockstore as normal. The public view of your published entry will not show any errors -- it will simply not show the branches with unsupported names.

@@ -1,11 +1,16 @@
 # This file is called by _attic/glossary_generator.py to generate a glossary in RST format. 
-# Its dependency, glossarpy, is currently managed by Ash O'Farrell/Team Lighthouse Point.
-# _attic/glossary_generator.py will alphabetize entries before putting rendering the RST, but please try to keep this list in alphabetical order for the sake of organization.
+# Its dependency, glossarpy, is currently maintained by Ash O'Farrell.
+#
+# To reference any entry here elsewhere in our documentation, use :ref:`dict x` where x is
+# the name of the entry, with spaces. Example: :ref:`dict Amazon Genomics CLI`
 #
 # Style Guide:
+# * glossary_generator.py will alphabetize entries in the rendered RST, but please try to keep this .py file in
+#   alphabetical order for the sake of organization
 # * Do not create newlines within strings (glossarpy can handle this but it makes tracking changes harder).
 # * Do not use title case for the `name` of a GlossEntry; follow actual dictionary capitalization conventions
-# * To link one GlossEntry to another in `definition` or `acronym_full` enclose the name (first position arg) of the entry to link in [brackets]
+# * To link one GlossEntry to another in `definition` or `acronym_full` enclose the name (first positional arg)
+#   of the entry to link in [brackets]
 # * Due to RST limitations, do not make internal links plural
 #   * acceptable: [WDL] [WDL], [WDL]. [WDL]'s [Seven Bridges] [Seven Bridges], [Seven Bridges]. [Seven Bridges]'s
 #   * will break: [WDL]s [Seven Bridges]s
@@ -111,7 +116,7 @@ Collections = GlossEntry("collection",
 
 CommonWorkflowLanguage = GlossEntry("Common Workflow Language", 
 	acronym_full="", 
-	definition="A workflow language that describes how to run command-line tools. [WDL] and CWL are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features. For example, CWL has the ability to use Javascript expressions within its own commands.", 
+	definition="A workflow language that describes how to run command-line tools. [WDL] and CWL are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features. For example, CWL has the ability to use Javascript expressions within its own commands. CWL makes a distinction between a [tool] and a [workflow].", 
 	furtherreading="https://www.commonwl.org/user_guide/", 
 	institute="", 
 	pronunciation="", 
@@ -129,10 +134,18 @@ Cromwell = GlossEntry("Cromwell",
 	definition="An open-source [WDL] executor managed by the Broad Institute. Cromwell is the default [WDL] executor for the [Dockstore CLI] and is the executor used by [Terra].", 
 	furtherreading="https://cromwell.readthedocs.io/en/stable/", 
 	institute="Broad Institute", 
-	pronunciation="")
+	pronunciation="",
+	seealso="[miniwdl]")
 
 CWL = GlossEntry("CWL", 
 	acronym_full="[Common Workflow Language]")
+
+cwltool = GlossEntry("cwltool", 
+	acronym_full="", 
+	definition="An open-source [CWL] executor which serves as the official reference implementation of [Common Workflow Language]. It is used by the [Dockstore CLI] to run CWL tools and workflows.", 
+	furtherreading="https://github.com/common-workflow-language/cwltool", 
+	institute="", 
+	pronunciation="")
 
 DAG = GlossEntry("DAG", 
 	acronym_full="Directed Acyclic Graph", 
@@ -239,6 +252,13 @@ Entry = GlossEntry("entry",
 	definition="Shorthand for a [tool] or [workflow] that has been registered on Dockstore.", 
 	furtherreading="", 
 	institute="Dockstore", 
+	pronunciation='')
+
+EnvironmentVariable = GlossEntry("environment variable", 
+	acronym_full="", 
+	definition="A variable that affects how processes run on a computer. For example, [cwltool] references the environment variable $TMPDIR when deciding where to place files. You can set environment variables in Bash using the `export` command. Environment variables are sometimes called env var or env for short.", 
+	furtherreading="https://en.wikipedia.org/wiki/Environment_variable",
+	institute="", 
 	pronunciation='')
 
 FacetedSearch = GlossEntry("faceted search", 
@@ -403,11 +423,17 @@ LegacyWorkflow = GlossEntry("legacy workflow",
 	institute="Dockstore", 
 	pronunciation='')
 
+miniwdl = GlossEntry("miniwdl",
+	definition="A Python-based [WDL] executor managed by the Chan Zuckerberg Initiative.",
+	furtherreading="https://github.com/chanzuckerberg/miniwdl",
+	institute="Chan Zuckerberg Initiative", 
+	seealso="[Cromwell]")
+
 NCI = GlossEntry("NCI", 
 	acronym_full="National Cancer Institute ", 
 	definition="A division of the [NIH] focused on cancer research.", 
 	furtherreading="https://www.nih.gov/about-nih/what-we-do/nih-almanac/national-cancer-institute-nci", 
-	institute="", 
+	institute="NIH", 
 	pronunciation="")
 
 NCPI = GlossEntry("NCPI", 
@@ -435,14 +461,14 @@ NHGRI = GlossEntry("NHGRI",
 	acronym_full="National Human Genome Research Institute", 
 	definition="A division of the [NIH] that focus on genomics research. Funds the [AnVIL Project].", 
 	furtherreading="https://www.genome.gov/", 
-	institute="", 
+	institute="NIH", 
 	pronunciation="")
 
 NHLBI = GlossEntry("NHLBI", 
 	acronym_full="National Heart, Lungs, and Blood Institute", 
 	definition="A division of the [NIH] that focuses on heart, lung, blood, and sleep health. Funds the [BioData Catalyst] platform.", 
 	furtherreading="https://www.nhlbi.nih.gov/", 
-	institute="", 
+	institute="NIH", 
 	pronunciation="")
 
 NIH = GlossEntry("NIH", 
@@ -585,7 +611,7 @@ Workflow = GlossEntry("workflow",
 
 Workflow_Description_Language = GlossEntry("Workflow Description Language",
 	furtherreading="https://openwdl.org/",
-	definition="A workflow language managed by the Open WDL Project that is designed to describe command-line tools. Usually written as [WDL]. WDL and [CWL] are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features.",
+	definition="A workflow language managed by the Open WDL Project that is designed to describe command line tools. Usually written as [WDL]. WDL and [CWL] are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features. Unlike CWL, WDL does not have an official reference implementation, but [Cromwell] and [miniwdl] are popular implementations.",
 	seealso="[WDL], [CWL]")
 
 YAML = GlossEntry("YAML", 

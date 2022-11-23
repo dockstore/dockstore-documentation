@@ -42,6 +42,7 @@ Dockstore Dictionary
 	* :ref:`dict entry`
 	* :ref:`dict faceted search`
 	* :ref:`dict FAIR`
+	* :ref:`dict foo`
 	* :ref:`dict GA4GH`
 	* :ref:`dict Galaxy`
 	* :ref:`dict Galaxy workflow`
@@ -495,6 +496,15 @@ FAIR
     A set of guidelines to improve the Findability, Accessibility, Interoperability, and Reuse of digital assets. This concept is often applied to data, but can be applied to other assets such as workflows.  
 
 Further reading: `<https://www.go-fair.org/fair-principles/>`_  
+
+
+
+.. _dict foo:
+
+foo
+---
+    bar  
+
 
 
 

@@ -36,6 +36,7 @@ eLwazi
 entry
 faceted search
 FAIR
+foo
 GA4GH
 Galaxy
 Galaxy workflow

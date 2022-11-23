@@ -71,8 +71,6 @@ BioDataCatalyst = GlossEntry("BioData Catalyst",
 	institute="", 
 	pronunciation="")
 
-FOO = GlossEntry("foo", definition="bar")
-
 CancerGenomicsCloud = GlossEntry("Cancer Genomics Cloud", 
 	acronym_full="", 
 	definition="A cloud platform by [Seven Bridges] and funded by [NCI] for bioinformatics analysis.", 

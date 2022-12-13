@@ -44,6 +44,14 @@ if ! [ -f "$file" ]; then
     exit 1
 fi
 
+# Make sure this is a file with suffix 'rst' that is referenced from the root of the repo.
+if ! [[ "$file" =~ ^docs/.*\.rst$ ]]; then
+    echo "${file} should have suffix 'rst' and be referenced relative to the root of the documentation repo."
+    echo "Example: docs/some-category/some-documentation.rst"
+    echo "No action taken."
+    exit 1
+fi
+
 # Check if the file already contains a discourse topic.
 if containsDiscourseTopic; then
     echo "${file} has a discourse topic."

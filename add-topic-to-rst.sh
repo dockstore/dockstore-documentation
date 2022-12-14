@@ -20,22 +20,13 @@
 set -e
 set -u
 
+source helpers.sh
+
 DOCS_URL="https://docs.dockstore.org/en/develop"
 DISCOURSE_URL="https://discuss.dockstore.org/posts.json"
 DISCOURSE_CATEGORY=12
 
 file=$1
-
-# Snagged from flynn's PR, TODO move this into a shared helper file
-function containsDiscourseTopic {
-  grep -A1 "^.. discourse::" $file | tail -n1 | grep -E "^( )*:topic_identifier:( )*[0-9]+" > /dev/null
-  if [ $? != 0 ]
-  then
-    return 1
-  else
-    return 0
-  fi
-}
 
 # Check if the file exists.
 if ! [ -f "$file" ]; then

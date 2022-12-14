@@ -44,7 +44,7 @@ if ! [[ "$file" =~ ^docs/.*\.rst$ ]]; then
 fi
 
 # Check if the file already contains a discourse topic.
-if containsDiscourseTopic; then
+if containsDiscourseTopic "$file"; then
     echo "${file} has a discourse topic."
     echo "No action taken."
     exit 1
@@ -87,19 +87,20 @@ fi
 
 # Create a new discourse topic.
 echo "Creating a discourse topic."
-response=$(curl -s -X POST \
-  "${DISCOURSE_URL}" \
-  -H "Api-Key: ${DISCOURSE_API_KEY}" \
-  -H "Api-Username: system" \
-  -H "cache-control: no-cache" \
-  -F "title=${title}" \
-  -F "raw=${summary}" \
-  -F "embed_url=${docs_url}" \
-  -F "category=${DISCOURSE_CATEGORY}")
-echo "Response: ${response}"
+#response=$(curl -s -X POST \
+#  "${DISCOURSE_URL}" \
+#  -H "Api-Key: ${DISCOURSE_API_KEY}" \
+#  -H "Api-Username: system" \
+#  -H "cache-control: no-cache" \
+#  -F "title=${title}" \
+#  -F "raw=${summary}" \
+#  -F "embed_url=${docs_url}" \
+#  -F "category=${DISCOURSE_CATEGORY}")
+#echo "Response: ${response}"
 
 # Process the response.
-topic_id=$(echo "$response" | jq .topic_id)
+#topic_id=$(echo "$response" | jq .topic_id)
+topic_id=666
 echo "Topic ID: ${topic_id}"
 
 # Make sure that the extracted topic ID is a number.

@@ -61,11 +61,11 @@ fi
 # Extract some information from the file.
 echo "Extracting information from ${file}."
 # Title is calculated as the first line starting with a capital letter that's before a line starting with '='.
-title=$(cat $file | tac | grep -A1 '^=' | tac | grep '^[A-Z]' | head -1 )
+title=$(cat $file | tac | grep -A1 '^=' | grep '^[^=-]' | tac | grep '.' | head -1 )
 # Summary is calculated as the first block of regular non-indented text starting with a capital letter, with newlines converted to spaces, some common RST markup stripped out, and consecutive spaces condensed to one.
-summary=$(cat $file | tac | sed '/^=/,/^/d' | sed '/^-/,/^/d' | grep -v '^\.\.' | tac | \
-    sed -n '/^[A-Z]/,$p' | sed '/^\s*$/,$d' | tr '\n' ' ' | \
-    sed 's/`:[^:]*:/`/g' | sed 's/`\([^<]*\) <[^>]*>`/\1/g' | tr -d '_' | tr -d '`' | sed 's/  */ /g' )
+summary=$(cat $file | tac | sed '/^[-=~]/,/^/d' | grep -v '^\.\.' | tac | \
+    sed -n '/^[`A-Za-z]/,$p' | sed '/^\s*$/,$d' | tr '\n' ' ' | \
+    sed 's/:[^:]*:`/`/g' | sed 's/`\([^<]*\) <[^>]*>`/\1/g' | tr -d '_' | tr -d '`' | sed 's/  */ /g' )
 
 # Compute the documentation site URL
 html_path="$(echo $file | sed 's/^docs\///' | sed 's/\.rst$//').html"
@@ -87,20 +87,19 @@ fi
 
 # Create a new discourse topic.
 echo "Creating a discourse topic."
-#response=$(curl -s -X POST \
-#  "${DISCOURSE_URL}" \
-#  -H "Api-Key: ${DISCOURSE_API_KEY}" \
-#  -H "Api-Username: system" \
-#  -H "cache-control: no-cache" \
-#  -F "title=${title}" \
-#  -F "raw=${summary}" \
-#  -F "embed_url=${docs_url}" \
-#  -F "category=${DISCOURSE_CATEGORY}")
-#echo "Response: ${response}"
+response=$(curl -s -X POST \
+    "${DISCOURSE_URL}" \
+    -H "Api-Key: ${DISCOURSE_API_KEY}" \
+    -H "Api-Username: system" \
+    -H "cache-control: no-cache" \
+    -F "title=${title}" \
+    -F "raw=${summary}" \
+    -F "embed_url=${docs_url}" \
+    -F "category=${DISCOURSE_CATEGORY}")
+echo "Response: ${response}"
 
 # Process the response.
-#topic_id=$(echo "$response" | jq .topic_id)
-topic_id=666
+topic_id=$(echo "$response" | jq .topic_id)
 echo "Topic ID: ${topic_id}"
 
 # Make sure that the extracted topic ID is a number.

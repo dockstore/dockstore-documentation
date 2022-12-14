@@ -87,8 +87,7 @@ fi
 
 # Create a new discourse topic.
 echo "Creating a discourse topic."
-response=$(curl -s -X POST \
-    "${DISCOURSE_URL}" \
+response=$(curl -s -X POST "${DISCOURSE_URL}" \
     -H "Api-Key: ${DISCOURSE_API_KEY}" \
     -H "Api-Username: system" \
     -H "cache-control: no-cache" \

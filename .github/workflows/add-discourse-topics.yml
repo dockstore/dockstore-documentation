@@ -21,7 +21,7 @@ jobs:
         env:
           DISCOURSE_API_KEY: ${{ secrets.DISCOURSE_API_KEY }}
         run: |
-          ./add-discourse-topics-to-all.sh
+          ./add-discourse-topic-to-all.sh
 
       # Commit and push, should do nothing if there were no changes.
       - name: Commit and push

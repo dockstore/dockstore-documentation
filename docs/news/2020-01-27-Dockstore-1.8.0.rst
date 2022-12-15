@@ -49,6 +49,3 @@ Minor
    should be downloaded anew from the onboarding wizard
 
 .. _GitHub: https://github.com/dockstore/dockstore/milestone/28
-
-.. discourse::
-    :topic_identifier: 6295

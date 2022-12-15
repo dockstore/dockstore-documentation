@@ -20,6 +20,3 @@ This is an archive of news relating to the development of Dockstore, focusing on
    :reversed:
 
    news/*
-
-.. discourse::
-    :topic_identifier: 6296

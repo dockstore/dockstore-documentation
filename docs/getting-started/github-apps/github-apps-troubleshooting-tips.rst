@@ -160,3 +160,6 @@ The Dockstore GitHub App is currently unable to parse branches that use special 
 
 However, even if you have branches with unsupported names, other branches with names like `main` and `develop` will continue to update on Dockstore as normal. The public view of your published entry will not show any errors -- it will simply not show the branches with unsupported names.
 
+
+.. discourse::
+    :topic_identifier: 6273

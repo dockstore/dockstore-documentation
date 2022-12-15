@@ -105,3 +105,6 @@ See Also
 - :doc:`Nextflow <getting-started-with-nextflow>`
 - :doc:`Language Support <../end-user-topics/language-support>`
 
+
+.. discourse::
+    :topic_identifier: 6241

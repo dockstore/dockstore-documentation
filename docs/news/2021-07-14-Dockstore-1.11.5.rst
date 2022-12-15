@@ -8,3 +8,6 @@ Release Notes
 Release Notes can be found on the `GitHub Changelog page <https://github.com/dockstore/dockstore/releases/tag/1.11.5>`_
 
 .. _here: 
+
+.. discourse::
+    :topic_identifier: 6233

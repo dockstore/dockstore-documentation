@@ -102,3 +102,6 @@ However, you can still refresh already existing versions/branches on Dockstore t
 
 .. seealso::
     :doc:`Troubleshooting and FAQ <github-apps-troubleshooting-tips>` - tips on resolving Dockstore GitHub App issues.
+
+.. discourse::
+    :topic_identifier: 6245

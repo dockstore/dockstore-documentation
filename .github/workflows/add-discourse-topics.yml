@@ -1,0 +1,30 @@
+name: Add discourse topic
+on:
+  workflow_dispatch:
+jobs:
+  add-discourse-topic:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Get the branch
+      - name: Get branch
+        uses: actions/checkout@v3
+
+      # Identify the action
+      - name: Identify the action
+        run: |
+          git config user.name "GitHub Action (Add discourse topic)"
+          git config user.email "<support@dockstore.org>"
+
+      # Add any missing github topics
+      - name: Add topics
+        env:
+          DISCOURSE_API_KEY: ${{ secrets.DISCOURSE_API_KEY }}
+        run: |
+          ./add-discourse-topics-to-all
+
+      # Commit and push, should do nothing if there were no changes.
+      - name: Commit and push
+        run: |
+          git commit -m "add discourse topic"
+          git push

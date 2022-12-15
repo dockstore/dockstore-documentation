@@ -107,3 +107,6 @@ Although it's not always possible, you should provide input data needed to run t
 
 .. note:: You can learn more about test parameter files by reading any of the Testing Locally Sections for :ref:`CWL <Testing CWL Locally>`, :ref:`WDL <Testing WDL Locally>`, or :ref:`Nextflow <Testing Nextflow Locally>`.
 
+
+.. discourse::
+    :topic_identifier: 90210

@@ -16,7 +16,7 @@ jobs:
           git config user.name "GitHub Action (Add discourse topic)"
           git config user.email "<support@dockstore.org>"
 
-      # Add any missing github topics
+      # Add any missing discourse topics
       - name: Add topics
         env:
           DISCOURSE_API_KEY: ${{ secrets.DISCOURSE_API_KEY }}

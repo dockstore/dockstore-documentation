@@ -187,6 +187,3 @@ Typically this launching process occurs before a Dockstore CLI release and is do
 
 .. _dockstore-tool-md5sum: https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:master?tab=info
 .. _files endpoint: https://dockstore.org/api/static/swagger-ui/index.html#/GA4GH/toolsIdVersionsVersionIdTypeFilesGet_1
-
-.. discourse::
-    :topic_identifier: 6251

@@ -38,6 +38,3 @@ Minor
 - Improved parsing code and support for WDL 1.0 means that some previously invalid tools and workflows should now be valid (or vice versa)
   - A refresh of the tools and workflows is required to redo validation
 - My Tools and My Workflows links are now in account dropdown
-
-.. discourse::
-    :topic_identifier: 6235

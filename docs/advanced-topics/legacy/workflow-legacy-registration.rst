@@ -83,6 +83,3 @@ Publishing Your Workflow
 ~~~~~~~~~~~~~~~~~~~~~~~~
 .. include:: /getting-started/snippet--publish-workflow.rst
 
-
-.. discourse::
-    :topic_identifier: 6253

@@ -126,6 +126,3 @@ option allows Dockstore to automatically create and update versions on Dockstore
 
 
 
-
-.. discourse::
-    :topic_identifier: 6247

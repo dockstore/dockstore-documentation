@@ -19,6 +19,3 @@ What is a tool?
 A tool represents a single command line tool wrapped in a descriptor language.  Languages that formally describe tools (such as CWL) may chain them together into a workflow.
 
 Dockstore recently updated how we define tools to align with the languages we support. If you want a deeper understanding of the history of Dockstore tools and where we plan on going, read :doc:`Dockstore Tools Overhaul </../advanced-topics/dockstore-tools-overhaul>`.
-
-.. discourse::
-    :topic_identifier: 6242

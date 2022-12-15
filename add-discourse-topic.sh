@@ -60,8 +60,8 @@ fi
 
 # Extract some information from the file.
 echo "Extracting information from ${file}."
-# Title is calculated as the first non-blank line that directly precedes a line starting with one of '#*=-~'.
-title=$(cat "$file" | tac | grep -A1 '^[^#*=~-]' | grep '^[^#*=~-]' | tac | grep -v '^\.\. ' | grep '.' | head -1 )
+# Title is calculated as the first non-blank line that does not begin with a space directly precedes a line starting with one of '#*=-~'.
+title=$(cat "$file" | tac | grep -A1 '^[^#*=~-]' | grep '^[^#*=~-]' | tac | grep -v '^\.\. ' | grep -v '^ ' | grep '.' | head -1 )
 # Summary is calculated as the first block of regular non-indented text starting with a letter or backquote, with newlines converted to spaces, some common RST markup stripped out, and consecutive spaces condensed to one.
 summary=$(cat "$file" | tac | sed '/^[#*=~-]\{2\}/,/^/d' | grep -v '^\.\.' | tac | \
     sed -n '/^[`A-Za-z]/,$p' | sed '/^\s*$/,$d' | tr '\n' ' ' | \

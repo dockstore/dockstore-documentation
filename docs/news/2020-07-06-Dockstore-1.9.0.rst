@@ -40,6 +40,3 @@ Minor
 
 .. _GitHub: https://github.com/dockstore/dockstore/milestone/31
 .. _here: https://docs.dockstore.org/en/develop/advanced-topics/checksum-support.html
-
-.. discourse::
-    :topic_identifier: 90210

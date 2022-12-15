@@ -98,6 +98,3 @@ to upgrade your Java version:
 
 The Dockstore CLI as of 1.7.0 is compiled and tested using Java 11 due
 to the Java 8 EOL. You will need to upgrade from Java 8 to use the CLI.
-
-.. discourse::
-    :topic_identifier: 90210

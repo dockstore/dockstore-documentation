@@ -9,6 +9,3 @@ The following links are to video tutorials and presentations.
    - `Dockstore Fundamentals Playlist <https://www.youtube.com/playlist?list=PL2uhATKMu4U_MxWFXCvu9WlASdJQgAevh>`_
 
 - `Dockstore Tutorial (2016) <https://www.youtube.com/watch?v=sInP-ByF9xU>`_
-
-.. discourse::
-    :topic_identifier: 90210

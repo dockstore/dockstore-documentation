@@ -1,6 +1,5 @@
 name: Add discourse topic
-on:
-  workflow_dispatch:
+on: push
 jobs:
   add-discourse-topic:
     runs-on: ubuntu-latest

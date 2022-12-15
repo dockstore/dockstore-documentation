@@ -60,7 +60,7 @@ fi
 
 # Extract some information from the file.
 echo "Extracting information from ${file}."
-# Title is calculated as the first line starting with a capital letter that's before a line starting with '='.
+# Title is calculated as the first non-blank line that directly precedes a line starting with '='.
 title=$(cat $file | tac | grep -A1 '^=' | grep '^[^=-]' | tac | grep '.' | head -1 )
 # Summary is calculated as the first block of regular non-indented text starting with a capital letter, with newlines converted to spaces, some common RST markup stripped out, and consecutive spaces condensed to one.
 summary=$(cat $file | tac | sed '/^[-=~]/,/^/d' | grep -v '^\.\.' | tac | \

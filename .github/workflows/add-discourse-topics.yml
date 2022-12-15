@@ -1,5 +1,6 @@
 name: Add discourse topic
-on: push
+on:
+  workflow_dispatch:
 jobs:
   add-discourse-topic:
     runs-on: ubuntu-latest
@@ -20,7 +21,7 @@ jobs:
         env:
           DISCOURSE_API_KEY: ${{ secrets.DISCOURSE_API_KEY }}
         run: |
-          ./add-discourse-topics-to-all
+          ./add-discourse-topics-to-all.sh
 
       # Commit and push, should do nothing if there were no changes.
       - name: Commit and push

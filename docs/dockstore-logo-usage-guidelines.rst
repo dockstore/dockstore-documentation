@@ -129,3 +129,6 @@ Do not:
 * Place special effects such as drop shadows on the logo.
 * Skew or distort the logo.
 * Alter the color of the logo.
+
+.. discourse::
+    :topic_identifier: 6289

@@ -23,3 +23,6 @@ See Also
 * :doc:`.dockstore.yml templates for registering tools </assets/templates/tools/tools>`
 * :doc:`.dockstore.yml templates for registering workflows </assets/templates/workflows/workflows>`
 * :doc:`Other documentation regarding the GitHub App </getting-started/github-apps/github-apps-landing-page>`
+
+.. discourse::
+    :topic_identifier: 6298

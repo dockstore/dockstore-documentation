@@ -60,15 +60,15 @@ fi
 
 # Extract some information from the file.
 echo "Extracting information from ${file}."
-# Title is calculated as the first non-blank line that directly precedes a line starting with '='.
-title=$(cat $file | tac | grep -A1 '^=' | grep '^[^=-]' | tac | grep '.' | head -1 )
-# Summary is calculated as the first block of regular non-indented text starting with a capital letter, with newlines converted to spaces, some common RST markup stripped out, and consecutive spaces condensed to one.
-summary=$(cat $file | tac | sed '/^[-=~]/,/^/d' | grep -v '^\.\.' | tac | \
+# Title is calculated as the first non-blank line that directly precedes a line starting with one of '#*=-~'.
+title=$(cat "$file" | tac | grep -A1 '^[^#*=~-]' | grep '^[^#*=~-]' | tac | grep '.' | head -1 )
+# Summary is calculated as the first block of regular non-indented text starting with a letter or backquote, with newlines converted to spaces, some common RST markup stripped out, and consecutive spaces condensed to one.
+summary=$(cat "$file" | tac | sed '/^[#*=~-]/,/^/d' | grep -v '^\.\.' | tac | \
     sed -n '/^[`A-Za-z]/,$p' | sed '/^\s*$/,$d' | tr '\n' ' ' | \
     sed 's/:[^:]*:`/`/g' | sed 's/`\([^<]*\) <[^>]*>`/\1/g' | tr -d '_' | tr -d '`' | sed 's/  */ /g' )
 
 # Compute the documentation site URL
-html_path="$(echo $file | sed 's/^docs\///' | sed 's/\.rst$//').html"
+html_path="$(echo "$file" | sed 's/^docs\///' | sed 's/\.rst$//').html"
 docs_url="${DOCS_URL}/${html_path}"
 
 # Echo the inputs to the Discouse topic creation request.
@@ -115,9 +115,10 @@ echo "Topic ID: ${topic_id}"
 
 # Add the topic ID to the RST file.
 echo "Adding reference to new topic to ${file}."
-echo "" >> $file
-echo ".. discourse::" >> $file
-echo "    :topic_identifier: ${topic_id}" >> $file
+sed -i- -e '/.$/a\' "$file"
+echo "" >> "$file"
+echo ".. discourse::" >> "$file"
+echo "    :topic_identifier: ${topic_id}" >> "$file"
 
 # Signal success.
 echo "Success."

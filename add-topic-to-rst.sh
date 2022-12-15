@@ -52,7 +52,7 @@ fi
 
 # Check if the file contains a top-level RST header.
 # If not, abort, because the file is probably meant to be included in another file.
-if ! grep -q '^=' "$file"; then
+if ! grep -q '^[#*=]' "$file"; then
     echo "${file} does not contain a top-level RST header."
     echo "No action taken."
     exit 1
@@ -63,7 +63,7 @@ echo "Extracting information from ${file}."
 # Title is calculated as the first non-blank line that directly precedes a line starting with one of '#*=-~'.
 title=$(cat "$file" | tac | grep -A1 '^[^#*=~-]' | grep '^[^#*=~-]' | tac | grep '.' | head -1 )
 # Summary is calculated as the first block of regular non-indented text starting with a letter or backquote, with newlines converted to spaces, some common RST markup stripped out, and consecutive spaces condensed to one.
-summary=$(cat "$file" | tac | sed '/^[#*=~-]/,/^/d' | grep -v '^\.\.' | tac | \
+summary=$(cat "$file" | tac | sed '/^[#*=~-]\{2\}/,/^/d' | grep -v '^\.\.' | tac | \
     sed -n '/^[`A-Za-z]/,$p' | sed '/^\s*$/,$d' | tr '\n' ' ' | \
     sed 's/:[^:]*:`/`/g' | sed 's/`\([^<]*\) <[^>]*>`/\1/g' | tr -d '_' | tr -d '`' | sed 's/  */ /g' )
 

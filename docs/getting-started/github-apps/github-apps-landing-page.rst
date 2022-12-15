@@ -26,3 +26,6 @@ Check out the following guides to learn more:
     .dockstore.yml Examples </assets/templates/template>
     Migrating Legacy Workflows <migrating-workflows-to-github-apps>
     Migrating Legacy Tools <migrating-tools-to-github-apps>
+
+.. discourse::
+    :topic_identifier: 90210

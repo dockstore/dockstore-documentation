@@ -494,6 +494,3 @@ You can also share a specific version of a tool by appending
 example we can link to version 1.25-11:
 
 https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-bamstats:1.25-11
-
-.. discourse::
-    :topic_identifier: 90210

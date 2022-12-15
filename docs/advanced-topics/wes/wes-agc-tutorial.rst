@@ -330,6 +330,3 @@ AWS console, or copy the file contents using the AWS CLI:
     .. code:: text
 
         aws s3 cp s3://agc-example123-us-west-2/project/dockstoreAgcTutorialProject/userid/userM2LQJ/context/ctx1/cromwell-execution/fastqReadCounts/b4e86806-2dc0-4d70-b494-52651e9b3de0/call-countFastqReads/cacheCopy/total_reads.txt -
-
-.. discourse::
-    :topic_identifier: 6287

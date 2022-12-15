@@ -44,6 +44,3 @@ Examples of the filters field
     .dockstore.yml templates for registering tools </assets/templates/tools/tools>
     .dockstore.yml templates for registering workflows </assets/templates/workflows/workflows>
     .dockstore.yml templates for registering services </assets/templates/services/services>
-
-.. discourse::
-    :topic_identifier: 6268

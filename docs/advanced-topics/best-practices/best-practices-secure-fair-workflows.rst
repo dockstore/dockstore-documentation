@@ -259,6 +259,3 @@ Do not use untagged or “latest”.
 - Note: Documentation can be housed at either or both, the metadata section of the workflow file and/or the GitHub README document. On Dockstore, if a description is provided in the metadata section, it will be displayed on the INFO tab. If the metadata section is missing, Dockstore will display the README on the INFO tab.
 - More information about authorship metadata can be found here: :doc:`Authorship Metadata </advanced-topics/best-practices/authorship-metadata-intro>`
         
-
-.. discourse::
-    :topic_identifier: 6277

@@ -147,6 +147,3 @@ For Cromwell, we can set a symbolic link to run Podman instead of Docker on work
 Note that you should not do this if you already have Docker installed on your machine.
 
 
-
-.. discourse::
-    :topic_identifier: 6283

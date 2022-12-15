@@ -50,6 +50,3 @@ You're now all set up -- the Dockstore CLI will use this configuration file, and
 How can I ensure the Dockstore CLI is using my Cromwell configuration file?
 ---------------------------------------------------------------------------
 You may optionally edit ``root = "cromwell-executions"`` to something else if you wish to be certain that your configuration is getting used, as it will change the name of the executions folder, making it immediately clear that your config is being used. Might we suggest ``root = "dockstore-is-cool"``?
-
-.. discourse::
-    :topic_identifier: 6284

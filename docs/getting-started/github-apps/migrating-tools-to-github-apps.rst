@@ -128,6 +128,3 @@ Once your tool is unpublished, you should see that the ``Delete`` button is enab
 
 .. seealso::
     :doc:`Troubleshooting and FAQ <github-apps-troubleshooting-tips>` - tips on resolving Dockstore GitHub App issues.
-
-.. discourse::
-    :topic_identifier: 6272

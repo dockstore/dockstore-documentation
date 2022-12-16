@@ -7,14 +7,21 @@ jobs:
     steps:
 
       # Get the branch
-      - name: Get branch
+      - name: Get the branch
         uses: actions/checkout@v3
+
+      # Abort if the branch is master or develop
+      - name: Abort if master or develop
+        run: |
+          branch=$(git rev-parse --abbrev-ref HEAD)
+          echo "Branch: ${branch}"
+          case ${branch} in master|develop) echo 'Aborting.'; exit 1;; esac
 
       # Identify the action
       - name: Identify the action
         run: |
-          git config user.name "GitHub Action (Add discourse topic)"
-          git config user.email "<support@dockstore.org>"
+          git config --global user.name "GitHub Action (Add discourse topic)"
+          git config --global user.email "<support@dockstore.org>"
 
       # Add any missing discourse topics
       - name: Add topics

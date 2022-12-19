@@ -22,9 +22,9 @@ set -u
 
 source helpers.sh
 
-DOCS_URL="https://docs.dockstore.org/en/develop"
+DOCS_URL="https://docs.dockstore.org/en/stable"
 DISCOURSE_URL="https://discuss.dockstore.org/posts.json"
-DISCOURSE_CATEGORY=12
+DISCOURSE_CATEGORY=8
 
 file=$1
 

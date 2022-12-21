@@ -36,7 +36,7 @@ The default allocation can cause workflows or tools to fail without informing th
 
 Why am I getting "Mount denied" errors when launching workflows on Mac?
 -----------------------------------------------------------------------
-Docker behaves a bit differently on a `Mac <https://docs.docker.com/docker-for-mac/osxfs/#/namespaces>`__ than on a typical Ubuntu machine. On a Mac, by default, the only shared volumes Docker can access are /Users, /Volumes, /tmp, and /private. This is problematic because many workflow executors, such as `cwltool`, uses your TMPDIR (the :ref:`dict environment variable`) to setup volumes with Docker. Since `$TMDIR` on a Mac can default to a subdirectory of /var, which Docker usually cannot access, you may run into an error. When using cwltool, the error will look something like this:
+Docker behaves a bit differently on a `Mac <https://docs.docker.com/docker-for-mac/osxfs/#/namespaces>`__ than on a typical Ubuntu machine. On a Mac, by default, the only shared volumes Docker can access are /Users, /Volumes, /tmp, and /private. This is problematic because many workflow executors, such as `cwltool`, uses your TMPDIR (the :ref:`dict environment variable`) to set up volumes with Docker. Since `$TMDIR` on a Mac can default to a subdirectory of /var, which Docker usually cannot access, you may run into an error. When using cwltool, the error will look something like this:
 
 ```
 docker: Error response from daemon: Mounts denied: cker-for-mac/osxfs/#namespaces for more info.

@@ -256,7 +256,7 @@ Entry = GlossEntry("entry",
 
 EnvironmentVariable = GlossEntry("environment variable", 
 	acronym_full="", 
-	definition="A variable that affects how processes run on a computer. For example, [cwltool] references the environment variable $TMPDIR when deciding where to place files. You can set environment variables in Bash using the `export` command. Environment variables are sometimes called env var or env for short.", 
+	definition="A variable that affects how processes run on a computer. For example, [cwltool] references the environment variable $TMPDIR when deciding where to place files. You can set environment variables in Bash using the `export` command.", 
 	furtherreading="https://en.wikipedia.org/wiki/Environment_variable",
 	institute="", 
 	pronunciation='')

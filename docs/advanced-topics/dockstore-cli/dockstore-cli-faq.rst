@@ -52,7 +52,7 @@ This issue can happen when using cwltool or Cromwell, with or without the Dockst
 
 Option A: Overwrite $TMPDIR
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-You can set the $TMPDIR :ref:`dict environment variable` to be under one of the shared volumes that Docker for Mac can access by default. You can do this by doing something similar to the following:
+B can set the $TMPDIR :ref:`dict environment variable` to be under one of the shared volumes that Docker for Mac can access by default, then relaunch Docker. You can do this by doing something similar to the following:
     ::
 
         export TMPDIR=/tmp/docker_tmp

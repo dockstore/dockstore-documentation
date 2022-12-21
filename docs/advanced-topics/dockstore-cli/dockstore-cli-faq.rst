@@ -9,7 +9,7 @@ For general FAQs not related to the Dockstore CLI, please see :doc:`our main FAQ
 How does launching CWLs/WDLs with Dockstore CLI compare with cwltool/Cromwell?
 ------------------------------------------------------------------------------
 
-Under the hood, the Dockstore CLI invokes cwltool to launch CWL workflows. Likewise, the Dockstore CLI invokes Cromwell to launch WDL workflows. However, it adds additional features. The Dockstore CLI can generate JSON parameter files from
+Under the hood, the Dockstore CLI invokes cwltool to launch CWL workflows by default (:doc:`this can be configured </advanced-topics/dockstore-cli/advanced-features>`). Likewise, the Dockstore CLI invokes Cromwell to launch WDL workflows. However, it adds additional features. The Dockstore CLI can generate JSON parameter files from
 entries on Dockstore (``dockstore tool convert``). 
 Additionally, when launching tools, the Dockstore CLI makes it easy to specify entries
 from the Dockstore website. We can also provision input and output files using HTTP,

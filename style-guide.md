@@ -47,11 +47,13 @@ See also: [Google's guidelines for accessibility](https://developers.google.com/
 * Use consistent indentation within a single RST file
 * Keep all sentences in a given paragraph that renders as body text on one line, i.e. do not break up body text every x characters
 * There should be one newline per bulletpoint, but two newlines per body paragraph, such as:
-> `1. Sequence the genome`
-> `2. Upload the genome`
-> `3. Be granted tenure`
-> ``
-> `I am a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis felis ac ligula ultrices pellentesque ullamcorper ac dolor. Sed condimentum vel lectus id auctor. Pellentesque consectetur sed ipsum vitae elementum. Praesent nunc libero, sodales in tortor at, fermentum pellentesque metus.`
+
+> `1. Sequence the genome`  
+> `2. Upload the genome`  
+> `3. Be granted tenure`  
+>   
+> `
+> I am a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis felis ac ligula ultrices pellentesque ullamcorper ac dolor. Sed condimentum vel lectus id auctor. Pellentesque consectetur sed ipsum vitae elementum. Praesent nunc libero, sodales in tortor at, fermentum pellentesque metus.`
 > 
 > `I am the next paragraph. Proin laoreet, eros sed elementum ultrices, eros lorem posuere augue, non maximus arcu lectus eget ante. Sed eget ex quis neque faucibus accumsan ut vel ligula. Fusce quis hendrerit augue, eget euismod nunc. Aliquam varius ipsum ligula, ac gravida nisi efficitur in. Duis nec lacinia quam. In hac habitasse platea dictumst.`
 > 

@@ -101,3 +101,6 @@ to the Java 8 EOL. You will need to upgrade from Java 8 to use CLI versions betw
 
 The Dockstore CLI as of 1.14.0 is compiled and tested using Java 17 due
 to the approaching Java 11 EOL. You will need to update to Java 17 to use the CLI version 1.14.0+.
+
+.. discourse::
+    :topic_identifier: 6481

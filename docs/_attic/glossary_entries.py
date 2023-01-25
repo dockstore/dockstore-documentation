@@ -67,7 +67,7 @@ BDCatalyst = GlossEntry("BD Catalyst",
 BioDataCatalyst = GlossEntry("BioData Catalyst", 
 	acronym_full="", 
 	definition="A cloud-based platform funded by [NHLBI] to provide tools, applications, and workflows in secure workspaces to expand research in heart, lung, blood, and sleep health.", 
-	furtherreading="https://biodatacatalyst.nhlbi.nih.gov/", 
+	furtherreading="https://www.nhlbi.nih.gov/science/biodata-catalyst",
 	institute="", 
 	pronunciation="")
 

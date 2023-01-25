@@ -60,7 +60,7 @@ follows:
       "mem_gb": 4,
       "bam_input": {
         "path": "https://github.com/CancerCollaboratory/dockstore-tool-bamstats/raw/develop/rna.SRR948778.bam",
-        "format": "http://edamontology.org/format_2572",
+        "format": "https://edamontology.org/format_2572",
         "class": "File"
       },
       "bamstats_report": {

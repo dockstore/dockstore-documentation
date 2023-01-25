@@ -258,7 +258,7 @@ Advanced developer topics
 .. |UcscLink| image:: /assets/images/affiliations/ucsc.png
     :alt: ucsc
     :height: 55px
-.. _UcscLink: https://ucscgenomics.soe.ucsc.edu/
+.. _UcscLink: https://genomics.ucsc.edu/
 
 .. centered:: Workflow Languages
 

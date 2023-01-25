@@ -1,7 +1,7 @@
 BioData Catalyst
 ================
 
-Dockstore integrates with the `NHLBI BioData Catalyst <https://biodatacatalyst.nhlbi.nih.gov/>`__ platform. You can
+Dockstore integrates with the `NHLBI BioData Catalyst <https://dockstore.org/organizations/bdcatalyst>`__ platform. You can
 launch both CWL-based and WDL-based workflows from Dockstore in BioData Catalyst.
 
 When browsing WDL and CWL workflows from with Dockstore, you will see a

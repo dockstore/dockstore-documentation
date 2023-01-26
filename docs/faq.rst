@@ -96,7 +96,7 @@ How do I cite Dockstore?
 ------------------------
 
 For citing Dockstore as a paper, take a look at our `F1000
-paper <http://dx.doi.org/10.12688/f1000research.10137.1>`__.
+paper <https://dx.doi.org/10.12688/f1000research.10137.1>`__.
 
 For citing the actual code, we recommend looking at our Zenodo entry.
 You will find a variety of citation styles and ways to export it at

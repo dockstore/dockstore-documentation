@@ -56,3 +56,6 @@ Dockstore wants to continue simplifying and automating the registration process 
 * Continue to display already published tools that were created using the legacy tool registration methods
 
 
+
+.. discourse::
+    :topic_identifier: 6472

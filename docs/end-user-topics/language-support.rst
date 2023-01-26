@@ -74,7 +74,7 @@ import it in the workflow descriptor like this:
 
 ::
 
-    import "http://storage.googleapis.com/..."
+    import "https://storage.googleapis.com/..."
     ...
 
 .. discourse::

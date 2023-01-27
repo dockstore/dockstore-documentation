@@ -39,4 +39,7 @@ Minor
 - The CLI refresh command will be broken until you update to CLI version 1.9.
 
 .. _GitHub: https://github.com/dockstore/dockstore/milestone/31
-.. _here: https://docs.dockstore.org/en/develop/advanced-topics/checksum-support.html
+.. _here: https://docs.dockstore.org/en/stable/advanced-topics/checksum-support.html
+
+.. discourse::
+    :topic_identifier: 6469

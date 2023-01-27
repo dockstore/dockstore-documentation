@@ -105,8 +105,8 @@ The other issue we often see is some instances of scattered tasks getting `sigki
 
 To prevent these issues from happening, we recommend setting up your Cromwell configuration file to limit how many scattered tasks run at once, and then setting up the Dockstore CLI to make use of that Cromwell configuration file. :doc:`A step-by-step tutorial is available here. </advanced-topics/dockstore-cli/local-cromwell-config>`
 
-The CLI is failing with Java 8
-------------------------------
+The CLI is failing with Java 8 or 11
+------------------------------------
 
 If you see the following error when running the Dockstore CLI, you need
 to upgrade your Java version:
@@ -118,4 +118,10 @@ to upgrade your Java version:
     Exception in thread "main" java.lang.UnsupportedClassVersionError: io/dockstore/client/cli/Client has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
 
 The Dockstore CLI as of 1.7.0 is compiled and tested using Java 11 due
-to the Java 8 EOL. You will need to upgrade from Java 8 to use the CLI.
+to the Java 8 EOL. You will need to upgrade from Java 8 to use CLI versions betweenn 1.7 and 1.13.
+
+The Dockstore CLI as of 1.14.0 is compiled and tested using Java 17 due
+to the approaching Java 11 EOL. You will need to update to Java 17 to use the CLI version 1.14.0+.
+
+.. discourse::
+    :topic_identifier: 6481

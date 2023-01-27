@@ -36,7 +36,7 @@ docker run docker/whalesay cowsay "hello"
 Now try getting the whale to say "Hello [your name]!".
 
 ### Part B - Exploring Containers
-We will now try running a container with [Samtools](http://www.htslib.org/) installed to convert a SAM file to a BAM file. Refer to the [part B readings](#part-b-readings) if you need a refresher on the content taught in the training.
+We will now try running a container with [Samtools](https://www.htslib.org/) installed to convert a SAM file to a BAM file. Refer to the [part B readings](#part-b-readings) if you need a refresher on the content taught in the training.
 
 #### Sharing data between host and container
 Here we will map the `/root/bcc2020-training/data` on the host machine to `/data` on the container. Then we will confirm that the files in `/root/bcc2020-training/data` are available on the container.

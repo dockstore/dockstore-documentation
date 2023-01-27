@@ -198,7 +198,7 @@ BioData Catalyst
 ----------------
     A cloud-based platform funded by :ref:`dict NHLBI` to provide tools, applications, and workflows in secure workspaces to expand research in heart, lung, blood, and sleep health.  
 
-Further reading: `<https://biodatacatalyst.nhlbi.nih.gov/>`_  
+Further reading: `<https://www.nhlbi.nih.gov/science/biodata-catalyst>`_
 
 
 

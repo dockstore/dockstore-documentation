@@ -19,6 +19,7 @@ Common Workflow Language
 container
 Cromwell
 CWL
+cwltool
 DAG
 descriptor file
 Docker
@@ -34,6 +35,7 @@ EC2
 egress
 eLwazi
 entry
+environment variable
 faceted search
 FAIR
 GA4GH
@@ -56,6 +58,7 @@ layer
 legacy registration
 legacy tool
 legacy workflow
+miniwdl
 NCI
 NCPI
 Nextflow

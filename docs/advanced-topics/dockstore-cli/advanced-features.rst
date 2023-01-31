@@ -1,6 +1,9 @@
 Advanced CLI Features
 =====================
 
+.. contents:: Table of Contents
+  :local:
+
 .. _file-provisioning:
 
 File Provisioning

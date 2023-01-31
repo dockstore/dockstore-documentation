@@ -12,8 +12,8 @@ Dockstore CLI
 -------------
 
 The dockstore command-line includes basic tool and workflow launching
-capability built on top of
-`cwltool <https://github.com/common-workflow-language/cwltool>`__. The
+capability built on top of existing workflow engines, such as
+`cwltool <https://github.com/common-workflow-language/cwltool>`__ and `Cromwell <https://github.com/broadinstitute/cromwell>`__. The
 Dockstore command-line also includes support for file provisioning via
 `plugins <https://github.com/dockstore/dockstore-cli/tree/master/dockstore-file-plugin-parent>`__
 which allow for the reading of input files and the upload of output
@@ -21,7 +21,6 @@ files from remote file systems. Support for HTTP and HTTPS is built-in.
 Support for AWS S3 and `ICGC Score
 client <https://github.com/dockstore/icgc-storage-client-plugin>`__ is
 provided via plugins installed by default.
-
 
 Launch Legacy Tools
 ~~~~~~~~~~~~~~~~~~~

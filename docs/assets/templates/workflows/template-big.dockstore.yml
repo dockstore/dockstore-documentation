@@ -37,6 +37,11 @@ workflows:
     #   - /null-model/null-model-binary.json
     testParameterFiles: <String Array>
 
+    # An optional path to a workflow-specific readme in the Git repository. If not provided, Dockstore will show
+    # the readme.md present at the root of the Git repository if it is present.
+    # If you have multiple workflows in a single Git repository, it is recommend to give each one a readme.
+    readMePath: <String>
+
     # An optional array of authorship information.
     # Note that if orcid is present, then all other fields will be ignored, as information will be taken from orcid.
     # If orcid is not present, make sure to at a minimum include the name field for each author.

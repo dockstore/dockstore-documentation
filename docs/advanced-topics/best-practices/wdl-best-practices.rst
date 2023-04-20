@@ -45,7 +45,7 @@ This example includes author, email, and description metadata:
         meta {
             author: "Andrew Duncan"
             email: "Andrew.Duncan@oicr.on.ca"
-            description: "![build_status](https://quay.io/repository/collaboratory/dockstore-tool-bamstats/status) A Docker container for the BAMStats command. See the [BAMStats](http://bamstats.sourceforge.net/) website for more information."
+            description: "![build_status](https://quay.io/repository/collaboratory/dockstore-tool-bamstats/status) A Docker container for the BAMStats command. See the [BAMStats](https://bamstats.sourceforge.net/) website for more information."
         }
     }
 

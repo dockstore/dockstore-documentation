@@ -96,7 +96,7 @@ How do I cite Dockstore?
 ------------------------
 
 For citing Dockstore as a paper, take a look at our `F1000
-paper <http://dx.doi.org/10.12688/f1000research.10137.1>`__.
+paper <https://dx.doi.org/10.12688/f1000research.10137.1>`__.
 
 For citing the actual code, we recommend looking at our Zenodo entry.
 You will find a variety of citation styles and ways to export it at
@@ -346,6 +346,13 @@ Any last tips on using Dockstore?
 -  you can use a Git repository with multiple CWL files
 -  related to the two above, you can use non-standard file paths if you
    customize your registrations in the Version tab of Dockstore
+
+What happens if I link to a different ORCID account?
+----------------------------------------------------
+
+`ORCID <https://orcid.org>`__ is designed to `discourage more than one account for an individual <https://support.orcid.org/hc/en-us/articles/360006971593-Do-you-have-more-than-one-account->`__. However, if you somehow end up with two ORCID accounts, publish a record from Dockstore using the first ORCID account, then relink Dockstore to the second ORCID account, you will not be able to update the original ORCID record from within Dockstore.
+
+If you run into this situation, please use the `Help Desk` link in the https://dockstore.org footer to contact the Dockstore team.
 
 .. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.321679.svg
    :target: https://zenodo.org/record/321679

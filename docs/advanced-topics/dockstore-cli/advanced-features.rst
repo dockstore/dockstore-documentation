@@ -1,6 +1,9 @@
 Advanced CLI Features
 =====================
 
+.. contents:: Table of Contents
+  :local:
+
 .. _file-provisioning:
 
 File Provisioning
@@ -253,8 +256,7 @@ By default, the Dockstore CLI launches CWL tools/workflows using
 However, we have an experimental integration with other launchers such
 as: -
 `cwl-runner <https://www.commonwl.org/v1.0/CommandLineTool.html#Executing_CWL_documents_as_scripts>`__
-- `Cromwell <https://cromwell.readthedocs.io/en/stable/>`__ (For
-Dockstore 1.6.0+)
+- `Cromwell <https://cromwell.readthedocs.io/en/stable/>`__
 
 Keep in mind that there are a few differences in how locked-down the
 Docker execution environments are between the launchers. So a workflow
@@ -282,12 +284,10 @@ following to your ``~/.dockstore/config``:
 
     cwlrunner: cwl-runner
 
-.. _cromwell-beta:
+.. _cromwell:
 
-Cromwell (Beta)
+Cromwell
 ~~~~~~~~~~~~~~~
-
-    For Dockstore 1.6.0+
 
 You can launch CWL tools/workflows using Cromwell by adding the
 following to your ``~/.dockstore/config``:
@@ -334,13 +334,15 @@ with the `Cromwell <https://github.com/broadinstitute/cromwell>`__ version liste
 +-------------+-----------------------+
 |     1.13    |          77           |
 +-------------+-----------------------+
+|     1.14    |          84           |
++-------------+-----------------------+
 
 Additionally, you can override the Cromwell version in your
 ``~/.dockstore/config`` using for example:
 
 ::
 
-    cromwell-version = 76
+    cromwell-version = 84
 
 The Dockstore CLI will attempt to download the version of Cromwell JAR file you specify from the `Cromwell
 download area <https://github.com/broadinstitute/cromwell/releases/>`__ to

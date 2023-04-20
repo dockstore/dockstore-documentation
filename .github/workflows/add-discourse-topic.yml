@@ -1,0 +1,37 @@
+name: Add discourse topic
+on:
+  workflow_dispatch:
+jobs:
+  add-discourse-topic:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Get the branch
+      - name: Get the branch
+        uses: actions/checkout@v3
+
+      # Abort if the branch is master or develop
+      - name: Abort if master or develop
+        run: |
+          branch=$(git rev-parse --abbrev-ref HEAD)
+          echo "Branch: ${branch}"
+          case ${branch} in master|develop) echo 'Aborting.'; exit 1;; esac
+
+      # Identify the action
+      - name: Identify the action
+        run: |
+          git config --global user.name "GitHub Action (Add discourse topic)"
+          git config --global user.email "<support@dockstore.org>"
+
+      # Add any missing discourse topics
+      - name: Add topics
+        env:
+          DISCOURSE_API_KEY: ${{ secrets.DISCOURSE_API_KEY }}
+        run: |
+          ./add-discourse-topic-to-all.sh
+
+      # Commit and push, should do nothing if there were no changes.
+      - name: Commit and push
+        run: |
+          git commit -a -m "add discourse topic"
+          git push

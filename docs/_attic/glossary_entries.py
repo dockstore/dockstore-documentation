@@ -1,11 +1,16 @@
 # This file is called by _attic/glossary_generator.py to generate a glossary in RST format. 
-# Its dependency, glossarpy, is currently managed by Ash O'Farrell/Team Lighthouse Point.
-# _attic/glossary_generator.py will alphabetize entries before putting rendering the RST, but please try to keep this list in alphabetical order for the sake of organization.
+# Its dependency, glossarpy, is currently maintained by Ash O'Farrell.
+#
+# To reference any entry here elsewhere in our documentation, use :ref:`dict x` where x is
+# the name of the entry, with spaces. Example: :ref:`dict Amazon Genomics CLI`
 #
 # Style Guide:
+# * glossary_generator.py will alphabetize entries in the rendered RST, but please try to keep this .py file in
+#   alphabetical order for the sake of organization
 # * Do not create newlines within strings (glossarpy can handle this but it makes tracking changes harder).
 # * Do not use title case for the `name` of a GlossEntry; follow actual dictionary capitalization conventions
-# * To link one GlossEntry to another in `definition` or `acronym_full` enclose the name (first position arg) of the entry to link in [brackets]
+# * To link one GlossEntry to another in `definition` or `acronym_full` enclose the name (first positional arg)
+#   of the entry to link in [brackets]
 # * Due to RST limitations, do not make internal links plural
 #   * acceptable: [WDL] [WDL], [WDL]. [WDL]'s [Seven Bridges] [Seven Bridges], [Seven Bridges]. [Seven Bridges]'s
 #   * will break: [WDL]s [Seven Bridges]s
@@ -21,6 +26,12 @@ dotDockstoredotYAML = GlossEntry(".dockstore.yml",
 
 AGC = GlossEntry("AGC",
 	acronym_full="[Amazon Genomics CLI]")
+
+AbsolutePath = GlossEntry("absolute path",
+	definition="A path that starts with the character ``/`` and contains the full set of directories necessary to resolve a file, starting from the root directory of the repository or filesystem. For example: ``/Dockstore.cwl`` or ``/bin/sh``",
+	furtherreading="",
+	institute="",
+	pronunciation='')
 
 AmazonGenomicsCLI = GlossEntry("Amazon Genomics CLI", 
 	definition="A [CLI]-based tool that supports launching bioinformatics-related workflows on [AWS] cloud infrastructure. The [Dockstore CLI] can launch workflows on AWS using Amazon Genomics CLI's [WES] implementation.", 
@@ -61,7 +72,7 @@ BDCatalyst = GlossEntry("BD Catalyst",
 BioDataCatalyst = GlossEntry("BioData Catalyst", 
 	acronym_full="", 
 	definition="A cloud-based platform funded by [NHLBI] to provide tools, applications, and workflows in secure workspaces to expand research in heart, lung, blood, and sleep health.", 
-	furtherreading="https://biodatacatalyst.nhlbi.nih.gov/", 
+	furtherreading="https://dockstore.org/organizations/bdcatalyst",
 	institute="", 
 	pronunciation="")
 
@@ -105,7 +116,7 @@ Collections = GlossEntry("collection",
 
 CommonWorkflowLanguage = GlossEntry("Common Workflow Language", 
 	acronym_full="", 
-	definition="A workflow language that describes how to run command-line tools. [WDL] and CWL are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features. For example, CWL has the ability to use Javascript expressions within its own commands.", 
+	definition="A workflow language that describes how to run command-line tools. [WDL] and CWL are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features. For example, CWL has the ability to use Javascript expressions within its own commands. CWL makes a distinction between a [tool] and a [workflow].", 
 	furtherreading="https://www.commonwl.org/user_guide/", 
 	institute="", 
 	pronunciation="", 
@@ -123,10 +134,18 @@ Cromwell = GlossEntry("Cromwell",
 	definition="An open-source [WDL] executor managed by the Broad Institute. Cromwell is the default [WDL] executor for the [Dockstore CLI] and is the executor used by [Terra].", 
 	furtherreading="https://cromwell.readthedocs.io/en/stable/", 
 	institute="Broad Institute", 
-	pronunciation="")
+	pronunciation="",
+	seealso="[miniwdl]")
 
 CWL = GlossEntry("CWL", 
 	acronym_full="[Common Workflow Language]")
+
+cwltool = GlossEntry("cwltool", 
+	acronym_full="", 
+	definition="An open-source [CWL] executor which serves as the official reference implementation of [Common Workflow Language]. It is used by the [Dockstore CLI] to run CWL tools and workflows.", 
+	furtherreading="https://github.com/common-workflow-language/cwltool", 
+	institute="", 
+	pronunciation="")
 
 DAG = GlossEntry("DAG", 
 	acronym_full="Directed Acyclic Graph", 
@@ -193,6 +212,13 @@ DOI = GlossEntry("DOI",
 	institute="", 
 	pronunciation="")
 
+DRS = GlossEntry("DRS",
+        acronym_full="Data Repository Service",
+        definition="A standardized [API], created by the [GA4GH] Cloud Work Stream, that provides portable access to repositories of data resources.",
+        furtherreading="https://github.com/ga4gh/data-repository-service-schemas",
+        institute="GA4GH",
+        pronunciation='"derse", rhymes with verse')
+
 DSIAfrica = GlossEntry("DS-I Africa", 
 	acronym_full="Data Science for health discovery and Innovation in Africa", 
 	definition="An [NIH] initiative to leverage data science to address the African continent's public health needs.", 
@@ -228,6 +254,13 @@ Entry = GlossEntry("entry",
 	institute="Dockstore", 
 	pronunciation='')
 
+EnvironmentVariable = GlossEntry("environment variable", 
+	acronym_full="", 
+	definition="A variable that affects how processes run on a computer. For example, [cwltool] references the environment variable $TMPDIR when deciding where to place files.", 
+	furtherreading="https://en.wikipedia.org/wiki/Environment_variable",
+	institute="", 
+	pronunciation='')
+
 FacetedSearch = GlossEntry("faceted search", 
 	acronym_full="", 
 	definition="A type of search which allows users to narrow down their results based upon certain aspects of the things being searched. On Dockstore, our faceted search at <https://dockstore.org/search> allows users to narrow down their search to a particular workflow language, author, and/or other fields.", 
@@ -251,7 +284,7 @@ GA4GH = GlossEntry("GA4GH",
 
 Galaxy = GlossEntry("Galaxy", 
 	acronym_full="", 
-	definition="An open-source platform that uses [FAIR] principles, most well-known for its web-based UI used to create and run a variety of bioinformatics tools.", 
+	definition="An open-source platform that uses [FAIR] principles, most well-known for its web-based UI used to create and run a variety of bioinformatics tools. A Galaxy `instance` is a running Galaxy interface/server that can be used to create and execute tools and workflows.",
 	furtherreading="https://galaxyproject.org/", 
 	institute="", 
 	pronunciation='')
@@ -390,11 +423,17 @@ LegacyWorkflow = GlossEntry("legacy workflow",
 	institute="Dockstore", 
 	pronunciation='')
 
+miniwdl = GlossEntry("miniwdl",
+	definition="A Python-based [WDL] executor managed by the Chan Zuckerberg Initiative.",
+	furtherreading="https://github.com/chanzuckerberg/miniwdl",
+	institute="Chan Zuckerberg Initiative", 
+	seealso="[Cromwell]")
+
 NCI = GlossEntry("NCI", 
 	acronym_full="National Cancer Institute ", 
 	definition="A division of the [NIH] focused on cancer research.", 
 	furtherreading="https://www.nih.gov/about-nih/what-we-do/nih-almanac/national-cancer-institute-nci", 
-	institute="", 
+	institute="NIH", 
 	pronunciation="")
 
 NCPI = GlossEntry("NCPI", 
@@ -422,14 +461,14 @@ NHGRI = GlossEntry("NHGRI",
 	acronym_full="National Human Genome Research Institute", 
 	definition="A division of the [NIH] that focus on genomics research. Funds the [AnVIL Project].", 
 	furtherreading="https://www.genome.gov/", 
-	institute="", 
+	institute="NIH", 
 	pronunciation="")
 
 NHLBI = GlossEntry("NHLBI", 
 	acronym_full="National Heart, Lungs, and Blood Institute", 
 	definition="A division of the [NIH] that focuses on heart, lung, blood, and sleep health. Funds the [BioData Catalyst] platform.", 
 	furtherreading="https://www.nhlbi.nih.gov/", 
-	institute="", 
+	institute="NIH", 
 	pronunciation="")
 
 NIH = GlossEntry("NIH", 
@@ -475,6 +514,20 @@ Preemptible = GlossEntry("preemptible",
 	pronunciation='', 
 	seealso="[spot instance]")
 
+PrimaryDescriptorFile = GlossEntry("primary descriptor file",
+	acronym_full="",
+	definition="The [descriptor file] that provides the overall description of a workflow or tool, which Dockstore processes first when the workflow or tool is registered.",
+	furtherreading="",
+	institute="",
+	pronunciation='')
+
+SecondaryDescriptorFile = GlossEntry("secondary descriptor file",
+	acronym_full="",
+	definition="An ancillary [descriptor file], referenced by the [primary descriptor file] or another secondary descriptor file, that describes part of a workflow or tool.",
+	furtherreading="",
+	institute="",
+	pronunciation='')
+
 SevenBridges = GlossEntry("Seven Bridges", 
 	acronym_full="", 
 	definition="A cloud-based workflow execution platform developed by Seven Bridges Genomics. Seven Bridges supports the execution of [CWL] workflows and features a graph-based GUI to make workflow development easier. The computational backend of a Seven Bridges workspace can be selected by the user, with both [GCP] and [AWS] being supported. Dockstore supports directly importing [CWL] workflows into a Seven Bridges workspace. Seven Bridges is part of the [BioData Catalyst] consortium.", 
@@ -514,6 +567,13 @@ Tool = GlossEntry("tool",
 	pronunciation='', 
 	seealso="[workflow]")
 
+TRS = GlossEntry("TRS",
+        acronym_full="Tool Registry Service",
+        definition="A standardized [API], created by the [GA4GH] Cloud Work Stream, that provides portable access to a registry of tools, workflows, and associated files.  Every resource in a TRS registry has a public ID that can be used to retrieve it.  Dockstore `provides <https://dockstore.org/api/static/swagger-ui/index.html#/GA4GHV20>`__ a TRS interface.",
+        furtherreading="https://ga4gh.github.io/tool-registry-service-schemas/",
+        institute="GA4GH",
+        pronunciation='"terse", rhymes with verse')
+
 UCSC = GlossEntry("UCSC", 
 	acronym_full="University of California, Santa Cruz", 
 	definition="A public university located in Santa Cruz that is focused on undergraduate and graduate education and research. The Genomics Institute, a branch of UCSC's engineering department, is one of the two institutes involved in the development of Dockstore, the other being [OICR].", 
@@ -551,7 +611,7 @@ Workflow = GlossEntry("workflow",
 
 Workflow_Description_Language = GlossEntry("Workflow Description Language",
 	furtherreading="https://openwdl.org/",
-	definition="A workflow language managed by the Open WDL Project that is designed to describe command-line tools. Usually written as [WDL]. WDL and [CWL] are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features.",
+	definition="A workflow language managed by the Open WDL Project that is designed to describe command line tools. Usually written as [WDL]. WDL and [CWL] are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features. Unlike CWL, WDL does not have an official reference implementation, but [Cromwell] and [miniwdl] are popular implementations.",
 	seealso="[WDL], [CWL]")
 
 YAML = GlossEntry("YAML", 

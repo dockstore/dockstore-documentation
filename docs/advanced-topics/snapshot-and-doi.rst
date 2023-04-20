@@ -15,7 +15,7 @@ individual versions of a workflow entry.
 
 Connect Zenodo Account
 ----------------------
-Dockstore uses `Zenodo <http://about.zenodo.org/>`__ as its DOI provider. A Zenodo account is
+Dockstore uses `Zenodo <https://about.zenodo.org/>`__ as its DOI provider. A Zenodo account is
 required to request a DOI for a workflow version. By using Zenodo credentials, a user is also able to fine tune
 their entries directly on Zenodo. Link your Zenodo credentials to your Dockstore account on the
 `accounts page <https://dockstore.org/accounts?tab=accounts>`__. Requesting a DOI on Dockstore will
@@ -77,7 +77,7 @@ before generating a DOI.
     A workflow version with a DOI can no longer be hidden on the public view of the workflow, but the whole workflow entry
     may still be unpublished. The version snapshot and DOI on Dockstore can’t be changed, however metadata editing
     may be allowed directly through Zendo, but this is limited. A Dockstore DOI request cannot be undone, however you
-    can contact Zenodo directly about changing or removing published records `here <http://about.zenodo.org/>`__.
+    can contact Zenodo directly about changing or removing published records `here <https://about.zenodo.org/>`__.
 
 .. image:: ../assets/images/docs/snapshot_doi/request_doi_2.png
    :scale: 50 %

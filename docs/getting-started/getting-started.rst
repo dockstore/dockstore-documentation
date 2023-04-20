@@ -9,7 +9,7 @@ This "Getting Started" series is an introduction to everything required to prope
 - :doc:`Creating a Dockstore account </getting-started/register-on-dockstore>`
 - Registering :doc:`a tool </getting-started/dockstore-tools>` or :doc:`a workflow </getting-started/dockstore-workflows>` on Dockstore
 
-The tool we will be using throughout this tutorial is `BAMStats <http://bamstats.sourceforge.net/>`__. It is a tool for summarising Next Generation Sequencing alignments. It accepts a BAM file as input and produces a ZIP file containing an HTML report on the alignment.
+The tool we will be using throughout this tutorial is `BAMStats <https://bamstats.sourceforge.net/>`__. It is a tool for summarising Next Generation Sequencing alignments. It accepts a BAM file as input and produces a ZIP file containing an HTML report on the alignment.
 
 Assumptions
 -----------

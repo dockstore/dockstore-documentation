@@ -252,7 +252,7 @@ installed. To do this we must create a ``Dockerfile``. Here's a sample
     RUN apt-get -m update && apt-get install -y wget unzip openjdk-7-jre zip
 
     # get the tool and install it in /usr/local/bin
-    RUN wget -q http://downloads.sourceforge.net/project/bamstats/BAMStats-1.25.zip
+    RUN wget -q https://downloads.sourceforge.net/project/bamstats/BAMStats-1.25.zip
     RUN unzip BAMStats-1.25.zip && \
         rm BAMStats-1.25.zip && \
         mv BAMStats-1.25 /opt/
@@ -296,7 +296,7 @@ You should include your name and contact information.
 
     USER root
     RUN apt-get -m update && apt-get install -y wget unzip openjdk-7-jre zip
-    RUN wget -q http://downloads.sourceforge.net/project/bamstats/BAMStats-1.25.zip
+    RUN wget -q https://downloads.sourceforge.net/project/bamstats/BAMStats-1.25.zip
     RUN unzip BAMStats-1.25.zip && \
         rm BAMStats-1.25.zip && \
         mv BAMStats-1.25 /opt/

@@ -5,7 +5,7 @@ Dockstore 1.0
 This date marks the launch of `Dockstore
 1.0 <https://github.com/dockstore/dockstore/releases/tag/1.0>`__. This
 release combines the release of several Pan-cancer workflows, tested as
-standardized `CWL 1.0 <http://www.commonwl.org/>`__ CommandLineTools
+standardized `CWL 1.0 <https://www.commonwl.org/>`__ CommandLineTools
 along with several new features including support for CWL 1.0 in
 Dockstore itself and preliminary support for the GA4GH
 `tool-registry-schema <https://github.com/ga4gh/tool-registry-schemas>`__.
@@ -37,7 +37,7 @@ Highlighted New Features
    display and launch tools
 -  Dockstore launcher (which allows you to run tools locally on one
    host) supports file provisioning based on `CWL secondary
-   files <http://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter>`__.
+   files <https://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter>`__.
    See
    `Sanger <https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/blob/develop/Dockstore.cwl>`__
    for an example
@@ -46,4 +46,3 @@ Highlighted New Features
 
 .. discourse::
     :topic_identifier: 2017
-    

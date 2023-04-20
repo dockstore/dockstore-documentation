@@ -146,3 +146,6 @@ them when making WES requests.
    :maxdepth: 1
 
    wes-agc-tutorial
+
+.. discourse::
+    :topic_identifier: 6470

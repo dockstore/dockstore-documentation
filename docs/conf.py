@@ -4,7 +4,7 @@
 #
 # This file does only contain a selection of the most common options. For a
 # full list see the documentation:
-# http://www.sphinx-doc.org/en/master/config
+# https://www.sphinx-doc.org/en/master/config
 
 # -- Path setup --------------------------------------------------------------
 
@@ -46,7 +46,7 @@ extensions = ['myst_parser', 'sphinxcontrib.discourse']
 linkcheck_anchors = False
 linkcheck_ignore = [
     'http://localhost:8080/ga4gh/wes/v1', 'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works',
-    'http://dx.doi.org/10.12688/f1000research.10137.1', 'https://dockstore.org/api/',
+    'https://dx.doi.org/10.12688/f1000research.10137.1', 'https://dockstore.org/api/',
     'https://dockstore.org:8443/', 'https://support.terra.bio/hc/en-us/sections/360007274612/',
     'https://docs.snyk.io/getting-started/getting-started-snyk-products/getting-started-snyk-open-source',
     'https://software.broadinstitute.org/firecloud/',
@@ -58,7 +58,9 @@ linkcheck_ignore = [
     'https://doi.org/10.7490/f1000research.1118300.1',
     'launch-with/anvil-launch-with.html', 'launch-with/cavatica-launch-with.html', 'launch-with/dnanexus-launch-with.html', 'launch-with/cgc-launch-with.html',
     'launch-with/galaxy-launch-with.html', 'launch-with/nextflow-tower-launch-with.html', 'launch-with/terra-launch-with.html',
-    'https://doi.org/*'
+    'https://doi.org/*',
+    # Confusing, linkcheck and curl report expired cert, but cert date is correct in browser
+    'https://support.orcid.org/hc/en-us/articles/360006971593-Do-you-have-more-than-one-account'
     ]
 
 

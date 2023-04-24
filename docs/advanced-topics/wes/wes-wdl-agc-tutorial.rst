@@ -1,5 +1,11 @@
-WES Tutorial for AWS AGC
-========================
+WES Tutorial for running WDL workflows through the Cromwell Engine on AWS AGC
+=============================================================================
+
+.. note::
+    Although the process for running CWL workflows through the Toil engine on AWS AGC is very similar to the process
+    described in this tutorial. There are a few differences. So, for information on how to launch a CWL workflow on AWS
+    AGC please consult this :doc:`tutorial <wes-cwl-agc-tutorial>`.
+
 Amazon Web Services' (AWS) Amazon Genomics CLI (AGC) is a command line tool for launching cloud infrastructure
 within AWS accounts that can be used to execute genomics workflows. The infrastructure deployed by AGC implements the WES
 standard, and thus can be directly communicated with by using the Dockstore CLI.

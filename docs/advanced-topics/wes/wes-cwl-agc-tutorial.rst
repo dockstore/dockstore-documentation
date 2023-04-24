@@ -240,7 +240,7 @@ AWS console, or copy the file contents using the AWS CLI:
 
     .. code:: text
 
-        aws s3 cp s3://<CENSORED FILE LOCATION> .
+        aws s3 cp s3://<CENSORED FILE LOCATION> -
 
 
 .. discourse::

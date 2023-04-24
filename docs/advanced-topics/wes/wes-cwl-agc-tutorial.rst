@@ -242,3 +242,6 @@ AWS console, or copy the file contents using the AWS CLI:
 
         aws s3 cp s3://<CENSORED FILE LOCATION> .
 
+
+.. discourse::
+    :topic_identifier: 6866

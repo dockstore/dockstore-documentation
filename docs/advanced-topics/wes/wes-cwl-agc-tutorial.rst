@@ -97,7 +97,7 @@ to your terminal with the server's configuration.
 
 Words Workflow
 --------------
-The Dockstore entry associated with this workflow can be found here `words <https://dockstore.org/workflows/github.com/dockstore-testing/tooltester-wes-testing/words:main?tab=info>`_.
+The Dockstore entry associated with this workflow can be found here `words <https://dockstore.org/workflows/github.com/dockstore-testing/tooltester-wes-testing/words:stable-version-for-testing-v4?tab=info>`_.
 
 
 
@@ -173,7 +173,7 @@ The Dockstore entry associated with this workflow can be found here `words <http
 
     .. code:: text
 
-        dockstore workflow wes launch --entry github.com/dockstore-testing/tooltester-wes-testing/words:main --json input.json
+        dockstore workflow wes launch --entry github.com/dockstore-testing/tooltester-wes-testing/words:stable-version-for-testing-v4 --json input.json
 
 
 3. The above command will return a unique run ID, similar to:

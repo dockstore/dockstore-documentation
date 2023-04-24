@@ -198,7 +198,7 @@ BioData Catalyst
 ----------------
     A cloud-based platform funded by :ref:`dict NHLBI` to provide tools, applications, and workflows in secure workspaces to expand research in heart, lung, blood, and sleep health.  
 
-Further reading: `<https://www.nhlbi.nih.gov/science/biodata-catalyst>`_
+Further reading: `<https://dockstore.org/organizations/bdcatalyst>`_  
 
 
 
@@ -493,7 +493,7 @@ entry
 
 environment variable
 --------------------
-    A variable that affects how processes run on a computer. For example, :ref:`dict cwltool` references the environment variable $TMPDIR when deciding where to place files. You can set environment variables in Bash using the `export` command. Environment variables are sometimes called env var or env for short.  
+    A variable that affects how processes run on a computer. For example, :ref:`dict cwltool` references the environment variable $TMPDIR when deciding where to place files.  
 
 Further reading: `<https://en.wikipedia.org/wiki/Environment_variable>`_  
 

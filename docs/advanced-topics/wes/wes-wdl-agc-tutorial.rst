@@ -73,7 +73,7 @@ bucket that will be used for one of the following example workflows.
     and your AWS account must already have access to the S3 resource.
 
 
-2. Activate AGC on your account. If this is your first time running AGC on an account, this may take a few minutes.
+2. Activate AGC on your account. If this is your first time running AGC on an account, This will take approximately 10 minutes..
 
     .. code:: text
 
@@ -336,6 +336,13 @@ AWS console, or copy the file contents using the AWS CLI:
     .. code:: text
 
         aws s3 cp s3://agc-example123-us-west-2/project/dockstoreAgcTutorialProject/userid/userM2LQJ/context/ctx1/cromwell-execution/fastqReadCounts/b4e86806-2dc0-4d70-b494-52651e9b3de0/call-countFastqReads/cacheCopy/total_reads.txt -
+
+6. When you are finished running workflows on your AGC context, you need to destroy it. Destroy your AGC context by running the below command in the same directory as ``agc-project.yaml``.
+This will take approximately 20 minutes.
+
+    .. code:: text
+
+        agc context destroy ctx1
 
 .. discourse::
     :topic_identifier: 6471

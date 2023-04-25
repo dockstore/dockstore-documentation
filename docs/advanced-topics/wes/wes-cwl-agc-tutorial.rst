@@ -55,7 +55,7 @@ This will create an AGC project named ``dockstoreAgcTutorialProject``, with a si
 
         agc account activate
 
-3. Deploy an AGC context by running the below command in the same directory as ``agc-project.yaml``. This may take a few minutes.
+3. Deploy an AGC context by running the below command in the same directory as ``agc-project.yaml``. This will take approximately 10 minutes.
 
     .. code:: text
 
@@ -242,6 +242,12 @@ AWS console, or copy the file contents using the AWS CLI:
 
         aws s3 cp s3://<CENSORED FILE LOCATION> -
 
+5. When you are finished running workflows on your AGC context, you need to destroy it. Destroy your AGC context by running the below command in the same directory as ``agc-project.yaml``.
+This will take approximately 20 minutes.
+
+    .. code:: text
+
+        agc context destroy ctx2
 
 .. discourse::
     :topic_identifier: 6866

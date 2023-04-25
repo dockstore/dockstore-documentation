@@ -73,13 +73,13 @@ bucket that will be used for one of the following example workflows.
     and your AWS account must already have access to the S3 resource.
 
 
-2. Activate AGC on your account. If this is your first time running AGC on an account, this will take approximately 10 minutes..
+2. Activate AGC on your account. If this is your first time running AGC on an account, this may take a few minutes.
 
     .. code:: text
 
         agc account activate
 
-3. Deploy an AGC context by running the below command in the same directory as ``agc-project.yaml``. This may take a few minutes.
+3. Deploy an AGC context by running the below command in the same directory as ``agc-project.yaml``. This will take approximately 10 minutes.
 
     .. code:: text
 

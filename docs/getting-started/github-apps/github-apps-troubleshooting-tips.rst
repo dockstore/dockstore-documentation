@@ -20,7 +20,7 @@ This requires the addition of a .dockstore.yml file to your repository on GitHub
 This file contains information that Dockstore will use to setup
 the corresponding workflow/tool entry on Dockstore. Branches that do not have a .dockstore.yml file, or that are filtered out via the filter feature, will not be synchronized.
 
-You can read more about it at :doc:`/getting-started/github-apps/github-apps`. :ref:`▲ <topGHAFAQ>`
+You can read more about it at :doc:`/getting-started/github-apps/github-apps`. :ref:`(back to top) <topGHAFAQ>`
 
 How does this change my development flow?
 -------------------------------------------
@@ -31,7 +31,7 @@ Therefore, as long as your workflow is already registered on Dockstore and your 
 
 You can use filters in a .dockstore.yml to avoid generating a corresponding workflow-version on Dockstore.
 
-*Note:* If you want to edit version information, such as workflow path, you will have to update the .dockstore.yml file directly on the corresponding GitHub branch. For example, if develop has a .dockstore.yml that points to my_workflow.wdl, but my_workflow.wdl is moved to another path on the branch develop-but-better, then the .dockstore.yml on develop-but-better will need to point to the new location of my_workflow.wdl. :ref:`▲ <topGHAFAQ>`
+*Note:* If you want to edit version information, such as workflow path, you will have to update the .dockstore.yml file directly on the corresponding GitHub branch. For example, if develop has a .dockstore.yml that points to my_workflow.wdl, but my_workflow.wdl is moved to another path on the branch develop-but-better, then the .dockstore.yml on develop-but-better will need to point to the new location of my_workflow.wdl. :ref:`(back to top) <topGHAFAQ>`
 
 .. _Check GitHub App installation on repository:
 
@@ -41,11 +41,11 @@ Go to your repo on GitHub, click the Settings tab, click Integrations on the lef
 
 .. image:: /assets/images/docs/github-repo-settings.png
 
-You may not have access to this page if you are not an administrator of your GitHub organization, :ref:`but you may still be able to see if it installed. <view github app permissions hack>` :ref:`▲ <topGHAFAQ>`
+You may not have access to this page if you are not an administrator of your GitHub organization, :ref:`but you may still be able to see if it installed. <view github app permissions hack>` :ref:`(back to top) <topGHAFAQ>`
 
 How do I configure the GitHub App across multiple repositories?
 ------------------------------------------------------------------
-GitHub Apps can be installed on either an a user level, or an organizational level. If you installed the app for your own repos that are not in an organization, you will be able to verify the Dockstore GitHub App is installed by clicking "Applications" in the left menu in your GitHub settings. Our app, along with any others you may have installed, will be there. Clicking the "configure" button will allow you to adjust which repos the app has access to. :ref:`▲ <topGHAFAQ>`
+GitHub Apps can be installed on either an a user level, or an organizational level. If you installed the app for your own repos that are not in an organization, you will be able to verify the Dockstore GitHub App is installed by clicking "Applications" in the left menu in your GitHub settings. Our app, along with any others you may have installed, will be there. Clicking the "configure" button will allow you to adjust which repos the app has access to. :ref:`(back to top) <topGHAFAQ>`
 
 .. _view github app permissions hack:
 

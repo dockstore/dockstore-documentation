@@ -101,7 +101,7 @@ The Dockstore entry associated with this workflow can be found here `words <http
 
 
 
-    *main.wdl*
+    *main.cwl*
 
     .. code:: text
 

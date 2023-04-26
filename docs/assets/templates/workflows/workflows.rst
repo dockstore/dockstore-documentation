@@ -14,7 +14,7 @@ Always use :ref:`absolute paths <dict absolute path>` to specify the :ref:`prima
 
 Filled-out example of a single workflow without a name
 ------------------------------------------------------
-In this example, the workflow author is identified with an orcid. When an orcid is specified, there is no need to specify an author's name and email as that information will be pulled from the orcid. There are also three test parameter files given for the workflow. Since no readMePath is specified, Dockstore will show the top-level readme (if one is present), eg, ``./readme.md``
+In this example, the workflow author is identified with an ORCID iD. When an ORCID iD is specified, there is no need to specify an author's name and email as that information will be pulled from the ORCID API. There are also three test parameter files given for the workflow. Since no readMePath is specified, Dockstore will show the top-level readme (if one is present), eg, ``/readme.md``
 
 .. include:: /assets/templates/workflows/example-1-noname.yml
   :code:

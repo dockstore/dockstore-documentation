@@ -8,9 +8,11 @@ WES Tutorial for running CWL workflows through the Toil Engine on AWS AGC
 
 Amazon Web Services' (AWS) Amazon Genomics CLI (AGC) is a command line tool for launching cloud infrastructure
 within AWS accounts that can be used to execute genomics workflows. The infrastructure deployed by AGC implements the WES
-standard, and thus can be directly communicated with by using the Dockstore CLI.
+standard, and thus can be directly used by the Dockstore CLI.
 
-Check out the official AGC `GitHub page <https://github.com/aws/amazon-genomics-cli>`_.
+Check out the official AGC `Info page <https://aws.github.io/amazon-genomics-cli>`_.
+
+For developers, check out the official AGC `GitHub page <https://github.com/aws/amazon-genomics-cli>`_.
 
 Download and Install AWS AGC
 ----------------------------

@@ -41,6 +41,8 @@ the Refresh button or making an API call to the Dockstore API.
 Due to the manual nature of this process, it is easy for Dockstore to get out of
 sync with the linked GitHub repository if the Dockstore GitHub App is not being used.
 
+The Dockstore GitHub App also makes it easy to register multiple workflows in the same repository quickly, as well as set up their metadata (test parameter files, authors, readmes, etc). You can even publish a workflow or set a default branch from the .dockstore.yml which can be useful for both automated systems and users registering workflows in bulk. 
+
 How the Dockstore GitHub App works
 ----------------------------------
 

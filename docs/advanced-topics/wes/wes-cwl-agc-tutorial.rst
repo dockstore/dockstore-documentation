@@ -171,7 +171,7 @@ The Dockstore entry associated with this workflow can be found here `words <http
               "vowels": ["a","e","i","o","u"]
             }
 
-2. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/workflows/github.com/dockstore-testing/tooltester-wes-testing/words:stable-version-for-testing-v4?tab=info>`_, we can quickly launch it by passing the Dockstore CLI the entry and input files.
+2. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/workflows/github.com/dockstore-testing/tooltester-wes-testing/words:stable-version-for-testing-v4?tab=info>`__, we can quickly launch it by passing the Dockstore CLI the entry and input files.
 
     .. code:: text
 

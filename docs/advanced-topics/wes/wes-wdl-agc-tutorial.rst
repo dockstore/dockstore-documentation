@@ -142,7 +142,7 @@ This WDL workflow prints out the string "Hello from AGC" as its output.
                 output { String out = read_string( stdout() ) }
             }
 
-1. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/workflows/github.com/dockstore-testing/wes-testing/agc-hello-world:v1.12?tab=info>`_, we can quickly launch it by passing the Dockstore CLI the entry name and its version:
+1. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/workflows/github.com/dockstore-testing/wes-testing/agc-hello-world:v1.12?tab=info>`__, we can quickly launch it by passing the Dockstore CLI the entry name and its version:
 
     .. code:: text
 
@@ -280,7 +280,7 @@ This WDL workflow tabulates read counts of the input fastq file.
             "workflowInputs": "input.json"
         }
 
-3. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/workflows/github.com/dockstore-testing/wes-testing/agc-fastq-read-counts:v1.12?tab=info>`_, we can quickly launch it by passing the Dockstore CLI the entry and input files. File attachments can be specified with the ``--attach`` or ``-a`` switch:
+3. Since this workflow is publicly posted on `Dockstore <https://dockstore.org/workflows/github.com/dockstore-testing/wes-testing/agc-fastq-read-counts:v1.12?tab=info>`__, we can quickly launch it by passing the Dockstore CLI the entry and input files. File attachments can be specified with the ``--attach`` or ``-a`` switch:
 
     .. code:: text
 

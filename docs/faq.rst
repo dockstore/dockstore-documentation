@@ -66,6 +66,19 @@ not limited to):
     ``$ dockstore tool launch --entry quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig --json Dockstore.json``
 4. The docker pull command in the tools search reflects the defaultversion
 
+.. _what-is-an-open-tool-or-workflow:
+
+What is an Open Data tool or workflow version?
+----------------------------------------------
+
+On Dockstore, an Open Data tool or workflow version includes everything needed to run the version, without any
+additional data access. This usually means there is a test parameter file whose file input parameter values
+only refer to open data -- data that is not restricted access nor costs any money to download.
+
+Note that tool and workflow versions that do not require any file input parameters are also considered Open Data.
+
+You can find Open Data workflows and tools by selecting the Open Data facet on the `search <https://dockstore.org/search>`_ page.
+When viewing an individual tool or workflow, you can tell which versions are Open Data on the Versions tab via the Open column.
 
 How should I register my work in Dockstore?
 -------------------------------------------

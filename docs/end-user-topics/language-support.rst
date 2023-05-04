@@ -39,6 +39,10 @@ Limitations <terra-limitations>` for limitations.
 
 [10] Use the Dockstore CLI optional parameter --wdl-output-target which allows you to specify a remote path to provision output files to ex: s3://oicr.temp/testing-launcher/
 
+[11] For workflows and :ref:`GitHub App Tools <what-is-an-open-tool-or-workflow>`, not for :ref:`Legacy Tools <legacy_tools>`.
+
+[12] For workflows only, not tools.
+
 
 .. _converting-file-path-based-imports-to-public-http-s-based-imports-for-wdl:
 

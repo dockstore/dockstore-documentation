@@ -31,10 +31,14 @@ fi
 
 for file in $(git diff --name-only "$baseBranch".. | grep "\.rst$" | grep -Fvxf $DOES_NOT_REQUIRE_DISCOURSE_TOPIC)
 do
-  if ! containsDiscourseTopic "$file"
+  # The file may be in the base branch but not the current branch. Skip in that case.
+  if [[ -f "$file" ]]
   then
-    echo "${file} does not have a discourse topic"
-    RETURN_VALUE=1
+    if ! containsDiscourseTopic "$file"
+    then
+      echo "${file} does not have a discourse topic"
+      RETURN_VALUE=1
+    fi
   fi
 done
 

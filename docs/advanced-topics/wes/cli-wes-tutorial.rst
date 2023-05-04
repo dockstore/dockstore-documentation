@@ -145,7 +145,8 @@ them when making WES requests.
    :caption: WES Tutorials
    :maxdepth: 1
 
-   wes-agc-tutorial
+   wes-wdl-agc-tutorial
+   wes-cwl-agc-tutorial
 
 .. discourse::
     :topic_identifier: 6470

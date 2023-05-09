@@ -121,7 +121,7 @@ Saving Changes to Your Notebook on Google Colab to GitHub
 
 At this point, your Google Colab and GitHub integration should be set up, you have installed the Dockstore GitHub App to your GitHub repository containing your notebook, and the published notebook appears on Dockstore. 
 
-You may wish to continue developing your notebook on Google Colab. In order for the changes to your notebook to appear on Dockstore, you must click on File > Save a copy in GitHub to save your notebook to your GitHub repository.
+You may wish to continue developing your notebook on Google Colab by modifying and re-running it. In order for the changes to your notebook to appear on Dockstore, you must click on File > Save a copy in GitHub to save your notebook to your GitHub repository.
 
 .. figure:: /assets/images/docs/google-colab-save-on-github.png
     :width: 35 %

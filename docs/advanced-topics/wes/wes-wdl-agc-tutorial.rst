@@ -38,8 +38,9 @@ The following WDL workflow tutorials will cover:
                 "workflowInputs": <pathToInputJSON>
             }
 
-    2. AWS AGC references descriptor files by URLs. The Dockstore CLI references the primary descriptor in an execution request as a GA4GH Tool Registry Service (`TRS <https://github.com/ga4gh/tool-registry-service-schemas>`_) URL.
-    The AGC infrastructure will only be able to access the file referenced by the TRS URL if the workflow is published (i.e. public) on Dockstore.
+    2. AWS AGC references descriptor files by URLs. The Dockstore CLI references the primary descriptor in an execution request as a GA4GH Tool Registry Service (`TRS <https://github.com/ga4gh/tool-registry-service-schemas>`_) URL.  The AGC infrastructure will only be able to access the file referenced by the TRS URL if the workflow is published (i.e. public) on Dockstore.
+
+    3. On AWS AGC, the test parameter file for a WDL workflow must reference other files using S3 URLs.  Other types of URLs, such as `https:`, are not supported.
 
 Configuring AGC and the Dockstore CLI
 ----------------------------------------

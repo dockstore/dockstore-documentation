@@ -1,0 +1,7 @@
+version: 1.2
+notebooks:
+  - name: simple
+    format: JUPYTER
+    language: PYTHON
+    path: /notebook.ipynb
+    publish: true

@@ -1,34 +1,40 @@
 # The first line refers to the version 1.2 of the .dockstore.yml schema
 version: 1.2
 
-# An array of workflows. Each element corresponds to a workflow on Dockstore.
-workflows:
+# An array of notebooks. Each element corresponds to a notebook on Dockstore.
+notebooks:
   
-  # The optional workflow name for a workflow, which may only consist of alphanumerics
+  # The optional notebook name for a notebook, which may only consist of alphanumerics
   # and internal underscores and hyphens, but no spaces or other characters. Names may not exceed 256 characters.
-  # If using a .dockstore.yml with multiple workflows, this field is required 
-  # to uniquely identify workflows in the repository.
+  # If using a .dockstore.yml with multiple notebooks, this field is required 
+  # to uniquely identify notebooks in the repository.
   #
   # It should be noted that having the name come first is an arbitrary decision.
   # You could use subclass instead, for instance. Provided arrays are not broken
   # up, the order of fields within a .dockstore.yml is not important.
   - name: <String>
     
-    # The descriptor language used for the workflow. CWL, WDL, NFL (Nextflow), or GALAXY. 
-    # This cannot be changed once the workflow is registered.
-    subclass: <CWL | WDL | NFL | GALAXY>
+    # The format used for the notebook. Currently, only JUPYTER is supported.
+    # This cannot be changed once the notebook is registered.
+    format: <JUPYTER>
+
+    # The programming language of the code contained in the notebook.
+    language: <PYTHON | R | JAVASCRIPT | SCALA | JULIA | OTHER>
+
+    # The absolute path to the notebook file in the Git repository.
+    # - For Jupyter notebooks, the notebook is a .ipynb file.
+    path: <String>
+
+    # The kernel image reference for the notebook.
+    kernel: <String>
     
-    # Workflow-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
-    # Set to true to publish an unpublished workflow, or false to unpublish a published workflow.
+    # Notebook-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
+    # Set to true to publish an unpublished notebook, or false to unpublish a published notebook.
     # Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
     publish: <Boolean>
 
-    # The absolute path to the primary descriptor file in the Git repository.
-    # - For CWL, the primary descriptor is a .cwl file.
-    # - For WDL, the primary descriptor is a .wdl file.
-    # - For Galaxy, the primary descriptor is a .ga file.
-    # - Nextflow differs from these as the primary descriptor is a nextflow.config file.
-    primaryDescriptorPath: <String>
+    # An optional array of absolute paths to other files in the Git repository that should be read and included with the notebook.
+    otherFiles: <String Array>
 
     # An optional array of absolute paths to test parameter files in the Git repository.
     # For example...
@@ -37,9 +43,9 @@ workflows:
     #   - /null-model/null-model-binary.json
     testParameterFiles: <String Array>
 
-    # An optional path to a workflow-specific readme in the Git repository. If not provided, Dockstore will show
+    # An optional path to a notebook-specific readme in the Git repository. If not provided, Dockstore will show
     # the readme.md present at the root of the Git repository if it is present.
-    # If you have multiple workflows in a single Git repository, it is recommend to give each one a readme.
+    # If you have multiple notebooks in a single Git repository, it is recommend to give each one a readme.
     readMePath: <String>
 
     # An optional array of authorship information.
@@ -57,13 +63,12 @@ workflows:
     # A value of false will retain the default version that has been specified via the Dockstore UI.
     latestTagAsDefault: <Boolean>
     
-    # The optional filters section allow specifying sets of Git branches and tags to include for the workflow.
+    # The optional filters section allow specifying sets of Git branches and tags to include for the notebook.
     # If no filters are given, all branches and tags are included.
     # Branches and tags are arrays of pattern-strings.
-    # Pattern-strings use Unix-style Glob syntax by default (Ex: `develop`, `myworkflow/**`)
+    # Pattern-strings use Unix-style Glob syntax by default (Ex: `develop`, `mynotebook/**`)
     # https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)
-    # or RegEx when the string is surrounded by / (Ex: `/develop/`, `/myworkflow\/.*/`).
+    # or RegEx when the string is surrounded by / (Ex: `/develop/`, `/mynotebook\/.*/`).
     filters:
       branches: <String Array>
       tags: <String Array>
-

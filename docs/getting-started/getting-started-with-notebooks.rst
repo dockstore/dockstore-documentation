@@ -105,7 +105,6 @@ Install the Dockstore GitHub App
 --------------------------------
 .. include:: /getting-started/github-apps/snippet--installation.rst
 
-
 Publishing Your Notebook
 ------------------------
 In this release, you are only able to publish your notebook using the ``publish`` key in the .dockstore.yml file, and your notebook must be published in order for you to view it on Dockstore.

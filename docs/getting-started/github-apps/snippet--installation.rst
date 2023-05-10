@@ -1,6 +1,6 @@
 Installing the GitHub App is simple. Navigate to ``/my-tools``, ``/my-workflows``, or ``/my-services`` by navigating to My Dashboard then selecting the desired option in the left sidebar. In these screenshots, we will go via ``/my-tools``, but the process is essentially the same for any of the other options.
 
-.. note:: Since Dockstore Notebooks is still in beta mode, it does not have a dedicated ``/my-notebooks`` page yet. To register a notebook, navigate to ``/my-workflows`` in the step above. 
+.. note:: Since Dockstore Notebooks is still in preview mode, it does not have a dedicated ``/my-notebooks`` page yet. To register a notebook, navigate to ``/my-workflows`` in the step above. 
 
 .. image:: /assets/images/docs/my-dashboard-sidebar.png
 

@@ -44,8 +44,8 @@ Getting Started
     5. :doc:`Register a tool on Dockstore <getting-started/dockstore-tools>`
     6. :doc:`Register a workflow on Dockstore <getting-started/dockstore-workflows>`
     7. :doc:`Hosted tools and workflows <getting-started/hosted-tools-and-workflows>`
-* :doc:`Services (beta) <getting-started/getting-started-with-services>`
-* :doc:`Notebooks (beta) <getting-started/getting-started-with-notebooks>`
+* :doc:`Services (preview) <getting-started/getting-started-with-services>`
+* :doc:`Notebooks (preview) <getting-started/getting-started-with-notebooks>`
 * :doc:`Registering workflows with the Dockstore GitHub App <getting-started/github-apps/github-apps-landing-page>`
 
 .. toctree::

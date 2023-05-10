@@ -3,7 +3,7 @@ Services
 
 Services are containerized programs that are meant to be long running processes, usually web services or interactive applications, and that can be launched by a user into different environments. 
 
-.. note:: Dockstore Services is currently in beta mode. Also note that the screenshots below were taken on our staging site.
+.. note:: Dockstore Services is currently in preview mode. Also note that the screenshots below were taken on our staging site.
 
 Tutorial Goals
 --------------
@@ -16,7 +16,7 @@ Tutorial Goals
 .. David will add context here.
 
 Services are meant to be long running processes, usually web services or interactive applications, that can be launched by a user. The entire process for creating a service that can launch successfully is complex and dependent on the service or application you are trying to describe; so it is beyond the scope of this tutorial.
-However, this document will outline what is needed to register, update, and publish a service onto Dockstore. Also, please keep in mind that service functionality is currently in beta mode.
+However, this document will outline what is needed to register, update, and publish a service onto Dockstore. Also, please keep in mind that service functionality is currently in preview mode.
 
 Create Your Service
 -------------------

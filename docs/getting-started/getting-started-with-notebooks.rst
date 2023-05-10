@@ -5,7 +5,7 @@ Notebooks
    :local:
    :depth: 2
 
-.. note:: Dockstore Notebooks is currently in beta mode. Also note that the screenshots below were taken on our staging site.
+.. note:: Dockstore Notebooks is currently in preview mode. Also note that the screenshots below were taken on our staging site.
 
 Tutorial Goals
 --------------
@@ -16,7 +16,7 @@ Tutorial Goals
 - Publish your notebook to Dockstore
 
 Notebooks are documents that can include code, text, images, and other media resources. They can be executed in notebook environments like Google Colab and JupyterLab.
-This document will outline what is needed to register, update, and publish a notebook onto Dockstore. Please keep in mind that notebook functionality is currently in beta mode.
+This document will outline what is needed to register, update, and publish a notebook onto Dockstore. Please keep in mind that notebook functionality is currently in preview mode.
 
 Overview
 --------
@@ -90,7 +90,7 @@ Within this, you need to specify the ``format`` and ``language`` of the notebook
 
 Next, you need to specify the absolute path to the notebook file in the Git repository using the ``path`` key.
 
-Finally, you must set ``publish: true`` to publish your notebook in order for you to be able to view your notebook in beta mode. In the future, we will implement a My Notebooks page where you can view your unpublished notebooks.
+Finally, you must set ``publish: true`` to publish your notebook in order for you to be able to view your notebook in preview mode. In the future, we will implement a My Notebooks page where you can view your unpublished notebooks.
 
 
 Registering Your Notebook

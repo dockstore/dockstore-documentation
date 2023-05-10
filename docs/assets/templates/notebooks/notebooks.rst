@@ -1,6 +1,6 @@
 .dockstore.yml for Notebooks Templates (version 1.2)
 ====================================================
-.. note:: Support for notebooks is in beta.
+.. note:: Support for notebooks is in preview mode.
 
 Two templates are provided here, one for you to quickly copy-paste into your repository, and one with a complete explanation of the possible fields and values you can use.
 

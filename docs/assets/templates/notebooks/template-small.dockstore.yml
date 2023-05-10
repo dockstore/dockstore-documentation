@@ -10,5 +10,5 @@ notebooks:
     authors:
       - name: <String>
         email: <String>
-    # Publish must be set to true in order for you to view your notebook on Dockstore in beta mode
+    # Publish must be set to true in order for you to view your notebook on Dockstore in preview mode
     publish: true

@@ -39,11 +39,11 @@ tools:
     # Note that if orcid is present, then all other fields will be ignored, as information will be taken from orcid.
     # If orcid is not present, make sure to at a minimum include the name field for each author.
     authors:
+      - orcid: <String>
       - name: <String>
         email: <String>
         role: <String>
         affiliation: <String>
-      - orcid: <String>
     
     # A boolean that will change the default version to be displayed on Dockstore. Default: False.
     # A value of true will automatically display the latest tag updated as default.

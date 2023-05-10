@@ -30,7 +30,7 @@ Setting up the Google Colab and GitHub integration
 
 To get started, you will need a Google Colab account and a GitHub account.
 
-In your Google Colab account, link your Google Colab account to your GitHub account. Click on the Settings gear icon in the upper right corner, then select GitHub in the dialog box. Click on Authorise with GitHub and authorise Google Colab to access your GitHub account.
+In your Google Colab account, link your Google Colab account to your GitHub account. Click on the Settings gear icon in the upper right corner, then select GitHub in the dialog box. Click on Authorise with GitHub and authorize Google Colab to access your GitHub account.
 
 .. figure:: /assets/images/docs/google-colab-authorize-with-github.png
     :width: 60 %
@@ -47,7 +47,7 @@ We will cover two scenarios:
 You don't have a notebook in GitHub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you don't have a notebook in GitHub `and` Google Colab, navigate to Google Colab and create a new notebook by clicking on File > New notebook. Edit your new notebook if you like.
+If you don't have a notebook in GitHub *nor* Google Colab, navigate to Google Colab and create a new notebook by clicking on File > New notebook. Edit your new notebook if you like.
 
 If you already have a notebook in Google Colab, proceed to the next step.
 
@@ -56,7 +56,7 @@ Click on File > Save a copy in GitHub to save your notebook to a GitHub reposito
 .. figure:: /assets/images/docs/google-colab-save-on-github.png
     :width: 35 %
 
-Configure where you want to save the notebook to on GitHub then click OK. Google collab will push a commit to your repository with the notebook.
+Configure where you want to save the notebook to on GitHub then click OK. Google Colab will push a commit to your repository with the notebook.
 
 .. figure:: /assets/images/docs/google-colab-save-on-github-dialog.png
     :width: 60 %
@@ -125,7 +125,7 @@ You may wish to continue developing your notebook on Google Colab by modifying a
 .. figure:: /assets/images/docs/google-colab-save-on-github.png
     :width: 35 %
 
-Configure where you want to save the notebook to on GitHub then click OK. Google collab will push a commit to your repository with the notebook.
+Configure where you want to save the notebook to on GitHub then click OK. Google Colab will push a commit to your repository with the notebook.
 
 .. figure:: /assets/images/docs/google-colab-save-on-github-dialog.png
     :width: 60 %
@@ -142,7 +142,7 @@ When viewing a public notebook on Dockstore, you can launch the notebook into Go
 Using the Notebooks Feature Flag
 --------------------------------
 
-There is a ``notebooks`` feature flag that can be used to explore Dockstore Notebooks feature that are in development.
+There is a ``notebooks`` feature flag that can be used to explore Dockstore Notebooks features that are in development.
 
 .. warning:: The features hidden behind this flag may not be fully functional, but using the flag offers you a preview of the features to come.
 
@@ -152,7 +152,7 @@ For example, if you're on the ``https://dockstore.org`` page, append ``notebooks
 
 If you're on a page that already contains query parameters, indicated by the presence of a question mark, append ``notebooks`` to the URL using an ampersand. For example, if you're on the ``https://dockstore.org/search?entryType=workflows&searchMode=files`` page, append ``notebooks`` such that it looks like ``https://dockstore.org/search?entryType=workflows&searchMode=files&notebooks``.
 
-After applying the notebooks feature flag, Dockstore Notebooks feature will appear throughout the site, marked with a warning banner.
+After applying the notebooks feature flag, Dockstore Notebooks features will appear throughout the site, marked with a warning banner.
 
 .. figure:: /assets/images/docs/notebooks-warning-banner.png
 

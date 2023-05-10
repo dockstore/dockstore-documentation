@@ -57,7 +57,7 @@ For more information on troubleshooting GitHub App permissions, please see :ref:
 Ensuring sychronization
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Upon installing the GitHub App, Dockstore will find branches in your repository that contain a .dockstore.yml and attempt to register your workflows, tools, services, or notebooks. There may be some cases where Dockstore is unable to find all branches containing a .dockstore.yml, for example, if the GitHub repository has many branches.
+Upon installing the GitHub App, Dockstore will find branches in your repository that contain a .dockstore.yml and attempt to register your workflows, tools, services, and notebooks. There may be some cases where Dockstore is unable to find all branches containing a .dockstore.yml, for example, if the GitHub repository has many branches.
 
-If your workflow, tool, service, or notebook is not showing up on Dockstore after 5 minutes, push one *additional* commit to your repository. This helps make sure your workflows, tools, and services show up in Dockstore.
+If your workflow, tool, service, or notebook is not showing up on Dockstore after 5 minutes, push one *additional* commit to your repository. This helps make sure your workflows, tools, services, and notebooks show up in Dockstore.
 

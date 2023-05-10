@@ -148,9 +148,9 @@ There is a ``notebooks`` feature flag that can be used to explore Dockstore Note
 
 To use the ``notebooks`` feature flag, append ``notebooks`` to the Dockstore URL as a query parameter. You only need to do this once, unless you refresh/close your browser.
 
-For example, if you're on the ``https://dockstore.org`` page, append ``notebooks`` such that it looks like this: ``https://dockstore.org?notebooks``.
+For example, if you're on the https://dockstore.org page, append ``notebooks`` such that it looks like this: https://dockstore.org?notebooks.
 
-If you're on a page that already contains query parameters, indicated by the presence of a question mark, append ``notebooks`` to the URL using an ampersand. For example, if you're on the ``https://dockstore.org/search?entryType=workflows&searchMode=files`` page, append ``notebooks`` such that it looks like ``https://dockstore.org/search?entryType=workflows&searchMode=files&notebooks``.
+If you're on a page that already contains query parameters, indicated by the presence of a question mark, append ``notebooks`` to the URL using an ampersand. For example, if you're on the https://dockstore.org/search?entryType=workflows&searchMode=files page, append ``notebooks`` such that it looks like https://dockstore.org/search?entryType=workflows&searchMode=files&notebooks.
 
 After applying the notebooks feature flag, Dockstore Notebooks features will appear throughout the site, marked with a warning banner.
 

@@ -14,19 +14,18 @@ notebooks:
   # up, the order of fields within a .dockstore.yml is not important.
   - name: <String>
     
-    # The format used for the notebook. Currently, only JUPYTER is supported.
-    # This cannot be changed once the notebook is registered.
-    format: <JUPYTER>
+    # The format used for the notebook. This cannot be changed once the notebook is registered.
+    # Currently, only Jupyter is supported.
+    # If not provided, the format will default to Jupyter.
+    format: <Jupyter>
 
-    # The programming language of the code contained in the notebook.
-    language: <PYTHON | R | JAVASCRIPT | SCALA | JULIA | OTHER>
+    # The programming language of the code contained in the notebook. This cannot be changed once the notebook is registered.
+    # If not provided, the language will default to Python.
+    language: <Python | R | Javascript | Scala | Julia | other>
 
     # The absolute path to the notebook file in the Git repository.
     # - For Jupyter notebooks, the notebook is a .ipynb file.
     path: <String>
-
-    # The kernel image reference for the notebook.
-    kernel: <String>
     
     # Notebook-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
     # Set to true to publish an unpublished notebook, or false to unpublish a published notebook.
@@ -35,13 +34,6 @@ notebooks:
 
     # An optional array of absolute paths to other files in the Git repository that should be read and included with the notebook.
     otherFiles: <String Array>
-
-    # An optional array of absolute paths to test parameter files in the Git repository.
-    # For example...
-    # testParameterFiles:
-    #   - /null-model/null-model.json
-    #   - /null-model/null-model-binary.json
-    testParameterFiles: <String Array>
 
     # An optional path to a notebook-specific readme in the Git repository. If not provided, Dockstore will show
     # the readme.md present at the root of the Git repository if it is present.

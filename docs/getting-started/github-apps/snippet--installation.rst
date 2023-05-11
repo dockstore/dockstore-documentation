@@ -14,7 +14,7 @@ A window will appear asking how you would like to register your tool, workflow, 
 .. image:: /assets/images/docs/register-tool-github-apps.png
    :width: 50 %
 
-Click ``+ Manage Dockstore Installation on GitHub``. You'll then be redirected to GitHub where you can select which repositories can be accessed by the GitHub app.
+Click ``+ Manage Dockstore Installations on GitHub``. You'll then be redirected to GitHub where you can select which repositories can be accessed by the GitHub app.
 
 .. image:: /assets/images/docs/manage-gh-app-installation.png
    :width: 50 %
@@ -59,5 +59,6 @@ Ensuring sychronization
 
 Upon installing the GitHub App, Dockstore will find branches in your repository that contain a .dockstore.yml and attempt to register your workflows, tools, services, and notebooks. There may be some cases where Dockstore is unable to find all branches containing a .dockstore.yml, for example, if the GitHub repository has many branches.
 
-If your workflow, tool, service, or notebook is not showing up on Dockstore after 5 minutes, push one *additional* commit to your repository. This helps make sure your workflows, tools, services, and notebooks show up in Dockstore.
+If your workflow, tool, service, or notebook is not showing up on Dockstore after 5 minutes, push one *additional* commit to the branch in your repository that contains the .dockstore.yml that's not being synchronized. Dockstore will synchronize the branch that was updated, which helps make sure that your workflows, tools, services, and notebooks show up in Dockstore.
 
+If your workflow, tool, service, or notebook still doesn't show up, check the :ref:`GitHub App logs <GitHub App logs FAQ>` to see if Dockstore encountered an error while processing your .dockstore.yml.

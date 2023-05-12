@@ -109,7 +109,7 @@ Verification Process
     verified. The path of the test parameter file is relative to the
     primary descriptor. This path can be found using the `files
     endpoint`_ or by viewing the files tab of a tool/workflow such as:
-    https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:1.0.4?tab=files
+    https://dockstore.org/workflows/github.com/DataBiosphere/topmed-workflows/UM_variant_caller_wdl:1.32.0?tab=files
     and then further selecting the Test Parameter Files tab and view the
     right-most “File” dropdown. This relative path must be a test
     parameter file, providing a descriptor will not work.

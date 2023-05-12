@@ -170,7 +170,7 @@ the "Discover Existing Dockstore Workflows" button in the "My Workflows" menu so
 If the workflow was added by manually registering it, click Refresh Organization.
 
 For participants of the :doc:`limited sharing
-beta </advanced-topics/sharing-workflows/>`, you can enter the email
+preview </advanced-topics/sharing-workflows/>`, you can enter the email
 addresses of the users you wish to share with to give them permissions
 to your workflow. This is only available for hosted workflows and users
 with Google accounts linked to Terra.

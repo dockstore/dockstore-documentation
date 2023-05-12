@@ -105,9 +105,15 @@ If you've already tried these, you can view GitHub App logs through Dockstore to
 
 :ref:`(back to top) <topGHAFAQ>`
 
+.. _GitHub App logs FAQ:
+
 How do I view the GitHub App logs?
 ----------------------------------
-Navigate to the ``/my-workflows`` (or ``/my-tools``) page and expand the GitHub Organization that the repository belongs to on the left hand side. Then click on the bottom where it says ``See GitHub App Logs``.
+Navigate to the ``/my-workflows`` (or ``/my-tools``) page. 
+
+.. note:: If you're trying to view the GitHub App logs for a notebook, which doesn't have its own ``/my-notebooks`` page yet, navigate to ``/my-workflows`` then continue following the steps.
+
+Expand the GitHub Organization that the repository belongs to on the left hand side. Then click on the bottom where it says ``See GitHub App Logs``.
 
 .. image:: /assets/images/docs/github-app-logs-button.png
    :width: 40 %

@@ -1,18 +1,20 @@
-Installing the GitHub App is simple. Navigate to ``/my-tools``, ``/my-workflows``, or ``/my-services`` using the drop down menu in the top right. In these screenshots, we will go via ``/my-tools``, but the process is essentially the same for any of the other options.
+Installing the GitHub App is simple. Navigate to ``/my-tools``, ``/my-workflows``, or ``/my-services`` by navigating to My Dashboard then selecting the desired option in the left sidebar. In these screenshots, we will go via ``/my-tools``, but the process is essentially the same for any of the other options.
 
-.. image:: /assets/images/docs/my-tools.png
+.. note:: Since Dockstore Notebooks is still in preview mode, it does not have a dedicated ``/my-notebooks`` page yet. To register a notebook, navigate to ``/my-workflows`` in the step above. 
 
-Click the ``+`` button on the left hand sidebar.
+.. image:: /assets/images/docs/my-dashboard-sidebar.png
+
+Click the ``Register a Tool`` button on the left hand sidebar.
 
 .. image:: /assets/images/docs/add-tool-button.png
-   :width: 40 %
+   :width: 30 %
 
 A window will appear asking how you would like to register your tool, workflow, or service. Select ``Register using GitHub Apps``.
 
 .. image:: /assets/images/docs/register-tool-github-apps.png
    :width: 50 %
 
-Click ``+ Manage Dockstore Installation on GitHub``. You'll then be redirected to GitHub where you can select which repositories can be accessed by the GitHub app.
+Click ``+ Manage Dockstore Installations on GitHub``. You'll then be redirected to GitHub where you can select which repositories can be accessed by the GitHub app.
 
 .. image:: /assets/images/docs/manage-gh-app-installation.png
    :width: 50 %
@@ -24,13 +26,18 @@ You'll then be redirected to GitHub where you can grant the app access to specif
 
    Install our GitHub App on either all current and future repositories in an organization or on specific repositories
 
-After selection of an organization, you can select whether to give access to all current and future repositories or only select ones. If the organization you choose is intended to be just for Dockstore tools/workflows/services, you may want to allow access to all repositories. Otherwise, it is may be more intuitive to select only certain repositories. Click save and you will be taken back to the page you started on in Dockstore -- either  ``/my-tools``, ``/my-workflows``, or ``/my-services``, depending where you started.
+After selection of an organization, you can select whether to give access to all current and future repositories or only select ones. If the organization you choose is intended to be just for Dockstore tools/workflows/services/notebooks, you may want to allow access to all repositories. Otherwise, it is may be more intuitive to select only certain repositories. Click save and you will be taken back to the page you started on in Dockstore -- either  ``/my-tools``, ``/my-workflows``, or ``/my-services``, depending where you started.
 
 .. important:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
 
 You should now see the organization and the repositories you chose to keep track of in the "unpublished" tab. Here's an example involving ``/my-services``:
 
 .. figure:: /assets/images/docs/my-services-filled.png
+
+.. note:: You will not see unpublished notebooks because there is not a dedicated ``/my-notebooks`` page yet. To view your notebook, which should've been configured to automatically publish on Dockstore via the .dockstore.yml, navigate to ``/notebooks``
+   and locate your notebook in the list of published notebooks.
+   
+   .. image:: /assets/images/docs/list-published-notebooks.png
 
 
 A note on permissions when installing the Dockstore GitHub App to a GitHub organization
@@ -50,5 +57,8 @@ For more information on troubleshooting GitHub App permissions, please see :ref:
 Ensuring sychronization
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Once the GitHub App is installed and a .dockstore.yml is present, please make sure to push one *additional* commit to your repository. This helps make sure your workflows, tools, and services show up in Dockstore.
+Upon installing the GitHub App, Dockstore will find branches in your repository that contain a .dockstore.yml and attempt to register your workflows, tools, services, and notebooks. There may be some cases where Dockstore is unable to find all branches containing a .dockstore.yml, for example, if the GitHub repository has many branches.
 
+If your workflow, tool, service, or notebook is not showing up on Dockstore after 5 minutes, push one *additional* commit to the branch in your repository that contains the .dockstore.yml that's not being synchronized. Dockstore will synchronize the branch that was updated, which helps make sure that your workflows, tools, services, and notebooks show up in Dockstore.
+
+If your workflow, tool, service, or notebook still doesn't show up, check the :ref:`GitHub App logs <GitHub App logs FAQ>` to see if Dockstore encountered an error while processing your .dockstore.yml.

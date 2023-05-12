@@ -520,7 +520,7 @@ The table below summarizes some of the WES endpoints available:
 +-----------+------------------------------------------------------+-----------+
 
 
-.. note::  WES SUPPORT IS IN BETA AT THIS TIME. RESULTS MAY BE UNPREDICTABLE.
+.. note::  WES SUPPORT IS IN PREVIEW MODE AT THIS TIME. RESULTS MAY BE UNPREDICTABLE.
 
 .. discourse::
     :topic_identifier: 1274

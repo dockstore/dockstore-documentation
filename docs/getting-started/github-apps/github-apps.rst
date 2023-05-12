@@ -104,6 +104,7 @@ See Also
 - :doc:`Getting Started with Services </getting-started/getting-started-with-services>`
 - :doc:`Getting Started with Workflows </getting-started/dockstore-workflows>`
 - :doc:`Getting Started with Tools </getting-started/dockstore-tools>`
+- :doc:`Getting Started with Notebooks </getting-started/getting-started-with-notebooks>`
 - :doc:`Other docs involving the Dockstore GitHub App </getting-started/github-apps/github-apps>`
 
 .. discourse::

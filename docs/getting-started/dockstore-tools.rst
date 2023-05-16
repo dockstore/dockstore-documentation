@@ -36,7 +36,7 @@ keeping Dockstore synced with GitHub automatically. You can learn more :doc:`in 
 
 .. include:: /getting-started/github-apps/snippet--installation.rst
 
-Once GitHub app is installed on a repository or organization, you will need to add a .dockstore.yml file to
+Once GitHub app is installed on a repository in your personal account or organization, you will need to add a .dockstore.yml file to
 the root directory of a branch of the repository that contains your tool. This file contains information like
 tool path, test parameter file, tool name, etc. When a push is made or a tag is created on GitHub
 with a .dockstore.yml, Dockstore will add that branch to the corresponding tool on Dockstore. If the

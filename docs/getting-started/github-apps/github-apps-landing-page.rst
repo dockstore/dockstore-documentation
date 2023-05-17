@@ -3,7 +3,7 @@ Dockstore GitHub App
 ======================================================
 
 GitHub apps are a GitHub feature used to improve the interaction between external applications and GitHub.
-Users can grant a GitHub app specific permissions on the repos and/or organizations of their choosing.
+Users can grant a GitHub app access to repositories in an organization and/or personal account of their choosing.
 
 The Dockstore GitHub App adds support for registering and automatically syncing your files between Dockstore and GitHub. It is our preferred method for registration, so you can find a breakdown of that process on the respective pages for :doc:`tool registration </getting-started/dockstore-tools>`, :doc:`workflow registration </getting-started/dockstore-workflows>`, :doc:`service registration </getting-started/getting-started-with-services>`, and :doc:`notebook registration </getting-started/getting-started-with-notebooks>`.
 

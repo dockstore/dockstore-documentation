@@ -19,8 +19,7 @@ What are GitHub Apps?
 
 `GitHub apps <https://developer.github.com/apps>`_ are a GitHub feature used to
 improve the interaction between external applications and GitHub. Users can
-grant a GitHub app specific permissions on the repos and/or
-organizations of their choosing. When events occur on the GitHub repos, e.g.,
+grant a GitHub app access to repositories in organizations and/or their personal account. When events occur on the GitHub repositories, e.g.,
 creating a new release, the GitHub app issues notifications.
 
 Why have a Dockstore GitHub App?

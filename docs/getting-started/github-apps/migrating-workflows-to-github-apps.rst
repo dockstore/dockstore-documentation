@@ -6,8 +6,7 @@ Dockstore 1.9.0 provides users with a way to keep their workflows automatically 
 GitHub App Installation
 -----------------------
 
-The first step to migrating a workflow is the same as adding a new workflow via GitHub Apps: install our Dockstore GitHub App onto your repository or
-organization, if you have not already done so.
+The first step to migrating a workflow is the same as adding a new workflow via GitHub Apps: install our Dockstore GitHub App in an organization or your personal account, if you have not already done so.
 
 .. include:: /getting-started/github-apps/snippet--installation.rst
 
@@ -16,7 +15,7 @@ organization, if you have not already done so.
 Creating a .dockstore.yml File
 -------------------------------
 
-Once the GitHub app is installed on the correct repo, the next step is to create a .dockstore.yml file. We'll cover a very straightforward example
+Once the GitHub app is installed and given access to the correct repository, the next step is to create a .dockstore.yml file. We'll cover a very straightforward example
 first, but depending on how you configured the workflow during registration and whether your GitHub repository houses multiple workflows published on Dockstore,
 there will be additional steps to writing your .dockstore.yml file.
 

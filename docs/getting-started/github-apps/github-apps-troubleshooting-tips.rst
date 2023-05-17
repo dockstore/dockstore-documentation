@@ -13,7 +13,7 @@ GitHub App Troubleshooting & FAQs
 
 Why should I migrate my existing workflows to use GitHub Apps and a .dockstore.yml?
 ----------------------------------------------------------------------------------------
-Installing our Dockstore GitHub App onto your GitHub repository or organization will automatically sync your workflow/tool on Dockstore whenever code is pushed to GitHub.
+Installing our Dockstore GitHub App onto repositories in a GitHub organization or your GitHub personal account will automatically sync your workflow/tool on Dockstore whenever code is pushed to GitHub.
 This means less manual work for workflow developers, and less waiting for content to update.
 
 This requires the addition of a .dockstore.yml file to your repository on GitHub.
@@ -37,15 +37,15 @@ You can use filters in a .dockstore.yml to avoid generating a corresponding work
 
 How do I check if the Dockstore GitHub App was installed on an individual repository?
 --------------------------------------------------------------------------------------
-Go to your repo on GitHub, click the Settings tab, click Integrations on the left and verify our app is installed and configured correctly
+Go to your repo on GitHub and click the Settings tab. On the left hand side under the Integrations section, click on GitHub Apps and verify our app is installed and configured correctly.
 
 .. image:: /assets/images/docs/github-repo-settings.png
 
-You may not have access to this page if you are not an administrator of your GitHub organization, :ref:`but you may still be able to see if it installed. <view github app permissions hack>` :ref:`(back to top) <topGHAFAQ>`
+If you're checking if the GitHub App was installed on a repository of an organization, you may not have access to this page if you are not an administrator of your GitHub organization, :ref:`but you may still be able to see if it installed. <view github app permissions hack>` :ref:`(back to top) <topGHAFAQ>`
 
 How do I configure the GitHub App across multiple repositories?
 ------------------------------------------------------------------
-GitHub Apps can be installed on either an a user level, or an organizational level. If you installed the app for your own repos that are not in an organization, you will be able to verify the Dockstore GitHub App is installed by clicking "Applications" in the left menu in your GitHub settings. Our app, along with any others you may have installed, will be there. Clicking the "configure" button will allow you to adjust which repos the app has access to. :ref:`(back to top) <topGHAFAQ>`
+GitHub Apps can be installed on either an a user level, or an organizational level. If you installed the app for your own repositories that are not in an organization, you will be able to verify the Dockstore GitHub App is installed by clicking "Applications" in the left menu in your GitHub settings. Our app, along with any others you may have installed, will be there. Clicking the "configure" button will allow you to adjust which repos the app has access to. :ref:`(back to top) <topGHAFAQ>`
 
 .. _view github app permissions hack:
 
@@ -91,8 +91,8 @@ The changes made to my GitHub repo aren't appearing on Dockstore, but I've alrea
 The general troubleshooting flow we recommend is the following:
 
 - Try waiting a couple of minutes and refreshing the browser on the My Workflows/My Tools page again. Sometimes, GitHub takes a few minutes to send Dockstore the changes made to a repository.
-- Verify that the GitHub app was given access to the right repository or organization. 
-- If access was given to the wrong organization or repository, or this is your first time installing the app, you'll need to push another commit after adding the correct repository to activate the sync to Dockstore.
+- Verify that the GitHub app was given access to the right repository in an organization or your personal account. 
+- If access was given to the wrong repository or organization/personal account, or this is your first time installing the app, you may need to push another commit after adding the correct repository to activate the sync to Dockstore.
 - Double check the .dockstore.yml file.
 
     - Is it in the root directory?
@@ -113,10 +113,10 @@ Navigate to the ``/my-workflows`` (or ``/my-tools``) page.
 
 .. note:: If you're trying to view the GitHub App logs for a notebook, which doesn't have its own ``/my-notebooks`` page yet, navigate to ``/my-workflows`` then continue following the steps.
 
-Expand the GitHub Organization that the repository belongs to on the left hand side. Then click on the bottom where it says ``See GitHub App Logs``.
+Expand the GitHub account that the repository belongs to on the left hand side. Then click on the bottom where it says ``Apps Logs``.
 
 .. image:: /assets/images/docs/github-app-logs-button.png
-   :width: 40 %
+   :width: 30 %
 
 Once loaded, the following window will be displayed.
 

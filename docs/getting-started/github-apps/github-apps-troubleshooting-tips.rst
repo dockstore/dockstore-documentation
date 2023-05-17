@@ -13,7 +13,7 @@ GitHub App Troubleshooting & FAQs
 
 Why should I migrate my existing workflows to use GitHub Apps and a .dockstore.yml?
 ----------------------------------------------------------------------------------------
-Installing our Dockstore GitHub App onto repositories in your GitHub personal account or organization will automatically sync your workflow/tool on Dockstore whenever code is pushed to GitHub.
+Installing our Dockstore GitHub App onto repositories in a GitHub organization or your GitHub personal account will automatically sync your workflow/tool on Dockstore whenever code is pushed to GitHub.
 This means less manual work for workflow developers, and less waiting for content to update.
 
 This requires the addition of a .dockstore.yml file to your repository on GitHub.
@@ -91,8 +91,8 @@ The changes made to my GitHub repo aren't appearing on Dockstore, but I've alrea
 The general troubleshooting flow we recommend is the following:
 
 - Try waiting a couple of minutes and refreshing the browser on the My Workflows/My Tools page again. Sometimes, GitHub takes a few minutes to send Dockstore the changes made to a repository.
-- Verify that the GitHub app was given access to the right repository in your personal account or organization. 
-- If access was given to the wrong repository or personal account/organization, or this is your first time installing the app, you'll may need to push another commit after adding the correct repository to activate the sync to Dockstore.
+- Verify that the GitHub app was given access to the right repository in an organization or your personal account. 
+- If access was given to the wrong repository or organization/personal account, or this is your first time installing the app, you may need to push another commit after adding the correct repository to activate the sync to Dockstore.
 - Double check the .dockstore.yml file.
 
     - Is it in the root directory?

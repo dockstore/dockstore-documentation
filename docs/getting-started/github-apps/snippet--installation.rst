@@ -23,14 +23,14 @@ Click ``+ Manage Dockstore Installations on GitHub``.
 .. image:: /assets/images/docs/manage-gh-app-installation.png
    :width: 50 %
 
-You'll then be redirected to GitHub where you can grant the app access to repositories within your personal account or organizations that you belong to. For example, the username for my personal GitHub account is aofarrel. If I want to install the GitHub App so it could access aofarrel/mycoolrepo, I would choose the first option here.
+You'll then be redirected to GitHub where you can install the app in an organization or your personal account. For example, the username for my personal GitHub account is aofarrel. If I want to install the GitHub App so it could access aofarrel/mycoolrepo, I would choose the first option here.
 
 .. figure:: /assets/images/docs/gh-app-install-where.png
    :width: 65 %
 
-   Install our GitHub App on repositories in your personal account or organizations that you belong to
+   Install our GitHub App in an organization or your personal account
 
-After selection of a personal account or an organization, you can select whether to give access to all current and future repositories or only select ones. If the personal account or organization you choose is intended to be just for Dockstore tools/workflows/services/notebooks, you may want to allow access to all repositories. Otherwise, it is may be more intuitive to select only certain repositories. Click save and you will be taken back to the page you started on in Dockstore -- either  ``/my-tools``, ``/my-workflows``, or ``/my-services``, depending on where you started.
+After selection of an organization or a personal account, you can select whether to give access to all current and future repositories or only select ones. If the organization or personal account you choose is intended to be just for Dockstore tools/workflows/services/notebooks, you may want to allow access to all repositories. Otherwise, it may be more intuitive to select only certain repositories. Click save and you will be taken back to the page you started on in Dockstore -- either  ``/my-tools``, ``/my-workflows``, or ``/my-services``, depending on where you started.
 
 .. important:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
 

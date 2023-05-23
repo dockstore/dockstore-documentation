@@ -1,9 +1,13 @@
 Workflow Metrics
 ================
 
+.. note:: Dockstore Workflow Metrics is currently in preview mode. Also note that the screenshots below were taken on our staging site.
+
 What are workflow metrics?
 ------------------------------------
-Workflow metrics are metrics of workflow executions on a platform. Users are able to execute workflows on various platforms using Dockstore's Launch With feature, shown on the right side in the screenshot below.
+Workflow metrics are metrics of workflow executions on a platform. Metrics include things like execution status and the resources used during the execution. 
+
+Users are able to execute workflows on various platforms using Dockstore's Launch With feature, shown on the right side in the screenshot below.
 
 .. figure:: /assets/images/docs/submit-metrics/workflow-launch-with.png
     :alt: Launch With Partners
@@ -12,8 +16,7 @@ Platforms are able to submit metrics of workflows executed on their platform to 
 
 Why would I want to submit workflow metrics?
 --------------------------------------------
-As a platform owner, workflow metrics indicate to others that your platform is compatible with many workflows on Dockstore. Workflow metrics provide valuable information to users to help them determine if they can use the workflow on your platform.
-
+As a platform owner, workflow metrics indicate to others that your platform is compatible with many workflows on Dockstore. Workflow metrics provide valuable information to users because it helps indicate that the workflow is high quality and is very likely to work for others.
 
 How do I submit workflow metrics?
 ---------------------------------
@@ -42,25 +45,31 @@ In the request body, provide the workflow execution metrics that you want to sub
 
 You can provide a individual executions through ``runExecutions`` and ``validationExecutions``.
 
-A run execution is an execution that runs the workflow. If you want to provide metrics for the run execution that are not defined in the schema, use the ``additionalProperties`` key to provide your metric.
+A run execution is an execution that runs the workflow. The only required metric for run executions is ``executionStatus``. If you want to provide additional metrics that are not defined in the schema, use the ``additionalProperties`` key to provide your metric.
 
 .. figure:: /assets/images/docs/submit-metrics/run-executions-schema.png
     :alt: Schema for run executions
 
-A validation execution is an execution of a validator tool, like miniwdl, on the workflow. If you want to provide metrics for the validation execution that are not defined in the schema, use the ``additionalProperties`` key to provide your metric.
+A validation execution is an execution of a validator tool, like miniwdl, on the workflow. The following are required for a validation execution: 
+
+- ``validatorTool``
+- ``validatorToolVersion``
+- ``isValid``
+- ``dateExecuted``
+
+If you want to provide additional metrics that are not defined in the schema, use the ``additionalProperties`` key to provide your metric.
 
 .. figure:: /assets/images/docs/submit-metrics/validation-executions-schema.png
     :alt: Schema for validation executions
 
-Instead of individual executions, you may also provide aggregated metrics through ``aggregatedExecutions``. If you want to provide aggregated metrics that are not defined in the schema, use the ``additionalAggregatedMetrics`` key to provide your metric.
+Instead of providing individual executions, you may also provide aggregated metrics through ``aggregatedExecutions``. There are no required fields, but you must provide at least one metric. If you want to provide aggregated metrics that are not defined in the schema, use the ``additionalAggregatedMetrics`` key to provide your metric.
 
 .. figure:: /assets/images/docs/submit-metrics/aggregated-metrics-schema.png
     :alt: Schema for aggregated metrics
     
 Lastly, provide your Dockstore token using the lock icon at the top right of the endpoint.
 
-Below is an example of what the request for submitting metrics for a workflow that was executed on Terra looks like. The request body submits one run execution that was successful and took 30 seconds to execute, and one validation execution of miniwdl version 1.9.1 which validated the workflow successfully.
-
+Below is an example of what a request for submitting individual execution metrics looks like. The request is for a workflow that was executed on Terra. The request body submits one run execution that was successful and took 30 seconds to execute, and one validation execution of miniwdl version 1.9.1 which validated the workflow successfully.
 
 .. figure:: /assets/images/docs/submit-metrics/individual-executions-example.png
    :alt: Example request for submitting individual run executions and validation executions
@@ -88,6 +97,38 @@ The curl command results in something like:
             "validatorToolVersion": "1.9.1",
             "isValid": true,
             "dateExecuted": "2023-03-31T15:06:49.888745366Z"
+         }
+      ]
+   }'
+
+If it was submitted successfully, you should receive a ``204`` response code. 
+
+Below is an example of what a request for submitting aggregated execution metrics looks like. The request body submits an aggregated execution status metric, indicating that the workflow was successfully executed 5 times, and it failed twice, once because it was run time invalid and once because it was semantically invalid.
+
+.. figure:: /assets/images/docs/submit-metrics/aggregated-executions-example.png
+   :alt: Example request for submitting aggregated metrics
+
+The curl command results in something like:
+
+.. code:: bash
+
+   curl -X 'POST' \
+      'https://dockstore.org/api/api/ga4gh/v2/extended/%23workflow%2Fgithub.com%2Fdockstore%2Fdockstore-tool-bamstats%2Fwdl/versions/1.25-9/executions?platform=TERRA' \
+      -H 'accept: */*' \
+      -H 'Authorization: Bearer iamafakebearertoken' \
+      -H 'Content-Type: application/json' \
+      -d '{
+      "aggregatedExecutions": [
+         {
+            "executionStatusCount": {
+            "count": {
+               "SUCCESSFUL": 5,
+               "FAILED_RUNTIME_INVALID": 1,
+               "FAILED_SEMANTIC_INVALID": 1
+            },
+            "numberOfSuccessfulExecutions": 5,
+            "numberOfFailedExecutions": 2
+            }
          }
       ]
    }'

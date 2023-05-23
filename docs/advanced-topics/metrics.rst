@@ -16,7 +16,25 @@ Platforms are able to submit metrics of workflows executed on their platform to 
 
 Why would I want to submit workflow metrics?
 --------------------------------------------
-As a platform owner, workflow metrics indicate to others that your platform is compatible with many workflows on Dockstore. Workflow metrics provide valuable information to users because it helps indicate that the workflow is high quality and is very likely to work for others.
+As a platform owner, workflow metrics indicate to others that your platform is compatible with many workflows on Dockstore. Workflow metrics provide valuable information to users, including information about the resources and time needed to run the workflow. It helps the user determine if the workflow is high quality and is very likely to work for others.
+
+.. _How to view metrics:
+
+How do I view workflow metrics?
+-------------------------------
+
+To view workflow metrics for a workflow on Dockstore, you will need to use the ``metrics`` feature flag.
+
+To use the ``metrics`` feature flag, append ``metrics`` to the Dockstore URL as a query parameter. You only need to do this once, unless you refresh/close your browser.
+
+For example, if you're on the https://dockstore.org page, append ``metrics`` such that it looks like this: https://dockstore.org?metrics.
+
+If you're on a page that already contains query parameters, indicated by the presence of a question mark, append ``metrics`` to the URL using an ampersand. For example, if you're on the https://dockstore.org/workflows/github.com/gatk-workflows/seq-format-conversion/BAM-to-Unmapped-BAM:3.0.0?tab=info page, append ``metrics`` such that it looks like https://dockstore.org/workflows/github.com/gatk-workflows/seq-format-conversion/BAM-to-Unmapped-BAM:3.0.0?tab=info&metrics.
+
+After applying the ``metrics`` feature flag, a Metrics tab will appear when viewing a workflow on Dockstore. Click on the Metrics tab and you will see workflow metrics if they are available.
+
+.. figure:: /assets/images/docs/submit-metrics/metrics-tab.png
+    :alt: Metrics tab
 
 How do I submit workflow metrics?
 ---------------------------------
@@ -134,21 +152,3 @@ The curl command results in something like:
    }'
 
 If it was submitted successfully, you should receive a ``204`` response code. 
-
-.. _How to view metrics:
-
-How do I view workflow metrics?
--------------------------------
-
-To view workflow metrics for a workflow on Dockstore, you will need to use the ``metrics`` feature flag.
-
-To use the ``metrics`` feature flag, append ``metrics`` to the Dockstore URL as a query parameter. You only need to do this once, unless you refresh/close your browser.
-
-For example, if you're on the https://dockstore.org page, append ``metrics`` such that it looks like this: https://dockstore.org?metrics.
-
-If you're on a page that already contains query parameters, indicated by the presence of a question mark, append ``metrics`` to the URL using an ampersand. For example, if you're on the https://dockstore.org/workflows/github.com/gatk-workflows/seq-format-conversion/BAM-to-Unmapped-BAM:3.0.0?tab=info page, append ``metrics`` such that it looks like https://dockstore.org/workflows/github.com/gatk-workflows/seq-format-conversion/BAM-to-Unmapped-BAM:3.0.0?tab=info&metrics.
-
-After applying the ``metrics`` feature flag, a Metrics tab will appear when viewing a workflow on Dockstore. Click on the Metrics tab and you will see workflow metrics if they are available.
-
-.. figure:: /assets/images/docs/submit-metrics/metrics-tab.png
-    :alt: Metrics tab

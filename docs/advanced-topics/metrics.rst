@@ -5,7 +5,7 @@ Workflow Metrics
 
 What are workflow metrics?
 ------------------------------------
-Workflow metrics are metrics of workflow executions on a platform. Metrics include things like how often workflows succeeded or failed and the resources used during the execution. 
+Workflow metrics are metrics of workflow executions on a platform. Metrics include things like the resources used during the execution, and how often workflow executions succeeded or failed.
 
 Users are able to execute workflows on various platforms using Dockstore's Launch With feature, shown on the right side in the screenshot below.
 

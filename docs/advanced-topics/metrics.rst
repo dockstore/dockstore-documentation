@@ -5,7 +5,7 @@ Workflow Metrics
 
 What are workflow metrics?
 ------------------------------------
-Workflow metrics are metrics of workflow executions on a platform. Metrics include things like execution status and the resources used during the execution. 
+Workflow metrics are metrics of workflow executions on a platform. Metrics include things like how often workflows succeeded or failed and the resources used during the execution. 
 
 Users are able to execute workflows on various platforms using Dockstore's Launch With feature, shown on the right side in the screenshot below.
 
@@ -39,7 +39,7 @@ After applying the ``metrics`` feature flag, a Metrics tab will appear when view
 How do I submit workflow metrics?
 ---------------------------------
 
-.. note:: Submitting workflow metrics is only available for admins, curators, and platform partners. If you're a platform owner and you don't have a platform partner user, please contact us via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or `Gitter <https://gitter.im/ga4gh/dockstore>`_ and we will help you get set up.
+.. note:: Submitting workflow metrics is only available for admins, curators, and platform partners. If you're a platform owner and you don't have a platform partner user, please contact us via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or open a helpdesk ticket on `Discourse <https://discuss.dockstore.org/>`_ and we will help you get set up.
 
 Go to https://dockstore.org/api/static/swagger-ui/index.html#/extendedGA4GH/executionMetricsPost. This is the endpoint used to submit metrics to Dockstore. Click the "Try it out” button.
 
@@ -80,7 +80,7 @@ If you want to provide additional metrics that are not defined in the schema, us
 .. figure:: /assets/images/docs/submit-metrics/validation-executions-schema.png
     :alt: Schema for validation executions
 
-Instead of providing individual executions, you may also provide aggregated metrics through ``aggregatedExecutions``. There are no required fields, but you must provide at least one metric. If you want to provide aggregated metrics that are not defined in the schema, use the ``additionalAggregatedMetrics`` key to provide your metric.
+Instead of providing individual executions, you may also provide aggregated metrics that summarize data for multiple executions through ``aggregatedExecutions``. There are no required fields, but you must provide at least one metric. If you want to provide aggregated metrics that are not defined in the schema, use the ``additionalAggregatedMetrics`` key to provide your metric.
 
 .. figure:: /assets/images/docs/submit-metrics/aggregated-metrics-schema.png
     :alt: Schema for aggregated metrics

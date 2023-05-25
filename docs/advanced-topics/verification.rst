@@ -1,6 +1,8 @@
 Verification
 ============
 
+.. important:: Verification will eventually be replaced by :doc:`Workflow Metrics </advanced-topics/metrics>`. Workflow Metrics achieve the same goal as verification by tracking the platforms that the workflow was successfully run on. Workflow Metrics are preferred because it is a more scalable way of tracking that a workflow was successfully run on a platform.
+
 What is a verified tool/workflow?
 ---------------------------------
 A verified tool/workflow indicates that it was successfully run and verified by either:

@@ -325,6 +325,8 @@ Do you have tips on creating Dockerfiles?
 -  do not depend on changes to ``hostname`` or ``/etc/hosts``, Docker
    will interfere with this
 -  try to keep your Docker images small
+  -  however, do not use alpine images, or other images that lack bash, as your base image unless you will be installing bash in the Dockerfile (WDL forces /bin/bash as an entrypoint meaning that images that only have sh will fail if used in a WDL workflow)
+
 
 :ref:`(back to top) <topFAQ>`
 

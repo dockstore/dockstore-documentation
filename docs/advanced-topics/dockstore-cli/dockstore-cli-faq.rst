@@ -98,7 +98,7 @@ How do I find the return code for a WDL task?
 
 The numeric return code for a WDL task will be in that task's execution folder. It is a single file named `rc` with no extension. Generally speaking, a 0 is a success, and anything else is a failure.
 
-Let's say you are running [this vcf-to-gds file conversion workflow](https://dockstore.org/workflows/github.com/DataBiosphere/analysis_pipeline_WDL/vcf-to-gds-wdl:v7.1.1), which runs the check-gds task as a scattered task on an array of three files. Cromwell will refer to each instance of that scattered task as a "shard" and will name them starting with 0. If you notice that shard 0 seems to have failed, look for `/cromwell-executions/[workflow ID]/call-check_gds/shard-0/execution/rc` keeping in mind that the workflow ID will usually be a long mix of numbers, letters, and dashes such as 18a85cc0-aa59-4749-b1b9-e2580ed5e557  
+Let's say you are running [this vcf-to-gds file conversion workflow](https://dockstore.org/workflows/github.com/DataBiosphere/analysis_pipeline_WDL/vcf-to-gds-wdl:v7.1.1), which runs the check-gds task as a scattered task on an array of three files. Cromwell will refer to each instance of that scattered task as a "shard" and will name them starting with 0. If you notice that shard 0 seems to have failed, look for `/cromwell-executions/[workflow ID]/call-check_gds/shard-0/execution/rc` keeping in mind that the workflow ID will usually be a long mix of numbers, letters, and dashes such as 18a85cc0-aa59-4749-b1b9-e2580ed5e557.  
 
 :ref:`(back to top) <topCLIFAQ>`
 

@@ -1,3 +1,5 @@
+.. _topCLIFAQ:
+
 Dockstore CLI FAQ
 =================
 
@@ -17,6 +19,8 @@ FTP, S3, and GCS. As of Release 1.12, the Dockstore CLI has support for running 
 client <https://docs.icgc.org/download/guide/#score-client-usage>`__. Please see `file provisioning plugins <https://github.com/dockstore/dockstore-cli/tree/master/dockstore-file-plugin-parent>`__
 for more information on these two file transfer sources.
 
+:ref:`(back to top) <topCLIFAQ>`
+
 .. _how-do-i-use-the-dockstore-cli-on-a-mac:
 
 How do I use the Dockstore CLI on a Mac?
@@ -33,6 +37,8 @@ can change what it allocates using the Docker for Mac GUI under
 `here <https://docs.docker.com/docker-for-mac/#advanced>`__.
 
 The default allocation can cause workflows or tools to fail without informing the user with a memory or resource related error message. If you find that your workflow or tool is behaving differently on a Mac compared to a similarly resourced Ubuntu environment, you can try increasing the resources allocated to Docker on the Mac to resolve the discrepancy. If you are using WDL, see also our notes on :doc:`local Cromwell configuration files`</advanced-topics/dockstore-cli/local-cromwell-config>`.
+
+:ref:`(back to top) <topCLIFAQ>`
 
 Why am I getting "Mount denied" errors when launching workflows on Mac?
 -----------------------------------------------------------------------
@@ -66,6 +72,7 @@ Depending on the permissions available to your machine, you may be able to give 
 
 $TMPDIR might be set to a subfolder of /private/var/folders. If you are still having issues, try adding /var/folders to Docker's list of accessible directories instead.
 
+:ref:`(back to top) <topCLIFAQ>`
 
 How do I launch tools/workflows without internet access on compute nodes?
 -------------------------------------------------------------------------
@@ -82,6 +89,8 @@ follow these steps:
 The Dockstore CLI will automatically load all Docker images in the
 directory specified prior to a ``launch --local-entry`` command.
 
+:ref:`(back to top) <topCLIFAQ>`
+
 .. _return-code-wdl:
 
 How do I find the return code for a WDL task?
@@ -89,8 +98,9 @@ How do I find the return code for a WDL task?
 
 The numeric return code for a WDL task will be in that task's execution folder. It is a single file named `rc` with no extension. Generally speaking, a 0 is a success, and anything else is a failure.
 
-Let's say you are running [this vcf-to-gds file conversion workflow](https://dockstore.org/workflows/github.com/DataBiosphere/analysis_pipeline_WDL/vcf-to-gds-wdl:v7.1.1), which runs the check-gds task as a scattered task on an array of three files. Cromwell will refer to each instance of that scattered task as a "shard" and will name them starting with 0. If you notice that shard 0 seems to have failed, look for `/cromwell-executions/[workflow ID]/call-check_gds/shard-0/execution/rc` keeping in mind that the workflow ID will usually be a long mix of numbers, letters, and dashes such as 18a85cc0-aa59-4749-b1b9-e2580ed5e557.
+Let's say you are running [this vcf-to-gds file conversion workflow](https://dockstore.org/workflows/github.com/DataBiosphere/analysis_pipeline_WDL/vcf-to-gds-wdl:v7.1.1), which runs the check-gds task as a scattered task on an array of three files. Cromwell will refer to each instance of that scattered task as a "shard" and will name them starting with 0. If you notice that shard 0 seems to have failed, look for `/cromwell-executions/[workflow ID]/call-check_gds/shard-0/execution/rc` keeping in mind that the workflow ID will usually be a long mix of numbers, letters, and dashes such as 18a85cc0-aa59-4749-b1b9-e2580ed5e557  
 
+:ref:`(back to top) <topCLIFAQ>`
 
 .. _cromwell-docker-lockup:
 
@@ -103,7 +113,9 @@ If a Docker lockup happens, you will notice in-progress WDL tasks do not progres
 
 The other issue we often see is some instances of scattered tasks getting `sigkilled <https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html>`__ by the operating system. You will know when this happens because the `rc` (return code) file will read 137. If it reads anything except 137, then you can assume that it wasn't actually a resource management error and look in stderr or stdout for the true culprit. For more on return codes, see :ref:`this FAQ <return-code-wdl>` entry.
 
-To prevent these issues from happening, we recommend setting up your Cromwell configuration file to limit how many scattered tasks run at once, and then setting up the Dockstore CLI to make use of that Cromwell configuration file. :doc:`A step-by-step tutorial is available here. </advanced-topics/dockstore-cli/local-cromwell-config>`
+To prevent these issues from happening, we recommend setting up your Cromwell configuration file to limit how many scattered tasks run at once, and then setting up the Dockstore CLI to make use of that Cromwell configuration file. :doc:`A step-by-step tutorial is available here. </advanced-topics/dockstore-cli/local-cromwell-config>` 
+
+:ref:`(back to top) <topCLIFAQ>`
 
 The CLI is failing with Java 8 or 11
 ------------------------------------
@@ -121,7 +133,9 @@ The Dockstore CLI as of 1.7.0 is compiled and tested using Java 11 due
 to the Java 8 EOL. You will need to upgrade from Java 8 to use CLI versions betweenn 1.7 and 1.13.
 
 The Dockstore CLI as of 1.14.0 is compiled and tested using Java 17 due
-to the approaching Java 11 EOL. You will need to update to Java 17 to use the CLI version 1.14.0+.
+to the approaching Java 11 EOL. You will need to update to Java 17 to use the CLI version 1.14.0+. 
+
+:ref:`(back to top) <topCLIFAQ>`
 
 .. discourse::
     :topic_identifier: 6481

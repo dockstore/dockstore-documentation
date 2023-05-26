@@ -120,8 +120,8 @@ You will find a variety of citation styles and ways to export it at
 Integration with GitHub
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-What is the difference between logging in with GitHub or logging in with Google?
---------------------------------------------------------------------------------
+What is the difference between logging in with GitHub versus logging in with Google?
+-----------------------------------------------------------------------------------
 
 The intent here is that you should be able to login with either login
 method and still conveniently get into the same Dockstore account. With

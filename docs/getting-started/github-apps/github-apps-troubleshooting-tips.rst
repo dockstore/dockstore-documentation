@@ -20,7 +20,9 @@ This requires the addition of a .dockstore.yml file to your repository on GitHub
 This file contains information that Dockstore will use to setup
 the corresponding workflow/tool entry on Dockstore. Branches that do not have a .dockstore.yml file, or that are filtered out via the filter feature, will not be synchronized.
 
-You can read more about it at :doc:`/getting-started/github-apps/github-apps`. :ref:`(back to top) <topGHAFAQ>`
+You can read more about it at :doc:`/getting-started/github-apps/github-apps`. 
+
+:ref:`(back to top) <topGHAFAQ>`
 
 How does this change my development flow?
 -------------------------------------------
@@ -31,7 +33,9 @@ Therefore, as long as your workflow is already registered on Dockstore and your 
 
 You can use filters in a .dockstore.yml to avoid generating a corresponding workflow-version on Dockstore.
 
-*Note:* If you want to edit version information, such as workflow path, you will have to update the .dockstore.yml file directly on the corresponding GitHub branch. For example, if develop has a .dockstore.yml that points to my_workflow.wdl, but my_workflow.wdl is moved to another path on the branch develop-but-better, then the .dockstore.yml on develop-but-better will need to point to the new location of my_workflow.wdl. :ref:`(back to top) <topGHAFAQ>`
+*Note:* If you want to edit version information, such as workflow path, you will have to update the .dockstore.yml file directly on the corresponding GitHub branch. For example, if develop has a .dockstore.yml that points to my_workflow.wdl, but my_workflow.wdl is moved to another path on the branch develop-but-better, then the .dockstore.yml on develop-but-better will need to point to the new location of my_workflow.wdl. 
+
+:ref:`(back to top) <topGHAFAQ>`
 
 .. _Check GitHub App installation on repository:
 
@@ -41,11 +45,15 @@ Go to your repo on GitHub and click the Settings tab. On the left hand side unde
 
 .. image:: /assets/images/docs/github-repo-settings.png
 
-If you're checking if the GitHub App was installed on a repository of an organization, you may not have access to this page if you are not an administrator of your GitHub organization, :ref:`but you may still be able to see if it installed. <view github app permissions hack>` :ref:`(back to top) <topGHAFAQ>`
+If you're checking if the GitHub App was installed on a repository of an organization, you may not have access to this page if you are not an administrator of your GitHub organization, :ref:`but you may still be able to see if it installed. <view github app permissions hack>` 
+
+:ref:`(back to top) <topGHAFAQ>`
 
 How do I configure the GitHub App across multiple repositories?
 ------------------------------------------------------------------
-GitHub Apps can be installed on either an a user level, or an organizational level. If you installed the app for your own repositories that are not in an organization, you will be able to verify the Dockstore GitHub App is installed by clicking "Applications" in the left menu in your GitHub settings. Our app, along with any others you may have installed, will be there. Clicking the "configure" button will allow you to adjust which repos the app has access to. :ref:`(back to top) <topGHAFAQ>`
+GitHub Apps can be installed on either an a user level, or an organizational level. If you installed the app for your own repositories that are not in an organization, you will be able to verify the Dockstore GitHub App is installed by clicking "Applications" in the left menu in your GitHub settings. Our app, along with any others you may have installed, will be there. Clicking the "configure" button will allow you to adjust which repos the app has access to. 
+
+:ref:`(back to top) <topGHAFAQ>`
 
 .. _view github app permissions hack:
 
@@ -178,6 +186,8 @@ Why are only some branches appearing on my workflow/tool?
 The Dockstore GitHub App is currently unable to parse branches that use special characters besides numerical digits, non-leading dashes, forward slashes, periods, and underscores. "Special characters" includes alphabetical characters with accents, tildes, circumflexes, umlauts, or non-English letters such as ß and ø. These limitations are stricter than what GitHub itself allows. As a result, if you have a GitHub branch named something like `Ó-Fearghail`, `branch-with-{curly-braces}`, or `Robert');-DROP-TABLE-Students;`, that branch will not appear on Dockstore. If you check the Dockstore GitHub App logs, you'll see these branches throw an error such as `Reference refs/heads/branch-with-{curly-braces} is not of the valid form`. 
 
 However, even if you have branches with unsupported names, other branches with names like `main` and `develop` will continue to update on Dockstore as normal. The public view of your published entry will not show any errors -- it will simply not show the branches with unsupported names.
+
+:ref:`(back to top) <topGHAFAQ>`
 
 
 .. discourse::

@@ -506,6 +506,10 @@ ParameterFile = GlossEntry("parameter file",
 	institute="", 
 	pronunciation='')
 
+ParentImage = GlossEntry("parent image", 
+	definition="A [Docker image] which acts as the base upon which another Docker image is built. For example, including FROM ubuntu:18.04 in a [Dockerfile] means that the resulting image will include everything inside ubuntu:18.04, plus any changes made by other commands in the Dockerfile. Parent images are sometimes called base images, but strictly speaking a base image is different (see further reading).", 
+	furtherreading="https://docs.docker.com/glossary/#parent-image")
+
 Preemptible = GlossEntry("preemptible", 
 	acronym_full="", 
 	definition="A type of [GCP] [VM] which may have its running jobs interrupted at any given time, and will be shut down if running for more than 24 hours. A preemptible machine is significantly cheaper than a standard VM, at the cost of possibly stopping before your computational work is finished. You can use preemptible machines when running workflows on GCP backends to save on compute costs.", 

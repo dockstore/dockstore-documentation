@@ -310,9 +310,9 @@ Do you have tips on creating Dockerfiles?
    client/server issues, it is also not compatible with CWL)
 -  do not depend on changes to ``hostname`` or ``/etc/hosts``, Docker
    will interfere with this
--  use a well-known and secure base image such as official debian or Python images
+-  use a well-known and secure :ref:`dict parent image` such as official `debian <https://hub.docker.com/_/debian>`__ or `Python <https://hub.docker.com/_/python>`__ images
 -  try to keep your Docker images small
-   -  however, do not use alpine images, or other images that lack bash, as your base image unless you will be installing bash in the Dockerfile 
+   -  however, do not use alpine images, or other images that lack bash, as your parent image unless you will be installing bash in the Dockerfile 
   
 
 :ref:`(back to top) <topFAQ>`

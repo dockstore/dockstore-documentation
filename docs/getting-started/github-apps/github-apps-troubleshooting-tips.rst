@@ -124,17 +124,17 @@ Navigate to the ``/my-workflows`` (or ``/my-tools``) page.
 Expand the GitHub account that the repository belongs to on the left hand side. Then click on the bottom where it says ``Apps Logs``.
 
 .. image:: /assets/images/docs/github-app-logs-button.png
-   :width: 30 %
+   :width: 40 %
 
 Once loaded, the following window will be displayed.
 
 .. image:: /assets/images/docs/github-app-logs-window.png
-   :width: 60 %
+   :width: 80 %
 
 Here you can view all the GitHub app events Dockstore is aware of and whether they failed or were successful. If there was a failure, you can expand that row and view the error message as shown below.
 
 .. image:: /assets/images/docs/github-app-logs-error-message.png
-   :width: 60 %
+   :width: 80 %
 
 In the case shown above, the error message is from parsing the following .dockstore.yml file.
 

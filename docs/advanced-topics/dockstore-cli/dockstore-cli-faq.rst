@@ -117,20 +117,6 @@ To prevent these issues from happening, we recommend setting up your Cromwell co
 
 :ref:`(back to top) <topCLIFAQ>`
 
-What environment do you test tools in?
---------------------------------------
-
-Typically, we test running tools in Ubuntu Linux 16.04 LTS on VMs in
-`OpenStack <https://www.openstack.org/>`__ with 8 vCPUs and 96 GB of RAM
-and above. We've also begun testing on Ubuntu 18.04 LTS and so far it's
-been successful. If you are only listing and editing tools, we have
-achieved success with much lower system requirements. However, launching
-tools will have higher system requirements dependent on the specific
-tool. Consult a tool's README or CWL/WDL/Nextflow description when in doubt.
-
-:ref:`(back to top) <topCLIFAQ>`
-
-
 The CLI is failing with Java 8 or 11
 ------------------------------------
 

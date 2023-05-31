@@ -319,13 +319,9 @@ Do you have tips on creating Dockerfiles?
 
 How should I handle large reference files when designing workflows and Dockerfiles?
 -----------------------------------------------------------------------------------
-Generally speaking, you can choose to either "package" reference files in your Docker image, or you can treat them as "inputs" so they can be stage outside and mounted into the running container. Both of these approaches will work on a variety of backends, but there are some backends in which one option might be better than the other.
+Generally speaking, you can choose to either "package" reference files in your Docker image, or you can treat them as "inputs" so they can be stage outside and mounted into the running container. We generally recommend having them serve as inputs.
 
-
-      - if you are running on a backend that can mount files into your containers quickly, such as a local installation of miniwdl, and your input files are available without having to download them, is probably best to treat reference files as an input
-      - if you are running your workflow on a backend that needs to download input files (such as Terra), and you need to put those reference files into many instances of a Docker container (such as if you are using scattered tasks), it is probably best to bake your reference files into the Dockerfile so they are immediately available in the Docker image
-      - if using Terra, you can make use of `reference disks <https://support.terra.bio/hc/en-us/articles/360056384631-Overview-Reference-Disks-in-Terra>`__ to easily bring human references into your Docker image 
-      -  the ``$TMPDIR`` variable can be used as a scratch space inside your container. Make sure your host running Docker has sufficient scratch space for processing your genomics data.
+:ref:`(back to top) <topFAQ>`
 
 Do you have tips on creating workflows?
 ---------------------------------------

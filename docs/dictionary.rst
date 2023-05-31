@@ -25,6 +25,7 @@ Dockstore Dictionary
 	* :ref:`dict container`
 	* :ref:`dict Cromwell`
 	* :ref:`dict CWL`
+	* :ref:`dict cwltool`
 	* :ref:`dict DAG`
 	* :ref:`dict descriptor file`
 	* :ref:`dict Docker`
@@ -40,6 +41,7 @@ Dockstore Dictionary
 	* :ref:`dict egress`
 	* :ref:`dict eLwazi`
 	* :ref:`dict entry`
+	* :ref:`dict environment variable`
 	* :ref:`dict faceted search`
 	* :ref:`dict FAIR`
 	* :ref:`dict GA4GH`
@@ -62,6 +64,7 @@ Dockstore Dictionary
 	* :ref:`dict legacy registration`
 	* :ref:`dict legacy tool`
 	* :ref:`dict legacy workflow`
+	* :ref:`dict miniwdl`
 	* :ref:`dict NCI`
 	* :ref:`dict NCPI`
 	* :ref:`dict Nextflow`
@@ -195,7 +198,7 @@ BioData Catalyst
 ----------------
     A cloud-based platform funded by :ref:`dict NHLBI` to provide tools, applications, and workflows in secure workspaces to expand research in heart, lung, blood, and sleep health.  
 
-Further reading: `<https://biodatacatalyst.nhlbi.nih.gov/>`_  
+Further reading: `<https://dockstore.org/organizations/bdcatalyst>`_  
 
 
 
@@ -262,7 +265,7 @@ collection
 
 Common Workflow Language
 ------------------------
-    A workflow language that describes how to run command-line tools. :ref:`dict WDL` and CWL are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features. For example, CWL has the ability to use Javascript expressions within its own commands.  
+    A workflow language that describes how to run command-line tools. :ref:`dict WDL` and CWL are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features. For example, CWL has the ability to use Javascript expressions within its own commands. CWL makes a distinction between a :ref:`dict tool` and a :ref:`dict workflow`.  
 
 see also :ref:`dict CWL`, :ref:`dict WDL`  
 
@@ -288,6 +291,8 @@ Cromwell
 
 .. note:: This term as we define it here is associated with Broad Institute and may have different definitions in other contexts.  
 
+see also :ref:`dict miniwdl`  
+
 Further reading: `<https://cromwell.readthedocs.io/en/stable/>`_  
 
 
@@ -298,6 +303,16 @@ CWL
 ---
 *abbreviation for* :ref:`dict Common Workflow Language`  
 
+
+
+
+.. _dict cwltool:
+
+cwltool
+-------
+    An open-source :ref:`dict CWL` executor which serves as the official reference implementation of :ref:`dict Common Workflow Language`. It is used by the :ref:`dict Dockstore CLI` to run CWL tools and workflows.  
+
+Further reading: `<https://github.com/common-workflow-language/cwltool>`_  
 
 
 
@@ -471,6 +486,16 @@ entry
     Shorthand for a :ref:`dict tool` or :ref:`dict workflow` that has been registered on Dockstore.  
 
 .. note:: This term as we define it here is associated with Dockstore and may have different definitions in other contexts.  
+
+
+
+.. _dict environment variable:
+
+environment variable
+--------------------
+    A variable that affects how processes run on a computer. For example, :ref:`dict cwltool` references the environment variable $TMPDIR when deciding where to place files.  
+
+Further reading: `<https://en.wikipedia.org/wiki/Environment_variable>`_  
 
 
 
@@ -717,6 +742,20 @@ legacy workflow
 
 
 
+.. _dict miniwdl:
+
+miniwdl
+-------
+    A Python-based :ref:`dict WDL` executor managed by the Chan Zuckerberg Initiative.  
+
+.. note:: This term as we define it here is associated with Chan Zuckerberg Initiative and may have different definitions in other contexts.  
+
+see also :ref:`dict Cromwell`  
+
+Further reading: `<https://github.com/chanzuckerberg/miniwdl>`_  
+
+
+
 .. _dict NCI:
 
 NCI
@@ -724,6 +763,8 @@ NCI
 *abbreviation for* National Cancer Institute  
 
     A division of the :ref:`dict NIH` focused on cancer research.  
+
+.. note:: This term as we define it here is associated with NIH and may have different definitions in other contexts.  
 
 Further reading: `<https://www.nih.gov/about-nih/what-we-do/nih-almanac/national-cancer-institute-nci>`_  
 
@@ -772,6 +813,8 @@ NHGRI
 
     A division of the :ref:`dict NIH` that focus on genomics research. Funds the :ref:`dict AnVIL Project`.  
 
+.. note:: This term as we define it here is associated with NIH and may have different definitions in other contexts.  
+
 Further reading: `<https://www.genome.gov/>`_  
 
 
@@ -783,6 +826,8 @@ NHLBI
 *abbreviation for* National Heart, Lungs, and Blood Institute  
 
     A division of the :ref:`dict NIH` that focuses on heart, lung, blood, and sleep health. Funds the :ref:`dict BioData Catalyst` platform.  
+
+.. note:: This term as we define it here is associated with NIH and may have different definitions in other contexts.  
 
 Further reading: `<https://www.nhlbi.nih.gov/>`_  
 
@@ -1024,7 +1069,7 @@ Further reading: :doc:`/getting-started/intro-to-dockstore-tools-and-workflows <
 
 Workflow Description Language
 -----------------------------
-    A workflow language managed by the Open WDL Project that is designed to describe command-line tools. Usually written as :ref:`dict WDL`. WDL and :ref:`dict CWL` are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features.  
+    A workflow language managed by the Open WDL Project that is designed to describe command line tools. Usually written as :ref:`dict WDL`. WDL and :ref:`dict CWL` are relatively similar in principle, and code written in one language can often be translated into the other with some workarounds, but they are two different standards and each have unique features. Unlike CWL, WDL does not have an official reference implementation, but :ref:`dict Cromwell` and :ref:`dict miniwdl` are popular implementations.  
 
 see also :ref:`dict WDL`, :ref:`dict CWL`  
 

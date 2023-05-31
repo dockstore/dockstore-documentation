@@ -5,7 +5,7 @@
 #    you may not use this file except in compliance with the License.
 #    You may obtain a copy of the License at
 #
-#        http://www.apache.org/licenses/LICENSE-2.0
+#        https://www.apache.org/licenses/LICENSE-2.0
 #
 #    Unless required by applicable law or agreed to in writing, software
 #    distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,19 +15,7 @@
 
 # This script determines if all changed files rst files in a PR have a discourse topic
 source base-branch.sh
-
-# Determines if a file has a discourse topic
-
-function containsDiscourseTopic {
-  grep -A1 "^.. discourse::" $fileToCheck | tail -n1 | grep -E "^( )*:topic_identifier:( )*[0-9]+" > /dev/null
-  if [ $? != 0 ]
-  then
-    echo "${fileToCheck} does not have a discourse topic"
-    return 1
-  else
-    return 0
-  fi
-}
+source helpers.sh
 
 RETURN_VALUE=0
 DOES_NOT_REQUIRE_DISCOURSE_TOPIC=no-discourse-topic-required.txt
@@ -41,12 +29,16 @@ then
   baseBranch="$(curl -s $pr | jq -r '.base.ref')"
 fi
 
-for file in $(git diff --name-only "$baseBranch".. | grep -E "*\.rst" | grep -Fvxf $DOES_NOT_REQUIRE_DISCOURSE_TOPIC)
+for file in $(git diff --name-only "$baseBranch".. | grep "\.rst$" | grep -Fvxf $DOES_NOT_REQUIRE_DISCOURSE_TOPIC)
 do
-  fileToCheck=$file
-  if ! containsDiscourseTopic
+  # The file may be in the base branch but not the current branch. Skip in that case.
+  if [[ -f "$file" ]]
   then
-    RETURN_VALUE=1
+    if ! containsDiscourseTopic "$file"
+    then
+      echo "${file} does not have a discourse topic"
+      RETURN_VALUE=1
+    fi
   fi
 done
 

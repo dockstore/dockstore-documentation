@@ -13,6 +13,8 @@ At a Glance
 .. include:: /advanced-topics/legacy/table--legtool-vs-ghatool.rst
 
 
+.. _legacy_tools:
+
 Dockstore Tools Prior to 1.12 (Legacy Tools)
 --------------------------------------------
 
@@ -56,3 +58,6 @@ Dockstore wants to continue simplifying and automating the registration process 
 * Continue to display already published tools that were created using the legacy tool registration methods
 
 
+
+.. discourse::
+    :topic_identifier: 6472

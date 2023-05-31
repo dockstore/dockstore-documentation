@@ -41,7 +41,7 @@ with GitHub automatically.
 
 .. include:: /getting-started/github-apps/snippet--installation.rst
 
-Once you've installed our GitHub app on a repository or organization, you'll need to add a dockstore.yml file to
+Once you've installed our GitHub app on a repository in an organization or your personal account, you'll need to add a dockstore.yml file to
 the root directory of a branch of the repository that contains your workflow. This file contains information like
 workflow path, test parameter file, workflow name, etc. When a push is made on GitHub to a branch
 with a .dockstore.yml, Dockstore will add that branch to the corresponding workflow on Dockstore. If the

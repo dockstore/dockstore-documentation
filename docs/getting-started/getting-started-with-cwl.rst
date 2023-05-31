@@ -48,10 +48,10 @@ repository:
     cwlVersion: v1.1
     doc: |
         ![build_status](https://quay.io/repository/collaboratory/dockstore-tool-bamstats/status)
-        A Docker container for the BAMStats command. See the [BAMStats](http://bamstats.sourceforge.net/) website for more information.
+        A Docker container for the BAMStats command. See the [BAMStats](https://bamstats.sourceforge.net/) website for more information.
 
     dct:creator:
-      "@id": "http://orcid.org/0000-0002-7681-6415"
+      "@id": "https://orcid.org/0000-0002-7681-6415"
       foaf:name: Brian O'Connor
       foaf:mbox: "mailto:briandoconnor@gmail.com"
 
@@ -76,14 +76,14 @@ repository:
       bam_input:
         type: File
         doc: "The BAM file used as input, it must be sorted."
-        format: "http://edamontology.org/format_2572"
+        format: "https://edamontology.org/format_2572"
         inputBinding:
           position: 2
 
     outputs:
       bamstats_report:
         type: File
-        format: "http://edamontology.org/format_3615"
+        format: "https://edamontology.org/format_3615"
         outputBinding:
           glob: bamstats_report.zip
         doc: "A zip file that contains the HTML report and various graphics."
@@ -93,8 +93,8 @@ repository:
 
 
     $namespaces:
-        dct: http://purl.org/dc/terms/
-        foaf: http://xmlns.com/foaf/0.1/
+        dct: https://purl.org/dc/terms/
+        foaf: https://xmlns.com/foaf/0.1/
 
 .. note:: The `sbg:draft-2 <https://docs.sevenbridges.com/docs/about-the-common-workflow-language#sbgdraft-2>`__ implementation of CWL is optimized for the Seven Bridges cloud-based platform and includes custom extensions.
     Dockstore does not support sbg:draft-2 CWL tools and workflows, and if you register one, Dockstore will mark the entry as invalid, and you will not be able to publish, run, or launch it on any cloud compute platform. However, we do support `CWL v1.0 <https://www.commonwl.org/v1.0/>`__, which defines similar functionality and supersedes the sbg:draft-2 extensions.  Seven Bridges also provides `instructions <https://sb-biodatacatalyst.readme.io/docs/maintaining-and-versioning-cwl-on-external-tool-repositories>`__
@@ -122,7 +122,7 @@ tools have been tested with v1.0 and v1.1.
     cwlVersion: v1.1
     doc: |
             ![build_status](https://quay.io/repository/collaboratory/dockstore-tool-bamstats/status)
-            A Docker container for the BAMStats command. See the [BAMStats](http://bamstats.sourceforge.net/) website for more information.
+            A Docker container for the BAMStats command. See the [BAMStats](https://bamstats.sourceforge.net/) website for more information.
 
 In the code above you can see how to have an extended doc (description)
 which is quite useful.
@@ -130,7 +130,7 @@ which is quite useful.
 ::
 
     dct:creator:
-      "@id": "http://orcid.org/0000-0002-7681-6415"
+      "@id": "https://orcid.org/0000-0002-7681-6415"
       foaf:name: Brian O'Connor
       foaf:mbox: "mailto:briandoconnor@gmail.com"
 
@@ -182,7 +182,7 @@ least it gives you a place to declare computational requirements.
       bam_input:
         type: File
         doc: "The BAM file used as input, it must be sorted."
-        format: "http://edamontology.org/format_2572"
+        format: "https://edamontology.org/format_2572"
         inputBinding:
           position: 2
 
@@ -198,7 +198,7 @@ This is one of the items from the inputs section. Notice a few things:
     outputs:
       bamstats_report:
         type: File
-        format: "http://edamontology.org/format_3615"
+        format: "https://edamontology.org/format_3615"
         outputBinding:
           glob: bamstats_report.zip
         doc: "A zip file that contains the HTML report and various graphics."
@@ -218,7 +218,7 @@ executed. In this case, it's the wrapper script I wrote for bamstats.
 
 The `CWL standard <https://www.commonwl.org/>`__ is continuing to evolve
 and hopefully we will see new features, like support for `EDAM
-ontology <http://edamontology.org/page>`__ terms, in future releases. In
+ontology <https://edamontology.org/page>`__ terms, in future releases. In
 the mean time, the `Gitter
 chat <https://gitter.im/common-workflow-language/common-workflow-language>`__
 is an active community to help drive the development of CWL in positive
@@ -258,7 +258,7 @@ I checked in already: ``sample_configs.local.json``.
     {
         "bam_input": {
             "class": "File",
-            "format": "http://edamontology.org/format_2572",
+            "format": "https://edamontology.org/format_2572",
             "path": "/tmp/NA12878.chrom20.ILLUMINA.bwa.CEU.low_coverage.20121211.bam"
         },
         "bamstats_report": {

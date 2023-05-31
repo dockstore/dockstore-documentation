@@ -19,8 +19,7 @@ What are GitHub Apps?
 
 `GitHub apps <https://developer.github.com/apps>`_ are a GitHub feature used to
 improve the interaction between external applications and GitHub. Users can
-grant a GitHub app specific permissions on the repos and/or
-organizations of their choosing. When events occur on the GitHub repos, e.g.,
+grant a GitHub app access to repositories in organizations and/or their personal account. When events occur on the GitHub repositories, e.g.,
 creating a new release, the GitHub app issues notifications.
 
 Why have a Dockstore GitHub App?
@@ -40,6 +39,8 @@ the Refresh button or making an API call to the Dockstore API.
 
 Due to the manual nature of this process, it is easy for Dockstore to get out of
 sync with the linked GitHub repository if the Dockstore GitHub App is not being used.
+
+The Dockstore GitHub App also makes it easy to register multiple workflows in the same repository quickly, as well as set up their metadata (test parameter files, authors, readmes, etc). You can even publish a workflow or set a default branch from the .dockstore.yml which can be useful for both automated systems and users registering workflows in bulk. 
 
 How the Dockstore GitHub App works
 ----------------------------------
@@ -102,6 +103,7 @@ See Also
 - :doc:`Getting Started with Services </getting-started/getting-started-with-services>`
 - :doc:`Getting Started with Workflows </getting-started/dockstore-workflows>`
 - :doc:`Getting Started with Tools </getting-started/dockstore-tools>`
+- :doc:`Getting Started with Notebooks </getting-started/getting-started-with-notebooks>`
 - :doc:`Other docs involving the Dockstore GitHub App </getting-started/github-apps/github-apps>`
 
 .. discourse::

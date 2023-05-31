@@ -44,7 +44,8 @@ Getting Started
     5. :doc:`Register a tool on Dockstore <getting-started/dockstore-tools>`
     6. :doc:`Register a workflow on Dockstore <getting-started/dockstore-workflows>`
     7. :doc:`Hosted tools and workflows <getting-started/hosted-tools-and-workflows>`
-* :doc:`Services (beta) <getting-started/getting-started-with-services>`
+* :doc:`Services (preview) <getting-started/getting-started-with-services>`
+* :doc:`Notebooks (preview) <getting-started/getting-started-with-notebooks>`
 * :doc:`Registering workflows with the Dockstore GitHub App <getting-started/github-apps/github-apps-landing-page>`
 
 .. toctree::
@@ -64,6 +65,7 @@ Getting Started
    getting-started/dockstore-workflows
    getting-started/hosted-tools-and-workflows
    getting-started/getting-started-with-services
+   getting-started/getting-started-with-notebooks
    getting-started/github-apps/github-apps-landing-page
 
 Launching tools and workflows from Dockstore
@@ -195,6 +197,7 @@ Advanced developer topics
 * :doc:`GA4GH Write API (intended as a proof-of-concept and for developers with a large number of tools) <advanced-topics/conversions>`
 * :doc:`Using batch services (AWS, Azure, Google, and Consonance) <advanced-topics/batch-services>`
 * :doc:`Verified workflows and tools <advanced-topics/verification>`
+* :doc:`Workflow metrics <advanced-topics/metrics>`
 * :doc:`Organizations and collections <advanced-topics/organizations-and-collections>`
 
 .. Purposely not including the AWS and Azure batch links as the batch-services one links to them and is pretty short so they are easy to find. I would even argue for removing them from the sidebar or making them a subfolder of batch-services.
@@ -223,6 +226,7 @@ Advanced developer topics
    advanced-topics/azure-batch
    advanced-topics/posting-zips
    advanced-topics/verification
+   advanced-topics/metrics
    advanced-topics/organizations-and-collections
    advanced-topics/wes/cli-wes-tutorial
 
@@ -258,7 +262,7 @@ Advanced developer topics
 .. |UcscLink| image:: /assets/images/affiliations/ucsc.png
     :alt: ucsc
     :height: 55px
-.. _UcscLink: https://ucscgenomics.soe.ucsc.edu/
+.. _UcscLink: https://genomics.ucsc.edu/
 
 .. centered:: Workflow Languages
 

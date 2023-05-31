@@ -1,6 +1,8 @@
 Verification
 ============
 
+.. important:: Verification will eventually be replaced by :doc:`Workflow Metrics </advanced-topics/metrics>`. Workflow Metrics achieve the same goal as verification by tracking the platforms that the workflow was successfully run on. Workflow Metrics are preferred because it is a more scalable way of tracking that a workflow was successfully run on a platform.
+
 What is a verified tool/workflow?
 ---------------------------------
 A verified tool/workflow indicates that it was successfully run and verified by either:
@@ -109,7 +111,7 @@ Verification Process
     verified. The path of the test parameter file is relative to the
     primary descriptor. This path can be found using the `files
     endpoint`_ or by viewing the files tab of a tool/workflow such as:
-    https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:1.0.4?tab=files
+    https://dockstore.org/workflows/github.com/DataBiosphere/topmed-workflows/UM_variant_caller_wdl:1.32.0?tab=files
     and then further selecting the Test Parameter Files tab and view the
     right-most “File” dropdown. This relative path must be a test
     parameter file, providing a descriptor will not work.
@@ -187,3 +189,6 @@ Typically this launching process occurs before a Dockstore CLI release and is do
 
 .. _dockstore-tool-md5sum: https://dockstore.org/containers/quay.io/briandoconnor/dockstore-tool-md5sum:master?tab=info
 .. _files endpoint: https://dockstore.org/api/static/swagger-ui/index.html#/GA4GH/toolsIdVersionsVersionIdTypeFilesGet_1
+
+.. discourse::
+    :topic_identifier: 6473

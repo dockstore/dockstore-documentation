@@ -112,7 +112,7 @@ mismatches.
       bam_input:
         type: File
         doc: The BAM file used as input
-        format: http://edamontology.org/format_2572
+        format: https://edamontology.org/format_2572
         inputBinding:
           position: 1
 
@@ -121,7 +121,7 @@ mismatches.
     outputs:
       report:
         type: File
-        format: http://edamontology.org/format_1964
+        format: https://edamontology.org/format_1964
         outputBinding:
           glob: "*.txt"
         doc: A text file that contains a line count
@@ -137,7 +137,7 @@ mismatches.
     {
       "bam_input": {
             "class": "File",
-        "format": "http://edamontology.org/format_2572",
+        "format": "https://edamontology.org/format_2572",
             "path": "rna.SRR948778.bam"
         },
         "bamstats_report": {
@@ -162,7 +162,7 @@ the command line and ensure that it succeeds:
       [job metadata_example.cwl] completed success
       {
           "report": {
-              "format": "http://edamontology.org/format_1964",
+              "format": "https://edamontology.org/format_1964",
               "checksum": "sha1$68c01583e2355a6a38d814ac7d7d8e46705df56d",
               "basename": "output.txt",
               "location": "file:///home/dyuen/temp/./datastore/launcher-f88ae8e3-6b6f-49f8-a622-46a61a9541d7/outputs/output.txt",
@@ -175,7 +175,7 @@ the command line and ensure that it succeeds:
       cwltool stdout:
         {
             "report": {
-                "format": "http://edamontology.org/format_1964",
+                "format": "https://edamontology.org/format_1964",
                 "checksum": "sha1$68c01583e2355a6a38d814ac7d7d8e46705df56d",
                 "basename": "output.txt",
                 "location": "file:///home/dyuen/temp/./datastore/launcher-f88ae8e3-6b6f-49f8-a622-46a61a9541d7/outputs/output.txt",
@@ -220,7 +220,7 @@ demonstrating the use of JSON-LD.
       bam_input:
         type: File
         doc: The BAM file used as input
-        format: http://edamontology.org/format_2572
+        format: https://edamontology.org/format_2572
         inputBinding:
           position: 1
 
@@ -229,7 +229,7 @@ demonstrating the use of JSON-LD.
     outputs:
       report:
         type: File
-        format: http://edamontology.org/format_1964
+        format: https://edamontology.org/format_1964
         outputBinding:
           glob: "*.txt"
         doc: A text file that contains a line count
@@ -250,7 +250,7 @@ demonstrating the use of JSON-LD.
 
     s:contributor:
       - class: s:Person
-        s:id: http://orcid.org/0000-0002-7681-6415
+        s:id: https://orcid.org/0000-0002-7681-6415
         s:email: briandoconnor@not-ucsc.org
         s:name: Brian O'Connor
       - class: s:Person
@@ -263,7 +263,7 @@ demonstrating the use of JSON-LD.
     s:dateCreated: "2016-12-13"
     s:license: https://www.apache.org/licenses/LICENSE-2.0
 
-    s:keywords: http://edamontology.org/topic_0091 , http://edamontology.org/topic_0622
+    s:keywords: https://edamontology.org/topic_0091 , https://edamontology.org/topic_0622
     s:programmingLanguage: C
 
 Next Steps

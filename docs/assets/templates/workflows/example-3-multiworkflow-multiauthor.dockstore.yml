@@ -2,6 +2,7 @@ version: 1.2
 workflows:
   - subclass: WDL
     primaryDescriptorPath: /assoc-aggregate/assoc-aggregate.wdl
+    readMePath: /assoc-aggregate/readme.md
     testParameterFiles:
       - /assoc-aggregate/assoc-aggregate-terra-allele.json
       - /assoc-aggregate/assoc-aggregate-terra-position.json
@@ -11,6 +12,7 @@ workflows:
       - orcid: 0000-0003-4896-1858
   - subclass: WDL
     primaryDescriptorPath: /pc-air/pc-air.wdl
+    readMePath: /pc-air/README.md
     testParameterFiles:
       - /pc-air/pc-air-local.json
       - /pc-air/pc-air-terra.json

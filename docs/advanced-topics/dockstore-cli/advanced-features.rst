@@ -1,6 +1,9 @@
 Advanced CLI Features
 =====================
 
+.. contents:: Table of Contents
+  :local:
+
 .. _file-provisioning:
 
 File Provisioning
@@ -331,6 +334,8 @@ with the `Cromwell <https://github.com/broadinstitute/cromwell>`__ version liste
 +-------------+-----------------------+
 |     1.13    |          77           |
 +-------------+-----------------------+
+|     1.14    |          84           |
++-------------+-----------------------+
 
 Additionally, you can override the Cromwell version in your
 ``~/.dockstore/config`` using for example:
@@ -515,7 +520,7 @@ The table below summarizes some of the WES endpoints available:
 +-----------+------------------------------------------------------+-----------+
 
 
-.. note::  WES SUPPORT IS IN BETA AT THIS TIME. RESULTS MAY BE UNPREDICTABLE.
+.. note::  WES SUPPORT IS IN PREVIEW MODE AT THIS TIME. RESULTS MAY BE UNPREDICTABLE.
 
 .. discourse::
     :topic_identifier: 1274

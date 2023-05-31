@@ -1,10 +1,18 @@
-WES Tutorial for AWS AGC
-========================
+WES Tutorial for running WDL workflows through the Cromwell Engine on AWS AGC
+=============================================================================
+
+.. note::
+    Although the process for running CWL workflows through the Toil engine on AWS AGC is very similar to the process
+    described in this tutorial, there are a few differences. For information on how to launch a CWL workflow on AWS
+    AGC please consult this :doc:`tutorial <wes-cwl-agc-tutorial>`.
+
 Amazon Web Services' (AWS) Amazon Genomics CLI (AGC) is a command line tool for launching cloud infrastructure
 within AWS accounts that can be used to execute genomics workflows. The infrastructure deployed by AGC implements the WES
-standard, and thus can be directly communicated with by using the Dockstore CLI.
+standard, and thus can be directly used by the Dockstore CLI.
 
-Check out the official AGC `GitHub page <https://github.com/aws/amazon-genomics-cli>`_.
+Check out the official AGC `Info page <https://aws.github.io/amazon-genomics-cli>`_.
+
+For developers, check out the official AGC `GitHub page <https://github.com/aws/amazon-genomics-cli>`_.
 
 Download and Install AWS AGC
 ----------------------------
@@ -30,8 +38,9 @@ The following WDL workflow tutorials will cover:
                 "workflowInputs": <pathToInputJSON>
             }
 
-    2. AWS AGC references descriptor files by URLs. The Dockstore CLI references the primary descriptor in an execution request as a GA4GH Tool Registry Service (`TRS <https://github.com/ga4gh/tool-registry-service-schemas>`_) URL.
-    The AGC infrastructure will only be able to access the file referenced by the TRS URL if the workflow is published (i.e. public) on Dockstore.
+    2. AWS AGC references descriptor files by URLs. The Dockstore CLI references the primary descriptor in an execution request as a GA4GH Tool Registry Service (`TRS <https://github.com/ga4gh/tool-registry-service-schemas>`_) URL.  The AGC infrastructure will only be able to access the file referenced by the TRS URL if the workflow is published (i.e. public) on Dockstore.
+
+    3. On AWS AGC, the test parameter file for a WDL workflow running in Cromwell must reference other files using S3 URLs.  Other types of URLs, including `https:`, are not supported.
 
 Configuring AGC and the Dockstore CLI
 ----------------------------------------
@@ -73,7 +82,7 @@ bucket that will be used for one of the following example workflows.
 
         agc account activate
 
-3. Deploy an AGC context by running the below command in the same directory as ``agc-project.yaml``. This may take a few minutes.
+3. Deploy an AGC context by running the below command in the same directory as ``agc-project.yaml``. This will take approximately 10 minutes.
 
     .. code:: text
 
@@ -134,7 +143,7 @@ This WDL workflow prints out the string "Hello from AGC" as its output.
                 output { String out = read_string( stdout() ) }
             }
 
-1. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/>`_, we can quickly launch it by passing the Dockstore CLI the entry name and its version:
+1. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/workflows/github.com/dockstore-testing/wes-testing/agc-hello-world:v1.12?tab=info>`__, we can quickly launch it by passing the Dockstore CLI the entry name and its version:
 
     .. code:: text
 
@@ -272,7 +281,7 @@ This WDL workflow tabulates read counts of the input fastq file.
             "workflowInputs": "input.json"
         }
 
-3. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/>`_, we can quickly launch it by passing the Dockstore CLI the entry and input files. File attachments can be specified with the ``--attach`` or ``-a`` switch:
+3. Since this workflow is publicly posted on `Dockstore.org <https://dockstore.org/workflows/github.com/dockstore-testing/wes-testing/agc-fastq-read-counts:v1.12?tab=info>`__, we can quickly launch it by passing the Dockstore CLI the entry and input files. File attachments can be specified with the ``--attach`` or ``-a`` switch:
 
     .. code:: text
 
@@ -330,3 +339,13 @@ AWS console, or copy the file contents using the AWS CLI:
     .. code:: text
 
         aws s3 cp s3://agc-example123-us-west-2/project/dockstoreAgcTutorialProject/userid/userM2LQJ/context/ctx1/cromwell-execution/fastqReadCounts/b4e86806-2dc0-4d70-b494-52651e9b3de0/call-countFastqReads/cacheCopy/total_reads.txt -
+
+6. When you are finished running workflows on your AGC context, you need to destroy it. Destroy your AGC context by running the below command in the same directory as ``agc-project.yaml``.
+This will take approximately 20 minutes.
+
+    .. code:: text
+
+        agc context destroy ctx1
+
+.. discourse::
+    :topic_identifier: 6471

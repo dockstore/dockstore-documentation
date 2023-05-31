@@ -20,10 +20,29 @@ Creating an organization
 To create an organization request, go to the
 `organizations <https://dockstore.org/organizations>`__ page and select
 ``Create Organization Request``. Any user can request to create an
-organization by filling out the following form. For now, the request
+organization by filling out the following form. The request
 must be approved by a Dockstore curator in order to be public. Until it
 is approved, you are still able to edit it, add collections, add
 members, etc.
+
+To create an organization request, you must have at least 2 external accounts
+linked to your Dockstore account. Linked accounts help the Dockstore curators
+verify that a legitimate user is creating the request.
+
+When you click the ``Create Organization Request`` button, you are prompted with 
+a dialog that shows the number of external accounts you have linked. If you have
+at least 2 accounts linked, you can create an organization request. If 
+you have fewer than two accounts linked, you cannot create an 
+organization request. In both cases, the dialog has a ``Link Accounts`` button
+that takes you to the Accounts page, where you can link additional accounts.
+
+.. figure:: /assets/images/docs/UserVerification.png
+   :alt: User Verification
+
+   User Verification
+
+If you have at least 2 accounts linked, clicking the ``Next`` button brings up the
+Create Organization Request dialog.
 
 .. figure:: /assets/images/docs/CreateOrganizationRequest.png
    :alt: Create Organization Request

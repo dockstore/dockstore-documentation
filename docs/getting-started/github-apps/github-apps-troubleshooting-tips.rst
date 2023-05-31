@@ -1,3 +1,5 @@
+.. _topGHAFAQ:
+
 =================================
 GitHub App Troubleshooting & FAQs
 =================================
@@ -11,14 +13,16 @@ GitHub App Troubleshooting & FAQs
 
 Why should I migrate my existing workflows to use GitHub Apps and a .dockstore.yml?
 ----------------------------------------------------------------------------------------
-Installing our Dockstore GitHub App onto your GitHub repository or organization will automatically sync your workflow/tool on Dockstore whenever code is pushed to GitHub.
+Installing our Dockstore GitHub App onto repositories in a GitHub organization or your GitHub personal account will automatically sync your workflow/tool on Dockstore whenever code is pushed to GitHub.
 This means less manual work for workflow developers, and less waiting for content to update.
 
 This requires the addition of a .dockstore.yml file to your repository on GitHub.
 This file contains information that Dockstore will use to setup
 the corresponding workflow/tool entry on Dockstore. Branches that do not have a .dockstore.yml file, or that are filtered out via the filter feature, will not be synchronized.
 
-You can read more about it at :doc:`/getting-started/github-apps/github-apps`.
+You can read more about it at :doc:`/getting-started/github-apps/github-apps`. 
+
+:ref:`(back to top) <topGHAFAQ>`
 
 How does this change my development flow?
 -------------------------------------------
@@ -29,21 +33,27 @@ Therefore, as long as your workflow is already registered on Dockstore and your 
 
 You can use filters in a .dockstore.yml to avoid generating a corresponding workflow-version on Dockstore.
 
-*Note:* If you want to edit version information, such as workflow path, you will have to update the .dockstore.yml file directly on the corresponding GitHub branch. For example, if develop has a .dockstore.yml that points to my_workflow.wdl, but my_workflow.wdl is moved to another path on the branch develop-but-better, then the .dockstore.yml on develop-but-better will need to point to the new location of my_workflow.wdl.
+*Note:* If you want to edit version information, such as workflow path, you will have to update the .dockstore.yml file directly on the corresponding GitHub branch. For example, if develop has a .dockstore.yml that points to my_workflow.wdl, but my_workflow.wdl is moved to another path on the branch develop-but-better, then the .dockstore.yml on develop-but-better will need to point to the new location of my_workflow.wdl. 
+
+:ref:`(back to top) <topGHAFAQ>`
 
 .. _Check GitHub App installation on repository:
 
 How do I check if the Dockstore GitHub App was installed on an individual repository?
 --------------------------------------------------------------------------------------
-Go to your repo on GitHub, click the Settings tab, click Integrations on the left and verify our app is installed and configured correctly
+Go to your repo on GitHub and click the Settings tab. On the left hand side under the Integrations section, click on GitHub Apps and verify our app is installed and configured correctly.
 
 .. image:: /assets/images/docs/github-repo-settings.png
 
-You may not have access to this page if you are not an administrator of your GitHub organization, :ref:`but you may still be able to see if it installed. <view github app permissions hack>`
+If you're checking if the GitHub App was installed on a repository of an organization, you may not have access to this page if you are not an administrator of your GitHub organization, :ref:`but you may still be able to see if it installed. <view github app permissions hack>` 
+
+:ref:`(back to top) <topGHAFAQ>`
 
 How do I configure the GitHub App across multiple repositories?
 ------------------------------------------------------------------
-GitHub Apps can be installed on either an a user level, or an organizational level. If you installed the app for your own repos that are not in an organization, you will be able to verify the Dockstore GitHub App is installed by clicking "Applications" in the left menu in your GitHub settings. Our app, along with any others you may have installed, will be there. Clicking the "configure" button will allow you to adjust which repos the app has access to.
+GitHub Apps can be installed on either an a user level, or an organizational level. If you installed the app for your own repositories that are not in an organization, you will be able to verify the Dockstore GitHub App is installed by clicking "Applications" in the left menu in your GitHub settings. Our app, along with any others you may have installed, will be there. Clicking the "configure" button will allow you to adjust which repos the app has access to. 
+
+:ref:`(back to top) <topGHAFAQ>`
 
 .. _view github app permissions hack:
 
@@ -54,6 +64,8 @@ A GitHub organization's admins can configure an app directly in the organization
 
 .. image:: /assets/images/docs/reinstall-app-to-cheese-org-settings.png
    :width: 50%
+
+:ref:`(back to top) <topGHAFAQ>`
 
 .. _GitHub App permissions FAQ:
 
@@ -80,13 +92,15 @@ You may also still run into scenarios where your changes appear to not get saved
 
 If it seems your GitHub App access just won't "stick" or you are having other permissions issues, consider asking the administrator of your organization to install the app. If they set it up to have access to all repositories on the organization, this will only need to be done once.
 
+:ref:`(back to top) <topGHAFAQ>`
+
 The changes made to my GitHub repo aren't appearing on Dockstore, but I've already installed the GitHub app and made the .dockstore.yml file. How can I figure out what's going wrong?
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 The general troubleshooting flow we recommend is the following:
 
 - Try waiting a couple of minutes and refreshing the browser on the My Workflows/My Tools page again. Sometimes, GitHub takes a few minutes to send Dockstore the changes made to a repository.
-- Verify that the GitHub app was given access to the right repository or organization. 
-- If access was given to the wrong organization or repository, or this is your first time installing the app, you'll need to push another commit after adding the correct repository to activate the sync to Dockstore.
+- Verify that the GitHub app was given access to the right repository in an organization or your personal account. 
+- If access was given to the wrong repository or organization/personal account, or this is your first time installing the app, you may need to push another commit after adding the correct repository to activate the sync to Dockstore.
 - Double check the .dockstore.yml file.
 
     - Is it in the root directory?
@@ -97,12 +111,20 @@ The general troubleshooting flow we recommend is the following:
 
 If you've already tried these, you can view GitHub App logs through Dockstore to see if there have been any errors (see next section).
 
+:ref:`(back to top) <topGHAFAQ>`
+
+.. _GitHub App logs FAQ:
+
 How do I view the GitHub App logs?
 ----------------------------------
-Navigate to the ``/my-workflows`` (or ``/my-tools``) page and expand the GitHub Organization that the repository belongs to on the left hand side. Then click on the bottom where it says ``See GitHub App Logs``.
+Navigate to the ``/my-workflows`` (or ``/my-tools``) page. 
+
+.. note:: If you're trying to view the GitHub App logs for a notebook, which doesn't have its own ``/my-notebooks`` page yet, navigate to ``/my-workflows`` then continue following the steps.
+
+Expand the GitHub account that the repository belongs to on the left hand side. Then click on the bottom where it says ``Apps Logs``.
 
 .. image:: /assets/images/docs/github-app-logs-button.png
-   :width: 40 %
+   :width: 30 %
 
 Once loaded, the following window will be displayed.
 
@@ -128,6 +150,8 @@ It is saying that the workflow name ``single workflow`` is invalid. The workflow
 If you're having trouble finding the relevant logs, try searching for the name of your repository by using the filter on the upper left. You can also sort the rows by clicking on a column heading.
 For example, if you click the ``Success`` column heading once, it will list all the events that failed first.
 
+:ref:`(back to top) <topGHAFAQ>`
+
 Why was a new workflow registered instead of migrating my existing one?
 --------------------------------------------------------------------------
 ..
@@ -144,6 +168,7 @@ A new separate workflow/tool will be registered if the original name isn't inclu
    :alt: Tool to Migrate
    :width: 55 %
 
+:ref:`(back to top) <topGHAFAQ>`
 
 How can I convert my entire existing workflow/tool at once?
 -------------------------------------------------------------
@@ -152,3 +177,18 @@ automatically detect and sync changes with the corresponding version on Dockstor
 
 If you have a .dockstore.yml file in your master or develop branches on GitHub, any new branches you create from these as your template
 will have a  .dockstore.yml.
+
+:ref:`(back to top) <topGHAFAQ>`
+
+
+Why are only some branches appearing on my workflow/tool?
+----------------------------------------------------------
+The Dockstore GitHub App is currently unable to parse branches that use special characters besides numerical digits, non-leading dashes, forward slashes, periods, and underscores. "Special characters" includes alphabetical characters with accents, tildes, circumflexes, umlauts, or non-English letters such as ß and ø. These limitations are stricter than what GitHub itself allows. As a result, if you have a GitHub branch named something like `Ó-Fearghail`, `branch-with-{curly-braces}`, or `Robert');-DROP-TABLE-Students;`, that branch will not appear on Dockstore. If you check the Dockstore GitHub App logs, you'll see these branches throw an error such as `Reference refs/heads/branch-with-{curly-braces} is not of the valid form`. 
+
+However, even if you have branches with unsupported names, other branches with names like `main` and `develop` will continue to update on Dockstore as normal. The public view of your published entry will not show any errors -- it will simply not show the branches with unsupported names.
+
+:ref:`(back to top) <topGHAFAQ>`
+
+
+.. discourse::
+    :topic_identifier: 6485

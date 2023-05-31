@@ -183,21 +183,5 @@ will have a .dockstore.yml, as will future releases based on master or develop.
 :ref:`(back to top) <topGHAFAQ>`
 
 
-Why are only some branches appearing on my workflow/tool?
-----------------------------------------------------------
-Any branches that do not have a .dockstore.yml file will not appear on your workflow/tool entry. If the branches you expect to see do indeed have properly formatted .dockstore.yml file, the culprit might be the name of the branches: The Dockstore GitHub App currently supports only the following special characters in branch names:
-* numerical digits
-* non-leading dashes
-* forward slashes
-* periods
-* underscores.
-
-Branches which contain other special characters, including alphabetical characters with accents, tildes, circumflexes, umlauts, or non-English letters such as ß and ø, cannot be parsed by the Dockstore GitHub App and will not show up. If you check the Dockstore GitHub App logs, you'll see these branches throw an error such as ``Reference refs/heads/Robert');-DROP-TABLE-Students; is not of the valid form``. 
-
-However, even if you have branches with unsupported names, other branches with names like `main` and `develop` will continue to update on Dockstore as normal. The public view of your published entry will not show any errors -- it will simply not show the branches with unsupported names.
-
-:ref:`(back to top) <topGHAFAQ>`
-
-
 .. discourse::
     :topic_identifier: 6485

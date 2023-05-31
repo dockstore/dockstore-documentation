@@ -13,6 +13,10 @@ For questions relating to the Dockstore CLI, please see :doc:`Dockstore CLI FAQ 
 General Dockstore Questions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+How do I use workflows that I find on Dockstore? 
+------------------------------------------------
+If you want to run the workflow locally, you can :doc:`use the Dockstore CLI to download and run the workflow </launch-with/launch>`. Alternatively, you can run the workflow using a cloud platform by clicking the "launch with" button on the right side of the workflow entry.
+
 .. _what-is-a-verified-tool-or-workflow:
 
 What is a verified tool or workflow?
@@ -319,7 +323,7 @@ Do you have tips on creating Dockerfiles?
 
 How should I handle large reference files when designing workflows and Dockerfiles?
 -----------------------------------------------------------------------------------
-Generally speaking, you can choose to either "package" reference files in your Docker image, or you can treat them as "inputs" so they can be stage outside and mounted into the running container. We generally recommend having them serve as inputs.
+Generally speaking, you can choose to either "package" reference files in your Docker image, or you can treat them as "inputs" so they can be staged outside and mounted into the running container. We generally recommend having them serve as inputs.
 
 :ref:`(back to top) <topFAQ>`
 

@@ -13,6 +13,8 @@ At a Glance
 .. include:: /advanced-topics/legacy/table--legtool-vs-ghatool.rst
 
 
+.. _legacy_tools:
+
 Dockstore Tools Prior to 1.12 (Legacy Tools)
 --------------------------------------------
 

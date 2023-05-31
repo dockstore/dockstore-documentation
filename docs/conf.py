@@ -60,7 +60,9 @@ linkcheck_ignore = [
     'launch-with/galaxy-launch-with.html', 'launch-with/nextflow-tower-launch-with.html', 'launch-with/terra-launch-with.html',
     'https://doi.org/*',
     # Confusing, linkcheck and curl report expired cert, but cert date is correct in browser
-    'https://support.orcid.org/hc/en-us/articles/360006971593-Do-you-have-more-than-one-account'
+    'https://support.orcid.org/hc/en-us/articles/360006971593-Do-you-have-more-than-one-account',
+    # elwazi cert expired, remove when renewed
+    'https://elwazi.org/'
     ]
 
 

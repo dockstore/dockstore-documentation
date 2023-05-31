@@ -12,11 +12,11 @@ service:
   # they will be retrieved from their ORCID record. If included, they will be ignored.
   # If an author's ORCID iD is not provided, include at least the name of the author.
   authors:
+    - orcid:
     - name:
       email:
       role:
       affiliation:
-    - orcid:
 
   # An optional, but recommended description of the service
   description:

@@ -1,3 +1,5 @@
+.. _topFAQ:
+
 FAQ
 ===
 
@@ -22,6 +24,8 @@ achieved success with much lower system requirements. However, launching
 tools will have higher system requirements dependent on the specific
 tool. Consult a tool's README or CWL/WDL description when in doubt.
 
+:ref:`(back to top) <topFAQ>`
+
 
 .. _what-is-a-verified-tool-or-workflow:
 
@@ -31,6 +35,8 @@ What is a verified tool or workflow?
 A verified tool/workflow means that at least one version has been verified to be successfully ran on a platform.
 
 See :doc:`/advanced-topics/verification` for full details on this feature.
+
+:ref:`(back to top) <topFAQ>`
 
 
 What is a default version of a tool or workflow?
@@ -64,14 +70,32 @@ not limited to):
     would be equivalent to
 
     ``$ dockstore tool launch --entry quay.io/cancercollaboratory/dockstore-tool-bedgraph-bigwig --json Dockstore.json``
-4. The docker pull command in the tools search reflects the defaultversion
+4. The docker pull command in the tools search reflects the default version
 
+:ref:`(back to top) <topFAQ>`
+
+.. _what-is-an-open-tool-or-workflow:
+
+What is an Open Data tool or workflow version?
+----------------------------------------------
+
+On Dockstore, an Open Data tool or workflow version includes everything needed to run the version, without any
+additional data access. This usually means there is a test parameter file whose file input parameter values
+only refer to open data -- data that is not restricted access nor costs any money to download.
+
+Note that tool and workflow versions that do not require any file input parameters are also considered Open Data.
+
+You can find Open Data workflows and tools by selecting the Open Data facet on the `search <https://dockstore.org/search>`_ page.
+When viewing an individual tool or workflow, you can tell which versions are Open Data on the Versions tab via the Open column.
+
+:ref:`(back to top) <topFAQ>`
 
 How should I register my work in Dockstore?
 -------------------------------------------
 
 .. include:: /getting-started/how-to-register-work.rst
-
+   
+:ref:`(back to top) <topFAQ>`
 
 How do I send private messages to administrators or report security vulnerabilities?
 ------------------------------------------------------------------------------------
@@ -91,6 +115,7 @@ The following steps can be taken to create a helpdesk ticket (also shown `here <
    Entering 5 topics and viewing 30 posts over a minimum of 10 minutes will raise your privileges. \
    You will be notified of any privilege changes to your account via the mailbox.
 
+:ref:`(back to top) <topFAQ>`
 
 How do I cite Dockstore?
 ------------------------
@@ -101,6 +126,8 @@ paper <https://dx.doi.org/10.12688/f1000research.10137.1>`__.
 For citing the actual code, we recommend looking at our Zenodo entry.
 You will find a variety of citation styles and ways to export it at
 |DOI|.
+
+:ref:`(back to top) <topFAQ>`
 
 .. _faq-header-github-integration:
 
@@ -120,6 +147,7 @@ only be associated with one account at a time. You will need to link
 with a different account for each login method or delete your account if
 you want to assign them to a new Dockstore account.
 
+:ref:`(back to top) <topFAQ>`
 
 
 What happens if I rename my GitHub repository?
@@ -139,6 +167,8 @@ Please note the GitHub warning: If you create a new repository under
 your account in the future, do not reuse the original name of the renamed
 repository. If you do, redirects to the renamed repository will break.
 
+:ref:`(back to top) <topFAQ>`
+
 
 .. _faq-header-permissions:
 
@@ -157,10 +187,12 @@ the "Discover Existing Dockstore Workflows" button in the "My Workflows" menu so
 If the workflow was added by manually registering it, click Refresh Organization.
 
 For participants of the :doc:`limited sharing
-beta </advanced-topics/sharing-workflows/>`, you can enter the email
+preview </advanced-topics/sharing-workflows/>`, you can enter the email
 addresses of the users you wish to share with to give them permissions
 to your workflow. This is only available for hosted workflows and users
 with Google accounts linked to Terra.
+
+:ref:`(back to top) <topFAQ>`
 
 
 Why are my workflows from an organization I belong to not visible?
@@ -178,6 +210,8 @@ has access to them in order to mirror these restrictions on Dockstore
 itself. GitHub provides a
 `tutorial <https://help.github.com/en/articles/approving-oauth-apps-for-your-organization/>`__
 for approving third party apps access to your organization.
+
+:ref:`(back to top) <topFAQ>`
 
 Why do I get an error when I try to request a DOI?
 --------------------------------------------------
@@ -204,6 +238,8 @@ The workflow version DOI can be found on the Versions tab.
 .. figure:: /assets/images/docs/workflow-version-doi.png
    :alt: Workflow version DOI
 
+:ref:`(back to top) <topFAQ>`
+
 .. _faq-header-other:
 
 Other
@@ -217,6 +253,8 @@ for an image on Quay.io, `as an
 example <https://quay.io/repository/pancancer/pcawg-bwa-mem-workflow?tab=tags>`__.
 If you have the right permissions, you can delete some and then refresh
 a tool on Dockstore to clean-up.
+
+:ref:`(back to top) <topFAQ>`
 
 
 How do I get more space inside my CWL tool running in a container?
@@ -273,6 +311,8 @@ Also be aware that some tools will use space from your root filesystem.
 For example, Docker's storage driver and data volumes will by default
 install to and use space on your root filesystem.
 
+:ref:`(back to top) <topFAQ>`
+
 
 Do you have tips on creating Dockerfiles?
 -----------------------------------------
@@ -285,6 +325,8 @@ Do you have tips on creating Dockerfiles?
 -  do not depend on changes to ``hostname`` or ``/etc/hosts``, Docker
    will interfere with this
 -  try to keep your Docker images small
+
+:ref:`(back to top) <topFAQ>`
 
 
 Do you have tips on creating CWL files?
@@ -320,6 +362,7 @@ Additionally:
       your container. Make sure your host running Docker has sufficient
       scratch space for processing your genomics data.
 
+:ref:`(back to top) <topFAQ>`
 
 .. _why-would-i-want-to-add-a-specific-version-of-a-workflow-to-a-collection:
 
@@ -334,6 +377,8 @@ Note that the version of a workflow can be especially important when working wit
 
 In summary: you can pin either a specific version of a workflow or a workflow in general depending on what relationship you wish to express. We recommend explaining further for others in the accompanying Markdown description. 
 
+:ref:`(back to top) <topFAQ>`
+
 
 Any last tips on using Dockstore?
 ---------------------------------
@@ -347,12 +392,16 @@ Any last tips on using Dockstore?
 -  related to the two above, you can use non-standard file paths if you
    customize your registrations in the Version tab of Dockstore
 
+:ref:`(back to top) <topFAQ>`
+
 What happens if I link to a different ORCID account?
 ----------------------------------------------------
 
 `ORCID <https://orcid.org>`__ is designed to `discourage more than one account for an individual <https://support.orcid.org/hc/en-us/articles/360006971593-Do-you-have-more-than-one-account->`__. However, if you somehow end up with two ORCID accounts, publish a record from Dockstore using the first ORCID account, then relink Dockstore to the second ORCID account, you will not be able to update the original ORCID record from within Dockstore.
 
 If you run into this situation, please use the `Help Desk` link in the https://dockstore.org footer to contact the Dockstore team.
+
+:ref:`(back to top) <topFAQ>`
 
 .. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.321679.svg
    :target: https://zenodo.org/record/321679

@@ -3,6 +3,7 @@ workflows:
   - subclass: <CWL | WDL | NFL | GALAXY>
     primaryDescriptorPath: <String>
     testParameterFiles: <String Array>
+    readMePath: <String>
     authors:
       - name: <String>
         email: <String>

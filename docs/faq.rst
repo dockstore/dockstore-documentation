@@ -13,19 +13,9 @@ For questions relating to the Dockstore CLI, please see :doc:`Dockstore CLI FAQ 
 General Dockstore Questions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-What environment do you test tools in?
---------------------------------------
-
-Typically, we test running tools in Ubuntu Linux 16.04 LTS on VMs in
-`OpenStack <https://www.openstack.org/>`__ with 8 vCPUs and 96 GB of RAM
-and above. We've also begun testing on Ubuntu 18.04 LTS and so far it's
-been successful. If you are only listing and editing tools, we have
-achieved success with much lower system requirements. However, launching
-tools will have higher system requirements dependent on the specific
-tool. Consult a tool's README or CWL/WDL description when in doubt.
-
-:ref:`(back to top) <topFAQ>`
-
+How do I use workflows that I find on Dockstore? 
+------------------------------------------------
+If you want to run the workflow locally, you can :doc:`use the Dockstore CLI to download and run the workflow </launch-with/launch>`. Alternatively, you can run the workflow using a cloud platform by clicking the "launch with" button on the right side of the workflow entry.
 
 .. _what-is-a-verified-tool-or-workflow:
 
@@ -134,8 +124,8 @@ You will find a variety of citation styles and ways to export it at
 Integration with GitHub
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-What is the difference between logging in with GitHub or logging in with Google?
---------------------------------------------------------------------------------
+What is the difference between logging in with GitHub versus logging in with Google?
+-------------------------------------------------------------------------------------
 
 The intent here is that you should be able to login with either login
 method and still conveniently get into the same Dockstore account. With
@@ -324,43 +314,42 @@ Do you have tips on creating Dockerfiles?
    client/server issues, it is also not compatible with CWL)
 -  do not depend on changes to ``hostname`` or ``/etc/hosts``, Docker
    will interfere with this
+-  use a well-known and secure :ref:`dict parent image` such as official `debian <https://hub.docker.com/_/debian>`__ or `Python <https://hub.docker.com/_/python>`__ images
 -  try to keep your Docker images small
+   -  however, do not use alpine images, or other images that lack bash, as your parent image unless you will be installing bash in the Dockerfile 
+  
 
 :ref:`(back to top) <topFAQ>`
 
+How should I handle large reference files when designing workflows and Dockerfiles?
+-----------------------------------------------------------------------------------
+Generally speaking, you can choose to either "package" reference files in your Docker image, or you can treat them as "inputs" so they can be staged outside and mounted into the running container. We generally recommend having them serve as inputs.
 
-Do you have tips on creating CWL files?
+:ref:`(back to top) <topFAQ>`
+
+Do you have tips on creating workflows?
 ---------------------------------------
 
-When writing CWL tools and workflows, there are a few common workarounds
-that can be used to deal with the restrictions that CWL places on the
-use of docker. These include:
+When writing workflows, there are a few common workarounds
+that can be used to deal with the restrictions that workflow languages such as CWL and WDL place on the
+use of Docker. These include:
 
 * cwltool (which we use to run tools) is restrictive and locks down much of ``/`` as read only, use the current working directory or $TMPDIR for file writes 
 
 * You can also use `Docker volumes <https://docs.docker.com/engine/reference/builder/#/volume>`__ in your Dockerfile to specify additional writeable directories
 
-* Do not rely on the hostname inside a container, Docker dynamically generates this when starting containers
+* Do not rely on the hostname inside a container; Docker dynamically generates this when starting containers
+
+* Do not rely on an entrypoint inside a container; workflow executors tend to override custom entrypoints with /bin/bash 
 
 Additionally:
 
--  you need to "collect" output from your tools/workflows inside docker
-   and drop them into the current working directory in order for CWL to
-   "find" them and pull them back outside of the container
+-  in order for the workflow executor to "find" your outputs and pull them back outside the container, you may want to "collect" output from your tools/workflows inside Docker and drop them into the current working directory
 -  related to this, it's often times easiest to write a simple wrapper
    script that maps the command line arguments specified by CWL to
    however your tool expects to be parameterized. This script can handle
    moving output to the current working directory and renaming if need
    be
--  genomics workflows work with large data files, this can have a few
-   ramifications:
-
-   -  do not "package" large data reference files in your Docker image.
-      Instead, treat them as "inputs" so they can be staged outside and
-      mounted into the running container
-   -  the ``$TMPDIR`` variable can be used as a scratch space inside
-      your container. Make sure your host running Docker has sufficient
-      scratch space for processing your genomics data.
 
 :ref:`(back to top) <topFAQ>`
 
@@ -384,11 +373,12 @@ Any last tips on using Dockstore?
 ---------------------------------
 
 -  the Dockstore CLI uses ``./datastore`` in the working directory for
-   temp files so if you're processing large files make sure this
+   temp files, so if you're processing large files, make sure this
    partition hosting the current directory is large.
 -  you can use a single Docker image with multiple tools, each of them
    registered via a different CWL
--  you can use a Git repository with multiple CWL files
+-  you can also use a single Docker image with multiple workflows
+-  you can use a Git repository with multiple workflow files
 -  related to the two above, you can use non-standard file paths if you
    customize your registrations in the Version tab of Dockstore
 

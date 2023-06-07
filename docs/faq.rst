@@ -15,7 +15,7 @@ General Dockstore Questions
 
 How do I use workflows that I find on Dockstore? 
 ------------------------------------------------
-If you want to run the workflow locally, you can :doc:`use the Dockstore CLI to download and run the workflow </launch-with/launch>`. Alternatively, you can run the workflow using a cloud platform by clicking the "launch with" button on the right side of the workflow entry.
+If you want to run the workflow locally, you can :doc:`use the Dockstore CLI to download and run the workflow </launch-with/launch>`. Alternatively, you can run the workflow using a cloud platform by clicking the "Launch With" button on the right side of the workflow entry.
 
 .. _what-is-a-verified-tool-or-workflow:
 

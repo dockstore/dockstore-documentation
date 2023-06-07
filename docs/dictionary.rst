@@ -895,7 +895,7 @@ parameter file
 
 parent image
 ------------
-    A :ref:`dict Docker image` which acts as the base upon which another Docker image is built. For example, including FROM ubuntu:22.04 in a :ref:`dict Dockerfile` means that the resulting image will include everything inside ubuntu:22.04, plus any changes made by other commands in the Dockerfile. Parent images are sometimes called base images, but strictly speaking a base image is different (see further reading).  
+    A :ref:`dict Docker image` which acts as the base upon which another Docker image is built. For example, including ``FROM ubuntu:22.04`` in a :ref:`dict Dockerfile` means that the resulting image will include everything inside ubuntu:22.04, plus any changes made by other commands in the Dockerfile. Parent images are sometimes called base images, but strictly speaking a base image is different (see further reading).  
 
 Further reading: `<https://docs.docker.com/glossary/#parent-image>`_  
 

@@ -507,7 +507,7 @@ ParameterFile = GlossEntry("parameter file",
 	pronunciation='')
 
 ParentImage = GlossEntry("parent image", 
-	definition="A [Docker image] which acts as the base upon which another Docker image is built. For example, including FROM ubuntu:22.04 in a [Dockerfile] means that the resulting image will include everything inside ubuntu:22.04, plus any changes made by other commands in the Dockerfile. Parent images are sometimes called base images, but strictly speaking a base image is different (see further reading).", 
+	definition="A [Docker image] which acts as the base upon which another Docker image is built. For example, including ``FROM ubuntu:22.04`` in a [Dockerfile] means that the resulting image will include everything inside ubuntu:22.04, plus any changes made by other commands in the Dockerfile. Parent images are sometimes called base images, but strictly speaking a base image is different (see further reading).", 
 	furtherreading="https://docs.docker.com/glossary/#parent-image")
 
 Preemptible = GlossEntry("preemptible", 

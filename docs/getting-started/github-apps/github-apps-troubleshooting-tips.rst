@@ -124,15 +124,17 @@ Navigate to the ``/my-workflows`` (or ``/my-tools``) page.
 Expand the GitHub account that the repository belongs to on the left hand side. Then click on the bottom where it says ``Apps Logs``.
 
 .. image:: /assets/images/docs/github-app-logs-button.png
-   :width: 30 %
+   :width: 40 %
 
 Once loaded, the following window will be displayed.
 
 .. image:: /assets/images/docs/github-app-logs-window.png
+   :width: 80 %
 
 Here you can view all the GitHub app events Dockstore is aware of and whether they failed or were successful. If there was a failure, you can expand that row and view the error message as shown below.
 
 .. image:: /assets/images/docs/github-app-logs-error-message.png
+   :width: 80 %
 
 In the case shown above, the error message is from parsing the following .dockstore.yml file.
 
@@ -173,19 +175,10 @@ A new separate workflow/tool will be registered if the original name isn't inclu
 How can I convert my entire existing workflow/tool at once?
 -------------------------------------------------------------
 Currently you cannot convert all existing branches/versions at once. You must add a .dockstore.yml to each branch in order for the GitHub app
-automatically detect and sync changes with the corresponding version on Dockstore.
+automatically detect and sync changes with the corresponding version on Dockstore. A side effect of this is that, unless you edit tagged commits to include .dockstore.yml files, old releases created prior to you creating a .dockstore.yml will not be selectable in Dockstore.
 
 If you have a .dockstore.yml file in your master or develop branches on GitHub, any new branches you create from these as your template
-will have a  .dockstore.yml.
-
-:ref:`(back to top) <topGHAFAQ>`
-
-
-Why are only some branches appearing on my workflow/tool?
-----------------------------------------------------------
-The Dockstore GitHub App is currently unable to parse branches that use special characters besides numerical digits, non-leading dashes, forward slashes, periods, and underscores. "Special characters" includes alphabetical characters with accents, tildes, circumflexes, umlauts, or non-English letters such as ß and ø. These limitations are stricter than what GitHub itself allows. As a result, if you have a GitHub branch named something like `Ó-Fearghail`, `branch-with-{curly-braces}`, or `Robert');-DROP-TABLE-Students;`, that branch will not appear on Dockstore. If you check the Dockstore GitHub App logs, you'll see these branches throw an error such as `Reference refs/heads/branch-with-{curly-braces} is not of the valid form`. 
-
-However, even if you have branches with unsupported names, other branches with names like `main` and `develop` will continue to update on Dockstore as normal. The public view of your published entry will not show any errors -- it will simply not show the branches with unsupported names.
+will have a .dockstore.yml, as will future releases based on master or develop.
 
 :ref:`(back to top) <topGHAFAQ>`
 

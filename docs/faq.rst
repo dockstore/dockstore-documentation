@@ -110,7 +110,7 @@ The following steps can be taken to create a helpdesk ticket (also shown `here <
 How do I cite Dockstore?
 ------------------------
 
-For citing Dockstore as a paper, take a look at our `F1000
+For citing Dockstore as a paper, take a look at our `Nucleic Acids Research paper <https://doi.org/10.1093/nar/gkab346>`__ or our older `F1000
 paper <https://dx.doi.org/10.12688/f1000research.10137.1>`__.
 
 For citing the actual code, we recommend looking at our Zenodo entry.
@@ -393,8 +393,8 @@ If you run into this situation, please use the `Help Desk` link in the https://d
 
 :ref:`(back to top) <topFAQ>`
 
-.. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.321679.svg
-   :target: https://zenodo.org/record/321679
+.. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.592056.svg
+   :target: https://zenodo.org/record/8165758
 
 .. discourse::
     :topic_identifier: 1968

@@ -2,8 +2,7 @@ ISMB Tutorial
 =============
 *July 9, 2016*
 
-As described at
-`ISMB <https://www.iscb.org/cms_addon/conferences/ismb2016/akes.php>`__
+As described at ISMB
 
     Dr. O’Connor will begin by discussing the ICGC PCAWG project and the
     insights he's gained from rapidly analyzing thousands of whole

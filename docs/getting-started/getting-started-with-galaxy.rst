@@ -28,12 +28,14 @@ Using Custom Galaxy in the Cloud with Terra, and AnVIL
 ------------------------------------------------------------------------
 Galaxy is also integrated into the Terra cloud workspace. This provides users the ability to readily create a custom Galaxy environment scaled to their needs or with additional tools installed. Additionally, the Terra workspace is able to access a rich data corpus hosted in the cloud, including many controlled access datasets, thus allowing users to conduct analyses with this data in a compliance-based environment.
 
-Unlike WDL and CWL, Galaxy workflows in the near term are created and modified from the Galaxy workflow editor (GUI), instead of a text editor.
-
 Create a basic Galaxy workflow
 ------------------------------
 
+Unlike WDL and CWL, Galaxy workflows are currently created and modified from the Galaxy workflow editor (GUI), instead of a text editor.
+
 If you would like to create and run your own workflow in Galaxy, here  is a tutorial for `Creating, Editing, Importing Galaxy Workflows <https://training.galaxyproject.org/training-material/topics/galaxy-interface/tutorials/workflow-editor/tutorial.html>`__ from the Galaxy Training Network.
+
+In addition, the Galaxy Intergalactic Workflow Commission (IWC) team has an excellent tutorial for creating best practices workflows for IWC `here <https://github.com/galaxyproject/iwc/blob/main/workflows/README.md>`__. Although somewhat specific to the IWC directory structure, it discusses how to add the correct metadata, generate tests, and lint your workflow. It also shows how you can generate a ``.dockstore.yml`` using the `Planemo <https://planemo.readthedocs.io/en/latest/index.html>`__ command-line utilities.
 
 Export the workflow to a file
 -----------------------------
@@ -53,6 +55,13 @@ outputs, and Galaxy Tool Shed dependencies for your workflow.
 
    Download
 
+If you've installed `Planemo <https://planemo.readthedocs.io/en/latest/index.html>`__, generate a ``.dockstore.yml`` file according to the `IWC instructions <https://github.com/galaxyproject/iwc/blob/main/workflows/README.md>`__, by navigating to the directory containing your workflow and run:
+
+::
+
+$ planemo dockstore_init .
+
+The ``.dockstore.yml`` is used in conjunction with the :doc:`Dockstore GitHub App <github-apps/github-apps-landing-page>`. For other workflow languages, the ``.dockstore.yml`` is created in a text editor; for Galaxy you have the option of generating with a command-line tool, and it's recommended you do so.
 
 .. note:: As of this writing, the Galaxy team has created an `improved YAML-based file format <https://github.com/galaxyproject/gxformat2>`__, known as "Format 2", that is more human-friendly and preferred over the original '.ga' format.  Currently, the Galaxy interface only exports files in the original '.ga' format, but this `may change <https://github.com/galaxyproject/galaxy/issues/13584>`__.  If the Galaxy interface allows it, you should export your Galaxy workflow as a "Format 2" file.
 
@@ -70,7 +79,7 @@ Upload the workflow to GitHub
 
 - Go to your repository and click on the Upload Files menu item under Add Files
 - Click on the 'choose your files' link
-- Select your exported Galaxy workflow file
+- Select your exported Galaxy workflow file and the .dockstore.yml file
 - Click on 'Commit changes'
 
 These steps are outlined `here. <https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository>`__

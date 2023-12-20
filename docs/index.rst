@@ -168,6 +168,7 @@ Best practices guidelines
    :maxdepth: 1
 
    Installing the Dockstore CLI <https://dockstore.org/quick-start>
+   advanced-topics/dockstore-cli/overview
    advanced-topics/dockstore-cli/dockstore-cli-faq
    advanced-topics/dockstore-cli/local-cromwell-config
    advanced-topics/dockstore-cli/set-up-file-provisioning-plugins

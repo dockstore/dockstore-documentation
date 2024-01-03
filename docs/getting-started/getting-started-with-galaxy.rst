@@ -55,13 +55,6 @@ outputs, and Galaxy Tool Shed dependencies for your workflow.
 
    Download
 
-If you've installed `Planemo <https://planemo.readthedocs.io/en/latest/index.html>`__, generate a ``.dockstore.yml`` file according to the `IWC instructions <https://github.com/galaxyproject/iwc/blob/main/workflows/README.md>`__, by navigating to the directory containing your workflow and run:
-
-::
-
-$ planemo dockstore_init .
-
-The ``.dockstore.yml`` is used in conjunction with the :doc:`Dockstore GitHub App <github-apps/github-apps-landing-page>`. For other workflow languages, the ``.dockstore.yml`` is created in a text editor; for Galaxy you have the option of generating with a command-line tool, and it's recommended you do so.
 
 .. note:: As of this writing, the Galaxy team has created an `improved YAML-based file format <https://github.com/galaxyproject/gxformat2>`__, known as "Format 2", that is more human-friendly and preferred over the original '.ga' format.  Currently, the Galaxy interface only exports files in the original '.ga' format, but this `may change <https://github.com/galaxyproject/galaxy/issues/13584>`__.  If the Galaxy interface allows it, you should export your Galaxy workflow as a "Format 2" file.
 
@@ -73,6 +66,17 @@ repository that Dockstore knows about. GitHub is a good choice, and if you
 are not familiar with GitHub you can use this
 `tutorial <https://guides.github.com/activities/hello-world/>`__ to set up
 an account and repository.
+
+Creating a .dockstore.yml
+-------------------------
+
+You will need a ``.dockstore.yml`` file. It is used in conjunction with the :doc:`Dockstore GitHub App <github-apps/github-apps-landing-page>` to integrate your workflow with Dockstore. For other workflow languages, the ``.dockstore.yml`` is created in a text editor; for Galaxy you have the option of generating with a command-line tool, and it's recommended you do so.
+
+To generate a .dockstore.yml, first install `Planemo <https://planemo.readthedocs.io/en/latest/index.html>`__. Then generate then ``.dockstore.yml`` file according to the `IWC instructions <https://github.com/galaxyproject/iwc/blob/main/workflows/README.md>`__, by navigating to the directory containing your workflow and running:
+
+::
+
+$ planemo dockstore_init .
 
 Upload the workflow to GitHub
 -----------------------------

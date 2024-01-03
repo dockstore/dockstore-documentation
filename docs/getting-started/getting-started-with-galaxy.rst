@@ -31,11 +31,11 @@ Galaxy is also integrated into the Terra cloud workspace. This provides users th
 Create a basic Galaxy workflow
 ------------------------------
 
-Unlike WDL and CWL, Galaxy workflows are currently created and modified from the Galaxy workflow editor (GUI), instead of a text editor.
+Unlike other workflow languages such as WDL and CWL, Galaxy workflows are currently created and modified from the Galaxy workflow editor (GUI), instead of a text editor.
 
 If you would like to create and run your own workflow in Galaxy, here  is a tutorial for `Creating, Editing, Importing Galaxy Workflows <https://training.galaxyproject.org/training-material/topics/galaxy-interface/tutorials/workflow-editor/tutorial.html>`__ from the Galaxy Training Network.
 
-In addition, the Galaxy Intergalactic Workflow Commission (IWC) team has an excellent tutorial for creating best practices workflows for IWC `here <https://github.com/galaxyproject/iwc/blob/main/workflows/README.md>`__. Although somewhat specific to the IWC directory structure, it discusses how to add the correct metadata, generate tests, and lint your workflow. It also shows how you can generate a ``.dockstore.yml`` using the `Planemo <https://planemo.readthedocs.io/en/latest/index.html>`__ command-line utilities.
+In addition, the Galaxy Intergalactic Workflow Commission (IWC) team has an excellent tutorial for creating best practices workflows for IWC `here <https://github.com/galaxyproject/iwc/blob/main/workflows/README.md>`__. It discusses how to add the correct metadata, generate tests, and lint your workflow. It also shows how you can generate a ``.dockstore.yml`` using the `Planemo <https://planemo.readthedocs.io/en/latest/index.html>`__ command-line utilities.
 
 Export the workflow to a file
 -----------------------------

@@ -581,7 +581,7 @@ TRS = GlossEntry("TRS",
 UCSC = GlossEntry("UCSC", 
 	acronym_full="University of California, Santa Cruz", 
 	definition="A public university located in Santa Cruz that is focused on undergraduate and graduate education and research. The Genomics Institute, a branch of UCSC's engineering department, is one of the two institutes involved in the development of Dockstore, the other being [OICR].", 
-	furtherreading="https://ucsc.edu", 
+	furtherreading="https://www.ucsc.edu", 
 	institute="", 
 	pronunciation="")
 

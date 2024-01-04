@@ -1026,7 +1026,7 @@ UCSC
 
     A public university located in Santa Cruz that is focused on undergraduate and graduate education and research. The Genomics Institute, a branch of UCSC's engineering department, is one of the two institutes involved in the development of Dockstore, the other being :ref:`dict OICR`.  
 
-Further reading: `<https://ucsc.edu>`_  
+Further reading: `<https://www.ucsc.edu>`_  
 
 
 

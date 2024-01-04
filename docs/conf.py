@@ -62,9 +62,7 @@ linkcheck_ignore = [
     # Confusing, linkcheck and curl report expired cert, but cert date is correct in browser
     'https://support.orcid.org/hc/en-us/articles/360006971593-Do-you-have-more-than-one-account',
     # elwazi cert expired, remove when renewed
-    'https://elwazi.org/',
-    # Started failing in Python, even though it works with curl/browser
-    'https://ucsc.edu'
+    'https://elwazi.org/'
     ]
 
 

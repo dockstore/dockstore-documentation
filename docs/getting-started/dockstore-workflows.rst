@@ -73,6 +73,10 @@ removed from Dockstore.
 
 For more information on this method, as well as general troubleshooting advice, please check our :doc:`Dockstore GitHub Apps Overview </getting-started/github-apps/github-apps>` page.
 
+.. note::
+
+    For Galaxy workflows it is recommended you use the Galaxy command-line utility, Planemo, to generate the .dockstore.yml. See :ref:`Generating a .dockstore.yml with Planemo <Planemo dockstore.yml>`
+
 Legacy Registration Methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

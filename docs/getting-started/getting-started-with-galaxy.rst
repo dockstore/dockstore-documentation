@@ -67,23 +67,12 @@ are not familiar with GitHub you can use this
 `tutorial <https://guides.github.com/activities/hello-world/>`__ to set up
 an account and repository.
 
-Creating a .dockstore.yml
--------------------------
-
-You will need a ``.dockstore.yml`` file. It is used in conjunction with the :doc:`Dockstore GitHub App <github-apps/github-apps-landing-page>` to integrate your workflow with Dockstore. For other workflow languages, the ``.dockstore.yml`` is created in a text editor; for Galaxy you have the option of generating with a command-line tool, and it's recommended you do so.
-
-To generate a .dockstore.yml, first install `Planemo <https://planemo.readthedocs.io/en/latest/index.html>`__. Then generate then ``.dockstore.yml`` file according to the `IWC instructions <https://github.com/galaxyproject/iwc/blob/main/workflows/README.md>`__, by navigating to the directory containing your workflow and running:
-
-::
-
-$ planemo dockstore_init .
-
 Upload the workflow to GitHub
 -----------------------------
 
 - Go to your repository and click on the Upload Files menu item under Add Files
 - Click on the 'choose your files' link
-- Select your exported Galaxy workflow file and the .dockstore.yml file
+- Select your exported Galaxy workflow file
 - Click on 'Commit changes'
 
 These steps are outlined `here. <https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository>`__
@@ -108,8 +97,25 @@ Now that you have a git repository that includes a Galaxy workflow, the next ste
 register it on Dockstore.
 
 If you haven't set up a Dockstore account follow the :doc:`next tutorial <register-on-dockstore/>` to create an
-account on Dockstore and link to third party services, which includes GitHub.
-Otherwise follow the instructions for :doc:`workflow registration. <dockstore-workflows>`
+account on Dockstore and link to third party services, which includes GitHub. Then follow the instructions for :doc:`workflow registration <dockstore-workflows>`.
+
+
+.. note::
+
+   The :doc:`workflow registration instructions <dockstore-workflows>` describe manually creating a ``.dockstore.yml``, a file needed for integrating Dockstore and GitHub. For
+   Galaxy, it's recommended you instead use :ref:`Planemo <Planemo dockstore.yml>` to generate the .dockstore.yml.
+
+.. _Planemo dockstore.yml:
+
+Using Planemo to generate a .dockstore.yml
+------------------------------------------
+
+There is a command-line utility for Galaxy, `Planemo <https://planemo.readthedocs.io/en/latest/index.html>`__, that can generate a ``.dockstore.yml``. Install Planemo, then generate the ``.dockstore.yml`` file by navigating to the directory containing your workflow and running:
+
+::
+
+$ planemo dockstore_init .
+
 
 See Also
 --------

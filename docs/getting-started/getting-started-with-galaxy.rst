@@ -110,7 +110,7 @@ account on Dockstore and link to third party services, which includes GitHub. Th
 Using Planemo to generate a .dockstore.yml
 ------------------------------------------
 
-There is a command-line utility for Galaxy, `Planemo <https://planemo.readthedocs.io/en/latest/index.html>`__, that can generate a ``.dockstore.yml``. Install Planemo, then generate the ``.dockstore.yml`` file by navigating to the directory containing your workflow and running:
+The command-line utility for Galaxy, `Planemo <https://planemo.readthedocs.io/en/latest/index.html>`__, can generate a ``.dockstore.yml``. Install Planemo, then generate the ``.dockstore.yml`` file by navigating to the directory containing your workflow and running:
 
 ::
 

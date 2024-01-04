@@ -47,6 +47,10 @@ workflow path, test parameter file, workflow name, etc. When a push is made on G
 with a .dockstore.yml, Dockstore will add that branch to the corresponding workflow on Dockstore. If the
 workflow doesn't already exist on Dockstore, one will be created (but will not automatically be published publically). Note that a single dockstore.yml file can describe multiple workflows, if all of those workflows are in the same repository.
 
+.. note::
+
+    For Galaxy workflows it is recommended you use the Galaxy command-line utility, Planemo, to generate the .dockstore.yml. See :ref:`Generating a .dockstore.yml with Planemo <Planemo dockstore.yml>`
+
 Below is a simple example of a .dockstore.yml file
 for an alignment workflow to show you how easy it is to use. Note that all file paths in the file must be absolute.
 
@@ -72,10 +76,6 @@ it is automatically updated on Dockstore! Anytime there is a deletion of a branc
 removed from Dockstore.
 
 For more information on this method, as well as general troubleshooting advice, please check our :doc:`Dockstore GitHub Apps Overview </getting-started/github-apps/github-apps>` page.
-
-.. note::
-
-    For Galaxy workflows it is recommended you use the Galaxy command-line utility, Planemo, to generate the .dockstore.yml. See :ref:`Generating a .dockstore.yml with Planemo <Planemo dockstore.yml>`
 
 Legacy Registration Methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

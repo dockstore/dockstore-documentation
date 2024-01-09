@@ -63,7 +63,7 @@ File Format Search
 You can also search by file format. This is helpful if you have a file
 of some type, and want to see which tools/workflows use it as an input
 file. Currently this is only supported for
-`CWL <https://www.commonwl.org/user_guide/16-file-formats/>`__.
+`CWL <https://www.commonwl.org/user_guide/topics/file-formats.html>`__.
 
 Tag Cloud
 ------------

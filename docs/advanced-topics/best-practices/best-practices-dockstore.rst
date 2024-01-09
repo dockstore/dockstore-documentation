@@ -39,7 +39,7 @@ For more detailed information on these metadata fields, check out the following 
 - :doc:`CWL Best Practices <./cwl-best-practices>`
 - :doc:`Nextflow Best Practices <./nfl-best-practices>` and `Nextflow manifest documentation <https://www.nextflow.io/docs/latest/config.html#scope-manifest>`_
 
-.. note:: In CWL descriptors, you can include information about your input and output files and our search will understand it. This information will be visible on the facets ``Input File Formats`` and ``Output File Formats``. Read CWL's guide on `file formats <https://www.commonwl.org/user_guide/16-file-formats/index.html>`_ to learn how.
+.. note:: In CWL descriptors, you can include information about your input and output files and our search will understand it. This information will be visible on the facets ``Input File Formats`` and ``Output File Formats``. Read CWL's guide on `file formats <https://www.commonwl.org/user_guide/topics/file-formats.html>`_ to learn how.
 
 You can also provide a description by writing a README.md file instead. If you do not provide description metadata in your descriptor, then we will try to pull the README.md file as a fallback.
 

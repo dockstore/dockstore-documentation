@@ -43,7 +43,7 @@ be writeable).
 The Dockstore command-line allows you to specify that the input file can
 be at an HTTP(S) location, an FTP location, an AWS S3 location, a Google
 Storage gs location, a `synapse
-id <https://python-docs.synapse.org/build/html/index.html#accessing-data>`__, an `ICGC storage
+id <https://python-docs.synapse.org/tutorials/python_client/#accessing-data>`__, an `ICGC storage
 id <https://docs.icgc.org/download/guide/>`__, or a `DRS
 URI <https://github.com/ga4gh/data-repository-service-schemas/issues/49>`__
 in place of that path. For example, the following indicates that the

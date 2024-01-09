@@ -17,7 +17,7 @@ Describe Your Tool in CWL
 -------------------------
 
 The first step is to create is to create a `CWL tool definition
-file <https://www.commonwl.org/user_guide/02-1st-example/>`__. This YAML
+file <https://www.commonwl.org/user_guide/introduction/quick-start.html>`__. This YAML
 (Or JSON) file describes the inputs, outputs, and Docker image
 dependencies for your tool.
 

@@ -13,6 +13,9 @@ jobs:
           name: Make html
           command: cd docs && make html
       - run:
+          name: Verify dictionary file was generated
+          command: cd docs && test -f dictionary.rst
+      - run:
           name: Link check
           command: cd docs && make linkcheck
       - run:

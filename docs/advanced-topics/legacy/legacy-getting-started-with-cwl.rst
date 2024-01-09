@@ -23,7 +23,7 @@ Describe Your Tool in CWL
 Now that you have a git repository that includes a ``Dockerfile``, you
 have tested it, and are satisfied that your tool works in Docker, the
 next step is to create a `CWL tool definition
-file <https://www.commonwl.org/user_guide/02-1st-example/>`__. This YAML
+file <https://www.commonwl.org/user_guide/introduction/quick-start.html>`__. This YAML
 (or JSON) file describes the inputs, outputs, and Docker image
 dependencies for your tool.
 

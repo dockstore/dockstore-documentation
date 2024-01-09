@@ -121,7 +121,7 @@ For each command, you can see the command parameters available to it by typing `
     --ignore-checksums                  Allows you to ignore validating checksums of each downloaded descriptor
 
 
-Common Executed Commands
+Commonly Executed Commands
 ------------------------
 
 The CLI has dozens of commands. Here are some that are documented more in depth:

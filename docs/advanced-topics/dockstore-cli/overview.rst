@@ -122,7 +122,7 @@ For each command, you can see the command parameters available to it by typing `
 
 
 Commonly Executed Commands
-------------------------
+--------------------------
 
 The CLI has dozens of commands. Here are some that are documented more in depth:
 

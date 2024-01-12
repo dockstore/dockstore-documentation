@@ -22,6 +22,3 @@ I click on "releases" in my forked version of the GitHub project
 `page <https://github.com/CancerCollaboratory/dockstore-tool-bamstats>`__
 and then follow the directions to create a new release. Simple as that!
 
-.. tip::  `HubFlow <https://datasift.github.io/gitflow/>`__ is an
-    excellent way to manage the lifecycle of releases on GitHub. Take a
-    look!

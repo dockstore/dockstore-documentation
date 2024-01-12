@@ -133,3 +133,6 @@ The CLI has dozens of commands. Here are some that are documented more in depth:
 - :doc:`Setting up local file provisioning <set-up-file-provisioning-plugins>`
 - :doc:`Running workflows remotely using the GA4GH WES API <../wes/cli-wes-tutorial>`
 
+
+.. discourse::
+    :topic_identifier: 7941

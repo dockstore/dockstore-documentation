@@ -25,7 +25,7 @@ jobs:
       - run:
           name: Discourse Topic Check
           command: |
-            bash discourse-topic-check.sh
+            bash ./discourse-topic-check.sh
 orbs:
   jq: circleci/jq@2.2.0
 workflows:
@@ -33,4 +33,6 @@ workflows:
   build:
     jobs:
       - test
-      - topic
+      - topic:
+          requires:
+            - test

@@ -18,6 +18,10 @@ jobs:
       - run:
           name: Link check
           command: cd docs && make linkcheck
+  topic:
+    docker:
+      - image: python:3.7
+    steps:
       - run:
           name: Discourse Topic Check
           command: |
@@ -29,3 +33,4 @@ workflows:
   build:
     jobs:
       - test
+      - topic

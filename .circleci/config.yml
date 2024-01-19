@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  test:
+  setup:
     docker:
       - image: python:3.7
     steps:
@@ -12,6 +12,16 @@ jobs:
       - run:
           name: Make html
           command: cd docs && make html
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+  test:
+    docker:
+      - image: python:3.7
+    steps:
+      - attach_workspace:
+          at: .
       - run:
           name: Verify dictionary file was generated
           command: cd docs && test -f dictionary.rst
@@ -22,17 +32,22 @@ jobs:
     docker:
       - image: python:3.7
     steps:
+      - attach_workspace:
+          at: .
       - run:
           name: Discourse Topic Check
           command: |
-            bash ./discourse-topic-check.sh
+            bash discourse-topic-check.sh
 orbs:
   jq: circleci/jq@2.2.0
 workflows:
   version: 2.1
   build:
     jobs:
-      - test
+      - setup
+      - test:
+          requires:
+            - setup
       - topic:
           requires:
-            - test
+            - setup

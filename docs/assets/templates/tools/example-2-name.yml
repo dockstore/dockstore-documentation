@@ -8,3 +8,4 @@ tools:
     authors:
         - name: Bob Generic Example
           email: makesuretofilloutanactualemailaddress@ucsc.edu
+    topic: A short description of the tool

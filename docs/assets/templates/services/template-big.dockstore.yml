@@ -18,6 +18,10 @@ service:
       role:
       affiliation:
 
+  # A short text description of the service.
+  # If the topic field is omitted, Dockstore will set the service's topic to the repository's "About" text, if it exists.
+  topic:
+
   # An optional, but recommended description of the service
   description:
 

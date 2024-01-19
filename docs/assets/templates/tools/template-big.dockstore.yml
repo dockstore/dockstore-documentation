@@ -44,7 +44,11 @@ tools:
         email: <String>
         role: <String>
         affiliation: <String>
-    
+
+    # A short text description of the tool.
+    # If the topic field is omitted, Dockstore will set the tool's topic to the repository's "About" text, if it exists.
+    topic: <String>
+
     # A boolean that will change the default version to be displayed on Dockstore. Default: False.
     # A value of true will automatically display the latest tag updated as default.
     # A value of false will retain the default version that has been specified via the Dockstore UI.

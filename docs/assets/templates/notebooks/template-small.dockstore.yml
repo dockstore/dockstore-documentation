@@ -12,3 +12,4 @@ notebooks:
         email: <String>
     # Publish must be set to true in order for you to view your notebook on Dockstore in preview mode
     publish: true
+    topic: <String>

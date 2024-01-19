@@ -4,3 +4,9 @@ sphinx_rtd_theme==1.0.0
 git+https://github.com/pdavide/sphinxcontrib-discourse
 attrs==21.4.0
 glossarpy==0.1.2
+sphinxcontrib-applehelp==1.0.4
+sphinxcontrib-devhelp==1.0.2
+sphinxcontrib-htmlhelp==2.0.1
+sphinxcontrib-jsmath==1.0.1
+sphinxcontrib-qthelp==1.0.3
+sphinxcontrib-serializinghtml==1.1.5

@@ -1,39 +1,15 @@
 version: 2.1
 jobs:
-  setup:
-    docker:
-      - image: python:3.7
-    steps:
-      - checkout
-      - jq/install
-      - run:
-          name: Install dependencies
-          command: pip install -r requirements.txt
-      - run:
-          name: Make html
-          command: cd docs && make html
-      - persist_to_workspace:
-          root: .
-          paths:
-            - .
   test:
     docker:
       - image: python:3.7
     steps:
-      - attach_workspace:
-          at: .
-      - run:
-          name: Verify dictionary file was generated
-          command: cd docs && test -f dictionary.rst
-      - run:
-          name: Link check
-          command: cd docs && make linkcheck
+      - basic_test
   topic:
     docker:
       - image: python:3.7
     steps:
-      - attach_workspace:
-          at: .
+      - basic_test
       - run:
           name: Discourse Topic Check
           command: |
@@ -44,10 +20,22 @@ workflows:
   version: 2.1
   build:
     jobs:
-      - setup
-      - test:
-          requires:
-            - setup
-      - topic:
-          requires:
-            - setup
+      - test
+      - topic
+commands:
+  basic_test:
+    steps:
+      - checkout
+      - jq/install
+      - run:
+          name: Install dependencies
+          command: pip install -r requirements.txt
+      - run:
+          name: Make html
+          command: cd docs && make html
+      - run:
+          name: Verify dictionary file was generated
+          command: cd docs && test -f dictionary.rst
+      - run:
+          name: Link check
+          command: cd docs && make linkcheck

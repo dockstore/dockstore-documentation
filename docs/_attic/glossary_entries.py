@@ -249,7 +249,7 @@ Elwazi = GlossEntry("eLwazi",
 
 Entry = GlossEntry("entry", 
 	acronym_full="", 
-	definition="Shorthand for a [tool] or [workflow] that has been registered on Dockstore.", 
+	definition="Shorthand for a [tool], [workflow], [notebook], or [service] that has been registered on Dockstore.",
 	furtherreading="", 
 	institute="Dockstore", 
 	pronunciation='')
@@ -577,6 +577,13 @@ TRS = GlossEntry("TRS",
         furtherreading="https://ga4gh.github.io/tool-registry-service-schemas/",
         institute="GA4GH",
         pronunciation='"terse", rhymes with verse')
+
+Topic = GlossEntry("topic",
+        acronym_full="",
+        definition="A short text description of an [entry], [collection], or [organization].  You can specify an entry's topic in [.dockstore.yml].",
+        furtherreading="",
+        institute="",
+        pronunciation='')
 
 UCSC = GlossEntry("UCSC", 
 	acronym_full="University of California, Santa Cruz", 

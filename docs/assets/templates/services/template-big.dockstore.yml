@@ -18,7 +18,7 @@ service:
       role:
       affiliation:
 
-  # A short text description of the service.
+  # A short text description of the service, 140 characters or less in length.
   # If the topic field is omitted, Dockstore will set the service's topic to the repository's "About" text, if it exists.
   topic:
 

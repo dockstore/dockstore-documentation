@@ -52,7 +52,7 @@ workflows:
         role: <String>
         affiliation: <String>
 
-    # A short text description of the workflow.
+    # A short text description of the workflow, 140 characters or less in length.
     # If the topic field is omitted, Dockstore will set the workflow's topic to the repository's "About" text, if it exists.
     topic: <String>
 

@@ -45,7 +45,7 @@ tools:
         role: <String>
         affiliation: <String>
 
-    # A short text description of the tool.
+    # A short text description of the tool, 140 characters or less in length.
     # If the topic field is omitted, Dockstore will set the tool's topic to the repository's "About" text, if it exists.
     topic: <String>
 

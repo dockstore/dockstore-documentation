@@ -34,12 +34,14 @@ As noted in our other documentation, create a .dockstore.yml file in the root di
         primaryDescriptorPath: /Dockstore.cwl
         testParameterFiles:
             - /test/dockstore.cwl.json
+        topic: A short description of the workflow
 
 The information above was filled out using the following:
 
 - ``subclass`` is taken from the ``Descriptor Type``
 - ``primaryDescriptorPath`` is from ``Workflow Path``
 - ``testParameterFiles`` is from ``Test File Path``
+- ``topic`` is a short text description of the workflow, 140 characters or less.
 
 During the original registration for your workflow, you may have filled out the ``Workflow Name`` field shown in the picture below.
 
@@ -58,6 +60,7 @@ To check if the workflow you want to migrate has a workflow name set, select the
         testParameterFiles:
             - /test/dockstore.cwl.json
         name: optional-name
+        topic: A short description of the workflow
 
 If you have multiple workflows registered on Dockstore that stem from the same GitHub repo, a single .dockstore.yml can be used to convert them.
 Again, you need to check for the Workflow Name field being set because it's needed for multi workflow repositories.
@@ -78,11 +81,13 @@ Your .dockstore.yml would look like the following:
         primaryDescriptorPath: /Dockstore.cwl
         testParameterFiles:
             - /test/dockstore.cwl.json
+        topic: A short description of the unnamed workflow
       - subclass: WDL
         primaryDescriptorPath: /Dockstore.wdl
         testParameterFiles:
             - /test/dockstore.wdl.json
         name: optional-name
+        topic: A short description of the workflow optional-name
 
 Testing the Migration
 ----------------------

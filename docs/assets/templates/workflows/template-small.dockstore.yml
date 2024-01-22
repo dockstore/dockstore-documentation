@@ -7,4 +7,4 @@ workflows:
     authors:
       - name: <String>
         email: <String>
-    topic: A short description of the workflow
+    topic: <String>

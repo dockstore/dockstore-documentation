@@ -249,7 +249,7 @@ Elwazi = GlossEntry("eLwazi",
 
 Entry = GlossEntry("entry", 
 	acronym_full="", 
-	definition="Shorthand for a [tool], [workflow], [notebook], or [service] that has been registered on Dockstore.",
+	definition="Shorthand for a [tool] or [workflow] that has been registered on Dockstore.", 
 	furtherreading="", 
 	institute="Dockstore", 
 	pronunciation='')

@@ -52,7 +52,7 @@ workflows:
         role: <String>
         affiliation: <String>
 
-    # A short text description of the workflow, 140 characters or less in length.
+    # An optional short text description of the workflow, 150 characters or less in length.
     # Workflow-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
     # If no topic has been specified, Dockstore will use the repository's "About" description as the topic.
     # Set this field to the empty string to reset the topic to the repository's "About" description.

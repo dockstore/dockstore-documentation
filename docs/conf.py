@@ -19,8 +19,10 @@
 
 # -- Project information -----------------------------------------------------
 
+import datetime
+
 project = u'Dockstore'
-copyright = u'2021, OICR, and UCSC'
+copyright = f'2021-{datetime.date.today().year}, OICR, and UCSC'
 author = u'OICR, UCSC'
 
 # The short X.Y version

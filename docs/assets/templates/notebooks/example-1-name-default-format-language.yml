@@ -3,3 +3,4 @@ notebooks:
   - name: simple
     path: /notebook.ipynb
     publish: true
+    topic: A short description of the notebook

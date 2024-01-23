@@ -53,6 +53,7 @@ for an alignment tool. Note that all file paths in the file must be absolute.
         primaryDescriptorPath: /aligner.cwl
         testParameterFiles:
         - /test/aligner.cwl.json
+        topic: A short description of this tool
 
 If you had our GitHub App installed on the repository ``myorg/alignments`` and then add the above .dockstore.yml to the **develop** branch,
 the following would occur.

@@ -8,6 +8,7 @@ tools:
     authors:
         - name: Bob Generic Example
           email: makesuretofilloutanactualemailaddress@ucsc.edu
+    topic: A short description of globalAligner
   - name: localAligner
     subclass: CWL
     primaryDescriptorPath: /runLocalAligner.cwl
@@ -18,3 +19,4 @@ tools:
         - orcid: 1111-1111-1111-1111
         - name: Bob Generic Example Jr
           email: anotherpersonsemailaddress@ucsc.edu
+    topic: A short description of localAligner

@@ -578,6 +578,13 @@ TRS = GlossEntry("TRS",
         institute="GA4GH",
         pronunciation='"terse", rhymes with verse')
 
+Topic = GlossEntry("topic",
+        acronym_full="",
+        definition="A short text description of an [entry], [collection], or [organization].  You can specify an entry's topic in [.dockstore.yml].",
+        furtherreading="",
+        institute="",
+        pronunciation='')
+
 UCSC = GlossEntry("UCSC", 
 	acronym_full="University of California, Santa Cruz", 
 	definition="A public university located in Santa Cruz that is focused on undergraduate and graduate education and research. The Genomics Institute, a branch of UCSC's engineering department, is one of the two institutes involved in the development of Dockstore, the other being [OICR].", 

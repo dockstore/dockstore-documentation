@@ -66,6 +66,7 @@ NFL
 NHGRI
 NHLBI
 NIH
+notebook
 OICR
 ORCID
 organization

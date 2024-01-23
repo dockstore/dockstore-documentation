@@ -249,7 +249,7 @@ Elwazi = GlossEntry("eLwazi",
 
 Entry = GlossEntry("entry", 
 	acronym_full="", 
-	definition="Shorthand for a [tool] or [workflow] that has been registered on Dockstore.", 
+	definition="Shorthand for a [tool], [workflow], [notebook], or service that has been registered on Dockstore.",
 	furtherreading="", 
 	institute="Dockstore", 
 	pronunciation='')
@@ -476,6 +476,13 @@ NIH = GlossEntry("NIH",
 	definition="An American government institution, part of the Department of Health and Human Services (HHS), that engages in medical research.", 
 	furtherreading="https://www.nih.gov/", 
 	institute="", 
+	pronunciation="")
+
+notebook = GlossEntry("notebook",
+	acronym_full="",
+	definition="An interactive document, made up of \"cells\" containing code, text, and images, authored and executed in a browser-based programming environment.  Project [Jupyter] popularized Python-based notebooks and maintains related specifications and software.",
+	furtherreading="/getting-started/getting-started-with-notebooks",
+	institute="",
 	pronunciation="")
 
 OICR = GlossEntry("OICR", 

@@ -46,9 +46,10 @@ tools:
         affiliation: <String>
 
     # An optional short text description of the tool, 150 characters or less in length.
-    # Tool-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
-    # If no topic has been specified, Dockstore will use the repository's "About" description as the topic.
+    # Useful to specify unique topics for multiple tools in the same repository, or a topic that differs from the default.
+    # If not provided, Dockstore will use the repository's "About" description as the topic.
     # Set this field to the empty string to reset the topic to the repository's "About" description.
+    # Tool-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
     topic: <String>
 
     # A boolean that will change the default version to be displayed on Dockstore. Default: False.

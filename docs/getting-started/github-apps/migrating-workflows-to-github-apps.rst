@@ -41,7 +41,7 @@ The information above was filled out using the following:
 - ``subclass`` is taken from the ``Descriptor Type``
 - ``primaryDescriptorPath`` is from ``Workflow Path``
 - ``testParameterFiles`` is from ``Test File Path``
-- ``topic`` is a short text description of the workflow, 140 characters or less.
+- ``topic`` is a short text description of the workflow, 150 characters or less.
 
 During the original registration for your workflow, you may have filled out the ``Workflow Name`` field shown in the picture below.
 

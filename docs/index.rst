@@ -162,6 +162,7 @@ Best practices guidelines
    advanced-topics/best-practices/nfl-best-practices
    advanced-topics/best-practices/best-practices-dockstore
    advanced-topics/best-practices/best-practices-secure-fair-workflows
+   advanced-topics/best-practices/best-practices-development
 
 .. toctree::
    :caption: Dockstore CLI

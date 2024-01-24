@@ -133,3 +133,6 @@ When viewing a public notebook on Dockstore, you can launch the notebook into Go
 
 .. figure:: /assets/images/docs/launch-with-google-colab.png
 
+
+.. discourse::
+    :topic_identifier: 7984

@@ -5,8 +5,6 @@ Notebooks
    :local:
    :depth: 2
 
-.. note:: Dockstore Notebooks is currently in preview mode. Also note that the screenshots below were taken on our staging site.
-
 Tutorial Goals
 --------------
 
@@ -16,7 +14,7 @@ Tutorial Goals
 - Publish your notebook to Dockstore
 
 Notebooks are documents that can include code, text, images, and other media resources. They can be executed in notebook environments like Google Colab and JupyterLab.
-This document will outline what is needed to register, update, and publish a notebook onto Dockstore. Please keep in mind that notebook functionality is currently in preview mode.
+This document outlines how to register, update, and publish a notebook on Dockstore.
 
 Overview
 --------
@@ -89,8 +87,6 @@ Within this, you can to specify the ``format`` and ``language`` of the notebook.
 
 Next, you need to specify the absolute path to the notebook file in the Git repository using the ``path`` key.
 
-Finally, you must set ``publish: true`` to publish your notebook in order for you to be able to view your notebook in preview mode. In the future, we will implement a My Notebooks page where you can view your unpublished notebooks.
-
 Registering Your Notebook
 -------------------------
 .. include:: /getting-started/github-apps/note--registration.rst
@@ -137,26 +133,6 @@ When viewing a public notebook on Dockstore, you can launch the notebook into Go
 
 .. figure:: /assets/images/docs/launch-with-google-colab.png
 
-Using the Notebooks Feature Flag
---------------------------------
 
-There is a ``notebooks`` feature flag that can be used to explore Dockstore Notebooks features that are in development.
-
-.. warning:: The features hidden behind this flag may not be fully functional, but using the flag offers you a preview of the features to come.
-
-To use the ``notebooks`` feature flag, append ``notebooks`` to the Dockstore URL as a query parameter. You only need to do this once, unless you refresh/close your browser.
-
-For example, if you're on the https://dockstore.org page, append ``notebooks`` such that it looks like this: https://dockstore.org?notebooks.
-
-If you're on a page that already contains query parameters, indicated by the presence of a question mark, append ``notebooks`` to the URL using an ampersand. For example, if you're on the https://dockstore.org/starred?tab=workflows page, append ``notebooks`` such that it looks like https://dockstore.org/starred?tab=workflows&notebooks.
-
-After applying the notebooks feature flag, Dockstore Notebooks features will appear throughout the site, marked with a warning banner.
-
-.. figure:: /assets/images/docs/notebooks-warning-banner.png
-
-Features that are activated with the feature flag:
-
-- Notebooks component is displayed on the My Dashboard page for a logged-in user
-- Notebooks tab is displayed on the My Starred page for a logged in user
-- Notebooks tab is displayed on the Search page
-- Notebooks link is displayed on the Sitemap
+.. discourse::
+    :topic_identifier: 7984

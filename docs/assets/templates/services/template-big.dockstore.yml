@@ -18,6 +18,13 @@ service:
       role:
       affiliation:
 
+  # An optional short text description of the service, 150 characters or less in length.
+  # Useful to specify a topic that differs from the default.
+  # If not provided, Dockstore will use the repository's "About" description as the topic.
+  # Set this field to the empty string to reset the topic to the repository's "About" description.
+  # Service-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
+  topic:
+
   # An optional, but recommended description of the service
   description:
 

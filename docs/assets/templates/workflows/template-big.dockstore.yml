@@ -51,7 +51,14 @@ workflows:
         email: <String>
         role: <String>
         affiliation: <String>
-    
+
+    # An optional short text description of the workflow, 150 characters or less in length.
+    # Useful to specify unique topics for multiple workflows in the same repository, or a topic that differs from the default.
+    # If not provided, Dockstore will use the repository's "About" description as the topic.
+    # Set this field to the empty string to reset the topic to the repository's "About" description.
+    # Workflow-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
+    topic: <String>
+
     # A boolean that will change the default version to be displayed on Dockstore. Default: False.
     # A value of true will automatically display the latest tag updated as default.
     # A value of false will retain the default version that has been specified via the Dockstore UI.

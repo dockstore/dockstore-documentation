@@ -9,3 +9,4 @@ workflows:
     authors:
       - orcid: 0000-0003-4896-1858
     name: assoc-aggregate-wdl
+    topic: A short description of the workflow

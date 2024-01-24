@@ -62,6 +62,7 @@ for an alignment workflow to show you how easy it is to use. Note that all file 
         primaryDescriptorPath: /aligner.cwl
         testParameterFiles:
         - /test/aligner.cwl.json
+        topic: A short descrption of this workflow
 
 If you had our GitHub App installed on the repository ``myorg/alignments`` and then add the above .dockstore.yml to the **develop** branch,
 the following would occur:

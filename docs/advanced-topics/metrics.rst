@@ -152,3 +152,6 @@ The curl command results in something like:
    }'
 
 If it was submitted successfully, you should receive a ``204`` response code. 
+
+.. discourse::
+    :topic_identifier: 7983

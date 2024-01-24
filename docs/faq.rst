@@ -78,6 +78,8 @@ Note that tool and workflow versions that do not require any file input paramete
 You can find Open Data workflows and tools by selecting the Open Data facet on the `search <https://dockstore.org/search>`_ page.
 When viewing an individual tool or workflow, you can tell which versions are Open Data on the Versions tab via the Open column.
 
+While our Open Data facet is conservative and only considers freely accessible data, other data marked as `requester pays <https://cloud.google.com/storage/docs/requester-pays>`_ may be trivial to access given payment".
+
 :ref:`(back to top) <topFAQ>`
 
 How should I register my work in Dockstore?

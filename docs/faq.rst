@@ -80,7 +80,7 @@ When viewing an individual tool or workflow, you can tell which versions are Ope
 
 .. note::
     Dockstore does not consider requester pays data such as `Google Cloud Requester Pays <https://cloud.google.com/storage/docs/requester-pays>`_  and `Amazon S3 Requester Pays <https://docs.aws.amazon.com/AmazonS3/latest/userguide/RequesterPaysBuckets.html>`_ to be open data.
-    Even though their data may be open, our Open Data facet only show those that are open and free.
+    Even though their data may be open, our Open Data facet only shows those that are open and free.
 
 :ref:`(back to top) <topFAQ>`
 

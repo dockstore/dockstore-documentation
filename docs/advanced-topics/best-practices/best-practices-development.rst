@@ -34,7 +34,7 @@ There are lots of options for doing automated builds. You can search the web for
 - `Travis CI <https://www.travis-ci.com>`__
 - `Jenkins <https://www.jenkins.io>`__
 
-GitHub Actions, CircleCI and Travis CI are cloud services; Jenkins is a server you set up in your own infrastructure.
+GitHub Actions, CircleCI and Travis CI are generally offered as cloud services; Jenkins is typically a server you set up in your own infrastructure.
 
 Validation
 ``````````

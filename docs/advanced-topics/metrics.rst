@@ -7,7 +7,7 @@ Workflow metrics are metrics of workflow executions on a platform. Metrics inclu
 
 Users are able to execute workflows on various platforms using Dockstore's Launch With feature, shown on the right side in the screenshot below.
 
-.. figure:: /assets/images/docs/submit-metrics/workflow-launch-with.png
+.. figure:: /assets/images/docs/metrics/workflow-launch-with.png
     :alt: Launch With Partners
 
 Platforms are able to submit metrics of workflows executed on their platform to Dockstore and we aggregate the metrics and display them in the UI to the users in the :ref:`Metrics tab <How to view metrics>`.
@@ -23,17 +23,17 @@ How do I view workflow metrics?
 
 To search for workflows with metrics, navigate to the `search <https://dockstore.org/search>`_ page and select a platform for the Execution Metrics and/or Validation Metrics facets.
 
-.. figure:: /assets/images/docs/submit-metrics/metrics-search-facets.png
+.. figure:: /assets/images/docs/metrics/metrics-search-facets.png
     :alt: Metrics search facets
 
 Select a workflow and click on the Versions tab. Versions that have metrics will have a check mark in the Metrics column.
 
-.. figure:: /assets/images/docs/submit-metrics/versions-metrics-column.png
+.. figure:: /assets/images/docs/metrics/versions-metrics-column.png
     :alt: Metrics column in Versions table
 
 Select a version with metrics then click on the Metrics tab to view the metrics available.
 
-.. figure:: /assets/images/docs/submit-metrics/metrics-tab.png
+.. figure:: /assets/images/docs/metrics/metrics-tab.png
     :alt: Metrics tab
 
 How do I submit workflow metrics?
@@ -53,14 +53,14 @@ Select the ``platform`` that the workflow was executed on from the available val
 
 For the ``description``, you may provide an optional description about the metrics you're submitting.
 
-.. figure:: /assets/images/docs/submit-metrics/query-parameters.png
+.. figure:: /assets/images/docs/metrics/query-parameters.png
     :alt: Query parameters for submitting metrics
 
 .. _Submit metrics request body schema:
 
 In the request body, provide the workflow execution metrics that you want to submit. Click on Schema to view the schema of the request body.
 
-.. figure:: /assets/images/docs/submit-metrics/request-body-schema.png
+.. figure:: /assets/images/docs/metrics/request-body-schema.png
     :alt: Request body schema for submitting metrics
 
 You can provide a individual executions through ``runExecutions``, ``taskExecutions``, and ``validationExecutions``.
@@ -76,7 +76,7 @@ A ``RunExecution`` is a workflow execution. The required fields are:
 
 If you want to provide additional metrics that are not defined in the schema, use the ``additionalProperties`` key to provide your metric.
 
-.. figure:: /assets/images/docs/submit-metrics/run-executions-schema.png
+.. figure:: /assets/images/docs/metrics/run-executions-schema.png
     :alt: Schema for run executions
 
 A ``TaskExecution`` contains a list of task executions that were executed during a workflow execution. The required fields are:
@@ -85,7 +85,7 @@ A ``TaskExecution`` contains a list of task executions that were executed during
 - ``dateExecuted``
 - A list of ``taskExecutions``. A task execution follows the ``RunExecution`` schema.
 
-.. figure:: /assets/images/docs/submit-metrics/task-executions-schema.png
+.. figure:: /assets/images/docs/metrics/task-executions-schema.png
     :alt: Schema for task executions
 
 A ``ValidationExecution`` is an execution of a validator tool, like miniwdl, on the workflow. The required fields are: 
@@ -98,7 +98,7 @@ A ``ValidationExecution`` is an execution of a validator tool, like miniwdl, on 
 
 If you want to provide additional metrics that are not defined in the schema, use the ``additionalProperties`` key to provide your metric.
 
-.. figure:: /assets/images/docs/submit-metrics/validation-executions-schema.png
+.. figure:: /assets/images/docs/metrics/validation-executions-schema.png
     :alt: Schema for validation executions
     
 .. _Submitting metrics example:
@@ -133,7 +133,7 @@ The request body contains three executions in total:
   - Note: there is only one task execution because this workflow only contains one task
 - One validation execution of miniwdl version 1.9.1 which validated the workflow successfully
 
-.. figure:: /assets/images/docs/submit-metrics/individual-executions-example.png
+.. figure:: /assets/images/docs/metrics/individual-executions-example.png
    :alt: Example request for submitting individual workflow executions, task executions and validation executions
 
 The curl command looks something like:
@@ -196,7 +196,7 @@ Fill out the parameters. This is where you'll input information about which work
 
 In addition, specify the execution ID of the execution you want to view. Recall that the execution ID is a value that you assigned the execution when you submitted the execution.
 
-.. figure:: /assets/images/docs/submit-metrics/get-execution-parameters.png
+.. figure:: /assets/images/docs/metrics/get-execution-parameters.png
     :alt: Parameters for getting an execution
 
 Getting an execution example
@@ -208,7 +208,7 @@ Provide the same ``id``, ``version_id`` and ``platform`` :ref:`parameter values<
 
 Next, we'll provide the execution ID of the workflow execution that was submitted, which was ``2c8c7c45-d4e6-4a0c-891d-a28e7c995c70``.
 
-.. figure:: /assets/images/docs/submit-metrics/get-execution-example.png
+.. figure:: /assets/images/docs/metrics/get-execution-example.png
     :alt: Get execution example
 
 The curl command looks something like:
@@ -258,7 +258,7 @@ For the ``id``, ``version_id``, and ``platform`` parameters, provide the values 
 
 For the ``description``, you may provide an optional description about the metrics you're updating.
 
-.. figure:: /assets/images/docs/submit-metrics/update-metrics-query-parameters.png
+.. figure:: /assets/images/docs/metrics/update-metrics-query-parameters.png
     :alt: Query parameters for submitting metrics
 
 In the request body, provide the updated workflow execution metrics that you want to update in Dockstore. Click on Schema to view the schema of the request body. It is the same schema used for :ref:`submitting metrics<Submit metrics request body schema>`.
@@ -270,7 +270,7 @@ You must provide the full execution object when updating the execution. See :ref
 
 Only metrics that are optional during submission can be updated. For example, for a workflow ``RunExecution``, you may update ``executionTime``, but you may not update ``executionStatus`` because it is a required field, indicated by the red asterisk.
 
-.. figure:: /assets/images/docs/submit-metrics/run-executions-schema.png
+.. figure:: /assets/images/docs/metrics/run-executions-schema.png
     :alt: Schema for run executions
 
 Click Execute. You should receive a ``207`` reponse code with a response body containing individual response codes for each execution you wanted to update.
@@ -311,7 +311,7 @@ This is the updated workflow execution that now has a cost metric.
       }
    ]
 
-.. figure:: /assets/images/docs/submit-metrics/update-execution-example.png
+.. figure:: /assets/images/docs/metrics/update-execution-example.png
     :alt: Update execution example
 
 The curl looks something like the following:

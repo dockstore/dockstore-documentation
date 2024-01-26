@@ -43,6 +43,7 @@ Getting Started
     4. :doc:`Creating a Dockstore Account <getting-started/register-on-dockstore>`
     5. :doc:`Register a tool on Dockstore <getting-started/dockstore-tools>`
     6. :doc:`Register a workflow on Dockstore <getting-started/dockstore-workflows>`
+    7. :doc:`Delete a entry on Dockstore <getting-started/delete-on-dockstore>`
     7. :doc:`Hosted tools and workflows <getting-started/hosted-tools-and-workflows>`
 * :doc:`Notebooks <getting-started/getting-started-with-notebooks>`
 * :doc:`Services (preview) <getting-started/getting-started-with-services>`
@@ -63,6 +64,7 @@ Getting Started
    getting-started/register-on-dockstore
    getting-started/dockstore-tools
    getting-started/dockstore-workflows
+   getting-started/delete-on-dockstore
    getting-started/hosted-tools-and-workflows
    getting-started/getting-started-with-services
    getting-started/getting-started-with-notebooks

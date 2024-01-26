@@ -17,11 +17,11 @@ This is not a complete guide to workflow and tool development, but rather an ove
 Automated Builds
 ----------------
 
-Automated builds are just that -- builds that trigger automatically. They can by triggered on a schedule (daily, weekly, etc.), by pushes to a branch, by the creation of a pull request or tag, etc.
+Automated builds are just that -- builds that trigger automatically. They can trigger on a schedule (daily, weekly, etc.), by pushes to a branch, by the creation of a pull request or tag, etc.
 
 The advantage of automated builds is that they catch errors right away, before a workflow user spends time and money running the faulty workflow. You can also use automated builds to do security scanning, and if you have a more complex system, package up your builds. 
 
-It's easy to introduce an error to your workflow, from something as simple as missing a closing quotation mark to a logic error in the middle of the program. Having automated builds can quickly catch such problems.
+It's easy to introduce an error to your workflow, from something as simple as missing a closing quotation mark to a logic error in the middle of the program. Automated builds can quickly catch such problems.
 
 
 Build Servers
@@ -34,7 +34,7 @@ There are lots of options for doing automated builds. You can search the web for
 - `Travis CI <https://www.travis-ci.com>`__
 - `Jenkins <https://www.jenkins.io>`__
 
-GitHub Actions, CircleCI and Travis CI are generally offered as cloud services; Jenkins is typically a server you set up in your own infrastructure.
+GitHub Actions, CircleCI and Travis CI are generally cloud services; Jenkins is typically a server you set up in your own infrastructure.
 
 Validation
 ``````````
@@ -43,11 +43,11 @@ Validation tools work by statically analyzing your code. That is, they don't run
 
 As a minimum, you should verify that your workflow is syntactically correct. Depending on the language, you will have different tools at your disposal. For example, for WDL you could use `WOMTool <https://cromwell.readthedocs.io/en/stable/WOMtool>`__ and/or `miniWDL <https://miniwdl.readthedocs.io/>`__. 
 
-These tools can not only catch syntax errors, but can also do semantic checking and linting. Semantic checking does things like ensuring a variable has been initialized before use. Linting can ensure there are patterns that improve your code's readability, e.g., the line length doesn't exceed a certain number, indentation is consistent, etc.
+These tools can not only catch syntax errors, but can also do semantic checking and linting. Semantic checking does things like ensuring you initialize a variable before use. Linting can ensure there are patterns that improve your code's readability, e.g., the line length doesn't exceed a certain number, indentation is consistent, etc.
 
 .. note::
 
-   Dockstore validates your workflows for syntactical correctness. It shows the validation results in the UI, and prevents users from doing certain operations if a version is invalid, e.g., the `Launch with` buttons are disabled for invalid versions. But ideally you should catch errors before your version gets pushed to Dockstore.
+   Dockstore validates your workflows for syntactical correctness. It shows the validation results in the UI, and prevents users from doing certain operations if a version is invalid, e.g., Dockstore disables the `Launch with` buttons for invalid versions. But ideally you should catch errors before pushing your version to Dockstore.
 
 Tests
 `````
@@ -62,12 +62,12 @@ You can scan your workflows for vulnerabilities using automated tools. To our kn
 Flattening and Packing
 ``````````````````````
 
-Some languages offer tools that package your workflows into a single file. For example, `cwltool <https://github.com/common-workflow-language/cwltool>`__ offers a `--pack` option to combine all of a CWL workflow's files into one single file. This makes it easier to distribute your workflow, and enables your workflow to run ona platforms that do not support imports.
+Some languages offer tools that package your workflows into a single file. For example, `cwltool <https://github.com/common-workflow-language/cwltool>`__ offers a `--pack` option to combine all of a CWL workflow's files into one single file. This makes it easier to distribute your workflow, and enables your workflow to run on platforms that do not support imports.
 
 Sharing Code
 ------------
 
-Workflow languages do not typically make it easy to share dependencies like other languages do (Maven in Java, PyPI in Python, etc.). One common techinque is to have one Git repository with multiple workflows, with all the workflows referencing common code in the same repository, using relative paths. You can then publish multiple workflows from the single repository, or push the individual workflows to different repositories. For an example of the latter, see the Galaxy IWC use case below.
+Workflow languages do not typically make it easy to share dependencies like other languages do (Maven in Java, PyPI in Python, etc.). One common technique is to have one Git repository with multiple workflows, with all the workflows referencing common code in the same repository, using relative paths. You can then publish multiple workflows from the single repository, or push the individual workflows to different repositories. For an example of the latter, see the Galaxy IWC use case below.
 
 Another technique is to `import code using https urls <https://github.com/aofarrel/myco/blob/469620a1c8ecda44ae843985f6d640e9ca24d028/myco_sra.wdl#L3>`__. This can work, but does get difficult to manage as you'll need to update multiple repositories if a change is made in common code.
 
@@ -75,7 +75,7 @@ Another technique is to `import code using https urls <https://github.com/aofarr
 Use Cases
 ---------
 
-Following are a couple of real world examples of workflows published on Dockstore, that use some of the techinques described above.
+Following are a couple of real world examples of workflows published on Dockstore, that use some of the techniques described above.
 
 Galaxy's IWC
 ````````````

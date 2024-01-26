@@ -53,14 +53,14 @@ Select the ``platform`` that the workflow was executed on from the available val
 
 For the ``description``, you may provide an optional description about the metrics you're submitting.
 
-.. figure:: /assets/images/docs/metrics/query-parameters.png
+.. figure:: /assets/images/docs/metrics/submit-metrics-parameters.png
     :alt: Query parameters for submitting metrics
 
 .. _Submit metrics request body schema:
 
 In the request body, provide the workflow execution metrics that you want to submit. Click on Schema to view the schema of the request body.
 
-.. figure:: /assets/images/docs/metrics/request-body-schema.png
+.. figure:: /assets/images/docs/metrics/executions-request-body-schema.png
     :alt: Request body schema for submitting metrics
 
 You can provide a individual executions through ``runExecutions``, ``taskExecutions``, and ``validationExecutions``.
@@ -133,7 +133,7 @@ The request body contains three executions in total:
   - Note: there is only one task execution because this workflow only contains one task
 - One validation execution of miniwdl version 1.9.1 which validated the workflow successfully
 
-.. figure:: /assets/images/docs/metrics/individual-executions-example.png
+.. figure:: /assets/images/docs/metrics/submit-executions-example.png
    :alt: Example request for submitting individual workflow executions, task executions and validation executions
 
 The curl command looks something like:
@@ -258,7 +258,7 @@ For the ``id``, ``version_id``, and ``platform`` parameters, provide the values 
 
 For the ``description``, you may provide an optional description about the metrics you're updating.
 
-.. figure:: /assets/images/docs/metrics/update-metrics-query-parameters.png
+.. figure:: /assets/images/docs/metrics/update-metrics-parameters.png
     :alt: Query parameters for submitting metrics
 
 In the request body, provide the updated workflow execution metrics that you want to update in Dockstore. Click on Schema to view the schema of the request body. It is the same schema used for :ref:`submitting metrics<Submit metrics request body schema>`.

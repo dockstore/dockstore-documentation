@@ -7,6 +7,7 @@ docs/advanced-topics/best-practices/best-practices-intro.rst
 docs/advanced-topics/best-practices/sample-parameter-files-intro.rst
 docs/advanced-topics/legacy/table--legtool-vs-ghatool.rst
 docs/advanced-topics/naming-workflows.rst
+docs/assets/templates/notebooks/notebooks.rst
 docs/assets/templates/tools/tools.rst
 docs/assets/templates/workflows/workflows.rst
 docs/getting-started/adding-a-test-parameter-file.rst

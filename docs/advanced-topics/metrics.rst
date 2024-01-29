@@ -65,8 +65,9 @@ In the request body, provide the workflow execution metrics that you want to sub
 
 You can provide a individual executions through ``runExecutions``, ``taskExecutions``, and ``validationExecutions``.
 
-.. note::
-   Each execution must have a unique ``executionId`` for the workflow, workflow version, and platform that it belongs to. It is your responsibility to ensure the uniqueness of the execution IDs.
+.. important::
+   Each execution must have a unique ``executionId`` for the workflow, workflow version, and platform that it belongs to. It is your responsibility to ensure the uniqueness of the execution IDs. 
+   The execution ID is also used to :ref:`get a submitted execution<View submitted execution>` and :ref:`update a submitted execution<Update submitted execution>`.
 
 A ``RunExecution`` is a workflow execution. The required fields are:
 
@@ -242,6 +243,8 @@ If the request was successful, you should receive a ``200`` status code and the 
       "taskExecutions": [],
       "validationExecutions": []
    }
+
+.. _Update submitted execution:
 
 How do I update workflow metrics?
 ---------------------------------

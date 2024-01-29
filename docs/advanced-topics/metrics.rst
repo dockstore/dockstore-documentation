@@ -12,10 +12,6 @@ Users are able to execute workflows on various platforms using Dockstore's Launc
 
 Platforms are able to submit metrics of workflows executed on their platform to Dockstore and we aggregate the metrics and display them in the UI to the users in the :ref:`Metrics tab <How to view metrics>`.
 
-Why would I want to submit workflow metrics?
---------------------------------------------
-As a platform owner, workflow metrics indicate to others that your platform is compatible with many workflows on Dockstore. Workflow metrics provide valuable information to users, including information about the resources and time needed to run the workflow. It helps the user determine if the workflow is high quality and is very likely to work for others.
-
 .. _How to view metrics:
 
 How do I view workflow metrics?
@@ -36,10 +32,18 @@ Select a version with metrics then click on the Metrics tab to view the metrics 
 .. figure:: /assets/images/docs/metrics/metrics-tab.png
     :alt: Metrics tab
 
+Why would I, a platform owner, want to submit workflow metrics?
+---------------------------------------------------------------
+
+As a platform owner, workflow metrics indicate to others that your platform is compatible with many workflows on Dockstore. Workflow metrics provide valuable information to users, including information about the resources and time needed to run the workflow. It helps the user determine if the workflow is high quality and is very likely to work for others.
+
+Platform owners are able to submit metrics for workflow executions, retrieve submitted executions and update submitted executions.
+
+.. note:: Submitting metrics for workflow executions, and retrieving and updating submitted executions are only available for admins, curators, and platform partners. If you're a platform owner and you don't have a platform partner user, please contact us via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or open a helpdesk ticket on `Discourse <https://discuss.dockstore.org/>`_ and we will help you get set up.
+
+
 How do I submit workflow metrics?
 ---------------------------------
-
-.. note:: Submitting workflow metrics is only available for admins, curators, and platform partners. If you're a platform owner and you don't have a platform partner user, please contact us via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or open a helpdesk ticket on `Discourse <https://discuss.dockstore.org/>`_ and we will help you get set up.
 
 Go to https://dockstore.org/api/static/swagger-ui/index.html#/extendedGA4GH/executionMetricsPost and provide your Dockstore token using the lock icon at the top right of the endpoint. This is the endpoint used to submit metrics to Dockstore. Click the "Try it out” button.
 
@@ -187,8 +191,6 @@ If it was submitted successfully, you should receive a ``204`` response code.
 How do I view a submitted execution?
 ------------------------------------
 
-.. note:: Viewing executions is only available for admins, curators, and platform partners. If you're a platform owner and you don't have a platform partner user, please contact us via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or open a helpdesk ticket on `Discourse <https://discuss.dockstore.org/>`_ and we will help you get set up.
-
 To view an execution that you previously submitted, you can retrieve it by its execution ID.
 
 Go to https://dockstore.org/api/static/swagger-ui/index.html#/extendedGA4GH/executionGet and provide your Dockstore token using the lock icon at the top right of the endpoint.
@@ -248,8 +250,6 @@ If the request was successful, you should receive a ``200`` status code and the 
 
 How do I update workflow metrics?
 ---------------------------------
-
-.. note:: Updating workflow metrics is only available for admins, curators, and platform partners. If you're a platform owner and you don't have a platform partner user, please contact us via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or open a helpdesk ticket on `Discourse <https://discuss.dockstore.org/>`_ and we will help you get set up.
 
 You may want to update metrics that you have previously submitted because you received new metrics for the execution at a later time.
 

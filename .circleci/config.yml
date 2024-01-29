@@ -22,6 +22,16 @@ workflows:
     jobs:
       - test
       - topic
+  weekly_link_check:
+    triggers:
+      - schedule:
+          cron: '30 12 * * 1' # Every Monday at 12:30pm UTC
+          filters:
+            branches:
+              only:
+                - develop
+    jobs:
+      - test
 commands:
   basic_test:
     steps:

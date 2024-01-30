@@ -41,6 +41,6 @@ Read the dialog message and if you are sure you would like to delete, click the 
 .. image:: /assets/images/docs/delete-workflow-dialog.png
    :width: 50 %
 
-Please make sure that you have uninstalled the Dockstore GitHub App from the source GitHub repo, or edited/removed the .dockstore.yml file so that it no longer describes the deleted entry.
+Please make sure that you have uninstalled the Dockstore GitHub App from the source GitHub repo, or edited/removed the ``.dockstore.yml`` file so that it no longer describes the deleted entry.
 If you do not, your deleted entry may reappear on Dockstore the next time you push to the repo.
 

@@ -15,7 +15,6 @@ Requirements for Deletion
 
 An entry can only be deleted if it satisfies all the following:
 
--  Registered via GitHub Apps,
 -  Has never been published,
 -  Was created on/after April 1, 2022, and
 -  Is not a checked or checker workflow.

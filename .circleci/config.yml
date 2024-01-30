@@ -25,7 +25,7 @@ workflows:
   weekly_link_check:
     triggers:
       - schedule:
-          cron: '30 12 * * 1' # Every Monday at 12:30pm UTC
+          cron: '30 12 * * 1' # Every Monday at 7:30am EST/4:30am PST
           filters:
             branches:
               only:

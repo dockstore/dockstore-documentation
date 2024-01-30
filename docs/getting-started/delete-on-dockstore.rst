@@ -8,6 +8,7 @@ Tutorial Goals
 -  Ensuring that the entry does not re-appear on Dockstore
 
 This tutorial walks through the process of deleting entries from Dockstore.
+This action is permanent and after you delete the workflow, it will no longer appear on Dockstore.
 
 Requirements for Deletion
 -------------------------

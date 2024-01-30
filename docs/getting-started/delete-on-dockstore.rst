@@ -16,8 +16,9 @@ Requirements for Deletion
 An entry can only be deleted if it satisfies all the following:
 
 -  Has never been published,
--  Was created on/after April 1, 2022, and
--  Is not a checked or checker workflow.
+-  Was created on/after April 1, 2022,
+-  Is not a checked or checker workflow, and
+-  If registered via GitHub Apps, the entry is removed from the ``.dockstore.yml`` file or the Dockstore GitHub App is uninstalled from the source GitHub repo.
 
 If your entry does not meet the requirements above, you can archive it using these steps.
 
@@ -40,6 +41,6 @@ Read the dialog message and if you are sure you would like to delete, click the 
 .. image:: /assets/images/docs/delete-workflow-dialog.png
    :width: 50 %
 
-After you delete the entry, you must uninstall the Dockstore GitHub App from the source GitHub repo, or edit/remove the .dockstore.yml file so that it no longer describes the deleted entry.
+Please make sure that you have uninstalled the Dockstore GitHub App from the source GitHub repo, or edited/removed the .dockstore.yml file so that it no longer describes the deleted entry.
 If you do not, your deleted entry may reappear on Dockstore the next time you push to the repo.
 

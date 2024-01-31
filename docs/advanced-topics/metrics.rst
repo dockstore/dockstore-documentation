@@ -35,7 +35,7 @@ Select a version with metrics then click on the Metrics tab to view the metrics 
 Why would I, a platform owner, want to submit workflow metrics?
 ---------------------------------------------------------------
 
-As a platform owner, workflow metrics indicate to others that your platform is compatible with many workflows on Dockstore. Workflow metrics provide valuable information to users, including information about the resources and time needed to run the workflow. It helps the user determine if the workflow is high quality and is very likely to work for others.
+As a platform owner, workflow metrics indicate to others that your platform is compatible with many workflows on Dockstore. Workflow metrics provide valuable information to users, including information about the resources and time needed to run the workflow. It helps the user determine if the workflow is high quality and is likely to work for others.
 
 Platform owners are able to submit metrics for workflow executions, retrieve submitted executions and update submitted executions.
 
@@ -253,7 +253,7 @@ How do I update workflow metrics?
 
 You may want to update metrics that you have previously submitted because you received new metrics for the execution at a later time.
 
-Go to https://dockstore.org/api/static/swagger-ui/index.html#/extendedGA4GH/ExecutionMetricsUpdate and provide your Dockstore token using the lock icon at the top right of the endpoint. This is the endpoint used to update metrics that were submitted Dockstore. Click the "Try it out” button.
+Go to https://dockstore.org/api/static/swagger-ui/index.html#/extendedGA4GH/ExecutionMetricsUpdate and provide your Dockstore token using the lock icon at the top right of the endpoint. This is the endpoint used to update metrics that were submitted to Dockstore. Click the "Try it out” button.
 
 First, fill out the parameters. This is where you'll input information about which workflow and version was executed and what platform it was executed on. 
 

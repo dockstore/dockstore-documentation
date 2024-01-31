@@ -94,11 +94,9 @@ How should I register my work in Dockstore?
 How do I send private messages to administrators or report security vulnerabilities?
 ------------------------------------------------------------------------------------
 
-Users are able to open helpdesk tickets on `Discourse <https://discuss.dockstore.org/>`_. Users can create helpdesk tickets in
-case of privacy complaints, security vulnerabilities, or any other urgent matter related to Dockstore. Helpdesk tickets will be addressed
-by Dockstore administrators.
+Use the "Report a vulnerability" button on the upper right of this page on `GitHub <https://github.com/dockstore/dockstore/security>`_ to report security vulnerabilities. 
 
-The following steps can be taken to create a helpdesk ticket (also shown `here <https://discuss.dockstore.org/t/opening-helpdesk-tickets/1506>`_).
+A helpdesk ticket on may be an option for privacy complaints or other urgent non-security matters. Both options will be addressed by Dockstore administrators. The following steps can be taken to create a helpdesk ticket (also shown `here <https://discuss.dockstore.org/t/opening-helpdesk-tickets/1506>`_).
 
 1. Navigate to `Discourse <https://discuss.dockstore.org/>`_ and login.
 2. Select your profile icon, located in the top right corner of the screen.

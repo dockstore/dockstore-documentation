@@ -22,7 +22,7 @@ To search for workflows with metrics, navigate to the `search <https://dockstore
 .. figure:: /assets/images/docs/metrics/metrics-search-facets.png
     :alt: Metrics search facets
 
-Select a workflow and click on the Versions tab. Versions that have metrics will have a check mark in the Metrics column.
+Select a workflow and click on the Versions tab. Versions that have metrics have a check mark in the Metrics column.
 
 .. figure:: /assets/images/docs/metrics/versions-metrics-column.png
     :alt: Metrics column in Versions table
@@ -47,7 +47,7 @@ How do I submit workflow metrics?
 
 Go to https://dockstore.org/api/static/swagger-ui/index.html#/extendedGA4GH/executionMetricsPost and provide your Dockstore token using the lock icon at the top right of the endpoint. This is the endpoint used to submit metrics to Dockstore. Click the "Try it out” button.
 
-First, fill out the parameters. This is where you'll input information about which workflow was executed and what platform it was executed on.
+First, fill out the parameters. This is where you input information about which workflow was executed and what platform it was executed on.
 
 For the ``id`` parameter, provide the TRS ID of the workflow that you want to submit metrics for. For example, the `dockstore-tool-bamstats <https://dockstore.org/workflows/github.com/dockstore/dockstore-tool-bamstats/wdl:1.25-9?tab=info>`__ workflow has the TRS ID ``#workflow/github.com/dockstore/dockstore-tool-bamstats/wdl`` as shown in the “Info” tab with the label “TRS".
 
@@ -195,7 +195,7 @@ To view an execution that you previously submitted, you can retrieve it by its e
 
 Go to https://dockstore.org/api/static/swagger-ui/index.html#/extendedGA4GH/executionGet and provide your Dockstore token using the lock icon at the top right of the endpoint.
 
-Fill out the parameters. This is where you'll input information about which workflow, version, and platform the execution belongs to. It should be the same values that you used when you submitted the execution to Dockstore.
+Fill out the parameters. This is where you input information about which workflow, version, and platform the execution belongs to. It should be the same values that you used when you submitted the execution to Dockstore.
 
 In addition, specify the execution ID of the execution you want to view. Recall that the execution ID is a value that you assigned the execution when you submitted the execution.
 
@@ -209,7 +209,7 @@ We'll retrieve an execution that was submitted in :ref:`this example<Submitting 
 
 Provide the same ``id``, ``version_id`` and ``platform`` :ref:`parameter values<Submitting metrics example parameters>`. 
 
-Next, we'll provide the execution ID of the workflow execution that was submitted, which was ``2c8c7c45-d4e6-4a0c-891d-a28e7c995c70``.
+Next, provide the execution ID of the workflow execution that was submitted, which was ``2c8c7c45-d4e6-4a0c-891d-a28e7c995c70``.
 
 .. figure:: /assets/images/docs/metrics/get-execution-example.png
     :alt: Get execution example
@@ -255,7 +255,7 @@ You may want to update metrics that you have previously submitted because you re
 
 Go to https://dockstore.org/api/static/swagger-ui/index.html#/extendedGA4GH/ExecutionMetricsUpdate and provide your Dockstore token using the lock icon at the top right of the endpoint. This is the endpoint used to update metrics that were submitted to Dockstore. Click the "Try it out” button.
 
-First, fill out the parameters. This is where you'll input information about which workflow and version was executed and what platform it was executed on. 
+First, fill out the parameters. This is where you input information about which workflow and version was executed and what platform it was executed on. 
 
 For the ``id``, ``version_id``, and ``platform`` parameters, provide the values that you previously used when submitting the metrics you want to update to Dockstore. This ensures that the correct metrics are updated. For example, to update the metrics that were submitted in the :ref:`Submitting metrics example<Submitting metrics example>`, provide the same ``id``, ``version_id`` and ``platform``.
 
@@ -285,7 +285,7 @@ We'll update an execution that was submitted in :ref:`this example<Submitting me
 
 Provide the same ``id``, ``version_id`` and ``platform`` :ref:`parameter values<Submitting metrics example parameters>`.
 
-We will modify the execution time of the workflow ``RunExecution``. Recall that this is the workflow execution submitted:
+Recall that this is the workflow execution that was submitted:
 
 .. code:: bash
 
@@ -298,7 +298,7 @@ We will modify the execution time of the workflow ``RunExecution``. Recall that 
       }
    ]
 
-This is the updated workflow execution that now has a cost metric. 
+Add a cost metric to the workflow execution. This is the updated workflow execution that we will use. 
 
 .. code:: bash
 
@@ -334,7 +334,7 @@ The curl looks something like the following:
             "executionStatus": "SUCCESSFUL",
             "executionTime": "PT30S",
             "cost": {
-            "value": 5.99
+               "value": 5.99
             }
          }
       ]

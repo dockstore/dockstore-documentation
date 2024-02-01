@@ -96,7 +96,7 @@ How do I send private messages to administrators or report security vulnerabilit
 
 Use the "Report a vulnerability" button on the upper right of this page on `GitHub <https://github.com/dockstore/dockstore/security>`_ to report security vulnerabilities. 
 
-A helpdesk ticket on may be an option for privacy complaints or other urgent non-security matters. Both options will be addressed by Dockstore administrators. The following steps can be taken to create a helpdesk ticket (also shown `here <https://discuss.dockstore.org/t/opening-helpdesk-tickets/1506>`_).
+A helpdesk ticket may be an option for privacy complaints or other urgent non-security matters. Both options will be addressed by Dockstore administrators. The following steps can be taken to create a helpdesk ticket (also shown `here <https://discuss.dockstore.org/t/opening-helpdesk-tickets/1506>`_).
 
 1. Navigate to `Discourse <https://discuss.dockstore.org/>`_ and login.
 2. Select your profile icon, located in the top right corner of the screen.

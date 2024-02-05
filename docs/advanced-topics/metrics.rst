@@ -35,9 +35,9 @@ Select a version with metrics then click on the Metrics tab to view the metrics 
 Why would I, a platform owner, want to submit workflow metrics?
 ---------------------------------------------------------------
 
-As a platform owner, workflow metrics indicate to others that your platform is compatible with many workflows on Dockstore. Workflow metrics provide valuable information to users, including information about the resources and time needed to run the workflow. It helps the user determine if the workflow is high quality and is likely to work for others.
+As a platform owner, workflow metrics indicate to others that your platform is compatible with many workflows on Dockstore. Workflow metrics provide valuable information to users, including information about the resources and time needed to run the workflow. It helps the user determine if the workflow is high quality and likely to function correctly.
 
-Platform owners are able to submit metrics for workflow executions, retrieve submitted executions and update submitted executions.
+Platform owners are able to submit metrics for workflow executions, retrieve submitted executions, and update submitted executions.
 
 .. note:: Submitting metrics for workflow executions, and retrieving and updating submitted executions are only available for admins, curators, and platform partners. If you're a platform owner and you don't have a platform partner user, please contact us via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or open a helpdesk ticket on `Discourse <https://discuss.dockstore.org/>`_ and we will help you get set up.
 
@@ -148,7 +148,7 @@ The curl command looks something like:
    curl -X 'POST' \
       'https://dockstore.org/api/api/ga4gh/v2/extended/%23workflow%2Fgithub.com%2Fdockstore%2Fdockstore-tool-bamstats%2Fwdl/versions/1.25-9/executions?platform=TERRA' \
       -H 'accept: */*' \
-      -H 'Authorization: Bearer iamafakebearertoken' \
+      -H 'Authorization: Bearer fakedockstorebearertoken' \
       -H 'Content-Type: application/json' \
       -d '{
       "runExecutions": [
@@ -221,7 +221,7 @@ The curl command looks something like:
    curl -X 'GET' \
       'https://dockstore.org/api/api/ga4gh/v2/extended/%23workflow%2Fgithub.com%2Fdockstore%2Fdockstore-tool-bamstats%2Fwdl/versions/1.25-9/execution?platform=TERRA&executionId=2c8c7c45-d4e6-4a0c-891d-a28e7c995c70' \
       -H 'accept: application/json' \
-      -H 'Authorization: Bearer imafakebearertoken'
+      -H 'Authorization: Bearer fakedockstorebearertoken'
 
 If the request was successful, you should receive a ``200`` status code and the execution that you requested, like below:
 
@@ -324,7 +324,7 @@ The curl looks something like the following:
    curl -X 'PUT' \
       'https://dockstore.org/api/api/ga4gh/v2/extended/%23workflow%2Fgithub.com%2Fdockstore%2Fdockstore-tool-bamstats%2Fwdl/versions/1.25-9/executions?platform=TERRA' \
       -H 'accept: application/json' \
-      -H 'Authorization: Bearer imafakebearertoken' \
+      -H 'Authorization: Bearer fakedockstorebearertoken' \
       -H 'Content-Type: application/json' \
       -d '{
       "runExecutions": [

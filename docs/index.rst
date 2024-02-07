@@ -65,6 +65,7 @@ Getting Started
    getting-started/register-on-dockstore
    getting-started/dockstore-tools
    getting-started/dockstore-workflows
+   getting-started/archive-on-dockstore
    getting-started/delete-on-dockstore
    getting-started/hosted-tools-and-workflows
    getting-started/getting-started-with-services

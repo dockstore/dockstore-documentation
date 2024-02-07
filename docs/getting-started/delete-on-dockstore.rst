@@ -20,7 +20,7 @@ An entry can only be deleted if it satisfies all the following:
 -  Is not a checked or checker workflow, and
 -  If registered via GitHub Apps, the entry is removed from the ``.dockstore.yml`` file or the Dockstore GitHub App is uninstalled from the source GitHub repo.
 
-If your entry does not meet the requirements above, you can archive it using these steps.
+If your entry does not meet the requirements above, you can archive it using these :doc:`steps <getting-started/archive-on-dockstore>`.
 
 Deleting an Entry
 ------------------

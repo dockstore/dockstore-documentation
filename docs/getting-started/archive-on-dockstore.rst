@@ -51,9 +51,9 @@ Unarchiving an Entry
 ------------------
 
 Navigate to ``/my-tools``, ``/my-workflows``, ``/my-notebooks``, or ``/my-services`` by going to My Dashboard then selecting the desired option in the left sidebar.
-In the sidebar accordion, find the GitHub repository that your entry is in and click the entry you would like to unarchive.
+In the sidebar accordion, find the GitHub repository that your entry is in and click the entry you would like to unarchive in the Archived section.
 
-.. image:: /assets/images/docs/sidebar-accordian-workflow-select-2.png
+.. image:: /assets/images/docs/sidebar-accordian-workflow-select-archived.png
    :width: 50 %
 
 You should now see your entry with the Archive button on the far right of the page. Click the Unarchive button.

@@ -14,7 +14,7 @@ You can unarchive your entry back to normal at any time.
 
 
 Specific Changes When Archived
--------------------------
+-------------------------------
 
 After you archive the Dockstore workflow, it will be:
 
@@ -24,7 +24,7 @@ After you archive the Dockstore workflow, it will be:
 - Displayed in the "Archived" section of your Dockstore dashboard.
 
 Archiving an Entry
-------------------
+-------------------
 
 Navigate to ``/my-tools``, ``/my-workflows``, ``/my-notebooks``, or ``/my-services`` by going to My Dashboard then selecting the desired option in the left sidebar.
 In the sidebar accordion, find the GitHub repository that your entry is in and click the entry you would like to archive.
@@ -48,7 +48,7 @@ You will now see a banner that shows that your entry is archived and read-only.
    :width: 50 %
 
 Unarchiving an Entry
-------------------
+---------------------
 
 Navigate to ``/my-tools``, ``/my-workflows``, ``/my-notebooks``, or ``/my-services`` by going to My Dashboard then selecting the desired option in the left sidebar.
 In the sidebar accordion, find the GitHub repository that your entry is in and click the entry you would like to unarchive in the Archived section.

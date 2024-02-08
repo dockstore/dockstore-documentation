@@ -1,8 +1,8 @@
-MyBinder.org
-============
+MyBinder
+========
 
 Dockstore integrates with `MyBinder <https://mybinder.org/>`_, an online notebook environment based on `BinderHub <https://github.com/jupyterhub/binderhub>`_,
-allowing you to launch notebooks from Dockstore to mybinder.org. Here is some information on
+allowing you to launch notebooks from Dockstore to `MyBinder <https://mybinder.org/>`_. Here is some information on
 what that looks like from a user point of view in a mini tutorial.
 
 Launching to MyBinder

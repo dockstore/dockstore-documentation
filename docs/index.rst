@@ -123,17 +123,17 @@ Notebook Environments
 
 .. centered:: |GoogleColabLaunchWith|_ |GitHubCodespacesLaunchWith|_ |MyBinderLaunchWith|_
 
-.. |GoogleColabLaunchWith| image:: /assets/images/square/anvil_text.png
+.. |GoogleColabLaunchWith| image:: /assets/images/square/google_colab_text.png
    :alt: go to launch with Google Colab page
    :height: 140px
 .. _GoogleColabLaunchWith: launch-with/google-colab-launch-with.html
 
-.. |GitHubCodespacesLaunchWith| image:: /assets/images/square/anvil_text.png
+.. |GitHubCodespacesLaunchWith| image:: /assets/images/square/github_codespaces_text.png
    :alt: go to launch with GitHub Codespaces page
    :height: 140px
 .. _GitHubCodespacesLaunchWith: launch-with/github-codespaces-launch-with.html
 
-.. |MyBinderLaunchWith| image:: /assets/images/square/anvil_text.png
+.. |MyBinderLaunchWith| image:: /assets/images/square/mybinder_text.png
    :alt: go to launch with MyBinder page
    :height: 140px
 .. _MyBinderLaunchWith: launch-with/mybinder-launch-with.html

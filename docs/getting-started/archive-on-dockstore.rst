@@ -1,5 +1,5 @@
 Archiving an Entry on Dockstore
-===================================
+===============================
 
 Tutorial Goals
 --------------
@@ -7,16 +7,16 @@ Tutorial Goals
 -  Archiving an entry
 -  Unarchiving an entry
 
-This tutorial walks through the process of archiving entries from Dockstore.
+This tutorial walks through the process of archiving an entry from Dockstore.
 
 This action will make your entry read-only and less prominent in the Dockstore user interface.
 You can unarchive your entry back to normal at any time.
 
 
 Specific Changes When Archived
--------------------------------
+------------------------------
 
-After you archive the Dockstore workflow, it will be:
+After you archive the Dockstore tool, workflow, notebook, or service, it will be:
 
 - Marked as "Archived".
 - Read-only, except to unarchive. GitHub updates will be ignored.
@@ -24,10 +24,10 @@ After you archive the Dockstore workflow, it will be:
 - Displayed in the "Archived" section of your Dockstore dashboard.
 
 Archiving an Entry
--------------------
+------------------
 
 Navigate to ``/my-tools``, ``/my-workflows``, ``/my-notebooks``, or ``/my-services`` by going to My Dashboard then selecting the desired option in the left sidebar.
-In the sidebar accordion, find the GitHub repository that your entry is in and click the entry you would like to archive.
+In the sidebar accordion, find the organization that your entry is in and click the entry you would like to archive.
 
 .. image:: /assets/images/docs/sidebar-accordian-workflow-select-2.png
    :width: 50 %
@@ -37,7 +37,7 @@ You should now see your entry with the Archive button on the far right of the pa
 .. image:: /assets/images/docs/workflow-showing-archive-button.png
    :width: 50 %
 
-Read the dialog message and if you are sure you would like to archive, click the Archive this workflow/tool/notebook/service button
+Read the dialog message and if you are sure you would like to archive, click the Archive This <Entry> button
 
 .. image:: /assets/images/docs/archive-workflow-dialog.png
    :width: 50 %
@@ -56,7 +56,7 @@ In the sidebar accordion, find the GitHub repository that your entry is in and c
 .. image:: /assets/images/docs/sidebar-accordian-workflow-select-archived.png
    :width: 50 %
 
-You should now see your entry with the Archive button on the far right of the page. Click the Unarchive button.
+You should now see your entry with the Unarchive button on the far right of the page. Click the Unarchive button.
 
 .. image:: /assets/images/docs/archived-workflow-banner.png
    :width: 50 %

@@ -43,7 +43,8 @@ Getting Started
     4. :doc:`Creating a Dockstore Account <getting-started/register-on-dockstore>`
     5. :doc:`Register a tool on Dockstore <getting-started/dockstore-tools>`
     6. :doc:`Register a workflow on Dockstore <getting-started/dockstore-workflows>`
-    7. :doc:`Hosted tools and workflows <getting-started/hosted-tools-and-workflows>`
+    7. :doc:`Delete an Entry on Dockstore <getting-started/delete-on-dockstore>`
+    8. :doc:`Hosted tools and workflows <getting-started/hosted-tools-and-workflows>`
 * :doc:`Notebooks <getting-started/getting-started-with-notebooks>`
 * :doc:`Services (preview) <getting-started/getting-started-with-services>`
 * :doc:`Registering tools, workflows, notebooks, and services with the Dockstore GitHub App <getting-started/github-apps/github-apps-landing-page>`
@@ -63,6 +64,7 @@ Getting Started
    getting-started/register-on-dockstore
    getting-started/dockstore-tools
    getting-started/dockstore-workflows
+   getting-started/delete-on-dockstore
    getting-started/hosted-tools-and-workflows
    getting-started/getting-started-with-services
    getting-started/getting-started-with-notebooks
@@ -198,6 +200,7 @@ Best practices guidelines
    advanced-topics/best-practices/best-practices-dockstore
    advanced-topics/best-practices/best-practices-secure-fair-workflows
    advanced-topics/best-practices/notebook-portability
+   advanced-topics/best-practices/best-practices-development
 
 .. toctree::
    :caption: Dockstore CLI

@@ -84,6 +84,7 @@ You can specify additional information, such as the notebook's authors and descr
 
 Register Your Notebook
 ----------------------
+
 .. include:: /getting-started/github-apps/note--registration.rst
 
 To register your Notebook on Dockstore, install our Dockstore GitHub App on the repository that contains your notebook and ``.dockstore.yml`` file.  After installation, Dockstore will read your repository, automatically register your notebook, and update the notebook whenever the repository changes.
@@ -124,3 +125,6 @@ For example, to launch a notebook in Google Colab, navigate to the public notebo
 .. figure:: /assets/images/docs/launch-with-google-colab.png
 
 Now, you can edit and/or run your notebook.  If you modify it and want to keep the changes, :ref:`save it<save-your-notebook-to-github>` to GitHub, and a few minutes later, the updates will appear on Dockstore.
+
+.. discourse::
+    :topic_identifier: 7984

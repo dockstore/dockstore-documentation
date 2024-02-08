@@ -78,6 +78,10 @@ Note that tool and workflow versions that do not require any file input paramete
 You can find Open Data workflows and tools by selecting the Open Data facet on the `search <https://dockstore.org/search>`_ page.
 When viewing an individual tool or workflow, you can tell which versions are Open Data on the Versions tab via the Open column.
 
+.. note::
+    Dockstore does not consider requester pays data such as `Google Cloud Requester Pays <https://cloud.google.com/storage/docs/requester-pays>`_  and `Amazon S3 Requester Pays <https://docs.aws.amazon.com/AmazonS3/latest/userguide/RequesterPaysBuckets.html>`_ to be open data.
+    Even though their data may be open, our Open Data facet only shows those that are open and free.
+
 :ref:`(back to top) <topFAQ>`
 
 How should I register my work in Dockstore?
@@ -90,11 +94,9 @@ How should I register my work in Dockstore?
 How do I send private messages to administrators or report security vulnerabilities?
 ------------------------------------------------------------------------------------
 
-Users are able to open helpdesk tickets on `Discourse <https://discuss.dockstore.org/>`_. Users can create helpdesk tickets in
-case of privacy complaints, security vulnerabilities, or any other urgent matter related to Dockstore. Helpdesk tickets will be addressed
-by Dockstore administrators.
+Use the "Report a vulnerability" button on the upper right of this page on `GitHub <https://github.com/dockstore/dockstore/security>`_ to report security vulnerabilities. 
 
-The following steps can be taken to create a helpdesk ticket (also shown `here <https://discuss.dockstore.org/t/opening-helpdesk-tickets/1506>`_).
+A helpdesk ticket may be an option for privacy complaints or other urgent non-security matters. Both options will be addressed by Dockstore administrators. The following steps can be taken to create a helpdesk ticket (also shown `here <https://discuss.dockstore.org/t/opening-helpdesk-tickets/1506>`_).
 
 1. Navigate to `Discourse <https://discuss.dockstore.org/>`_ and login.
 2. Select your profile icon, located in the top right corner of the screen.

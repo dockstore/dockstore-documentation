@@ -4,6 +4,37 @@ jobs:
     docker:
       - image: python:3.9
     steps:
+      - basic_test
+  topic:
+    docker:
+      - image: python:3.9
+    steps:
+      - basic_test
+      - run:
+          name: Discourse Topic Check
+          command: |
+            bash discourse-topic-check.sh
+orbs:
+  jq: circleci/jq@2.2.0
+workflows:
+  version: 2.1
+  build:
+    jobs:
+      - test
+      - topic
+  weekly_link_check:
+    triggers:
+      - schedule:
+          cron: '30 12 * * 1' # Every Monday at 7:30am EST/4:30am PST
+          filters:
+            branches:
+              only:
+                - develop
+    jobs:
+      - test
+commands:
+  basic_test:
+    steps:
       - checkout
       - jq/install
       - run:
@@ -18,14 +49,3 @@ jobs:
       - run:
           name: Link check
           command: cd docs && make linkcheck
-      - run:
-          name: Discourse Topic Check
-          command: |
-            bash discourse-topic-check.sh
-orbs:
-  jq: circleci/jq@2.2.0
-workflows:
-  version: 2.1
-  build:
-    jobs:
-      - test

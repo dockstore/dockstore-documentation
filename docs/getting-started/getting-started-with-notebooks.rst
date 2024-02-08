@@ -8,90 +8,83 @@ Notebooks
 Tutorial Goals
 --------------
 
-- Get familiarized with the concept of notebooks on Dockstore
-- Learn the basics of creating a notebook using a .dockstore.yml file
-- Learn how to register a notebook
-- Publish your notebook to Dockstore
+- Create a notebook
+- Save a notebook to GitHub
+- Register a notebook on Dockstore
+- Publish a notebook on Dockstore
 
-Notebooks are documents that can include code, text, images, and other media resources. They can be executed in notebook environments like Google Colab and JupyterLab.
-This document outlines how to register, update, and publish a notebook on Dockstore.
+Notebooks are documents that include code, text, images, and other media resources, typically in subsections called "cells".  You can create, modify, and execute notebooks in browser-based, interactive environments like Google Colab and JupyterLab.  This document outlines how to create, register, update, and publish a notebook on Dockstore.
 
 Overview
 --------
 
-In this tutorial, you will register a notebook using the Dockstore GitHub App, which automatically syncs your notebook from GitHub to Dockstore. More information about the Dockstore GitHub App can be found :doc:`here </getting-started/github-apps/github-apps-landing-page>`.
+In this tutorial, you will create a notebook, save it to GitHub, and register your notebook on Dockstore using our GitHub App, which updates it when your repository changes.  More information about the Dockstore GitHub App can be found :doc:`here </getting-started/github-apps/github-apps-landing-page>`.
 
-Dockstore Notebooks takes advantage of Google Colab's integration with GitHub. The integration allows you to develop your notebook in Google Colab and push your changes to GitHub from Google Colab. With the Dockstore GitHub App installed on your repository, any edits saved to your notebook from Google Colab will automatically be synced to Dockstore.
+To create your notebook, you'll use `Google Colab <https://colab.research.google.com/>`_, a popular online notebook service.  Of course, you can author notebooks in other environments, such as `GitHub Codespaces <https://github.com/features/codespaces>`_, `MyBinder <https://mybinder.org/>`_, or `Jupyter <https://jupyter.org/try-jupyter/lab/>`_, but Colab is a clean, easy-to-use option that's perfect for beginners.
 
-Setting up the Google Colab and GitHub integration
---------------------------------------------------
+If you've already created a notebook, but it's not on GitHub, start at `Save Your Notebook to GitHub<save-your-notebook-to-github>`.
+If your notebook is on GitHub, skip to `Create Your .dockstore.yml" File<create-your-dockstore-yml-file>`.
 
-To get started, you will need a Google Colab account and a GitHub account.
+Create a Notebook
+-----------------
 
-In your Google Colab account, link your Google Colab account to your GitHub account. Click on the Settings gear icon in the upper right corner, then select GitHub in the dialog box. Click on Authorise with GitHub and authorize Google Colab to access your GitHub account.
+To create a notebook, first navigate to the `Google Colab site<https://colab.research.google.com/>`, create a Google account, and log into it.
+
+Then, click on *File > New* to open a new notebook.  Next, click the *+ Code* button to create a code cell and type a few lines of Python into it. Now, execute the cell by clicking the *Run* "play" icon to the left.  The environment will run your code (typically, behind the scenes, on another computer) and display the output below the cell.  Take a look, and if it's not right, edit and re-run your code until you're happy.  Then, add a text cell that explains your notebook and how it works.
+
+Voilà, you've created a notebook!
+
+.. _save-your-notebook-to-github:
+
+Save Your Notebook to GitHub
+----------------------------
+
+To allow Dockstore to read your notebook, you must save it to a GitHub repository.
+
+First, log into your GitHub account and create a repository for your notebook.  Pick a good repository name, because it will be part of your notebook's name on Dockstore.
+
+Then, link your notebook environment to your GitHub account and save your notebook to the repository.
+
+For example, to save a notebook to GitHub from Google Colab, link to your GitHub account by clicking on the *Settings* gear icon in the upper right corner and selecting GitHub in the dialog box. Then, click on *Authorise with GitHub* and authorize Google Colab to access your GitHub account.
 
 .. figure:: /assets/images/docs/google-colab-authorize-with-github.png
     :width: 60 %
 
-Next, we will set up a notebook on Google Colab so that it's also stored in one of your GitHub repositories. If you already have a notebook in Google Colab that's saved to a GitHub repository, you may proceed to :ref:`create the .dockstore.yml file for your repository<create-dockstore-yml>`.
-
-We will cover two scenarios:
-
-1. :ref:`You don't have a notebook in GitHub<no-notebook-in-github>`. You may or may not have a notebook in Google Colab.
-2. :ref:`You have a notebook in GitHub, but it's not in Google Colab<no-notebook-in-google-colab>`
-
-.. _no-notebook-in-github:
-
-You don't have a notebook in GitHub
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you don't have a notebook in GitHub *nor* Google Colab, navigate to Google Colab and create a new notebook by clicking on File > New notebook. Edit your new notebook if you like.
-
-If you already have a notebook in Google Colab, proceed to the next step.
-
-Click on File > Save a copy in GitHub to save your notebook to a GitHub repository. You may want to create a new repository for your notebook if you don't already have a repository that you want to save the notebook to.
+Next, click on *File > Save a copy in GitHub* to save your notebook to the repository.
 
 .. figure:: /assets/images/docs/google-colab-save-on-github.png
     :width: 35 %
 
-Configure where you want to save the notebook to on GitHub then click OK. Google Colab will push a commit to your repository with the notebook.
+Configure where on GitHub you want to save the notebook to, then click *OK*. Google Colab will push a notebook commit to your repository.
 
 .. figure:: /assets/images/docs/google-colab-save-on-github-dialog.png
     :width: 60 %
 
-.. _no-notebook-in-google-colab:
-
-You have a notebook in GitHub, but it's not in Google Colab
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Click on File > Open notebook then select the GitHub tab in the dialog box. Select the notebook that you want to import from GitHub. This will open the notebook in Google Colab.
-
-.. figure:: /assets/images/docs/google-colab-open-notebook-github.png
-    :width: 60 %
-
-.. _create-dockstore-yml:
+Congratulations!  You've saved your notebook to GitHub and are ready to tell Dockstore about it.
 
 Create Your .dockstore.yml File
 -------------------------------
 
-The first step is to create a file named ``.dockstore.yml`` which acts as a configuration file used to describe your notebook. This file should be created in the GitHub repository containing your notebook. We will cover an example .dockstore.yml written for a simple hello world Jupyter notebook written in Python. You can also view template .dockstore.yml files :doc:`here </assets/templates/notebooks/notebooks>` that describe the possible fields and values you can use to configure your notebook.
+To describe your notebook to Dockstore, create a YAML file named ``.dockstore.yml`` in the root directory of your repository.  When Dockstore you register your notebook, Dockstore will read the ``.dockstore.yml`` file to determine the path to your notebook file (and other information).
+For example, a ``.dockstore.yml`` for a simple "hello world" Jupyter notebook might look like:
 
 .. include:: /assets/templates/notebooks/example-1-name-default-format-language.yml
   :code:
 
 Line 1 specifies the ``.dockstore.yml`` version. You should use the latest version, which is version 1.2.
 
-Next is a required key named ``notebooks`` where your notebooks will be configured.
+Next is the ``notebooks`` field, which specifies details about your notebook(s).
 
-Within this, you can to specify the ``format`` and ``language`` of the notebook. These are optional keys and if left out, like in the example above, default to ``Jupyter`` and ``Python`` respectively. Currently, we only support ``Jupyter`` notebooks. For a list of all the languages supported, view the :doc:`notebook template files </assets/templates/notebooks/notebooks>`.
+Within, the ``path`` field specifies the absolute path to the notebook file in the Git repository.
+You can to specify the notebook's ``format`` and ``language``, which default to ``Jupyter`` and ``Python`` respectively. Currently, we only support ``Jupyter`` and ``Python`` for notebooks.
 
-Next, you need to specify the absolute path to the notebook file in the Git repository using the ``path`` key.
+You can specify additional information, such as the notebook's authors and description, in your ``.dockstore.yml``.  For more information about the file format and supported fields, see :doc:`here </assets/templates/notebooks/notebooks>`.
 
-Registering Your Notebook
--------------------------
+Register Your Notebook
+----------------------
 .. include:: /getting-started/github-apps/note--registration.rst
 
-To register your Notebook on Dockstore, you need to install our Dockstore GitHub application on the repository containing your notebook and .dockstore.yml file. By doing so, Dockstore will automatically register the notebooks and update your notebooks whenever your repository is updated on GitHub.
+To register your Notebook on Dockstore, install our Dockstore GitHub application on the repository that contains your notebook and ``.dockstore.yml file``.  After installation, Dockstore will read your repository, automatically register your notebook, and update the notebook whenever the repository changes.
 
 .. include:: /getting-started/github-apps/note--vocabulary.rst
 
@@ -99,37 +92,30 @@ Install the Dockstore GitHub App
 --------------------------------
 .. include:: /getting-started/github-apps/snippet--installation.rst
 
-Publishing Your Notebook
-------------------------
-In this release, you are only able to publish your notebook using the ``publish`` key in the .dockstore.yml file, and your notebook must be published in order for you to view it on Dockstore.
-
-Publishing will create a public page that is very similar to the ones we have for tools and workflows.
+Publish Your Notebook
+---------------------
+After you register your notebook, you have the option to publish it:
 
 .. figure:: /assets/images/docs/notebooks-public-page.png
 
-Now other users can view and :doc:`star <../end-user-topics/starring>` your notebook. You will also have the option to add published notebooks to a :doc:`collection <../advanced-topics/organizations-and-collections>`.
+After you publish your notebook, it will be visible to the general public, and other users can :doc:`star <../end-user-topics/starring>` it, add it to a :doc:`collection <../advanced-topics/organizations-and-collections>`, and :ref:`launch <launch-your-notebook>` it on various platforms.  Published notebooks also appear in `Search <../end-user-topics/search>`.
 
-Saving Changes to Your Notebook on Google Colab to GitHub
----------------------------------------------------------
+.. note:: After you publish your notebook, although you can archive or unpublish it, you'll no longer be able to delete it from Dockstore.
 
-At this point, your Google Colab and GitHub integration should be set up, you have installed the Dockstore GitHub App to your GitHub repository containing your notebook, and the published notebook appears on Dockstore. 
+.. _launch-your-notebook:
 
-You may wish to continue developing your notebook on Google Colab by modifying and re-running it. In order for the changes to your notebook to appear on Dockstore, you must click on File > Save a copy in GitHub to save your notebook to your GitHub repository.
+Launch Your Notebook
+--------------------
 
-.. figure:: /assets/images/docs/google-colab-save-on-github.png
-    :width: 35 %
+You can launch published Dockstore notebooks to the following environments:
+- Google Colab TODO link
+- GitHub Codespaces
+- mybinder.org
 
-Configure the GitHub repository and branch that you want to save the notebook to. This should be the repository and branch that contains your .dockstore.yml describing the notebook you have on Dockstore. Once configured, click OK. Google Colab will push a commit to your repository with the notebook.
+.. note:: Some of these environments have requirements and quirks that could affect if and how well your notebook will run.  Click the above links for more details.
 
-.. figure:: /assets/images/docs/google-colab-save-on-github-dialog.png
-    :width: 60 %
-
-Dockstore will detect the new commit and automatically sync your notebook from GitHub to Dockstore.
-
-Launch With Google Colab
-------------------------
-
-When viewing a public notebook on Dockstore, you can launch the notebook into Google Colab by clicking on the Google Colab link on the Launch With panel located on the right side of the page. This will open the notebook in Google Colab.
+For example, to launch a notebook in Google Colab, navigate to the public notebook page on Dockstore, and click on the *Google Colab* link on the *Launch With* panel at upper right.  In a new window, the notebook will open in Google Colab.
 
 .. figure:: /assets/images/docs/launch-with-google-colab.png
 
+Now, you can edit and/or run your notebook.  If you modify it and want to keep the changes, :ref:`save it<save-your-notebook-to-github>` to GitHub, and a few minutes later, the updates will appear on Dockstore.

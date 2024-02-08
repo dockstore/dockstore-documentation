@@ -12,7 +12,7 @@ When browsing notebooks from within Dockstore, you will see a
 currently selected version of the notebook will be launched.
 
 .. figure:: /assets/images/docs/notebook-info-page.png
-   :alt: Public notebook page 
+   :alt: Public notebook page
 
 See our See our :doc:`"Getting started with notebooks" <../getting-started/getting-started-with-notebooks>` tutorial for more details about launching to Google Colab.
 

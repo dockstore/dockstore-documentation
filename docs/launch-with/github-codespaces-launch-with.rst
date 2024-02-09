@@ -7,16 +7,16 @@ allowing you to launch a notebook from Dockstore to a Codespace. Here is some in
 Launching to a GitHub Codespace
 -------------------------------
 
-When browsing notebooks from within Dockstore, you will see a
+On each notebook's public Dockstore page, you will see a
 "Launch with GitHub Codespaces" button on the right. When you press it, the
 currently selected version of the notebook will launch in a new browser window.
 
 .. figure:: /assets/images/docs/notebook-info-page.png
    :alt: Public notebook page
 
-If a notebook repo does not contain a `dev container <https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers>`_ file, which is necessary to smoothly launch a notebook in a Codespace, Dockstore will display a warning dialog after you press the "Launch with" button.  You can proceed with the launch, but you'll need to start the notebook environment and load the notebook by hand, via the Codespace UI.
+If a notebook repository does not contain a `dev container <https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers>`_ file, which is necessary to smoothly launch a notebook into a Codespace, Dockstore will display a warning dialog after you press the "Launch with" button.  You can proceed with the launch, but you'll need to start the notebook environment and load the notebook by hand, via the Codespace UI.
 
-.. note:: If you are the notebook's author, see the "Devcontainer File" section below for information about how to add a devcontainer file to your repo.
+.. note:: If you are the notebook's author, see the "Devcontainer File" section below for information about how to add a devcontainer file to your repository.
 
 In a new browser window, you will see GitHub's "Create codespace" interface, which displays the branch/tag and devcontainer file you're using, as well as some menus that allow you to select the region and machine type for the Codespace:
 
@@ -28,14 +28,14 @@ Press the **Create codespace** button.
 Now, GitHub builds your Codespace and displays its progress in a text box.
 
 A few seconds later, the main Codespace interface appears and slowly initializes.
-As the Codespace loads the required resources, it will read the repo's `requirements.txt`, if it exists, and install the specified Python packages.  A notebook Codespace takes about 45 seconds to initialize, longer if it loads lots of packages.
+As the Codespace loads the required resources, it will read the repo's `requirements.txt`, if it exists, and install the specified Python packages.  A notebook Codespace takes about 45 seconds to initialize, and longer if it loads lots of packages.
 
 After it's done, you'll see the notebook and can edit and run it:
 
 .. figure:: /assets/images/docs/codespaces/notebook-in-a-codespace.png
    :alt: Notebook running in a Codespace
 
-The new Codespace is linked to the source GitHub repository, and the notebook has access to the files within.  You can commit changes by selecting the **Source Control** tab at left, pressing the **Commit** button, and confirming.  Commits go to the source repository if you own it, and a fork if you do not.
+The new Codespace is linked to the source GitHub repository, and the notebook has access to the files within.  You can commit changes by selecting the *Source Control* tab at left, pressing the *Commit* button, and confirming.  Commits go to the source repository if you own it, and a fork if you do not.
 
 Dev Container File
 ------------------

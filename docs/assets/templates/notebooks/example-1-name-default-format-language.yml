@@ -2,4 +2,4 @@ version: 1.2
 notebooks:
   - name: simple
     path: /notebook.ipynb
-    topic: A short description of the notebook
+    topic: A notebook that prints a greeting

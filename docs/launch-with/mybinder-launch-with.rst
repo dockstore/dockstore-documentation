@@ -2,13 +2,13 @@ MyBinder
 ========
 
 Dockstore integrates with `MyBinder <https://mybinder.org/>`_, an online notebook environment based on `BinderHub <https://github.com/jupyterhub/binderhub>`_,
-allowing you to launch notebooks from Dockstore to `MyBinder <https://mybinder.org/>`_. Here is some information on
+allowing you to launch notebooks from Dockstore to `mybinder.org <https://mybinder.org/>`_. Here is some information on
 what that looks like from a user point of view in a mini tutorial.
 
 Launching to MyBinder
 ---------------------
 
-When browsing notebooks from within Dockstore, you will see a
+On each notebook's public Dockstore page, you will see a
 "Launch with mybinder.org" button on the right. When you press it, the
 currently selected version of the notebook will be launched.
 
@@ -22,7 +22,7 @@ When a notebook is launched, MyBinder reads `requirements.txt` and `other config
 
 .. note: MyBinder is a non-profit, and its compute resources vary over time, causing launches to `sometimes fail <https://discourse.jupyter.org/t/binder-startup-stuck-at-pulling-image/22298/2>`_ during periods of high load.  In the event of a failure, you might retry later, or donate more servers to MyBinder.
 
-After MyBinder builds the kernel image, it displays the notebook within a Jupyter-based UI:
+After MyBinder builds the kernel image, it loads the notebook into a Jupyter-based interface:
 
 .. figure:: /assets/images/docs/mybinder/notebook-in-mybinder.png
    :alt: Notebook in MyBinder
@@ -35,5 +35,5 @@ Limitations
 See Also
 --------
 
+-  :doc:`Google Colab <../launch-with/google-colab-launch-with/>`
 -  :doc:`GitHub Codespaces <../launch-with/github-codespaces-launch-with/>`
--  :doc:`MyBinder <../launch-with/mybinder-launch-with/>`

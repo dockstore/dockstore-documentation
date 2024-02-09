@@ -40,7 +40,7 @@ You should now see your entry with the Archive button on the far right of the pa
 Read the dialog message and if you are sure you would like to archive, click the Archive This <Entry> button
 
 .. image:: /assets/images/docs/archive-workflow-dialog.png
-   :width: 50 %
+   :width: 75 %
 
 You will now see a banner that shows that your entry is archived and read-only.
 

@@ -39,5 +39,5 @@ To launch a notebook to a GitHub Codespace, the repo must include a dev containe
 
 Help Us
 -------
-Dockstore is actively researching ways to improve notebook portability.  Have an idea, feedback, or solution?  Please `let us know! <https://github.com/dockstore/dockstore/issues/new/choose>`_
+Dockstore is actively researching ways to improve notebook portability.  Have an idea, feedback, or solution?  Please let us know via the "Discussion" link below!
 

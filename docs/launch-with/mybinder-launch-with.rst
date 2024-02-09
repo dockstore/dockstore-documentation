@@ -20,7 +20,7 @@ When a notebook is launched, MyBinder reads `requirements.txt` and `other config
 .. figure:: /assets/images/docs/mybinder/starting-repository.png
    :alt: Starting repository
 
-.. note: MyBinder is a non-profit, and its compute resources vary over time, causing launches to `sometimes fail <https://discourse.jupyter.org/t/binder-startup-stuck-at-pulling-image/22298/2>`_ during periods of high load.  In the event of a failure, you might retry later, or donate more servers to MyBinder.
+.. note:: MyBinder is a non-profit, and its compute resources vary over time, causing launches to `sometimes fail <https://discourse.jupyter.org/t/binder-startup-stuck-at-pulling-image/22298/2>`_ during periods of high load.  In the event of a failure, you might retry later, or donate more servers to MyBinder.
 
 After MyBinder builds the kernel image, it loads the notebook into a Jupyter-based interface:
 

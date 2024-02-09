@@ -35,7 +35,7 @@ In the sidebar accordion, find the organization that your entry is in and click 
 You should now see your entry with the Archive button on the far right of the page. Click the Archive button.
 
 .. image:: /assets/images/docs/workflow-showing-archive-button.png
-   :width: 50 %
+   :width: 100 %
 
 Read the dialog message and if you are sure you would like to archive, click the Archive This <Entry> button
 
@@ -45,7 +45,7 @@ Read the dialog message and if you are sure you would like to archive, click the
 You will now see a banner that shows that your entry is archived and read-only.
 
 .. image:: /assets/images/docs/archived-workflow-banner.png
-   :width: 50 %
+   :width: 100 %
 
 Unarchiving an Entry
 ---------------------
@@ -59,12 +59,12 @@ In the sidebar accordion, find the organization that your entry is in and click 
 You should now see your entry with the Unarchive button on the far right of the page. Click the Unarchive button.
 
 .. image:: /assets/images/docs/archived-workflow-banner.png
-   :width: 50 %
+   :width: 100 %
 
 The archived banner should now be removed and your entry will function as normal.
 
 .. image:: /assets/images/docs/workflow-showing-archive-button.png
-   :width: 50 %
+   :width: 100 %
 
 
 .. discourse::

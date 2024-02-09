@@ -34,7 +34,7 @@ In the sidebar accordion, find the GitHub repository that your entry is in and c
 You should now see your entry with the Delete button on the far right of the page. Click the Delete button.
 
 .. image:: /assets/images/docs/workflow-showing-delete-button.png
-   :width: 50 %
+   :width: 100 %
 
 Read the dialog message and if you are sure you would like to delete, click the Delete this workflow/tool/notebook/service button
 

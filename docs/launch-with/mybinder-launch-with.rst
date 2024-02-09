@@ -15,12 +15,12 @@ currently selected version of the notebook will be launched.
 .. figure:: /assets/images/docs/notebook-info-page.png
    :alt: Public notebook page
 
-When Dockstore launches a notebook to MyBinder, MyBinder reads `certain <https://repo2docker.readthedocs.io/en/latest/specification.html>`_ configuration files from the source GitHub repository and uses them to build a kernel image.  This kernel image contains the specified software dependencies, is used to back the notebook environment, and is cached, making subsequent launches faster.
+When a notebook is launched, MyBinder reads `requirements.txt` and `other configuration files <https://repo2docker.readthedocs.io/en/latest/specification.html>`_ from the source GitHub repository and uses them to build a kernel image.  This kernel image contains the specified software packages, backs the notebook environment, and is cached, making subsequent launches faster.
 
 .. figure:: /assets/images/docs/mybinder/starting-repository.png
    :alt: Starting repository
 
-.. note: MyBinder is a non-profit, and its computational resources vary, causing launches to `sometimes fail <https://discourse.jupyter.org/t/binder-startup-stuck-at-pulling-image/22298/2>`_ during periods of high load.  In the event of a failure, you might retry later, or donate more compute to MyBinder.
+.. note: MyBinder is a non-profit, and its compute resources vary over time, causing launches to `sometimes fail <https://discourse.jupyter.org/t/binder-startup-stuck-at-pulling-image/22298/2>`_ during periods of high load.  In the event of a failure, you might retry later, or donate more servers to MyBinder.
 
 After MyBinder builds the kernel image, it displays the notebook within a Jupyter-based UI:
 
@@ -30,7 +30,7 @@ After MyBinder builds the kernel image, it displays the notebook within a Jupyte
 Limitations
 -----------
 
-1. You cannot save to GitHub using The MyBinder interface.  To commit a modified notebook to a repository, you must use the MyBinder UI to save the files locally, and then commit them to the repo using ``git``, GitHub, or similar.
+1. You cannot save to GitHub using the MyBinder interface.  To commit a notebook to a repository, you must use the *File > Download* feature to save the files locally, then commit them to the repo using ``git``, GitHub, or a similar tool.
 
 See Also
 --------

@@ -39,7 +39,7 @@ You should now see your entry with the Delete button on the far right of the pag
 Read the dialog message and if you are sure you would like to delete, click the Delete this workflow/tool/notebook/service button
 
 .. image:: /assets/images/docs/delete-workflow-dialog.png
-   :width: 75 %
+   :width: 50 %
 
 Please make sure that you have uninstalled the Dockstore GitHub App from the source GitHub repo, or edited/removed the ``.dockstore.yml`` file so that it no longer describes the deleted entry.
 If you do not, your deleted entry may reappear on Dockstore the next time you push to the repo.

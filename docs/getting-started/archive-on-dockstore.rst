@@ -66,3 +66,6 @@ The archived banner should now be removed and your entry will function as normal
 .. image:: /assets/images/docs/workflow-showing-archive-button.png
    :width: 50 %
 
+
+.. discourse::
+    :topic_identifier: 8057

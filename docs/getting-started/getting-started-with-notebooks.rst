@@ -8,8 +8,8 @@ Notebooks
 Tutorial Goals
 --------------
 
-- Create a notebook
-- Save a notebook to GitHub
+- Create a notebook in Google Colab
+- Save a notebook to GitHub from Google Colab
 - Register a notebook on Dockstore
 - Publish a notebook on Dockstore
 
@@ -20,15 +20,14 @@ Overview
 
 In this tutorial, you will create a notebook, save it to GitHub, and register your notebook on Dockstore using our GitHub App, which updates it when your repository changes.  More information about the Dockstore GitHub App can be found :doc:`here </getting-started/github-apps/github-apps-landing-page>`.
 
-To create your notebook, you'll use `Google Colab <https://colab.research.google.com/>`_, a popular online notebook service.  Of course, you can author notebooks in other environments, such as `GitHub Codespaces <https://github.com/features/codespaces>`_, `MyBinder <https://mybinder.org/>`_, or `Jupyter <https://jupyter.org/try-jupyter/lab/>`_, but Colab is a clean, easy-to-use option that's perfect for beginners.
+To create and save your notebook, you'll use `Google Colab <https://colab.research.google.com/>`_, a popular online notebook service.  Of course, you can author notebooks in other environments, such as `GitHub Codespaces <https://github.com/features/codespaces>`_, `MyBinder <https://mybinder.org/>`_, or `Jupyter <https://jupyter.org/try-jupyter/lab/>`_, but Colab is a clean, easy-to-use option that's perfect for beginners.
 
 .. note:: If you've already created a notebook, but it's not on GitHub, start at :ref:`Save Your Notebook to GitHub <save-your-notebook-to-github>`.  If your notebook is on GitHub, skip to :ref:`Create Your .dockstore.yml File <create-your-dockstore-yml-file>`.
 
-Create a Notebook
------------------
+Create a Notebook in Google Colab
+---------------------------------
 
-To create a notebook, first navigate to the `Google Colab site <https://colab.research.google.com/>`_, create a Google account if you don't already have one (click the *Sign In* button at upper right, and then *Create account*), and log into it.  Then, click on *File > New* to open a new notebook.
-After a few seconds, the main notebook environment appears, with a cursor blinking in a code cell:
+To create a notebook, first navigate to the `Google Colab site <https://colab.research.google.com/>`_, create a Google account if you don't already have one (click the *Sign In* button at upper right, and then *Create account*), and log into it.  Then, click on *File > New* to open a new notebook.  After a few seconds, the main notebook environment appears, with a cursor blinking in a code cell:
 
 .. figure:: /assets/images/docs/google-colab-new-notebook.png
 
@@ -36,16 +35,22 @@ Type a line or two of Python into the cell, then execute it by clicking the *Run
 
 Voilà, you've created a notebook!
 
+.. note:: To learn more about notebooks, see the Jupyter Project's collection of `examples <https://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/examples_index.html>`_.
+
 .. _save-your-notebook-to-github:
 
-Save Your Notebook to GitHub
-----------------------------
+Save Your Notebook to GitHub from Google Colab
+----------------------------------------------
 
 To allow Dockstore to read your notebook, you must save it to a GitHub repository.
 
 First, log into your GitHub account and create a repository for your notebook.  Pick a good repository name, because it will be part of your notebook's name on Dockstore.
 
-Then, link your notebook environment to your GitHub account and save your notebook to the repository.  To save a notebook to GitHub from Google Colab, link to your GitHub account by clicking on the *Settings* gear icon in the upper right corner and selecting GitHub in the dialog box. Then, click on *Authorise with GitHub* and authorize Google Colab to access your GitHub account.
+Then, link your notebook environment to your GitHub account and save your notebook to the repository.
+
+.. note:: This tutorial explains how to save from Google Colab.  To save from another notebook environment, either: a) link the environment to your GitHub account and commit the files, or b) save the notebook files locally and push them to your repository using a Git-based tool.
+
+To save a notebook to GitHub from Google Colab, link to your GitHub account by clicking on the *Settings* gear icon in the upper right corner and selecting GitHub in the dialog box. Then, click on *Authorise with GitHub* and authorize Google Colab to access your GitHub account.
 
 .. figure:: /assets/images/docs/google-colab-authorize-with-github.png
     :width: 60 %

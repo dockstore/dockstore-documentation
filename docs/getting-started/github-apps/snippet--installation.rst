@@ -28,7 +28,7 @@ You'll then be redirected to GitHub where you can install the app in an organiza
 
    Install our GitHub App in an organization or your personal account
 
-After selection of an organization or a personal account, you can select whether to give access to all current and future repositories or only select ones. If the organization or personal account you choose is intended to be just for Dockstore tools/workflows/services/notebooks, you may want to allow access to all repositories. Otherwise, it may be more intuitive to select only certain repositories. Click save and you will be taken back to the page you started on in Dockstore -- either  ``/my-tools``, ``/my-workflows``, ``/my-notebooks``, or ``/my-services``, depending on where you started.
+After selection of an organization or a personal account, you can select whether to give access to all current and future repositories or only select ones. If the organization or personal account you choose is intended to be just for Dockstore tools/workflows/services/notebooks, you may want to allow access to all repositories. Otherwise, it may be more intuitive to select only certain repositories. Click save and you will be taken back to Dockstore.
 
 .. important:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
 

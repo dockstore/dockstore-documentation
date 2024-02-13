@@ -35,7 +35,7 @@ The above `iPython <https://ipython.org/>`_ code will copy the repo files into t
 GitHub Codespaces
 -----------------
 
-To launch a notebook to a GitHub Codespace, the repo must include a dev container file that specifies the path of the notebook file and to launch the Codespace notebook extensions.  See :doc:`"Launch with GitHub Codespaces" <../../launch-with/github-codespaces-launch-with>` page for more details.
+To launch a notebook to a GitHub Codespace, the repo must include a dev container file that specifies the path of the notebook file and to launch the Codespace notebook extensions.  See :doc:`Launch with GitHub Codespaces <../../launch-with/github-codespaces-launch-with>` page for more details.
 
 Help Us
 -------

@@ -194,7 +194,7 @@ Organizations have the ability to restrict access to the API for third
 party applications. GitHub provides a
 `tutorial <https://help.github.com/en/articles/enabling-oauth-app-access-restrictions-for-your-organization/>`__
 on how to add these restrictions to your organizations.  For recently-created GitHub organizations,
-third-party application access is denied by default.
+third party application access is denied by default.
 
 In order for Dockstore to gain access to organizations of this type, you
 will need to grant access to the Dockstore application. Dockstore will

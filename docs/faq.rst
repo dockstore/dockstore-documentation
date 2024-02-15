@@ -193,8 +193,8 @@ Why are my workflows from an organization I belong to not visible?
 Organizations have the ability to restrict access to the API for third
 party applications. GitHub provides a
 `tutorial <https://help.github.com/en/articles/enabling-oauth-app-access-restrictions-for-your-organization/>`__
-on how to add these restrictions to your organizations, and they are enabled for recently-created organizations
-by default.
+on how to add these restrictions to your organizations.  For recently-created GitHub organizations,
+third-party application access is denied by default.
 
 In order for Dockstore to gain access to organizations of this type, you
 will need to grant access to the Dockstore application. Dockstore will
@@ -205,7 +205,7 @@ itself. GitHub provides a
 for approving third party apps access to your organization.
 
 As you navigate GitHub's administrative interface, you may see a
-message indicating that you have denied the Dockstore application access
+message indicating that you have denied Dockstore access
 to your organization:
 
 .. image:: /assets/images/docs/dockstore-oauth-access-denied.png
@@ -214,7 +214,7 @@ To grant access to the Dockstore application, click the *Grant access* button.
 
 If you don't grant access, some Dockstore features, such as manual workflow
 registration and workflow discovery, will not function properly
-for Dockstore users from your organization.
+for Dockstore users from your GitHub organization.
 
 :ref:`(back to top) <topFAQ>`
 

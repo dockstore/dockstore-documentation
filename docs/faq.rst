@@ -213,7 +213,8 @@ to your organization:
 To grant access to the Dockstore application, click the *Grant access* button.
 
 If you don't grant access, some Dockstore features, such as manual workflow
-registration and workflow discovery, will not function properly.
+registration and workflow discovery, will not function properly
+for Dockstore users from your organization.
 
 :ref:`(back to top) <topFAQ>`
 

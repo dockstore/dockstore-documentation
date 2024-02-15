@@ -212,8 +212,8 @@ to your organization:
 
 To grant access to the Dockstore application, click the *Grant access* button.
 
-If you don't grant access, some Dockstore features, such as manual workflow
-registration and workflow discovery, will not function properly
+If you don't grant access, some Dockstore functionality, such as manual workflow
+registration and the "Discover Existing Dockstore Workflows" feature, may not work properly
 for Dockstore users from your GitHub organization.
 
 :ref:`(back to top) <topFAQ>`

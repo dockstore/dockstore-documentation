@@ -56,3 +56,6 @@ Help Us
 
 Dockstore is actively researching ways to improve notebook portability.  Have an idea, feedback, or solution?  Please let us know via the "Discussion" link below!
 
+
+.. discourse::
+    :topic_identifier: 8143

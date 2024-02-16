@@ -67,3 +67,6 @@ See Also
 
 -  :doc:`Google Colab <../launch-with/google-colab-launch-with/>`
 -  :doc:`MyBinder <../launch-with/mybinder-launch-with/>`
+
+.. discourse::
+    :topic_identifier: 8140

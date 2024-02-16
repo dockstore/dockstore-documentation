@@ -37,3 +37,6 @@ See Also
 
 -  :doc:`Google Colab <../launch-with/google-colab-launch-with/>`
 -  :doc:`GitHub Codespaces <../launch-with/github-codespaces-launch-with/>`
+
+.. discourse::
+    :topic_identifier: 8142

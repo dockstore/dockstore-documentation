@@ -26,3 +26,6 @@ See Also
 
 -  :doc:`GitHub Codespaces <../launch-with/github-codespaces-launch-with/>`
 -  :doc:`MyBinder <../launch-with/mybinder-launch-with/>`
+
+.. discourse::
+    :topic_identifier: 8141

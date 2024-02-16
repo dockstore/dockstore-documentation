@@ -118,6 +118,31 @@ Cloud Partners
 
 In addition to the above cloud partners, you can also launch workflows with :doc:`BioData Catalyst <launch-with/bdcat-launch-with>` or the :doc:`Dockstore CLI <launch-with/launch>`.
 
+Launching notebooks from Dockstore
+----------------------------------
+Dockstore supports launching notebooks into several environments with the click of a button.  Click on the links below for more information.
+
+Notebook Environments
+^^^^^^^^^^^^^^^^^^^^^
+
+.. centered:: |GoogleColabLaunchWith|_ |GitHubCodespacesLaunchWith|_ |MyBinderLaunchWith|_
+
+.. |GoogleColabLaunchWith| image:: /assets/images/square/google_colab_text.png
+   :alt: go to launch with Google Colab page
+   :height: 140px
+.. _GoogleColabLaunchWith: launch-with/google-colab-launch-with.html
+
+.. |GitHubCodespacesLaunchWith| image:: /assets/images/square/github_codespaces_text.png
+   :alt: go to launch with GitHub Codespaces page
+   :height: 140px
+.. _GitHubCodespacesLaunchWith: launch-with/github-codespaces-launch-with.html
+
+.. |MyBinderLaunchWith| image:: /assets/images/square/mybinder_text.png
+   :alt: go to launch with MyBinder page
+   :height: 140px
+.. _MyBinderLaunchWith: launch-with/mybinder-launch-with.html
+
+
 .. toctree::
    :caption: Launch Tools and Workflows
    :maxdepth: 1
@@ -132,6 +157,15 @@ In addition to the above cloud partners, you can also launch workflows with :doc
    launch-with/galaxy-launch-with
    launch-with/nextflow-tower-launch-with
    launch-with/terra-launch-with
+
+.. toctree::
+   :caption: Launch Notebooks
+   :maxdepth: 1
+   :hidden:
+
+   launch-with/google-colab-launch-with
+   launch-with/github-codespaces-launch-with
+   launch-with/mybinder-launch-with
 
 .. toctree::
    :caption: End user topics
@@ -155,6 +189,7 @@ Best practices guidelines
 * Language-specific: :doc:`CWL <advanced-topics/best-practices/cwl-best-practices>` | :doc:`Nextflow <advanced-topics/best-practices/nfl-best-practices>` | :doc:`WDL <advanced-topics/best-practices/wdl-best-practices>`
 * :doc:`Best practices on Dockstore <advanced-topics/best-practices/best-practices-dockstore>`
 * :doc:`Best practices for secure and FAIR workflows <advanced-topics/best-practices/best-practices-secure-fair-workflows>`
+* :doc:`Notebook portability <advanced-topics/best-practices/notebook-portability>`
 
 .. toctree::
    :caption: Best Practices
@@ -167,6 +202,7 @@ Best practices guidelines
    advanced-topics/best-practices/best-practices-dockstore
    advanced-topics/best-practices/best-practices-secure-fair-workflows
    advanced-topics/best-practices/best-practices-development
+   advanced-topics/best-practices/notebook-portability
 
 .. toctree::
    :caption: Dockstore CLI

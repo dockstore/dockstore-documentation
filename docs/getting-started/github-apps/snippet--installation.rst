@@ -28,18 +28,13 @@ You'll then be redirected to GitHub where you can install the app in an organiza
 
    Install our GitHub App in an organization or your personal account
 
-After selection of an organization or a personal account, you can select whether to give access to all current and future repositories or only select ones. If the organization or personal account you choose is intended to be just for Dockstore tools/workflows/services/notebooks, you may want to allow access to all repositories. Otherwise, it may be more intuitive to select only certain repositories. Click save and you will be taken back to the page you started on in Dockstore -- either  ``/my-tools``, ``/my-workflows``, or ``/my-services``, depending on where you started.
+After selection of an organization or a personal account, you can select whether to give access to all current and future repositories or only select ones. If the organization or personal account you choose is intended to be just for Dockstore tools/workflows/services/notebooks, you may want to allow access to all repositories. Otherwise, it may be more intuitive to select only certain repositories. Click save and you will be taken back to Dockstore.
 
 .. important:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
 
 On Dockstore, under the GITHUB section, you should see the names of GitHub accounts that you have access to, such as organizations that you belong to and your personal account. If your repositories that you chose to keep track of contained a .dockstore.yml at the time of installing the GitHub App, then you will see the repositories under the GitHub personal/organization account name that it belongs to. Here's an example involving ``/my-services``:
 
 .. figure:: /assets/images/docs/my-services-filled.png
-
-.. note:: You will not see unpublished notebooks because there is not a dedicated ``/my-notebooks`` page yet. To view your notebook, which should've been configured to automatically publish on Dockstore via the .dockstore.yml, navigate to ``/notebooks``
-   and locate your notebook in the list of published notebooks.
-   
-   .. image:: /assets/images/docs/list-published-notebooks.png
 
 
 A note on permissions when installing the Dockstore GitHub App to a GitHub organization

@@ -8,6 +8,8 @@ Per the "Interoperable" and "Reusable" guidelines of the :ref:`dict FAIR` princi
 - **Access remote data via publically-accessible urls and standard protocols.**  If your notebook can always read the data it requires, it's more likely to run successfully.
 - **Avoid using a custom kernel image, if possible.**  Some notebook environments, such as Google Colab, don't allow you to use a custom kernel image.
 
+Depending upon your goals for your notebook, you might choose to follow or ignore the above recommendations.  However, keep in mind that as your notebook's needs diverge from the baseline level of support across all notebook environments - basically, for Jupyter notebooks, the ability to execute vanilla Python 3 code with no external dependencies - it becomes less likely to run everywhere.
+
 Environment-Specific Recommendations
 ------------------------------------
 

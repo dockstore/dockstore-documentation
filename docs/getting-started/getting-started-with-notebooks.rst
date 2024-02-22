@@ -35,7 +35,8 @@ Type a line or two of Python into the cell, then execute it by clicking the *Run
 
 Voilà, you've created a notebook!
 
-.. note:: To learn more about notebooks, see the Jupyter Project's collection of `examples <https://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/examples_index.html>`_.
+.. note:: To learn more about notebooks, see the Jupyter Project's collection of `examples <https://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/examples_index.html>`_. 
+    For a fun notebook example on Dockstore, explore this `notebook <https://dockstore.org/notebooks/github.com/dockstore/dockstore-trs-notebook:main?tab=info>`_ that demonstrates how to use the :ref:`dict TRS` API.
 
 .. _save-your-notebook-to-github:
 

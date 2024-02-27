@@ -66,10 +66,12 @@ NFL
 NHGRI
 NHLBI
 NIH
+notebook
 OICR
 ORCID
 organization
 parameter file
+parent image
 preemptible
 primary descriptor file
 secondary descriptor file
@@ -79,6 +81,7 @@ Task Execution Service
 Terra
 TES
 tool
+topic
 TRS
 UCSC
 VM

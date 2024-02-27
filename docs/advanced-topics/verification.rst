@@ -38,7 +38,7 @@ If you're tool/workflow developer, verifying would assure others that your tool/
 How do I verify?
 ---------------------------------------
 If you are an admin/curator, follow the :ref:`Verification Process` section in this document.
-If you are not an admin/curator, please send us a heads-up via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or `Gitter <https://gitter.im/ga4gh/dockstore>`_!
+If you are not an admin/curator, please send us a heads-up via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or `discourse <https://discuss.dockstore.org/>`_!
 
 
 How do I tell if a tool/workflow is verified?

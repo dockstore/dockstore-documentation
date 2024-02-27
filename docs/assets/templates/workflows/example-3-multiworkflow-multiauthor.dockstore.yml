@@ -10,6 +10,7 @@ workflows:
     name: assoc-aggregate-wdl
     authors:
       - orcid: 0000-0003-4896-1858
+    topic: A short description of assoc-aggregate-wdl
   - subclass: WDL
     primaryDescriptorPath: /pc-air/pc-air.wdl
     readMePath: /pc-air/README.md
@@ -19,3 +20,4 @@ workflows:
     name: pc-air-wdl
     authors:
       - orcid: 0000-0001-9163-2756
+    topic: A short description of pc-air-wdl

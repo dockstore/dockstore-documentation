@@ -13,19 +13,9 @@ For questions relating to the Dockstore CLI, please see :doc:`Dockstore CLI FAQ 
 General Dockstore Questions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-What environment do you test tools in?
---------------------------------------
-
-Typically, we test running tools in Ubuntu Linux 16.04 LTS on VMs in
-`OpenStack <https://www.openstack.org/>`__ with 8 vCPUs and 96 GB of RAM
-and above. We've also begun testing on Ubuntu 18.04 LTS and so far it's
-been successful. If you are only listing and editing tools, we have
-achieved success with much lower system requirements. However, launching
-tools will have higher system requirements dependent on the specific
-tool. Consult a tool's README or CWL/WDL description when in doubt.
-
-:ref:`(back to top) <topFAQ>`
-
+How do I use workflows that I find on Dockstore? 
+------------------------------------------------
+If you want to run the workflow locally, you can :doc:`use the Dockstore CLI to download and run the workflow </launch-with/launch>`. Alternatively, you can run the workflow using a cloud platform by clicking the "Launch With" button on the right side of the workflow entry.
 
 .. _what-is-a-verified-tool-or-workflow:
 
@@ -88,6 +78,10 @@ Note that tool and workflow versions that do not require any file input paramete
 You can find Open Data workflows and tools by selecting the Open Data facet on the `search <https://dockstore.org/search>`_ page.
 When viewing an individual tool or workflow, you can tell which versions are Open Data on the Versions tab via the Open column.
 
+.. note::
+    Dockstore does not consider requester pays data such as `Google Cloud Requester Pays <https://cloud.google.com/storage/docs/requester-pays>`_  and `Amazon S3 Requester Pays <https://docs.aws.amazon.com/AmazonS3/latest/userguide/RequesterPaysBuckets.html>`_ to be open data.
+    Even though their data may be open, our Open Data facet only shows those that are open and free.
+
 :ref:`(back to top) <topFAQ>`
 
 How should I register my work in Dockstore?
@@ -100,11 +94,9 @@ How should I register my work in Dockstore?
 How do I send private messages to administrators or report security vulnerabilities?
 ------------------------------------------------------------------------------------
 
-Users are able to open helpdesk tickets on `Discourse <https://discuss.dockstore.org/>`_. Users can create helpdesk tickets in
-case of privacy complaints, security vulnerabilities, or any other urgent matter related to Dockstore. Helpdesk tickets will be addressed
-by Dockstore administrators.
+Use the "Report a vulnerability" button on the upper right of this page on `GitHub <https://github.com/dockstore/dockstore/security>`_ to report security vulnerabilities. 
 
-The following steps can be taken to create a helpdesk ticket (also shown `here <https://discuss.dockstore.org/t/opening-helpdesk-tickets/1506>`_).
+A helpdesk ticket may be an option for privacy complaints or other urgent non-security matters. Both options will be addressed by Dockstore administrators. The following steps can be taken to create a helpdesk ticket (also shown `here <https://discuss.dockstore.org/t/opening-helpdesk-tickets/1506>`_).
 
 1. Navigate to `Discourse <https://discuss.dockstore.org/>`_ and login.
 2. Select your profile icon, located in the top right corner of the screen.
@@ -120,7 +112,7 @@ The following steps can be taken to create a helpdesk ticket (also shown `here <
 How do I cite Dockstore?
 ------------------------
 
-For citing Dockstore as a paper, take a look at our `F1000
+For citing Dockstore as a paper, take a look at our `Nucleic Acids Research paper <https://doi.org/10.1093/nar/gkab346>`__ or our older `F1000
 paper <https://dx.doi.org/10.12688/f1000research.10137.1>`__.
 
 For citing the actual code, we recommend looking at our Zenodo entry.
@@ -134,8 +126,8 @@ You will find a variety of citation styles and ways to export it at
 Integration with GitHub
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-What is the difference between logging in with GitHub or logging in with Google?
---------------------------------------------------------------------------------
+What is the difference between logging in with GitHub versus logging in with Google?
+-------------------------------------------------------------------------------------
 
 The intent here is that you should be able to login with either login
 method and still conveniently get into the same Dockstore account. With
@@ -201,7 +193,8 @@ Why are my workflows from an organization I belong to not visible?
 Organizations have the ability to restrict access to the API for third
 party applications. GitHub provides a
 `tutorial <https://help.github.com/en/articles/enabling-oauth-app-access-restrictions-for-your-organization/>`__
-on how to add these restrictions to your organizations.
+on how to add these restrictions to your organizations.  For recently-created GitHub organizations,
+third party application access is denied by default.
 
 In order for Dockstore to gain access to organizations of this type, you
 will need to grant access to the Dockstore application. Dockstore will
@@ -210,6 +203,18 @@ has access to them in order to mirror these restrictions on Dockstore
 itself. GitHub provides a
 `tutorial <https://help.github.com/en/articles/approving-oauth-apps-for-your-organization/>`__
 for approving third party apps access to your organization.
+
+As you navigate GitHub's administrative interface, you may see a
+message indicating that you have denied Dockstore access
+to your organization:
+
+.. image:: /assets/images/docs/dockstore-oauth-access-denied.png
+
+To grant access to the Dockstore application, click the *Grant access* button.
+
+If you don't grant access, some Dockstore functionality, such as manual workflow
+registration and the "Discover Existing Dockstore Workflows" feature, may not work properly
+for Dockstore users from your GitHub organization.
 
 :ref:`(back to top) <topFAQ>`
 
@@ -324,43 +329,42 @@ Do you have tips on creating Dockerfiles?
    client/server issues, it is also not compatible with CWL)
 -  do not depend on changes to ``hostname`` or ``/etc/hosts``, Docker
    will interfere with this
+-  use a well-known and secure :ref:`dict parent image` such as official `debian <https://hub.docker.com/_/debian>`__ or `Python <https://hub.docker.com/_/python>`__ images
 -  try to keep your Docker images small
+   -  however, do not use alpine images, or other images that lack bash, as your parent image unless you will be installing bash in the Dockerfile 
+  
 
 :ref:`(back to top) <topFAQ>`
 
+How should I handle large reference files when designing workflows and Dockerfiles?
+-----------------------------------------------------------------------------------
+Generally speaking, you can choose to either "package" reference files in your Docker image, or you can treat them as "inputs" so they can be staged outside and mounted into the running container. We generally recommend having them serve as inputs.
 
-Do you have tips on creating CWL files?
+:ref:`(back to top) <topFAQ>`
+
+Do you have tips on creating workflows?
 ---------------------------------------
 
-When writing CWL tools and workflows, there are a few common workarounds
-that can be used to deal with the restrictions that CWL places on the
-use of docker. These include:
+When writing workflows, there are a few common workarounds
+that can be used to deal with the restrictions that workflow languages such as CWL and WDL place on the
+use of Docker. These include:
 
 * cwltool (which we use to run tools) is restrictive and locks down much of ``/`` as read only, use the current working directory or $TMPDIR for file writes 
 
 * You can also use `Docker volumes <https://docs.docker.com/engine/reference/builder/#/volume>`__ in your Dockerfile to specify additional writeable directories
 
-* Do not rely on the hostname inside a container, Docker dynamically generates this when starting containers
+* Do not rely on the hostname inside a container; Docker dynamically generates this when starting containers
+
+* Do not rely on an entrypoint inside a container; workflow executors tend to override custom entrypoints with /bin/bash 
 
 Additionally:
 
--  you need to "collect" output from your tools/workflows inside docker
-   and drop them into the current working directory in order for CWL to
-   "find" them and pull them back outside of the container
+-  in order for the workflow executor to "find" your outputs and pull them back outside the container, you may want to "collect" output from your tools/workflows inside Docker and drop them into the current working directory
 -  related to this, it's often times easiest to write a simple wrapper
    script that maps the command line arguments specified by CWL to
    however your tool expects to be parameterized. This script can handle
    moving output to the current working directory and renaming if need
    be
--  genomics workflows work with large data files, this can have a few
-   ramifications:
-
-   -  do not "package" large data reference files in your Docker image.
-      Instead, treat them as "inputs" so they can be staged outside and
-      mounted into the running container
-   -  the ``$TMPDIR`` variable can be used as a scratch space inside
-      your container. Make sure your host running Docker has sufficient
-      scratch space for processing your genomics data.
 
 :ref:`(back to top) <topFAQ>`
 
@@ -384,11 +388,12 @@ Any last tips on using Dockstore?
 ---------------------------------
 
 -  the Dockstore CLI uses ``./datastore`` in the working directory for
-   temp files so if you're processing large files make sure this
+   temp files, so if you're processing large files, make sure this
    partition hosting the current directory is large.
 -  you can use a single Docker image with multiple tools, each of them
    registered via a different CWL
--  you can use a Git repository with multiple CWL files
+-  you can also use a single Docker image with multiple workflows
+-  you can use a Git repository with multiple workflow files
 -  related to the two above, you can use non-standard file paths if you
    customize your registrations in the Version tab of Dockstore
 
@@ -403,8 +408,8 @@ If you run into this situation, please use the `Help Desk` link in the https://d
 
 :ref:`(back to top) <topFAQ>`
 
-.. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.321679.svg
-   :target: https://zenodo.org/record/321679
+.. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.592056.svg
+   :target: https://zenodo.org/record/8165758
 
 .. discourse::
     :topic_identifier: 1968

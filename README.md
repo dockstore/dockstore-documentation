@@ -6,7 +6,7 @@ Below are some tips for setting up the documentation locally and updating the co
 
 ## Setting up locally
 
-Install pip dependencies (Requires Python 3)
+Install pip dependencies (Requires Python 3.9+)
 `pip install -r requirements.txt`
 
 Go to the docs directory

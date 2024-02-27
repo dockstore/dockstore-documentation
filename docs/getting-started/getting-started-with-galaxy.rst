@@ -28,12 +28,14 @@ Using Custom Galaxy in the Cloud with Terra, and AnVIL
 ------------------------------------------------------------------------
 Galaxy is also integrated into the Terra cloud workspace. This provides users the ability to readily create a custom Galaxy environment scaled to their needs or with additional tools installed. Additionally, the Terra workspace is able to access a rich data corpus hosted in the cloud, including many controlled access datasets, thus allowing users to conduct analyses with this data in a compliance-based environment.
 
-Unlike WDL and CWL, Galaxy workflows in the near term are created and modified from the Galaxy workflow editor (GUI), instead of a text editor.
-
 Create a basic Galaxy workflow
 ------------------------------
 
+Unlike other workflow languages such as WDL and CWL, Galaxy workflows are currently created and modified from the Galaxy workflow editor (GUI), instead of a text editor.
+
 If you would like to create and run your own workflow in Galaxy, here  is a tutorial for `Creating, Editing, Importing Galaxy Workflows <https://training.galaxyproject.org/training-material/topics/galaxy-interface/tutorials/workflow-editor/tutorial.html>`__ from the Galaxy Training Network.
+
+In addition, the Galaxy Intergalactic Workflow Commission (IWC) team has an excellent tutorial for creating best practices workflows for IWC `here <https://github.com/galaxyproject/iwc/blob/main/workflows/README.md>`__. It discusses how to add the correct metadata, generate tests, and lint your workflow. It also shows how you can generate a ``.dockstore.yml`` using the `Planemo <https://planemo.readthedocs.io/en/latest/index.html>`__ command-line utilities.
 
 Export the workflow to a file
 -----------------------------
@@ -95,8 +97,25 @@ Now that you have a git repository that includes a Galaxy workflow, the next ste
 register it on Dockstore.
 
 If you haven't set up a Dockstore account follow the :doc:`next tutorial <register-on-dockstore/>` to create an
-account on Dockstore and link to third party services, which includes GitHub.
-Otherwise follow the instructions for :doc:`workflow registration. <dockstore-workflows>`
+account on Dockstore and link to third party services, which includes GitHub. Then follow the instructions for :doc:`workflow registration <dockstore-workflows>`.
+
+
+.. note::
+
+   The :doc:`workflow registration instructions <dockstore-workflows>` describe manually creating a ``.dockstore.yml``, a file needed for integrating Dockstore and GitHub. For
+   Galaxy, it's recommended you instead use :ref:`Planemo <Planemo dockstore.yml>` to generate the .dockstore.yml.
+
+.. _Planemo dockstore.yml:
+
+Using Planemo to generate a .dockstore.yml
+------------------------------------------
+
+The command-line utility for Galaxy, `Planemo <https://planemo.readthedocs.io/en/latest/index.html>`__, can generate a ``.dockstore.yml``. Install Planemo, then generate the ``.dockstore.yml`` file by navigating to the directory containing your workflow and running:
+
+::
+
+$ planemo dockstore_init .
+
 
 See Also
 --------

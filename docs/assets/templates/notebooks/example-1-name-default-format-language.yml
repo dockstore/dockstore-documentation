@@ -2,4 +2,4 @@ version: 1.2
 notebooks:
   - name: simple
     path: /notebook.ipynb
-    publish: true
+    topic: A notebook that prints a greeting

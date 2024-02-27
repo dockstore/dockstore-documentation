@@ -5,6 +5,7 @@ service:
   authors:
     - name: <String>
       email: <String>
+  topic: <String>
   description: <String>
   publish: <Boolean>
   files: <String, do not use wildcards>

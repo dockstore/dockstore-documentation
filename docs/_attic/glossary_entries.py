@@ -249,7 +249,7 @@ Elwazi = GlossEntry("eLwazi",
 
 Entry = GlossEntry("entry", 
 	acronym_full="", 
-	definition="Shorthand for a [tool] or [workflow] that has been registered on Dockstore.", 
+	definition="Shorthand for a [tool], [workflow], [notebook], or service that has been registered on Dockstore.",
 	furtherreading="", 
 	institute="Dockstore", 
 	pronunciation='')
@@ -478,6 +478,13 @@ NIH = GlossEntry("NIH",
 	institute="", 
 	pronunciation="")
 
+notebook = GlossEntry("notebook",
+	acronym_full="",
+	definition="An interactive document, made up of \"cells\" containing code, text, and images, authored and executed in a browser-based programming environment.  Project [Jupyter] popularized Python-based notebooks and maintains related specifications and software.",
+	furtherreading="/getting-started/getting-started-with-notebooks",
+	institute="",
+	pronunciation="")
+
 OICR = GlossEntry("OICR", 
 	acronym_full="Ontario Institute for Cancer Research", 
 	definition="A non-profit research institute based in Toronto that is focused on cancer detection and treatment. One of the two institutes involved in the development of Dockstore, the other being [UCSC].", 
@@ -505,6 +512,10 @@ ParameterFile = GlossEntry("parameter file",
 	furtherreading="", 
 	institute="", 
 	pronunciation='')
+
+ParentImage = GlossEntry("parent image", 
+	definition="A [Docker image] which acts as the base upon which another Docker image is built. For example, including ``FROM ubuntu:22.04`` in a [Dockerfile] means that the resulting image will include everything inside ubuntu:22.04, plus any changes made by other commands in the Dockerfile. Parent images are sometimes called base images, but strictly speaking a base image is different (see further reading).", 
+	furtherreading="https://docs.docker.com/glossary/#parent-image")
 
 Preemptible = GlossEntry("preemptible", 
 	acronym_full="", 
@@ -574,10 +585,17 @@ TRS = GlossEntry("TRS",
         institute="GA4GH",
         pronunciation='"terse", rhymes with verse')
 
+Topic = GlossEntry("topic",
+        acronym_full="",
+        definition="A short text description of an [entry], [collection], or [organization].  You can specify an entry's topic in [.dockstore.yml].",
+        furtherreading="",
+        institute="",
+        pronunciation='')
+
 UCSC = GlossEntry("UCSC", 
 	acronym_full="University of California, Santa Cruz", 
 	definition="A public university located in Santa Cruz that is focused on undergraduate and graduate education and research. The Genomics Institute, a branch of UCSC's engineering department, is one of the two institutes involved in the development of Dockstore, the other being [OICR].", 
-	furtherreading="https://ucsc.edu", 
+	furtherreading="https://www.ucsc.edu", 
 	institute="", 
 	pronunciation="")
 

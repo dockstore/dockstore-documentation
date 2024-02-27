@@ -47,6 +47,10 @@ workflow path, test parameter file, workflow name, etc. When a push is made on G
 with a .dockstore.yml, Dockstore will add that branch to the corresponding workflow on Dockstore. If the
 workflow doesn't already exist on Dockstore, one will be created (but will not automatically be published publically). Note that a single dockstore.yml file can describe multiple workflows, if all of those workflows are in the same repository.
 
+.. note::
+
+    For Galaxy workflows it is recommended you use the Galaxy command-line utility, Planemo, to generate the .dockstore.yml. See :ref:`Generating a .dockstore.yml with Planemo <Planemo dockstore.yml>`
+
 Below is a simple example of a .dockstore.yml file
 for an alignment workflow to show you how easy it is to use. Note that all file paths in the file must be absolute.
 
@@ -58,6 +62,7 @@ for an alignment workflow to show you how easy it is to use. Note that all file 
         primaryDescriptorPath: /aligner.cwl
         testParameterFiles:
         - /test/aligner.cwl.json
+        topic: A short descrption of this workflow
 
 If you had our GitHub App installed on the repository ``myorg/alignments`` and then add the above .dockstore.yml to the **develop** branch,
 the following would occur:

@@ -10,6 +10,7 @@ docs/advanced-topics/naming-workflows.rst
 docs/assets/templates/notebooks/notebooks.rst
 docs/assets/templates/tools/tools.rst
 docs/assets/templates/workflows/workflows.rst
+docs/assets/templates/yaml-array-advice.rst
 docs/getting-started/adding-a-test-parameter-file.rst
 docs/getting-started/building-on-quayio.rst
 docs/getting-started/github-apps/note--gha-summary.rst

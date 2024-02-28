@@ -8,6 +8,8 @@ Simple template
 .. include:: /assets/templates/notebooks/template-small.dockstore.yml
   :code:
 
+.. include:: ../yaml-array-advice.rst
+
 Full template with explanation of all available fields
 ------------------------------------------------------
 .. include:: /assets/templates/notebooks/template-big.dockstore.yml

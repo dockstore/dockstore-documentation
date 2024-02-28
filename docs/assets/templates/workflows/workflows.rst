@@ -12,6 +12,8 @@ Simple generic template for a workflow
 
 Always use :ref:`absolute paths <dict absolute path>` to specify the :ref:`primary descriptor <dict primary descriptor file>`, :ref:`test parameter <dict parameter file>`, and readMePath files.
 
+.. include:: ../yaml-array-advice.rst
+
 Filled-out example of a single workflow without a name
 ------------------------------------------------------
 In this example, the workflow author is identified with an ORCID iD. When an ORCID iD is specified, there is no need to specify an author's name and email as that information will be pulled from the ORCID API. There are also three test parameter files given for the workflow. Since no readMePath is specified, Dockstore will show the top-level readme (if one is present), eg, ``/readme.md``

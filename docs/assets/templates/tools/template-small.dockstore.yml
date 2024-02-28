@@ -2,7 +2,7 @@ version: 1.2
 tools:
   - subclass: CWL
     primaryDescriptorPath: <String>
-    testParameterFiles: <String Array>
+    testParameterFiles: <String Array>  # Must be a YAML array of strings
     authors:
       - name: <String>
         email: <String>

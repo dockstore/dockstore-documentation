@@ -4,12 +4,10 @@ notebooks:
     language: <PYTHON | R | JAVASCRIPT | SCALA | JULIA | OTHER>
     path: <String>
     kernel: <String>
-    otherFiles: <String Array>
-    testParameterFiles: <String Array>
+    otherFiles: <String Array>  # Must be a YAML array of strings
+    testParameterFiles: <String Array>  # Must be a YAML array of strings
     readMePath: <String>
     authors:
       - name: <String>
         email: <String>
-    # Publish must be set to true in order for you to view your notebook on Dockstore in preview mode
-    publish: true
     topic: <String>

@@ -2,7 +2,7 @@ version: 1.2
 workflows:
   - subclass: <CWL | WDL | NFL | GALAXY>
     primaryDescriptorPath: <String>
-    testParameterFiles: <String Array>
+    testParameterFiles: <String Array>  # Must be a YAML array of strings
     readMePath: <String>
     authors:
       - name: <String>

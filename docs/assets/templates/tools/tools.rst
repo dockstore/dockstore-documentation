@@ -9,8 +9,6 @@ Simple generic template for a tool
 .. include:: /assets/templates/tools/template-small.dockstore.yml
   :code:
 
-.. include:: ../yaml-array-advice.rst
-
 Filled-out example of a single tool without a name
 --------------------------------------------------
 Although the author has a name, the tool itself is not identified with one.

@@ -4,8 +4,12 @@ notebooks:
     language: <PYTHON | R | JAVASCRIPT | SCALA | JULIA | OTHER>
     path: <String>
     kernel: <String>
-    otherFiles: <String Array>  # Must be a YAML array of strings
-    testParameterFiles: <String Array>  # Must be a YAML array of strings
+    otherFiles:
+      - <String>
+      - <String>
+    testParameterFiles:
+      - <String>
+      - <String>
     readMePath: <String>
     authors:
       - name: <String>

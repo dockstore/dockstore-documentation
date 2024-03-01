@@ -33,7 +33,9 @@ notebooks:
     publish: <Boolean>
 
     # An optional array of absolute paths to other files in the Git repository that should be read and included with the notebook.
-    otherFiles: <String Array>  # Must be a YAML array of strings
+    otherFiles:
+      - <String>
+      - <String>
 
     # An optional path to a notebook-specific readme in the Git repository. If not provided, Dockstore will show
     # the readme.md present at the root of the Git repository if it is present.
@@ -69,5 +71,9 @@ notebooks:
     # https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)
     # or RegEx when the string is surrounded by / (Ex: `/develop/`, `/mynotebook\/.*/`).
     filters:
-      branches: <String Array>  # Must be a YAML array of strings
-      tags: <String Array>  # Must be a YAML array of strings
+      branches:
+        - <String>
+        - <String>
+      tags:
+        - <String>
+        - <String>

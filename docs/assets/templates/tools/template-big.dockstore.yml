@@ -33,7 +33,9 @@ tools:
     # testParameterFiles:
     #     - /null-model/null-model.json
     #     - /null-model/null-model-binary.json
-    testParameterFiles: <String Array>  # Must be a YAML array of strings
+    testParameterFiles:
+      - <String>
+      - <String>
 
     # An optional array of authorship information.
     # Note that if orcid is present, then all other fields will be ignored, as information will be taken from orcid.
@@ -64,6 +66,10 @@ tools:
     # https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)
     # or RegEx when the string is surrounded by / (Ex: `/develop/`, `/mycooltool\/.*/`).
     filters:
-      branches: <String Array>  # Must be a YAML array of strings
-      tags: <String Array>  # Must be a YAML array of strings
+      branches:
+        - <String>
+        - <String>
+      tags:
+        - <String>
+        - <String>
 

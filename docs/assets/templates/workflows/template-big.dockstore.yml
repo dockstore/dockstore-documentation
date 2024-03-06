@@ -35,7 +35,9 @@ workflows:
     # testParameterFiles:
     #   - /null-model/null-model.json
     #   - /null-model/null-model-binary.json
-    testParameterFiles: <String Array>
+    testParameterFiles:
+      - <String>
+      - <String>
 
     # An optional path to a workflow-specific readme in the Git repository. If not provided, Dockstore will show
     # the readme.md present at the root of the Git repository if it is present.
@@ -71,6 +73,10 @@ workflows:
     # https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)
     # or RegEx when the string is surrounded by / (Ex: `/develop/`, `/myworkflow\/.*/`).
     filters:
-      branches: <String Array>
-      tags: <String Array>
+      branches:
+        - <String>
+        - <String>
+      tags:
+        - <String>
+        - <String>
 

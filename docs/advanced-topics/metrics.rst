@@ -30,6 +30,8 @@ Getting Started With Submitting Metrics to Dockstore
 
 The following sections go over how a platform can submit workflow metrics to Dockstore. 
 
+You will need to:
+
 .. contents::
    :local:
    :depth: 1

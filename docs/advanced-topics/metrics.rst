@@ -1,7 +1,11 @@
 Workflow Metrics
 ================
 
-What are workflow metrics?
+.. contents::
+   :local:
+   :depth: 1
+
+What Are Workflow Metrics?
 ------------------------------------
 Workflow metrics are metrics of workflow executions on a platform. Metrics include things like the resources used during the execution, and how often workflow executions succeeded or failed.
 
@@ -12,38 +16,53 @@ Users are able to execute workflows on various platforms using Dockstore's Launc
 
 Platforms are able to submit metrics of workflows executed on their platform to Dockstore and we aggregate the metrics and display them in the UI to the users in the :ref:`Metrics tab <How to view metrics>`.
 
-.. _How to view metrics:
-
-How do I view workflow metrics?
--------------------------------
-
-To search for workflows with metrics, navigate to the `search <https://dockstore.org/search>`_ page and select a platform for the Execution Metrics and/or Validation Metrics facets.
-
-.. figure:: /assets/images/docs/metrics/metrics-search-facets.png
-    :alt: Metrics search facets
-
-Select a workflow and click on the Versions tab. Versions that have metrics have a check mark in the Metrics column.
-
-.. figure:: /assets/images/docs/metrics/versions-metrics-column.png
-    :alt: Metrics column in Versions table
-
-Select a version with metrics then click on the Metrics tab to view the metrics available.
-
-.. figure:: /assets/images/docs/metrics/metrics-tab.png
-    :alt: Metrics tab
-
-Why would I, a platform owner, want to submit workflow metrics?
+Why Would I, a Platform Owner, Want to Submit Workflow Metrics?
 ---------------------------------------------------------------
 
 As a platform owner, workflow metrics indicate to others that your platform is compatible with many workflows on Dockstore. Workflow metrics provide valuable information to users, including information about the resources and time needed to run the workflow. It helps the user determine if the workflow is high quality and likely to function correctly.
 
-Platform owners are able to submit metrics for workflow executions, retrieve submitted executions, and update submitted executions.
+Platform owners are able to submit metrics for workflow executions, retrieve submitted executions, and update submitted executions. 
 
-.. note:: Submitting metrics for workflow executions, and retrieving and updating submitted executions are only available for admins, curators, and platform partners. If you're a platform owner and you don't have a platform partner user, please contact us via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or open a helpdesk ticket on `Discourse <https://discuss.dockstore.org/>`_ and we will help you get set up.
+.. _Getting started with submitting metrics:
 
+Getting Started With Submitting Metrics to Dockstore
+----------------------------------------------------
 
-How do I submit workflow metrics?
----------------------------------
+The following sections go over how a platform can submit workflow metrics to Dockstore. 
+
+You need to:
+
+.. contents::
+   :local:
+   :depth: 2
+
+Record Workflow Execution Metrics on your Platforms
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The first step is to collect metrics for workflow executions that occur on your platform. The mandatory metrics that Dockstore requires are the date of execution and the execution status. 
+If they are available, you can also collect additional metrics such as how long it took the workflow to run, CPU requirements, memory requirements, etc.
+
+Format the Workflow Metrics for Dockstore
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The metrics that you collect may not be in the format that the Dockstore API expects, so you have to format them so they follow Dockstore's schema. 
+For example, execution dates are expected to be in ISO 8601 UTC date format and there are a defined set of execution statuses that can be submitted.
+
+Register a Platform Partner User on Dockstore
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Only Dockstore admins, curators, and platform partners can :ref:`submit metrics<Submit executions>` for workflow executions, and :ref:`retrieve and update submitted executions<Viewing And Updating Submitted Workflow Metrics>`.
+If you're a platform owner and you don't have a platform partner user on Dockstore, please:
+
+1. :doc:`Create a Dockstore account </getting-started/register-on-dockstore>`, if you haven't already. You will use the credentials of this user to submit Dockstore metrics.
+2. Contact us via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or open a helpdesk ticket on `Discourse <https://discuss.dockstore.org/>`_ and we will give your Dockstore user a platform partner role.
+
+.. _Submit executions:
+
+Submit Workflow Metrics to Dockstore
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Once you have the metrics formatted, you may use the Dockstore API to submit workflow metrics. You will need the Dockstore token of a user with a platform partner role.
 
 Go to https://dockstore.org/api/static/swagger-ui/index.html#/extendedGA4GH/executionMetricsPost and provide your Dockstore token using the lock icon at the top right of the endpoint. This is the endpoint used to submit metrics to Dockstore. Click the "Try it out” button.
 
@@ -186,10 +205,44 @@ The curl command looks something like:
 
 If it was submitted successfully, you should receive a ``204`` response code. 
 
+What Happens Next
+^^^^^^^^^^^^^^^^^
+
+Over time, your platform will collect more workflow metrics and you will submit them to Dockstore at a schedule of your choice.
+
+Dockstore will occasionally aggregate the workflow metrics you submit into aggregated metrics to display in the :ref:`Dockstore UI<How to view metrics>`.
+
+.. _How to view metrics:
+
+Viewing Aggregated Workflow Metrics in Dockstore
+------------------------------------------------
+
+To search for workflows with metrics, navigate to the `search <https://dockstore.org/search>`_ page and select a platform for the Execution Metrics and/or Validation Metrics facets.
+
+.. figure:: /assets/images/docs/metrics/metrics-search-facets.png
+    :alt: Metrics search facets
+
+Select a workflow and click on the Versions tab. Versions that have metrics have a check mark in the Metrics column.
+
+.. figure:: /assets/images/docs/metrics/versions-metrics-column.png
+    :alt: Metrics column in Versions table
+
+Select a version with metrics then click on the Metrics tab to view the metrics available.
+
+.. figure:: /assets/images/docs/metrics/metrics-tab.png
+    :alt: Metrics tab
+
+.. _Viewing And Updating Submitted Workflow Metrics:
+
+Viewing And Updating Submitted Workflow Metrics
+-----------------------------------------------
+
+As a platform owner who previously :ref:`submitted execution metrics to Dockstore<Getting started with submitting metrics>`, you may want to view or update submitted executions.
+
 .. _View submitted execution:
 
 How do I view a submitted execution?
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To view an execution that you previously submitted, you can retrieve it by its execution ID.
 
@@ -249,7 +302,7 @@ If the request was successful, you should receive a ``200`` status code and the 
 .. _Update submitted execution:
 
 How do I update workflow metrics?
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You may want to update metrics that you have previously submitted because you received new metrics for the execution at a later time.
 

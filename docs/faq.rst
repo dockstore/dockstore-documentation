@@ -91,6 +91,8 @@ How should I register my work in Dockstore?
    
 :ref:`(back to top) <topFAQ>`
 
+.. _faq-contact-admins:
+
 How do I send private messages to administrators or report security vulnerabilities?
 ------------------------------------------------------------------------------------
 

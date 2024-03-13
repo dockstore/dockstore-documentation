@@ -16,12 +16,12 @@ Users are able to execute workflows on various platforms using Dockstore's Launc
 
 Platforms are able to submit metrics of workflows executed on their platform to Dockstore and we aggregate the metrics and display them in the UI to the users in the :ref:`Metrics tab <How to view metrics>`.
 
-Why Would I, a Platform Owner, Want to Submit Workflow Metrics?
----------------------------------------------------------------
+Why Would a Platform Owner Want to Submit Workflow Metrics?
+-----------------------------------------------------------
 
 As a platform owner, workflow metrics indicate to others that your platform is compatible with many workflows on Dockstore. Workflow metrics provide valuable information to users, including information about the resources and time needed to run the workflow. It helps the user determine if the workflow is high quality and likely to function correctly.
 
-Platform owners are able to submit metrics for workflow executions, retrieve submitted executions, and update submitted executions. 
+Platform owners can submit metrics for workflow executions, retrieve submitted executions, and update submitted executions. 
 
 .. _Getting started with submitting metrics:
 
@@ -36,24 +36,24 @@ You will need to:
    :local:
    :depth: 1
 
-Dockstore will occasionally aggregate the workflow metrics you submit and display them in the :ref:`Dockstore UI<How to view metrics>`.
+Dockstore aggregates the workflow metrics you submit and displays them in the :ref:`Dockstore UI<How to view metrics>`.
 
 Record workflow execution metrics on your platform
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The first step is to collect metrics for executions of public Dockstore workflows that occur on your platform. The mandatory metrics that Dockstore requires are the date of execution and the execution status. 
-If they are available, you may also collect additional metrics such as how long it took the workflow to run, CPU requirements, memory requirements, etc.
+If they are available, you are encouraged to collect additional metrics such as how long it took the workflow to run, CPU requirements, memory requirements, etc.
 
 Format the workflow metrics for Dockstore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The metrics that you collect may not be in the format that the Dockstore API expects. You have to format them so they follow Dockstore's schema, which you can view in the :ref:`Submit Workflow Metrics to Dockstore<Submit executions>` section.
 
-For example, execution dates are expected to be in ISO 8601 UTC date format and there are a defined set of execution statuses that can be submitted.
+For example, execution dates are expected to be in ISO 8601 UTC date format, and there are a defined set of execution statuses that can be submitted.
 
 .. note::
    If you are unable to format the workflow metrics to match Dockstore's schema or you would like to try submitting metrics without continuing with the following steps, 
-   contact us via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or open a helpdesk ticket on `Discourse <https://discuss.dockstore.org/>`_ and we can help get your metrics into Dockstore.
+   contact us via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or open a :ref:`helpdesk ticket<faq-contact-admins>` on `Discourse <https://discuss.dockstore.org/>`_ and we can help get your metrics into Dockstore.
    
    This may involve you providing us with a file of metrics, such as a CSV file, and Dockstore will process the file and ingest the metrics into our system.
 
@@ -64,7 +64,7 @@ Only Dockstore admins, curators, and platform partners can :ref:`submit metrics<
 If you're a platform owner and you don't have a platform partner user on Dockstore, please:
 
 1. :doc:`Create a Dockstore account </getting-started/register-on-dockstore>`, if you haven't already. You will use the credentials of this user to submit Dockstore metrics.
-2. Contact us via our `GitHub <https://github.com/dockstore/dockstore/issues>`_ issues or open a helpdesk ticket on `Discourse <https://discuss.dockstore.org/>`_ and we will give your Dockstore user a platform partner role.
+2. Contact us by opening a :ref:`helpdesk ticket<faq-contact-admins>` on `Discourse <https://discuss.dockstore.org/>`_ and we will give your Dockstore user a platform partner role.
 
 .. _Submit executions:
 

@@ -5,7 +5,7 @@ certifi==2023.11.17
 charset-normalizer==3.3.2
 docutils==0.17.1
 glossarpy==0.1.2
-idna==3.6
+idna==3.7
 imagesize==1.4.1
 importlib-metadata==7.0.1
 Jinja2==3.1.3

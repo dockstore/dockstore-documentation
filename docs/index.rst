@@ -79,7 +79,7 @@ Dockstore partners with several compute platforms, allowing you to export workfl
 Cloud Partners
 ^^^^^^^^^^^^^^
 
-.. centered:: |AnVILLaunchWith|_ |CavaticaLaunchWith|_ |CGCLaunchWith|_ |DnanexusLaunchWith|_ |GalaxyLaunchWith|_ |NextflowtowerLaunchWith|_ |TerraLaunchWith|_
+.. centered:: |AnVILLaunchWith|_ |CavaticaLaunchWith|_ |CGCLaunchWith|_ |DnanexusLaunchWith|_ |GalaxyLaunchWith|_ |SeqeraPlatformLaunchWith|_ |TerraLaunchWith|_
 
 .. |AnVILLaunchWith| image:: /assets/images/square/anvil_text.png
     :alt: go to launch with AnVIL page
@@ -106,10 +106,10 @@ Cloud Partners
     :height: 140px
 .. _GalaxyLaunchWith: launch-with/galaxy-launch-with.html
 
-.. |NextflowtowerLaunchWith| image:: /assets/images/square/nextflowtower_text.png
-    :alt: go to launch with Nextflow Tower page
+.. |SeqeraPlatformLaunchWith| image:: /assets/images/square/seqeraplatform_text.png
+    :alt: go to launch with Seqera Platform
     :height: 140px
-.. _NextflowtowerLaunchWith: launch-with/nextflow-tower-launch-with.html
+.. _SeqeraPlatformLaunchWith: launch-with/seqera-platform-launch-with.html
 
 .. |TerraLaunchWith| image:: /assets/images/square/terra_text.png
     :alt: go to launch with Terra page
@@ -155,7 +155,7 @@ Notebook Environments
    launch-with/cgc-launch-with
    launch-with/dnanexus-launch-with
    launch-with/galaxy-launch-with
-   launch-with/nextflow-tower-launch-with
+   launch-with/seqera-platform-launch-with
    launch-with/terra-launch-with
 
 .. toctree::

@@ -2,3 +2,5 @@ docs/_build
 docs/dictionary.rst
 *.DS_Store
 *.pyc
+docsenv
+.idea

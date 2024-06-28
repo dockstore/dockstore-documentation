@@ -1,7 +1,7 @@
-Nextflow Tower
-==============
+Seqera Platform
+===============
 
-Dockstore integrates with the `Seqera Platform <https://https://seqera.io/>`__,
+Dockstore integrates with the `Seqera Platform <https://seqera.io/>`__,
 allowing you to launch Nextflow-based workflows from Dockstore in a variety of
 cloud environments.
 
@@ -12,7 +12,7 @@ When browsing Nextflow workflows from within Dockstore, there is a
 "Launch with Seqera" button on the right.
 
 .. figure:: /assets/images/docs/seqera_launch_with.png
-   :alt: Nextflow workflow
+   :alt: Nextflow workflow in Dockstore
    
 
 Select the version of the workflow you want to run in Seqera Platform, then click on the Seqera
@@ -26,16 +26,16 @@ by Dockstore. Please follow the Seqera Platform instructions for configuring the
 your pipeline.
 
 .. figure:: /assets/images/docs/seqera_platform_from_dockstore.png
-   :alt: Nextflow Tower
+   :alt: Seqera Platform workflow launch interface
 
 .. _nextflow-limitations:
 
 Limitations
 -----------
 
-Nextflow Tower runs a workflow by cloning its git repository and checking out the specified branch. Unlike other launch-with partners, it does not
+Seqera Platform runs a workflow by cloning its git repository and checking out the specified branch. Unlike other launch-with partners, it does not
 fetch the workflow content directly from Dockstore. The Nextflow version on Dockstore can be out of sync with the version on GitHub, Bitbucket, or GitLab.
-When determining the exact workflow contents being run on Nextflow Tower, refer to the git repository.
+When determining the exact workflow contents being run on Seqera Platform, refer to the git repository.
 
 
 .. discourse::

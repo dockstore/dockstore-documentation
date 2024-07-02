@@ -65,7 +65,21 @@ linkcheck_ignore = [
     # Confusing, linkcheck and curl report expired cert, but cert date is correct in browser
     'https://support.orcid.org/hc/en-us/articles/360006971593-Do-you-have-more-than-one-account',
     # elwazi cert expired, remove when renewed
-    'https://elwazi.org/'
+    'https://elwazi.org/',
+    # These links works but the CircleCI client gets denied
+    'https://bcc2020.sched.com/event/c4pR/reproducible-analysis-in-the-cloud-with-dockstore-and-terra',
+    'https://bcc2020.sched.com/event/c46B/dockstore-fundamentals-introduction-to-docker-and-descriptors-for-reproducible-analysis',
+    # TODO remove after ICGC and AGC tickets are done #5926 #5925
+    'https://dcc.icgc.org/pcawg',
+    'https://docs.icgc.org/download/guide/#score-client-usage',
+    'https://docs.icgc.org/download/guide/#configuration',
+    'https://docs.icgc.org/download/guide/',
+    'https://dcc.icgc.org/pcawg#!%2Fmutations',
+    'https://dcc.icgc.org/icgc-in-the-cloud/aws',
+    'https://aws.github.io/amazon-genomics-cli/docs/getting-started/installation/',
+    'https://aws.github.io/amazon-genomics-cli/docs/getting-started/',
+    'https://aws.github.io/amazon-genomics-cli/docs/concepts/data/',
+    'https://aws.github.io/amazon-genomics-cli'
     ]
 
 

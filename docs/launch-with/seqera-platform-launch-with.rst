@@ -3,7 +3,7 @@ Seqera Platform
 
 Dockstore integrates with the `Seqera Platform <https://seqera.io/>`__,
 allowing you to launch Nextflow-based workflows from Dockstore in a variety of
-cloud environments.
+cloud environments like AWS Batch, Slurm, or Kubernetes.
 
 Exporting into Seqera Platform
 ------------------------------

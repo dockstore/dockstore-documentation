@@ -109,7 +109,7 @@ Cloud Partners
 .. |SeqeraPlatformLaunchWith| image:: /assets/images/square/seqeraplatform_text.png
     :alt: go to launch with Seqera Platform
     :height: 140px
-.. _SeqeraPlatformLaunchWith: launch-with/seqera-platform-launch-with.html
+.. _SeqeraPlatformLaunchWith: :doc: launch-with/seqera-platform-launch-with
 
 .. |TerraLaunchWith| image:: /assets/images/square/terra_text.png
     :alt: go to launch with Terra page

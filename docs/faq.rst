@@ -84,6 +84,27 @@ When viewing an individual tool or workflow, you can tell which versions are Ope
 
 :ref:`(back to top) <topFAQ>`
 
+.. _what-is-dockstore-generative-ai-policy:
+
+In human readable terms, what is Dockstore's approach to generative AI?
+-----------------------------------------------------------------------
+
+In broad strokes, we are exploring the use of generative AI to enhance the workflow and tool development process.
+For full transparency, we will work following these principles:
+
+1. For content generated and displayed to the public or to other users (e.g. AI generated topic sentences), we will only train or use as prompts, data that is already available publicly.
+In other words, as an example, only after the publish button is used, will we create topic sentences that are presented to other users.
+2. For content displayed to the users themselves (e.g. auto-complete or auto-categorization type features), we only use in-house LLMs or AIs. In other words, we will only
+utilize LLMs hosted at OICR or UCSC, ensuring that no private data leaves the Dockstore ecosystem.
+3. AI generated will be clearly labelled, except in the case that a workflow developer, curator, or similar human has "approved" of it
+4. We will attempt to programmatically review generated content but cannot guarantee that we will successfully review everything. We are still very much exploring what these technologies
+are capable of and there will likely be shortcomings. We will provide tools to remove offensive or misleading content.
+
+
+:ref:`(back to top) <topFAQ>`
+
+
+
 How should I register my work in Dockstore?
 -------------------------------------------
 

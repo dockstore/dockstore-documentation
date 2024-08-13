@@ -15,9 +15,8 @@ Under the hood, the Dockstore CLI invokes cwltool to launch CWL workflows by def
 entries on Dockstore (``dockstore tool convert``). 
 Additionally, when launching tools, the Dockstore CLI makes it easy to specify entries
 from the Dockstore website. We can also provision input and output files using HTTP,
-FTP, S3, and GCS. As of Release 1.12, the Dockstore CLI has support for running on `a WES server <https://github.com/ga4gh/workflow-execution-service-schemas>`__. We also have preliminary support for `Synapse <https://www.synapse.org/>`__ and the `ICGC Storage
-client <https://docs.icgc.org/download/guide/#score-client-usage>`__. Please see `file provisioning plugins <https://github.com/dockstore/dockstore-cli/tree/master/dockstore-file-plugin-parent>`__
-for more information on these two file transfer sources.
+FTP, S3, and GCS. As of Release 1.12, the Dockstore CLI has support for running on `a WES server <https://github.com/ga4gh/workflow-execution-service-schemas>`__. We also have preliminary support for `Synapse <https://www.synapse.org/>`__. Please see `file provisioning plugins <https://github.com/dockstore/dockstore-cli/tree/master/dockstore-file-plugin-parent>`__
+for more information on this file transfer source.
 
 :ref:`(back to top) <topCLIFAQ>`
 

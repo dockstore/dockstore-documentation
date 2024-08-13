@@ -14,7 +14,7 @@ New Content
 ~~~~~~~~~~~
 
 Three new workflows used to generate the `ICGC PanCancer Analysis of
-Whole Genomes (PCAWG) <https://dcc.icgc.org/icgc-in-the-cloud/aws>`__
+Whole Genomes (PCAWG) <https://oicr.on.ca/icgc-and-amazon-web-services-are-bringing-more-genomic-health-data-to-researchers-in-the-cloud/>`__
 dataset have been released and validated with CWL 1.0.
 
 These are:

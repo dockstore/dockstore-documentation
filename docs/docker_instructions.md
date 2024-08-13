@@ -117,7 +117,7 @@ There are readings to help with the exercises. Refer here for any questions you 
 #### Part A Readings
 Whalesay is a program that given some text, will print out an ASCII whale that is saying the text. It is based on a program called cowsay.
 
-The docker run command is used to create a running container based on a Docker image. You can read more about the run command from their [official documentation](https://docs.docker.com/engine/reference/run/).
+The docker run command is used to create a running container based on a Docker image. You can read more about the run command from their [official documentation](https://docs.docker.com/reference/cli/docker/container/run/).
 
 #### Part B Readings
 There are two useful concepts needed for this section.

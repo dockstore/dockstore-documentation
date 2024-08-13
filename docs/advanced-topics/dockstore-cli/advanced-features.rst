@@ -43,8 +43,7 @@ be writeable).
 The Dockstore command-line allows you to specify that the input file can
 be at an HTTP(S) location, an FTP location, an AWS S3 location, a Google
 Storage gs location, a `synapse
-id <https://python-docs.synapse.org/tutorials/python_client/#accessing-data>`__, an `ICGC storage
-id <https://docs.icgc.org/download/guide/>`__, or a `DRS
+id <https://python-docs.synapse.org/tutorials/python_client/#accessing-data>`__, or a `DRS
 URI <https://github.com/ga4gh/data-repository-service-schemas/issues/49>`__
 in place of that path. For example, the following indicates that the
 input file will be downloaded under HTTP.
@@ -71,13 +70,11 @@ required.
 The below summarizes some of the plugins available:
 
 .. |s3_plugin| replace:: `s3-plugin <https://github.com/dockstore/s3-plugin>`__
-.. |icgc_plugin| replace:: `icgc-storage-client-plugin <https://github.com/dockstore/icgc-storage-client-plugin>`__
 .. |synapse_plugin| replace:: `synapse-plugin <https://github.com/dockstore/synapse-plugin>`__
 .. |dos_plugin| replace:: `data-object-service-plugin <https://github.com/dockstore/data-object-service-plugin>`__
 .. |gcs_plugin| replace:: `gcs-plugin <https://github.com/dockstore/gs-plugin>`__
 
 .. |s3_example| replace:: s3://oicr.temp/bamstats\_report.zip
-.. |icgc_example| replace:: icgc://eeca3ccd-fa4e-57bf-9fde-c9d0ddf69935
 .. |dos_example| replace:: dos://ec2-52-26-45-130.us-west-2.compute.amazonaws.com:8080/911bda59-b6f9-4330-9543-c2bf96df1eca
 .. |gs_example| replace:: gs://genomics-public-data/references/GRCh38/chr1.fa.gz
 
@@ -89,11 +86,6 @@ The below summarizes some of the plugins available:
 |                               |         |                                 | upload, set  |
 |                               |         |                                 | metadata on  |
 |                               |         |                                 | upload       |
-+-------------------------------+---------+---------------------------------+--------------+
-| |icgc_plugin|                 | icgc:// | |icgc_example|                  | download     |
-|                               |         |                                 | directories  |
-|                               |         |                                 |              |
-|                               |         |                                 |              |
 +-------------------------------+---------+---------------------------------+--------------+
 | |synapse_plugin|              | syn://  | syn://syn8299856                | download     |
 |                               |         |                                 |              |
@@ -131,19 +123,6 @@ uploaded objects with the gs-plugin. The plugin handles urls with the
 ``gs://genomics-public-data/references/GRCh38/chr1.fa.gz``. Get more
 information on the implementing plugin at
 `gs-plugin <https://github.com/dockstore/gs-plugin>`__.
-
-ICGC Storage
-~~~~~~~~~~~~
-
-For ICGC Storage, configure the location of the client using the
-configuration key ``dockstore-file-icgc-storage-client-plugin.client``
-in ``~/.dockstore/config`` under the section
-``[dockstore-file-icgc-storage-client-plugin]``. Then configure the ICGC
-storage client as documented
-`here <https://docs.icgc.org/download/guide/#configuration>`__.
-
-Get more information on the implementing plugin at
-`icgc-storage-client-plugin <https://github.com/dockstore/icgc-storage-client-plugin>`__.
 
 Synapse
 ~~~~~~~

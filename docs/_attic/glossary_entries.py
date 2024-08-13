@@ -398,7 +398,7 @@ LaunchWith = GlossEntry("launch with",
 Layer = GlossEntry("layer", 
 	acronym_full="", 
 	definition="In the context of Docker, a layer is a component of a Docker image. Each `RUN`, `COPY`, and `ADD` instruction in a [Dockerfile] will lead to the creation of a layer.", 
-	furtherreading="https://docs.docker.com/storage/storagedriver/#images-and-layers", 
+	furtherreading="https://docs.docker.com/engine/storage/drivers/#images-and-layers",
 	institute="", 
 	pronunciation="")
 

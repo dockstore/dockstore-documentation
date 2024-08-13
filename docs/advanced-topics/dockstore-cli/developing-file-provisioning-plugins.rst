@@ -4,7 +4,7 @@ Developing File Provisioning Plugins
 When developing new plugins, we recommend using the
 `s3-plugin <https://github.com/dockstore/s3-plugin>`__ as a model for
 plugins where `a Java library is
-available <https://aws.amazon.com/sdk-for-java/>`__. We recommend using
+available <https://aws.amazon.com/sdk-for-java/>`__. Although no longer supported, we recommend using
 the
 `icgc-storage-client-plugin <https://github.com/dockstore/icgc-storage-client-plugin>`__
 as a model for plugins where a Java library is not available and the

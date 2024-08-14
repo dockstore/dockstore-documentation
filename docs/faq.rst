@@ -96,9 +96,10 @@ For full transparency, we will work following these principles:
 In other words, as an example, only after the publish button is used, will we create topic sentences that are presented to other users.
 2. For content displayed to the users themselves (e.g. auto-complete or auto-categorization type features), we only use in-house LLMs or AIs. In other words, we will only
 utilize LLMs hosted at OICR or UCSC, ensuring that no private data leaves the Dockstore ecosystem.
-3. AI generated will be clearly labelled, except in the case that a workflow developer, curator, or similar human has "approved" of it
+3. AI generated content will be clearly labelled, except in the case that a workflow developer, curator, or similar human has "approved" of it.
 4. We will attempt to programmatically review generated content but cannot guarantee that we will successfully review everything. We are still very much exploring what these technologies
-are capable of and there will likely be shortcomings. We will provide tools to remove offensive or misleading content.
+are capable of and there will likely be shortcomings. 
+5. We will provide tools to remove offensive or misleading content.
 
 
 :ref:`(back to top) <topFAQ>`

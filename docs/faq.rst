@@ -86,7 +86,7 @@ When viewing an individual tool or workflow, you can tell which versions are Ope
 
 .. _what-is-dockstore-generative-ai-policy:
 
-In human readable terms, what is Dockstore's approach to generative AI?
+In plain language, what is Dockstore's approach to generative AI?
 -----------------------------------------------------------------------
 
 In broad strokes, we are exploring the use of generative AI to enhance the workflow and tool development process.

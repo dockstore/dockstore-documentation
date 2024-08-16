@@ -20,6 +20,8 @@
 # -- Project information -----------------------------------------------------
 
 import datetime
+import os
+
 
 project = u'Dockstore'
 copyright = f'2021-{datetime.date.today().year}, OICR, and UCSC'
@@ -147,6 +149,17 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 html_logo = 'assets/images/Dockstore-Documentation-horizontal-white.png'
+
+# Set canonical URL from the Read the Docs Domain
+html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
+
+html_context = {}
+
+html_context["READTHEDOCS"] = False
+
+# Tell Jinja2 templates the build is running on Read the Docs
+if os.environ.get("READTHEDOCS", "") == "True":
+    html_context["READTHEDOCS"] = True
 
 
 # -- Options for HTMLHelp output ---------------------------------------------

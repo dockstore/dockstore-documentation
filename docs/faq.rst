@@ -93,7 +93,7 @@ In broad strokes, we are exploring the use of generative AI to enhance the workf
 For full transparency, we will work following these principles:
 
 1. For content generated and displayed to the public or to other users (e.g. AI generated topic sentences), we will only train or use as prompts, data that is already available publicly.
-In other words, as an example, only after the publish button is used, will we create topic sentences that are presented to other users.
+In other words, as an example, only after publishing a tool or workflow, will we create topic sentences that are presented to other users.
 2. For private content, we will only use in-house LLMs or AIs. In other words, we will only
 utilize LLMs hosted at OICR or UCSC (e.g. private auto-complete or auto-categorization type features), ensuring that no private data leaves the Dockstore ecosystem.
 3. AI generated content will be clearly labelled, except in the case that a workflow developer, curator, or similar human has "approved" of it.

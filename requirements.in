@@ -1,3 +1,4 @@
 sphinx==7.4.7
 glossarpy==0.1.2
 sphinxcontrib-discourse @ git+https://github.com/pdavide/sphinxcontrib-discourse@02453dff2c56b14987cf662cfd8cddb3b31b0dd7
+myst-parser==4.0.0

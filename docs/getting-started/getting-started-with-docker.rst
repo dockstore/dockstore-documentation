@@ -32,7 +32,7 @@ Where can I run Docker?
 ~~~~~~~~~~~~~~~~~~~~~~~
 Most 64-bit systems can run Docker. Your local Windows/Mac/Linux machine can likely run it, and most cloud compute systems have support for Docker or similar software too.
 
-Users of HPC (High Performance Compute) systems may not be able to run Docker Engine directly, depending on your sysadmin's policies and the details of your HPC's scheduling system. We can't go over all of possible HPC setups here, but we recommend checking out `Singularity <https://sylabs.io/guides/2.6/user-guide/singularity_and_docker.html>`__ and `Shifter <https://github.com/NERSC/shifter>`__, both of which are designed for running Docker images without using the Docker Engine program. If your HPC does not support Docker Engine, there is a strong chance it is already set up with an alternative.
+Users of HPC (High Performance Compute) systems may not be able to run Docker Engine directly, depending on your sysadmin's policies and the details of your HPC's scheduling system. We can't go over all of possible HPC setups here, but we recommend checking out `Singularity <https://docs.sylabs.io/guides/2.6/user-guide/singularity_and_docker.html>`__ and `Shifter <https://github.com/NERSC/shifter>`__, both of which are designed for running Docker images without using the Docker Engine program. If your HPC does not support Docker Engine, there is a strong chance it is already set up with an alternative.
 
 How do I install Docker?
 ~~~~~~~~~~~~~~~~~~~~~~~~

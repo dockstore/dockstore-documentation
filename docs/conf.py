@@ -48,6 +48,7 @@ user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Ge
 extensions = ['myst_parser', 'sphinxcontrib.discourse']
 
 linkcheck_anchors = False
+linkcheck_retries = 5
 linkcheck_ignore = [
     'http://localhost:8080/ga4gh/wes/v1', 'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works',
     'https://dx.doi.org/10.12688/f1000research.10137.1', 'https://dockstore.org/api/',
@@ -75,7 +76,9 @@ linkcheck_ignore = [
     'https://aws.github.io/amazon-genomics-cli/docs/getting-started/installation/',
     'https://aws.github.io/amazon-genomics-cli/docs/getting-started/',
     'https://aws.github.io/amazon-genomics-cli/docs/concepts/data/',
-    'https://aws.github.io/amazon-genomics-cli'
+    'https://aws.github.io/amazon-genomics-cli',
+    # sphinx reports
+    'https://www.go-fair.org/fair-principles/'
     ]
 
 

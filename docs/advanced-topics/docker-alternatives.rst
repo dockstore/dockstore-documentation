@@ -75,12 +75,12 @@ the use of root may be unnecessary. Whenever possible, dockerfiles on Dockstore 
 .. note:: A best practice when using Docker for workflows is not to rely on a specific user.
    This is doubly true for Singularity where it is not just best practice but necessary.
 
-Singularity provides a `fake root <https://sylabs.io/guides/3.4/user-guide/fakeroot.html>`_ option that might circumvent
+Singularity provides a `fake root <https://docs.sylabs.io/guides/3.4/user-guide/fakeroot.html>`_ option that might circumvent
 the problems using root in certain situations. There does not seem to be a way to use this option through cwltool. It
 can be used with Cromwell by editing the Singularity command format set in your Cromwell config file.
 
 More information about compatibility of dockerfiles with Singularity
-can be found `here <https://sylabs.io/guides/3.4/user-guide/singularity_and_docker.html#best-practices>`__.
+can be found `here <https://docs.sylabs.io/guides/3.4/user-guide/singularity_and_docker.html#best-practices>`__.
 
 Singularity can be installed following the instructions
 `here <https://github.com/sylabs/singularity/blob/main/INSTALL.md>`__.

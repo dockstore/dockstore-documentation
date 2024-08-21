@@ -77,7 +77,9 @@ linkcheck_ignore = [
     'https://aws.github.io/amazon-genomics-cli/docs/getting-started/installation/',
     'https://aws.github.io/amazon-genomics-cli/docs/getting-started/',
     'https://aws.github.io/amazon-genomics-cli/docs/concepts/data/',
-    'https://aws.github.io/amazon-genomics-cli'
+    'https://aws.github.io/amazon-genomics-cli',
+    # sphinx reports
+    'https://www.go-fair.org/fair-principles/'
     ]
 
 

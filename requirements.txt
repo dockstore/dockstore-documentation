@@ -14,6 +14,8 @@ charset-normalizer==3.3.2
     # via requests
 docutils==0.21.2
     # via sphinx
+glossarpy==0.1.2
+    # via -r requirements.in
 idna==3.7
     # via requests
 imagesize==1.4.1
@@ -31,11 +33,15 @@ requests==2.32.3
 snowballstemmer==2.2.0
     # via sphinx
 sphinx==7.4.7
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   sphinxcontrib-discourse
 sphinxcontrib-applehelp==1.0.4
     # via sphinx
 sphinxcontrib-devhelp==1.0.2
     # via sphinx
+sphinxcontrib-discourse @ git+https://github.com/pdavide/sphinxcontrib-discourse@02453dff2c56b14987cf662cfd8cddb3b31b0dd7
+    # via -r requirements.in
 sphinxcontrib-htmlhelp==2.0.1
     # via sphinx
 sphinxcontrib-jsmath==1.0.1

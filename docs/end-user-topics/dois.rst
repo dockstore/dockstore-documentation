@@ -80,6 +80,8 @@ GitHub-Zenodo Generation
 Zenodo has a feature where you can link your GitHub account, then for specified repositories, Zenodo automatically generates DOIs when GitHub releases are created. Note that a GitHub release is not the
 same as a Git tag; GitHub releases require Git tags, but have extra features.
 
+To set up and configure your Zenodo-GitHub integration, navigate to `Zenodo GitHub account settings <https://zenodo.org/account/settings/github/>`__.
+
 The DOIs created by this integration follow a certain pattern that Dockstore can detect. Dockstore will poll Zenodo GitHub to see if any new DOIs have been created by Zenodo.
 
 * It's automatic

@@ -176,6 +176,7 @@ Notebook Environments
    end-user-topics/starring
    end-user-topics/language-support
    end-user-topics/ORCID
+   end-user-topics/dois
 
 .. toctree::
    :caption: Videos (tutorials & presentations)

@@ -3,7 +3,7 @@ DOIs
 
 Introduction
 ------------
-A Digial Object Identifier (DOI) is a permanent identifier that can be used in publications to identify the exact
+A Digital Object Identifier (DOI) is a permanent identifier that can be used in publications to identify the exact
 version of a workflow or tool (entry). DOIs are commonly referenced from academic papers.
 See the `DOI Foundation <https://www.doi.org>`__ for more details.
 
@@ -44,10 +44,10 @@ and click "Save".
    :alt: Manage DOIs
 
 
-Features of the different ways of issuing DOIs
+Overview of the different ways of issuing DOIs
 ----------------------------------------------
 
-With the different ways Dockstore supports DOIs, it may be confusing as to how to generate DOIs for your Dockstore entries.  Here's a high level overview of some of the features of each.
+With the different ways Dockstore supports DOIs, it may be confusing as to how to generate DOIs for your Dockstore entries.  Following are some details on the differences.
 
 
 Creating Snapshots & Requesting DOIs
@@ -56,8 +56,10 @@ Creating Snapshots & Requesting DOIs
 See :doc:`Creating Snapshots & Requesting DOIs </advanced-topics/snapshot-and-doi>` for more details
 
 * You must initiate the DOI creation for each version
+
     * More control over when DOIs are created
     * You have to individually do it for every tag
+* The DOIs are minted in the Zenodo Dockstore community
 * Version on Dockstore is snapshotted (frozen)
 * Requires a Zenodo account that you link to your Dockstore account
 
@@ -67,7 +69,7 @@ Automatic Dockstore DOI Generation
 .. note::
     This feature is currently only available on request. Please contact the Dockstore team at `discuss.dockstore.org <https://discuss.dockstore.org/t/opening-helpdesk-tickets/1506>`__ if you want to participate.
 
-* Automatically mints DOIs for all Git tags pushed to GitHub repositories that have a corresponding entry in Dockstore
+* Automatically mints DOIs for all Git tags pushed to GitHub repositories that have a corresponding published entry in Dockstore
 * The DOIs are minted in the Zenodo Dockstore community
 * No Zenodo account is required to mint DOIs
 * A linked Zenodo account is required to edit DOIs
@@ -85,5 +87,27 @@ The DOIs created by this integration follow a certain pattern that Dockstore can
 * Automatic
 * Only mints DOIs for GitHub releases
 * Can mint DOIs for GitHub repos without associated workflows in Dockstore
+
     * Useful for minting DOIs for GitHub repositories that aren't workflows or tools
     * Can mint DOIs for entries that haven't yet been registered in Dockstore
+
+Summary of Differences
+~~~~~~~~~~~~~~~~~~~~~~
+
++--------------------------------+-------------------------+-------------------+-------------------------------------+
+| Generation Type                | Zenodo Account Required | Snapshot Required | Triggered by                        |
++================================+=========================+===================+=====================================+
+| Manual by Dockstore User       | Yes                     | Yes               | User request                        |
++--------------------------------+-------------------------+-------------------+-------------------------------------+
+| Automatically by Dockstore     | No                      | No                | Push of a Git tag to GitHub for     |
+|                                |                         |                   |                                     |
+|                                |                         |                   | a published Dockstore entry, or     |
+|                                |                         |                   |                                     |
+|                                |                         |                   | on publication of entry             |
++--------------------------------+-------------------------+-------------------+-------------------------------------+
+| Zenodo-GitHub integration      | Yes                     | No                | GitHub release for a repository     |
+|                                |                         |                   |                                     |
+|                                |                         |                   | with a published Dockstore entry    |
++--------------------------------+-------------------------+-------------------+-------------------------------------+
+
+

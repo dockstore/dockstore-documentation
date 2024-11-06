@@ -1,5 +1,5 @@
-DOIs
-====
+Digital Object Identifiers
+==========================
 
 Introduction
 ------------

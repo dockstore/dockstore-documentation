@@ -73,14 +73,14 @@ Dockstore will automatically mint a DOI for a version that corresponds to a Git 
 
 * The entry is published on Dockstore
 * The version has at least one author in its metadata
-* The tag was created after the entry was published, or the tag is one of the 10 most recent
+* The tag is created after you publish the entry, or the tag is one of the 10 most recent when you publish the entry
 
 Automatically-generated DOIs:
 
 * Do not require a Zenodo account
 * Are minted in the Zenodo Dockstore community
 * Are editable by request to the Dockstore team
-* Will be editable via a linked Zenodo account in a subsequent Dockstore release
+* Will be editable via a Zenodo account in a subsequent Dockstore release
 
 GitHub-Zenodo Generation
 ~~~~~~~~~~~~~~~~~~~~~~~~

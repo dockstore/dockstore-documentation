@@ -72,7 +72,7 @@ Automatic Dockstore DOI Generation
 Dockstore will automatically mint a DOI for a version that corresponds to a Git tag, if:
 
 * The entry is published on Dockstore
-* The version has at least one author in its metadata
+* The version is valid and has at least one author in its metadata
 * The tag is created after you publish the entry, or the tag is one of the 10 most recent when you publish the entry
 
 Automatically-generated DOIs:

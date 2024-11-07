@@ -79,6 +79,7 @@ Automatically-generated DOIs:
 
 * Do not require a Zenodo account
 * Are minted in the Zenodo Dockstore community
+* Are editable by request to the Dockstore team
 * Will be editable via a linked Zenodo account in a subsequent Dockstore release
 
 GitHub-Zenodo Generation

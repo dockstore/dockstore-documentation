@@ -69,10 +69,15 @@ Automatic Dockstore DOI Generation
 .. note::
     This feature is currently only available on request. Please contact the Dockstore team at `discuss.dockstore.org <https://discuss.dockstore.org/t/opening-helpdesk-tickets/1506>`__ if you want to participate.
 
-* Automatically mints DOIs for all Git tags pushed to GitHub repositories that have a corresponding published entry in Dockstore
-* The DOIs are minted in the Zenodo Dockstore community
-* No Zenodo account is required to mint DOIs
-* A linked Zenodo account is required to edit DOIs
+Dockstore will automatically mint a DOI for a version that corresponds to a Git tag, if:
+
+* The entry is published on Dockstore
+* The version has at least one author in its metadata
+* The tag was created after the entry was published, or the tag is one of the 10 most recent
+
+* Automatic DOIs are minted in the Zenodo Dockstore community
+* No Zenodo account is required to mint automatic DOIs
+* In a subsequent release, automatic DOIs will be editable via a linked Zenodo account
 
 GitHub-Zenodo Generation
 ~~~~~~~~~~~~~~~~~~~~~~~~

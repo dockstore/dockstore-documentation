@@ -18,9 +18,7 @@ Dockstore command-line also includes support for file provisioning via
 `plugins <https://github.com/dockstore/dockstore-cli/tree/master/dockstore-file-plugin-parent>`__
 which allow for the reading of input files and the upload of output
 files from remote file systems. Support for HTTP and HTTPS is built-in.
-Support for AWS S3 and `ICGC Score
-client <https://github.com/dockstore/icgc-storage-client-plugin>`__ is
-provided via plugins installed by default.
+Support for AWS S3 is provided via a plugin installed by default.
 
 Launch Legacy Tools
 ~~~~~~~~~~~~~~~~~~~

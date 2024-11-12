@@ -1,7 +1,7 @@
 alabaster==0.7.16
 attrs==21.4.0
 Babel==2.14.0
-certifi==2023.11.17
+certifi==2024.7.4
 charset-normalizer==3.3.2
 docutils==0.17.1
 glossarpy==0.1.2
@@ -29,4 +29,4 @@ sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
 urllib3==2.2.2
-zipp==3.17.0
+zipp==3.19.1

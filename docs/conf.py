@@ -20,6 +20,8 @@
 # -- Project information -----------------------------------------------------
 
 import datetime
+import os
+
 
 project = u'Dockstore'
 copyright = f'2021-{datetime.date.today().year}, OICR, and UCSC'
@@ -46,6 +48,7 @@ user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Ge
 extensions = ['myst_parser', 'sphinxcontrib.discourse']
 
 linkcheck_anchors = False
+linkcheck_retries = 5
 linkcheck_ignore = [
     'http://localhost:8080/ga4gh/wes/v1', 'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works',
     'https://dx.doi.org/10.12688/f1000research.10137.1', 'https://dockstore.org/api/',
@@ -69,17 +72,13 @@ linkcheck_ignore = [
     # These links works but the CircleCI client gets denied
     'https://bcc2020.sched.com/event/c4pR/reproducible-analysis-in-the-cloud-with-dockstore-and-terra',
     'https://bcc2020.sched.com/event/c46B/dockstore-fundamentals-introduction-to-docker-and-descriptors-for-reproducible-analysis',
-    # TODO remove after ICGC and AGC tickets are done #5926 #5925
-    'https://dcc.icgc.org/pcawg',
-    'https://docs.icgc.org/download/guide/#score-client-usage',
-    'https://docs.icgc.org/download/guide/#configuration',
-    'https://docs.icgc.org/download/guide/',
-    'https://dcc.icgc.org/pcawg#!%2Fmutations',
-    'https://dcc.icgc.org/icgc-in-the-cloud/aws',
+    # TODO remove after AGC ticket is done #5926
     'https://aws.github.io/amazon-genomics-cli/docs/getting-started/installation/',
     'https://aws.github.io/amazon-genomics-cli/docs/getting-started/',
     'https://aws.github.io/amazon-genomics-cli/docs/concepts/data/',
-    'https://aws.github.io/amazon-genomics-cli'
+    'https://aws.github.io/amazon-genomics-cli',
+    # sphinx reports
+    'https://www.go-fair.org/fair-principles/'
     ]
 
 
@@ -147,6 +146,17 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 html_logo = 'assets/images/Dockstore-Documentation-horizontal-white.png'
+
+# Set canonical URL from the Read the Docs Domain
+html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
+
+html_context = {}
+
+html_context["READTHEDOCS"] = False
+
+# Tell Jinja2 templates the build is running on Read the Docs
+if os.environ.get("READTHEDOCS", "") == "True":
+    html_context["READTHEDOCS"] = True
 
 
 # -- Options for HTMLHelp output ---------------------------------------------

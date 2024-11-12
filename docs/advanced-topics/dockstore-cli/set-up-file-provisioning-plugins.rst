@@ -13,8 +13,8 @@ plugins can handle the files. Finally, it will try using
 to handle the files.
 
 Generally, the Dockstore CLI downloads a default set of file
-provisioning plugins, Amazon S3, Synapse, DOS, GS, and ICGC Storage
-Client, when it first installs. However, if you chose to download and
+provisioning plugins, Amazon S3, Synapse, DOS, and GS when it first installs.
+However, if you chose to download and
 configure the CLI yourself via step 3 of Part 1 during the
 `quickstart <https://dockstore.org/quick-start>`__ tutorial and did not
 have a Dockstore account set up, then no file provisioning plugins will
@@ -50,8 +50,6 @@ Configuration for plugins can be added to your
     [dockstore-file-s3-plugin]
     endpoint = #set this to point at a non AWS S3 endpoint
 
-    [dockstore-file-icgc-storage-client-plugin]
-    client = /media/large_volume/icgc-storage-client-1.0.23/bin/icgc-storage-client
 
 To try an example and learn more about file provisioning, check out this
 :ref:`tutorial <file-provisioning>`.

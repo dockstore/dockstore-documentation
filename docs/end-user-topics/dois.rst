@@ -18,7 +18,8 @@ Why would you need a DOI for software?
 
 When others use your software, they should cite your software and what version of your software was used, especially in the methods section.
 In addition, in the context of reproducible science, it can be critically important for readers to understand which version of your software was used
-since different versions of software can have different performance or are compatible with different platforms.
+since different versions of software can have different performance or are compatible with different platforms. Nothing can be more frustrating than not knowing what version of
+a piece of software should be used in addition to not knowing in what environment it should be used.
 
 Citing the version of software used is not intended to supplant a traditional scholarly publication, but is intended to supplement it.
 This can help future researchers to run your software both in new contexts or in larger contexts.

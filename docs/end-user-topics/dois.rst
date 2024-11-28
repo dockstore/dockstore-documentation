@@ -21,11 +21,9 @@ In addition, in the context of reproducible science, it can be critically import
 since different versions of software can have different performance or are compatible with different platforms.
 
 Citing the version of software used is not intended to supplant a traditional scholarly publication, but is intended to supplement it.
-This can help future researchers to run your software both in new contexts or in larger contexts.     
+This can help future researchers to run your software both in new contexts or in larger contexts.
 
-See the `Software citation principles <https://doi.org/10.7717/peerj-cs.86>`__ and `
-How Not to Cite Software (and how to be cited)
- <https://doi.org/10.7717/peerj-cs.86>`__  for more details.
+See the `Software citation principles <https://doi.org/10.7717/peerj-cs.86>`__ and `How Not to Cite Software (and how to be cited) <https://doi.org/10.7717/peerj-cs.86>`__  for more details.
 
 Dockstore Support for DOIs
 --------------------------

@@ -96,7 +96,7 @@ templates_path = ['_templates']
 source_suffix = '.rst'
 
 # https://github.com/executablebooks/MyST-Parser/issues/519/
-myst_heading_anchors = 3
+myst_heading_anchors = 4
 
 # The master toctree document.
 master_doc = 'index'

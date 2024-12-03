@@ -49,6 +49,7 @@ extensions = ['myst_parser', 'sphinxcontrib.discourse']
 
 linkcheck_anchors = False
 linkcheck_retries = 5
+linkcheck_report_timeouts_as_broken = False
 linkcheck_ignore = [
     'http://localhost:8080/ga4gh/wes/v1', 'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works',
     'https://dx.doi.org/10.12688/f1000research.10137.1', 'https://dockstore.org/api/',
@@ -93,6 +94,9 @@ templates_path = ['_templates']
 # Note that because we have the myst_parser extension, .md files we will
 # be rendered too, even though they are not listed below
 source_suffix = '.rst'
+
+# https://github.com/executablebooks/MyST-Parser/issues/519/
+myst_heading_anchors = 4
 
 # The master toctree document.
 master_doc = 'index'

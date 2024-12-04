@@ -9,7 +9,7 @@ Why would you need a DOI?
 
 A Digital Object Identifier (DOI) is a permanent identifier that can be used in publications to identify the exact
 version of a workflow or tool (entry). A DOI can be used by both humans and machines to resolve a reference
-to a piece of information or data in a persistent way. DOIs are commonly referenced from academic papers
+to a piece of information or data in a persistent way. DOIs are commonly referenced from academic papers.
 
 See the `DOI Foundation <https://www.doi.org>`__ for more details.
 
@@ -18,13 +18,19 @@ Why would you need a DOI for software?
 
 When others use your software, they should cite your software and what version of your software was used, especially in the methods section.
 In addition, in the context of reproducible science, it can be critically important for readers to understand which version of your software was used
-since different versions of software can have different performance or are compatible with different platforms. Nothing can be more frustrating than not knowing what version of
-a piece of software should be used in addition to not knowing in what environment it should be used.
+since different versions of software can have different performance or can be compatible with different platforms.
+Nothing can be more frustrating than not knowing what version of a piece of software should be used in addition to not knowing in what environment it should be used.
 
 Citing the version of software used is not intended to supplant a traditional scholarly publication, but is intended to supplement it.
-This can help future researchers to run your software both in new contexts or in larger contexts.
+This can help future researchers to run your software both in new contexts or in larger contexts. In particular, the software DOI approaches that we recommend point to
+an archive (sometimes frozen for more certainty) of the source code for the version of the workflow in question.
+This archive can include all or some of the other pieces of information that we recommend such as a Dockerfile(s) to describe the creation of the environment
+for the source code, licensing information, test parameter files, and more.
 
-See the `Software citation principles <https://doi.org/10.7717/peerj-cs.86>`__ and `How Not to Cite Software (and how to be cited) <https://doi.org/10.7717/peerj-cs.86>`__  for more details.
+See the `Software citation principles <https://doi.org/10.7717/peerj-cs.86>`__,
+the link rot and redundancy discussions of `Ten simple rules for writing a paper about scientific software <https://doi.org/10.1371/journal.pcbi.1008390>`__,
+and `How Not to Cite Software (and how to be cited) <https://www.software.ac.uk/blog/how-not-cite-software-and-how-be-cited>`__,
+for more details.
 
 Dockstore Support for DOIs
 --------------------------

@@ -21,3 +21,4 @@ service:
       files:
         <String-name-of-file>:
           description: <String>
+  enableAutoDois: <Boolean>

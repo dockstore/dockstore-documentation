@@ -10,3 +10,4 @@ workflows:
       - name: <String>
         email: <String>
     topic: <String>
+    enableAutoDois: <Boolean>

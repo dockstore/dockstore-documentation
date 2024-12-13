@@ -33,6 +33,11 @@ service:
   # Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
   publish:
 
+  # A boolean that will control whether DOIs are automatically issued for tags. Default: True.
+  # A value of true will allow Dockstore to automatically issue DOIs.
+  # A value of false will disable automatic DOIs, DOIs will only be issued on demand.
+  enableAutoDois: <Boolean>
+
   # These are files the Dockstore will index. They will be directly downloadable from Dockstore. Wildcards are not supported.
   files:
 

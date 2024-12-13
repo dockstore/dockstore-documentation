@@ -109,9 +109,8 @@ Automatically-generated DOIs:
 
 If you wish to override and disable this feature, you can opt-out on a per-workflow basis you can add the following setting to your `.dockstore.yml` files
 
-```
+.. code-block:: yaml
    enableAutoDois: false
-```
 
 GitHub-Zenodo Generation
 ~~~~~~~~~~~~~~~~~~~~~~~~

@@ -82,7 +82,7 @@ Automatically-generated DOIs:
 * Are editable by request to the Dockstore team
 * Will be editable via a Zenodo account in a subsequent Dockstore release
 
-If you wish to override and disable this feature, you can opt-out on a per-workflow basis you can add the following setting to your `.dockstore.yml` files
+If you wish to override and disable this feature, you can opt-out on a per-workflow basis by adding the following setting to your `.dockstore.yml` files
 
 .. code-block:: yaml
 

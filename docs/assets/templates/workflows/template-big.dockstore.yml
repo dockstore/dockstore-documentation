@@ -67,8 +67,8 @@ workflows:
     latestTagAsDefault: <Boolean>
 
     # 'enableAutoDois' is a workflow-wide setting that will affect ALL branches/tags; only set this as needed in a main branch
-    # to control whether DOIs are automatically issued for tags. Implicit default: True.
-    #    # A value of false will disable automatic DOIs, DOIs will only be issued on demand.
+    # to control whether DOIs are automatically issued for tags. Implicit default: True, can only be overridden as False
+    # A value of false will disable automatic DOIs, DOIs will only be issued on demand.
     enableAutoDois: <Boolean>
     
     # The optional filters section allow specifying sets of Git branches and tags to include for the workflow.

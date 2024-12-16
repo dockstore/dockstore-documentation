@@ -15,4 +15,3 @@ notebooks:
       - name: <String>
         email: <String>
     topic: <String>
-    enableAutoDois: <Boolean>

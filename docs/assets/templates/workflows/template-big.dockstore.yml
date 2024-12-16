@@ -66,9 +66,9 @@ workflows:
     # A value of false will retain the default version that has been specified via the Dockstore UI.
     latestTagAsDefault: <Boolean>
 
-    # A boolean that will control whether DOIs are automatically issued for tags. Default: True.
-    # A value of true will allow Dockstore to automatically issue DOIs.
-    # A value of false will disable automatic DOIs, DOIs will only be issued on demand.
+    # 'enableAutoDois' is a workflow-wide setting that will affect ALL branches/tags; only set this as needed in a main branch
+    # to control whether DOIs are automatically issued for tags. Implicit default: True.
+    #    # A value of false will disable automatic DOIs, DOIs will only be issued on demand.
     enableAutoDois: <Boolean>
     
     # The optional filters section allow specifying sets of Git branches and tags to include for the workflow.

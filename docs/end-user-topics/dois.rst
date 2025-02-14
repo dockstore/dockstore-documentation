@@ -107,6 +107,18 @@ Automatically-generated DOIs:
 * Are editable by request to the Dockstore team
 * Will be editable via a Zenodo account in a subsequent Dockstore release
 
+If you wish to override and disable this feature, you can opt-out on a per-workflow basis by adding the following setting to your `.dockstore.yml` files
+
+.. code-block:: yaml
+
+   enableAutoDois: false
+
+
+One rare case to potentially watch out for: if your workflows are tagged with your ORCID as an author
+you may get a large number of notifications or workflows automatically added to your ORCID profile.
+This will occur outside of Dockstore if you have the `ORCID Auto-Update <https://support.datacite.org/docs/datacite-and-orcid#2-orcid-auto-update>`__ feature turned on in DataCite.
+DataCite's auto-update feature is not aware of how Zenodo groups DOIs into one overall "concept" DOI and will import each version independently.
+
 GitHub-Zenodo Generation
 ~~~~~~~~~~~~~~~~~~~~~~~~
 

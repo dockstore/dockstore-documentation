@@ -20,7 +20,7 @@ Check for broken links
 
 Open the `_build/html/index.html` in your browser!
 
-OICR affilates can view additional developer docs here: https://wiki.oicr.on.ca/display/DOC/Read+The+Docs 
+OICR partners can view additional developer docs here: https://wiki.oicr.on.ca/display/DOC/Read+The+Docs
 
 ## Writing/Maintaining docs
 Most of our docs are written in RST. A handful are written are in markdown. Both the RST and markdown documents will be rendered as HTML using the Python-based documentation manager Sphinx.

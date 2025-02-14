@@ -33,6 +33,11 @@ service:
   # Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
   publish:
 
+  # 'enableAutoDois' is a service-wide setting that will affect ALL branches/tags; only set this as needed in a main branch
+  # to control whether DOIs are automatically issued for tags. Implicit default: True, can only be overridden as False
+  # A value of false will disable automatic DOIs, DOIs will only be issued on demand.
+  enableAutoDois: <Boolean>
+
   # These are files the Dockstore will index. They will be directly downloadable from Dockstore. Wildcards are not supported.
   files:
 

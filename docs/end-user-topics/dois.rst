@@ -83,7 +83,7 @@ Automatically-generated DOIs:
 
 If you wish to override and disable this feature, you can opt-out on a per-entry basis.
 
-For GitHub App entries, add the following setting to your .dockstore.yml files. This is a workflow-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
+For GitHub App entries, add the following setting to your .dockstore.yml files. This is an entry-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
 For more information, view the :doc:`full .dockstore.yml template </assets/templates/template>` for your entry which includes an explanation of this field.
 
 .. code-block:: yaml

@@ -34,7 +34,7 @@ service:
   publish:
 
   # 'enableAutoDois' is a service-wide setting that will affect ALL branches/tags; only set this as needed in a main branch
-  # to control whether DOIs are automatically issued for tags. Default: True.
+  # to control whether DOIs are automatically issued for tags. Default: true.
   # A value of true will enable automatic DOIs.
   # A value of false will disable automatic DOIs, DOIs will only be issued on demand.
   enableAutoDois: <Boolean>

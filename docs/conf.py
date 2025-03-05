@@ -58,6 +58,7 @@ linkcheck_ignore = [
     'https://software.broadinstitute.org/firecloud/',
     'https://sysdig.com/blog/detecting-cryptojacking/',
     'https://terra.bio/',
+    'https://terra.bio',
     'https://info.orcid.org/what-is-orcid/',
     'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works',
     'https://doi.org/10.12688/f1000research.10137.1',

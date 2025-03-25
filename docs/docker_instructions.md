@@ -10,27 +10,20 @@ In this section you will try running a basic container called whalesay. Refer to
 
 Run whalesay with the following command:
 ```shell
-docker run docker/whalesay cowsay hello
+docker run rancher/cowsay cowsay hello
 ```
 
 This will result in an ASCII whale saying hello!
 ```shell
-docker run docker/whalesay cowsay "hello"
- _______ 
-< hello >
- ------- 
-    \
-     \
-      \     
-                    ##        .            
-              ## ## ##       ==            
-           ## ## ## ##      ===            
-       /""""""""""""""""___/ ===        
-  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
-       \______ o          __/            
-        \    \        __/             
-          \____\______/   
-
+docker run rancher/cowsay cowsay hello
+  ______________ 
+< cowsay hello >
+ -------------- 
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
 ```
 
 Now try getting the whale to say "Hello [your name]!".
@@ -115,7 +108,7 @@ There are readings to help with the exercises. Refer here for any questions you 
 
 ### Exercise 1
 #### Part A Readings
-Whalesay is a program that given some text, will print out an ASCII whale that is saying the text. It is based on a program called cowsay.
+Cowsay is a program that given some text, will print out an ASCII cow that is saying the text. It is based on a program called cowsay.
 
 The docker run command is used to create a running container based on a Docker image. You can read more about the run command from their [official documentation](https://docs.docker.com/reference/cli/docker/container/run/).
 

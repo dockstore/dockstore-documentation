@@ -290,7 +290,7 @@ Advanced developer topics
 .. |CollabLink| image:: /assets/images/affiliations/collaboratory.png
     :alt: collaboratory
     :height: 55px
-.. _CollabLink: https://cancercollaboratory.org
+.. _CollabLink: https://doi.org/10.1158/1538-7445.AM2017-378
 
 .. |OicrLink| image:: /assets/images/affiliations/oicr.png
     :alt: oicr

@@ -1,0 +1,22 @@
+name: Docker Image CI
+
+on: [push]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    # Check on tutorial docker containers 
+    - run: docker pull quay.io/briandoconnor/dockstore-tool-md5sum
+    - run: docker pull docker/whalesay
+    - run: docker pull quay.io/ldcabansay/samtools
+    - run: docker pull tabix:latest
+    - run: docker pull quay.io/collaboratory/dockstore-tool-bamstats:1.25-6
+    - run: docker pull pkrusche/hap.py:v1.0
+    - run: docker pull pkrusche/hap.py:latest
+    - run: docker pull biocontainers/samtools:v1.9-4-deb_cv1
+    - run: docker pull pkrusche/hap.py:latest

@@ -17,7 +17,8 @@ jobs:
     # this container is built by the user, not pulled from docker hub
     # - run: docker pull tabix:latest
     - run: docker pull quay.io/collaboratory/dockstore-tool-bamstats:1.25-6
-    - run: docker pull pkrusche/hap.py:v1.0
-    - run: docker pull pkrusche/hap.py:latest
+    # these seem to be fake examples
+    # - run: docker pull pkrusche/hap.py:v1.0
+    # - run: docker pull pkrusche/hap.py:latest
     - run: docker pull biocontainers/samtools:v1.9-4-deb_cv1
     - run: docker pull pkrusche/hap.py:latest

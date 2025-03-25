@@ -43,7 +43,7 @@ The steps for implementing a new plugin are as follows:
 8. Build the plugin with ``mvn clean install`` and copy the result zip
    file to the plugin directory.
 9. Test with a simple tool such as
-   `md5sum <https://github.com/briandoconnor/dockstore-tool-md5sum>`__.
+   `md5sum <https://github.com/dockstore-testing/dockstore-tool-md5sum>`__.
 
 You should see something similar to the following
 
@@ -62,7 +62,7 @@ You should see something similar to the following
         }
     }
 
-    $ dockstore tool launch --entry  quay.io/briandoconnor/dockstore-tool-md5sum  --json test.s3.json
+    $ dockstore tool launch --entry  quay.io/dockstore-testing/dockstore-tool-md5sum  --json test.s3.json
     Creating directories for run of Dockstore launcher at: ./datastore//launcher-a246f1b6-21fd-468e-8780-b064d311dda5
     Provisioning your input files to your local machine
     Downloading: #input_file from s3://oicr.temp/bamstats_report.zip into directory: /media/large_volume/dockstore_tools/dockstore-tool-md5sum/./datastore/launcher-a246f1b6-21fd-468e-8780-b064d311dda5/inputs/73b70f11

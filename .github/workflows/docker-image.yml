@@ -14,7 +14,8 @@ jobs:
     - run: docker pull quay.io/dockstore-testing/dockstore-tool-md5sum
     - run: docker pull rancher/cowsay
     - run: docker pull quay.io/ldcabansay/samtools
-    - run: docker pull tabix:latest
+    # this container is built by the user, not pulled from docker hub
+    # - run: docker pull tabix:latest
     - run: docker pull quay.io/collaboratory/dockstore-tool-bamstats:1.25-6
     - run: docker pull pkrusche/hap.py:v1.0
     - run: docker pull pkrusche/hap.py:latest

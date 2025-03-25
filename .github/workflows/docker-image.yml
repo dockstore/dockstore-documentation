@@ -21,4 +21,3 @@ jobs:
     # - run: docker pull pkrusche/hap.py:v1.0
     # - run: docker pull pkrusche/hap.py:latest
     - run: docker pull biocontainers/samtools:v1.9-4-deb_cv1
-    - run: docker pull pkrusche/hap.py:latest

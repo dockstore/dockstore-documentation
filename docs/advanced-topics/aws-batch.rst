@@ -86,7 +86,7 @@ the box.
    and the parameters that it will take.
 
    1. For a quick test, you can try the command
-      ``/test.sh quay.io/briandoconnor/dockstore-tool-md5sum:1.0.3 https://raw.githubusercontent.com/dockstore/batch_wrapper/master/aws/md5sum.s3.json``
+      ``/test.sh quay.io/dockstore-testing/dockstore-tool-md5sum https://raw.githubusercontent.com/dockstore/batch_wrapper/master/aws/md5sum.s3.json``
       after modifying md5sum.s3.json to point to your S3 bucket rather
       than dockstore.temp and uploading it somewhere accessible. This
       will run a quick md5sum tool that copies the result to a S3 bucket

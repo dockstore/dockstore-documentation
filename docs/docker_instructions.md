@@ -6,34 +6,27 @@ The Docker CLI is a command-line tool with a whole library of commands for inter
 
 
 ### Part A - Running Containers
-In this section you will try running a basic container called whalesay. Refer to the [part A readings](#part-a-readings) if you need a refresher on the content taught in the training.
+In this section you will try running a basic container called cowsay. Refer to the [part A readings](#part-a-readings) if you need a refresher on the content taught in the training.
 
-Run whalesay with the following command:
+Run cowsay with the following command:
 ```shell
-docker run docker/whalesay cowsay hello
+docker run rancher/cowsay cowsay hello
 ```
 
-This will result in an ASCII whale saying hello!
+This will result in an ASCII cow saying hello!
 ```shell
-docker run docker/whalesay cowsay "hello"
- _______ 
-< hello >
- ------- 
-    \
-     \
-      \     
-                    ##        .            
-              ## ## ##       ==            
-           ## ## ## ##      ===            
-       /""""""""""""""""___/ ===        
-  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
-       \______ o          __/            
-        \    \        __/             
-          \____\______/   
-
+docker run rancher/cowsay cowsay hello
+  ______________ 
+< cowsay hello >
+ -------------- 
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
 ```
 
-Now try getting the whale to say "Hello [your name]!".
+Now try getting the cow to say "Hello [your name]!".
 
 ### Part B - Exploring Containers
 We will now try running a container with [Samtools](https://www.htslib.org/) installed to convert a SAM file to a BAM file. Refer to the [part B readings](#part-b-readings) if you need a refresher on the content taught in the training.
@@ -115,7 +108,7 @@ There are readings to help with the exercises. Refer here for any questions you 
 
 ### Exercise 1
 #### Part A Readings
-Whalesay is a program that given some text, will print out an ASCII whale that is saying the text. It is based on a program called cowsay.
+Cowsay is a program that given some text, will print out an ASCII cow that is saying the text. It is based on a program called cowsay.
 
 The docker run command is used to create a running container based on a Docker image. You can read more about the run command from their [official documentation](https://docs.docker.com/reference/cli/docker/container/run/).
 

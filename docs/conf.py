@@ -83,7 +83,9 @@ linkcheck_ignore = [
     'https://aws.github.io/amazon-genomics-cli/docs/concepts/data/',
     'https://aws.github.io/amazon-genomics-cli',
     # sphinx reports
-    'https://www.go-fair.org/fair-principles/'
+    'https://www.go-fair.org/fair-principles/',
+    # sometimes hangs on the cloudflare check
+    'https://bioportal.bioontology.org/ontologies/EDAM'
     ]
 
 

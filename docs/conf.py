@@ -78,7 +78,9 @@ linkcheck_ignore = [
     'https://bcc2020.sched.com/event/c4pR/reproducible-analysis-in-the-cloud-with-dockstore-and-terra',
     'https://bcc2020.sched.com/event/c46B/dockstore-fundamentals-introduction-to-docker-and-descriptors-for-reproducible-analysis',
     # sphinx reports
-    'https://www.go-fair.org/fair-principles/'
+    'https://www.go-fair.org/fair-principles/',
+    # sometimes hangs on the cloudflare check
+    'https://bioportal.bioontology.org/ontologies/EDAM'
     ]
 
 

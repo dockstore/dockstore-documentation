@@ -63,7 +63,7 @@ with Dockstore by adding the following line to your ``~/.dockstore/config``:
 This may not work with all CWL entries, but it is a good workaround for the cwltool incompatibility described above.
 
 Singularity (also known as SingularityCE or Apptainer)
------------
+-------------------------------------------------------
 
 Singularity in its various incarnations as Apptainer or SingularityCE are perhaps the most well-supported Docker alternative(s).
 Singularity can pull Docker images and build them into its own image format (.sif), but not all Docker features are compatible.

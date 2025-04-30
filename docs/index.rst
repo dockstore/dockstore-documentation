@@ -351,4 +351,4 @@ Advanced developer topics
 
 .. |horizontalline| image:: /assets/images/hori_line.png
     :alt: line
-    :height: 25 px
+    :height: 5 px

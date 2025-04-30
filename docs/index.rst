@@ -347,6 +347,4 @@ Advanced developer topics
 
 .. |imagespace| unicode:: U+00A0 U+00A0 U+00A0 U+00A0 U+00A0 .. non-breaking spaces between logo images
 
-.. centered:: |horizontalline|
-
 ------------

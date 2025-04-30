@@ -346,5 +346,3 @@ Advanced developer topics
 .. _TerraLink: https://terra.bio/
 
 .. |imagespace| unicode:: U+00A0 U+00A0 U+00A0 U+00A0 U+00A0 .. non-breaking spaces between logo images
-
-------------

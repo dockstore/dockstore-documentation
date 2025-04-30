@@ -349,6 +349,4 @@ Advanced developer topics
 
 .. centered:: |horizontalline|
 
-.. |horizontalline| image:: /assets/images/hori_line.png
-    :alt: line
-    :height: 5 px
+------------

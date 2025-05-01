@@ -65,7 +65,8 @@ This may not work with all CWL entries, but it is a good workaround for the cwlt
 Singularity (also known as SingularityCE or Apptainer)
 -------------------------------------------------------
 
-Singularity in its various incarnations as Apptainer or SingularityCE are perhaps the most well-supported Docker alternative(s).
+The Singularity family of solutions, in its various incarnations including Apptainer or SingularityCE, 
+is perhaps the most well-supported Docker alternative. 
 Singularity can pull Docker images and build them into its own image format (.sif), but not all Docker features are compatible.
 For instance, dockerfile ``USER`` commands are not compatible with Singularity.
 A common problem observed when running Dockstore entries with Singularity is that the process fails on

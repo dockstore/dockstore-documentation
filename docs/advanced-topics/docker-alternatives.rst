@@ -62,12 +62,13 @@ with Dockstore by adding the following line to your ``~/.dockstore/config``:
 
 This may not work with all CWL entries, but it is a good workaround for the cwltool incompatibility described above.
 
-Singularity
------------
+Singularity (also known as SingularityCE or Apptainer)
+-------------------------------------------------------
 
-Singularity is perhaps the most well-supported Docker alternative. Singularity can pull Docker images and build them
-into its own image format (.sif), but not all Docker features are compatible. For instance, dockerfile ``USER``
-commands are not compatible with Singularity.
+The Singularity family of solutions, in its various incarnations including Apptainer or SingularityCE, 
+is perhaps the most well-supported Docker alternative. 
+Singularity can pull Docker images and build them into its own image format (.sif), but not all Docker features are compatible.
+For instance, dockerfile ``USER`` commands are not compatible with Singularity.
 A common problem observed when running Dockstore entries with Singularity is that the process fails on
 ``singularity pull`` because the entry's dockerfile or its base image contains a ``USER root`` command. In many cases
 the use of root may be unnecessary. Whenever possible, dockerfiles on Dockstore should avoid using root.
@@ -75,15 +76,17 @@ the use of root may be unnecessary. Whenever possible, dockerfiles on Dockstore 
 .. note:: A best practice when using Docker for workflows is not to rely on a specific user.
    This is doubly true for Singularity where it is not just best practice but necessary.
 
-Singularity provides a `fake root <https://docs.sylabs.io/guides/3.4/user-guide/fakeroot.html>`_ option that might circumvent
+SingularityCE and Apptainer provide `fake root <https://docs.sylabs.io/guides/latest/user-guide/fakeroot.html#fakeroot-feature>`_
+`options <https://apptainer.org/docs/user/main/fakeroot.html>`_  that might circumvent
 the problems using root in certain situations. There does not seem to be a way to use this option through cwltool. It
 can be used with Cromwell by editing the Singularity command format set in your Cromwell config file.
 
 More information about compatibility of dockerfiles with Singularity
-can be found `here <https://docs.sylabs.io/guides/3.4/user-guide/singularity_and_docker.html#best-practices>`__.
+can be found `here <https://docs.sylabs.io/guides/latest/user-guide/singularity_and_docker.html#best-practices-for-docker-singularityce-compatibility>`__ and
+`here <https://apptainer.org/docs/user/1.4/docker_and_oci.html#best-practices-for-docker-apptainer-compatibility>`__.
 
-Singularity can be installed following the instructions
-`here <https://github.com/sylabs/singularity/blob/main/INSTALL.md>`__.
+Singularity and Apptainer can be installed following the instructions `here <https://docs.sylabs.io/guides/3.4/user-guide/installation.html#install-on-linux>`__ and
+`here <https://github.com/apptainer/apptainer/blob/release-1.4/INSTALL.md>`__.
 
 .. note:: Multiple installations of Go have been known to cause a ``Go compiler not found`` error when installing Singularity.
    If you see this error, please uninstall all versions of Go and reinstall just one version.

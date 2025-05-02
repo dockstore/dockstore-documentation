@@ -77,11 +77,6 @@ linkcheck_ignore = [
     # These links works but the CircleCI client gets denied
     'https://bcc2020.sched.com/event/c4pR/reproducible-analysis-in-the-cloud-with-dockstore-and-terra',
     'https://bcc2020.sched.com/event/c46B/dockstore-fundamentals-introduction-to-docker-and-descriptors-for-reproducible-analysis',
-    # TODO remove after AGC ticket is done #5926
-    'https://aws.github.io/amazon-genomics-cli/docs/getting-started/installation/',
-    'https://aws.github.io/amazon-genomics-cli/docs/getting-started/',
-    'https://aws.github.io/amazon-genomics-cli/docs/concepts/data/',
-    'https://aws.github.io/amazon-genomics-cli',
     # sphinx reports
     'https://www.go-fair.org/fair-principles/'
     ]

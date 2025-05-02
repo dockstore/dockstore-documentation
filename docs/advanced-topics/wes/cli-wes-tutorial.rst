@@ -141,12 +141,5 @@ by running the following:
 Having multiple configuration files may be useful if you have access to various different WES servers, and want to easily switch between
 them when making WES requests.
 
-.. toctree::
-   :caption: WES Tutorials
-   :maxdepth: 1
-
-   wes-wdl-agc-tutorial
-   wes-cwl-agc-tutorial
-
 .. discourse::
     :topic_identifier: 6470

@@ -43,7 +43,7 @@ Zenodo supports `DOI versioning <https://support.zenodo.org/help/en-gb/1-upload-
 In Dockstore, the concept DOI is associated with the entry as a whole, and version DOIs are associated with entry versions.
 
 Dockstore can generate DOIs for entries, as well as recognize some DOIs generated outside of Dockstore. Dockstore displays DOIs associated with entries. If you have multiple concept DOIs associated
-with a single entry, you can specify which DOI to display.
+with a single entry, you can :ref:`specify which DOI to display<choose doi display>`.
 
 Dockstore generates DOIs for entries 2 ways:
 
@@ -51,6 +51,127 @@ Dockstore generates DOIs for entries 2 ways:
 * Dockstore can automatically generate DOIs for your entries without you needing to link your Zenodo account. These DOIs are created in the Dockstore Zenodo Community
 
 In addition, Dockstore can discover DOIs created by a Zenodo-GitHub integration.
+
+The following table is an overview of the different ways Dockstore supports DOIs and their differences.
+
++--------------------------------------------------------------+-------------------------+-------------------+----------------------------------+
+| Generation Type                                              | Zenodo Account Required | Snapshot Required | Triggered by                     |
++==============================================================+=========================+===================+==================================+
+| :ref:`Manual by Dockstore User <manual generation>`          | Yes                     | Yes               | User request                     |
++--------------------------------------------------------------+-------------------------+-------------------+----------------------------------+
+| :ref:`Automatically by Dockstore <automatic doi generation>` | No                      | No                | Push of a Git tag to GitHub for  |
+|                                                              |                         |                   |                                  |
+|                                                              |                         |                   | a published Dockstore entry, or  |
+|                                                              |                         |                   |                                  |
+|                                                              |                         |                   | on publication of entry          |
++--------------------------------------------------------------+-------------------------+-------------------+----------------------------------+
+| :ref:`GitHub-Zenodo integration <github zenodo generation>`  | Yes                     | No                | GitHub release for a repository  |
+|                                                              |                         |                   |                                  |
+|                                                              |                         |                   | with a published Dockstore entry |
++--------------------------------------------------------------+-------------------------+-------------------+----------------------------------+
+
+
+.. _manual generation:
+
+Manual Generation by Dockstore User
+-----------------------------------
+
+See :doc:`Creating Snapshots & Requesting DOIs </advanced-topics/snapshot-and-doi>` for more details.
+
+For manual DOI generation on Dockstore:
+
+* You must initiate the DOI creation for each version
+
+    * More control over when DOIs are created
+    * You have to individually do it for every tag
+* The DOIs are minted in the Zenodo Dockstore community
+* Version on Dockstore is snapshotted (frozen)
+* Requires a Zenodo account that you link to your Dockstore account
+
+.. _automatic doi generation:
+
+Automatic Dockstore DOI Generation
+----------------------------------
+
+Dockstore will automatically mint a DOI for a version that corresponds to a Git tag, if:
+
+* The entry is published on Dockstore
+* The version is valid and has at least one author in its metadata
+* The tag is created after you publish the entry, or the tag is one of the 10 most recent when you publish the entry
+
+Automatically-generated DOIs:
+
+* Do not require a Zenodo account
+* Are minted in the `Zenodo Dockstore community <https://zenodo.org/communities/dockstore>`__
+
+.. note:: 
+    One rare case to potentially watch out for: if your workflows are tagged with your ORCID as an author
+    you may get a large number of notifications or workflows automatically added to your ORCID profile.
+    This will occur outside of Dockstore if you have the `ORCID Auto-Update <https://support.datacite.org/docs/datacite-and-orcid#2-orcid-auto-update>`__ feature turned on in DataCite.
+    DataCite's auto-update feature is not aware of how Zenodo groups DOIs into one overall "concept" DOI and will import each version independently.
+
+Disabling Automatic Dockstore DOI Generation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you wish to override and disable this feature, you can opt-out on a per-entry basis.
+
+For GitHub App entries, add the following setting to your .dockstore.yml files. This is an entry-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
+For more information, view the :doc:`full .dockstore.yml template </assets/templates/template>` for your entry which includes an explanation of this field.
+
+.. code-block:: yaml
+
+   enableAutoDois: false
+
+For hosted workflows and workflows that were registered using our :doc:`legacy registration methods </advanced-topics/legacy/workflow-legacy-registration>`, 
+navigate to your workflow and click the Manage DOIs button. The Manage DOIs dialog will open and you can click the Automatic DOI Generation toggle to disable this feature.
+
+.. figure:: /assets/images/docs/toggle-auto-doi.png
+   :alt: Disable automatic DOI generation
+
+Editing the Dockstore DOI Metadata
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can edit the metadata of an automatically generated DOI on Dockstore. You must have a Zenodo account in order to edit the record on Zenodo.
+
+Click on the Manage DOIs button on your entry and navigate to the card containing your Dockstore DOI.
+
+Click the Show more button to view the instructions for how to edit the Dockstore DOI.
+
+.. figure:: /assets/images/docs/create-dockstore-doi-edit-link.png
+   :alt: Create Edit Link
+
+Click the Create Edit Link button to create a secret access link that can be used to edit the Zenodo record. Keep this link private because anyone with the link will be able to edit the record.
+
+Click on the Edit record on Zenodo link and you will be taken to Zenodo where you can edit the metadata of the record. Note that you must be logged into Zenodo in order to edit the record and publish the changes.
+
+.. figure:: /assets/images/docs/edit-record-on-zenodo.png
+   :alt: Edit Record on Zenodo Link
+
+On Zenodo, click the Edit button and edit the metadata that you wish to change. Click Publish when you are done to save the changes.
+
+Navigate back to Dockstore's Manage DOIs dialog and delete the edit link by clicking the Delete Link button. It is recommended to delete this link when you are done editing the record to 
+reduce the chances of the edit access link being used by someone else.
+
+.. _github zenodo generation:
+
+GitHub-Zenodo Generation
+------------------------
+
+Zenodo has a feature where you can link your GitHub account, then specify repositories where Zenodo automatically mints DOIs when GitHub releases are created. Note that a GitHub release is not the
+same as a Git tag; GitHub releases require Git tags, but have extra features.
+
+To set up and configure your Zenodo-GitHub integration, navigate to `Zenodo GitHub account settings <https://zenodo.org/account/settings/github/>`__.
+
+The DOIs created by this integration follow a certain pattern that Dockstore can detect. Dockstore will poll Zenodo to see if any new DOIs have been created against Dockstore entries' GitHub repositories.
+
+* Automatic
+* Only mints DOIs for GitHub releases
+* Can mint DOIs for GitHub repos without associated workflows in Dockstore
+
+    * Useful for minting DOIs for GitHub repositories that aren't workflows or tools
+    * Can mint DOIs for entries that haven't yet been registered in Dockstore
+
+.. _choose doi display:
 
 Choosing which DOI to display
 -----------------------------
@@ -69,100 +190,6 @@ Under DOI selection, click the radio button for the DOI you want to display and 
    
 .. figure:: /assets/images/docs/manage-dois.png
    :alt: Manage DOIs
-
-
-Overview of the different ways of issuing DOIs
-----------------------------------------------
-
-With the different ways Dockstore supports DOIs, it may be confusing as to how to generate DOIs for your Dockstore entries.  Following are some details on the differences.
-
-
-Creating Snapshots & Requesting DOIs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-See :doc:`Creating Snapshots & Requesting DOIs </advanced-topics/snapshot-and-doi>` for more details
-
-* You must initiate the DOI creation for each version
-
-    * More control over when DOIs are created
-    * You have to individually do it for every tag
-* The DOIs are minted in the Zenodo Dockstore community
-* Version on Dockstore is snapshotted (frozen)
-* Requires a Zenodo account that you link to your Dockstore account
-
-Automatic Dockstore DOI Generation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Dockstore will automatically mint a DOI for a version that corresponds to a Git tag, if:
-
-* The entry is published on Dockstore
-* The version is valid and has at least one author in its metadata
-* The tag is created after you publish the entry, or the tag is one of the 10 most recent when you publish the entry
-
-Automatically-generated DOIs:
-
-* Do not require a Zenodo account
-* Are minted in the `Zenodo Dockstore community <https://zenodo.org/communities/dockstore>`__
-* Are editable by request to the Dockstore team
-* Will be editable via a Zenodo account in a subsequent Dockstore release
-
-If you wish to override and disable this feature, you can opt-out on a per-entry basis.
-
-For GitHub App entries, add the following setting to your .dockstore.yml files. This is an entry-wide setting that will affect ALL branches/tags; only set this as needed in a main branch.
-For more information, view the :doc:`full .dockstore.yml template </assets/templates/template>` for your entry which includes an explanation of this field.
-
-.. code-block:: yaml
-
-   enableAutoDois: false
-
-For hosted workflows and workflows that were registered using our :doc:`legacy registration methods </advanced-topics/legacy/workflow-legacy-registration>`, 
-navigate to your workflow and click the Manage DOIs button. The Manage DOIs dialog will open and you can click the Automatic DOI Generation toggle to disable this feature.
-
-.. figure:: /assets/images/docs/toggle-auto-doi.png
-   :alt: Disable automatic DOI generation
-
-One rare case to potentially watch out for: if your workflows are tagged with your ORCID as an author
-you may get a large number of notifications or workflows automatically added to your ORCID profile.
-This will occur outside of Dockstore if you have the `ORCID Auto-Update <https://support.datacite.org/docs/datacite-and-orcid#2-orcid-auto-update>`__ feature turned on in DataCite.
-DataCite's auto-update feature is not aware of how Zenodo groups DOIs into one overall "concept" DOI and will import each version independently.
-
-GitHub-Zenodo Generation
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Zenodo has a feature where you can link your GitHub account, then specify repositories where Zenodo automatically mints DOIs when GitHub releases are created. Note that a GitHub release is not the
-same as a Git tag; GitHub releases require Git tags, but have extra features.
-
-To set up and configure your Zenodo-GitHub integration, navigate to `Zenodo GitHub account settings <https://zenodo.org/account/settings/github/>`__.
-
-The DOIs created by this integration follow a certain pattern that Dockstore can detect. Dockstore will poll Zenodo to see if any new DOIs have been created against Dockstore entries' GitHub repositories.
-
-* Automatic
-* Only mints DOIs for GitHub releases
-* Can mint DOIs for GitHub repos without associated workflows in Dockstore
-
-    * Useful for minting DOIs for GitHub repositories that aren't workflows or tools
-    * Can mint DOIs for entries that haven't yet been registered in Dockstore
-
-Summary of Differences
-~~~~~~~~~~~~~~~~~~~~~~
-
-+--------------------------------+-------------------------+-------------------+-------------------------------------+
-| Generation Type                | Zenodo Account Required | Snapshot Required | Triggered by                        |
-+================================+=========================+===================+=====================================+
-| Manual by Dockstore User       | Yes                     | Yes               | User request                        |
-+--------------------------------+-------------------------+-------------------+-------------------------------------+
-| Automatically by Dockstore     | No                      | No                | Push of a Git tag to GitHub for     |
-|                                |                         |                   |                                     |
-|                                |                         |                   | a published Dockstore entry, or     |
-|                                |                         |                   |                                     |
-|                                |                         |                   | on publication of entry             |
-+--------------------------------+-------------------------+-------------------+-------------------------------------+
-| Zenodo-GitHub integration      | Yes                     | No                | GitHub release for a repository     |
-|                                |                         |                   |                                     |
-|                                |                         |                   | with a published Dockstore entry    |
-+--------------------------------+-------------------------+-------------------+-------------------------------------+
-
-
 
 .. discourse::
     :topic_identifier: 9175

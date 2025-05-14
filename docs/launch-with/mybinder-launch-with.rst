@@ -27,6 +27,10 @@ After MyBinder builds the kernel image, it loads the notebook into a Jupyter-bas
 .. figure:: /assets/images/docs/mybinder/notebook-in-mybinder.png
    :alt: Notebook in MyBinder
 
+R Notebooks
+-----------
+To allow an R language notebook to launch properly on MyBinder, the source repository must include a `/runtime.txt` file that specifies the R release that should be used.  See `this documentation <https://repo2docker.readthedocs.io/en/latest/config_files.html#runtime-txt-specifying-runtimes>` for details.
+
 Limitations
 -----------
 

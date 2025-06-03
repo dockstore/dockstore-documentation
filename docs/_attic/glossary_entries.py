@@ -616,7 +616,7 @@ WES = GlossEntry("WES",
 	pronunciation='"wes", rhymes with mess')
 
 WorkflowExecutionService = GlossEntry("Workflow Execution Service",
-	definition="A standardized [API] developed by [GA4GH] for describing a standard programmatic way to run and manage workflows. This standard, also known as [WES], can be launched using the [Dockstore CLI] as described in this Dockstore blog post: <https://medium.com/dockstore/dockstore-partners-with-aws-agc-to-make-launching-workflows-quick-and-easy-7213510dabd8>",
+	definition="A standardized [API] developed by [GA4GH] for describing a standard programmatic way to run and manage workflows. This standard, also known as [WES]. See more information on the standard here: <https://www.ga4gh.org/product/workflow-execution-service-wes/>",
 	furtherreading="https://ga4gh.github.io/workflow-execution-service-schemas/")
 
 Workflow = GlossEntry("workflow", 

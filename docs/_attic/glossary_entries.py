@@ -616,7 +616,7 @@ WES = GlossEntry("WES",
 	pronunciation='"wes", rhymes with mess')
 
 WorkflowExecutionService = GlossEntry("Workflow Execution Service",
-	definition="A standardized [API] developed by [GA4GH] for describing a standard programmatic way to run and manage workflows. This standard, also known as [WES]. See more information on the standard here: https://www.ga4gh.org/product/workflow-execution-service-wes/",
+	definition="A standardized [API] developed by [GA4GH] for describing a standard programmatic way to run and manage workflows. This standard is also known as [WES]. See more information on the standard here: https://www.ga4gh.org/product/workflow-execution-service-wes/",
 	furtherreading="https://ga4gh.github.io/workflow-execution-service-schemas/")
 
 Workflow = GlossEntry("workflow", 

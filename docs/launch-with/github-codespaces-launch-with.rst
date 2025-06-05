@@ -46,6 +46,7 @@ To tell a Codespace to spawn notebook environment and display a notebook within 
 
    {
      "postAttachCommand": "code /workspaces/<repo-name>/<notebook-path>",
+     "image": "jupyter/datascience-notebook",
      "customizations": {
        "vscode": {
          "extensions": [

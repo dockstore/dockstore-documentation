@@ -24,21 +24,11 @@ dotDockstoredotYAML = GlossEntry(".dockstore.yml",
 	institute="", 
 	pronunciation='')
 
-AGC = GlossEntry("AGC",
-	acronym_full="[Amazon Genomics CLI]")
-
 AbsolutePath = GlossEntry("absolute path",
 	definition="A path that starts with the character ``/`` and contains the full set of directories necessary to resolve a file, starting from the root directory of the repository or filesystem. For example: ``/Dockstore.cwl`` or ``/bin/sh``",
 	furtherreading="",
 	institute="",
 	pronunciation='')
-
-AmazonGenomicsCLI = GlossEntry("Amazon Genomics CLI", 
-	definition="A [CLI]-based tool that supports launching bioinformatics-related workflows on [AWS] cloud infrastructure. The [Dockstore CLI] can launch workflows on AWS using Amazon Genomics CLI's [WES] implementation.", 
-	furtherreading="https://aws.amazon.com/blogs/industries/announcing-amazon-genomics-cli-preview/", 
-	institute="", 
-	pronunciation='',
-	seealso="[AGC]")
 
 AnVIL = GlossEntry("AnVIL Project", 
 	acronym_full="Analysis Visualization and Informatics Labspace", 

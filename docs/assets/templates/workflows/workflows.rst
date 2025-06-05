@@ -47,5 +47,5 @@ See Also
 --------
 
 * :doc:`.dockstore.yml templates for registering services </assets/templates/services/services>`
-* :doc:`.dockstore.yml templates for registering workflows </assets/templates/workflows/workflows>`
+* :doc:`.dockstore.yml templates for registering notebooks </assets/templates/notebooks/notebooks>`
 * :doc:`Other documentation regarding the GitHub App </getting-started/github-apps/github-apps-landing-page>`

@@ -346,9 +346,3 @@ Advanced developer topics
 .. _TerraLink: https://terra.bio/
 
 .. |imagespace| unicode:: U+00A0 U+00A0 U+00A0 U+00A0 U+00A0 .. non-breaking spaces between logo images
-
-.. centered:: |horizontalline|
-
-.. |horizontalline| image:: /assets/images/hori_line.png
-    :alt: line
-    :height: 25 px

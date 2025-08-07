@@ -116,11 +116,12 @@ To prevent these issues from happening, we recommend setting up your Cromwell co
 
 :ref:`(back to top) <topCLIFAQ>`
 
-How do I store my CLI token in a password vault or encrypted file
------------------------------------------------------------------
+How do I store my CLI token in a password vault or encrypted file?
+------------------------------------------------------------------
 
 If for regulatory reasons, you want to kick your security up a notch and store your dockstore token in a password vault or similar,
-we have the option of retrieving your Dockstore token using a user-defined command. For example the following will retrieve the token from a different text file:
+we have the option of retrieving your Dockstore token using a user-defined command. For example the following will retrieve the token from a specific text file.
+Consider combining this with encryption, a centralized cloud secrets manager, etc.
 
 ::
 

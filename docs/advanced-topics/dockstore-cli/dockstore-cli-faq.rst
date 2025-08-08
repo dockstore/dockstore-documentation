@@ -120,12 +120,12 @@ How do I store my CLI token in a password vault or encrypted file?
 ------------------------------------------------------------------
 
 If for regulatory reasons, you want to kick your security up a notch and store your dockstore token in a password vault or similar,
-we have the option of retrieving your Dockstore token using a user-defined command. For example the following will retrieve the token from a specific text file.
+we have the option of retrieving your Dockstore token using a user-defined command. For example, the following will retrieve the token from a specific text file.
 Consider combining this with encryption, a centralized cloud secrets manager, etc.
 
 ::
 
-    token = cat /home/my-user/dockstoreTokenVault.txt
+    tokenCommmand = cat /home/my-user/dockstoreTokenVault.txt
     server-url = https://www.dockstore.org/api
 
 The CLI is failing with Java 8 or 11

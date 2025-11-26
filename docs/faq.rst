@@ -324,7 +324,7 @@ on the underlying host and the temporary directory at
         --rm \
         --env=TMPDIR=/tmp \
         --env=HOME=/var/spool/cwl \
-        quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0 \
+        quay.io/collaboratory/dockstore-tool-bamstats:1.25-7 \
         bash \
         /usr/local/bin/bamstats \
         4 \

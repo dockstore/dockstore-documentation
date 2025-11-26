@@ -46,7 +46,7 @@ information and settings within scopes, such as manifest and docker.
         mem_gb = '4'
     }
 
-    process.container = 'quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0'
+    process.container = 'quay.io/collaboratory/dockstore-tool-bamstats:1.25-7'
     docker {
         enabled = true
         docker.runOptions = '-u $(id -u):$(id -g)'
@@ -86,7 +86,7 @@ syntax for setting values within a scope.
 
 ::
 
-    process.container = 'quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0'
+    process.container = 'quay.io/collaboratory/dockstore-tool-bamstats:1.25-7'
 
 The last scope of the file is the docker scope. This scope does not
 define the container that we use, instead it defined other Docker
@@ -216,7 +216,7 @@ with the new file.
         mem_gb = '4'
     }
 
-    process.container = 'quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0'
+    process.container = 'quay.io/collaboratory/dockstore-tool-bamstats:1.25-7'
     docker {
         enabled = true
         docker.runOptions = '-u $(id -u):$(id -g)'

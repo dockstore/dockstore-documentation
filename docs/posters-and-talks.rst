@@ -34,7 +34,6 @@ CCRC 2019
 Denis Yuen, Jared Baker, Andrew Duncan, & Michelle Brazas. (2019, November). Using Clouds for Big Cancer Data Analysis. Zenodo. https://doi.org/10.5281/zenodo.4527274
 
 - :download:`Slides <https://doi.org/10.5281/zenodo.4527274>`
-- :download:`Workshop <https://bioinformaticsdotca.github.io/Cloud_2019>`
 
 BOSC 2019
 ^^^^^^^^^

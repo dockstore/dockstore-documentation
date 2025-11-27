@@ -85,7 +85,10 @@ linkcheck_ignore = [
     # sphinx reports
     'https://www.go-fair.org/fair-principles/',
     # sometimes hangs on the cloudflare check
-    'https://bioportal.bioontology.org/ontologies/EDAM'
+    'https://bioportal.bioontology.org/ontologies/EDAM',
+    # medium acting up
+    'https://medium.com/better-programming/how-to-version-your-docker-images-1d5c577ebf54',
+    'https://medium.com/dockstore/dockstore-partners-with-aws-agc-to-make-launching-workflows-quick-and-easy-7213510dabd8'
     ]
 
 

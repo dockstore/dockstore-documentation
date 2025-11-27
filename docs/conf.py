@@ -88,6 +88,7 @@ linkcheck_ignore = [
     # sometimes hangs on the cloudflare check
     'https://bioportal.bioontology.org/ontologies/EDAM',
     # medium acting up
+    'https://medium.com/dockstore',
     'https://medium.com/better-programming/how-to-version-your-docker-images-1d5c577ebf54',
     'https://medium.com/dockstore/dockstore-partners-with-aws-agc-to-make-launching-workflows-quick-and-easy-7213510dabd8',
     # also biocontainers, wtf

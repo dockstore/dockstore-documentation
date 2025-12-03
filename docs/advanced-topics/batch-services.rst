@@ -71,7 +71,7 @@ Usage
 
    ::
 
-       consonance run --tool-dockstore-id quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0 --run-descriptor Dockstore.json --flavour <AWS instance-type>
+       consonance run --tool-dockstore-id quay.io/collaboratory/dockstore-tool-bamstats:1.25-7 --run-descriptor Dockstore.json --flavour <AWS instance-type>
 
 .. discourse::
        :topic_identifier: 1545

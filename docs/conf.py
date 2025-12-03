@@ -74,6 +74,7 @@ linkcheck_ignore = [
     'https://support.orcid.org/hc/en-us/articles/360006971593-Do-you-have-more-than-one-account',
     # elwazi cert expired, remove when renewed
     'https://elwazi.org/',
+    'https://blog.dnastack.com/introducing-workflows-the-new-standard-in-cloud-bioinformatics-787a59b1d5c6',
     # These links works but the CircleCI client gets denied
     'https://bcc2020.sched.com/event/c4pR/reproducible-analysis-in-the-cloud-with-dockstore-and-terra',
     'https://bcc2020.sched.com/event/c46B/dockstore-fundamentals-introduction-to-docker-and-descriptors-for-reproducible-analysis',
@@ -85,7 +86,13 @@ linkcheck_ignore = [
     # sphinx reports
     'https://www.go-fair.org/fair-principles/',
     # sometimes hangs on the cloudflare check
-    'https://bioportal.bioontology.org/ontologies/EDAM'
+    'https://bioportal.bioontology.org/ontologies/EDAM',
+    # medium acting up
+    'https://medium.com/dockstore',
+    'https://medium.com/better-programming/how-to-version-your-docker-images-1d5c577ebf54',
+    'https://medium.com/dockstore/dockstore-partners-with-aws-agc-to-make-launching-workflows-quick-and-easy-7213510dabd8',
+    # also biocontainers, wtf
+    'https://biocontainers.pro/#/registry'
     ]
 
 

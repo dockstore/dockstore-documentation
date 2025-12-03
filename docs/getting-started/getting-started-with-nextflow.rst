@@ -46,7 +46,7 @@ information and settings within scopes, such as manifest and docker.
         mem_gb = '4'
     }
 
-    process.container = 'quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0'
+    process.container = 'quay.io/collaboratory/dockstore-tool-bamstats:1.25-7'
     docker {
         enabled = true
         docker.runOptions = '-u $(id -u):$(id -g)'
@@ -86,7 +86,7 @@ syntax for setting values within a scope.
 
 ::
 
-    process.container = 'quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0'
+    process.container = 'quay.io/collaboratory/dockstore-tool-bamstats:1.25-7'
 
 The last scope of the file is the docker scope. This scope does not
 define the container that we use, instead it defined other Docker
@@ -115,28 +115,35 @@ Below is the ``main.nf`` file for BAMStats.
 ::
 
     #!/usr/bin/env nextflow
+    nextflow.enable.dsl=2
 
-    bamFile = file(params.bam_input)
+    bamFile = Channel.fromPath(params.bam_input)
+    mem_gb = params.mem_gb
 
     process bamstats {
         input:
-        file bam_input from bamFile
-        val mem_gb from params.mem_gb
+        path(bam_input)
+        val mem_gb
 
         output:
-        file 'bamstats_report.zip'
+        path('bamstats_report.zip')
 
         """
         bash /usr/local/bin/bamstats $mem_gb $bam_input
         """
     }
 
+    workflow {
+        bamstats(bamFile, mem_gb)
+    }
+
+
 First we tell Nextflow that the bam\_input parameter is a file. We do
 this outside of the process.
 
 ::
 
-    bamFile = file(params.bam_input)
+    bamFile = Channel.fromPath(params.bam_input)
 
 Next we will look at the process scope. It is made of the input, output
 and command sections.
@@ -148,8 +155,9 @@ parameter mem\_gb.
 ::
 
     input:
-    file bam_input from bamFile
-    val mem_gb from params.mem_gb
+    path(bam_input)
+    val mem_gb
+
 
 We then define the output of the process as the file
 ``bamstats_report.zip``. Note that we do not do anything with this
@@ -160,7 +168,7 @@ that connection. However, this is not within the scope of this tutorial.
 ::
 
     output:
-    file 'bamstats_report.zip'
+    path('bamstats_report.zip')
 
 The final section is the command section. This section defines what
 command is run by the process. We run the bamstats command line tool and
@@ -216,7 +224,7 @@ with the new file.
         mem_gb = '4'
     }
 
-    process.container = 'quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0'
+    process.container = 'quay.io/collaboratory/dockstore-tool-bamstats:1.25-7'
     docker {
         enabled = true
         docker.runOptions = '-u $(id -u):$(id -g)'

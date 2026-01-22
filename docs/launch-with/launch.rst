@@ -92,7 +92,7 @@ https://www.commonwl.org/#Implementations and for WDL,
 `Cromwell <https://github.com/broadinstitute/cromwell>`__.
 
 For developers, you may also wish to look at our brief summary at :doc:`batch
-services </advanced-topics/batch-services>` and commercial solutions such as `DataBiosphere
+services </legacy/batch-services>` and commercial solutions such as `DataBiosphere
 dsub <https://github.com/DataBiosphere/dsub>`__ and
 `AWS Batch <https://aws.amazon.com/batch/>`__.
 
@@ -139,8 +139,6 @@ interested in.
 See Also
 --------
 
--  :doc:`AWS Batch <../advanced-topics/aws-batch/>`
--  :doc:`Azure Batch <../advanced-topics/azure-batch/>`
 -  :doc:`CGC Launch With <../launch-with/cgc-launch-with/>`
 -  :doc:`Terra Launch With <../launch-with/terra-launch-with/>`
 

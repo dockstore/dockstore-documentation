@@ -237,7 +237,6 @@ Advanced developer topics
 
     * :doc:`Creating snapshots and requesting DOIs <advanced-topics/snapshot-and-doi>`
     * :doc:`Checksum for files and Docker Images <advanced-topics/checksum-support>`
-* :doc:`GA4GH Write API (intended as a proof-of-concept and for developers with a large number of tools) <advanced-topics/conversions>`
 * :doc:`Verified workflows and tools <advanced-topics/verification>`
 * :doc:`Workflow metrics <advanced-topics/metrics>`
 * :doc:`Organizations and collections <advanced-topics/organizations-and-collections>`

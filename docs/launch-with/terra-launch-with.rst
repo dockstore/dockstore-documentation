@@ -62,8 +62,6 @@ Limitations
 See Also
 --------
 
--  :doc:`AWS Batch <../advanced-topics/aws-batch/>`
--  :doc:`Azure Batch <../advanced-topics/azure-batch/>`
 -  :doc:`DNAnexus Launch With <../launch-with/dnanexus-launch-with/>`
 
 .. discourse::

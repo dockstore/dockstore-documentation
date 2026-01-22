@@ -32,6 +32,16 @@ After selection of an organization or a personal account, you can select whether
 
 .. important:: The GitHub user who first adds a workflow onto Dockstore must correspond to a user on Dockstore.
 
+You will then see the landing page which will have handy tips on how to structure your `.dockstore.yml`, recommended actions for previously added repositories, and a link to automatically generate a `.dockstore.yml`.
+
+ .. figure:: /assets/images/docs/landing_page.png
+    :width: 65 %
+
+If you click on the "Generate" link, you will find a wizard that lets you use a .dockstore.yml that Dockstore will generate (using a best guess) using the contents of your repository.
+
+ .. figure:: /assets/images/docs/yaml_generation.png
+    :width: 65 %
+
 On Dockstore, under the GITHUB section, you should see the names of GitHub accounts that you have access to, such as organizations that you belong to and your personal account. If your repositories that you chose to keep track of contained a .dockstore.yml at the time of installing the GitHub App, then you will see the repositories under the GitHub personal/organization account name that it belongs to. Here's an example involving ``/my-services``:
 
 .. figure:: /assets/images/docs/my-services-filled.png

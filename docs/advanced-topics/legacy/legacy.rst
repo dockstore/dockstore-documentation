@@ -9,7 +9,7 @@ This is documentation for older features that are no longer maintained. They (or
    legacy-getting-started-with-cwl.rst
    tool-legacy-registration.rst
    workflow-legacy-registration.rst
-   advanced-topics/batch-services
-   advanced-topics/aws-batch
-   advanced-topics/azure-batch
-   advanced-topics/conversions
+   batch-services
+   aws-batch
+   azure-batch
+   conversions

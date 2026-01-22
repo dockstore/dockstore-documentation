@@ -263,10 +263,7 @@ Advanced developer topics
    advanced-topics/docker-alternatives
    advanced-topics/snapshot-and-doi
    advanced-topics/checksum-support
-   advanced-topics/conversions
-   advanced-topics/batch-services
-   advanced-topics/aws-batch
-   advanced-topics/azure-batch
+
    advanced-topics/posting-zips
    advanced-topics/verification
    advanced-topics/metrics

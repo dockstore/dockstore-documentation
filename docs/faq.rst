@@ -427,8 +427,8 @@ If you run into this situation, please use the `Help Desk` link in the https://d
 
 :ref:`(back to top) <topFAQ>`
 
-.. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.592056.svg
-   :target: https://zenodo.org/record/8165758
+.. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.18318753.svg
+   :target: https://doi.org/10.5281/zenodo.18318753
 
 .. discourse::
     :topic_identifier: 1968

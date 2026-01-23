@@ -35,9 +35,6 @@ Dockstore achieves the best available security standard in the industry
 - :download:`Medium <https://medium.com/dockstore/dockstore-achieves-the-best-available-security-standard-in-the-industry-ce194b017089>`
 
 
-2021
-----
-
 2020
 ----
 

@@ -20,3 +20,4 @@ docs/getting-started/github-apps/snippet--installation.rst
 docs/getting-started/how-to-register-work.rst
 docs/getting-started/releasing-on-github.rst
 docs/getting-started/snippet--publish-workflow.rst
+docs/advanced-topics/legacy/legacy.rst

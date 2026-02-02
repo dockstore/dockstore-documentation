@@ -2,6 +2,9 @@ version: 1.2
 workflows:
   - subclass: <CWL | WDL | NFL | GALAXY | SMK>
     primaryDescriptorPath: <String>
+    otherFiles:
+      - <String>
+      - <String>
     testParameterFiles:
       - <String>
       - <String>

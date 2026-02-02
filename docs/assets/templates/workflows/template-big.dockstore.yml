@@ -23,6 +23,11 @@ workflows:
     # Omitting the publish setting leaves the publish-state unchanged (recommended for all non-primary branches).
     publish: <Boolean>
 
+    # An optional array of absolute paths to other files in the Git repository that should be read and included with the workflow.
+    otherFiles:
+      - <String>
+      - <String>
+
     # The absolute path to the primary descriptor file in the Git repository.
     # - For CWL, the primary descriptor is a .cwl file.
     # - For WDL, the primary descriptor is a .wdl file.

@@ -125,7 +125,7 @@ Accessible
 
 	- Dockstore does not require a user to sign in to search published content, which increases transparency and usability to a greater audience.
 	
-	- Dockstore implements its own REST API and also a standardized :doc:`GA4GH API <../../advanced-topics/conversions>` that can be used for sharing tools and workflows. 
+	- Dockstore implements its own REST API and also a standardized GA4GH TRS (`see <https://www.ga4gh.org/product/tool-registry-service-trs/>`_) API that can be used for sharing tools and workflows.
 
 - Use :doc:`Dockstore’s snapshot feature <../../advanced-topics/snapshot-and-doi>` to provide an immutable release of your workflow that can be verified. 
 

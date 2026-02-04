@@ -49,7 +49,7 @@ follows:
 ::
 
     # make a runtime JSON template and fill in desired inputs, outputs, and other parameters
-    $ dockstore tool convert entry2json --entry quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0 > Dockstore.json
+    $ dockstore tool convert entry2json --entry quay.io/collaboratory/dockstore-tool-bamstats:1.25-7 > Dockstore.json
     $ vim Dockstore.json
     # note that the empty JSON config file has been filled with an input file retrieved via http
     $ cat Dockstore.json
@@ -66,7 +66,7 @@ follows:
       }
     }
     # run it locally with the Dockstore CLI
-    $ dockstore tool launch --entry quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0 --json Dockstore.json
+    $ dockstore tool launch --entry quay.io/collaboratory/dockstore-tool-bamstats:1.25-7 --json Dockstore.json
 
 This information is also provided in the "Launch With" section of every
 tool.
@@ -92,7 +92,7 @@ https://www.commonwl.org/#Implementations and for WDL,
 `Cromwell <https://github.com/broadinstitute/cromwell>`__.
 
 For developers, you may also wish to look at our brief summary at :doc:`batch
-services </advanced-topics/batch-services>` and commercial solutions such as `DataBiosphere
+services </advanced-topics/legacy/batch-services>` and commercial solutions such as `DataBiosphere
 dsub <https://github.com/DataBiosphere/dsub>`__ and
 `AWS Batch <https://aws.amazon.com/batch/>`__.
 
@@ -139,8 +139,6 @@ interested in.
 See Also
 --------
 
--  :doc:`AWS Batch <../advanced-topics/aws-batch/>`
--  :doc:`Azure Batch <../advanced-topics/azure-batch/>`
 -  :doc:`CGC Launch With <../launch-with/cgc-launch-with/>`
 -  :doc:`Terra Launch With <../launch-with/terra-launch-with/>`
 

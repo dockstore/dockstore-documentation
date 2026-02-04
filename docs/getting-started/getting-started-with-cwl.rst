@@ -218,7 +218,7 @@ executed. In this case, it's the wrapper script I wrote for bamstats.
 
 The `CWL standard <https://www.commonwl.org/>`__ is continuing to evolve
 and hopefully we will see new features, like support for `EDAM
-ontology <https://edamontology.org/page>`__ terms, in future releases. In
+ontology <https://github.com/edamontology>`__ terms, in future releases. In
 the mean time, the `Gitter
 chat <https://gitter.im/common-workflow-language/common-workflow-language>`__
 is an active community to help drive the development of CWL in positive
@@ -302,7 +302,7 @@ the JSON config file:
            --rm \
            --env=TMPDIR=/tmp \
            --env=HOME=/var/spool/cwl \
-           quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0 \
+           quay.io/collaboratory/dockstore-tool-bamstats:1.25-7 \
            bash \
            /usr/local/bin/bamstats \
            4 \

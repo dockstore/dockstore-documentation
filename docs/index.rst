@@ -237,13 +237,10 @@ Advanced developer topics
 
     * :doc:`Creating snapshots and requesting DOIs <advanced-topics/snapshot-and-doi>`
     * :doc:`Checksum for files and Docker Images <advanced-topics/checksum-support>`
-* :doc:`GA4GH Write API (intended as a proof-of-concept and for developers with a large number of tools) <advanced-topics/conversions>`
-* :doc:`Using batch services (AWS, Azure, Google, and Consonance) <advanced-topics/batch-services>`
 * :doc:`Verified workflows and tools <advanced-topics/verification>`
 * :doc:`Workflow metrics <advanced-topics/metrics>`
 * :doc:`Organizations and collections <advanced-topics/organizations-and-collections>`
 
-.. Purposely not including the AWS and Azure batch links as the batch-services one links to them and is pretty short so they are easy to find. I would even argue for removing them from the sidebar or making them a subfolder of batch-services.
 .. Purposely not including "posting zips" as it is depreciated, but it is still in the sidebar
 
 .. toctree::
@@ -263,10 +260,7 @@ Advanced developer topics
    advanced-topics/docker-alternatives
    advanced-topics/snapshot-and-doi
    advanced-topics/checksum-support
-   advanced-topics/conversions
-   advanced-topics/batch-services
-   advanced-topics/aws-batch
-   advanced-topics/azure-batch
+
    advanced-topics/posting-zips
    advanced-topics/verification
    advanced-topics/metrics
@@ -290,7 +284,7 @@ Advanced developer topics
 .. |CollabLink| image:: /assets/images/affiliations/collaboratory.png
     :alt: collaboratory
     :height: 55px
-.. _CollabLink: https://cancercollaboratory.org
+.. _CollabLink: https://doi.org/10.1158/1538-7445.AM2017-378
 
 .. |OicrLink| image:: /assets/images/affiliations/oicr.png
     :alt: oicr

@@ -49,12 +49,17 @@ extensions = ['myst_parser', 'sphinxcontrib.discourse']
 
 linkcheck_anchors = False
 linkcheck_retries = 5
+linkcheck_report_timeouts_as_broken = False
 linkcheck_ignore = [
     'http://localhost:8080/ga4gh/wes/v1', 'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works',
     'https://dx.doi.org/10.12688/f1000research.10137.1', 'https://dockstore.org/api/',
     'https://dockstore.org:8443/', 'https://support.terra.bio/hc/en-us/sections/360007274612/',
     'https://docs.snyk.io/getting-started/getting-started-snyk-products/getting-started-snyk-open-source',
     'https://software.broadinstitute.org/firecloud/',
+    'https://sysdig.com/blog/detecting-cryptojacking/',
+    'https://terra.bio/',
+    'https://terra.bio',
+    'https://info.orcid.org/what-is-orcid/',
     'https://support.orcid.org/hc/en-us/articles/360006894754-Edit-works',
     'https://doi.org/10.12688/f1000research.10137.1',
     'https://doi.org/10.7490/f1000research.1116584.1',
@@ -69,6 +74,7 @@ linkcheck_ignore = [
     'https://support.orcid.org/hc/en-us/articles/360006971593-Do-you-have-more-than-one-account',
     # elwazi cert expired, remove when renewed
     'https://elwazi.org/',
+    'https://blog.dnastack.com/introducing-workflows-the-new-standard-in-cloud-bioinformatics-787a59b1d5c6',
     # These links works but the CircleCI client gets denied
     'https://bcc2020.sched.com/event/c4pR/reproducible-analysis-in-the-cloud-with-dockstore-and-terra',
     'https://bcc2020.sched.com/event/c46B/dockstore-fundamentals-introduction-to-docker-and-descriptors-for-reproducible-analysis',
@@ -78,7 +84,15 @@ linkcheck_ignore = [
     'https://aws.github.io/amazon-genomics-cli/docs/concepts/data/',
     'https://aws.github.io/amazon-genomics-cli',
     # sphinx reports
-    'https://www.go-fair.org/fair-principles/'
+    'https://www.go-fair.org/fair-principles/',
+    # sometimes hangs on the cloudflare check
+    'https://bioportal.bioontology.org/ontologies/EDAM',
+    # medium acting up
+    'https://medium.com/dockstore',
+    'https://medium.com/better-programming/how-to-version-your-docker-images-1d5c577ebf54',
+    'https://medium.com/dockstore/dockstore-partners-with-aws-agc-to-make-launching-workflows-quick-and-easy-7213510dabd8',
+    # also biocontainers, wtf
+    'https://biocontainers.pro/#/registry'
     ]
 
 
@@ -93,6 +107,9 @@ templates_path = ['_templates']
 # Note that because we have the myst_parser extension, .md files we will
 # be rendered too, even though they are not listed below
 source_suffix = '.rst'
+
+# https://github.com/executablebooks/MyST-Parser/issues/519/
+myst_heading_anchors = 4
 
 # The master toctree document.
 master_doc = 'index'

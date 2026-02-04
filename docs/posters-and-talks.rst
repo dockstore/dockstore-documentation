@@ -3,6 +3,38 @@ Posters and Talks
 
 This page includes various talks and posters that the Dockstore team has given.
 
+2025
+----
+
+WDL Bootcamp
+^^^^^^^^^^^^
+
+WDL Bootcamp Day 4 | Dockstore-GitHub Integration | March 2025
+
+- :download:`Youtube <https://www.youtube.com/watch?v=_-fQ5OhXfgI>`
+
+
+2023
+----
+
+WDL Bootcamp Day 4 | Dockstore-GitHub Integration
+
+- :download:`Youtube <https://youtu.be/YficWt7eB5I?si=UZq8RsnC3HQa0BiD>`
+
+2022
+----
+
+Dockstore partners with AWS AGC to make launching workflows quick and easy!
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- :download:`Medium <https://medium.com/dockstore/dockstore-partners-with-aws-agc-to-make-launching-workflows-quick-and-easy-7213510dabd8>`
+
+Dockstore achieves the best available security standard in the industry
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- :download:`Medium <https://medium.com/dockstore/dockstore-achieves-the-best-available-security-standard-in-the-industry-ce194b017089>`
+
+
 2020
 ----
 
@@ -34,7 +66,6 @@ CCRC 2019
 Denis Yuen, Jared Baker, Andrew Duncan, & Michelle Brazas. (2019, November). Using Clouds for Big Cancer Data Analysis. Zenodo. https://doi.org/10.5281/zenodo.4527274
 
 - :download:`Slides <https://doi.org/10.5281/zenodo.4527274>`
-- :download:`Workshop <https://bioinformaticsdotca.github.io/Cloud_2019>`
 
 BOSC 2019
 ^^^^^^^^^

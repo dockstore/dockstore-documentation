@@ -77,7 +77,7 @@ Docker CLI client.
 
 ::
 
-    docker pull quay.io/briandoconnor/dockstore-tool-md5sum:1.0.4
+    docker pull quay.io/dockstore-testing/dockstore-tool-md5sum
 
 When the download has completed, a digest is provided in the terminal output. This should match the checksum provided
 by the Dockstore API.

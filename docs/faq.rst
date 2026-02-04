@@ -324,7 +324,7 @@ on the underlying host and the temporary directory at
         --rm \
         --env=TMPDIR=/tmp \
         --env=HOME=/var/spool/cwl \
-        quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0 \
+        quay.io/collaboratory/dockstore-tool-bamstats:1.25-7 \
         bash \
         /usr/local/bin/bamstats \
         4 \
@@ -427,8 +427,8 @@ If you run into this situation, please use the `Help Desk` link in the https://d
 
 :ref:`(back to top) <topFAQ>`
 
-.. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.592056.svg
-   :target: https://zenodo.org/record/8165758
+.. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.18318753.svg
+   :target: https://doi.org/10.5281/zenodo.18318753
 
 .. discourse::
     :topic_identifier: 1968

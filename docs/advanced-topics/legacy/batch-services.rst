@@ -31,10 +31,8 @@ Google Pipelines
 
 Google Pipeline and `DataBiosphere
 dsub <https://github.com/DataBiosphere/dsub>`__ are also worth a look.
-In particular, both `Google Genomics
-Pipelines <https://cloud.google.com/genomics/docs/quickstart>`__ and
-`dsub <https://cloud.google.com/genomics/docs/tutorials/dsub>`__ provide
-tutorials on how to run (Dockstore!) tools if you have some knowledge on
+In particular, `dsub <https://cloud.google.com/batch/docs/dsub>`__ provides
+a tutorial on how to run (Dockstore!) tools if you have some knowledge on
 how to construct the command-line for a tool yourself.
 
 Consonance
@@ -73,7 +71,7 @@ Usage
 
    ::
 
-       consonance run --tool-dockstore-id quay.io/collaboratory/dockstore-tool-bamstats:1.25-6_1.0 --run-descriptor Dockstore.json --flavour <AWS instance-type>
+       consonance run --tool-dockstore-id quay.io/collaboratory/dockstore-tool-bamstats:1.25-7 --run-descriptor Dockstore.json --flavour <AWS instance-type>
 
 .. discourse::
        :topic_identifier: 1545

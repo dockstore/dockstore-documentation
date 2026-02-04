@@ -25,7 +25,6 @@ tools:
 
     # The absolute path to the primary descriptor file in the Git repository.
     # - For CWL, the primary descriptor is a .cwl file.
-    # - For WDL, the primary descriptor is a .wdl file.
     primaryDescriptorPath: <String>
 
     # An optional array of absolute paths to test parameter files in the Git repository.

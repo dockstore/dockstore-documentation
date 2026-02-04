@@ -1,0 +1,23 @@
+name: Docker Image CI
+
+on: [push]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    # Check on tutorial docker containers
+    - run: docker pull quay.io/dockstore-testing/dockstore-tool-md5sum
+    - run: docker pull rancher/cowsay
+    - run: docker pull quay.io/ldcabansay/samtools
+    # in a text search, this container looks legitmate, but this container is built by the user, not pulled from docker hub
+    # leaving it to avoid the next developer adding it again
+    # - run: docker pull tabix:latest
+    - run: docker pull quay.io/collaboratory/dockstore-tool-bamstats:1.25-6
+    # these seem to be fake examples
+    # - run: docker pull pkrusche/hap.py:v1.0
+    # - run: docker pull pkrusche/hap.py:latest
+    - run: docker pull biocontainers/samtools:v1.9-4-deb_cv1

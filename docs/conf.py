@@ -92,7 +92,12 @@ linkcheck_ignore = [
     'https://medium.com/better-programming/how-to-version-your-docker-images-1d5c577ebf54',
     'https://medium.com/dockstore/dockstore-partners-with-aws-agc-to-make-launching-workflows-quick-and-easy-7213510dabd8',
     # also biocontainers, wtf
-    'https://biocontainers.pro/#/registry'
+    'https://biocontainers.pro/#/registry',
+    # looks like all the zenodo links banned our user agent, but it doesn't make sense to find an alternative
+    'https://about.zenodo.org/',
+    'https://zenodo.org/badge/DOI/10.5281/zenodo.18318753.svg',
+    'https://zenodo.org/account/settings/github/',
+    'https://zenodo.org/communities/dockstore'
     ]
 
 

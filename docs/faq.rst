@@ -128,6 +128,21 @@ A helpdesk ticket may be an option for privacy complaints or other urgent non-se
 
 :ref:`(back to top) <topFAQ>`
 
+How are WDL tools treated in Dockstore?
+-----------------------------------------------------------------------
+
+In short, we allow WDL tools but since they are vaguely defined in WDL compared to CWL tools, they are not well supported.
+
+As a longer explanation, CWL has a concept of a `command-line tool <https://www.commonwl.org/v1.2/CommandLineTool.html>`__ which is very distinct from the definition of a `workflow <https://www.commonwl.org/v1.2/Workflow.html>`__.
+In WDL, we can consider WDL documents that only have a single task to be analogous to the concept of a tool. This can also be called a `callable task <https://github.com/broadinstitute/cromwell/blob/92/wom/src/main/scala/wom/executable/WomBundle.scala#L19>`__
+and Cromwell (a WDL engine) can  run these callable tasks directly.
+
+We currently recommend that if you have a WDL tool that is not part of a larger workflow and is truly intended to be shared as a library function, you can share this as a WDL tool using github app registration.
+See :doc:`/getting-started/github-apps/github-apps-landing-page` for a general tutorial.
+
+
+:ref:`(back to top) <topFAQ>`
+
 How do I cite Dockstore?
 ------------------------
 

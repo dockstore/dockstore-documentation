@@ -154,7 +154,7 @@ Interoperable
 - Provide a parameter file (JSON or YAML) containing example parameters used for launching your workflow. 
 
 	- The parameter file is where you should link to open access test data for your tool or workflow (learn more in :ref:`reusable`).
-	- You can submit multiple parameter files so consider sharing one for a local run (you can use the :ref:`launch-dockstore-cli` to launch tools and workflows locally) as well as examples for a launch-with partner (such as `BioData Catalyst <https://bdcatalyst.gitbook.io/biodata-catalyst-documentation/analyze-data/dockstore/launch-workflows-with-biodata-catalyst>`_ or :doc:`AnVIL <../../launch-with/anvil-launch-with>`).
+	- You can submit multiple parameter files so consider sharing one for a local run (you can use the :ref:`launch-dockstore-cli` to launch tools and workflows locally) as well as examples for a launch-with partner (such as `BioData Catalyst <https://bdcatalyst.gitbook.io/biodata-catalyst-documentation/written-documentation/community-tools-and-integration-1/bring-your-own-tool-s-to-biodata-catalyst/version-control-publishing-and-validation-of-workflows>`_ or :doc:`AnVIL <../../launch-with/anvil-launch-with>`).
 
 - Provide a :doc:`checker workflow </advanced-topics/checker-workflows>`. 
 

@@ -2,12 +2,12 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: python:3.9
+      - image: python:3.11
     steps:
       - basic_test
   topic:
     docker:
-      - image: python:3.9
+      - image: python:3.11
     steps:
       - basic_test
       - run:

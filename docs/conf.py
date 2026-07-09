@@ -173,7 +173,13 @@ html_logo = 'assets/images/Dockstore-Documentation-horizontal-white.png'
 # Set canonical URL from the Read the Docs Domain
 html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
 
-html_context = {}
+html_context = {
+    "display_github": True, # Integrate GitHub
+    "github_user": "dockstore", # Username
+    "github_repo": "dockstore-documentation", # Repo name
+    "github_version": "develop", # Version
+    "conf_py_path": "/docs/", # Path in the checkout to the docs root
+}
 
 html_context["READTHEDOCS"] = False
 

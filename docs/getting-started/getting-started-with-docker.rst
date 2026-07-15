@@ -60,7 +60,7 @@ Quay.io does not maintain a list of official images like Docker Hub, but you can
 
 Looking for an oft-maintained image
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Official images are generally well-maintained. By this we mean that they get frequent updates. Most Docker registries will show you the last time an image was updated, and will show a history going back several updates. This is important not only because it means you can get the latest features of new versions of software, but it also usually indicates that someone is paying attention to the security side of things too. No one wants to use a container only to discover that it still contains `the infamous log4j vulnerability <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046>`__, after all.
+Official images are generally well-maintained. By this we mean that they get frequent updates. Most Docker registries will show you the last time an image was updated, and will show a history going back several updates. This is important not only because it means you can get the latest features of new versions of software, but it also usually indicates that someone is paying attention to the security side of things too. No one wants to use a container only to discover that it still contains `the infamous log4j vulnerability <https://arstechnica.com/information-technology/2021/12/hackers-launch-over-840000-attacks-through-log4j-flaw/>`__, after all.
 
 Security considerations
 ~~~~~~~~~~~~~~~~~~~~~~~

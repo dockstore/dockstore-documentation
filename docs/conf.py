@@ -40,7 +40,7 @@ release = u''
 # needs_sphinx = '1.0'
 
 # https://github.com/sphinx-doc/sphinx/issues/7369 403 blocks by support.orcid.org
-user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -173,7 +173,13 @@ html_logo = 'assets/images/Dockstore-Documentation-horizontal-white.png'
 # Set canonical URL from the Read the Docs Domain
 html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
 
-html_context = {}
+html_context = {
+    "display_github": True, # Integrate GitHub
+    "github_user": "dockstore", # Username
+    "github_repo": "dockstore-documentation", # Repo name
+    "github_version": "develop", # Version
+    "conf_py_path": "/docs/", # Path in the checkout to the docs root
+}
 
 html_context["READTHEDOCS"] = False
 

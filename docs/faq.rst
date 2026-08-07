@@ -156,7 +156,7 @@ You will find a variety of citation styles and ways to export it at
 :ref:`(back to top) <topFAQ>`
 
 How is Dockstore's support for WDL 1.1?
-------------------------
+---------------------------------------
 
 Support for WDL 1.1 is in-progress. Dockstore relies on an integration with Cromwell to parse WDL 1.1 and after `full support <https://github.com/broadinstitute/cromwell/releases/tag/92>`__ was released in January 2026, we are working on adding full support to Dockstore.
 

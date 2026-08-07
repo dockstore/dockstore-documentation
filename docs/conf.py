@@ -70,7 +70,7 @@ linkcheck_ignore = [
     'launch-with/galaxy-launch-with.html', 'launch-with/seqera-platform-launch-with.html', 'launch-with/terra-launch-with.html',
     'launch-with/google-colab-launch-with.html', 'launch-with/github-codespaces-launch-with.html', 'launch-with/mybinder-launch-with.html',
     'https://doi.org/*',
-    'https://www.ucsc.edu/',
+    'https://www.ucsc.edu',
     # Confusing, linkcheck and curl report expired cert, but cert date is correct in browser
     'https://support.orcid.org/hc/en-us/articles/360006971593-Do-you-have-more-than-one-account',
     # elwazi cert expired, remove when renewed

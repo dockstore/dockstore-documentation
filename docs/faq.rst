@@ -163,6 +163,8 @@ Support for WDL 1.1 is in-progress. Dockstore relies on an integration with Crom
 In the meantime, parsing of WDL imports in 1.1 remains functional, distribution of workflows via GA4GH TRS, and launching of workflows into platform partners such as `terra.bio <https://terra.bio/>`__ are functional.
 Validation of WDL 1.1 workflows, the tools tab, and the DAG display will be non-functional.
 
+Currently, a WDL workflow with only versions that are entirely WDL 1.1 cannot be published. A WDL workflow that has previous valid versions that are draft-2 or WDL 1.0 and has current versions that are WDL 1.1 can be published.
+We are working to remove this restriction as a workaround.
 
 :ref:`(back to top) <topFAQ>`
 

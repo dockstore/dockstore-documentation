@@ -172,6 +172,7 @@ Notebook Environments
    :maxdepth: 1
 
    end-user-topics/end-user-topics
+   end-user-topics/categories
    end-user-topics/faceted-search
    end-user-topics/starring
    end-user-topics/language-support

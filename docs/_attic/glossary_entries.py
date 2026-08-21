@@ -100,12 +100,13 @@ CloudComputing = GlossEntry("cloud computing",
 	institute="", 
 	pronunciation='')
 
-Catagories = GlossEntry("categories", 
-	acronym_full="", 
-	definition="A group of workflows or tools curated by Dockstore with a similar scientific purpose.", 
-	furtherreading="", 
-	institute="", 
-	pronunciation='')
+Catagories = GlossEntry("categories",
+	acronym_full="",
+	definition="A grouping of Dockstore entries that share the same trait. They might relate to the same scientific topic, perform the same operation, read/write the same data type or format, etc.",
+	furtherreading="",
+	institute="",
+	pronunciation='',
+	seealso="[EDAM]")
 
 Collections = GlossEntry("collection", 
 	acronym_full="", 
@@ -233,7 +234,14 @@ EC2 = GlossEntry("EC2",
 	institute="", 
 	pronunciation='')
 
-Egress = GlossEntry("egress", 
+EDAM = GlossEntry("EDAM",
+	acronym_full="",
+	definition="An ontology of terms for bioinformatics, covering operations, types of data, data formats, and topics. Dockstore's [categories] system is based on EDAM, bolstered with additional AI-suggested categories not present in the ontology.",
+	furtherreading="https://edamontology.org/",
+	institute="",
+	pronunciation='')
+
+Egress = GlossEntry("egress",
 	acronym_full="", 
 	definition="The action of leaving a place. In the context of [cloud computing], data egress refers to data being moved from one location to another, such as from the cloud to a local machine, between cloud providers, and between locations of a single cloud provider. Data egress often results in the charge of fees (usually called egress charges). Data egress can be one of the most expensive cloud costs incurred. Sometimes, the person hosting the file is charged for data egress. Other times, the person downloading the file is charged (such as when downloading files from a Google bucket that has the requester-pays option enabled).", 
 	furtherreading="", 

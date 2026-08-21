@@ -32,6 +32,7 @@ DOI
 DRS
 DS-I Africa
 EC2
+EDAM
 egress
 eLwazi
 entry

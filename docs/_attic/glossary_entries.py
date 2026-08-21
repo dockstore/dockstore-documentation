@@ -100,7 +100,7 @@ CloudComputing = GlossEntry("cloud computing",
 	institute="", 
 	pronunciation='')
 
-Catagories = GlossEntry("categories",
+Catagories = GlossEntry("category",
 	acronym_full="",
 	definition="A grouping of Dockstore entries that share the same trait. They might relate to the same scientific topic, perform the same operation, read/write the same data type or format, etc.",
 	furtherreading="",
@@ -236,7 +236,7 @@ EC2 = GlossEntry("EC2",
 
 EDAM = GlossEntry("EDAM",
 	acronym_full="",
-	definition="An ontology of terms for bioinformatics, covering operations, types of data, data formats, and topics. Dockstore's [categories] system is based on EDAM, bolstered with additional AI-suggested categories not present in the ontology.",
+	definition="An ontology of bioinformatics concepts, covering operations, topics, and data formats and types.  Dockstore derives its AI-curated [category] structure from EDAM, which it enhances with additional AI-suggested categories not present in the original ontology.",
 	furtherreading="https://edamontology.org/",
 	institute="",
 	pronunciation='')

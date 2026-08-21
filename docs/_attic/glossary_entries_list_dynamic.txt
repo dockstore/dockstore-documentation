@@ -10,7 +10,7 @@ BD Catalyst
 BDC
 BioData Catalyst
 Cancer Genomics Cloud
-categories
+category
 CGC
 CLI
 cloud computing

@@ -5,7 +5,7 @@ A :ref:`dict category` is a grouping of Dockstore entries (tools, workflows, and
 share the same trait. Entries in a category might relate to the same scientific topic, perform the
 same operation, or read/write the same type or format of data.
 
-Dockstore places entries into categories to help users to better 
+Dockstore places entries into categories to help users to better
 understand the entries, find entries relevant to a particular area of interest,
 and discover entries that are similar to those they already know about.
 

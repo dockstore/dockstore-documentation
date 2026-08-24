@@ -236,7 +236,7 @@ EC2 = GlossEntry("EC2",
 
 EDAM = GlossEntry("EDAM",
 	acronym_full="",
-	definition="An ontology of bioinformatics concepts, covering operations, topics, and data formats and types.  Dockstore derives its AI-curated [category] structure from EDAM, which it enhances with additional AI-suggested categories not present in the original ontology.",
+	definition="An ontology of bioinformatics concepts, covering operations, topics, formats, and data types.  Dockstore derives its AI-curated [category] structure from EDAM, which it enhances with additional AI-suggested categories not present in the original ontology.",
 	furtherreading="https://edamontology.org/",
 	institute="",
 	pronunciation='')

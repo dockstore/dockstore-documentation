@@ -46,7 +46,7 @@ Sometimes, the tool you want to run is already Dockerized. Perhaps you want to u
 
 Container registries
 ~~~~~~~~~~~~~~~~~~~~
-Docker images are usually shared on registries. `Quay.io <https://quay.io/>`__ and `Docker Hub <https://hub.docker.com/>`__ are examples of popular public registries, which anyone can browse online. `GitLab Container Registry <https://about.gitlab.com/blog/2016/05/23/gitlab-container-registry/>`__ on the other hand is a private registry, so it can't be easily browsed by outside users.
+Docker images are usually shared on registries. `Quay.io <https://quay.io/>`__ and `Docker Hub <https://hub.docker.com/>`__ are examples of popular public registries, which anyone can browse online. `GitLab Container Registry <https://docs.gitlab.com/user/packages/container_registry/>`__ on the other hand is a private registry, so it can't be easily browsed by outside users.
 
 Container registries usually show you the layers that make up a particular Docker image, what versions are available, and the username or organization that the Docker image is associated with. They also usually give you the command line text you need to use in order to download a particular image locally, which will allow you use to the image on your own machine.
 

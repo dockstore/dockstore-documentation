@@ -102,7 +102,7 @@ CloudComputing = GlossEntry("cloud computing",
 
 Catagories = GlossEntry("category",
 	acronym_full="",
-	definition="A grouping of Dockstore entries that share the same trait. They might relate to the same scientific topic, perform the same operation, read/write the same data type or format, etc.",
+	definition="A grouping of Dockstore entries that share the same trait. They might relate to the same scientific topic, perform the same operation, input/output the same type of data or format, etc.",
 	furtherreading="",
 	institute="",
 	pronunciation='',

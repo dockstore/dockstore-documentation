@@ -3,7 +3,7 @@ Categories
 
 A :ref:`dict category` is a grouping of Dockstore entries (tools, workflows, and notebooks) that
 share the same trait. Entries in a category might relate to the same scientific topic, perform the
-same operation, or read/write the same type or format of data.
+same operation, or input/output the same type of data or format.
 
 Dockstore places entries into categories to help users to better
 understand the entries, find entries relevant to a particular area of interest,
@@ -69,3 +69,6 @@ page, click ``Manage Categories`` to view the entry's categories and approve or 
 Dockstore-curated categories are managed exclusively by Dockstore curators. If you think
 an entry should be added to (or removed from) a Dockstore-curated category, reach out to the
 Dockstore team, for example via `Discourse <https://discuss.dockstore.org/>`__.
+
+.. discourse::
+    :topic_identifier: 12032

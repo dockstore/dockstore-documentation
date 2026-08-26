@@ -10,7 +10,7 @@ BD Catalyst
 BDC
 BioData Catalyst
 Cancer Genomics Cloud
-categories
+category
 CGC
 CLI
 cloud computing
@@ -32,6 +32,7 @@ DOI
 DRS
 DS-I Africa
 EC2
+EDAM
 egress
 eLwazi
 entry
